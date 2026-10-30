@@ -17,7 +17,7 @@ def native_optimization(source):
         'src/native_ui_routes.c','src/native_ui_pager.c','src/native_ui_editor.c','src/tasks.c',
         'src/native_resources.c','src/worker_wait.c','src/capacity.c','src/slot_pool.c',
         'src/module_manager.c','src/native_modules.c','src/platform/z9_c532/menu.c',
-        'src/platform/zr_c110/menu.c','src/startup.c','src/startup_files.c','src/startup_service.c')
+        'src/platform/zr_c110/menu.c','src/platform/z8_c311/menu.c','src/startup.c','src/startup_files.c','src/startup_service.c')
     return '-Os' if source in cold else '-O2'
 
 PROFILES={
@@ -102,12 +102,53 @@ PROFILES={
    'rtos.event.clear-keep':0x4017b95c,'rtos.event.clear-keep-irq':0x4017ba74,'rtos.event.wait':0x4017c040},
   tables={'camera.ui.editor.template':(0xa0290c7f0,96),'rtos.irq.controller':(0xa04e05820,0x2338),'rtos.mmu.context':(0xa04e0cd00,0x58),'camera.menu.page-roots':(0xa032d5de8,56),'camera.locale.font-root':(0xa02f4ab30,8)},
   native_pages=dict(first=79632912,stop=0x6b8,kinds={2:1396,0:3,3:143,5:177}),
+  abi_evidence=['docs/porting.md','host/verify_platform_build.py','host/verify_native_namespace.py']),
+ 'z8-c311':dict(model='Nikon Z8',version='C 3.11',bytes=81807709,
+  sha256='2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853',
+  module_identity='2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853',
+  functions={'rtos.memory.allocate':0x40d2c408,'rtos.task.create':0x40185064,'rtos.task.resume':0x401855e0,'rtos.task.delay':0x40187b00,
+   'camera.card.open':0x402dd4f8,'camera.card.read':0x402dd6c8,'camera.card.close':0x402dd558,
+   'camera.card.seek64':0x402dd8e8,
+   'camera.menu.page.get':0x403db694,'camera.menu.text.get':0x4032e130,
+   'camera.ui.editor.init':0x4060f558,'camera.ui.editor.read':0x40611654,
+   'camera.ui.editor.insert-byte':0x40612bf4,'camera.ui.editor.delete-byte':0x406117b8,'camera.ui.editor.hit':0x40612d98,
+   'camera.ui.text.measure':0x4031e430,'camera.ui.text.align':0x403f19c4,
+   'camera.ui.bounds.get':0x4031e30c,'camera.ui.bounds.set':0x4031e2a8,
+   'camera.card.directory.open':0x402ddc6c,'camera.card.directory.next':0x402ddd1c,
+   'camera.card.directory.close':0x402ddd6c,'camera.card.rename':0x402dd9fc,'camera.card.write':0x402dd78c,
+   'rtos.memory.release':0x40d2c448,
+   'rtos.mmu.map':0x4016eb68,'rtos.mmu.unmap':0x4016eba0,'rtos.mmu.protect':0x4016eb0c,
+   'rtos.mmu.context.map':0x40172b88,'rtos.mmu.context.unmap':0x40172380,
+   'rtos.mmu.context.protect':0x401731c0,'rtos.mmu.context.walk':0x40172608,
+   'rtos.mmu.context.translate':0x40173098,'rtos.mmu.context.attributes':0x40173104,
+   'rtos.mmu.translate':0x4016eea4,'rtos.mmu.attributes':0x4016f0f4,'rtos.mmu.mapped':0x4016f0bc,'rtos.mmu.invalidate':0x4016f178,
+   'rtos.mmu.invalidate-all':0x4016f1d0,
+   'rtos.irq.register':0x4016c8f4,'rtos.irq.register-affinity':0x4016c918,'rtos.irq.unregister':0x4016c938,
+   'rtos.irq.disable':0x4016c9c4,'rtos.irq.enable':0x4016c9e4,'rtos.irq.status':0x4016ca04,
+   'rtos.irq.priority-levels':0x4016ca78,'rtos.irq.limit':0x4016caa8,
+   'rtos.irq.priority.get':0x4016cac0,'rtos.irq.priority.set':0x4016cb24,
+   'rtos.irq.trigger.get':0x4016cb48,'rtos.irq.trigger.set':0x4016cb9c,
+   'rtos.irq.pending.set':0x4016cc2c,'rtos.irq.pending.clear':0x4016cbe8,'rtos.irq.pending.is-set':0x4016cc70,
+   'rtos.irq.affinity.set':0x4016cd78,'rtos.irq.affinity.get':0x4016cdc4,
+   'rtos.mutex.create':0x4017f8dc,'rtos.mutex.delete':0x4017fad0,
+   'rtos.mutex.lock':0x4017fd24,'rtos.mutex.try-lock':0x40180004,
+   'rtos.mutex.lock-timeout':0x401801f8,'rtos.mutex.unlock':0x4018058c,
+   'rtos.spinlock.init':0x40173b9c,'rtos.spinlock.try-lock':0x40173c60,'rtos.spinlock.unlock':0x40173d04,
+   'rtos.semaphore.create':0x40180e50,'rtos.semaphore.delete':0x4018102c,
+   'rtos.semaphore.signal':0x401811e8,'rtos.semaphore.signal-irq':0x401813e4,
+   'rtos.semaphore.wait':0x401815cc,'rtos.semaphore.poll':0x40181760,
+   'rtos.semaphore.wait-timeout':0x40181880,
+   'rtos.context.is-irq':0x40183490,'rtos.event.create':0x4017b254,'rtos.event.delete':0x4017b420,
+   'rtos.event.set':0x4017b5dc,'rtos.event.set-irq':0x4017b79c,
+   'rtos.event.clear-keep':0x4017b95c,'rtos.event.clear-keep-irq':0x4017ba74,'rtos.event.wait':0x4017c040},
+  tables={'camera.ui.editor.template':(0xa029054c0,96),'rtos.irq.controller':(0xa04b51820,0x2338),'rtos.mmu.context':(0xa04b58d00,0x58),'camera.menu.page-roots':(0xa032b50c8,56),'camera.locale.font-root':(0xa02f2ac40,8)},
+  native_pages=dict(first=79691040,stop=0x68c,kinds={2: 1360, 0: 3, 3: 131, 5: 181}),
   abi_evidence=['docs/porting.md','host/verify_platform_build.py','host/verify_native_namespace.py'])}
 
 # Independently observed original dispatcher ABI. These are mid-function
 # instruction windows, never exported as callable named bindings. The source
 # page is x20; selected 32-byte event is x22; x0 is NOT a page argument.
-UI_CONDITION_ABI = {'zr-c110': (1079156136, 168, 'd268b51081f7f0a1103a87522470a16cc7601cdcdda0dbbcd35dfcfa5792f4bc'), 'z9-c532': (1078993640, 168, '8731d7c78c916f02977eaaf3f9327f3f1484df5f58adc81465938dccc4f7a3c8')}
+UI_CONDITION_ABI = {'zr-c110': (1079156136, 168, 'd268b51081f7f0a1103a87522470a16cc7601cdcdda0dbbcd35dfcfa5792f4bc'), 'z9-c532': (1078993640, 168, '8731d7c78c916f02977eaaf3f9327f3f1484df5f58adc81465938dccc4f7a3c8'), 'z8-c311': (1079020520, 168, 'affdf1feff0582e1b1805e48124f757ecb71be4cd77b1809b3195166084302c0')}
 
 def verify_ui_condition_abi(target,data):
     if target not in UI_CONDITION_ABI:raise ValueError('unknown native condition ABI')
@@ -144,6 +185,9 @@ def verify_card_capacity(target,data):
     elif target=='z9-c532':
         chain=[(0x402dc99c,0x408b94f8),(0x408b9538,0x408bb1f8),(0x408bb248,0x408bcd54)]
         loop,error=0x408bcda4,0x408bb270
+    elif target=='z8-c311':
+        chain=[(0x402dd534,0x408b6878),(0x408b68b8,0x408b8578),(0x408b85c8,0x408ba0d4)]
+        loop,error=0x408ba124,0x408b85f0
     else:raise ValueError('unverified native card capacity profile')
     for address,destination in chain:
         word=struct.unpack_from('<I',data,address-BASE)[0]

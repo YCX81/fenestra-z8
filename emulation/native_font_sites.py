@@ -14,6 +14,11 @@ PROFILES = {
         line_probe=0x402f9f00,measure=0x408e2050,set_layout=0x408e17dc,
         enter=[0x402f91f0, 0x402f953c, 0x402f9654, 0x402fa504, 0x402fa64c,
                0x402fa7a8, 0x402fa960, 0x402fabac, 0x402fac68]),
+    'z8-c311': dict(
+        sha256='2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853',
+        prefix='fx_z8_font_', lock=0x402e5550, unlock=0x402e5564,
+        line_probe=0x402eeb38,measure=0x4088c620,set_layout=0x4088bdac,
+        enter=[0x402ede28, 0x402ee174, 0x402ee28c, 0x402ef13c, 0x402ef284, 0x402ef3e0, 0x402ef598, 0x402ef7e4, 0x402ef8a0]),
     'z9-c532': dict(
         sha256='6380ded18395ce11cb327c766721274c85127d2cf1a1e887ee60e3d156810bdd',
         prefix='fx_z9_font_', lock=0x402e4364, unlock=0x402e4378,

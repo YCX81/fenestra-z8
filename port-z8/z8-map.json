@@ -1,0 +1,2708 @@
+{
+ "0x40160000": {
+  "used_in": [
+   "host/platform_profiles.py:13",
+   "host/displaced.py:7",
+   "host/displaced.py:7",
+   "emulation/native_ui_dispatch_sites.py:3",
+   "emulation/native_font_sites.py:9"
+  ],
+  "z8": "0x40160000",
+  "sim": 1.0,
+  "votes": 48,
+  "second": 0,
+  "status": "high"
+ },
+ "0x4016a918": {
+  "used_in": [
+   "src/platform/z9_c532/rtos.c:8"
+  ],
+  "z8": "0x4016a918",
+  "sim": 1.0,
+  "votes": 90,
+  "second": 0,
+  "status": "high"
+ },
+ "0x4016c8f4": {
+  "used_in": [
+   "host/platform_profiles.py:85"
+  ],
+  "z8": "0x4016c8f4",
+  "sim": 0.875,
+  "votes": 58,
+  "second": 16,
+  "status": "review"
+ },
+ "0x4016c918": {
+  "used_in": [
+   "host/platform_profiles.py:85"
+  ],
+  "z8": "0x4016c918",
+  "sim": 0.875,
+  "votes": 49,
+  "second": 16,
+  "status": "review"
+ },
+ "0x4016c938": {
+  "used_in": [
+   "host/platform_profiles.py:85"
+  ],
+  "z8": "0x4016c938",
+  "sim": 0.938,
+  "votes": 42,
+  "second": 9,
+  "status": "high"
+ },
+ "0x4016c9c4": {
+  "used_in": [
+   "host/platform_profiles.py:86"
+  ],
+  "z8": "0x4016c9c4",
+  "sim": 0.938,
+  "votes": 37,
+  "second": 1,
+  "status": "high"
+ },
+ "0x4016c9e4": {
+  "used_in": [
+   "host/platform_profiles.py:86"
+  ],
+  "z8": "0x4016c9e4",
+  "sim": 0.906,
+  "votes": 35,
+  "second": 1,
+  "status": "high"
+ },
+ "0x4016ca04": {
+  "used_in": [
+   "host/platform_profiles.py:86"
+  ],
+  "z8": "0x4016ca04",
+  "sim": 0.875,
+  "votes": 41,
+  "second": 1,
+  "status": "review"
+ },
+ "0x4016ca78": {
+  "used_in": [
+   "host/platform_profiles.py:87"
+  ],
+  "z8": "0x4016ca78",
+  "sim": 0.875,
+  "votes": 31,
+  "second": 4,
+  "status": "review"
+ },
+ "0x4016caa8": {
+  "used_in": [
+   "host/platform_profiles.py:87"
+  ],
+  "z8": "0x4016caa8",
+  "sim": 0.875,
+  "votes": 37,
+  "second": 4,
+  "status": "review"
+ },
+ "0x4016cac0": {
+  "used_in": [
+   "host/platform_profiles.py:88"
+  ],
+  "z8": "0x4016cac0",
+  "sim": 0.906,
+  "votes": 43,
+  "second": 8,
+  "status": "high"
+ },
+ "0x4016cb24": {
+  "used_in": [
+   "host/platform_profiles.py:88"
+  ],
+  "z8": "0x4016cb24",
+  "sim": 0.938,
+  "votes": 53,
+  "second": 25,
+  "status": "review"
+ },
+ "0x4016cb48": {
+  "used_in": [
+   "host/platform_profiles.py:89"
+  ],
+  "z8": "0x4016cb48",
+  "sim": 0.938,
+  "votes": 57,
+  "second": 25,
+  "status": "review"
+ },
+ "0x4016cb9c": {
+  "used_in": [
+   "host/platform_profiles.py:89"
+  ],
+  "z8": "0x4016cb9c",
+  "sim": 0.938,
+  "votes": 65,
+  "second": 25,
+  "status": "review"
+ },
+ "0x4016cbe8": {
+  "used_in": [
+   "host/platform_profiles.py:90"
+  ],
+  "z8": "0x4016cbe8",
+  "sim": 0.938,
+  "votes": 64,
+  "second": 25,
+  "status": "review"
+ },
+ "0x4016cc2c": {
+  "used_in": [
+   "host/platform_profiles.py:90"
+  ],
+  "z8": "0x4016cc2c",
+  "sim": 0.938,
+  "votes": 62,
+  "second": 22,
+  "status": "review"
+ },
+ "0x4016cc70": {
+  "used_in": [
+   "host/platform_profiles.py:90"
+  ],
+  "z8": "0x4016cc70",
+  "sim": 0.938,
+  "votes": 64,
+  "second": 16,
+  "status": "high"
+ },
+ "0x4016cd78": {
+  "used_in": [
+   "host/platform_profiles.py:91"
+  ],
+  "z8": "0x4016cd78",
+  "sim": 0.938,
+  "votes": 66,
+  "second": 25,
+  "status": "review"
+ },
+ "0x4016cdc4": {
+  "used_in": [
+   "host/platform_profiles.py:91"
+  ],
+  "z8": "0x4016cdc4",
+  "sim": 0.938,
+  "votes": 62,
+  "second": 20,
+  "status": "high"
+ },
+ "0x4016eb0c": {
+  "used_in": [
+   "host/platform_profiles.py:79"
+  ],
+  "z8": "0x4016eb0c",
+  "sim": 0.969,
+  "votes": 76,
+  "second": 3,
+  "status": "high"
+ },
+ "0x4016eb68": {
+  "used_in": [
+   "host/platform_profiles.py:79"
+  ],
+  "z8": "0x4016eb68",
+  "sim": 0.906,
+  "votes": 68,
+  "second": 3,
+  "status": "high"
+ },
+ "0x4016eba0": {
+  "used_in": [
+   "host/platform_profiles.py:79"
+  ],
+  "z8": "0x4016eba0",
+  "sim": 0.938,
+  "votes": 64,
+  "second": 3,
+  "status": "high"
+ },
+ "0x4016eea4": {
+  "used_in": [
+   "host/platform_profiles.py:83"
+  ],
+  "z8": "0x4016eea4",
+  "sim": 0.969,
+  "votes": 74,
+  "second": 10,
+  "status": "high"
+ },
+ "0x4016f0bc": {
+  "used_in": [
+   "host/platform_profiles.py:83"
+  ],
+  "z8": "0x4016f0bc",
+  "sim": 0.938,
+  "votes": 62,
+  "second": 5,
+  "status": "high"
+ },
+ "0x4016f0f4": {
+  "used_in": [
+   "host/platform_profiles.py:83"
+  ],
+  "z8": "0x4016f0f4",
+  "sim": 0.906,
+  "votes": 62,
+  "second": 5,
+  "status": "high"
+ },
+ "0x4016f178": {
+  "used_in": [
+   "host/platform_profiles.py:83"
+  ],
+  "z8": "0x4016f178",
+  "sim": 0.969,
+  "votes": 72,
+  "second": 5,
+  "status": "high"
+ },
+ "0x4016f1d0": {
+  "used_in": [
+   "host/platform_profiles.py:84"
+  ],
+  "z8": "0x4016f1d0",
+  "sim": 1.0,
+  "votes": 71,
+  "second": 5,
+  "status": "high"
+ },
+ "0x40172380": {
+  "used_in": [
+   "host/platform_profiles.py:80"
+  ],
+  "z8": "0x40172380",
+  "sim": 1.0,
+  "votes": 82,
+  "second": 1,
+  "status": "high"
+ },
+ "0x40172608": {
+  "used_in": [
+   "host/platform_profiles.py:81"
+  ],
+  "z8": "0x40172608",
+  "sim": 1.0,
+  "votes": 95,
+  "second": 1,
+  "status": "high"
+ },
+ "0x40172b88": {
+  "used_in": [
+   "host/platform_profiles.py:80"
+  ],
+  "z8": "0x40172b88",
+  "sim": 1.0,
+  "votes": 93,
+  "second": 0,
+  "status": "high"
+ },
+ "0x40173098": {
+  "used_in": [
+   "host/platform_profiles.py:82"
+  ],
+  "z8": "0x40173098",
+  "sim": 1.0,
+  "votes": 95,
+  "second": 1,
+  "status": "high"
+ },
+ "0x40173104": {
+  "used_in": [
+   "host/platform_profiles.py:82"
+  ],
+  "z8": "0x40173104",
+  "sim": 1.0,
+  "votes": 87,
+  "second": 1,
+  "status": "high"
+ },
+ "0x401731c0": {
+  "used_in": [
+   "host/platform_profiles.py:81"
+  ],
+  "z8": "0x401731c0",
+  "sim": 1.0,
+  "votes": 82,
+  "second": 1,
+  "status": "high"
+ },
+ "0x40173b9c": {
+  "used_in": [
+   "host/platform_profiles.py:95"
+  ],
+  "z8": "0x40173b9c",
+  "sim": 0.969,
+  "votes": 82,
+  "second": 7,
+  "status": "high"
+ },
+ "0x40173c60": {
+  "used_in": [
+   "host/platform_profiles.py:95"
+  ],
+  "z8": "0x40173c60",
+  "sim": 1.0,
+  "votes": 96,
+  "second": 9,
+  "status": "high"
+ },
+ "0x40173d04": {
+  "used_in": [
+   "host/platform_profiles.py:95"
+  ],
+  "z8": "0x40173d04",
+  "sim": 1.0,
+  "votes": 88,
+  "second": 5,
+  "status": "high"
+ },
+ "0x4017b254": {
+  "used_in": [
+   "host/platform_profiles.py:100"
+  ],
+  "z8": "0x4017b254",
+  "sim": 1.0,
+  "votes": 65,
+  "second": 17,
+  "status": "high"
+ },
+ "0x4017b420": {
+  "used_in": [
+   "host/platform_profiles.py:100"
+  ],
+  "z8": "0x4017b420",
+  "sim": 0.969,
+  "votes": 31,
+  "second": 14,
+  "status": "review"
+ },
+ "0x4017b5dc": {
+  "used_in": [
+   "host/platform_profiles.py:101"
+  ],
+  "z8": "0x4017b5dc",
+  "sim": 0.969,
+  "votes": 59,
+  "second": 26,
+  "status": "review"
+ },
+ "0x4017b79c": {
+  "used_in": [
+   "host/platform_profiles.py:101"
+  ],
+  "z8": "0x4017b79c",
+  "sim": 0.969,
+  "votes": 64,
+  "second": 26,
+  "status": "review"
+ },
+ "0x4017b95c": {
+  "used_in": [
+   "host/platform_profiles.py:102"
+  ],
+  "z8": "0x4017b95c",
+  "sim": 0.969,
+  "votes": 50,
+  "second": 26,
+  "status": "review"
+ },
+ "0x4017ba74": {
+  "used_in": [
+   "host/platform_profiles.py:102"
+  ],
+  "z8": "0x4017ba74",
+  "sim": 0.969,
+  "votes": 16,
+  "second": 9,
+  "status": "review"
+ },
+ "0x4017c040": {
+  "used_in": [
+   "host/platform_profiles.py:102"
+  ],
+  "z8": "0x4017c040",
+  "sim": 1.0,
+  "votes": 63,
+  "second": 5,
+  "status": "high"
+ },
+ "0x4017f8dc": {
+  "used_in": [
+   "host/platform_profiles.py:92"
+  ],
+  "z8": "0x4017f8dc",
+  "sim": 1.0,
+  "votes": 66,
+  "second": 8,
+  "status": "high"
+ },
+ "0x4017fad0": {
+  "used_in": [
+   "host/platform_profiles.py:92"
+  ],
+  "z8": "0x4017fad0",
+  "sim": 1.0,
+  "votes": 39,
+  "second": 6,
+  "status": "high"
+ },
+ "0x4017fd24": {
+  "used_in": [
+   "host/platform_profiles.py:93"
+  ],
+  "z8": "0x4017fd24",
+  "sim": 1.0,
+  "votes": 58,
+  "second": 3,
+  "status": "high"
+ },
+ "0x40180004": {
+  "used_in": [
+   "host/platform_profiles.py:93"
+  ],
+  "z8": "0x40180004",
+  "sim": 1.0,
+  "votes": 43,
+  "second": 7,
+  "status": "high"
+ },
+ "0x401801f8": {
+  "used_in": [
+   "host/platform_profiles.py:94"
+  ],
+  "z8": "0x401801f8",
+  "sim": 0.969,
+  "votes": 49,
+  "second": 3,
+  "status": "high"
+ },
+ "0x4018058c": {
+  "used_in": [
+   "host/platform_profiles.py:94"
+  ],
+  "z8": "0x4018058c",
+  "sim": 1.0,
+  "votes": 42,
+  "second": 4,
+  "status": "high"
+ },
+ "0x40180e50": {
+  "used_in": [
+   "host/platform_profiles.py:96"
+  ],
+  "z8": "0x40180e50",
+  "sim": 1.0,
+  "votes": 55,
+  "second": 22,
+  "status": "review"
+ },
+ "0x4018102c": {
+  "used_in": [
+   "host/platform_profiles.py:96"
+  ],
+  "z8": "0x4018102c",
+  "sim": 0.969,
+  "votes": 33,
+  "second": 14,
+  "status": "review"
+ },
+ "0x401811e8": {
+  "used_in": [
+   "host/platform_profiles.py:97"
+  ],
+  "z8": "0x401811e8",
+  "sim": 1.0,
+  "votes": 62,
+  "second": 26,
+  "status": "review"
+ },
+ "0x401813e4": {
+  "used_in": [
+   "host/platform_profiles.py:97"
+  ],
+  "z8": "0x401813e4",
+  "sim": 1.0,
+  "votes": 39,
+  "second": 7,
+  "status": "high"
+ },
+ "0x401815cc": {
+  "used_in": [
+   "host/platform_profiles.py:98"
+  ],
+  "z8": "0x401815cc",
+  "sim": 1.0,
+  "votes": 38,
+  "second": 4,
+  "status": "high"
+ },
+ "0x40181760": {
+  "used_in": [
+   "host/platform_profiles.py:98"
+  ],
+  "z8": "0x40181760",
+  "sim": 0.969,
+  "votes": 58,
+  "second": 12,
+  "status": "high"
+ },
+ "0x40181880": {
+  "used_in": [
+   "host/platform_profiles.py:99"
+  ],
+  "z8": "0x40181880",
+  "sim": 1.0,
+  "votes": 47,
+  "second": 7,
+  "status": "high"
+ },
+ "0x40183490": {
+  "used_in": [
+   "host/platform_profiles.py:100"
+  ],
+  "z8": "0x40183490",
+  "sim": 1.0,
+  "votes": 81,
+  "second": 10,
+  "status": "high"
+ },
+ "0x40185064": {
+  "used_in": [
+   "src/platform/z9_c532/rtos.c:9",
+   "src/platform/z9_c532/task.c:18",
+   "host/platform_profiles.py:68"
+  ],
+  "z8": "0x40185064",
+  "sim": 1.0,
+  "votes": 86,
+  "second": 2,
+  "status": "high"
+ },
+ "0x401855e0": {
+  "used_in": [
+   "src/platform/z9_c532/rtos.c:10",
+   "src/platform/z9_c532/task.c:21",
+   "host/platform_profiles.py:68"
+  ],
+  "z8": "0x401855e0",
+  "sim": 0.969,
+  "votes": 59,
+  "second": 22,
+  "status": "review"
+ },
+ "0x401865d8": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:11"
+  ],
+  "z8": "0x401865d8",
+  "sim": 1.0,
+  "votes": 54,
+  "second": 13,
+  "status": "high"
+ },
+ "0x40187b00": {
+  "used_in": [
+   "src/platform/z9_c532/rtos.c:11",
+   "src/platform/z9_c532/task.c:27",
+   "host/platform_profiles.py:68"
+  ],
+  "z8": "0x40187b00",
+  "sim": 1.0,
+  "votes": 74,
+  "second": 4,
+  "status": "high"
+ },
+ "0x401a0000": {
+  "used_in": [
+   "src/platform/z9_c532/module_session.c:11",
+   "src/platform/z9_c532/module_worker.c:34",
+   "host/build_z9_core.py:12",
+   "host/verify_build_identity.py:47"
+  ],
+  "status": "region"
+ },
+ "0x40200000": {
+  "used_in": [
+   "src/platform/z9_c532/module_session.c:12",
+   "src/platform/z9_c532/module_worker.c:34",
+   "host/build_z9_core.py:13"
+  ],
+  "z8": "0x40200000",
+  "sim": 0.969,
+  "votes": 23,
+  "second": 3,
+  "status": "high"
+ },
+ "0x402517fc": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:51"
+  ],
+  "z8": "0x402517fc",
+  "sim": 0.938,
+  "votes": 70,
+  "second": 14,
+  "status": "high"
+ },
+ "0x402518a8": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:59"
+  ],
+  "z8": "0x402518a8",
+  "sim": 0.969,
+  "votes": 64,
+  "second": 38,
+  "status": "review"
+ },
+ "0x40251908": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:58"
+  ],
+  "z8": "0x40251908",
+  "sim": 0.969,
+  "votes": 72,
+  "second": 43,
+  "status": "review"
+ },
+ "0x40251a84": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:54"
+  ],
+  "z8": "0x40251a84",
+  "sim": 0.969,
+  "votes": 75,
+  "second": 31,
+  "status": "review"
+ },
+ "0x40251ae8": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:53"
+  ],
+  "z8": "0x40251ae8",
+  "sim": 0.969,
+  "votes": 74,
+  "second": 23,
+  "status": "high"
+ },
+ "0x40251db8": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:57"
+  ],
+  "z8": "0x40251db8",
+  "sim": 0.969,
+  "votes": 44,
+  "second": 22,
+  "status": "review"
+ },
+ "0x40251f34": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:56"
+  ],
+  "z8": "0x40251f34",
+  "sim": 0.969,
+  "votes": 48,
+  "second": 25,
+  "status": "review"
+ },
+ "0x40252a68": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:62"
+  ],
+  "z8": "0x40252a68",
+  "sim": 0.938,
+  "votes": 72,
+  "second": 16,
+  "status": "high"
+ },
+ "0x40252ac0": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:62"
+  ],
+  "z8": "0x40252ac0",
+  "sim": 0.969,
+  "votes": 71,
+  "second": 15,
+  "status": "high"
+ },
+ "0x40252e8c": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:44"
+  ],
+  "z8": "0x40252e8c",
+  "sim": 0.938,
+  "votes": 76,
+  "second": 6,
+  "status": "high"
+ },
+ "0x40252f0c": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:47"
+  ],
+  "z8": "0x40252f0c",
+  "sim": 0.969,
+  "votes": 70,
+  "second": 12,
+  "status": "high"
+ },
+ "0x40252fb0": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:45"
+  ],
+  "z8": "0x40252fb0",
+  "sim": 0.969,
+  "votes": 71,
+  "second": 19,
+  "status": "high"
+ },
+ "0x4025301c": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:49"
+  ],
+  "z8": "0x4025301c",
+  "sim": 0.969,
+  "votes": 69,
+  "second": 19,
+  "status": "high"
+ },
+ "0x4025321c": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:43"
+  ],
+  "z8": "0x4025321c",
+  "sim": 0.969,
+  "votes": 71,
+  "second": 22,
+  "status": "high"
+ },
+ "0x402538fc": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:50"
+  ],
+  "z8": "0x402538fc",
+  "sim": 0.969,
+  "votes": 70,
+  "second": 33,
+  "status": "review"
+ },
+ "0x40253998": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:46"
+  ],
+  "z8": "0x40253998",
+  "sim": 0.969,
+  "votes": 63,
+  "second": 21,
+  "status": "high"
+ },
+ "0x40253a04": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:48"
+  ],
+  "z8": "0x40253a04",
+  "sim": 0.969,
+  "votes": 72,
+  "second": 23,
+  "status": "high"
+ },
+ "0x40253a74": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:55"
+  ],
+  "z8": "0x40253a74",
+  "sim": 0.969,
+  "votes": 73,
+  "second": 23,
+  "status": "high"
+ },
+ "0x40253b2c": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:52"
+  ],
+  "z8": "0x40253b2c",
+  "sim": 0.969,
+  "votes": 77,
+  "second": 17,
+  "status": "high"
+ },
+ "0x40253d10": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:60"
+  ],
+  "z8": "0x40253d10",
+  "sim": 0.969,
+  "votes": 77,
+  "second": 3,
+  "status": "high"
+ },
+ "0x40253e40": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:60"
+  ],
+  "z8": "0x40253e40",
+  "sim": 0.969,
+  "votes": 76,
+  "second": 16,
+  "status": "high"
+ },
+ "0x40253f74": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:61"
+  ],
+  "z8": "0x40253f74",
+  "sim": 0.969,
+  "votes": 78,
+  "second": 39,
+  "status": "review"
+ },
+ "0x4025449c": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:61"
+  ],
+  "z8": "0x4025449c",
+  "sim": 0.969,
+  "votes": 66,
+  "second": 13,
+  "status": "high"
+ },
+ "0x40254534": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:63"
+  ],
+  "z8": "0x40254534",
+  "sim": 0.938,
+  "votes": 59,
+  "second": 10,
+  "status": "high"
+ },
+ "0x40254730": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:63"
+  ],
+  "z8": "0x40254730",
+  "sim": 0.938,
+  "votes": 64,
+  "second": 28,
+  "status": "review"
+ },
+ "0x402dc960": {
+  "used_in": [
+   "src/platform/z9_c532/card.c:24",
+   "src/platform/z9_c532/menu.c:540",
+   "src/platform/z9_c532/startup_files.c:6",
+   "host/platform_profiles.py:69"
+  ],
+  "z8": "0x402dd4f8",
+  "sim": 0.938,
+  "votes": 33,
+  "second": 14,
+  "status": "review"
+ },
+ "0x402dc99c": {
+  "used_in": [
+   "host/platform_profiles.py:145"
+  ],
+  "z8": "0x402dd534",
+  "sim": 0.938,
+  "votes": 29,
+  "second": 9,
+  "status": "high"
+ },
+ "0x402dc9c0": {
+  "used_in": [
+   "src/platform/z9_c532/card.c:41",
+   "src/platform/z9_c532/menu.c:561",
+   "src/platform/z9_c532/startup_files.c:9",
+   "host/platform_profiles.py:69"
+  ],
+  "z8": "0x402dd558",
+  "sim": 0.969,
+  "votes": 21,
+  "second": 3,
+  "status": "high"
+ },
+ "0x402dcb30": {
+  "used_in": [
+   "src/platform/z9_c532/card.c:33",
+   "src/platform/z9_c532/menu.c:551",
+   "src/platform/z9_c532/startup_files.c:7",
+   "host/platform_profiles.py:69"
+  ],
+  "z8": "0x402dd6c8",
+  "sim": 0.969,
+  "votes": 48,
+  "second": 2,
+  "status": "high"
+ },
+ "0x402dcbf4": {
+  "used_in": [
+   "src/platform/z9_c532/startup_files.c:8",
+   "host/platform_profiles.py:77"
+  ],
+  "z8": "0x402dd78c",
+  "sim": 0.969,
+  "votes": 84,
+  "second": 2,
+  "status": "high"
+ },
+ "0x402dcd50": {
+  "used_in": [
+   "host/platform_profiles.py:70"
+  ],
+  "z8": "0x402dd8e8",
+  "sim": 0.969,
+  "votes": 66,
+  "second": 10,
+  "status": "high"
+ },
+ "0x402dce64": {
+  "used_in": [
+   "host/platform_profiles.py:77"
+  ],
+  "z8": "0x402dd9fc",
+  "sim": 0.969,
+  "votes": 32,
+  "second": 10,
+  "status": "high"
+ },
+ "0x402dceb4": {
+  "used_in": [
+   "src/platform/z9_c532/startup_files.c:10"
+  ],
+  "z8": "0x402dda4c",
+  "sim": 0.969,
+  "votes": 23,
+  "second": 10,
+  "status": "review"
+ },
+ "0x402dd0d4": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:490",
+   "host/platform_profiles.py:76"
+  ],
+  "z8": "0x402ddc6c",
+  "sim": 0.938,
+  "votes": 26,
+  "second": 14,
+  "status": "review"
+ },
+ "0x402dd184": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:499",
+   "host/platform_profiles.py:76"
+  ],
+  "z8": "0x402ddd1c",
+  "sim": 0.969,
+  "votes": 31,
+  "second": 14,
+  "status": "review"
+ },
+ "0x402dd1d4": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:525",
+   "host/platform_profiles.py:77"
+  ],
+  "z8": "0x402ddd6c",
+  "sim": 0.969,
+  "votes": 36,
+  "second": 14,
+  "status": "review"
+ },
+ "0x402e4364": {
+  "used_in": [
+   "emulation/native_font_sites.py:19"
+  ],
+  "z8": "0x402e5550",
+  "sim": 0.844,
+  "votes": 34,
+  "second": 3,
+  "status": "review"
+ },
+ "0x402e4378": {
+  "used_in": [
+   "emulation/native_font_sites.py:19"
+  ],
+  "z8": "0x402e5564",
+  "sim": 0.844,
+  "votes": 34,
+  "second": 3,
+  "status": "review"
+ },
+ "0x402e7258": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:36"
+  ],
+  "z8": "0x402e8444",
+  "sim": 1.0,
+  "votes": 96,
+  "second": 11,
+  "status": "high"
+ },
+ "0x402ecc3c": {
+  "used_in": [
+   "emulation/native_font_sites.py:21"
+  ],
+  "z8": "0x402ede28",
+  "sim": 0.938,
+  "votes": 74,
+  "second": 14,
+  "status": "high"
+ },
+ "0x402ecf88": {
+  "used_in": [
+   "emulation/native_font_sites.py:21"
+  ],
+  "z8": "0x402ee174",
+  "sim": 0.969,
+  "votes": 88,
+  "second": 14,
+  "status": "high"
+ },
+ "0x402ed0a0": {
+  "used_in": [
+   "emulation/native_font_sites.py:21"
+  ],
+  "z8": "0x402ee28c",
+  "sim": 0.969,
+  "votes": 79,
+  "second": 14,
+  "status": "high"
+ },
+ "0x402ed94c": {
+  "used_in": [
+   "emulation/native_font_sites.py:20"
+  ],
+  "z8": "0x402eeb38",
+  "sim": 1.0,
+  "votes": 90,
+  "second": 2,
+  "status": "high"
+ },
+ "0x402edf50": {
+  "used_in": [
+   "emulation/native_font_sites.py:21"
+  ],
+  "z8": "0x402ef13c",
+  "sim": 0.969,
+  "votes": 83,
+  "second": 14,
+  "status": "high"
+ },
+ "0x402ee098": {
+  "used_in": [
+   "emulation/native_font_sites.py:21"
+  ],
+  "z8": "0x402ef284",
+  "sim": 0.969,
+  "votes": 89,
+  "second": 24,
+  "status": "high"
+ },
+ "0x402ee1f4": {
+  "used_in": [
+   "emulation/native_font_sites.py:22"
+  ],
+  "z8": "0x402ef3e0",
+  "sim": 0.969,
+  "votes": 84,
+  "second": 24,
+  "status": "high"
+ },
+ "0x402ee3ac": {
+  "used_in": [
+   "emulation/native_font_sites.py:22"
+  ],
+  "z8": "0x402ef598",
+  "sim": 0.969,
+  "votes": 89,
+  "second": 10,
+  "status": "high"
+ },
+ "0x402ee5f8": {
+  "used_in": [
+   "emulation/native_font_sites.py:22"
+  ],
+  "z8": "0x402ef7e4",
+  "sim": 0.969,
+  "votes": 84,
+  "second": 14,
+  "status": "high"
+ },
+ "0x402ee6b4": {
+  "used_in": [
+   "emulation/native_font_sites.py:22"
+  ],
+  "z8": "0x402ef8a0",
+  "sim": 0.969,
+  "votes": 78,
+  "second": 14,
+  "status": "high"
+ },
+ "0x4031e328": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:25"
+  ],
+  "z8": "0x4031dedc",
+  "sim": 0.969,
+  "votes": 72,
+  "second": 4,
+  "status": "high"
+ },
+ "0x4031e32c": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:27"
+  ],
+  "z8": "0x4031dee0",
+  "sim": 0.969,
+  "votes": 71,
+  "second": 3,
+  "status": "high"
+ },
+ "0x4031e6f4": {
+  "used_in": [
+   "host/platform_profiles.py:75"
+  ],
+  "z8": "0x4031e2a8",
+  "sim": 1.0,
+  "votes": 86,
+  "second": 19,
+  "status": "high"
+ },
+ "0x4031e758": {
+  "used_in": [
+   "host/platform_profiles.py:75"
+  ],
+  "z8": "0x4031e30c",
+  "sim": 1.0,
+  "votes": 70,
+  "second": 19,
+  "status": "high"
+ },
+ "0x4031e7b8": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:8"
+  ],
+  "z8": "0x4031e36c",
+  "sim": 0.906,
+  "votes": 51,
+  "second": 17,
+  "status": "high"
+ },
+ "0x4031e7f4": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:9"
+  ],
+  "z8": "0x4031e3a8",
+  "sim": 0.875,
+  "votes": 45,
+  "second": 6,
+  "status": "review"
+ },
+ "0x4031e824": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:18"
+  ],
+  "z8": "0x4031e3d8",
+  "sim": 0.875,
+  "votes": 39,
+  "second": 6,
+  "status": "review"
+ },
+ "0x4031e87c": {
+  "used_in": [
+   "host/platform_profiles.py:74"
+  ],
+  "z8": "0x4031e430",
+  "sim": 0.906,
+  "votes": 43,
+  "second": 7,
+  "status": "high"
+ },
+ "0x4031f4ac": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:40",
+   "src/platform/z9_c532/menu.c:169"
+  ],
+  "z8": "0x4031f060",
+  "sim": 1.0,
+  "votes": 72,
+  "second": 8,
+  "status": "high"
+ },
+ "0x4031fa5c": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:169",
+   "src/platform/z9_c532/menu.c:260",
+   "src/platform/z9_c532/menu.c:354"
+  ],
+  "z8": "0x4031f610",
+  "sim": 1.0,
+  "votes": 64,
+  "second": 30,
+  "status": "review"
+ },
+ "0x40323d7c": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:6"
+  ],
+  "z8": "0x40323930",
+  "sim": 1.0,
+  "votes": 69,
+  "second": 6,
+  "status": "high"
+ },
+ "0x40325ecc": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:10"
+  ],
+  "z8": "0x40325a80",
+  "sim": 0.969,
+  "votes": 63,
+  "second": 4,
+  "status": "high"
+ },
+ "0x40325fac": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:167",
+   "src/platform/z9_c532/menu.c:257",
+   "src/platform/z9_c532/menu.c:350"
+  ],
+  "z8": "0x40325b60",
+  "sim": 1.0,
+  "votes": 67,
+  "second": 13,
+  "status": "high"
+ },
+ "0x403266ec": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:35",
+   "src/platform/z9_c532/menu.c:364"
+  ],
+  "z8": "0x403262a0",
+  "sim": 1.0,
+  "votes": 96,
+  "second": 3,
+  "status": "high"
+ },
+ "0x4032934c": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:42"
+  ],
+  "z8": "0x40328f00",
+  "sim": 0.938,
+  "votes": 82,
+  "second": 26,
+  "status": "high"
+ },
+ "0x40329c30": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:23"
+  ],
+  "z8": "0x403297e4",
+  "sim": 0.875,
+  "votes": 76,
+  "second": 2,
+  "status": "review"
+ },
+ "0x40329cc8": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:11"
+  ],
+  "z8": "0x4032987c",
+  "sim": 1.0,
+  "votes": 76,
+  "second": 6,
+  "status": "high"
+ },
+ "0x4032a15c": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:19"
+  ],
+  "z8": "0x40329d10",
+  "sim": 1.0,
+  "votes": 93,
+  "second": 23,
+  "status": "high"
+ },
+ "0x4032aa38": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:37"
+  ],
+  "z8": "0x4032a5ec",
+  "sim": 1.0,
+  "votes": 95,
+  "second": 4,
+  "status": "high"
+ },
+ "0x4032e57c": {
+  "used_in": [
+   "host/build_z9_core.py:14",
+   "host/platform_profiles.py:71"
+  ],
+  "z8": "0x4032e130",
+  "sim": 0.844,
+  "votes": 25,
+  "second": 6,
+  "status": "review"
+ },
+ "0x4033a66c": {
+  "used_in": [
+   "host/displaced.py:3"
+  ],
+  "z8": "0x4033a220",
+  "sim": 1.0,
+  "votes": 96,
+  "second": 12,
+  "status": "high"
+ },
+ "0x40340df0": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:24"
+  ],
+  "z8": "0x403409a4",
+  "sim": 1.0,
+  "votes": 84,
+  "second": 17,
+  "status": "high"
+ },
+ "0x40340e20": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:24"
+  ],
+  "z8": "0x403409d4",
+  "sim": 1.0,
+  "votes": 94,
+  "second": 23,
+  "status": "high"
+ },
+ "0x403411b0": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:26"
+  ],
+  "z8": "0x40340d64",
+  "sim": 1.0,
+  "votes": 91,
+  "second": 39,
+  "status": "review"
+ },
+ "0x4035705c": {
+  "used_in": [
+   "host/build_z9_core.py:16",
+   "host/build_z9_core.py:94",
+   "host/displaced.py:3"
+  ],
+  "z8": "0x40356a74",
+  "sim": 1.0,
+  "votes": 70,
+  "second": 37,
+  "status": "review"
+ },
+ "0x4035706c": {
+  "used_in": [
+   "src/platform/z9_c532/ptp_trampoline.S:26"
+  ],
+  "z8": "0x40356a84",
+  "sim": 1.0,
+  "votes": 69,
+  "second": 40,
+  "status": "review"
+ },
+ "0x403638e4": {
+  "used_in": [
+   "host/displaced.py:3"
+  ],
+  "z8": "0x403632fc",
+  "sim": 0.938,
+  "votes": 67,
+  "second": 4,
+  "status": "high"
+ },
+ "0x40394404": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:39"
+  ],
+  "z8": "0x40393f28",
+  "sim": 0.969,
+  "votes": 50,
+  "second": 1,
+  "status": "high"
+ },
+ "0x40394448": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:38"
+  ],
+  "z8": "0x40393f6c",
+  "sim": 1.0,
+  "votes": 50,
+  "second": 1,
+  "status": "high"
+ },
+ "0x4039a554": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:21"
+  ],
+  "z8": "0x4039a0b4",
+  "sim": 0.938,
+  "votes": 64,
+  "second": 0,
+  "status": "high"
+ },
+ "0x403adbac": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:1061",
+   "host/verify_native_namespace.py:13"
+  ],
+  "z8": "0x403ad6a4",
+  "sim": 0.906,
+  "votes": 24,
+  "second": 2,
+  "status": "high"
+ },
+ "0x403aed7c": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:161"
+  ],
+  "z8": "0x403ae874",
+  "sim": 0.969,
+  "votes": 71,
+  "second": 12,
+  "status": "high"
+ },
+ "0x403af040": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:162"
+  ],
+  "z8": "0x403aeb38",
+  "sim": 1.0,
+  "votes": 92,
+  "second": 4,
+  "status": "high"
+ },
+ "0x403af294": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:164"
+  ],
+  "z8": "0x403aed8c",
+  "sim": 0.969,
+  "votes": 83,
+  "second": 3,
+  "status": "high"
+ },
+ "0x403afa44": {
+  "used_in": [
+   "host/build_z9_core.py:15",
+   "host/build_z9_core.py:92",
+   "host/displaced.py:3",
+   "host/verify_native_namespace.py:13"
+  ],
+  "z8": "0x403af53c",
+  "sim": 0.938,
+  "votes": 54,
+  "second": 4,
+  "status": "high"
+ },
+ "0x403afa54": {
+  "used_in": [
+   "src/platform/z9_c532/startup_trampoline.S:17"
+  ],
+  "z8": "0x403af54c",
+  "sim": 0.938,
+  "votes": 54,
+  "second": 4,
+  "status": "high"
+ },
+ "0x403b037c": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:157"
+  ],
+  "z8": "0x403afe64",
+  "sim": 0.625,
+  "votes": 52,
+  "second": 20,
+  "status": "review"
+ },
+ "0x403b03f8": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:160"
+  ],
+  "z8": "0x403afee0",
+  "sim": 1.0,
+  "votes": 82,
+  "second": 3,
+  "status": "high"
+ },
+ "0x403b0490": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:158"
+  ],
+  "z8": "0x403aff78",
+  "sim": 1.0,
+  "votes": 89,
+  "second": 2,
+  "status": "high"
+ },
+ "0x403b05d0": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:159"
+  ],
+  "z8": "0x403b00b8",
+  "sim": 1.0,
+  "votes": 85,
+  "second": 3,
+  "status": "high"
+ },
+ "0x403b0874": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:163"
+  ],
+  "z8": "0x403b035c",
+  "sim": 1.0,
+  "votes": 79,
+  "second": 2,
+  "status": "high"
+ },
+ "0x403b2748": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:417",
+   "src/platform/z9_c532/menu.c:457",
+   "src/platform/z9_c532/menu.c:848"
+  ],
+  "z8": "0x403b2210",
+  "sim": 0.844,
+  "votes": 55,
+  "second": 1,
+  "status": "review"
+ },
+ "0x403bba78": {
+  "used_in": [
+   "host/displaced.py:3"
+  ],
+  "z8": "0x403bb3cc",
+  "sim": 0.875,
+  "votes": 25,
+  "second": 6,
+  "status": "review"
+ },
+ "0x403d2158": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:11"
+  ],
+  "z8": "0x403d71d4",
+  "sim": 0.844,
+  "votes": 60,
+  "second": 1,
+  "status": "review"
+ },
+ "0x403d22d4": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:11"
+  ],
+  "z8": "0x403d7350",
+  "sim": 0.969,
+  "votes": 63,
+  "second": 3,
+  "status": "high"
+ },
+ "0x403d6618": {
+  "used_in": [
+   "host/build_z9_core.py:14",
+   "host/platform_profiles.py:71"
+  ],
+  "z8": "0x403db694",
+  "sim": 0.938,
+  "votes": 68,
+  "second": 5,
+  "status": "high"
+ },
+ "0x403d6908": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:11"
+  ],
+  "z8": "0x403db984",
+  "sim": 0.844,
+  "votes": 21,
+  "second": 1,
+  "status": "review"
+ },
+ "0x403d69d4": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:12"
+  ],
+  "z8": "0x403dba50",
+  "sim": 0.938,
+  "votes": 31,
+  "second": 1,
+  "status": "high"
+ },
+ "0x403d69f4": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:11"
+  ],
+  "z8": "0x403dba70",
+  "sim": 0.938,
+  "votes": 39,
+  "second": 2,
+  "status": "high"
+ },
+ "0x403d6d38": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:20",
+   "src/platform/z9_c532/menu.c:156",
+   "src/platform/z9_c532/menu.c:166",
+   "src/platform/z9_c532/menu.c:203",
+   "src/platform/z9_c532/menu.c:212",
+   "src/platform/z9_c532/menu.c:343"
+  ],
+  "z8": "0x403dbdb4",
+  "sim": 0.906,
+  "votes": 56,
+  "second": 1,
+  "status": "high"
+ },
+ "0x403d7c50": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:12"
+  ],
+  "z8": "0x403dccc8",
+  "sim": 1.0,
+  "votes": 74,
+  "second": 34,
+  "status": "review"
+ },
+ "0x403eb078": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:5",
+   "src/platform/z9_c532/menu.c:273",
+   "src/platform/z9_c532/menu.c:368"
+  ],
+  "z8": "0x403efe74",
+  "sim": 0.969,
+  "votes": 56,
+  "second": 6,
+  "status": "high"
+ },
+ "0x403eb0dc": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:31",
+   "src/platform/z9_c532/menu.c:272",
+   "src/platform/z9_c532/menu.c:367"
+  ],
+  "z8": "0x403efed8",
+  "sim": 0.906,
+  "votes": 41,
+  "second": 6,
+  "status": "high"
+ },
+ "0x403ebd54": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:15"
+  ],
+  "z8": "0x403f0b54",
+  "sim": 0.969,
+  "votes": 66,
+  "second": 1,
+  "status": "high"
+ },
+ "0x403ebd58": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:32"
+  ],
+  "z8": "0x403f0b58",
+  "sim": 0.969,
+  "votes": 66,
+  "second": 1,
+  "status": "high"
+ },
+ "0x403ebd5c": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:16"
+  ],
+  "z8": "0x403f0b5c",
+  "sim": 0.938,
+  "votes": 66,
+  "second": 2,
+  "status": "high"
+ },
+ "0x403ebfb8": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:22"
+  ],
+  "z8": "0x403f0db8",
+  "sim": 0.938,
+  "votes": 55,
+  "second": 4,
+  "status": "high"
+ },
+ "0x403ec980": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:13",
+   "src/platform/z9_c532/menu.c:259",
+   "src/platform/z9_c532/menu.c:261",
+   "src/platform/z9_c532/menu.c:352",
+   "src/platform/z9_c532/menu.c:355"
+  ],
+  "z8": "0x403f1780",
+  "sim": 0.969,
+  "votes": 87,
+  "second": 20,
+  "status": "high"
+ },
+ "0x403ec990": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:17"
+  ],
+  "z8": "0x403f1790",
+  "sim": 0.969,
+  "votes": 87,
+  "second": 20,
+  "status": "high"
+ },
+ "0x403ec99c": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:12"
+  ],
+  "z8": "0x403f179c",
+  "sim": 0.969,
+  "votes": 87,
+  "second": 20,
+  "status": "high"
+ },
+ "0x403ec9d0": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:168"
+  ],
+  "z8": "0x403f17d0",
+  "sim": 1.0,
+  "votes": 84,
+  "second": 9,
+  "status": "high"
+ },
+ "0x403ecbc4": {
+  "used_in": [
+   "host/platform_profiles.py:74"
+  ],
+  "z8": "0x403f19c4",
+  "sim": 1.0,
+  "votes": 60,
+  "second": 3,
+  "status": "high"
+ },
+ "0x403ecd18": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:23"
+  ],
+  "z8": "0x403f1b18",
+  "sim": 0.906,
+  "votes": 30,
+  "second": 3,
+  "status": "high"
+ },
+ "0x403f196c": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:363"
+  ],
+  "z8": "0x403f676c",
+  "sim": 1.0,
+  "votes": 92,
+  "second": 4,
+  "status": "high"
+ },
+ "0x403f97ec": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:14"
+  ],
+  "z8": "0x403fe284",
+  "sim": 0.969,
+  "votes": 83,
+  "second": 2,
+  "status": "high"
+ },
+ "0x403f9844": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:14"
+  ],
+  "z8": "0x403fe2dc",
+  "sim": 0.938,
+  "votes": 83,
+  "second": 2,
+  "status": "high"
+ },
+ "0x403fc768": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:14"
+  ],
+  "z8": "0x40616888",
+  "sim": 0.594,
+  "votes": 9,
+  "second": 1,
+  "status": "review"
+ },
+ "0x403fc794": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:13"
+  ],
+  "z8": "0x406168b4",
+  "sim": 0.438,
+  "votes": 9,
+  "second": 2,
+  "status": "review"
+ },
+ "0x403fc7b4": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:13",
+   "emulation/native_ui_dispatch_sites.py:14"
+  ],
+  "z8": "0x406168d4",
+  "sim": 0.219,
+  "votes": 9,
+  "second": 2,
+  "status": "review"
+ },
+ "0x40500970": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:14"
+  ],
+  "z8": "0x40507274",
+  "sim": 0.938,
+  "votes": 73,
+  "second": 1,
+  "status": "high"
+ },
+ "0x40500998": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:13"
+  ],
+  "z8": "0x4050729c",
+  "sim": 0.969,
+  "votes": 80,
+  "second": 1,
+  "status": "high"
+ },
+ "0x405009b4": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:13",
+   "emulation/native_ui_dispatch_sites.py:14"
+  ],
+  "z8": "0x405072b8",
+  "sim": 0.969,
+  "votes": 81,
+  "second": 1,
+  "status": "high"
+ },
+ "0x405022e8": {
+  "used_in": [
+   "host/platform_profiles.py:110"
+  ],
+  "z8": "0x40508be8",
+  "sim": 0.969,
+  "votes": 53,
+  "second": 8,
+  "status": "high"
+ },
+ "0x40529da8": {
+  "used_in": [
+   "host/platform_profiles.py:110"
+  ],
+  "z8": "0x4052f444",
+  "sim": 0.906,
+  "votes": 6,
+  "second": 6,
+  "status": "review"
+ },
+ "0x4060ae34": {
+  "used_in": [
+   "host/platform_profiles.py:72"
+  ],
+  "z8": "0x4060f558",
+  "sim": 0.938,
+  "votes": 55,
+  "second": 7,
+  "status": "high"
+ },
+ "0x4060cf30": {
+  "used_in": [
+   "host/platform_profiles.py:72"
+  ],
+  "z8": "0x40611654",
+  "sim": 0.969,
+  "votes": 62,
+  "second": 2,
+  "status": "high"
+ },
+ "0x4060d094": {
+  "used_in": [
+   "host/platform_profiles.py:73"
+  ],
+  "z8": "0x406117b8",
+  "sim": 0.906,
+  "votes": 43,
+  "second": 1,
+  "status": "high"
+ },
+ "0x4060e4d0": {
+  "used_in": [
+   "host/platform_profiles.py:73"
+  ],
+  "z8": "0x40612bf4",
+  "sim": 0.969,
+  "votes": 82,
+  "second": 2,
+  "status": "high"
+ },
+ "0x4060e674": {
+  "used_in": [
+   "host/platform_profiles.py:73"
+  ],
+  "z8": "0x40612d98",
+  "sim": 0.938,
+  "votes": 78,
+  "second": 3,
+  "status": "high"
+ },
+ "0x406120e0": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:15"
+  ],
+  "z8": "0x40616888",
+  "sim": 0.969,
+  "votes": 90,
+  "second": 4,
+  "status": "high"
+ },
+ "0x406121a4": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:15"
+  ],
+  "z8": "0x4061694c",
+  "sim": 1.0,
+  "votes": 77,
+  "second": 7,
+  "status": "high"
+ },
+ "0x406143cc": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:15"
+  ],
+  "z8": "0x40618b84",
+  "sim": 1.0,
+  "votes": 82,
+  "second": 4,
+  "status": "high"
+ },
+ "0x40614428": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:15"
+  ],
+  "z8": "0x40618be0",
+  "sim": 0.906,
+  "votes": 82,
+  "second": 3,
+  "status": "high"
+ },
+ "0x407e1834": {
+  "used_in": [
+   "host/build_z9_core.py:16",
+   "host/build_z9_core.py:93",
+   "host/displaced.py:3"
+  ],
+  "z8": "0x407dd4a0",
+  "sim": 0.844,
+  "votes": 41,
+  "second": 1,
+  "status": "review"
+ },
+ "0x407e1844": {
+  "used_in": [
+   "src/platform/z9_c532/ptp_trampoline.S:18"
+  ],
+  "z8": "0x407dd4b0",
+  "sim": 0.875,
+  "votes": 38,
+  "second": 1,
+  "status": "review"
+ },
+ "0x407e2e0c": {
+  "used_in": [
+   "host/build_z9_core.py:15",
+   "host/build_z9_core.py:93",
+   "host/displaced.py:3"
+  ],
+  "z8": "0x407dea74",
+  "sim": 0.938,
+  "votes": 70,
+  "second": 8,
+  "status": "high"
+ },
+ "0x407e2e1c": {
+  "used_in": [
+   "src/platform/z9_c532/ptp_trampoline.S:10"
+  ],
+  "z8": "0x407dea84",
+  "sim": 0.906,
+  "votes": 70,
+  "second": 8,
+  "status": "high"
+ },
+ "0x407e337c": {
+  "used_in": [
+   "src/platform/z9_c532/ptp.c:17"
+  ],
+  "z8": "0x407defe4",
+  "sim": 0.875,
+  "votes": 37,
+  "second": 2,
+  "status": "review"
+ },
+ "0x407e33b8": {
+  "used_in": [
+   "src/platform/z9_c532/ptp.c:18"
+  ],
+  "z8": "0x407df020",
+  "sim": 0.875,
+  "votes": 42,
+  "second": 2,
+  "status": "review"
+ },
+ "0x407e3460": {
+  "used_in": [
+   "src/platform/z9_c532/ptp.c:19"
+  ],
+  "z8": "0x407df0c8",
+  "sim": 1.0,
+  "votes": 65,
+  "second": 2,
+  "status": "high"
+ },
+ "0x407e346c": {
+  "used_in": [
+   "src/platform/z9_c532/ptp.c:20"
+  ],
+  "z8": "0x407df0d4",
+  "sim": 1.0,
+  "votes": 65,
+  "second": 2,
+  "status": "high"
+ },
+ "0x407e375c": {
+  "used_in": [
+   "src/platform/z9_c532/ptp.c:21"
+  ],
+  "z8": "0x407df3c4",
+  "sim": 0.969,
+  "votes": 55,
+  "second": 29,
+  "status": "review"
+ },
+ "0x40837610": {
+  "used_in": [
+   "host/displaced.py:3"
+  ],
+  "z8": "0x40832a78",
+  "sim": 0.875,
+  "votes": 31,
+  "second": 8,
+  "status": "review"
+ },
+ "0x40838be0": {
+  "used_in": [
+   "host/displaced.py:3"
+  ],
+  "z8": "0x40834058",
+  "sim": 0.875,
+  "votes": 36,
+  "second": 19,
+  "status": "review"
+ },
+ "0x4088ea2c": {
+  "used_in": [
+   "emulation/native_font_sites.py:20"
+  ],
+  "z8": "0x4088bdac",
+  "sim": 1.0,
+  "votes": 96,
+  "second": 0,
+  "status": "high"
+ },
+ "0x4088f2a0": {
+  "used_in": [
+   "emulation/native_font_sites.py:20"
+  ],
+  "z8": "0x4088c620",
+  "sim": 1.0,
+  "votes": 90,
+  "second": 0,
+  "status": "high"
+ },
+ "0x408b94f8": {
+  "used_in": [
+   "host/platform_profiles.py:145"
+  ],
+  "z8": "0x408b6878",
+  "sim": 1.0,
+  "votes": 83,
+  "second": 4,
+  "status": "high"
+ },
+ "0x408b9538": {
+  "used_in": [
+   "host/platform_profiles.py:145"
+  ],
+  "z8": "0x408b68b8",
+  "sim": 1.0,
+  "votes": 88,
+  "second": 4,
+  "status": "high"
+ },
+ "0x408bb1f8": {
+  "used_in": [
+   "host/platform_profiles.py:145"
+  ],
+  "z8": "0x408b8578",
+  "sim": 1.0,
+  "votes": 86,
+  "second": 16,
+  "status": "high"
+ },
+ "0x408bb248": {
+  "used_in": [
+   "host/platform_profiles.py:145"
+  ],
+  "z8": "0x408b85c8",
+  "sim": 1.0,
+  "votes": 87,
+  "second": 16,
+  "status": "high"
+ },
+ "0x408bb270": {
+  "used_in": [
+   "host/platform_profiles.py:146"
+  ],
+  "z8": "0x408b85f0",
+  "sim": 1.0,
+  "votes": 86,
+  "second": 16,
+  "status": "high"
+ },
+ "0x408bcd54": {
+  "used_in": [
+   "host/platform_profiles.py:145"
+  ],
+  "z8": "0x408ba0d4",
+  "sim": 0.969,
+  "votes": 81,
+  "second": 0,
+  "status": "high"
+ },
+ "0x408bcda4": {
+  "used_in": [
+   "host/platform_profiles.py:146"
+  ],
+  "z8": "0x408ba124",
+  "sim": 0.969,
+  "votes": 77,
+  "second": 3,
+  "status": "high"
+ },
+ "0x40c01890": {
+  "used_in": [
+   "src/platform/z9_c532/rtos.c:7"
+  ],
+  "z8": "0x40c018a8",
+  "sim": 1.0,
+  "votes": 71,
+  "second": 1,
+  "status": "high"
+ },
+ "0x40c05714": {
+  "used_in": [
+   "host/build_z9_core.py:16",
+   "host/build_z9_core.py:94",
+   "host/displaced.py:3"
+  ],
+  "z8": "0x40c05728",
+  "sim": 1.0,
+  "votes": 89,
+  "second": 7,
+  "status": "high"
+ },
+ "0x40c05724": {
+  "used_in": [
+   "src/platform/z9_c532/rtos_printf.S:11"
+  ],
+  "z8": "0x40c05738",
+  "sim": 1.0,
+  "votes": 89,
+  "second": 7,
+  "status": "high"
+ },
+ "0x40c7afc4": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:29"
+  ],
+  "z8": "0x40c7a304",
+  "sim": 1.0,
+  "votes": 94,
+  "second": 10,
+  "status": "high"
+ },
+ "0x40c7b130": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:30"
+  ],
+  "z8": "0x40c7a470",
+  "sim": 1.0,
+  "votes": 84,
+  "second": 13,
+  "status": "high"
+ },
+ "0x40c7b374": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:28"
+  ],
+  "z8": "0x40c7a6b4",
+  "sim": 1.0,
+  "votes": 94,
+  "second": 8,
+  "status": "high"
+ },
+ "0x40c9ec0c": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:13"
+  ],
+  "z8": "0x40c9da40",
+  "sim": 0.531,
+  "votes": 24,
+  "second": 11,
+  "status": "review"
+ },
+ "0x40c9f834": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:14"
+  ],
+  "z8": "0x40c9e48c",
+  "sim": 0.531,
+  "votes": 43,
+  "second": 7,
+  "status": "review"
+ },
+ "0x40c9f9e4": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:15"
+  ],
+  "z8": "0x40c9e63c",
+  "sim": 0.969,
+  "votes": 83,
+  "second": 3,
+  "status": "high"
+ },
+ "0x40c9fb3c": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:16"
+  ],
+  "z8": "0x40c9e794",
+  "sim": 0.969,
+  "votes": 76,
+  "second": 3,
+  "status": "high"
+ },
+ "0x40d2fcdc": {
+  "used_in": [
+   "emulation/native_ui_dispatch_sites.py:12"
+  ],
+  "z8": "0x40d2bc8c",
+  "sim": 1.0,
+  "votes": 85,
+  "second": 11,
+  "status": "high"
+ },
+ "0x40d2ffb0": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:34",
+   "src/platform/z9_c532/menu.c:205",
+   "src/platform/z9_c532/menu.c:218",
+   "src/platform/z9_c532/menu.c:275",
+   "src/platform/z9_c532/menu.c:369"
+  ],
+  "z8": "0x40d2bf60",
+  "sim": 1.0,
+  "votes": 87,
+  "second": 11,
+  "status": "high"
+ },
+ "0x40d30004": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:33",
+   "src/platform/z9_c532/menu.c:202",
+   "src/platform/z9_c532/menu.c:211",
+   "src/platform/z9_c532/menu.c:342"
+  ],
+  "z8": "0x40d2bfb4",
+  "sim": 1.0,
+  "votes": 87,
+  "second": 12,
+  "status": "high"
+ },
+ "0x40d30458": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:94",
+   "src/platform/z9_c532/menu.c:116",
+   "src/platform/z9_c532/module_session.c:167",
+   "host/platform_profiles.py:68"
+  ],
+  "z8": "0x40d2c408",
+  "sim": 0.969,
+  "votes": 72,
+  "second": 3,
+  "status": "high"
+ },
+ "0x40d30498": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:95",
+   "src/platform/z9_c532/menu.c:566",
+   "src/platform/z9_c532/module_session.c:170",
+   "host/platform_profiles.py:78"
+  ],
+  "z8": "0x40d2c448",
+  "sim": 0.938,
+  "votes": 71,
+  "second": 5,
+  "status": "high"
+ },
+ "0x40d65a98": {
+  "used_in": [
+   "host/build_z9_core.py:14",
+   "host/build_z9_core.py:92",
+   "host/displaced.py:3"
+  ],
+  "z8": "0x40d60ec8",
+  "sim": 0.969,
+  "votes": 58,
+  "second": 1,
+  "status": "high"
+ },
+ "0x40d65aa8": {
+  "used_in": [
+   "src/platform/z9_c532/startup_trampoline.S:9"
+  ],
+  "z8": "0x40d60ed8",
+  "sim": 0.938,
+  "votes": 62,
+  "second": 1,
+  "status": "high"
+ },
+ "0x40e05710": {
+  "used_in": [
+   "host/displaced.py:3"
+  ],
+  "z8": "0x40e036e0",
+  "sim": 0.875,
+  "votes": 41,
+  "second": 5,
+  "status": "review"
+ },
+ "0x40f760e4": {
+  "used_in": [
+   "host/displaced.py:3"
+  ],
+  "z8": "0x40f72254",
+  "sim": 0.438,
+  "votes": 27,
+  "second": 12,
+  "status": "review"
+ },
+ "0x4127c780": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:20"
+  ],
+  "z8": "0x41277808",
+  "sim": 1.0,
+  "votes": 93,
+  "second": 2,
+  "status": "high"
+ },
+ "0x4127d188": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:19"
+  ],
+  "z8": "0x41278210",
+  "sim": 1.0,
+  "votes": 95,
+  "second": 31,
+  "status": "high"
+ },
+ "0x4127d6f0": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:17"
+  ],
+  "z8": "0x41278778",
+  "sim": 1.0,
+  "votes": 96,
+  "second": 9,
+  "status": "high"
+ },
+ "0x4127d7b0": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:18"
+  ],
+  "z8": "0x41278838",
+  "sim": 1.0,
+  "votes": 95,
+  "second": 12,
+  "status": "high"
+ },
+ "0x420d0032": {
+  "used_in": [
+   "emulation/native_font_sites.py:3"
+  ],
+  "status": "unmapped"
+ },
+ "0x420d003a": {
+  "used_in": [
+   "emulation/native_font_sites.py:3"
+  ],
+  "status": "unmapped"
+ },
+ "0x42e9b81c": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:195"
+  ],
+  "status": "unmapped"
+ },
+ "0x43014bb8": {
+  "used_in": [
+   "src/platform/z9_c532/menu_data.h:8"
+  ],
+  "status": "unmapped"
+ },
+ "0x4317e310": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:827"
+  ],
+  "status": "unmapped"
+ },
+ "0x4317e420": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:827"
+  ],
+  "status": "unmapped"
+ },
+ "0x4317ebe0": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:828"
+  ],
+  "status": "unmapped"
+ },
+ "0x433ad2f0": {
+  "used_in": [
+   "host/build_z9_core.py:28"
+  ],
+  "status": "unmapped"
+ },
+ "0xa02800000": {
+  "used_in": [
+   "host/verify_native_namespace.py:29"
+  ],
+  "z8": "0xa02800000",
+  "status": "high",
+  "refs": 5,
+  "sites": 5
+ },
+ "0xa02822824": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:1028"
+  ],
+  "z8": "0xa0281cd5c",
+  "status": "high",
+  "refs": 11,
+  "sites": 11
+ },
+ "0xa028be460": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:194"
+  ],
+  "status": "unmapped"
+ },
+ "0xa028d1a10": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:108",
+   "src/platform/z9_c532/menu.c:824"
+  ],
+  "status": "unmapped"
+ },
+ "0xa0290c7f0": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:188",
+   "host/platform_profiles.py:103"
+  ],
+  "status": "unmapped"
+ },
+ "0xa02eac0e8": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:1041"
+  ],
+  "z8": "0xa02e8ca90",
+  "status": "high",
+  "refs": 3,
+  "sites": 3
+ },
+ "0xa02eb0010": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:11"
+  ],
+  "status": "unmapped"
+ },
+ "0xa02eb10c4": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:7"
+  ],
+  "status": "unmapped"
+ },
+ "0xa02eb2538": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:10"
+  ],
+  "status": "unmapped"
+ },
+ "0xa02eb2878": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:8"
+  ],
+  "status": "unmapped"
+ },
+ "0xa02eb2880": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:9"
+  ],
+  "status": "unmapped"
+ },
+ "0xa02f4ab28": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:1032"
+  ],
+  "z8": "0xa02f2ac38",
+  "status": "high",
+  "refs": 2,
+  "sites": 2
+ },
+ "0xa02f4ab30": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:100",
+   "src/platform/z9_c532/menu.c:833",
+   "src/platform/z9_c532/menu.c:901",
+   "host/platform_profiles.py:103"
+  ],
+  "z8": "0xa02f2ac40",
+  "status": "high",
+  "refs": 8,
+  "sites": 8
+ },
+ "0xa02f4ab38": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:1030"
+  ],
+  "z8": "0xa02f2ac48",
+  "status": "review",
+  "candidates": [
+   [
+    "0xa02f2ac48",
+    1
+   ]
+  ]
+ },
+ "0xa02f4ab40": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:101",
+   "src/platform/z9_c532/menu.c:834",
+   "src/platform/z9_c532/menu.c:902"
+  ],
+  "z8": "0xa02f2ac50",
+  "status": "high",
+  "refs": 2,
+  "sites": 2
+ },
+ "0xa032491b0": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:7"
+  ],
+  "z8": "0xa032280c8",
+  "status": "high",
+  "refs": 4,
+  "sites": 4
+ },
+ "0xa032d5de8": {
+  "used_in": [
+   "src/platform/z9_c532/menu.c:91",
+   "host/platform_profiles.py:103",
+   "host/verify_native_namespace.py:13"
+  ],
+  "z8": "0xa032b50c8",
+  "status": "high",
+  "refs": 2,
+  "sites": 2
+ },
+ "0xa032dcb98": {
+  "used_in": [
+   "src/platform/z9_c532/display_profile.c:14",
+   "src/platform/z9_c532/menu.c:201",
+   "src/platform/z9_c532/menu.c:210",
+   "src/platform/z9_c532/menu.c:341"
+  ],
+  "z8": "0xa032bbd68",
+  "status": "high",
+  "refs": 3,
+  "sites": 3
+ },
+ "0xa04a756c4": {
+  "used_in": [
+   "src/platform/z9_c532/ptp.c:23"
+  ],
+  "z8": "0xa047ce474",
+  "status": "high",
+  "refs": 5,
+  "sites": 5
+ },
+ "0xa04a75f48": {
+  "used_in": [
+   "src/platform/z9_c532/ptp.c:24"
+  ],
+  "z8": "0xa047cecd8",
+  "status": "high",
+  "refs": 5,
+  "sites": 5
+ },
+ "0xa04e05820": {
+  "used_in": [
+   "host/platform_profiles.py:103"
+  ],
+  "z8": "0xa04b51820",
+  "status": "high",
+  "refs": 24,
+  "sites": 31
+ },
+ "0xa04e0cd00": {
+  "used_in": [
+   "host/platform_profiles.py:103"
+  ],
+  "z8": "0xa04b58d00",
+  "status": "high",
+  "refs": 24,
+  "sites": 28
+ },
+ "0xa0f000000": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:12"
+  ],
+  "status": "unmapped"
+ },
+ "0xa0f801000": {
+  "used_in": [
+   "src/platform/z9_c532/usb_debug.c:12"
+  ],
+  "status": "unmapped"
+ }
+}

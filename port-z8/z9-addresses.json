@@ -1,0 +1,933 @@
+{
+"0x40160000": [
+"host/platform_profiles.py:13",
+"host/displaced.py:7",
+"host/displaced.py:7",
+"emulation/native_ui_dispatch_sites.py:3",
+"emulation/native_font_sites.py:9"
+],
+"0x4016a918": [
+"src/platform/z9_c532/rtos.c:8"
+],
+"0x4016c8f4": [
+"host/platform_profiles.py:85"
+],
+"0x4016c918": [
+"host/platform_profiles.py:85"
+],
+"0x4016c938": [
+"host/platform_profiles.py:85"
+],
+"0x4016c9c4": [
+"host/platform_profiles.py:86"
+],
+"0x4016c9e4": [
+"host/platform_profiles.py:86"
+],
+"0x4016ca04": [
+"host/platform_profiles.py:86"
+],
+"0x4016ca78": [
+"host/platform_profiles.py:87"
+],
+"0x4016caa8": [
+"host/platform_profiles.py:87"
+],
+"0x4016cac0": [
+"host/platform_profiles.py:88"
+],
+"0x4016cb24": [
+"host/platform_profiles.py:88"
+],
+"0x4016cb48": [
+"host/platform_profiles.py:89"
+],
+"0x4016cb9c": [
+"host/platform_profiles.py:89"
+],
+"0x4016cbe8": [
+"host/platform_profiles.py:90"
+],
+"0x4016cc2c": [
+"host/platform_profiles.py:90"
+],
+"0x4016cc70": [
+"host/platform_profiles.py:90"
+],
+"0x4016cd78": [
+"host/platform_profiles.py:91"
+],
+"0x4016cdc4": [
+"host/platform_profiles.py:91"
+],
+"0x4016eb0c": [
+"host/platform_profiles.py:79"
+],
+"0x4016eb68": [
+"host/platform_profiles.py:79"
+],
+"0x4016eba0": [
+"host/platform_profiles.py:79"
+],
+"0x4016eea4": [
+"host/platform_profiles.py:83"
+],
+"0x4016f0bc": [
+"host/platform_profiles.py:83"
+],
+"0x4016f0f4": [
+"host/platform_profiles.py:83"
+],
+"0x4016f178": [
+"host/platform_profiles.py:83"
+],
+"0x4016f1d0": [
+"host/platform_profiles.py:84"
+],
+"0x40172380": [
+"host/platform_profiles.py:80"
+],
+"0x40172608": [
+"host/platform_profiles.py:81"
+],
+"0x40172b88": [
+"host/platform_profiles.py:80"
+],
+"0x40173098": [
+"host/platform_profiles.py:82"
+],
+"0x40173104": [
+"host/platform_profiles.py:82"
+],
+"0x401731c0": [
+"host/platform_profiles.py:81"
+],
+"0x40173b9c": [
+"host/platform_profiles.py:95"
+],
+"0x40173c60": [
+"host/platform_profiles.py:95"
+],
+"0x40173d04": [
+"host/platform_profiles.py:95"
+],
+"0x4017b254": [
+"host/platform_profiles.py:100"
+],
+"0x4017b420": [
+"host/platform_profiles.py:100"
+],
+"0x4017b5dc": [
+"host/platform_profiles.py:101"
+],
+"0x4017b79c": [
+"host/platform_profiles.py:101"
+],
+"0x4017b95c": [
+"host/platform_profiles.py:102"
+],
+"0x4017ba74": [
+"host/platform_profiles.py:102"
+],
+"0x4017c040": [
+"host/platform_profiles.py:102"
+],
+"0x4017f8dc": [
+"host/platform_profiles.py:92"
+],
+"0x4017fad0": [
+"host/platform_profiles.py:92"
+],
+"0x4017fd24": [
+"host/platform_profiles.py:93"
+],
+"0x40180004": [
+"host/platform_profiles.py:93"
+],
+"0x401801f8": [
+"host/platform_profiles.py:94"
+],
+"0x4018058c": [
+"host/platform_profiles.py:94"
+],
+"0x40180e50": [
+"host/platform_profiles.py:96"
+],
+"0x4018102c": [
+"host/platform_profiles.py:96"
+],
+"0x401811e8": [
+"host/platform_profiles.py:97"
+],
+"0x401813e4": [
+"host/platform_profiles.py:97"
+],
+"0x401815cc": [
+"host/platform_profiles.py:98"
+],
+"0x40181760": [
+"host/platform_profiles.py:98"
+],
+"0x40181880": [
+"host/platform_profiles.py:99"
+],
+"0x40183490": [
+"host/platform_profiles.py:100"
+],
+"0x40185064": [
+"src/platform/z9_c532/rtos.c:9",
+"src/platform/z9_c532/task.c:18",
+"host/platform_profiles.py:68"
+],
+"0x401855e0": [
+"src/platform/z9_c532/rtos.c:10",
+"src/platform/z9_c532/task.c:21",
+"host/platform_profiles.py:68"
+],
+"0x401865d8": [
+"emulation/native_ui_dispatch_sites.py:11"
+],
+"0x40187b00": [
+"src/platform/z9_c532/rtos.c:11",
+"src/platform/z9_c532/task.c:27",
+"host/platform_profiles.py:68"
+],
+"0x401a0000": [
+"src/platform/z9_c532/module_session.c:11",
+"src/platform/z9_c532/module_worker.c:34",
+"host/build_z9_core.py:12",
+"host/verify_build_identity.py:47"
+],
+"0x40200000": [
+"src/platform/z9_c532/module_session.c:12",
+"src/platform/z9_c532/module_worker.c:34",
+"host/build_z9_core.py:13"
+],
+"0x402517fc": [
+"src/platform/z9_c532/display_profile.c:51"
+],
+"0x402518a8": [
+"src/platform/z9_c532/display_profile.c:59"
+],
+"0x40251908": [
+"src/platform/z9_c532/display_profile.c:58"
+],
+"0x40251a84": [
+"src/platform/z9_c532/display_profile.c:54"
+],
+"0x40251ae8": [
+"src/platform/z9_c532/display_profile.c:53"
+],
+"0x40251db8": [
+"src/platform/z9_c532/display_profile.c:57"
+],
+"0x40251f34": [
+"src/platform/z9_c532/display_profile.c:56"
+],
+"0x40252a68": [
+"src/platform/z9_c532/display_profile.c:62"
+],
+"0x40252ac0": [
+"src/platform/z9_c532/display_profile.c:62"
+],
+"0x40252e8c": [
+"src/platform/z9_c532/display_profile.c:44"
+],
+"0x40252f0c": [
+"src/platform/z9_c532/display_profile.c:47"
+],
+"0x40252fb0": [
+"src/platform/z9_c532/display_profile.c:45"
+],
+"0x4025301c": [
+"src/platform/z9_c532/display_profile.c:49"
+],
+"0x4025321c": [
+"src/platform/z9_c532/display_profile.c:43"
+],
+"0x402538fc": [
+"src/platform/z9_c532/display_profile.c:50"
+],
+"0x40253998": [
+"src/platform/z9_c532/display_profile.c:46"
+],
+"0x40253a04": [
+"src/platform/z9_c532/display_profile.c:48"
+],
+"0x40253a74": [
+"src/platform/z9_c532/display_profile.c:55"
+],
+"0x40253b2c": [
+"src/platform/z9_c532/display_profile.c:52"
+],
+"0x40253d10": [
+"src/platform/z9_c532/display_profile.c:60"
+],
+"0x40253e40": [
+"src/platform/z9_c532/display_profile.c:60"
+],
+"0x40253f74": [
+"src/platform/z9_c532/display_profile.c:61"
+],
+"0x4025449c": [
+"src/platform/z9_c532/display_profile.c:61"
+],
+"0x40254534": [
+"src/platform/z9_c532/display_profile.c:63"
+],
+"0x40254730": [
+"src/platform/z9_c532/display_profile.c:63"
+],
+"0x402dc960": [
+"src/platform/z9_c532/card.c:24",
+"src/platform/z9_c532/menu.c:540",
+"src/platform/z9_c532/startup_files.c:6",
+"host/platform_profiles.py:69"
+],
+"0x402dc99c": [
+"host/platform_profiles.py:145"
+],
+"0x402dc9c0": [
+"src/platform/z9_c532/card.c:41",
+"src/platform/z9_c532/menu.c:561",
+"src/platform/z9_c532/startup_files.c:9",
+"host/platform_profiles.py:69"
+],
+"0x402dcb30": [
+"src/platform/z9_c532/card.c:33",
+"src/platform/z9_c532/menu.c:551",
+"src/platform/z9_c532/startup_files.c:7",
+"host/platform_profiles.py:69"
+],
+"0x402dcbf4": [
+"src/platform/z9_c532/startup_files.c:8",
+"host/platform_profiles.py:77"
+],
+"0x402dcd50": [
+"host/platform_profiles.py:70"
+],
+"0x402dce64": [
+"host/platform_profiles.py:77"
+],
+"0x402dceb4": [
+"src/platform/z9_c532/startup_files.c:10"
+],
+"0x402dd0d4": [
+"src/platform/z9_c532/menu.c:490",
+"host/platform_profiles.py:76"
+],
+"0x402dd184": [
+"src/platform/z9_c532/menu.c:499",
+"host/platform_profiles.py:76"
+],
+"0x402dd1d4": [
+"src/platform/z9_c532/menu.c:525",
+"host/platform_profiles.py:77"
+],
+"0x402e4364": [
+"emulation/native_font_sites.py:19"
+],
+"0x402e4378": [
+"emulation/native_font_sites.py:19"
+],
+"0x402e7258": [
+"src/platform/z9_c532/display_profile.c:36"
+],
+"0x402ecc3c": [
+"emulation/native_font_sites.py:21"
+],
+"0x402ecf88": [
+"emulation/native_font_sites.py:21"
+],
+"0x402ed0a0": [
+"emulation/native_font_sites.py:21"
+],
+"0x402ed94c": [
+"emulation/native_font_sites.py:20"
+],
+"0x402edf50": [
+"emulation/native_font_sites.py:21"
+],
+"0x402ee098": [
+"emulation/native_font_sites.py:21"
+],
+"0x402ee1f4": [
+"emulation/native_font_sites.py:22"
+],
+"0x402ee3ac": [
+"emulation/native_font_sites.py:22"
+],
+"0x402ee5f8": [
+"emulation/native_font_sites.py:22"
+],
+"0x402ee6b4": [
+"emulation/native_font_sites.py:22"
+],
+"0x4031e328": [
+"src/platform/z9_c532/display_profile.c:25"
+],
+"0x4031e32c": [
+"src/platform/z9_c532/display_profile.c:27"
+],
+"0x4031e6f4": [
+"host/platform_profiles.py:75"
+],
+"0x4031e758": [
+"host/platform_profiles.py:75"
+],
+"0x4031e7b8": [
+"src/platform/z9_c532/display_profile.c:8"
+],
+"0x4031e7f4": [
+"src/platform/z9_c532/display_profile.c:9"
+],
+"0x4031e824": [
+"src/platform/z9_c532/display_profile.c:18"
+],
+"0x4031e87c": [
+"host/platform_profiles.py:74"
+],
+"0x4031f4ac": [
+"src/platform/z9_c532/display_profile.c:40",
+"src/platform/z9_c532/menu.c:169"
+],
+"0x4031fa5c": [
+"src/platform/z9_c532/menu.c:169",
+"src/platform/z9_c532/menu.c:260",
+"src/platform/z9_c532/menu.c:354"
+],
+"0x40323d7c": [
+"src/platform/z9_c532/display_profile.c:6"
+],
+"0x40325ecc": [
+"src/platform/z9_c532/display_profile.c:10"
+],
+"0x40325fac": [
+"src/platform/z9_c532/menu.c:167",
+"src/platform/z9_c532/menu.c:257",
+"src/platform/z9_c532/menu.c:350"
+],
+"0x403266ec": [
+"src/platform/z9_c532/display_profile.c:35",
+"src/platform/z9_c532/menu.c:364"
+],
+"0x4032934c": [
+"src/platform/z9_c532/display_profile.c:42"
+],
+"0x40329c30": [
+"src/platform/z9_c532/display_profile.c:23"
+],
+"0x40329cc8": [
+"src/platform/z9_c532/display_profile.c:11"
+],
+"0x4032a15c": [
+"src/platform/z9_c532/display_profile.c:19"
+],
+"0x4032aa38": [
+"src/platform/z9_c532/display_profile.c:37"
+],
+"0x4032e57c": [
+"host/build_z9_core.py:14",
+"host/platform_profiles.py:71"
+],
+"0x4033a66c": [
+"host/displaced.py:3"
+],
+"0x40340df0": [
+"src/platform/z9_c532/display_profile.c:24"
+],
+"0x40340e20": [
+"src/platform/z9_c532/display_profile.c:24"
+],
+"0x403411b0": [
+"src/platform/z9_c532/display_profile.c:26"
+],
+"0x4035705c": [
+"host/build_z9_core.py:16",
+"host/build_z9_core.py:94",
+"host/displaced.py:3"
+],
+"0x4035706c": [
+"src/platform/z9_c532/ptp_trampoline.S:26"
+],
+"0x403638e4": [
+"host/displaced.py:3"
+],
+"0x40394404": [
+"src/platform/z9_c532/display_profile.c:39"
+],
+"0x40394448": [
+"src/platform/z9_c532/display_profile.c:38"
+],
+"0x4039a554": [
+"src/platform/z9_c532/display_profile.c:21"
+],
+"0x403adbac": [
+"src/platform/z9_c532/menu.c:1061",
+"host/verify_native_namespace.py:13"
+],
+"0x403aed7c": [
+"src/platform/z9_c532/menu.c:161"
+],
+"0x403af040": [
+"src/platform/z9_c532/menu.c:162"
+],
+"0x403af294": [
+"src/platform/z9_c532/menu.c:164"
+],
+"0x403afa44": [
+"host/build_z9_core.py:15",
+"host/build_z9_core.py:92",
+"host/displaced.py:3",
+"host/verify_native_namespace.py:13"
+],
+"0x403afa54": [
+"src/platform/z9_c532/startup_trampoline.S:17"
+],
+"0x403b037c": [
+"src/platform/z9_c532/menu.c:157"
+],
+"0x403b03f8": [
+"src/platform/z9_c532/menu.c:160"
+],
+"0x403b0490": [
+"src/platform/z9_c532/menu.c:158"
+],
+"0x403b05d0": [
+"src/platform/z9_c532/menu.c:159"
+],
+"0x403b0874": [
+"src/platform/z9_c532/menu.c:163"
+],
+"0x403b2748": [
+"src/platform/z9_c532/menu.c:417",
+"src/platform/z9_c532/menu.c:457",
+"src/platform/z9_c532/menu.c:848"
+],
+"0x403bba78": [
+"host/displaced.py:3"
+],
+"0x403d2158": [
+"emulation/native_ui_dispatch_sites.py:11"
+],
+"0x403d22d4": [
+"emulation/native_ui_dispatch_sites.py:11"
+],
+"0x403d6618": [
+"host/build_z9_core.py:14",
+"host/platform_profiles.py:71"
+],
+"0x403d6908": [
+"emulation/native_ui_dispatch_sites.py:11"
+],
+"0x403d69d4": [
+"emulation/native_ui_dispatch_sites.py:12"
+],
+"0x403d69f4": [
+"emulation/native_ui_dispatch_sites.py:11"
+],
+"0x403d6d38": [
+"src/platform/z9_c532/display_profile.c:20",
+"src/platform/z9_c532/menu.c:156",
+"src/platform/z9_c532/menu.c:166",
+"src/platform/z9_c532/menu.c:203",
+"src/platform/z9_c532/menu.c:212",
+"src/platform/z9_c532/menu.c:343"
+],
+"0x403d7c50": [
+"emulation/native_ui_dispatch_sites.py:12"
+],
+"0x403eb078": [
+"src/platform/z9_c532/display_profile.c:5",
+"src/platform/z9_c532/menu.c:273",
+"src/platform/z9_c532/menu.c:368"
+],
+"0x403eb0dc": [
+"src/platform/z9_c532/display_profile.c:31",
+"src/platform/z9_c532/menu.c:272",
+"src/platform/z9_c532/menu.c:367"
+],
+"0x403ebd54": [
+"src/platform/z9_c532/display_profile.c:15"
+],
+"0x403ebd58": [
+"src/platform/z9_c532/display_profile.c:32"
+],
+"0x403ebd5c": [
+"src/platform/z9_c532/display_profile.c:16"
+],
+"0x403ebfb8": [
+"src/platform/z9_c532/display_profile.c:22"
+],
+"0x403ec980": [
+"src/platform/z9_c532/display_profile.c:13",
+"src/platform/z9_c532/menu.c:259",
+"src/platform/z9_c532/menu.c:261",
+"src/platform/z9_c532/menu.c:352",
+"src/platform/z9_c532/menu.c:355"
+],
+"0x403ec990": [
+"src/platform/z9_c532/display_profile.c:17"
+],
+"0x403ec99c": [
+"src/platform/z9_c532/display_profile.c:12"
+],
+"0x403ec9d0": [
+"src/platform/z9_c532/menu.c:168"
+],
+"0x403ecbc4": [
+"host/platform_profiles.py:74"
+],
+"0x403ecd18": [
+"src/platform/z9_c532/display_profile.c:23"
+],
+"0x403f196c": [
+"src/platform/z9_c532/menu.c:363"
+],
+"0x403f97ec": [
+"emulation/native_ui_dispatch_sites.py:14"
+],
+"0x403f9844": [
+"emulation/native_ui_dispatch_sites.py:14"
+],
+"0x403fc768": [
+"emulation/native_ui_dispatch_sites.py:14"
+],
+"0x403fc794": [
+"emulation/native_ui_dispatch_sites.py:13"
+],
+"0x403fc7b4": [
+"emulation/native_ui_dispatch_sites.py:13",
+"emulation/native_ui_dispatch_sites.py:14"
+],
+"0x40500970": [
+"emulation/native_ui_dispatch_sites.py:14"
+],
+"0x40500998": [
+"emulation/native_ui_dispatch_sites.py:13"
+],
+"0x405009b4": [
+"emulation/native_ui_dispatch_sites.py:13",
+"emulation/native_ui_dispatch_sites.py:14"
+],
+"0x405022e8": [
+"host/platform_profiles.py:110"
+],
+"0x40529da8": [
+"host/platform_profiles.py:110"
+],
+"0x4060ae34": [
+"host/platform_profiles.py:72"
+],
+"0x4060cf30": [
+"host/platform_profiles.py:72"
+],
+"0x4060d094": [
+"host/platform_profiles.py:73"
+],
+"0x4060e4d0": [
+"host/platform_profiles.py:73"
+],
+"0x4060e674": [
+"host/platform_profiles.py:73"
+],
+"0x406120e0": [
+"emulation/native_ui_dispatch_sites.py:15"
+],
+"0x406121a4": [
+"emulation/native_ui_dispatch_sites.py:15"
+],
+"0x406143cc": [
+"emulation/native_ui_dispatch_sites.py:15"
+],
+"0x40614428": [
+"emulation/native_ui_dispatch_sites.py:15"
+],
+"0x407e1834": [
+"host/build_z9_core.py:16",
+"host/build_z9_core.py:93",
+"host/displaced.py:3"
+],
+"0x407e1844": [
+"src/platform/z9_c532/ptp_trampoline.S:18"
+],
+"0x407e2e0c": [
+"host/build_z9_core.py:15",
+"host/build_z9_core.py:93",
+"host/displaced.py:3"
+],
+"0x407e2e1c": [
+"src/platform/z9_c532/ptp_trampoline.S:10"
+],
+"0x407e337c": [
+"src/platform/z9_c532/ptp.c:17"
+],
+"0x407e33b8": [
+"src/platform/z9_c532/ptp.c:18"
+],
+"0x407e3460": [
+"src/platform/z9_c532/ptp.c:19"
+],
+"0x407e346c": [
+"src/platform/z9_c532/ptp.c:20"
+],
+"0x407e375c": [
+"src/platform/z9_c532/ptp.c:21"
+],
+"0x40837610": [
+"host/displaced.py:3"
+],
+"0x40838be0": [
+"host/displaced.py:3"
+],
+"0x4088ea2c": [
+"emulation/native_font_sites.py:20"
+],
+"0x4088f2a0": [
+"emulation/native_font_sites.py:20"
+],
+"0x408b94f8": [
+"host/platform_profiles.py:145"
+],
+"0x408b9538": [
+"host/platform_profiles.py:145"
+],
+"0x408bb1f8": [
+"host/platform_profiles.py:145"
+],
+"0x408bb248": [
+"host/platform_profiles.py:145"
+],
+"0x408bb270": [
+"host/platform_profiles.py:146"
+],
+"0x408bcd54": [
+"host/platform_profiles.py:145"
+],
+"0x408bcda4": [
+"host/platform_profiles.py:146"
+],
+"0x40c01890": [
+"src/platform/z9_c532/rtos.c:7"
+],
+"0x40c05714": [
+"host/build_z9_core.py:16",
+"host/build_z9_core.py:94",
+"host/displaced.py:3"
+],
+"0x40c05724": [
+"src/platform/z9_c532/rtos_printf.S:11"
+],
+"0x40c7afc4": [
+"src/platform/z9_c532/display_profile.c:29"
+],
+"0x40c7b130": [
+"src/platform/z9_c532/display_profile.c:30"
+],
+"0x40c7b374": [
+"src/platform/z9_c532/display_profile.c:28"
+],
+"0x40c9ec0c": [
+"src/platform/z9_c532/usb_debug.c:13"
+],
+"0x40c9f834": [
+"src/platform/z9_c532/usb_debug.c:14"
+],
+"0x40c9f9e4": [
+"src/platform/z9_c532/usb_debug.c:15"
+],
+"0x40c9fb3c": [
+"src/platform/z9_c532/usb_debug.c:16"
+],
+"0x40d2fcdc": [
+"emulation/native_ui_dispatch_sites.py:12"
+],
+"0x40d2ffb0": [
+"src/platform/z9_c532/display_profile.c:34",
+"src/platform/z9_c532/menu.c:205",
+"src/platform/z9_c532/menu.c:218",
+"src/platform/z9_c532/menu.c:275",
+"src/platform/z9_c532/menu.c:369"
+],
+"0x40d30004": [
+"src/platform/z9_c532/display_profile.c:33",
+"src/platform/z9_c532/menu.c:202",
+"src/platform/z9_c532/menu.c:211",
+"src/platform/z9_c532/menu.c:342"
+],
+"0x40d30458": [
+"src/platform/z9_c532/menu.c:94",
+"src/platform/z9_c532/menu.c:116",
+"src/platform/z9_c532/module_session.c:167",
+"host/platform_profiles.py:68"
+],
+"0x40d30498": [
+"src/platform/z9_c532/menu.c:95",
+"src/platform/z9_c532/menu.c:566",
+"src/platform/z9_c532/module_session.c:170",
+"host/platform_profiles.py:78"
+],
+"0x40d65a98": [
+"host/build_z9_core.py:14",
+"host/build_z9_core.py:92",
+"host/displaced.py:3"
+],
+"0x40d65aa8": [
+"src/platform/z9_c532/startup_trampoline.S:9"
+],
+"0x40e05710": [
+"host/displaced.py:3"
+],
+"0x40f760e4": [
+"host/displaced.py:3"
+],
+"0x41239374": [
+"src/observation.c:48"
+],
+"0x4127c780": [
+"src/platform/z9_c532/usb_debug.c:20"
+],
+"0x4127d188": [
+"src/platform/z9_c532/usb_debug.c:19"
+],
+"0x4127d6f0": [
+"src/platform/z9_c532/usb_debug.c:17"
+],
+"0x4127d7b0": [
+"src/platform/z9_c532/usb_debug.c:18"
+],
+"0x420d0032": [
+"emulation/native_font_sites.py:3"
+],
+"0x420d003a": [
+"emulation/native_font_sites.py:3"
+],
+"0x42e9b81c": [
+"src/platform/z9_c532/menu.c:195"
+],
+"0x43014bb8": [
+"src/platform/z9_c532/menu_data.h:8"
+],
+"0x4317e310": [
+"src/platform/z9_c532/menu.c:827"
+],
+"0x4317e420": [
+"src/platform/z9_c532/menu.c:827"
+],
+"0x4317ebe0": [
+"src/platform/z9_c532/menu.c:828"
+],
+"0x433ad2f0": [
+"host/build_z9_core.py:28"
+],
+"0xa02800000": [
+"host/verify_native_namespace.py:29"
+],
+"0xa02822824": [
+"src/platform/z9_c532/menu.c:1028"
+],
+"0xa028be460": [
+"src/platform/z9_c532/menu.c:194"
+],
+"0xa028d1a10": [
+"src/platform/z9_c532/menu.c:108",
+"src/platform/z9_c532/menu.c:824"
+],
+"0xa0290c7f0": [
+"src/platform/z9_c532/menu.c:188",
+"host/platform_profiles.py:103"
+],
+"0xa02b6f4c8": [
+"src/observation.c:8",
+"src/observation.c:12"
+],
+"0xa02be8df8": [
+"src/observation.c:9"
+],
+"0xa02eac0e8": [
+"src/platform/z9_c532/menu.c:1041"
+],
+"0xa02eb0010": [
+"src/platform/z9_c532/usb_debug.c:11"
+],
+"0xa02eb10c4": [
+"src/platform/z9_c532/usb_debug.c:7"
+],
+"0xa02eb2538": [
+"src/platform/z9_c532/usb_debug.c:10"
+],
+"0xa02eb2878": [
+"src/platform/z9_c532/usb_debug.c:8"
+],
+"0xa02eb2880": [
+"src/platform/z9_c532/usb_debug.c:9"
+],
+"0xa02f4ab28": [
+"src/platform/z9_c532/menu.c:1032"
+],
+"0xa02f4ab30": [
+"src/platform/z9_c532/menu.c:100",
+"src/platform/z9_c532/menu.c:833",
+"src/platform/z9_c532/menu.c:901",
+"host/platform_profiles.py:103"
+],
+"0xa02f4ab38": [
+"src/platform/z9_c532/menu.c:1030"
+],
+"0xa02f4ab40": [
+"src/platform/z9_c532/menu.c:101",
+"src/platform/z9_c532/menu.c:834",
+"src/platform/z9_c532/menu.c:902"
+],
+"0xa032491b0": [
+"src/platform/z9_c532/display_profile.c:7"
+],
+"0xa032d5de8": [
+"src/platform/z9_c532/menu.c:91",
+"host/platform_profiles.py:103",
+"host/verify_native_namespace.py:13"
+],
+"0xa032dcb98": [
+"src/platform/z9_c532/display_profile.c:14",
+"src/platform/z9_c532/menu.c:201",
+"src/platform/z9_c532/menu.c:210",
+"src/platform/z9_c532/menu.c:341"
+],
+"0xa03def068": [
+"src/observation.c:10"
+],
+"0xa03df2938": [
+"src/observation.c:10",
+"src/observation.c:12"
+],
+"0xa03df3d8c": [
+"src/observation.c:9"
+],
+"0xa04a756c4": [
+"src/platform/z9_c532/ptp.c:23"
+],
+"0xa04a75f48": [
+"src/platform/z9_c532/ptp.c:24"
+],
+"0xa04e05820": [
+"host/platform_profiles.py:103"
+],
+"0xa04e0cd00": [
+"host/platform_profiles.py:103"
+],
+"0xa057b0a20": [
+"src/observation.c:11"
+],
+"0xa057b0eec": [
+"src/observation.c:11"
+],
+"0xa057b2250": [
+"src/observation.c:8"
+],
+"0xa0f000000": [
+"src/platform/z9_c532/usb_debug.c:12"
+],
+"0xa0f801000": [
+"src/platform/z9_c532/usb_debug.c:12"
+]
+}

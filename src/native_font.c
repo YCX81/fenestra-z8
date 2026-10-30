@@ -5,7 +5,7 @@ static FxResult text_bank(FxIndexMemory memory,const FxNativeTextBank *old,const
         const uintptr_t *attributes,uint32_t stock,uint32_t languages,uint32_t required,
         uint8_t font,uint8_t attribute,FxNativeTextBank **out) {
     if(!out || *out || !memory.allocate || !memory.release || !fonts || !attributes ||
-       !stock || !languages || languages>32u || required<stock || required>FX_NATIVE_TEXT_LIMIT)return FX_ARGUMENT;
+       !stock || !languages || languages>36u || required<stock || required>FX_NATIVE_TEXT_LIMIT)return FX_ARGUMENT;
     for(uint32_t i=0;i<languages;++i)if(!attributes[i])return FX_ARGUMENT;
     uint32_t extra=required-stock,room=16u;
     while(room<extra)room*=2u;

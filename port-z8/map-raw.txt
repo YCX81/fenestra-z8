@@ -1,0 +1,279 @@
+0x40160000 {'z8': '0x40160000', 'votes': 48, 'second': 0, 'sim': 1.0, 'exact_word': True}
+0x4016a918 {'z8': '0x4016a918', 'votes': 90, 'second': 0, 'sim': 1.0, 'exact_word': True}
+0x4016c8f4 {'z8': '0x4016c8f4', 'votes': 58, 'second': 16, 'sim': 0.875, 'exact_word': False}
+0x4016c918 {'z8': '0x4016c918', 'votes': 49, 'second': 16, 'sim': 0.875, 'exact_word': False}
+0x4016c938 {'z8': '0x4016c938', 'votes': 42, 'second': 9, 'sim': 0.938, 'exact_word': False}
+0x4016c9c4 {'z8': '0x4016c9c4', 'votes': 37, 'second': 1, 'sim': 0.938, 'exact_word': False}
+0x4016c9e4 {'z8': '0x4016c9e4', 'votes': 35, 'second': 1, 'sim': 0.906, 'exact_word': False}
+0x4016ca04 {'z8': '0x4016ca04', 'votes': 41, 'second': 1, 'sim': 0.875, 'exact_word': False}
+0x4016ca78 {'z8': '0x4016ca78', 'votes': 31, 'second': 4, 'sim': 0.875, 'exact_word': False}
+0x4016caa8 {'z8': '0x4016caa8', 'votes': 37, 'second': 4, 'sim': 0.875, 'exact_word': False}
+0x4016cac0 {'z8': '0x4016cac0', 'votes': 43, 'second': 8, 'sim': 0.906, 'exact_word': True}
+0x4016cb24 {'z8': '0x4016cb24', 'votes': 53, 'second': 25, 'sim': 0.938, 'exact_word': False}
+0x4016cb48 {'z8': '0x4016cb48', 'votes': 57, 'second': 25, 'sim': 0.938, 'exact_word': True}
+0x4016cb9c {'z8': '0x4016cb9c', 'votes': 65, 'second': 25, 'sim': 0.938, 'exact_word': True}
+0x4016cbe8 {'z8': '0x4016cbe8', 'votes': 64, 'second': 25, 'sim': 0.938, 'exact_word': True}
+0x4016cc2c {'z8': '0x4016cc2c', 'votes': 62, 'second': 22, 'sim': 0.938, 'exact_word': True}
+0x4016cc70 {'z8': '0x4016cc70', 'votes': 64, 'second': 16, 'sim': 0.938, 'exact_word': True}
+0x4016cd78 {'z8': '0x4016cd78', 'votes': 66, 'second': 25, 'sim': 0.938, 'exact_word': True}
+0x4016cdc4 {'z8': '0x4016cdc4', 'votes': 62, 'second': 20, 'sim': 0.938, 'exact_word': True}
+0x4016eb0c {'z8': '0x4016eb0c', 'votes': 76, 'second': 3, 'sim': 0.969, 'exact_word': True}
+0x4016eb68 {'z8': '0x4016eb68', 'votes': 68, 'second': 3, 'sim': 0.906, 'exact_word': False}
+0x4016eba0 {'z8': '0x4016eba0', 'votes': 64, 'second': 3, 'sim': 0.938, 'exact_word': False}
+0x4016eea4 {'z8': '0x4016eea4', 'votes': 74, 'second': 10, 'sim': 0.969, 'exact_word': True}
+0x4016f0bc {'z8': '0x4016f0bc', 'votes': 62, 'second': 5, 'sim': 0.938, 'exact_word': True}
+0x4016f0f4 {'z8': '0x4016f0f4', 'votes': 62, 'second': 5, 'sim': 0.906, 'exact_word': True}
+0x4016f178 {'z8': '0x4016f178', 'votes': 72, 'second': 5, 'sim': 0.969, 'exact_word': True}
+0x4016f1d0 {'z8': '0x4016f1d0', 'votes': 71, 'second': 5, 'sim': 1.0, 'exact_word': True}
+0x40172380 {'z8': '0x40172380', 'votes': 82, 'second': 1, 'sim': 1.0, 'exact_word': True}
+0x40172608 {'z8': '0x40172608', 'votes': 95, 'second': 1, 'sim': 1.0, 'exact_word': True}
+0x40172b88 {'z8': '0x40172b88', 'votes': 93, 'second': 0, 'sim': 1.0, 'exact_word': True}
+0x40173098 {'z8': '0x40173098', 'votes': 95, 'second': 1, 'sim': 1.0, 'exact_word': True}
+0x40173104 {'z8': '0x40173104', 'votes': 87, 'second': 1, 'sim': 1.0, 'exact_word': True}
+0x401731c0 {'z8': '0x401731c0', 'votes': 82, 'second': 1, 'sim': 1.0, 'exact_word': True}
+0x40173b9c {'z8': '0x40173b9c', 'votes': 82, 'second': 7, 'sim': 0.969, 'exact_word': True}
+0x40173c60 {'z8': '0x40173c60', 'votes': 96, 'second': 9, 'sim': 1.0, 'exact_word': True}
+0x40173d04 {'z8': '0x40173d04', 'votes': 88, 'second': 5, 'sim': 1.0, 'exact_word': True}
+0x4017b254 {'z8': '0x4017b254', 'votes': 65, 'second': 17, 'sim': 1.0, 'exact_word': True}
+0x4017b420 {'z8': '0x4017b420', 'votes': 31, 'second': 14, 'sim': 0.969, 'exact_word': True}
+0x4017b5dc {'z8': '0x4017b5dc', 'votes': 59, 'second': 26, 'sim': 0.969, 'exact_word': True}
+0x4017b79c {'z8': '0x4017b79c', 'votes': 64, 'second': 26, 'sim': 0.969, 'exact_word': True}
+0x4017b95c {'z8': '0x4017b95c', 'votes': 50, 'second': 26, 'sim': 0.969, 'exact_word': True}
+0x4017ba74 {'z8': '0x4017ba74', 'votes': 16, 'second': 9, 'sim': 0.969, 'exact_word': True}
+0x4017c040 {'z8': '0x4017c040', 'votes': 63, 'second': 5, 'sim': 1.0, 'exact_word': True}
+0x4017f8dc {'z8': '0x4017f8dc', 'votes': 66, 'second': 8, 'sim': 1.0, 'exact_word': True}
+0x4017fad0 {'z8': '0x4017fad0', 'votes': 39, 'second': 6, 'sim': 1.0, 'exact_word': True}
+0x4017fd24 {'z8': '0x4017fd24', 'votes': 58, 'second': 3, 'sim': 1.0, 'exact_word': True}
+0x40180004 {'z8': '0x40180004', 'votes': 43, 'second': 7, 'sim': 1.0, 'exact_word': True}
+0x401801f8 {'z8': '0x401801f8', 'votes': 49, 'second': 3, 'sim': 0.969, 'exact_word': True}
+0x4018058c {'z8': '0x4018058c', 'votes': 42, 'second': 4, 'sim': 1.0, 'exact_word': True}
+0x40180e50 {'z8': '0x40180e50', 'votes': 55, 'second': 22, 'sim': 1.0, 'exact_word': True}
+0x4018102c {'z8': '0x4018102c', 'votes': 33, 'second': 14, 'sim': 0.969, 'exact_word': True}
+0x401811e8 {'z8': '0x401811e8', 'votes': 62, 'second': 26, 'sim': 1.0, 'exact_word': True}
+0x401813e4 {'z8': '0x401813e4', 'votes': 39, 'second': 7, 'sim': 1.0, 'exact_word': True}
+0x401815cc {'z8': '0x401815cc', 'votes': 38, 'second': 4, 'sim': 1.0, 'exact_word': True}
+0x40181760 {'z8': '0x40181760', 'votes': 58, 'second': 12, 'sim': 0.969, 'exact_word': True}
+0x40181880 {'z8': '0x40181880', 'votes': 47, 'second': 7, 'sim': 1.0, 'exact_word': True}
+0x40183490 {'z8': '0x40183490', 'votes': 81, 'second': 10, 'sim': 1.0, 'exact_word': True}
+0x40185064 {'z8': '0x40185064', 'votes': 86, 'second': 2, 'sim': 1.0, 'exact_word': True}
+0x401855e0 {'z8': '0x401855e0', 'votes': 59, 'second': 22, 'sim': 0.969, 'exact_word': True}
+0x401865d8 {'z8': '0x401865d8', 'votes': 54, 'second': 13, 'sim': 1.0, 'exact_word': True}
+0x40187b00 {'z8': '0x40187b00', 'votes': 74, 'second': 4, 'sim': 1.0, 'exact_word': True}
+0x401a0000 None
+0x40200000 {'z8': '0x40200000', 'votes': 23, 'second': 3, 'sim': 0.969, 'exact_word': True}
+0x402517fc {'z8': '0x402517fc', 'votes': 70, 'second': 14, 'sim': 0.938, 'exact_word': False}
+0x402518a8 {'z8': '0x402518a8', 'votes': 64, 'second': 38, 'sim': 0.969, 'exact_word': True}
+0x40251908 {'z8': '0x40251908', 'votes': 72, 'second': 43, 'sim': 0.969, 'exact_word': True}
+0x40251a84 {'z8': '0x40251a84', 'votes': 75, 'second': 31, 'sim': 0.969, 'exact_word': True}
+0x40251ae8 {'z8': '0x40251ae8', 'votes': 74, 'second': 23, 'sim': 0.969, 'exact_word': True}
+0x40251db8 {'z8': '0x40251db8', 'votes': 44, 'second': 22, 'sim': 0.969, 'exact_word': True}
+0x40251f34 {'z8': '0x40251f34', 'votes': 48, 'second': 25, 'sim': 0.969, 'exact_word': True}
+0x40252a68 {'z8': '0x40252a68', 'votes': 72, 'second': 16, 'sim': 0.938, 'exact_word': True}
+0x40252ac0 {'z8': '0x40252ac0', 'votes': 71, 'second': 15, 'sim': 0.969, 'exact_word': True}
+0x40252e8c {'z8': '0x40252e8c', 'votes': 76, 'second': 6, 'sim': 0.938, 'exact_word': False}
+0x40252f0c {'z8': '0x40252f0c', 'votes': 70, 'second': 12, 'sim': 0.969, 'exact_word': True}
+0x40252fb0 {'z8': '0x40252fb0', 'votes': 71, 'second': 19, 'sim': 0.969, 'exact_word': True}
+0x4025301c {'z8': '0x4025301c', 'votes': 69, 'second': 19, 'sim': 0.969, 'exact_word': True}
+0x4025321c {'z8': '0x4025321c', 'votes': 71, 'second': 22, 'sim': 0.969, 'exact_word': True}
+0x402538fc {'z8': '0x402538fc', 'votes': 70, 'second': 33, 'sim': 0.969, 'exact_word': True}
+0x40253998 {'z8': '0x40253998', 'votes': 63, 'second': 21, 'sim': 0.969, 'exact_word': True}
+0x40253a04 {'z8': '0x40253a04', 'votes': 72, 'second': 23, 'sim': 0.969, 'exact_word': True}
+0x40253a74 {'z8': '0x40253a74', 'votes': 73, 'second': 23, 'sim': 0.969, 'exact_word': True}
+0x40253b2c {'z8': '0x40253b2c', 'votes': 77, 'second': 17, 'sim': 0.969, 'exact_word': False}
+0x40253d10 {'z8': '0x40253d10', 'votes': 77, 'second': 3, 'sim': 0.969, 'exact_word': True}
+0x40253e40 {'z8': '0x40253e40', 'votes': 76, 'second': 16, 'sim': 0.969, 'exact_word': True}
+0x40253f74 {'z8': '0x40253f74', 'votes': 78, 'second': 39, 'sim': 0.969, 'exact_word': True}
+0x4025449c {'z8': '0x4025449c', 'votes': 66, 'second': 13, 'sim': 0.969, 'exact_word': True}
+0x40254534 {'z8': '0x40254534', 'votes': 59, 'second': 10, 'sim': 0.938, 'exact_word': True}
+0x40254730 {'z8': '0x40254730', 'votes': 64, 'second': 28, 'sim': 0.938, 'exact_word': True}
+0x402dc960 {'z8': '0x402dd4f8', 'votes': 33, 'second': 14, 'sim': 0.938, 'exact_word': True}
+0x402dc99c {'z8': '0x402dd534', 'votes': 29, 'second': 9, 'sim': 0.938, 'exact_word': False}
+0x402dc9c0 {'z8': '0x402dd558', 'votes': 21, 'second': 3, 'sim': 0.969, 'exact_word': True}
+0x402dcb30 {'z8': '0x402dd6c8', 'votes': 48, 'second': 2, 'sim': 0.969, 'exact_word': True}
+0x402dcbf4 {'z8': '0x402dd78c', 'votes': 84, 'second': 2, 'sim': 0.969, 'exact_word': True}
+0x402dcd50 {'z8': '0x402dd8e8', 'votes': 66, 'second': 10, 'sim': 0.969, 'exact_word': True}
+0x402dce64 {'z8': '0x402dd9fc', 'votes': 32, 'second': 10, 'sim': 0.969, 'exact_word': True}
+0x402dceb4 {'z8': '0x402dda4c', 'votes': 23, 'second': 10, 'sim': 0.969, 'exact_word': True}
+0x402dd0d4 {'z8': '0x402ddc6c', 'votes': 26, 'second': 14, 'sim': 0.938, 'exact_word': True}
+0x402dd184 {'z8': '0x402ddd1c', 'votes': 31, 'second': 14, 'sim': 0.969, 'exact_word': True}
+0x402dd1d4 {'z8': '0x402ddd6c', 'votes': 36, 'second': 14, 'sim': 0.969, 'exact_word': True}
+0x402e4364 {'z8': '0x402e5550', 'votes': 34, 'second': 3, 'sim': 0.844, 'exact_word': False}
+0x402e4378 {'z8': '0x402e5564', 'votes': 34, 'second': 3, 'sim': 0.844, 'exact_word': False}
+0x402e7258 {'z8': '0x402e8444', 'votes': 96, 'second': 11, 'sim': 1.0, 'exact_word': True}
+0x402ecc3c {'z8': '0x402ede28', 'votes': 74, 'second': 14, 'sim': 0.938, 'exact_word': True}
+0x402ecf88 {'z8': '0x402ee174', 'votes': 88, 'second': 14, 'sim': 0.969, 'exact_word': True}
+0x402ed0a0 {'z8': '0x402ee28c', 'votes': 79, 'second': 14, 'sim': 0.969, 'exact_word': True}
+0x402ed94c {'z8': '0x402eeb38', 'votes': 90, 'second': 2, 'sim': 1.0, 'exact_word': False}
+0x402edf50 {'z8': '0x402ef13c', 'votes': 83, 'second': 14, 'sim': 0.969, 'exact_word': True}
+0x402ee098 {'z8': '0x402ef284', 'votes': 89, 'second': 24, 'sim': 0.969, 'exact_word': True}
+0x402ee1f4 {'z8': '0x402ef3e0', 'votes': 84, 'second': 24, 'sim': 0.969, 'exact_word': True}
+0x402ee3ac {'z8': '0x402ef598', 'votes': 89, 'second': 10, 'sim': 0.969, 'exact_word': True}
+0x402ee5f8 {'z8': '0x402ef7e4', 'votes': 84, 'second': 14, 'sim': 0.969, 'exact_word': True}
+0x402ee6b4 {'z8': '0x402ef8a0', 'votes': 78, 'second': 14, 'sim': 0.969, 'exact_word': True}
+0x4031e328 {'z8': '0x4031dedc', 'votes': 72, 'second': 4, 'sim': 0.969, 'exact_word': False}
+0x4031e32c {'z8': '0x4031dee0', 'votes': 71, 'second': 3, 'sim': 0.969, 'exact_word': False}
+0x4031e6f4 {'z8': '0x4031e2a8', 'votes': 86, 'second': 19, 'sim': 1.0, 'exact_word': True}
+0x4031e758 {'z8': '0x4031e30c', 'votes': 70, 'second': 19, 'sim': 1.0, 'exact_word': True}
+0x4031e7b8 {'z8': '0x4031e36c', 'votes': 51, 'second': 17, 'sim': 0.906, 'exact_word': False}
+0x4031e7f4 {'z8': '0x4031e3a8', 'votes': 45, 'second': 6, 'sim': 0.875, 'exact_word': False}
+0x4031e824 {'z8': '0x4031e3d8', 'votes': 39, 'second': 6, 'sim': 0.875, 'exact_word': True}
+0x4031e87c {'z8': '0x4031e430', 'votes': 43, 'second': 7, 'sim': 0.906, 'exact_word': True}
+0x4031f4ac {'z8': '0x4031f060', 'votes': 72, 'second': 8, 'sim': 1.0, 'exact_word': True}
+0x4031fa5c {'z8': '0x4031f610', 'votes': 64, 'second': 30, 'sim': 1.0, 'exact_word': True}
+0x40323d7c {'z8': '0x40323930', 'votes': 69, 'second': 6, 'sim': 1.0, 'exact_word': True}
+0x40325ecc {'z8': '0x40325a80', 'votes': 63, 'second': 4, 'sim': 0.969, 'exact_word': True}
+0x40325fac {'z8': '0x40325b60', 'votes': 67, 'second': 13, 'sim': 1.0, 'exact_word': True}
+0x403266ec {'z8': '0x403262a0', 'votes': 96, 'second': 3, 'sim': 1.0, 'exact_word': True}
+0x4032934c {'z8': '0x40328f00', 'votes': 82, 'second': 26, 'sim': 0.938, 'exact_word': True}
+0x40329c30 {'z8': '0x403297e4', 'votes': 76, 'second': 2, 'sim': 0.875, 'exact_word': True}
+0x40329cc8 {'z8': '0x4032987c', 'votes': 76, 'second': 6, 'sim': 1.0, 'exact_word': True}
+0x4032a15c {'z8': '0x40329d10', 'votes': 93, 'second': 23, 'sim': 1.0, 'exact_word': True}
+0x4032aa38 {'z8': '0x4032a5ec', 'votes': 95, 'second': 4, 'sim': 1.0, 'exact_word': True}
+0x4032e57c {'z8': '0x4032e130', 'votes': 25, 'second': 6, 'sim': 0.844, 'exact_word': False}
+0x4033a66c {'z8': '0x4033a220', 'votes': 96, 'second': 12, 'sim': 1.0, 'exact_word': True}
+0x40340df0 {'z8': '0x403409a4', 'votes': 84, 'second': 17, 'sim': 1.0, 'exact_word': True}
+0x40340e20 {'z8': '0x403409d4', 'votes': 94, 'second': 23, 'sim': 1.0, 'exact_word': True}
+0x403411b0 {'z8': '0x40340d64', 'votes': 91, 'second': 39, 'sim': 1.0, 'exact_word': True}
+0x4035705c {'z8': '0x40356a74', 'votes': 70, 'second': 37, 'sim': 1.0, 'exact_word': True}
+0x4035706c {'z8': '0x40356a84', 'votes': 69, 'second': 40, 'sim': 1.0, 'exact_word': True}
+0x403638e4 {'z8': '0x403632fc', 'votes': 67, 'second': 4, 'sim': 0.938, 'exact_word': True}
+0x40394404 {'z8': '0x40393f28', 'votes': 50, 'second': 1, 'sim': 0.969, 'exact_word': True}
+0x40394448 {'z8': '0x40393f6c', 'votes': 50, 'second': 1, 'sim': 1.0, 'exact_word': True}
+0x4039a554 {'z8': '0x4039a0b4', 'votes': 64, 'second': 0, 'sim': 0.938, 'exact_word': False}
+0x403adbac {'z8': '0x403ad6a4', 'votes': 24, 'second': 2, 'sim': 0.906, 'exact_word': True}
+0x403aed7c {'z8': '0x403ae874', 'votes': 71, 'second': 12, 'sim': 0.969, 'exact_word': True}
+0x403af040 {'z8': '0x403aeb38', 'votes': 92, 'second': 4, 'sim': 1.0, 'exact_word': True}
+0x403af294 {'z8': '0x403aed8c', 'votes': 83, 'second': 3, 'sim': 0.969, 'exact_word': True}
+0x403afa44 {'z8': '0x403af53c', 'votes': 54, 'second': 4, 'sim': 0.938, 'exact_word': True}
+0x403afa54 {'z8': '0x403af54c', 'votes': 54, 'second': 4, 'sim': 0.938, 'exact_word': False}
+0x403b037c {'z8': '0x403afe64', 'votes': 52, 'second': 20, 'sim': 0.625, 'exact_word': True}
+0x403b03f8 {'z8': '0x403afee0', 'votes': 82, 'second': 3, 'sim': 1.0, 'exact_word': True}
+0x403b0490 {'z8': '0x403aff78', 'votes': 89, 'second': 2, 'sim': 1.0, 'exact_word': True}
+0x403b05d0 {'z8': '0x403b00b8', 'votes': 85, 'second': 3, 'sim': 1.0, 'exact_word': True}
+0x403b0874 {'z8': '0x403b035c', 'votes': 79, 'second': 2, 'sim': 1.0, 'exact_word': True}
+0x403b2748 {'z8': '0x403b2210', 'votes': 55, 'second': 1, 'sim': 0.844, 'exact_word': True}
+0x403bba78 {'z8': '0x403bb3cc', 'votes': 25, 'second': 6, 'sim': 0.875, 'exact_word': True}
+0x403d2158 {'z8': '0x403d71d4', 'votes': 60, 'second': 1, 'sim': 0.844, 'exact_word': True}
+0x403d22d4 {'z8': '0x403d7350', 'votes': 63, 'second': 3, 'sim': 0.969, 'exact_word': True}
+0x403d6618 {'z8': '0x403db694', 'votes': 68, 'second': 5, 'sim': 0.938, 'exact_word': True}
+0x403d6908 {'z8': '0x403db984', 'votes': 21, 'second': 1, 'sim': 0.844, 'exact_word': False}
+0x403d69d4 {'z8': '0x403dba50', 'votes': 31, 'second': 1, 'sim': 0.938, 'exact_word': True}
+0x403d69f4 {'z8': '0x403dba70', 'votes': 39, 'second': 2, 'sim': 0.938, 'exact_word': True}
+0x403d6d38 {'z8': '0x403dbdb4', 'votes': 56, 'second': 1, 'sim': 0.906, 'exact_word': True}
+0x403d7c50 {'z8': '0x403dccc8', 'votes': 74, 'second': 34, 'sim': 1.0, 'exact_word': False}
+0x403eb078 {'z8': '0x403efe74', 'votes': 56, 'second': 6, 'sim': 0.969, 'exact_word': True}
+0x403eb0dc {'z8': '0x403efed8', 'votes': 41, 'second': 6, 'sim': 0.906, 'exact_word': True}
+0x403ebd54 {'z8': '0x403f0b54', 'votes': 66, 'second': 1, 'sim': 0.969, 'exact_word': False}
+0x403ebd58 {'z8': '0x403f0b58', 'votes': 66, 'second': 1, 'sim': 0.969, 'exact_word': False}
+0x403ebd5c {'z8': '0x403f0b5c', 'votes': 66, 'second': 2, 'sim': 0.938, 'exact_word': False}
+0x403ebfb8 {'z8': '0x403f0db8', 'votes': 55, 'second': 4, 'sim': 0.938, 'exact_word': False}
+0x403ec980 {'z8': '0x403f1780', 'votes': 87, 'second': 20, 'sim': 0.969, 'exact_word': True}
+0x403ec990 {'z8': '0x403f1790', 'votes': 87, 'second': 20, 'sim': 0.969, 'exact_word': True}
+0x403ec99c {'z8': '0x403f179c', 'votes': 87, 'second': 20, 'sim': 0.969, 'exact_word': True}
+0x403ec9d0 {'z8': '0x403f17d0', 'votes': 84, 'second': 9, 'sim': 1.0, 'exact_word': True}
+0x403ecbc4 {'z8': '0x403f19c4', 'votes': 60, 'second': 3, 'sim': 1.0, 'exact_word': True}
+0x403ecd18 {'z8': '0x403f1b18', 'votes': 30, 'second': 3, 'sim': 0.906, 'exact_word': False}
+0x403f196c {'z8': '0x403f676c', 'votes': 92, 'second': 4, 'sim': 1.0, 'exact_word': True}
+0x403f97ec {'z8': '0x403fe284', 'votes': 83, 'second': 2, 'sim': 0.969, 'exact_word': False}
+0x403f9844 {'z8': '0x403fe2dc', 'votes': 83, 'second': 2, 'sim': 0.938, 'exact_word': False}
+0x403fc768 {'z8': '0x40616888', 'votes': 9, 'second': 1, 'sim': 0.594, 'exact_word': False}
+0x403fc794 {'z8': '0x406168b4', 'votes': 9, 'second': 2, 'sim': 0.438, 'exact_word': False}
+0x403fc7b4 {'z8': '0x406168d4', 'votes': 9, 'second': 2, 'sim': 0.219, 'exact_word': False}
+0x40500970 {'z8': '0x40507274', 'votes': 73, 'second': 1, 'sim': 0.938, 'exact_word': False}
+0x40500998 {'z8': '0x4050729c', 'votes': 80, 'second': 1, 'sim': 0.969, 'exact_word': True}
+0x405009b4 {'z8': '0x405072b8', 'votes': 81, 'second': 1, 'sim': 0.969, 'exact_word': False}
+0x405022e8 {'z8': '0x40508be8', 'votes': 53, 'second': 8, 'sim': 0.969, 'exact_word': True}
+0x40529da8 {'z8': '0x4052f444', 'votes': 6, 'second': 6, 'sim': 0.906, 'exact_word': True}
+0x4060ae34 {'z8': '0x4060f558', 'votes': 55, 'second': 7, 'sim': 0.938, 'exact_word': True}
+0x4060cf30 {'z8': '0x40611654', 'votes': 62, 'second': 2, 'sim': 0.969, 'exact_word': True}
+0x4060d094 {'z8': '0x406117b8', 'votes': 43, 'second': 1, 'sim': 0.906, 'exact_word': True}
+0x4060e4d0 {'z8': '0x40612bf4', 'votes': 82, 'second': 2, 'sim': 0.969, 'exact_word': True}
+0x4060e674 {'z8': '0x40612d98', 'votes': 78, 'second': 3, 'sim': 0.938, 'exact_word': True}
+0x406120e0 {'z8': '0x40616888', 'votes': 90, 'second': 4, 'sim': 0.969, 'exact_word': False}
+0x406121a4 {'z8': '0x4061694c', 'votes': 77, 'second': 7, 'sim': 1.0, 'exact_word': False}
+0x406143cc {'z8': '0x40618b84', 'votes': 82, 'second': 4, 'sim': 1.0, 'exact_word': False}
+0x40614428 {'z8': '0x40618be0', 'votes': 82, 'second': 3, 'sim': 0.906, 'exact_word': False}
+0x407e1834 {'z8': '0x407dd4a0', 'votes': 41, 'second': 1, 'sim': 0.844, 'exact_word': False}
+0x407e1844 {'z8': '0x407dd4b0', 'votes': 38, 'second': 1, 'sim': 0.875, 'exact_word': True}
+0x407e2e0c {'z8': '0x407dea74', 'votes': 70, 'second': 8, 'sim': 0.938, 'exact_word': False}
+0x407e2e1c {'z8': '0x407dea84', 'votes': 70, 'second': 8, 'sim': 0.906, 'exact_word': True}
+0x407e337c {'z8': '0x407defe4', 'votes': 37, 'second': 2, 'sim': 0.875, 'exact_word': False}
+0x407e33b8 {'z8': '0x407df020', 'votes': 42, 'second': 2, 'sim': 0.875, 'exact_word': True}
+0x407e3460 {'z8': '0x407df0c8', 'votes': 65, 'second': 2, 'sim': 1.0, 'exact_word': False}
+0x407e346c {'z8': '0x407df0d4', 'votes': 65, 'second': 2, 'sim': 1.0, 'exact_word': True}
+0x407e375c {'z8': '0x407df3c4', 'votes': 55, 'second': 29, 'sim': 0.969, 'exact_word': True}
+0x40837610 {'z8': '0x40832a78', 'votes': 31, 'second': 8, 'sim': 0.875, 'exact_word': False}
+0x40838be0 {'z8': '0x40834058', 'votes': 36, 'second': 19, 'sim': 0.875, 'exact_word': True}
+0x4088ea2c {'z8': '0x4088bdac', 'votes': 96, 'second': 0, 'sim': 1.0, 'exact_word': True}
+0x4088f2a0 {'z8': '0x4088c620', 'votes': 90, 'second': 0, 'sim': 1.0, 'exact_word': True}
+0x408b94f8 {'z8': '0x408b6878', 'votes': 83, 'second': 4, 'sim': 1.0, 'exact_word': True}
+0x408b9538 {'z8': '0x408b68b8', 'votes': 88, 'second': 4, 'sim': 1.0, 'exact_word': True}
+0x408bb1f8 {'z8': '0x408b8578', 'votes': 86, 'second': 16, 'sim': 1.0, 'exact_word': True}
+0x408bb248 {'z8': '0x408b85c8', 'votes': 87, 'second': 16, 'sim': 1.0, 'exact_word': True}
+0x408bb270 {'z8': '0x408b85f0', 'votes': 86, 'second': 16, 'sim': 1.0, 'exact_word': True}
+0x408bcd54 {'z8': '0x408ba0d4', 'votes': 81, 'second': 0, 'sim': 0.969, 'exact_word': True}
+0x408bcda4 {'z8': '0x408ba124', 'votes': 77, 'second': 3, 'sim': 0.969, 'exact_word': True}
+0x40c01890 {'z8': '0x40c018a8', 'votes': 71, 'second': 1, 'sim': 1.0, 'exact_word': True}
+0x40c05714 {'z8': '0x40c05728', 'votes': 89, 'second': 7, 'sim': 1.0, 'exact_word': True}
+0x40c05724 {'z8': '0x40c05738', 'votes': 89, 'second': 7, 'sim': 1.0, 'exact_word': True}
+0x40c7afc4 {'z8': '0x40c7a304', 'votes': 94, 'second': 10, 'sim': 1.0, 'exact_word': True}
+0x40c7b130 {'z8': '0x40c7a470', 'votes': 84, 'second': 13, 'sim': 1.0, 'exact_word': True}
+0x40c7b374 {'z8': '0x40c7a6b4', 'votes': 94, 'second': 8, 'sim': 1.0, 'exact_word': True}
+0x40c9ec0c {'z8': '0x40c9da40', 'votes': 24, 'second': 11, 'sim': 0.531, 'exact_word': False}
+0x40c9f834 {'z8': '0x40c9e48c', 'votes': 43, 'second': 7, 'sim': 0.531, 'exact_word': True}
+0x40c9f9e4 {'z8': '0x40c9e63c', 'votes': 83, 'second': 3, 'sim': 0.969, 'exact_word': True}
+0x40c9fb3c {'z8': '0x40c9e794', 'votes': 76, 'second': 3, 'sim': 0.969, 'exact_word': False}
+0x40d2fcdc {'z8': '0x40d2bc8c', 'votes': 85, 'second': 11, 'sim': 1.0, 'exact_word': True}
+0x40d2ffb0 {'z8': '0x40d2bf60', 'votes': 87, 'second': 11, 'sim': 1.0, 'exact_word': True}
+0x40d30004 {'z8': '0x40d2bfb4', 'votes': 87, 'second': 12, 'sim': 1.0, 'exact_word': True}
+0x40d30458 {'z8': '0x40d2c408', 'votes': 72, 'second': 3, 'sim': 0.969, 'exact_word': True}
+0x40d30498 {'z8': '0x40d2c448', 'votes': 71, 'second': 5, 'sim': 0.938, 'exact_word': False}
+0x40d65a98 {'z8': '0x40d60ec8', 'votes': 58, 'second': 1, 'sim': 0.969, 'exact_word': True}
+0x40d65aa8 {'z8': '0x40d60ed8', 'votes': 62, 'second': 1, 'sim': 0.938, 'exact_word': True}
+0x40e05710 {'z8': '0x40e036e0', 'votes': 41, 'second': 5, 'sim': 0.875, 'exact_word': True}
+0x40f760e4 {'z8': '0x40f72254', 'votes': 27, 'second': 12, 'sim': 0.438, 'exact_word': True}
+0x41239374 {'z8': '0x41234400', 'votes': 59, 'second': 1, 'sim': 1.0, 'exact_word': True}
+0x4127c780 {'z8': '0x41277808', 'votes': 93, 'second': 2, 'sim': 1.0, 'exact_word': True}
+0x4127d188 {'z8': '0x41278210', 'votes': 95, 'second': 31, 'sim': 1.0, 'exact_word': True}
+0x4127d6f0 {'z8': '0x41278778', 'votes': 96, 'second': 9, 'sim': 1.0, 'exact_word': True}
+0x4127d7b0 {'z8': '0x41278838', 'votes': 95, 'second': 12, 'sim': 1.0, 'exact_word': True}
+0x420d0032 {'sites': 0, 'candidates': []}
+0x420d003a {'sites': 0, 'candidates': []}
+0x42e9b81c {'sites': 0, 'candidates': []}
+0x43014bb8 {'sites': 0, 'candidates': []}
+0x4317e310 {'sites': 0, 'candidates': []}
+0x4317e420 {'sites': 0, 'candidates': []}
+0x4317ebe0 {'sites': 0, 'candidates': []}
+0x433ad2f0 {'sites': 0, 'candidates': []}
+0xa02800000 {'sites': 5, 'candidates': [('0xa02800000', 5)]}
+0xa02822824 {'sites': 11, 'candidates': [('0xa0281cd5c', 11)]}
+0xa028be460 {'sites': 0, 'candidates': []}
+0xa028d1a10 {'sites': 0, 'candidates': []}
+0xa0290c7f0 {'sites': 0, 'candidates': []}
+0xa02b6f4c8 {'sites': 0, 'candidates': []}
+0xa02be8df8 {'sites': 0, 'candidates': []}
+0xa02eac0e8 {'sites': 3, 'candidates': [('0xa02e8ca90', 3)]}
+0xa02eb0010 {'sites': 0, 'candidates': []}
+0xa02eb10c4 {'sites': 0, 'candidates': []}
+0xa02eb2538 {'sites': 0, 'candidates': []}
+0xa02eb2878 {'sites': 0, 'candidates': []}
+0xa02eb2880 {'sites': 0, 'candidates': []}
+0xa02f4ab28 {'sites': 2, 'candidates': [('0xa02f2ac38', 2)]}
+0xa02f4ab30 {'sites': 8, 'candidates': [('0xa02f2ac40', 8)]}
+0xa02f4ab38 {'sites': 2, 'candidates': [('0xa02f2ac48', 1)]}
+0xa02f4ab40 {'sites': 2, 'candidates': [('0xa02f2ac50', 2)]}
+0xa032491b0 {'sites': 4, 'candidates': [('0xa032280c8', 4)]}
+0xa032d5de8 {'sites': 2, 'candidates': [('0xa032b50c8', 2)]}
+0xa032dcb98 {'sites': 3, 'candidates': [('0xa032bbd68', 3)]}
+0xa03def068 {'sites': 0, 'candidates': []}
+0xa03df2938 {'sites': 0, 'candidates': []}
+0xa03df3d8c {'sites': 0, 'candidates': []}
+0xa04a756c4 {'sites': 5, 'candidates': [('0xa047ce474', 5)]}
+0xa04a75f48 {'sites': 5, 'candidates': [('0xa047cecd8', 5)]}
+0xa04e05820 {'sites': 31, 'candidates': [('0xa04b51820', 24)]}
+0xa04e0cd00 {'sites': 28, 'candidates': [('0xa04b58d00', 24)]}
+0xa057b0a20 {'sites': 0, 'candidates': []}
+0xa057b0eec {'sites': 0, 'candidates': []}
+0xa057b2250 {'sites': 0, 'candidates': []}
+0xa0f000000 {'sites': 0, 'candidates': []}
+0xa0f801000 {'sites': 0, 'candidates': []}

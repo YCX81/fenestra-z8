@@ -2,6 +2,11 @@
   "schema": "fenestra.source-inventory/v1",
   "files": [
     {
+      "path": ".gitattributes",
+      "bytes": 32,
+      "sha256": "23302dd90b8bb74b44d365fafef8df20f809b61cb347023951ecf60a88a29651"
+    },
+    {
       "path": ".github/workflows/source-tests.yml",
       "bytes": 461,
       "sha256": "691d3c91fd17cde211b466a7433a9f7a36e40bdc22fb98d86fed771493ab1156"
@@ -22,19 +27,24 @@
       "sha256": "e66c269d4819aaab34b49ef5220c4ddab6756f21bb5180761a4eb8561f2b7bbd"
     },
     {
+      "path": "LICENSE-Z8.md",
+      "bytes": 2146,
+      "sha256": "08d8d2abfe1bb73670fbbafb16361f25e63301c6092d7afd45ec442d4d52d005"
+    },
+    {
       "path": "NOTICE",
-      "bytes": 836,
-      "sha256": "133678d0069f607032af784dcf14c56c4b79c445b1259c98d36405512e38be5e"
+      "bytes": 1100,
+      "sha256": "d1a406487db417f4236de568b03edadbd4996d2c2e4d1865dfc96949419f6ff1"
     },
     {
       "path": "PUBLICATION.json",
-      "bytes": 221,
-      "sha256": "ebe30351b8dde2a399d3bcc740a4a1f791449819d7526d908bf6ab3addfa543f"
+      "bytes": 585,
+      "sha256": "0d9b064d6631a3a16816942e2ac305d4a261702b0c44c8e9bbb9eeb0ebad3d1c"
     },
     {
       "path": "README.md",
-      "bytes": 7059,
-      "sha256": "ab88c9ae0fbfb912aff4100e6eb1b2aa6675fae5522135052314c6ce2c205972"
+      "bytes": 7742,
+      "sha256": "c97d273d630725713c0157c3a5f6c9ad7be0aa1715329dfb8345e2652d9ee98b"
     },
     {
       "path": "docs/api-reference.md",
@@ -983,8 +993,8 @@
     },
     {
       "path": "port-z8/PORT-STATUS.md",
-      "bytes": 4628,
-      "sha256": "98eb1c827b7ab9f4a6696ba8f9994d0d7d1f48cc8f3df60d1d72cdfb6e9fbfbe"
+      "bytes": 5235,
+      "sha256": "2a1462146e4a9e55a3d640b8f8c2d9575fcb27705350f23ffeec2b445e153f7d"
     },
     {
       "path": "port-z8/addrmap.py",
@@ -993,23 +1003,23 @@
     },
     {
       "path": "port-z8/baseline-z9.sh",
-      "bytes": 440,
-      "sha256": "de4745b9bce2bca78cfa6d0f0bb8f0daa2571b2ca4b523dee81255a66043ed75"
+      "bytes": 414,
+      "sha256": "d73f1b087e659c2810db732c42d2e09308d26c5ad3559a0cc05d0c2b9a3a6a66"
     },
     {
       "path": "port-z8/build-demo.sh",
-      "bytes": 342,
-      "sha256": "1af90d0088b00ec02fd2b552f0acc6c7b252826cdb25542bba0811528898430b"
+      "bytes": 305,
+      "sha256": "b99d305e6bfafb66a736a6426367c93dd63c8408a7614689bca0e1cb306fff77"
     },
     {
       "path": "port-z8/build-hello.sh",
-      "bytes": 287,
-      "sha256": "62bbdb1adecaca58da7732fc2b448e893a3c7d9ee4d07e08c5b50f463543c280"
+      "bytes": 250,
+      "sha256": "cd62dcd39ad14fd5089106eb14d52d415ff6ec0649dc05de3f9ddf7ccd18573e"
     },
     {
       "path": "port-z8/build-z8.sh",
-      "bytes": 382,
-      "sha256": "85397ba2e3918070ceb5a4ec1c8c4a32bcf75681051b9eef21f9d5f475253ea2"
+      "bytes": 355,
+      "sha256": "83e84e4a37d63fb0c94cf0f062487e0a3371d97ec185c8e9ea250674e9a929c3"
     },
     {
       "path": "port-z8/collect.py",
@@ -1028,8 +1038,8 @@
     },
     {
       "path": "port-z8/diagbuild.py",
-      "bytes": 2115,
-      "sha256": "28dcdedbbf5d7087c706c3ace9329079cef29aaf7460e16bfbe4561ab3a0bdcc"
+      "bytes": 2275,
+      "sha256": "8ebb7b1b466c89f5747dcf852fa968f18de86864c9c2791da9d07b347869fda8"
     },
     {
       "path": "port-z8/diagcap.py",
@@ -1043,8 +1053,8 @@
     },
     {
       "path": "port-z8/fenestra_boot.py",
-      "bytes": 5347,
-      "sha256": "954811de189e29418a43e8dd0a0aa6e733d5f5ae37df65b6b7c68b35983c9f95"
+      "bytes": 5416,
+      "sha256": "791bcdf3aecf8f1a5c579637eb32a42cc550b73ba9f5c6a70fa88e160c367d9c"
     },
     {
       "path": "port-z8/findloops.py",
@@ -1128,8 +1138,8 @@
     },
     {
       "path": "port-z8/run-boot.sh",
-      "bytes": 623,
-      "sha256": "2b8cc2ab6e4b0665f19dfd1c74f82810fd3064fdb6618a4cec97813ffe2059e4"
+      "bytes": 759,
+      "sha256": "e6defca6e93cb52146c0105b02e8171eef396e9e1cf48e11317b0be67a48e91c"
     },
     {
       "path": "port-z8/shots/fen16-final.png",

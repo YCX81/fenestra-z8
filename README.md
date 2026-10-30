@@ -1,5 +1,11 @@
 # Fenestra
 
+This is YCX81's emulation-only Z8 C3.11 adaptation of
+[WonderLantern/Fenestra](https://github.com/WonderLantern/Fenestra), based on
+`67774849c9dd97cc7127066190528e245ee25650`. Its independent distribution and
+contribution scope are explained in [LICENSE-Z8.md](LICENSE-Z8.md). Inherited
+ZR/Z9 documentation and upstream release links are not Z8 release artifacts.
+
 > **Early development:** Fenestra is still at an early stage. Major changes, including breaking changes to interfaces and behavior, are likely as the project evolves. Backward compatibility is not yet guaranteed.
 
 Fenestra is a camera firmware extension runtime that loads independent `.wlm` modules from a memory card. The Fenestra menu manages activation, modules, and debugging. WonderLantern hosts module pages and settings. Adding a module does not require rebuilding the core. A character-rain animation is included as `modules/demo/`.
@@ -57,3 +63,8 @@ For a module targeting an already supported profile, begin with [Module developm
 ## License
 
 [CC BY-NC-SA 4.0](LICENSE), with a separate [commercial photography permission](EXCEPTIONS.md). Commercial photography, filmmaking, and paid shooting assignments are permitted. The permission does not authorize selling covered software or modules, or providing paid flashing services to third parties. Separately licensed dependencies retain their own terms.
+
+The [Z8 adaptation scope](LICENSE-Z8.md) applies these same terms and the photography
+permission to the Z8 contributions. The NonCommercial restriction means this is
+source-available, rather than OSI open source. Other worktrees retain their own
+licenses; original firmware and private build inputs are not included.

@@ -1,6 +1,12 @@
 # Fenestra → Z8 C3.11 移植进度
 
-工作树 `third-party-20261029/fenestra-z8`，分支 `z8-c311`，基于 Fenestra 6777484。本分支是 Fenestra 的派生作品，许可证仍为 CC BY-NC-SA 4.0，不能并入 GPL 仓库。**只在 QEMU 里运行过，没有刷机，也未提交。候选 MAIN 不能用于刷机。**
+工作树 `third-party-20261029/fenestra-z8`，分支 `z8-c311`，基于 Fenestra 6777484。本分支是 Fenestra 的派生作品，许可证仍为 CC BY-NC-SA 4.0，并保留摄影商用例外，具体适用范围见 [LICENSE-Z8.md](../LICENSE-Z8.md)；没有改成其他工作树的 GPL 许可。**只在 QEMU 里运行过，没有刷机。候选 MAIN 不能用于刷机。** 下文是 2026-10-30 移植记录；源码发布不代表重新执行了这些运行或完成实机验收。
+
+公开脚本不再固定本机用户名路径：构建时设置 `FENESTRA_Z8_MAIN` 或
+`FENESTRA_Z9_MAIN` 指向自己的原始输入。实验启动器另需
+`FENESTRA_NIKON_WORKSPACE`，依赖独立安装的研究环境；可用
+`FENESTRA_QEMU_STATE`、`FENESTRA_PYTHON` 和 `FENESTRA_QEMU_LOCK`
+覆盖相应位置。这些实验辅助脚本不会随源码附带固件、介质、工具链或许可证。
 
 ## 结果（2026-10-30）
 

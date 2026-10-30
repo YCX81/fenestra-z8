@@ -3,6 +3,11 @@ Fenestra
 This tree is a modified version of Fenestra: branch z8-c311 adds an emulation-only
 Nikon Z8 C3.11 port, described in port-z8/PORT-STATUS.md.
 
+Upstream: https://github.com/WonderLantern/Fenestra
+Base commit: 67774849c9dd97cc7127066190528e245ee25650
+Z8 adaptation contributions: YCX81, 2026. LICENSE-Z8.md describes their scope
+under the same CC BY-NC-SA 4.0 terms and EXCEPTIONS.md photography permission.
+
 Project material is licensed under CC BY-NC-SA 4.0, with the additional
 commercial photography permission in EXCEPTIONS.md. See LICENSE for the
 unmodified Creative Commons license text.

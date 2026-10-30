@@ -4,5 +4,11 @@
   "firmware_included": false,
   "keys_included": false,
   "generated_private_outputs_included": false,
-  "additional_permission": "EXCEPTIONS.md"
+  "additional_permission": "EXCEPTIONS.md",
+  "adaptation_license_scope": "LICENSE-Z8.md",
+  "source_repository": "https://github.com/YCX81/fenestra-z8",
+  "adaptation_target": "z8-c311",
+  "upstream_repository": "https://github.com/WonderLantern/Fenestra",
+  "upstream_commit": "67774849c9dd97cc7127066190528e245ee25650",
+  "qualification": "emulation only; no Z8 update-package or hardware qualification"
 }

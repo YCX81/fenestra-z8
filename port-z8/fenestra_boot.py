@@ -7,7 +7,7 @@ import argparse, hashlib, json, os, struct, sys, time
 from pathlib import Path
 from types import SimpleNamespace
 
-NIKON=Path('/mnt/c/Users/ycx/Desktop/Nikon')
+NIKON=Path(os.environ['FENESTRA_NIKON_WORKSPACE']).expanduser().resolve()
 ROOT=NIKON/'z8-he-history-20261017'
 sys.path.insert(0,str(ROOT/'tools'))
 import z8_capture_probe as probe
@@ -19,7 +19,7 @@ P.add_argument('--tail-s',type=int,default=6)
 P.add_argument('--module',action='append',default=[])
 P.add_argument('--no-dir',action='store_true')
 A=P.parse_args()
-BASE=Path('/home/ycx/.local/share/nikon-z8-qemu')
+BASE=Path(os.environ.get('FENESTRA_QEMU_STATE',Path.home()/'.local/share/nikon-z8-qemu'))
 OUT=BASE/'fenestra-z8'/A.name
 OUT.parent.mkdir(parents=True,exist_ok=True)
 STOCK=NIKON/'z8-integration-20261014/.local/firmware/z8-c311-main.bin'

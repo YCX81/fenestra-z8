@@ -32,7 +32,7 @@ Function-level instruction tests, full-system emulation, and hardware tests addr
 
 ## Compatibility limits
 
-- Supported firmware identities are ZR C1.10 and Z9 C5.32. Other versions require independent profiles.
+- Supported firmware identities are ZR C1.10 and Z9 C5.32. Z8 C3.11 is an emulation-only port and is not a supported installation target; `port-z8/PORT-STATUS.md` lists what was and was not exercised. Other versions require independent profiles.
 - The core is experimental; complete hardware installation and runtime qualification is not finished.
 - Auto activate defaults to off, but existing card settings may enable automatic loading.
 - Module capacity depends on the file format, available memory, tasks, and retained resources. See the module format and lifecycle documentation.

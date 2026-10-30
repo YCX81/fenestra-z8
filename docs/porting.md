@@ -6,6 +6,14 @@ A port targets a camera model, exact firmware version and original application i
 
 Prepare the original update package and application component, their hashes, instruction-analysis tools and a target test environment. Keep firmware, disassembly, device dumps, keys and vendor tables in local input directories. Profiles contain the required addresses, offsets, lengths, digests, ABI descriptions and structure semantics. Builds extract required original instructions from user-provided firmware.
 
+## Worked example: Z8 C3.11
+
+`port-z8/gen_z8.py` derives the Z8 platform layer from the Z9 sources. Each address must pass relocation-normalized code matching or appear in an explicit table of structurally established values; anything else stops the run. The differences that address matching cannot find were the useful lesson:
+
+- Page, row, text and event IDs all shift between models. Compare the same native page record by record instead of assuming an offset.
+- Derive the text and language counts from the stride of the original tables. On Z9 this reproduces 3204 and 29; on Z8 it gives 3136 and 36.
+- Search the platform layer for identities written as byte lists, and for model names inside string literals.
+
 ## 1. Define identities and container boundaries
 
 Add a profile to `host/platform_profiles.py` with target ID, model, version, application size, SHA-256, module identity and image base. Add the outer-package identity and codec integration to `host/repack.py`.

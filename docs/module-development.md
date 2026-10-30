@@ -11,6 +11,8 @@ python host/build_sdk_module.py examples/hello/module.c --id hello --target zr-c
 python host/build_sdk_module.py examples/hello/module.c --id hello --target z9-c532 --output-dir build/hello-z9
 python host/build_sdk_module.py modules/demo/sdk.c --id demo --target zr-c110 --output-dir build/demo-zr
 python host/build_sdk_module.py modules/demo/sdk.c --id demo --target z9-c532 --output-dir build/demo-z9
+python host/build_sdk_module.py examples/hello/module.c --id hello --target z8-c311 --output-dir build/hello-z8
+python host/build_sdk_module.py modules/demo/sdk.c --id demo --target z8-c311 --output-dir build/demo-z8
 ```
 
 Each output directory must be new. Outputs include `.wlm`, an intermediate ELF and `module.json`. The JSON file records the build; it is not a runtime module catalog. The camera discovers modules from the card directory without that file.

@@ -1,5 +1,8 @@
 Fenestra
 
+This tree is a modified version of Fenestra: branch z8-c311 adds an emulation-only
+Nikon Z8 C3.11 port, described in port-z8/PORT-STATUS.md.
+
 Project material is licensed under CC BY-NC-SA 4.0, with the additional
 commercial photography permission in EXCEPTIONS.md. See LICENSE for the
 unmodified Creative Commons license text.

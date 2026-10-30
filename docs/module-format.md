@@ -25,7 +25,7 @@ This specification accompanies `include/fenestra_module.h`, `host/module_header.
 
 Legacy v1 service-entry inference uses capability bits for compatibility. New packers should explicitly emit v2 or v3: bytes 116–127 are not all reserved in those formats.
 
-ZR uses the complete original update-package digest for `module_identity`; Z9 uses the original MAIN application digest. Read the identity from the matching profile rather than applying one convention to both targets.
+ZR uses the complete original update-package digest for `module_identity`; Z9 and Z8 use the original MAIN application digest. Read the identity from the matching profile rather than applying one convention to both targets.
 
 ## Segment table
 

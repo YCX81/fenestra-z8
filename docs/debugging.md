@@ -6,7 +6,7 @@ Start the camera normally, activate Fenestra as needed, and enable USB Debug. Ho
 
 Windows uses WPD; Linux uses PyUSB/libusb. Install `requirements-host.txt`. On Windows, COM type libraries are loaded from the system directory and generated caches go under the source tree's `build/` directory. Linux requires device access permissions. The tools do not automatically detach kernel drivers or close unrelated PTP sessions.
 
-Set `FENESTRA_PTP_PROFILE` to `zr-c110`, `z9-c532` or `auto`. The client checks the connected camera's model and firmware before establishing an FXP2 session.
+Set `FENESTRA_PTP_PROFILE` to `zr-c110`, `z9-c532` or `auto`. The host tools do not cover `z8-c311`: its PTP path has not been run, and it has no USB Linux bridge. The client checks the connected camera's model and firmware before establishing an FXP2 session.
 
 ```sh
 python host/ptp_client.py --help

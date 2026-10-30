@@ -160,6 +160,8 @@ Source: [fenestra_video_sdk.h](../include/fenestra_video_sdk.h)
 
 The following table lists native function bindings. Composite services such as `camera.display.scene` are registered by the shared runtime; this table is not a complete runtime service enumeration.
 
+The Z8 C3.11 profile provides the same function names as Z9 C5.32, at its own addresses. These bindings are confirmed only as far as the QEMU runs in `port-z8/PORT-STATUS.md` exercise them.
+
 | Name | ZR C1.10 | Z9 C5.32 |
 |---|---|---|
 | `camera.card.close` | Available | Available |

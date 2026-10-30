@@ -12,8 +12,9 @@ This repository contains the core, module SDK, host debugging tools, firmware pa
 | --- | --- | --- | --- |
 | `zr-c110` | Nikon ZR C1.10 | Core, SDK, native menus, and PTP debugging | Not available |
 | `z9-c532` | Nikon Z9 C5.32 | Core, SDK, native menus, and PTP debugging | Available |
+| `z8-c311` | Nikon Z8 C3.11 | Core, SDK, and native menus; emulation only, no USB Linux bridge | Not available |
 
-Other firmware versions require their own validated profiles. Fenestra is experimental and has not completed full hardware qualification. Auto activate defaults to off; existing card settings remain effective.
+The `z8-c311` port has only run in QEMU and has never run on a camera. It has no update-package support and must not be flashed; see [port-z8/PORT-STATUS.md](port-z8/PORT-STATUS.md). Other firmware versions require their own validated profiles. Fenestra is experimental and has not completed full hardware qualification. Auto activate defaults to off; existing card settings remain effective.
 
 ## Getting started
 

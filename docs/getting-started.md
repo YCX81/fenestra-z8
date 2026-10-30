@@ -72,6 +72,14 @@ python fenestra.py build --target zr-c110 --firmware inputs/zr-original-applicat
 python fenestra.py build --target z9-c532 --firmware inputs/z9-original-application.bin --output build/z9-core
 ```
 
+The Z8 C3.11 core is built by its own script, because `fenestra.py` and `host/repack.py` do not accept that target yet:
+
+```sh
+python host/build_z8_core.py --firmware inputs/z8-original-application.bin --output-dir build/z8-core
+```
+
+The result is an emulation candidate, not an installable firmware.
+
 Here, `--firmware` denotes the complete original application component, not the encrypted update package. Its complete SHA-256 must match the profile. The output is an application image with local build checks; it is not an installable camera update package.
 
 ## 7. Camera controls and modules

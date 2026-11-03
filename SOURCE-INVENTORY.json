@@ -122,6 +122,11 @@
       "sha256": "65e82b82253d9233fc1c10a2288edca39854006a7315c666de9cb07686a3539c"
     },
     {
+      "path": "emulation/z8_linux_info_roundtrip.py",
+      "bytes": 8144,
+      "sha256": "0d12366ca787d8a088cf3c31192f9e84a30ce2b592f7046c33b090043bb069c5"
+    },
+    {
       "path": "emulation/z9_core.ld",
       "bytes": 489,
       "sha256": "18ea0befac5f50663927749d64663bf4ee46fd72bd980a0a9446d86d160f1c15"

@@ -43,8 +43,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7742,
-      "sha256": "c97d273d630725713c0157c3a5f6c9ad7be0aa1715329dfb8345e2652d9ee98b"
+      "bytes": 7745,
+      "sha256": "4828bef07a173e3e26dfd22746efbee689ba846ec815fc2bf624b2f93a78a133"
     },
     {
       "path": "docs/api-reference.md",
@@ -58,8 +58,8 @@
     },
     {
       "path": "docs/debugging.md",
-      "bytes": 4836,
-      "sha256": "968af66d8624a097fb3523e721e6f8cbdd13eb856edccd0dd32a138cae46ac5e"
+      "bytes": 5098,
+      "sha256": "55d1110c7ea97f85259c33bca7a341d19fb09452507d42d3cc0da6db62a389c0"
     },
     {
       "path": "docs/getting-started.md",
@@ -998,8 +998,8 @@
     },
     {
       "path": "port-z8/PORT-STATUS.md",
-      "bytes": 5235,
-      "sha256": "2a1462146e4a9e55a3d640b8f8c2d9575fcb27705350f23ffeec2b445e153f7d"
+      "bytes": 6412,
+      "sha256": "fbcc08b7ee3921ab4db6a8978bd581c2f31769e3c1df84a379cca2a12db656be"
     },
     {
       "path": "port-z8/addrmap.py",

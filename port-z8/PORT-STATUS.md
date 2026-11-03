@@ -8,6 +8,21 @@
 `FENESTRA_QEMU_STATE`、`FENESTRA_PYTHON` 和 `FENESTRA_QEMU_LOCK`
 覆盖相应位置。这些实验辅助脚本不会随源码附带固件、介质、工具链或许可证。
 
+## 发布检查（2026-11-03）
+
+本次分为协议/构建、软件回环脚本、文档三批发布。恢复了构建记录中缺失的
+`src/platform/z8_c311/usb_debug.c`：其 SHA-256 为
+`8814c38f9c3a1946a14466db9c3a6f3e1b43060140cb6da55040b535cab0160f`，
+与既有 INFO 构建收据完全一致。agent C 源码仅统一了行末格式；没有放宽白名单。
+
+63 项源码单元测试通过，跳过 3 项。另使用现有候选 MAIN
+`3e35e9583dcf1c3952c9e2b7df80dbdf378c19c713b6085997255cf0be2af381`
+和 agent `cec8c05cdafbc4b56cbe6737b8a620bfea7d3b4e8be5715c362ed1b47aadcf9f`
+重跑稀疏文件映射上的 INFO 回环：8 KiB 共享池、仅 INFO 能力、原始 shell 与
+多余参数拒绝、agent 自身拒绝执行请求、错误 agent 哈希拒绝及撤销均通过。
+这不是重新构建候选 MAIN，也不是整机启动、真实 USB/PTP、原厂 Linux 驱动或
+缓存一致性验收。以下菜单/启动结果仍保留原先日期与证据范围。
+
 ## 结果（2026-10-30）
 
 正式构建 `build/z8-core/z8-core.main`：SHA `9fc5566b8105b866f68ed2b8a01b6a607d607c93b4ac2c48d59931bdcfccf652`，核心 255,528 B，放在零区 `0x401a0000` 起。构建时"还原补丁后等于原 MAIN"的校验通过。
@@ -53,8 +68,8 @@
 
 ## 和 Z9 版的差异
 
-- 去掉了 USB Linux 桥（`usb_debug.c` 换成空桩，PTP 不再声明此能力）：所需共享内存窗口在 Z8 上未确认。
-- 共享代码只改一处：`src/native_font.c` 的语言数上限 32→36。
+- C3.11 的 Linux 桥使用原厂分配器和回调。只开放无参数 INFO，启动前校验 agent 的 SHA-256。已在文件支持的 8 KiB 映射上运行候选 MAIN 的桥函数和 AArch64 agent，核对请求、应答、白名单及撤销。USB/PTP 传输、原厂 Linux 驱动和实机缓存一致性待验证。
+- 早期菜单移植的共享代码改动：`src/native_font.c` 的语言数上限 32→36。
 
 | 项 | Z9 C5.32 | Z8 C3.11 |
 |---|---|---|

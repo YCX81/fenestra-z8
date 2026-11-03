@@ -231,6 +231,8 @@ def patch_sites():
 
 
 if __name__ == '__main__':
+    if (ROOT/'src/platform/z8_c311').exists():
+        sys.exit('Initial port generator only. Existing Z8 sources must be maintained in place.')
     gen_platform()
     gen_build()
     patch_profile()

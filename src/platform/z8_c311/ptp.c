@@ -6,7 +6,7 @@
 #include "fenestra_native_linux.h"
 #include "z8_debug_identity.h"
 #define FN(a,t) ((t)(uintptr_t)(a))
-#define CAPS ((1u<<(FX_PTP_STATUS-1u))|(1u<<(FX_PTP_ECHO-1u))|(1u<<(FX_PTP_IDENTITY-1u))|(1u<<(FX_PTP_RTOS_MONITOR-1u)))
+#define CAPS ((1u<<(FX_PTP_STATUS-1u))|(1u<<(FX_PTP_ECHO-1u))|(1u<<(FX_PTP_IDENTITY-1u))|(1u<<(FX_PTP_RTOS_MONITOR-1u))|(1u<<(FX_PTP_LINUX_BRIDGE-1u)))
 static const FxPtpIdentity identity={311u,CAPS,3u|FX_PTP_FLAG_CONTROL,"Nikon Z8","C 3.11",
     fx_z8_debug_application,fx_z8_debug_application,fx_z8_debug_build};
 extern const FxNativePtpDescriptor *fx_z8_ptp_original_lookup(uint32_t);
@@ -33,7 +33,8 @@ static uint32_t backend(void *context,uint16_t op,const uint8_t *in,uint32_t byt
     (void)context;
     if(op==FX_PTP_ECHO) {memcpy(out,in,bytes);*count=bytes;return FX_PTP_OK;}
     if(op==FX_PTP_RTOS_MONITOR)return fx_rtos_debug(in,bytes,out,count);
-        if(op==FX_PTP_STATUS && !bytes) {
+    if(op==FX_PTP_LINUX_BRIDGE)return fx_linux_request(in,bytes,out,count);
+    if(op==FX_PTP_STATUS && !bytes) {
         memset(out,0,32u);fx_ptp_put32(out,311u);
         fx_ptp_put32(out+4,(uint32_t)fx_z8_menu_ptp_active());fx_ptp_put32(out+8,CAPS);
         *count=32u;return FX_PTP_OK;

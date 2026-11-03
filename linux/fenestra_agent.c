@@ -141,13 +141,20 @@ static int range_ok(uint64_t address,uint32_t n) { return n && n<=LIMIT-32 && ad
 static uint32_t dispatch(const uint8_t *in,uint32_t bytes,uint8_t out[LIMIT]) {
     memset(out,0,LIMIT);uint32_t op=bytes>=4?get32(in):0,n=8;int e=0;
     put32(out+4,op);if(bytes<4){e=EINVAL;goto done;}
+#ifdef FX_Z8_INFO_ONLY
+    if(op!=INFO){e=EACCES;goto done;}
+#endif
     in+=4;bytes-=4;
     if(op==INFO) {
         if(bytes){e=EINVAL;goto done;}
         memcpy(out+8,"FXL1",4);put32(out+12,1);put32(out+16,(uint32_t)getpid());
         put32(out+20,(uint32_t)getuid());put32(out+24,(uint32_t)getgid());
+#ifdef FX_Z8_INFO_ONLY
+        put32(out+40,1u); /* INFO only. No job, file or stream slots. */
+#else
         put32(out+28,JOBS);put32(out+32,FILES);put32(out+36,RING);
         put32(out+40,0x7ffffu);put32(out+44,0); /* privileged; Flash prevention unverified */
+#endif
         if(!getcwd((char *)out+48,LIMIT-48)){e=errno;goto done;}
         n=48u+(uint32_t)strlen((char *)out+48)+1u;
     } else if(op==EXEC_ARGV || op==SHELL_OPEN) {

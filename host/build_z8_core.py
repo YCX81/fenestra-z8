@@ -19,7 +19,7 @@ from native_ui_dispatch_sites import call as ui_call,sites as ui_sites,verify_or
 from native_font_sites import sites as font_sites,verify_original as verify_font
 HOOKS.update(ui_sites('z8-c311'));HOOKS.update(font_sites('z8-c311'))
 
-def build(firmware,output):
+def build(firmware,output,agent_cc='aarch64-linux-gnu-gcc'):
     profile,original=load('z8-c311',firmware);out=Path(output).resolve()
     verify_ui('z8-c311',original);verify_font('z8-c311',original)
     if not out.is_relative_to(ROOT/'build') or out.exists():raise ValueError('new owned evidence output required')
@@ -36,6 +36,14 @@ def build(firmware,output):
     tools=[shutil.which(n) for n in ('clang','ld.lld','llvm-objcopy','llvm-nm')]
     if not all(tools):raise RuntimeError('LLVM tools required')
     cc,ld,objcopy,nm=tools
+    agent=out/'fenestra-agent-z8-info'
+    subprocess.run([agent_cc,'-std=c11','-Os','-Wall','-Wextra','-Werror','-static','-s',
+                    '-DFX_Z8_INFO_ONLY=1',str(ROOT/'linux/fenestra_agent.c'),'-o',str(agent)],check=True)
+    agent_bytes=agent.read_bytes()
+    if agent_bytes[:6]!=b'\x7fELF\x02\x01' or agent_bytes[18:20]!=b'\xb7\0':
+        raise ValueError('Z8 INFO agent must be a little-endian AArch64 ELF')
+    agent_hash=hashlib.sha256(agent_bytes).hexdigest()
+    (out/'z8_agent_pin.h').write_text(f'#define FX_Z8_AGENT_SHA256 "{agent_hash}"\n')
     names=['src/panic.c','src/native_panic.c','src/scene.c','src/native_scene.c','src/native_display.c','src/native_vg_call.S','src/platform/z8_c311/display_profile.c','src/module_bus.c','src/native_resources.c','src/worker_wait.c','src/capacity.c','src/slot_pool.c','src/machine.c','src/hooks.c','src/native_hook_pages.c','src/module_manager.c','src/native_modules.c','src/platform.c','src/binding_store.c','src/records.c','src/video_configuration.c','src/capture_profile.c','src/native_call.c','src/native_call_a64.S','src/platform_native.c','src/native_editor.c','src/native_menu.c','src/native_ui.c','src/native_ui_routes.c','src/native_ui_pager.c','src/native_ui_editor.c','src/ui_document.c','src/native_ui_reader.c','src/text_page.c','src/native_visibility.c','src/native_title.c','src/native_ui_callbacks.c','src/native_text.c','src/native_font.c','src/text_regions.c','src/native_apps.c','src/text_fit.c','src/services.c','src/memory.c',
            'src/sha256.c','src/module.c','src/loader.c','src/card.c','src/exec.c','src/module_load_buffer.c','src/accounting.c','src/file_card.c','src/runtime.c']
     names+=['src/platform/z8_c311/'+s for s in ('menu.c','services.c','task.c','card.c','module_stage.c',
@@ -45,8 +53,8 @@ def build(firmware,output):
     names+=['src/ptp.c','src/ptp_device_info.c','src/native_ptp.c',
             'src/platform/z8_c311/ptp.c','src/platform/z8_c311/ptp_trampoline.S',
             'src/native_rtos.c','src/native_rtos_monitor.c','src/platform/z8_c311/rtos.c','src/platform/z8_c311/rtos_printf.S',
-            'src/transfers.c','src/platform/z8_c311/usb_debug.c']
-    identity_inputs=sorted(set([p.relative_to(ROOT).as_posix() for p in displaced_inputs]+['host/displaced.py']+names+['host/build_z8_core.py','host/platform_profiles.py',
+            'src/native_linux.c','src/transfers.c','src/platform/z8_c311/usb_debug.c']
+    identity_inputs=sorted(set([p.relative_to(ROOT).as_posix() for p in displaced_inputs]+['host/displaced.py','linux/fenestra_agent.c']+names+['host/build_z8_core.py','host/platform_profiles.py',
         'host/compiler_dependencies.py','src/native_rtos_printf.inc','src/native_translation_impl.h','emulation/z8_core.ld','emulation/native_ui_dispatch_sites.py','emulation/native_font_sites.py']+
         [p.relative_to(ROOT).as_posix() for p in (ROOT/'include').rglob('*.h')]+
         [p.relative_to(ROOT).as_posix() for p in (ROOT/'src/platform/z8_c311').glob('*.h')]))
@@ -74,7 +82,7 @@ def build(firmware,output):
         flags=['--target=aarch64-none-elf','-std=c11',optimization,'-Wall','-Wextra','-Werror','-Wconversion','-Wshadow',
                '-ffreestanding','-fno-builtin','-mgeneral-regs-only','-mstrict-align','-fno-stack-protector',
                '-fno-unwind-tables','-fno-asynchronous-unwind-tables','-ffunction-sections','-fdata-sections',
-               '-DFX_FREESTANDING=1','-DFX_PLATFORM_PROFILE=1','-DFX_NATIVE_SCENE=1','-DFX_NATIVE_TASKS=1','-DFX_NATIVE_UI_INPUT=1','-I','include','-I',str(out/'bindings'),'-I',str(out)]
+               '-DFX_Z8_INFO_ONLY=1','-DFX_FREESTANDING=1','-DFX_PLATFORM_PROFILE=1','-DFX_NATIVE_SCENE=1','-DFX_NATIVE_TASKS=1','-DFX_NATIVE_UI_INPUT=1','-I','include','-I',str(out/'bindings'),'-I',str(out)]
         if name.endswith('.S'):flags=['--target=aarch64-none-elf','-I','include','-I',str(out)]
         dep=obj.with_suffix('.d')
         command=[cc,*flags,'-MMD','-MF',str(dep),'-MT','fx_core','-c',name,'-o',str(obj)]
@@ -119,7 +127,7 @@ def build(firmware,output):
         activated=False,qemu_qualified=False,flashable=False,
         native_namespace=verify_page_namespace(profile,original),navigation_hook_version=1,
         ui_dispatch_hook_version=1,font_scope_hook_version=2,
-        ptp_hook_version=1,rtos_hook_version=1,ptp_capabilities=355,debug_build_identity=debug_identity.hex(),
+        ptp_hook_version=1,rtos_hook_version=1,ptp_capabilities=355,linux_agent_sha256=agent_hash,debug_build_identity=debug_identity.hex(),
         debug_identity_scheme=2,debug_identity_configuration=debug_configuration,
         debug_identity_header=identity_header,debug_identity_rebuilt=identity_rebuilt,
         module_load_buffer_layout=list(struct.unpack_from('<15I',extension,symbols['fx_native_load_buffer_metadata']-CODE)),
@@ -137,6 +145,7 @@ def build(firmware,output):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--firmware',required=True);p.add_argument('--output-dir',required=True)
-    a=p.parse_args();r=build(a.firmware,a.output_dir);print(json.dumps({k:r[k] for k in ('target','code_bytes','candidate_sha256','boot_prefix_unchanged','flashable')}))
+    p.add_argument('--agent-cc',default='aarch64-linux-gnu-gcc')
+    a=p.parse_args();r=build(a.firmware,a.output_dir,a.agent_cc);print(json.dumps({k:r[k] for k in ('target','code_bytes','candidate_sha256','boot_prefix_unchanged','flashable')}))
 
 if __name__=='__main__':main()

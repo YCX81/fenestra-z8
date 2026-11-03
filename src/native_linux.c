@@ -6,6 +6,9 @@
 #include "fenestra_native_rtos.h"
 #include "fenestra_ptp.h"
 #include "fenestra_memory.h"
+#ifdef FX_Z8_INFO_ONLY
+#include "z8_agent_pin.h"
+#endif
 #define POOL (fx_native_linux_profile.pool)
 #define POOL_BYTES (fx_native_linux_profile.pool_bytes)
 #define SHARED 8192u
@@ -44,14 +47,32 @@ static uint32_t bootstrap(FxLinuxBridge *s,const uint8_t *in,uint32_t bytes,char
          * stage2 just decodes. Both always run in the foreground. */
         p=append(p,"[ ! -L ");p=append(p,directory);p=append(p," ] && cd ");p=append(p,directory);
         p=append(p," && ");
+#ifdef FX_Z8_INFO_ONLY
+        /* Bound temporary files even if a client sends extra or compressed data. */
+        p=append(p,"(ulimit -f 4096 && ");
+#endif
         if(stage==1u) {
             p=append(p,"[ ! -L agent.b64 ] && printf '%s' '");
             memcpy(p,in,bytes);p+=bytes;p=append(p,"' >> agent.b64");
         } else if(stage==2u) p=append(p,"[ ! -L agent ] && (base64 -d agent.b64 | gzip -dc > agent)");
         else {
-            p=append(p,"chmod 700 agent && ./agent ");p=hex(p,(uintptr_t)s->shared,16);
-            *p++=' ';p=hex(p,s->nonce,16);p=append(p," ");p=append(p,fx_native_linux_profile.bootstrap_token);p=append(p," </dev/null >/dev/null 2>&1 &");
+#ifdef FX_Z8_INFO_ONLY
+            /* Only the INFO-only ELF built with this core may execute. */
+            p=append(p,"[ ! -L agent ] && digest=$(/usr/bin/openssl dgst -sha256 -r agent) && "
+                       "[ \"${digest%% *}\" = " FX_Z8_AGENT_SHA256 " ] && chmod 700 agent && (./agent ");
+#else
+            p=append(p,"chmod 700 agent && ./agent ");
+#endif
+            p=hex(p,(uintptr_t)s->shared,16);
+            *p++=' ';p=hex(p,s->nonce,16);p=append(p," ");p=append(p,fx_native_linux_profile.bootstrap_token);
+            p=append(p," </dev/null >/dev/null 2>&1 &");
+#ifdef FX_Z8_INFO_ONLY
+            p=append(p,")");
+#endif
         }
+#ifdef FX_Z8_INFO_ONLY
+        p=append(p,")");
+#endif
     }
     p=append(p,"\n}; r=$?; printf \"FXB");p=hex(p,s->nonce,16);p=hex(p,serial,8);
     p=append(p,"=%d\\n\" \"$r\"");
@@ -169,6 +190,9 @@ uint32_t fx_linux_ready(void) {
 uint32_t fx_linux_request(const uint8_t *in,uint32_t bytes,uint8_t *out,uint32_t *n) {
     FxLinuxBridge *s=fx_native_linux_profile.state();if(!s || bytes<4u)return FX_PTP_ARGUMENT;
     uint32_t op=fx_ptp_get32(in);in+=4u;bytes-=4u;
+#ifdef FX_Z8_INFO_ONLY
+    if(op==2u || (op==4u && (bytes!=4u || fx_ptp_get32(in)!=1u)))return FX_PTP_UNSUPPORTED;
+#endif
     memset(out,0,FX_PTP_PAYLOAD);
     if(op==0u) {
         if(bytes)return FX_PTP_ARGUMENT;

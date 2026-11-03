@@ -153,8 +153,8 @@
     },
     {
       "path": "host/build_z8_core.py",
-      "bytes": 12657,
-      "sha256": "a116468d8b07301519e06f17df74d0e34e19409b1e790acc0aafa1d799f3b960"
+      "bytes": 13430,
+      "sha256": "242d7fc17bbee887c9cfae59f717b5ca821f5b0284f7a64cd75fd8482b22775c"
     },
     {
       "path": "host/build_z9_core.py",
@@ -243,8 +243,8 @@
     },
     {
       "path": "host/ptp_contract.py",
-      "bytes": 1576,
-      "sha256": "48e1e44124fe116ef2830694706ee2f74881851e8c4ab8c44c1e6c2ad705fd7d"
+      "bytes": 1639,
+      "sha256": "4b5f6e61f479451a493883054bc8a171230f8c91a890d1ded8c01ea2efe3c37a"
     },
     {
       "path": "host/ptp_event_trace.py",
@@ -973,8 +973,8 @@
     },
     {
       "path": "linux/fenestra_agent.c",
-      "bytes": 18543,
-      "sha256": "124343cc829d21131b7ff965c47d7412a3232bb977f5930f9820b2f07a5eaabc"
+      "bytes": 18393,
+      "sha256": "ccc0a70382d25842e08446afcdffe40b587f147ddac26817c5ee4daae4317e12"
     },
     {
       "path": "modules/demo/module.c",
@@ -1088,8 +1088,8 @@
     },
     {
       "path": "port-z8/gen_z8.py",
-      "bytes": 12588,
-      "sha256": "7620073128d9e2ad867b615e27074cc52fcfb4eb520195326a80452bcec5d893"
+      "bytes": 12733,
+      "sha256": "95fb8e47410534dcd694ad5baeb7732db48cba25bf863a9d1d74955357a7e015"
     },
     {
       "path": "port-z8/lowsim.py",
@@ -1398,8 +1398,8 @@
     },
     {
       "path": "src/native_linux.c",
-      "bytes": 15599,
-      "sha256": "522e9245e6747ff910495a6209c676563a084d79678c54d3518d6bf36676df7b"
+      "bytes": 16388,
+      "sha256": "3f21fa7e85328ec0891ca84ed493627bc850c7a3803f1aaca850d927964d14b8"
     },
     {
       "path": "src/native_mapping.inc",
@@ -1613,8 +1613,8 @@
     },
     {
       "path": "src/platform/z8_c311/ptp.c",
-      "bytes": 2944,
-      "sha256": "5e9e0b121a8045c07116bfb16c2434f461d0383967d9d86032e47613861256b3"
+      "bytes": 3047,
+      "sha256": "1f2f151fe855bff3c1dcbd673637ab5c2a675b6850fcd5a93477f8e8e4ca5235"
     },
     {
       "path": "src/platform/z8_c311/ptp.h",
@@ -1673,8 +1673,8 @@
     },
     {
       "path": "src/platform/z8_c311/usb_debug.c",
-      "bytes": 666,
-      "sha256": "a6cbd30beabeb994c0326d85289c07b79eabdc17f2b8dfc281eed1b1d820dda5"
+      "bytes": 1107,
+      "sha256": "8814c38f9c3a1946a14466db9c3a6f3e1b43060140cb6da55040b535cab0160f"
     },
     {
       "path": "src/platform/z8_c311/user_call.S",

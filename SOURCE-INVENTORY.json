@@ -43,8 +43,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7745,
-      "sha256": "4828bef07a173e3e26dfd22746efbee689ba846ec815fc2bf624b2f93a78a133"
+      "bytes": 7864,
+      "sha256": "468a64456930b73045a0688764c8a270f9c743cd28e50e235f20b89e9a959211"
     },
     {
       "path": "docs/api-reference.md",
@@ -1275,6 +1275,11 @@
       "path": "requirements.txt",
       "bytes": 51,
       "sha256": "a8906f576ad3c8a8e4cc1c1054905cc39cb2bc7ee84a879dc2fd2e681ae4745e"
+    },
+    {
+      "path": "research/z8-live/README.md",
+      "bytes": 2446,
+      "sha256": "420c0ca8f18ad5dc2a7d1cfe27eb80bb16639ad1b68742a3d27dad4cefed0a87"
     },
     {
       "path": "research/z8-live/audio-probe/README.md",
@@ -28555,6 +28560,11 @@
       "path": "research/z8-live/build-tools/w5/test_idr.c",
       "bytes": 2078,
       "sha256": "081fb857eadc829aa0d36ba8d0ed0917b30d933067dd1288006ba732f05bb2a0"
+    },
+    {
+      "path": "research/z8-live/export-manifest.json",
+      "bytes": 2225096,
+      "sha256": "82f2fd0850abe25cfb523c1ce01300a26a349e31d8857f7d94946d58ad9dd2aa"
     },
     {
       "path": "src/accounting.c",

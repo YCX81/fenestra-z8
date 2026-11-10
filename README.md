@@ -1,5 +1,7 @@
 # Fenestra
 
+[Z8 Live development checkpoint (2026-11-11)](research/z8-live/README.md) — source archive on this progress branch.
+
 This is YCX81's emulation-only Z8 C3.11 adaptation of
 [WonderLantern/Fenestra](https://github.com/WonderLantern/Fenestra), based on
 `67774849c9dd97cc7127066190528e245ee25650`. Its independent distribution and

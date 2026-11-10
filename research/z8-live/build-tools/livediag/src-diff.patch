@@ -1,0 +1,200 @@
+diff -ru src-w5/capture/live_stream.c src-diag/capture/live_stream.c
+--- src-w5/capture/live_stream.c	2026-11-05 11:00:59.511404400 +0800
++++ src-diag/capture/live_stream.c	2026-11-05 18:13:21.438570121 +0800
+@@ -78,6 +78,7 @@
+ }
+ void live_stream_step(struct la_capture *c,struct live_stream *s,uint64_t now,int eligible,uint64_t (*clock_us)(void)) {
+  uint32_t epoch=LOAD(&c->cancel_epoch),job=LOAD(&s->job);
++ s->diag.magic=0x3147444cu;s->diag.version=1;s->diag.steps++;if(!eligible)s->diag.ineligible++;
+  if(!eligible || !LOAD(&c->requested) || epoch!=c->worker_epoch) {
+   if(!eligible && epoch==c->worker_epoch)epoch=__atomic_add_fetch(&c->cancel_epoch,1,__ATOMIC_ACQ_REL);
+   /* Mux reads frozen storage: cancellation first, release after its ACK. */
+@@ -101,22 +102,41 @@
+  if(seq && seq!=c->last_generation && stamp<=now) {
+   if(c->last_generation && seq>c->last_generation+2){uint64_t n=(seq-c->last_generation)/2-1;c->dropped+=n;s->backlog_dropped+=n;}
+   c->last_generation=seq;
+-  if(now-stamp>LA_MAX_GAP_US){c->dropped++;s->copy_dropped++;goto finish;}
+-  if(stamp<=s->last_pts || (s->last_pts && stamp-s->last_pts<LA_SAMPLE_INTERVAL_US)){c->dropped++;goto finish;}
++  struct live_diag *D=&s->diag;D->new_seq++;
++  D->last_age_us=now-stamp;if(D->last_age_us>D->max_age_us)D->max_age_us=D->last_age_us;
++  if(now-stamp>LA_MAX_GAP_US){D->stale++;c->dropped++;s->copy_dropped++;goto finish;}
++  if(stamp<=s->last_pts || (s->last_pts && stamp-s->last_pts<LA_SAMPLE_INTERVAL_US)){D->interval++;c->dropped++;goto finish;}
+   struct la_source source={0};
+-  if(!c->ops.lease_begin(c->ops.context,seq/2,stamp,&source)){c->dropped++;s->copy_dropped++;goto finish;}
++  uint64_t t0=clock_us();
++  int began=c->ops.lease_begin(c->ops.context,seq/2,stamp,&source);
++  uint64_t t1=clock_us();D->last_lease_us=t1-t0;if(D->last_lease_us>D->max_lease_us)D->max_lease_us=D->last_lease_us;
++  if(!began){D->lease_fail++;c->dropped++;s->copy_dropped++;goto finish;}
++  D->y=(uint64_t)(uintptr_t)source.y;D->uv=(uint64_t)(uintptr_t)source.uv;D->width=source.width;D->height=source.height;
++  D->y_stride=source.y_stride;D->uv_stride=source.uv_stride;
+   if(!c->descriptor && !allocate(c,s,source.width,source.height)){
+    c->ops.lease_end(c->ops.context,&source);c->reason=LA_ALLOC;STORE(&c->phase,LA_FAILED);return;}
+-  if(source.width!=s->width||source.height!=s->height){s->geometry_changes++;la_cancel(c);c->ops.lease_end(c->ops.context,&source);return;}
+-  int valid=c->ops.lease_valid(c->ops.context,&source) && live_stream_convert(s->i420,&source);
+-  valid=valid && c->ops.lease_valid(c->ops.context,&source) && LOAD(&c->irq_seq)==seq && !la_cancelled(c);
++  if(source.width!=s->width||source.height!=s->height){D->geometry++;s->geometry_changes++;la_cancel(c);c->ops.lease_end(c->ops.context,&source);return;}
++  int valid=c->ops.lease_valid(c->ops.context,&source);
++  if(!valid)D->valid1_fail++;
++  else{
++   uint64_t t2=clock_us();valid=live_stream_convert(s->i420,&source);uint64_t t3=clock_us();
++   D->last_convert_us=t3-t2;if(D->last_convert_us>D->max_convert_us)D->max_convert_us=D->last_convert_us;
++   D->sum_convert_us+=t3-t2;D->n_convert++;
++   uint64_t after=LOAD(&c->irq_seq);D->last_frames_during_copy=after>seq?(after-seq)/2:0;
++   if(D->last_frames_during_copy>D->max_frames_during_copy)D->max_frames_during_copy=D->last_frames_during_copy;
++   if(!valid)D->convert_fail++;
++   else if(!c->ops.lease_valid(c->ops.context,&source)){valid=0;D->valid2_fail++;}
++   else if(LOAD(&c->irq_seq)!=seq){valid=0;D->seq_changed++;}
++   else if(la_cancelled(c)){valid=0;D->cancelled++;}
++  }
+   c->ops.lease_end(c->ops.context,&source);
+   if(!valid){c->dropped++;s->copy_dropped++;goto finish;}
++  D->ok++;
+   c->copied++;uint64_t begin=clock_us();const uint8_t *au;size_t n;unsigned idr;
+   int rc=live_encoder_frame_timed(&s->encoder,s->i420,stamp,&s->last_idr_us,s->bitrate,s->idr_interval_us,&au,&n,&idr);
+   uint64_t elapsed=clock_us()-begin;s->encode_last_us=elapsed;
+-  if(rc==LIVE_ENCODER_BUSY){c->dropped++;s->copy_dropped++;goto finish;}
+- if(rc){s->error=-rc;STORE(&c->phase,LA_FAILED);return;}
++  if(rc==LIVE_ENCODER_BUSY){s->diag.busy++;c->dropped++;s->copy_dropped++;goto finish;}
++ if(rc){s->diag.enc_error++;s->error=-rc;STORE(&c->phase,LA_FAILED);return;}
+   s->encoded++;s->encode_total_us+=elapsed;if(elapsed>s->encode_max_us)s->encode_max_us=elapsed;
+   s->encode_avg_us=s->encode_total_us/s->encoded;
+   if(n>UINT32_MAX||au_ring_push(&s->ring,au,n,stamp,idr)){s->error=LA_OVERFLOW;STORE(&c->phase,LA_FAILED);return;}
+diff -ru src-w5/capture/live_stream.h src-diag/capture/live_stream.h
+--- src-w5/capture/live_stream.h	2026-11-04 22:49:00.288273261 +0800
++++ src-diag/capture/live_stream.h	2026-11-05 18:13:21.434570121 +0800
+@@ -1,48 +1,60 @@
+-#ifndef LIVE_STREAM_H
+-#define LIVE_STREAM_H
+-#include "live_capture.h"
+-#include "../codec/au_ring.h"
+-#include "../codec/live_transaction.h"
+-#ifndef LIVE_BITRATE
+-#define LIVE_BITRATE 8000000u
+-#endif
+-#ifndef LIVE_IDR_US
+-#define LIVE_IDR_US 500000u
+-#endif
+-#define LIVE_BITSTREAM_BYTES (5u*1024u*1024u)
+-/* Small I420 preview kept alongside the bitstream for in-camera playback
+- * (PREV.LVP, see codec/preview_writer.h): 15 fps, 64 slots = 4.3 s, which
+- * covers the 3 s clip window. Frozen with the clip: no pushes during mux. */
+-#define LIVE_PREVIEW_SLOTS 64u
+-#define LIVE_PREVIEW_W 320u
+-#define LIVE_PREVIEW_H 212u
+-#define LIVE_PREVIEW_FRAME (LIVE_PREVIEW_W*LIVE_PREVIEW_H*3u/2u)
+-#define LIVE_PREVIEW_STEP_US 66667u
+-/* Latest-frame mailbox has capacity one: there is never an unbounded raw queue.
+- * Frozen AUs own a distinct byte arena until the mux consumer acknowledges. */
+-struct live_stream {
+- struct au_ring ring;
+- live_encoder encoder;
+- live_input_au frozen[LIVE_MAX_FRAMES];
+- live_transaction_workspace *work;
+- uint8_t *i420,*frozen_bytes,*preview,*preview_scratch;
+- uint64_t preview_pts[LIVE_PREVIEW_SLOTS],preview_last;uint32_t preview_head,preview_count;
+- uint32_t width,height,allocation_requested,bitrate,idr_interval_us;
+- uint32_t job,frozen_count,frozen_size,last_duration_us;
+- uint64_t last_idr_us,last_pts,clip_start,clip_press,clip_end;
+- uint64_t encoded,encode_total_us,encode_max_us,encode_last_us,first_pts;
+- uint64_t encode_avg_us,effective_fps_milli,ring_fill,ring_peak;
+- uint64_t backlog_dropped,copy_dropped,ignored_presses,low_fps;
+- uint64_t snapshot_encoded,mux_start_encoded,mux_end_encoded;
+- uint64_t snapshot_first,snapshot_last,geometry_changes;
+- uint32_t error,cleanup_failed,mux_started,mux_error;
+- void *mux_stack_raw;uint8_t mux_scope[64];
+-};
+-void live_stream_init(struct live_stream *);
+-void live_stream_step(struct la_capture *,struct live_stream *,uint64_t now,
+- int eligible,uint64_t (*clock_us)(void));
+-int live_stream_convert(uint8_t *,const struct la_source *);
+-/* PREV.LVP frame source: frame i shows the newest preview at or before
+- * clip_start + i*LIVE_PREVIEW_STEP_US (the oldest one before the window). */
+-int live_stream_preview_frame(void *stream,uint32_t index,void *i420,size_t bytes);
+-#endif
++#ifndef LIVE_STREAM_H
++#define LIVE_STREAM_H
++#include "live_capture.h"
++#include "../codec/au_ring.h"
++#include "../codec/live_transaction.h"
++#ifndef LIVE_BITRATE
++#define LIVE_BITRATE 8000000u
++#endif
++#ifndef LIVE_IDR_US
++#define LIVE_IDR_US 500000u
++#endif
++#define LIVE_BITSTREAM_BYTES (5u*1024u*1024u)
++/* Small I420 preview kept alongside the bitstream for in-camera playback
++ * (PREV.LVP, see codec/preview_writer.h): 15 fps, 64 slots = 4.3 s, which
++ * covers the 3 s clip window. Frozen with the clip: no pushes during mux. */
++#define LIVE_PREVIEW_SLOTS 64u
++#define LIVE_PREVIEW_W 320u
++#define LIVE_PREVIEW_H 212u
++#define LIVE_PREVIEW_FRAME (LIVE_PREVIEW_W*LIVE_PREVIEW_H*3u/2u)
++#define LIVE_PREVIEW_STEP_US 66667u
++/* Latest-frame mailbox has capacity one: there is never an unbounded raw queue.
++ * Frozen AUs own a distinct byte arena until the mux consumer acknowledges. */
++struct live_diag {
++ uint32_t magic,version;
++ uint64_t steps,ineligible,new_seq,stale,interval,lease_fail,geometry,valid1_fail,convert_fail,
++  valid2_fail,seq_changed,cancelled,busy,ok,enc_error;
++ uint64_t last_age_us,max_age_us,last_lease_us,max_lease_us,last_convert_us,max_convert_us,sum_convert_us,n_convert;
++ uint64_t last_frames_during_copy,max_frames_during_copy;
++ uint64_t y,uv;uint32_t width,height,y_stride,uv_stride;
++ uint64_t loops,last_loop_us,max_loop_us,last_ui_us,max_ui_us,last_step_us,max_step_us,last_audio_us,max_audio_us,
++  last_sleep_us,max_sleep_us,loop_t0;
++ uint64_t snap_y_after,snap_uv_after;
++};
++struct live_stream {
++ struct au_ring ring;
++ live_encoder encoder;
++ live_input_au frozen[LIVE_MAX_FRAMES];
++ live_transaction_workspace *work;
++ uint8_t *i420,*frozen_bytes,*preview,*preview_scratch;
++ uint64_t preview_pts[LIVE_PREVIEW_SLOTS],preview_last;uint32_t preview_head,preview_count;
++ uint32_t width,height,allocation_requested,bitrate,idr_interval_us;
++ uint32_t job,frozen_count,frozen_size,last_duration_us;
++ uint64_t last_idr_us,last_pts,clip_start,clip_press,clip_end;
++ uint64_t encoded,encode_total_us,encode_max_us,encode_last_us,first_pts;
++ uint64_t encode_avg_us,effective_fps_milli,ring_fill,ring_peak;
++ uint64_t backlog_dropped,copy_dropped,ignored_presses,low_fps;
++ uint64_t snapshot_encoded,mux_start_encoded,mux_end_encoded;
++ uint64_t snapshot_first,snapshot_last,geometry_changes;
++ uint32_t error,cleanup_failed,mux_started,mux_error;
++ void *mux_stack_raw;uint8_t mux_scope[64];
++ struct live_diag diag;
++};
++void live_stream_init(struct live_stream *);
++void live_stream_step(struct la_capture *,struct live_stream *,uint64_t now,
++ int eligible,uint64_t (*clock_us)(void));
++int live_stream_convert(uint8_t *,const struct la_source *);
++/* PREV.LVP frame source: frame i shows the newest preview at or before
++ * clip_start + i*LIVE_PREVIEW_STEP_US (the oldest one before the window). */
++int live_stream_preview_frame(void *stream,uint32_t index,void *i420,size_t bytes);
++#endif
+diff -ru src-w5/runtime.c src-diag/runtime.c
+--- src-w5/runtime.c	2026-11-05 11:00:59.511404400 +0800
++++ src-diag/runtime.c	2026-11-05 18:13:21.438570121 +0800
+@@ -99,15 +99,23 @@
+ static void worker(void *arg) {
+  struct live_runtime *r=arg;STORE(&r->task_started,1);
+  for(;;) {
++  struct live_diag *D=&r->stream.diag;uint64_t w0=now_us();
++  if(D->loop_t0){D->last_loop_us=w0-D->loop_t0;if(D->last_loop_us>D->max_loop_us)D->max_loop_us=D->last_loop_us;}
++  D->loop_t0=w0;D->loops++;
+   live_ui_poll();r->poll_count++;
++  uint64_t w1=now_us();D->last_ui_us=w1-w0;if(D->last_ui_us>D->max_ui_us)D->max_ui_us=D->last_ui_us;
+   /* PHOTO is the only implemented mode gate; other release modes remain
+    * unvalidated. Keep the worker outside the native shooting path. */
+   int photo=*(volatile uint32_t *)(uintptr_t)UINT64_C(0xa03bd062c)==0;
++  uint64_t w2=now_us();
+   live_stream_step(&r->capture,&r->stream,now_us(),photo && !LOAD(&r->shutdown),now_us);
++  uint64_t w3=now_us();D->last_step_us=w3-w2;if(D->last_step_us>D->max_step_us)D->max_step_us=D->last_step_us;
+   uint64_t t=now_us(),lv=LOAD(&r->capture.irq_timestamp);
+   int lv_on=lv && t>=lv && t-lv<UINT64_C(1500000);
+   live_audio_step(r,photo && !LOAD(&r->shutdown) && LOAD(&r->requested) && (lv_on || LOAD(&r->stream.job)),t);
++  uint64_t w4=now_us();D->last_audio_us=w4-t;if(D->last_audio_us>D->max_audio_us)D->max_audio_us=D->last_audio_us;
+   FN(0x40187b00,int32_t (*)(uint32_t))(5);
++  uint64_t w5=now_us();D->last_sleep_us=w5-w4;if(D->last_sleep_us>D->max_sleep_us)D->max_sleep_us=D->last_sleep_us;
+  }
+ }
+ void live_runtime_boot(void) {

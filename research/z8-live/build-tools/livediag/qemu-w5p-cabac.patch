@@ -1,0 +1,12 @@
+--- a/hw/arm/nikon-w5p-codec.h	2026-11-06 09:46:37.243744725 +0800
++++ b/hw/arm/nikon-w5p-codec.h	2026-11-06 09:46:37.251744725 +0800
+@@ -108,6 +108,9 @@
+     p->i_bframe = 0; p->rc.i_lookahead = 0; p->b_vfr_input = 0;
+     p->b_repeat_headers = 0; p->b_annexb = 1; p->b_aud = 1;
+     p->i_log_level = X264_LOG_ERROR;
++    /* Real Wave5 AVC output is CABAC; ultrafast turns it off and Live's
++     * SPS/PPS parser rejects CAVLC streams. */
++    p->b_cabac = 1;
+     if (keyframe_period) {
+         p->i_keyint_max = keyframe_period; p->i_keyint_min = 1;
+         p->i_scenecut_threshold = 0; p->b_open_gop = 0;

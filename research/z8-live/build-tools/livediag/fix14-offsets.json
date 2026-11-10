@@ -1,0 +1,282 @@
+{
+ "capture.accepted_presses": [
+  1656,
+  8
+ ],
+ "capture.rejected_presses": [
+  1648,
+  8
+ ],
+ "capture.press_us": [
+  1680,
+  8
+ ],
+ "capture.count": [
+  1616,
+  4
+ ],
+ "capture.phase": [
+  1620,
+  4
+ ],
+ "capture.reason": [
+  1624,
+  4
+ ],
+ "capture.copied": [
+  1632,
+  8
+ ],
+ "capture.dropped": [
+  1640,
+  8
+ ],
+ "capture.irq_seq": [
+  1688,
+  8
+ ],
+ "capture.cancel_epoch": [
+  1716,
+  4
+ ],
+ "requested": [
+  1728,
+  4
+ ],
+ "task_error": [
+  1736,
+  4
+ ],
+ "card_epoch": [
+  1744,
+  4
+ ],
+ "poll_count": [
+  1752,
+  8
+ ],
+ "full_presses": [
+  1760,
+  8
+ ],
+ "writer_returns": [
+  1768,
+  8
+ ],
+ "jpeg_returns": [
+  1776,
+  8
+ ],
+ "writer_result": [
+  1796,
+  4
+ ],
+ "writer_path": [
+  1800,
+  32
+ ],
+ "last_native_path": [
+  1832,
+  32
+ ],
+ "ticket_generation": [
+  1940,
+  4
+ ],
+ "press_ticket_floor": [
+  1944,
+  4
+ ],
+ "ticket_drops": [
+  1948,
+  4
+ ],
+ "transaction_count": [
+  1952,
+  4
+ ],
+ "transaction_error": [
+  1956,
+  4
+ ],
+ "debug_ticket_path": [
+  2704,
+  32
+ ],
+ "debug_dir_path": [
+  2736,
+  128
+ ],
+ "debug_path_result": [
+  2864,
+  4
+ ],
+ "debug_fs_error": [
+  2868,
+  4
+ ],
+ "debug_dir_stage": [
+  2872,
+  4
+ ],
+ "stream.width": [
+  12632,
+  4
+ ],
+ "stream.height": [
+  12636,
+  4
+ ],
+ "stream.job": [
+  12652,
+  4
+ ],
+ "stream.frozen_count": [
+  12656,
+  4
+ ],
+ "stream.frozen_size": [
+  12660,
+  4
+ ],
+ "stream.encoded": [
+  12712,
+  8
+ ],
+ "stream.encode_avg_us": [
+  12752,
+  8
+ ],
+ "stream.encode_max_us": [
+  12728,
+  8
+ ],
+ "stream.effective_fps_milli": [
+  12760,
+  8
+ ],
+ "stream.ignored_presses": [
+  12800,
+  8
+ ],
+ "stream.error": [
+  12864,
+  4
+ ],
+ "stream.mux_error": [
+  12876,
+  4
+ ],
+ "stream.low_fps": [
+  12808,
+  8
+ ],
+ "stream.cached_lv_ok": [
+  16608,
+  8
+ ],
+ "stream.cached_lv_fail": [
+  16616,
+  8
+ ],
+ "stream.cached_work_ok": [
+  16624,
+  8
+ ],
+ "stream.cached_work_fail": [
+  16632,
+  8
+ ],
+ "stream.picked_prev": [
+  17816,
+  8
+ ],
+ "stream.picked_fallback": [
+  17824,
+  8
+ ],
+ "stream.trans_n": [
+  17668,
+  4
+ ],
+ "stream.snap_head": [
+  17664,
+  4
+ ],
+ "audio_phase": [
+  18840,
+  4
+ ],
+ "audio_error": [
+  18844,
+  4
+ ],
+ "audio_starts": [
+  18848,
+  4
+ ],
+ "audio_tracks": [
+  18852,
+  4
+ ],
+ "size": [
+  18872,
+  0
+ ],
+ "flag_req": [
+  18872,
+  4
+ ],
+ "flag_n": [
+  18876,
+  4
+ ],
+ "flag_parks": [
+  18880,
+  4
+ ],
+ "flag_restores": [
+  18884,
+  4
+ ],
+ "flag_err": [
+  18888,
+  4
+ ],
+ "last_photo": [
+  18892,
+  4
+ ],
+ "log_saved_head": [
+  18896,
+  4
+ ],
+ "log_saves": [
+  18900,
+  4
+ ],
+ "log_err": [
+  18904,
+  4
+ ],
+ "lv_channel": [
+  20472,
+  4
+ ],
+ "stream.bitrate": [
+  12644,
+  4
+ ],
+ "stream.idr_interval_us": [
+  12648,
+  4
+ ],
+ "lv_geo": [
+  20480,
+  96
+ ],
+ "lv_snap": [
+  20576,
+  32
+ ]
+}

@@ -1,0 +1,51 @@
+{
+  "pb": {
+    "width": 138,
+    "height": 44,
+    "x": 24,
+    "y": 24,
+    "dest_width": 138,
+    "dest_height": 44
+  },
+  "shoot": {
+    "width": 138,
+    "height": 44,
+    "x": 24,
+    "y": 98,
+    "dest_width": 138,
+    "dest_height": 44,
+    "center_x": 69
+  },
+  "source": "live-badge.svg",
+  "background": "transparent",
+  "targets": {
+    "pb": [],
+    "shoot": []
+  },
+  "delivery": "preview-only; C headers not updated",
+  "design": {
+    "viewbox": [
+      0,
+      0,
+      138,
+      44
+    ],
+    "cap_height": 38,
+    "stem_width": 5,
+    "outline_width": 2,
+    "ring_width": 5,
+    "symbol_text_gap": 4,
+    "vector_letter_gaps": [
+      7,
+      7,
+      7
+    ],
+    "bright_letter_gaps": [
+      7,
+      8,
+      8
+    ],
+    "width_reason": "38px symbol and caps; uncondensed lettering; stock-like spacing"
+  },
+  "raster": "4-bit-coverage"
+}

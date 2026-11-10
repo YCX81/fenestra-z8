@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="138" height="44" viewBox="0 0 138 44" preserveAspectRatio="none">
+  <title>Live Photo — Nikon-weight lettering and concentric mark</title>
+  <g id="outline" fill="#000">
+    <circle cx="22" cy="22" r="7" />
+    <circle stroke-width="9" cx="22" cy="22" r="16.5" fill="none" stroke="#000" />
+  </g>
+  <g id="outline-letters" fill="#000" stroke="#000" stroke-width="4" stroke-linejoin="round">
+    <polygon points="45,3 50,3 50,36 64,36 64,41 45,41" />
+    <polygon points="71,3 76,3 76,41 71,41" />
+    <polygon points="83,3 88.2,3 95.5,32 102.8,3 108,3 98.5,41 92.5,41" />
+    <polygon points="115,3 134,3 134,8 120,8 120,19 132,19 132,24 120,24 120,36 134,36 134,41 115,41" />
+  </g>
+  <g id="ink" fill="#fff">
+    <circle cx="22" cy="22" r="5" />
+    <circle stroke-width="5" cx="22" cy="22" r="16.5" fill="none" stroke="#fff" />
+  </g>
+  <g id="ink-letters" fill="#fff">
+    <polygon points="45,3 50,3 50,36 64,36 64,41 45,41" />
+    <polygon points="71,3 76,3 76,41 71,41" />
+    <polygon points="83,3 88.2,3 95.5,32 102.8,3 108,3 98.5,41 92.5,41" />
+    <polygon points="115,3 134,3 134,8 120,8 120,19 132,19 132,24 120,24 120,36 134,36 134,41 115,41" />
+  </g>
+</svg>

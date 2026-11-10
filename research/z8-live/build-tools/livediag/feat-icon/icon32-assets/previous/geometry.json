@@ -1,0 +1,26 @@
+{
+  "pb": {
+    "width": 112,
+    "height": 44,
+    "x": 24,
+    "y": 24,
+    "dest_width": 112,
+    "dest_height": 44
+  },
+  "shoot": {
+    "width": 112,
+    "height": 44,
+    "x": 24,
+    "y": 98,
+    "dest_width": 112,
+    "dest_height": 44,
+    "center_x": 49
+  },
+  "source": "live-badge.svg",
+  "background": "transparent",
+  "targets": {
+    "pb": [],
+    "shoot": []
+  },
+  "raster": "4-bit-coverage"
+}

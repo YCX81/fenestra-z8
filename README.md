@@ -1,72 +1,61 @@
-# Fenestra
+# Fenestra for Nikon Z8 C3.11
 
-[Z8 Live development checkpoint (2026-11-11)](research/z8-live/README.md) — source archive on this progress branch.
+[中文功能与使用指南](docs/features-and-usage.zh-CN.md) · [Live source archive](research/z8-live/README.md) · [Core port history](port-z8/PORT-STATUS.md)
 
-This is YCX81's emulation-only Z8 C3.11 adaptation of
-[WonderLantern/Fenestra](https://github.com/WonderLantern/Fenestra), based on
-`67774849c9dd97cc7127066190528e245ee25650`. Its independent distribution and
-contribution scope are explained in [LICENSE-Z8.md](LICENSE-Z8.md). Inherited
-ZR/Z9 documentation and upstream release links are not Z8 release artifacts.
+This is YCX81's Z8 C3.11 adaptation of [WonderLantern/Fenestra](https://github.com/WonderLantern/Fenestra), based on `67774849c9dd97cc7127066190528e245ee25650`. The default branch is `z8-c311`. The November Live development snapshot has been merged into this branch; its temporary progress branch has been removed.
 
-> **Early development:** Fenestra is still at an early stage. Major changes, including breaking changes to interfaces and behavior, are likely as the project evolves. Backward compatibility is not yet guaranteed.
+## Features and status
 
-Fenestra is a camera firmware extension runtime that loads independent `.wlm` modules from a memory card. The Fenestra menu manages activation, modules, and debugging. WonderLantern hosts module pages and settings. Adding a module does not require rebuilding the core. A character-rain animation is included as `modules/demo/`.
+| Area | What the repository provides | Status |
+|---|---|---|
+| Core runtime | Native Fenestra / WonderLantern menus, activation and shutdown guard, card module loading, SDK, hello and animated demo | The root core has recorded QEMU runs; physical-camera qualification remains incomplete |
+| Host bridge | Z8 C3.11 bindings, hash-pinned AArch64 Linux agent and parameterless INFO protocol | File-backed software round trip recorded; camera USB/PTP and shell execution are not established capabilities |
+| Live capture | On/Off menu, rolling Wave5 H.264 capture around a still, MOV/photo pairing, audio integration and file transactions | Separate research source, with multiple historical revisions; v36 is a candidate |
+| Live playback and UI | LVP preview via REC, portrait handling, transparent LIVE badges and busy animation | Archived implementation; v36 includes the 110×44 assets, with final display/hardware regression pending |
+| Wave5 hand-back | Cached runtime close lock and preserved bring-up hand-back behavior | v36 source/object audit recorded; earlier diagnostic-version hardware reports do not qualify v36 |
+| C64 labels | A separate guarded descriptor-style patch for an already expanded C64 MAIN | Not a slot expansion tool; shared-page rendering needs verification |
+| Diagnostics | REC recorders/lamp-code experiments, Wave5 lifecycle analysis, media/icon checks and build tools | Version-specific development tools, not interchangeable with the ordinary candidate |
 
-This repository contains the core, module SDK, host debugging tools, firmware patch tools, and development documentation. Supply the original firmware and patch-generation material yourself. Build tools extract required original instructions locally from the specified firmware.
+The root `src/` and `host/` port and the later `research/z8-live/` tree are separate build routes. Merging the archive does not automatically integrate Live into the root builder. Historical Live records include hardware observations for particular diagnostic builds; the root core's older “QEMU only” status must not be generalized to every archived experiment. See the [Chinese guide](docs/features-and-usage.zh-CN.md) for the exact source, workflow and evidence boundaries.
 
-## Supported targets
+There is no camera-installable, hardware-qualified Z8 release package here. Do not treat a generated MAIN or inherited ZR/Z9 release link as one. Upstream tools and target support for ZR C1.10 / Z9 C5.32 remain in the source tree, but those artifacts do not support Z8.
 
-| Profile | Original firmware | Source support | Prebuilt patch |
-| --- | --- | --- | --- |
-| `zr-c110` | Nikon ZR C1.10 | Core, SDK, native menus, and PTP debugging | Not available |
-| `z9-c532` | Nikon Z9 C5.32 | Core, SDK, native menus, and PTP debugging | Available |
-| `z8-c311` | Nikon Z8 C3.11 | Core, SDK, and native menus; emulation only, INFO-only Linux bridge | Not available |
+## Build the core and a module
 
-The `z8-c311` port has only run in QEMU and has never run on a camera. It has no update-package support and must not be flashed; see [port-z8/PORT-STATUS.md](port-z8/PORT-STATUS.md). Other firmware versions require their own validated profiles. Fenestra is experimental and has not completed full hardware qualification. Auto activate defaults to off; existing card settings remain effective.
-
-## Getting started
-
-Download the source archive and the patch for your exact firmware from [Releases](https://github.com/WonderLantern/Fenestra/releases). Applying a prebuilt patch requires Python 3.11 or later and the matching original firmware. Keys and a compiler are not required.
+Use Python 3.11+, LLVM (`clang`, `ld.lld`, `llvm-objcopy`, `llvm-nm`) and a static-capable AArch64 Linux GCC for the INFO agent. Supply your own identity-matched original Z8 MAIN; firmware and key material are not distributed.
 
 ```sh
-python patcher.py --firmware inputs/Z_9_0532.bin --patch Fenestra-Z9-C532-r3.fxpatch --output build/Z_9_0532.bin
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt
+python host/build_z8_core.py \
+  --firmware /absolute/path/to/z8-c311-original-main.bin \
+  --output-dir build/z8-core-local
+python host/build_sdk_module.py examples/hello/module.c \
+  --id hello --target z8-c311 --output-dir build/hello-z8-local
 ```
 
-Create `inputs` and `build` first. Place the original firmware in `inputs` and the patch in the source root. The output file must not already exist. The tool verifies the complete original SHA-256 before producing a firmware file; it does not flash the camera.
+Use fresh output directories. The core builder's `--agent-cc` defaults to `aarch64-linux-gnu-gcc`. Its MAIN output is an emulation candidate, not an update container. The generic `fenestra.py make-patch` route does not generate a Z8 release.
 
-Generating a patch requires LLVM, the Python build dependencies, and the appropriate key material. Developing standalone modules requires neither original firmware nor keys. See [Getting started](docs/getting-started.md) for setup and commands.
+Place a compatible `.wlm` in `FENESTRA/` on the matching experiment's virtual card, activate through Setup → Fenestra, then open its page through WonderLantern. The port's launch helpers require the separate research environment described in the [port history](port-z8/PORT-STATUS.md). The [QEMU guide](https://github.com/YCX81/z8-qemu/blob/main/docs/features-and-usage.zh-CN.md) covers the companion emulator's baseline setup.
 
-## Porting quick start
+## Live development workflow
 
-A platform port targets an exact camera model and firmware build. Start with the [architecture and resource lifetimes](docs/architecture.md), then follow the [platform porting guide](docs/porting.md). Existing profiles are examples of the integration structure; their addresses and calling conventions must be established independently for a new target.
+Start with the [functional and usage guide](docs/features-and-usage.zh-CN.md), then the [archive map](research/z8-live/README.md) and [v36 candidate notes](research/z8-live/build-tools/livediag/feat-release/RELEASE-v36.md). The guide explains the Live menu, REC preview, file locations, C64 patch and offline compilation commands, and identifies the private inputs and missing laboratory helpers.
 
-1. **Prepare the inputs and toolchain.** Follow [Getting started](docs/getting-started.md) to install Python, LLVM, and build dependencies. Obtain the target's original update package and application component, record their complete SHA-256 identities, and distinguish package offsets from application virtual addresses. Keep firmware and key material local.
-2. **Define the target profile.** Study [host/platform_profiles.py](host/platform_profiles.py) and the [SDK binding reference](docs/api-reference.md). Record the model, firmware identity, image layout, module identity, and native binding contracts. Locate startup-complete, shutdown, card, menu, and input paths in that target's firmware. For every hook, establish the original instruction window, continuation, register/stack convention, and execution context.
-3. **Implement platform adapters.** Use [src/platform/](src/platform/) and the shared native adapters as entry points. Connect memory/cache, tasks, card access, UI/input, display, USB/PTP, and shutdown services through named bindings. Preserve owner and callback lifetimes. Report an unsupported capability as unavailable instead of returning success from a placeholder. See [Architecture](docs/architecture.md) and [API reference](docs/api-reference.md).
-4. **Integrate the build and package format.** Extend the profile dispatch and checks used by [fenestra.py](fenestra.py), [host/displaced.py](host/displaced.py), and [host/native_binding_check.py](host/native_binding_check.py). Extract displaced instructions from the hash-verified input and validate relocation, branch destinations, and executable space. Add the target's container handling in [host/repack.py](host/repack.py) using the [repacker guide](docs/repacker.md). Verify a rebuilt container independently; an application image alone is not an update package.
-5. **Bring up the core in stages.** Establish an original-firmware baseline, then test inactive startup and normal shutdown before activation, module loading, menu/input, and USB debugging. Check native startup behavior as well as flash activity. Follow [Testing and compatibility](docs/validation.md) and [Debugging](docs/debugging.md). Emulator results and hardware results are separate; document which paths each actually exercises.
-6. **Validate a module and document the port.** Build the hello example and demo for the new target using [Module development](docs/module-development.md). Check the target identity, capabilities, message exchange, UI, and retained resources against the [module format](docs/module-format.md). Document supported bindings, known limitations, build commands, and input identities. Run affected shared-core regressions on existing targets and follow [Contributing and releases](docs/publication.md) when preparing the source distribution.
+Historical source trees, failed experiments and local artifact references are retained for traceability. Source presence is not a claim of end-to-end acceptance, iPhone import compatibility, stock MOV playback compatibility or complete recording-mode regression.
 
-For a module targeting an already supported profile, begin with [Module development](docs/module-development.md) and [API reference](docs/api-reference.md). Use capability queries and named services, then build separately for each firmware identity. A module that needs an unavailable native service requires a platform adapter for that service.
+## Documentation and validation
 
-## Documentation
+- [Chinese feature and usage guide](docs/features-and-usage.zh-CN.md)
+- [Getting started and inherited target workflows](docs/getting-started.md)
+- [Architecture](docs/architecture.md), [platform porting](docs/porting.md), [SDK API](docs/api-reference.md)
+- [Module development](docs/module-development.md), [module format](docs/module-format.md)
+- [Host debugging and INFO bridge](docs/debugging.md)
+- [Validation](docs/validation.md), [source publication](docs/publication.md)
 
-- [Installation, builds, and troubleshooting](docs/getting-started.md)
-- [Architecture and resource lifetimes](docs/architecture.md)
-- [Module development tutorial](docs/module-development.md)
-- [`.wlm` file format](docs/module-format.md)
-- [SDK and named binding reference](docs/api-reference.md)
-- [Platform porting guide](docs/porting.md)
-- [Repacker and ciphertext patch format](docs/repacker.md)
-- [USB/PTP, RTOS/Linux, and remote debugging](docs/debugging.md)
-- [Testing and compatibility](docs/validation.md)
-- [Contributing and releases](docs/publication.md)
+Run `python -B verify_source.py` to check the source inventory. This checks bytes, not camera safety or firmware behavior. The current documentation update does not add QEMU, USB or hardware acceptance results.
 
 ## License
 
-[CC BY-NC-SA 4.0](LICENSE), with a separate [commercial photography permission](EXCEPTIONS.md). Commercial photography, filmmaking, and paid shooting assignments are permitted. The permission does not authorize selling covered software or modules, or providing paid flashing services to third parties. Separately licensed dependencies retain their own terms.
-
-The [Z8 adaptation scope](LICENSE-Z8.md) applies these same terms and the photography
-permission to the Z8 contributions. The NonCommercial restriction means this is
-source-available, rather than OSI open source. Other worktrees retain their own
-licenses; original firmware and private build inputs are not included.
+[CC BY-NC-SA 4.0](LICENSE), with the [commercial photography permission](EXCEPTIONS.md) and [Z8 adaptation scope](LICENSE-Z8.md). Paid photography and filmmaking are permitted under that additional permission; selling covered software or paid flashing services is not authorized. The NonCommercial restriction makes this source-available rather than OSI open source. Separately licensed dependencies retain their own terms; original firmware and private inputs are outside this grant.

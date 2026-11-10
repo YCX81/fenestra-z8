@@ -1,5 +1,7 @@
 # Getting started
 
+For **Nikon Z8 C3.11**, start with the [current feature and usage guide](features-and-usage.zh-CN.md). The root core uses `host/build_z8_core.py`; the later Live/v36 source archive is a separate build route. The ZR/Z9 package examples below do not produce a Z8 update package.
+
 ## 1. Choose a workflow
 
 To apply an existing trusted patch, you need Python 3.11 or later, the matching original firmware package, and a `.fxpatch` file. `patcher.py` uses the Python standard library. It does not connect to a camera or invoke a flashing utility.

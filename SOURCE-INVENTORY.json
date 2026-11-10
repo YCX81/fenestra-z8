@@ -43,8 +43,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7864,
-      "sha256": "468a64456930b73045a0688764c8a270f9c743cd28e50e235f20b89e9a959211"
+      "bytes": 5972,
+      "sha256": "59be927b61a765dfc1a526a2fe0f3e19321fddfc10d645d9040d063b6894c048"
     },
     {
       "path": "docs/api-reference.md",
@@ -62,9 +62,14 @@
       "sha256": "55d1110c7ea97f85259c33bca7a341d19fb09452507d42d3cc0da6db62a389c0"
     },
     {
+      "path": "docs/features-and-usage.zh-CN.md",
+      "bytes": 11561,
+      "sha256": "9f0e63c9ea23f63e98eec3d7f702f5af2ae08080d102ed36fe42d9ab34ade0e9"
+    },
+    {
       "path": "docs/getting-started.md",
-      "bytes": 6944,
-      "sha256": "5ca48b13c67db8b494fb2901dbf4e39663b4759458a42f04ccb6f6c7c7538a6e"
+      "bytes": 7222,
+      "sha256": "e803fb3cad7cf3d5bee6ca103c09ac2f7c4e341575ae660f5e6fddae37288876"
     },
     {
       "path": "docs/module-development.md",
@@ -998,8 +1003,8 @@
     },
     {
       "path": "port-z8/PORT-STATUS.md",
-      "bytes": 6412,
-      "sha256": "fbcc08b7ee3921ab4db6a8978bd581c2f31769e3c1df84a379cca2a12db656be"
+      "bytes": 6803,
+      "sha256": "4707c84a97d6ffa45e09749e1bcb18338f1a26ec507e653894cfc6792330ea21"
     },
     {
       "path": "port-z8/addrmap.py",
@@ -1278,8 +1283,8 @@
     },
     {
       "path": "research/z8-live/README.md",
-      "bytes": 2446,
-      "sha256": "420c0ca8f18ad5dc2a7d1cfe27eb80bb16639ad1b68742a3d27dad4cefed0a87"
+      "bytes": 2675,
+      "sha256": "80b808029d1e3b726b21d0ea5be818331a0e61f4dc2f9646821005c7ab4647eb"
     },
     {
       "path": "research/z8-live/audio-probe/README.md",

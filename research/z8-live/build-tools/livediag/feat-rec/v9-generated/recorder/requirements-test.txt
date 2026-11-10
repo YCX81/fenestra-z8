@@ -1,0 +1,10 @@
+# Versions exercised locally; video mode uses av + numpy.
+capstone==5.0.9
+pyelftools==0.33
+av==19.0.2
+numpy==2.5.4
+# Optional local linker/objcopy fallback, no target execution:
+ziglang==0.17.1
+
+# Instruction-level NR guards only, with native calls stubbed (not QEMU):
+unicorn==2.1.4

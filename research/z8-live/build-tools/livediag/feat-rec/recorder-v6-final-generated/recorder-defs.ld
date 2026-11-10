@@ -1,0 +1,16 @@
+live_w5_bringup_resume = 0x402f2d5c;
+fr_native_exit = 0x402f3084;
+fr_native_tail = 0x402f3194;
+fr_native_reset = 0x40c2d884;
+fr_native_402f2b94 = 0x402f2b94;
+fr_native_40c3325c = 0x40c3325c;
+fr_native_40ca1990 = 0x40ca1990;
+fr_native_402f2bac = 0x402f2bac;
+fr_native_40c001f4 = 0x40c001f4;
+fr_native_40c2d0f8 = 0x40c2d0f8;
+fr_native_40c2e7fc = 0x40c2e7fc;
+fr_native_40c2fb7c = 0x40c2fb7c;
+fr_native_40c2d884 = 0x40c2d884;
+fr_next_2 = 0x402f3040;
+fr_target_2 = 0x402f305c;
+fr_next_3 = 0x402f306c;

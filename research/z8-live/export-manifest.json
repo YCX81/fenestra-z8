@@ -3,7 +3,8 @@
   "scope": "development source snapshot, not a tested integrated release",
   "transforms": [
     "workstation home/workspace paths replaced with /path/to placeholders",
-    "QEMU contribution SPDX headers added where absent"
+    "QEMU contribution SPDX headers added where absent",
+    "CRLF line endings normalized to LF for canonical Git source verification"
   ],
   "excluded": [
     "firmware and derived MAIN images",
@@ -858,7 +859,7 @@
       "source": "build-tools/pb/live-playback-ui.orig/runtime.c",
       "destination": "research/z8-live/build-tools/pb/live-playback-ui.orig/runtime.c",
       "source_sha256": "abb8ffe10372c690891b10558f0b248b9d9846e849003ecb8bc4738e62543530",
-      "published_sha256": "abb8ffe10372c690891b10558f0b248b9d9846e849003ecb8bc4738e62543530"
+      "published_sha256": "d1a6cf2e87874fb8b796d5b4518cccdb660ba070132c8b3cb59bf2f00d8f7f66"
     },
     {
       "source": "build-tools/pb/live-playback-ui.orig/runtime.h",
@@ -870,7 +871,7 @@
       "source": "build-tools/pb/live-playback-ui.orig/settings.c",
       "destination": "research/z8-live/build-tools/pb/live-playback-ui.orig/settings.c",
       "source_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef",
-      "published_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef"
+      "published_sha256": "03c83908d0977a3d6f3d0498e587e5221d9c207ad419d3a6e01353fd17df9f70"
     },
     {
       "source": "build-tools/pb/live-playback-ui.orig/settings.h",
@@ -1056,7 +1057,7 @@
       "source": "build-tools/pb/live-playback-ui/settings.c",
       "destination": "research/z8-live/build-tools/pb/live-playback-ui/settings.c",
       "source_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef",
-      "published_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef"
+      "published_sha256": "03c83908d0977a3d6f3d0498e587e5221d9c207ad419d3a6e01353fd17df9f70"
     },
     {
       "source": "build-tools/pb/live-playback-ui/settings.h",
@@ -1608,7 +1609,7 @@
       "source": "build-tools/livediag/src-diff.patch",
       "destination": "research/z8-live/build-tools/livediag/src-diff.patch",
       "source_sha256": "3ba905e1b8713254c7fba58ecf0e7e1fc20ce5e4ba73881697f87f2bca60757c",
-      "published_sha256": "3ba905e1b8713254c7fba58ecf0e7e1fc20ce5e4ba73881697f87f2bca60757c"
+      "published_sha256": "e263aa8cd52aef864efae2dbf6af8b5a356c5cbea5be0760caab89f990422094"
     },
     {
       "source": "build-tools/livediag/test_patch.py",
@@ -2214,7 +2215,7 @@
       "source": "build-tools/livediag/codex-w5/src-fix29/build.py",
       "destination": "research/z8-live/build-tools/livediag/codex-w5/src-fix29/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/codex-w5/src-fix29/check-v4.sh",
@@ -3144,7 +3145,7 @@
       "source": "build-tools/livediag/codex-w5/src-fix29/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/codex-w5/src-fix29/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/codex-w5/src-fix29/capture/test_ticket_unicorn.py",
@@ -3480,7 +3481,7 @@
       "source": "build-tools/livediag/codex-w5/src-fix31/build.py",
       "destination": "research/z8-live/build-tools/livediag/codex-w5/src-fix31/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/codex-w5/src-fix31/check-v4.sh",
@@ -4410,7 +4411,7 @@
       "source": "build-tools/livediag/codex-w5/src-fix31/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/codex-w5/src-fix31/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/codex-w5/src-fix31/capture/test_ticket_unicorn.py",
@@ -4770,7 +4771,7 @@
       "source": "build-tools/livediag/codex-w5/pbfix/live-playback-ui-icon/settings.c",
       "destination": "research/z8-live/build-tools/livediag/codex-w5/pbfix/live-playback-ui-icon/settings.c",
       "source_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef",
-      "published_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef"
+      "published_sha256": "03c83908d0977a3d6f3d0498e587e5221d9c207ad419d3a6e01353fd17df9f70"
     },
     {
       "source": "build-tools/livediag/codex-w5/pbfix/live-playback-ui-icon/settings.h",
@@ -5688,7 +5689,7 @@
       "source": "build-tools/livediag/codex-w5/pbfix/live-playback-ui-v28/settings.c",
       "destination": "research/z8-live/build-tools/livediag/codex-w5/pbfix/live-playback-ui-v28/settings.c",
       "source_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef",
-      "published_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef"
+      "published_sha256": "03c83908d0977a3d6f3d0498e587e5221d9c207ad419d3a6e01353fd17df9f70"
     },
     {
       "source": "build-tools/livediag/codex-w5/pbfix/live-playback-ui-v28/settings.h",
@@ -6888,7 +6889,7 @@
       "source": "build-tools/livediag/feat-icon/src-fix31/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-icon/src-fix31/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-icon/src-fix31/check-v4.sh",
@@ -7818,7 +7819,7 @@
       "source": "build-tools/livediag/feat-icon/src-fix31/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-icon/src-fix31/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-icon/src-fix31/capture/test_ticket_unicorn.py",
@@ -8178,7 +8179,7 @@
       "source": "build-tools/livediag/feat-icon/pbfix/live-playback-ui-icon/settings.c",
       "destination": "research/z8-live/build-tools/livediag/feat-icon/pbfix/live-playback-ui-icon/settings.c",
       "source_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef",
-      "published_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef"
+      "published_sha256": "03c83908d0977a3d6f3d0498e587e5221d9c207ad419d3a6e01353fd17df9f70"
     },
     {
       "source": "build-tools/livediag/feat-icon/pbfix/live-playback-ui-icon/settings.h",
@@ -9096,7 +9097,7 @@
       "source": "build-tools/livediag/feat-icon/pbfix/live-playback-ui-v28/settings.c",
       "destination": "research/z8-live/build-tools/livediag/feat-icon/pbfix/live-playback-ui-v28/settings.c",
       "source_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef",
-      "published_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef"
+      "published_sha256": "03c83908d0977a3d6f3d0498e587e5221d9c207ad419d3a6e01353fd17df9f70"
     },
     {
       "source": "build-tools/livediag/feat-icon/pbfix/live-playback-ui-v28/settings.h",
@@ -10332,7 +10333,7 @@
       "source": "build-tools/livediag/feat-rec/src-fix35/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/src-fix35/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-rec/src-fix35/check-v4.sh",
@@ -11268,7 +11269,7 @@
       "source": "build-tools/livediag/feat-rec/src-fix35/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/src-fix35/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-rec/src-fix35/capture/test_ticket_unicorn.py",
@@ -11784,7 +11785,7 @@
       "source": "build-tools/livediag/feat-rec/v9b-final-generated/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/v9b-final-generated/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-rec/v9b-final-generated/check-v4.sh",
@@ -12738,7 +12739,7 @@
       "source": "build-tools/livediag/feat-rec/v9b-final-generated/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/v9b-final-generated/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-rec/v9b-final-generated/capture/test_ticket_unicorn.py",
@@ -13254,7 +13255,7 @@
       "source": "build-tools/livediag/feat-rec/recorder-owner/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/recorder-owner/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-rec/recorder-owner/check-v4.sh",
@@ -14208,7 +14209,7 @@
       "source": "build-tools/livediag/feat-rec/recorder-owner/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/recorder-owner/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-rec/recorder-owner/capture/test_ticket_unicorn.py",
@@ -14610,7 +14611,7 @@
       "source": "build-tools/livediag/feat-rec/v9-generated/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/v9-generated/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-rec/v9-generated/check-v4.sh",
@@ -15564,7 +15565,7 @@
       "source": "build-tools/livediag/feat-rec/v9-generated/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/v9-generated/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-rec/v9-generated/capture/test_ticket_unicorn.py",
@@ -16068,7 +16069,7 @@
       "source": "build-tools/livediag/feat-rec/recorder-v6-final-generated/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/recorder-v6-final-generated/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-rec/recorder-v6-final-generated/check-v4.sh",
@@ -17022,7 +17023,7 @@
       "source": "build-tools/livediag/feat-rec/recorder-v6-final-generated/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/recorder-v6-final-generated/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-rec/recorder-v6-final-generated/capture/test_ticket_unicorn.py",
@@ -17484,7 +17485,7 @@
       "source": "build-tools/livediag/feat-rec/recorder-v6-generated/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/recorder-v6-generated/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-rec/recorder-v6-generated/check-v4.sh",
@@ -18438,7 +18439,7 @@
       "source": "build-tools/livediag/feat-rec/recorder-v6-generated/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/recorder-v6-generated/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-rec/recorder-v6-generated/capture/test_ticket_unicorn.py",
@@ -18894,7 +18895,7 @@
       "source": "build-tools/livediag/feat-rec/v9b-generated/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/v9b-generated/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-rec/v9b-generated/check-v4.sh",
@@ -19848,7 +19849,7 @@
       "source": "build-tools/livediag/feat-rec/v9b-generated/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/v9b-generated/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-rec/v9b-generated/capture/test_ticket_unicorn.py",
@@ -20364,7 +20365,7 @@
       "source": "build-tools/livediag/feat-rec/v3b/recorder-owner/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/v3b/recorder-owner/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-rec/v3b/recorder-owner/check-v4.sh",
@@ -21318,7 +21319,7 @@
       "source": "build-tools/livediag/feat-rec/v3b/recorder-owner/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/v3b/recorder-owner/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-rec/v3b/recorder-owner/capture/test_ticket_unicorn.py",
@@ -21726,7 +21727,7 @@
       "source": "build-tools/livediag/feat-rec/v9-final-generated/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/v9-final-generated/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-rec/v9-final-generated/check-v4.sh",
@@ -22680,7 +22681,7 @@
       "source": "build-tools/livediag/feat-rec/v9-final-generated/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-rec/v9-final-generated/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-rec/v9-final-generated/capture/test_ticket_unicorn.py",
@@ -23238,7 +23239,7 @@
       "source": "build-tools/livediag/feat-release/src-fix32/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-release/src-fix32/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-release/src-fix32/check-v4.sh",
@@ -24168,7 +24169,7 @@
       "source": "build-tools/livediag/feat-release/src-fix32/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-release/src-fix32/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-release/src-fix32/capture/test_ticket_unicorn.py",
@@ -24630,7 +24631,7 @@
       "source": "build-tools/livediag/feat-release/src-fix36/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-release/src-fix36/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-release/src-fix36/check-v4.sh",
@@ -25578,7 +25579,7 @@
       "source": "build-tools/livediag/feat-release/src-fix36/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-release/src-fix36/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-release/src-fix36/capture/test_ticket_unicorn.py",
@@ -25956,7 +25957,7 @@
       "source": "build-tools/livediag/feat-release/pb-fix36/settings.c",
       "destination": "research/z8-live/build-tools/livediag/feat-release/pb-fix36/settings.c",
       "source_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef",
-      "published_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef"
+      "published_sha256": "03c83908d0977a3d6f3d0498e587e5221d9c207ad419d3a6e01353fd17df9f70"
     },
     {
       "source": "build-tools/livediag/feat-release/pb-fix36/settings.h",
@@ -26880,7 +26881,7 @@
       "source": "build-tools/livediag/feat-release/pbfix/live-playback-ui-icon/settings.c",
       "destination": "research/z8-live/build-tools/livediag/feat-release/pbfix/live-playback-ui-icon/settings.c",
       "source_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef",
-      "published_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef"
+      "published_sha256": "03c83908d0977a3d6f3d0498e587e5221d9c207ad419d3a6e01353fd17df9f70"
     },
     {
       "source": "build-tools/livediag/feat-release/pbfix/live-playback-ui-icon/settings.h",
@@ -27858,7 +27859,7 @@
       "source": "build-tools/livediag/feat-mov/src-fix31/build.py",
       "destination": "research/z8-live/build-tools/livediag/feat-mov/src-fix31/build.py",
       "source_sha256": "932d1bd746ec76f565ab56aa29c8ce5743a755c1b870528c89300e19e2e24019",
-      "published_sha256": "9648013b5c0a37a306586791e7fc1c112ff3b23f499b089c905d9d020db0dbcc"
+      "published_sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
     },
     {
       "source": "build-tools/livediag/feat-mov/src-fix31/check-v4.sh",
@@ -28788,7 +28789,7 @@
       "source": "build-tools/livediag/feat-mov/src-fix31/capture/test_stream.c",
       "destination": "research/z8-live/build-tools/livediag/feat-mov/src-fix31/capture/test_stream.c",
       "source_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea",
-      "published_sha256": "b19347353646cea566c99f205fda617182d8867438c279771e7d7bf8b4202bea"
+      "published_sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
     },
     {
       "source": "build-tools/livediag/feat-mov/src-fix31/capture/test_ticket_unicorn.py",
@@ -29148,7 +29149,7 @@
       "source": "build-tools/livediag/feat-mov/pbfix/live-playback-ui-icon/settings.c",
       "destination": "research/z8-live/build-tools/livediag/feat-mov/pbfix/live-playback-ui-icon/settings.c",
       "source_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef",
-      "published_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef"
+      "published_sha256": "03c83908d0977a3d6f3d0498e587e5221d9c207ad419d3a6e01353fd17df9f70"
     },
     {
       "source": "build-tools/livediag/feat-mov/pbfix/live-playback-ui-icon/settings.h",
@@ -30066,7 +30067,7 @@
       "source": "build-tools/livediag/feat-mov/pbfix/live-playback-ui-v28/settings.c",
       "destination": "research/z8-live/build-tools/livediag/feat-mov/pbfix/live-playback-ui-v28/settings.c",
       "source_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef",
-      "published_sha256": "ad16068683b0c08d6617910cacd8355f42367fb38868b898580f36756add00ef"
+      "published_sha256": "03c83908d0977a3d6f3d0498e587e5221d9c207ad419d3a6e01353fd17df9f70"
     },
     {
       "source": "build-tools/livediag/feat-mov/pbfix/live-playback-ui-v28/settings.h",

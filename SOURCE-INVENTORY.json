@@ -28563,8 +28563,8 @@
     },
     {
       "path": "research/z8-live/export-manifest.json",
-      "bytes": 2225096,
-      "sha256": "82f2fd0850abe25cfb523c1ce01300a26a349e31d8857f7d94946d58ad9dd2aa"
+      "bytes": 2225176,
+      "sha256": "1e66083a9faa8c104667db3eb026f267026e106eb9bcc310141023e0f5fa6f38"
     },
     {
       "path": "src/accounting.c",

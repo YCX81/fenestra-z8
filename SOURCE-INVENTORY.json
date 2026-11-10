@@ -6827,6 +6827,146 @@
       "sha256": "3af3d3ca8954e12755968d7fef9f67aed02371e17b6f581922d97d2752c8156d"
     },
     {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/C64LABEL-QEMU.md",
+      "bytes": 7258,
+      "sha256": "5258275cdbef56308b3ac34219facbda1235de0322933f43ee89922b37182e43"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/C64LABEL-RESULT.md",
+      "bytes": 8594,
+      "sha256": "4ca95d865d42e28fc2a1fc8215e714bd12e40c0ea303a82ce3b9925102840ccf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/C64LABEL.md",
+      "bytes": 9514,
+      "sha256": "123140728310489398f08ce3d0875153e5c1d7b203dbe008f4a3c6844efaca7d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/FIX1.md",
+      "bytes": 1664,
+      "sha256": "6385b62713b9b3ba41ec3a90dda58bf3e312af2929e995330f0aa8dbbeb25399"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/FIX2.md",
+      "bytes": 1186,
+      "sha256": "7b3593a3391a6cc0551bfa3b7819f61f825d26c2070735d684ad1931ec1afd7b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/PLAN.md",
+      "bytes": 17606,
+      "sha256": "37452309160889dfb9bcafd4b3bcdab9c2df931c40f58f43cfc3da849c5e69d9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/QEMU-c64label.md",
+      "bytes": 8264,
+      "sha256": "773e0b4d3e4c9cbc8861314dfc6616c59d9d054af19d4adadc2fd4652fe3b09b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/TASK.md",
+      "bytes": 2268,
+      "sha256": "3466c9f792b114b6358450dd17baa71df89eccc4fb8e4edf801701e7c3fc5639"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/audit_static.py",
+      "bytes": 2264,
+      "sha256": "9da7064b02f56182264906ea3177343ea95f41df2629509345f8336c8c455ea1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/c64label_patch.py",
+      "bytes": 5853,
+      "sha256": "09b009587030f1111df6349ac389f4e93299e172934cdf933cc1c153f95fdb20"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/extract.py",
+      "bytes": 1422,
+      "sha256": "407fe961318f41c61e01cff8c35b6c8d3e38d373baec9309bc81f8d0b4aaeea6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/generate_prototype.py",
+      "bytes": 5093,
+      "sha256": "2e0bbc61f89506d9179fb103bcdf96c928b587b2dfcf4096f557de309e4c94f7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/inspect_main.py",
+      "bytes": 2337,
+      "sha256": "d00ecf119b2031fa3de3e52fdd7933177ea4c8c8c4c749035333fe8bd8395d79"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/prepare_c64label_records.py",
+      "bytes": 1842,
+      "sha256": "ac853120fb653b61c5c342ec42a32006234331c6005b4042809859c1a64b7d5a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/qemu/c64label-baseline-20261111-014009/continuous-mcu-peer-source.py",
+      "bytes": 20661,
+      "sha256": "e5c15dcbf7679f7159d06b8bbbb08514ee9eda8d7cc41a4676b2b4f525f46fb8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/qemu/c64label-baseline-20261111-014009/global1-boundary-peer-source.py",
+      "bytes": 3177,
+      "sha256": "88c5dda552f0ea476ef64dedd360cb8d199fe393b5329cd64b23eaabb1b877ed"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/qemu/c64label-baseline-20261111-014009/serial-channel-observer-source.py",
+      "bytes": 2028,
+      "sha256": "8803c55338a74f0e0500a74ff3aca6c400e774ced3b8a1a79099c96100c40fee"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/qemu/c64label-baseline-20261111-014009/serial8-peer-source.py",
+      "bytes": 4764,
+      "sha256": "8bb0cc05e86681317c3c8aedb9d0f8a571a540c04226c619a957e6463a2c7084"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/qemu/c64label-patched-20261111-014009/continuous-mcu-peer-source.py",
+      "bytes": 20661,
+      "sha256": "e5c15dcbf7679f7159d06b8bbbb08514ee9eda8d7cc41a4676b2b4f525f46fb8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/qemu/c64label-patched-20261111-014009/global1-boundary-peer-source.py",
+      "bytes": 3177,
+      "sha256": "88c5dda552f0ea476ef64dedd360cb8d199fe393b5329cd64b23eaabb1b877ed"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/qemu/c64label-patched-20261111-014009/serial-channel-observer-source.py",
+      "bytes": 2028,
+      "sha256": "8803c55338a74f0e0500a74ff3aca6c400e774ced3b8a1a79099c96100c40fee"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/qemu/c64label-patched-20261111-014009/serial8-peer-source.py",
+      "bytes": 4764,
+      "sha256": "8bb0cc05e86681317c3c8aedb9d0f8a571a540c04226c619a957e6463a2c7084"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/requirements.txt",
+      "bytes": 46,
+      "sha256": "24e6e8276d08e68052807313194ff364d3f494b7748f43f39a5ca6eabf46e6ee"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/run_c64label_lab.py",
+      "bytes": 3077,
+      "sha256": "2729f105e1f403ecb415b92b64ab516622d4af13d5c79ee4245129d8bc7da960"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/run_imenu.reference.py",
+      "bytes": 19641,
+      "sha256": "9f50a3d5e7b5ab786c056cf2605d3d70ecfae20fb1b41f6730c6b839ad65d6aa"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/verify_c64label.py",
+      "bytes": 1870,
+      "sha256": "7b7df84813f15d964558981d83bce0d0849f34f5678c08e10925465018b7874b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/verify_offline.py",
+      "bytes": 1318,
+      "sha256": "a1ca6907a162ce80c634ee4e386fda0dac97ee3fb915d6e16edd5d6dfd578f33"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-c64label/verify_unicorn_attempt.py",
+      "bytes": 3109,
+      "sha256": "7b1ad258d31e5d5e54dd85a5ba6eaf50aac33b487c68933a946c3f0484a9676e"
+    },
+    {
       "path": "research/z8-live/build-tools/livediag/feat-icon/ICONFIX.md",
       "bytes": 1645,
       "sha256": "cc254c3ccbd21ad5bcfd5d6be5613c682b87c463a4a9a94b3ec848ba174796a2"

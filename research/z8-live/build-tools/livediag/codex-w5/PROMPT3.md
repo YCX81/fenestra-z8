@@ -1,0 +1,9 @@
+Read-only review, in Chinese, same evidence labels. Do not modify anything; no USB calls.
+Hardware 11-08 on a fresh stream, movie mode, USB host (w5seq.py): STOP rc 0; TRIGGER slot 2 rc 0, picture done, latch 1, worker 4; TRIGGER slot 3 rc 0; worker 5 (0.234 s including USB polling); FINISH -> worker 0, instance (0,-1); EXIT -> VDI 0, svc 0, res 0. After unplugging USB, movie REC worked. Your sequence held.
+v30_patch.py and v30/live_w5enc.c (its result; runtime.c unchanged from src-fix29) put this into firmware. Review before it goes on the camera. A bad build costs a card-reader recovery. Find real defects only, ordered by severity, each with the failing scenario:
+1. w5_close_body vs the proven sequence: order of SUBMIT and STOP, slot choice when frames%4==0, the frame-info wait (stale stamp? hw_index correct when live_encoder_init reset frames but not hw_index?), DELAY units, can any wait run in a context where blocking is unsafe (preempt hook inside the 0x402f2d58 caller)?
+2. Could w5_close run at boot or in normal photo use and hurt (the v26 lesson)? Does the new photo gate in open_stream (RD32(0xa03bd062c)) break first bring-up, returning BUSY paths, live_encoder_init's magic handling (w->magic set after open_stream), or reopen after returning from movie mode?
+3. Lock, close_failed, release_req, busy interplay between worker and preempt; deadlock or timeout >600 ms problems; preempt clearing release_req.
+4. REC pressed immediately after switching (worker has not closed yet, or stream.job != 0 during mux): does the preempt path then work in the REC caller's context, and could the hook being inside bring-up with its locks deadlock with FINISH/EXIT which take service locks or need the worker? 
+5. Reopen after movie: EXIT left slot/instance state; open_stream on the same arena after a clean close.
+End with a verdict: safe to test on the camera or not, and the single most likely remaining failure.

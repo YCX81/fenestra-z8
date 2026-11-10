@@ -1,0 +1,12 @@
+Read-only, in Chinese. No modification, no USB. Read history/astra-bptes20qq.md and astra-bv71aq21l.md first. Labels: proven by disassembly / proven by hardware / inference. bg34.main = stock + hooks (base 0x40160000). v33/live_w5enc.c + v33_patch.py are the code now on the camera (v33 = v32 + RAM records in the 0x402f2d58 hook, Live's worker flushing to LIVEW5A/B.BIN).
+
+New hardware facts on v33:
+- A test record placed in RAM over USB was written by Live's worker to the card within 1 s: the flush path works in photo mode with USB attached.
+- Live on, photo several seconds, movie mode, no USB, no REC: stays up (no reboot in a minute). Pressing REC: reboot every time. After the reboot no LIVEW5A/B file exists at all, i.e. not even stage 1 (written at hook entry) reached the card. Worker loop period is about 6 ms; each pass calls live_encoder_diag_tick.
+
+Three possibilities: (a) the crash occurs before the hook is reached, in the REC start path, so the hand-back is not the first failure; (b) the hook is entered but the crash follows in less time than the worker needs to open/write/close; (c) the worker is not scheduled or its file call is blocked once REC starts (task priorities, the file lock 0xa02e81dd8, card access by REC start, worker in movie mode: check the worker loop path in runtime.c, it may be skipped/blocked before reaching the tick in movie mode or while REC starts).
+Determine as far as possible:
+1. What runs between the REC button and 0x40d07ba4, in the movie state machine: every step that could fail because Live ran in this boot (Live's image pool use, capture, IRQ/callback registrations at 0xa02e983b8/3c8/44c/454 seen in drv diff, audio service state 5, the recording pre-start allocations 407250b8). Could one of them crash before the hook? The drv diff showed image-path callback entries 0x40e8f3fc/0x40e8f47c set by Live capture. What are they, are they ever unregistered, and what happens when REC reconfigures that channel (Live's callback or code pointers called at REC)?
+2. In runtime.c, is the worker certain to run diag_tick in movie mode during REC start? Give the exact path and blocking calls.
+3. Which of (a)(b)(c) is most consistent with all outcomes; and a no-flash experiment to separate them, using USB RAM writes in photo mode before unplugging if needed. Reminder: the test A (USB-attached host close, then unplug, REC ok) shows REC can work when Live's stream was closed with Live's other structures still present.
+State what cannot be determined.

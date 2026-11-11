@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+"""Build adapter (same as tools-v36): keep the builder flags, size-optimize the playback units."""
+import os,sys
+from pathlib import Path
+args=sys.argv[1:]
+# preview.c (the JPEG decoder) stays at -Os for speed; everything else in the playback layer is size bound.
+small=('ui.c','native_ui.c','runtime.c','sync.c','native_sync.c','settings.c','native_profile.c')
+if any(Path(a).name in small and 'pb-fix37' in Path(a).parts for a in args):
+    args=[a for a in args if a not in ('-Os','-O0','-O1','-O2','-O3','-Oz')]+['-Oz']
+if os.environ.get('V37_PB_AUDIO_TEST') and any('pb-fix37' in Path(x).parts for x in args):
+    args.append('-DPB_AUDIO_TEST')   # emulation-only build, see tests-v37/qemu
+real=os.environ['V36_REAL_CLANG']
+assert Path(real).resolve()!=Path(__file__).resolve()
+os.execv(real,[real,*args])

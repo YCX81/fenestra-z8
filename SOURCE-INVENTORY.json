@@ -23342,9 +23342,19 @@
       "sha256": "b1050486294493abd80fb07597f301a4bb338d78fc703e03858b67c887b2634a"
     },
     {
+      "path": "research/z8-live/build-tools/livediag/feat-release/CHECKPOINT-v37.md",
+      "bytes": 2862,
+      "sha256": "004e58fb5ae7f67cab50d6d9f2dcc5b42f0b20c9c03d713907e7845c74594dec"
+    },
+    {
       "path": "research/z8-live/build-tools/livediag/feat-release/RELEASE-v36.md",
       "bytes": 14303,
       "sha256": "549254a79ea336c8db7016c5549f49fd59f13698904fc10268a6c676871587b8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/RELEASE-v37.md",
+      "bytes": 5615,
+      "sha256": "6485201abfaeb3a1bd2954f2f85a4065e9f709af49044564eb37978918ecd52a"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/RELEASE.md",
@@ -24223,6 +24233,791 @@
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix36/ui.h",
+      "bytes": 1180,
+      "sha256": "19fa33ccd7275e691e7d2fc32951eee26ff36792ae54bdb3d366eb76b2c6b2b3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra.h",
+      "bytes": 4109,
+      "sha256": "d7113bdacb270d0045cd33837130a860bd81150b0df9da79fd82b47c23e70d03"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_accounting.h",
+      "bytes": 3565,
+      "sha256": "e963fb6aa7298910e4f8cdd11db314138b979ba01df7df43432de4150ec8cb88"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_accounting_sdk.h",
+      "bytes": 347,
+      "sha256": "3cf504f021f456f0a1763a46b7dc2d6c106ee948b8cebf6f29b267ad2fb72c0c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_accounting_service.h",
+      "bytes": 743,
+      "sha256": "1fe7120983247cfafe2635bb34b6c56a7e2f1ace6f05deaa43ae38260edae128"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_allocation_observer.h",
+      "bytes": 1267,
+      "sha256": "f2c29b5ecf654820e3495bbfefdc54ad86c5e18b59be5e76432cb23fb95b0812"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_api.h",
+      "bytes": 248,
+      "sha256": "1f596e167cd446ecec20e4571814db7806e9448d60d07a647e72ae615c1fc0a7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_binding_store.h",
+      "bytes": 3274,
+      "sha256": "70934f5a855e8be722a392a5c86216b13e0f3c8478807b7c141c329f7085aaff"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_bus_sdk.h",
+      "bytes": 2636,
+      "sha256": "dfb456d4c6a42ab7f52ef1499362aa00f040e4ab86828b5553ff94a9b1ffdf07"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_capture.h",
+      "bytes": 892,
+      "sha256": "1467a27e485df323daff57587074c66882b0351dd484e211c8381881836c1d39"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_capture_hooks.h",
+      "bytes": 2381,
+      "sha256": "276bdc5ea02c1d92c8110aa27d1b1bf20324fae0ef115efda643a92c90982ddc"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_capture_menu.h",
+      "bytes": 2444,
+      "sha256": "b4d481f7012dd4853054a96279d85b7ccfdf949d4326bd4f2cd4fcfc689b6e1f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_capture_quick.h",
+      "bytes": 1663,
+      "sha256": "acde982a4eb2095320764e786d5c7d181fb825a3f88f47772ee9dc32716d89aa"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_demo.h",
+      "bytes": 1379,
+      "sha256": "76b4e962ba9e4dc1ebb0a4f1d145c2313de23f6504f1c4aca0b30136a5bbe0f5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_display.h",
+      "bytes": 1387,
+      "sha256": "89f5d70046b42d09c7442e168e15967f6655928d2cfc20698913a7c86feea95e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_observation.h",
+      "bytes": 709,
+      "sha256": "39a9646563d38bfe6d9c0393443e6b3231f7d5a46519f40f54146e48bfb079e8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_panic.h",
+      "bytes": 234,
+      "sha256": "500743db071c820c1fc1806f2c0420fc32185d3b78aea620d4a18b0817ea52cd"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_rtos.h",
+      "bytes": 1014,
+      "sha256": "20bdab54f1c151ba30343ec2d9ee1e27ed9ca921e0e0bf0aa38cdbd195b1ce2d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_scene.h",
+      "bytes": 527,
+      "sha256": "d0821072d437736bb70f1fa6536befd06c57fe92ee134fb56c12b074113bc9f5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_services.h",
+      "bytes": 1260,
+      "sha256": "12a2af85638031c678dc735518756a90401cc532942eb3fc50047ceb6a977cd1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_startup.h",
+      "bytes": 1112,
+      "sha256": "70fc26055a1159ca3fc6bcc60f8bfe0834d91dd04ea31c1621114c77af4e3120"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_c110_usb.h",
+      "bytes": 386,
+      "sha256": "f245fb2ca13108e6ae6a58e6264485a8838d71fd64d29168a21f208c68f89505"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_canvas.h",
+      "bytes": 4925,
+      "sha256": "22140f7b59cb4c5e25628a9e217ab55a0dbb6c1cd46633a5364db81f09a30efe"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_capacity.h",
+      "bytes": 3711,
+      "sha256": "a0da52fa856ef4bac912d5b3a905564bdebeef87a3379dfbc51aeb28b6186929"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_capture.h",
+      "bytes": 1336,
+      "sha256": "7d6341dc945fd70764ed8df4dbb720e5ca1576ec6c0a236189df9d5633fa55c6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_capture_service.h",
+      "bytes": 894,
+      "sha256": "c74bf4c927c914226b612291f141823595b3fe2592a74af42476bd973fa85ae7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_critical.h",
+      "bytes": 1364,
+      "sha256": "2034b5dbba2a500847cf0ba75246a5257654152c897497a594173d468740ae00"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_critical_sdk.h",
+      "bytes": 656,
+      "sha256": "19f3065a10e10d4bac0e74a3fb8118b54abcf6e73e059bee78d0fddd9621d461"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_debug.h",
+      "bytes": 1757,
+      "sha256": "984d5856e59c32794691a953d56979d27efa9e4694a334726bc441a058311fd5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_demo.h",
+      "bytes": 1133,
+      "sha256": "49ea942ed2778aa85d18d69068f8dae0a39c5c87d83d9ff7453f9d27e3dc06ed"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_document_sdk.h",
+      "bytes": 1492,
+      "sha256": "a0189b4a8066e0c2c0563123d715c84258431daee4e9e3eae6d38da894864057"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_events.h",
+      "bytes": 1683,
+      "sha256": "d16a533dc1f27a616643b660271d3f3c9f8577e1d54886d183ecf8358a418181"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_events_sdk.h",
+      "bytes": 436,
+      "sha256": "4402cd3810212667414407dace9ed7afb19cde6fa01a81e42900607995bb98e5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_exec.h",
+      "bytes": 2956,
+      "sha256": "cb9fedd711a5df483e4c2f62fbabbd7f68d34789287d804a72cf4f2c831967f2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_exfat.h",
+      "bytes": 1519,
+      "sha256": "71d0817911ec59d517c7dd43747bee74d662ffdcca74aaa517c6f0531174da12"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_extension_services.h",
+      "bytes": 3449,
+      "sha256": "0246f1a1a7e20bcc0ecc185f13f285da064ae8ba5b686194b8a60c504efec86f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_fault_test.h",
+      "bytes": 339,
+      "sha256": "c2f1582b2be974736a9100e6a44ff5150e404e42c2fdedfbe444eb4d8484f3a0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_file_card.h",
+      "bytes": 1014,
+      "sha256": "932fc976b39179c5081f9792b35e48f05560bb328e33372ff2574069cd7363ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_file_observer.h",
+      "bytes": 1065,
+      "sha256": "656c048148258806254e0b89149e6e62d90047c89ebce23234d3533898110ba4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_file_sdk.h",
+      "bytes": 781,
+      "sha256": "e1716a2c41ca46911465d5d7e6352cd13373a0031333ea3568dad01fe7337853"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_hooks.h",
+      "bytes": 4033,
+      "sha256": "2c06613ca79077339f7d5df88c4dac274d01d6427136247db8c1699ae2586314"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_interrupt.h",
+      "bytes": 680,
+      "sha256": "321174bb69c145c99355fce250369388823e0549b41f5b2c409851144cc908d1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_irq.h",
+      "bytes": 3086,
+      "sha256": "1ea985818256142af8f8607fadb81f881b58bf43fa7158cac574769f0d692da3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_jobs.h",
+      "bytes": 2956,
+      "sha256": "fbb0dcf715dcecc02d80dd8dc064e0afcb713d5c8dc47e13373e51e0ef523e85"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_load_sequence.h",
+      "bytes": 909,
+      "sha256": "df240e9c3a6e3dbf18c0eb1ae0c14eaeb4e69b3589b4541315b5d2e6613d31de"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_loader.h",
+      "bytes": 2005,
+      "sha256": "1edd453528c126b75eaff182c321244fede097e148cb64c9528122ddae882371"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_lzss.h",
+      "bytes": 610,
+      "sha256": "a255c744e6bea5925eef43cec27b3084cedc8a9e3b42519bc4aa1b718a38380c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_machine.h",
+      "bytes": 841,
+      "sha256": "539904686f3962a0afbea449a4206047a026214667150ba3d6bda8bc3eee9f84"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_mapping.h",
+      "bytes": 3565,
+      "sha256": "09d791d179b2852a90cc959701517a94e89d5068ba060a31e467762bbad9839f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_mapping_sdk.h",
+      "bytes": 966,
+      "sha256": "139853fd89f65901df6cca3c0f97668047a705a55d3116c4707815ccf7392df6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_memory.h",
+      "bytes": 779,
+      "sha256": "88d25accb11aa9830da59fb55d2a5e9e2052aee570bdb445ee213d61dcb23910"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_mmu_context.h",
+      "bytes": 1513,
+      "sha256": "25e31442353418fa5a37317682455b0620c5e9be0f6cf54c2f9d4b8aaedfe4fe"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_mmu_sdk.h",
+      "bytes": 4844,
+      "sha256": "8cf362b3f71f136b4bed88dc1cef6fee0178c8fc66c4586ac1c115da24546cd9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_module.h",
+      "bytes": 3564,
+      "sha256": "3087802fe797467c91d67bf4cdaff58ae06aee79ce0ba159f0cbf48a113519e5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_module_bus.h",
+      "bytes": 2576,
+      "sha256": "7c580ef5884457724f7a5de502d18abce9516913354c1ec09fbffcc29783650b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_module_index.h",
+      "bytes": 1552,
+      "sha256": "bef2e1998303ba3ec12b6a42de6bdfa6e83786d7ea7300e6b0e6e724c499b65e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_module_load_buffer.h",
+      "bytes": 1248,
+      "sha256": "b03b3188a2493587d2f07d6714e70ba36e2f4389c02967ec8c62873062ed447e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_module_manager.h",
+      "bytes": 2964,
+      "sha256": "0a7835079610f8ef6f1377b8b295b02cfe8a344c1093115fa677795f5ae09308"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_mutex_sdk.h",
+      "bytes": 2160,
+      "sha256": "f97fcf2c4812a2535c2e3d7b60fb3e595702b03ee4df71a7e9df27aa07d55b12"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_apps.h",
+      "bytes": 4004,
+      "sha256": "56ed587d519951725a9d017c87477ad279d4904d5439fbd2974c9def66f19fef"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_call.h",
+      "bytes": 932,
+      "sha256": "ced7812cb3c4f5f5037069706e0f5fead97865b66e1386409934b1d70a876b5f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_context.h",
+      "bytes": 1078,
+      "sha256": "c6cc9148dc53ac056355e0f105beeaea2f54a0b29b8659fa2c4681a9c67c7e6c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_display.h",
+      "bytes": 4528,
+      "sha256": "47e7bac4dc36af4b6e365900f1cb5425ac9a5650041117fda6fd5a84a1906ee9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_editor.h",
+      "bytes": 3137,
+      "sha256": "ace14c79f00e97e133f7c52bb6da417a55d5b6ecf75e668d807eda0ce6a6c128"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_font.h",
+      "bytes": 2313,
+      "sha256": "20cc84cb5dfe7bb0d5a266717e8ad7c03be10b8444d8566011fa3e0849550695"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_linux.h",
+      "bytes": 1904,
+      "sha256": "e2d1c2e281137b823e84d2b29e36cb98491e441cb2601ffeb4f7ad5efba0c499"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_mapping.h",
+      "bytes": 444,
+      "sha256": "2e22ae35d92894ae59ced5c9090a689658ea6d0d16ed806a5d6c1eab644cbf3d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_menu.h",
+      "bytes": 4828,
+      "sha256": "776ba744de6e9b058b3ff449364110a6767cc95a51a8d314daa29c5a668c2bca"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_modules.h",
+      "bytes": 908,
+      "sha256": "9cf8de7e3c65ce2bb9dda6767cfc4058ad6004fd1a0b3e882dd275d942491708"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_namespace.h",
+      "bytes": 621,
+      "sha256": "91e9b3bd75852b95fca9082ce9870bbf18d63d3d413fdfb76e43422bc0866aaf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_panic.h",
+      "bytes": 1345,
+      "sha256": "6f7bb39d83e19427316e2043da691d9dbca758106fc6b9566b4e095f1179ddab"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_ptp.h",
+      "bytes": 1828,
+      "sha256": "cab699915115c698c1450e5b1d06906c7e6ebce3f4dab1344b774e0db5fe9787"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_rtos.h",
+      "bytes": 1824,
+      "sha256": "e476ee4f518dc55bde304ed086ac184a6094c0e3aced61b5a465c5b94bc5404f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_scene.h",
+      "bytes": 1165,
+      "sha256": "eab73b05d25bb68e60be682720e0316c8923cac3d32dabe93f620c52c2107c44"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_text.h",
+      "bytes": 677,
+      "sha256": "facb7e5b6867c785202cb25e473f32333d7153b63de7387020a480f68c4adb4d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_title.h",
+      "bytes": 577,
+      "sha256": "14ba5f16401eeea435efcf6c54223965723b31c0b0fdc49f7d46e3532c4916ce"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_ui.h",
+      "bytes": 11583,
+      "sha256": "65510aaf2cb97e9cf5649a60702d9760dcdc477cb7778c25c956bf6fb5432b64"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_ui_callbacks.h",
+      "bytes": 995,
+      "sha256": "37cd69d97e8835fc653fe43468abe756777812a2ed749fcd1457eed123c99c83"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_ui_dispatch.h",
+      "bytes": 3073,
+      "sha256": "9c7385edc4deacb508988a11033ddaeff194fda4da284a669e3df1fbdc4a3e4c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_ui_editor.h",
+      "bytes": 1241,
+      "sha256": "b52fca1c262324a6614c229b4eefe4ff172a8d78592b86608f3b247e143e3794"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_ui_pager.h",
+      "bytes": 2468,
+      "sha256": "a89918f7dd2a7bee687b6f30be5b5ee073f3525caeccb9ab0ba6621b840b4bbf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_ui_reader.h",
+      "bytes": 1216,
+      "sha256": "f538f6e2acca0fae2efed696a4bbd0b7f1d7d828002594e5b30cdb79b5d48bc3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_native_visibility.h",
+      "bytes": 1751,
+      "sha256": "53f5befcc09623c85e9838aa495f7a2e1dc90d69ee1bb905c5c0de76dd0101e7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_nef_metadata.h",
+      "bytes": 722,
+      "sha256": "a1d9dacb09a848ae6e196b693a5b1c218280267a7340044b6b92d72932de54e0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_nvme.h",
+      "bytes": 1251,
+      "sha256": "2a3947ba1ad2bc046e4d83f5e71eda8cc5c34606ce171e2c66f2685943ffc997"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_observation.h",
+      "bytes": 1647,
+      "sha256": "9474a2b04d85a20bee70293176a6cb8de1df8866db34b7db68510b95615f60f8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_overlay.h",
+      "bytes": 5425,
+      "sha256": "8c2d63deb8a245c02ed3495e3ea674d8ab094c6fe3a7ec7bd7b9826539e925ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_overlay_bulk.h",
+      "bytes": 1275,
+      "sha256": "29b86b4f3ff80a1eb8869282bc7f3331846c218c5411a1617130982911bb41ed"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_panic.h",
+      "bytes": 844,
+      "sha256": "9b7c097e68a43af160bbae21b3cb49a0059d6b6b4d3992c6a0e48da2fce4e159"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_platform.h",
+      "bytes": 18479,
+      "sha256": "ba82582ea4e0e0f908daa2094160b433b1e30fa3dd6a756682d790428f4a0025"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_platform_native.h",
+      "bytes": 866,
+      "sha256": "be62ceb61d65b73ed7ca7713facaaf1c17c7da4fe8476ef454c390f7c436b994"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_plugin_menu.h",
+      "bytes": 417,
+      "sha256": "455ea53220552565aafd7ea6df75c5f8005de0cab0d47c464a467b1ffa7a5a4e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_ptp.h",
+      "bytes": 3738,
+      "sha256": "f1eb3b317ae4a91633d091e2d908c2626b0876260875d6fc0521146afe55cb39"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_records.h",
+      "bytes": 593,
+      "sha256": "40d95cdc39000d0ecc5a77deca5388454b9c9f521e3b81ecece02fc6eea53526"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_resources.h",
+      "bytes": 2154,
+      "sha256": "e8441e5ebfc9b328f3a9c889281b9c5a82cb42f31aa086cc4131546037087ab2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_runtime_accounts.h",
+      "bytes": 992,
+      "sha256": "39bc6f986c8383c4381cbc076e678724ec9d8839aca611e6a289d35124b73455"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_scene.h",
+      "bytes": 2799,
+      "sha256": "0c304ce07c580d47f3761d856e84e95c8948f4d86d9e28bd7bcfdb2201a7b99a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_scene_sdk.h",
+      "bytes": 2365,
+      "sha256": "e9047ff936c8149cb086cd3f1d7c912cfc39e2af9d866484e249a0065dfafdb8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_schedule.h",
+      "bytes": 1241,
+      "sha256": "4dbe5d007a9d68cc9382d2a82e7250acd5ca0412a29fa0d013da66d9ff44d1f8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_sdk.h",
+      "bytes": 9281,
+      "sha256": "4a3d3112de7e32d2a8a68f5c0d99ad1ba57b4f81c76c484b0266c861c10bbb8f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_semaphore_sdk.h",
+      "bytes": 2116,
+      "sha256": "432ae1c33d2d8cc83dc137c494e717c22a0708c01aaeb2d95e4485a55c58db44"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_services.h",
+      "bytes": 6856,
+      "sha256": "8e3b564955ef84e4d7d2c49ed2bda33382dcaf086bc59947066caeada5445059"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_settings.h",
+      "bytes": 2158,
+      "sha256": "3de0599a452335e0945c459dec979971d382907b997f2d9ca930719fc6eb1413"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_sha256.h",
+      "bytes": 420,
+      "sha256": "41a3ee225d05934526304f18adad32bc0e70dd4c902ce85391bf4d1401d54d41"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_shared_accounts.h",
+      "bytes": 994,
+      "sha256": "dbf9a284eab7486b03c7795dfe4a48277f49c715c5ba0f66950b3ab59fb3dce1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_simd.h",
+      "bytes": 2676,
+      "sha256": "5dd6b001daaf036e3a0fc41b99e62d1b7f642f82ecf81aba52582bf345322ee3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_slot_pool.h",
+      "bytes": 1461,
+      "sha256": "1fb25a88f575440ec03290b9b2d0220ce0815e169856beb626cd6a29e65c6a52"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_startup.h",
+      "bytes": 1659,
+      "sha256": "4e252850216636010c90b9e361236098d0148145d15cb29b23da9b23b8f8b85e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_startup_files.h",
+      "bytes": 916,
+      "sha256": "28ac2e28e7e0d760571096c1b59c6e8fc6c72169c151c6be854ce3087c490b67"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_startup_service.h",
+      "bytes": 1120,
+      "sha256": "842d16bbee81011c14035175c03951b642aaa80f38e2bb6a6f9a9c36f044f5be"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_tasks.h",
+      "bytes": 2486,
+      "sha256": "60d743be50db352cd403b3774ec34ae60fd0783e70b77fcfb72d8c0449bd190e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_tasks_sdk.h",
+      "bytes": 819,
+      "sha256": "4b92360501437f80fac43bc6ad5049df9ea50bd3b43ea3cf824528855ee75439"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_text.h",
+      "bytes": 1389,
+      "sha256": "55f6f14261c7db7519c41dd90dfe4bb48299bd69dde7805f97d76bd34e0f0e7b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_text_fit.h",
+      "bytes": 486,
+      "sha256": "b5f775bfdfbd54269daa67465fece546c2404d29961277da5db270338f9fe4d5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_text_page.h",
+      "bytes": 684,
+      "sha256": "bf5eeb97c82f91cb73c3b65ae16e5010e43616397261a04c3d99efb4ad2b54f9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_text_regions.h",
+      "bytes": 1419,
+      "sha256": "3ae0db410f362b4b6111ad76717cb42f28e6e9ab7feb87a1d39808ecd807c8d5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_transfers.h",
+      "bytes": 1990,
+      "sha256": "44e8360e8a6596fe65c5a74609b32d61ae839ca7c512927c319919ebcf713ebf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_translation.h",
+      "bytes": 731,
+      "sha256": "2e185da44eabfb118f3e9c367f4ab9b517d8b328a328fea6aaa59679d31a0bd4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_ui_document.h",
+      "bytes": 1317,
+      "sha256": "0a10c61e915ba63b813014463001eb03677509f528cd282d0abdc9fd9df1f1ad"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_usb.h",
+      "bytes": 1479,
+      "sha256": "0338d72d42e9acca2b042043856590c6f10c48c98ae0e62aaa0de751cf8772f7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_video_configuration.h",
+      "bytes": 1856,
+      "sha256": "c177d6937a88fbe937aa8cb0484214e8bca4577b0763be7989b6ca0c05fa4d6f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_video_sdk.h",
+      "bytes": 2066,
+      "sha256": "008ad500e1613492adcc36af4080d4f3341c8be08d94298017644e4948060bee"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_video_service.h",
+      "bytes": 1866,
+      "sha256": "62831e0977c55e5ed96a3bdb4104f8eeb5a110092ebb7e150bd995b644bf1119"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_worker_pace.h",
+      "bytes": 988,
+      "sha256": "37e5f398ca4a183588d79f1a31c8cb318924f6b502dbe624ef829bf14fdaa3ab"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/core-include/fenestra_worker_wait.h",
+      "bytes": 1883,
+      "sha256": "31d528355f034a0fd9697c6c3630f8cb363db1dd92762dd88adfc1a951a7e1d8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/fx_registry.h",
+      "bytes": 3929,
+      "sha256": "86b91dbba6e12a0bdfdad3fc58a6edc38ebb4d1950b9dac179ccc63e34dfb4ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/hooks.S",
+      "bytes": 1847,
+      "sha256": "a2749621fea1c916fe1c750dcb14677c6b2aa8ac5417b8c2b206d1547ede1e40"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/icon32_alpha.h",
+      "bytes": 11209,
+      "sha256": "3792a7d3cf9c5ddcf531581f2631c9b1d519a361b2b76f17b89e48eaeba5294d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/icon32_layout.h",
+      "bytes": 2468,
+      "sha256": "b61040036aa10116cf30df9f8569c97c7daa703123a4497e4c8247ea24b00074"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/icon32_pb.h",
+      "bytes": 8139,
+      "sha256": "61ec792a1e2d64427728ea59d7a5fb47e4cffad873d103a936feb7b19630c330"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/live_badge.h",
+      "bytes": 11818,
+      "sha256": "d53ba1869b15f125c32935471b363cabf9e2b4a85ddfc314d512f63a60daa8b5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/native_profile.c",
+      "bytes": 2961,
+      "sha256": "0059d5be222dd27b335ed046ab9943ef78f96834ccbd1a518fd89c5bbd625a0d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/native_sync.c",
+      "bytes": 10726,
+      "sha256": "519fd524b501ce5e7f3e82aa122fd71ec6a6c9dc580caeb898e6571273d4e5ba"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/native_sync.h",
+      "bytes": 2070,
+      "sha256": "6a74430781dce69e29682ee975e67a6712b21e54e87164323e65de36da31f496"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/native_ui.c",
+      "bytes": 42582,
+      "sha256": "1336bffd6eb148d9f3123ad3a44cda2c2b50c2ea81637475faaea4e65a0de582"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/native_ui.h",
+      "bytes": 1247,
+      "sha256": "f545a9dde5b7b5479d6eedd1ba75570ff88a546cb66724062c40ac76aee8452e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/preview.c",
+      "bytes": 123,
+      "sha256": "c70db4acbc62af1397ae22d947270c6f6b97e2e206a81d16a352cd339dcee12e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/preview.h",
+      "bytes": 2316,
+      "sha256": "b18ab66b9269b7b2862caf3266d30e9ace11f1315e3ec0f31f5995b1a9aceaa8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/preview_writer.c",
+      "bytes": 116,
+      "sha256": "a3852aae9efb055a77205119654d90a915d7fb1a4367744df0293c233884ae63"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/preview_writer.h",
+      "bytes": 1198,
+      "sha256": "bb71025d8ea766d6a849fa9a89e5edd8592331ebf2fa50f476396087f0925dcf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/runtime.c",
+      "bytes": 25381,
+      "sha256": "3a452161aee1e2824bdb000d796cfb5d1713fe5d38196323cdc70825db4661a4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/runtime.h",
+      "bytes": 2726,
+      "sha256": "146b97146d41c90234f2370ad632e720fee0323287ede84ba2747fb7c2638c65"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/settings.c",
+      "bytes": 4974,
+      "sha256": "03c83908d0977a3d6f3d0498e587e5221d9c207ad419d3a6e01353fd17df9f70"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/settings.h",
+      "bytes": 1211,
+      "sha256": "070a579a94d9e76dc8aae5011cb2615ddd14f6b07541a0191751a1e56610a3a5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/sync.c",
+      "bytes": 6220,
+      "sha256": "f2f3298ffb3d498fa0cf2f71c1f1e4320ace9a2159c836f878f7949df8eb96c8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/sync.h",
+      "bytes": 3139,
+      "sha256": "f5d6b5a1381fb6171147e20a0a232f01955770dc794e543d4165efac5b96df96"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/test_native_restore.c",
+      "bytes": 5623,
+      "sha256": "e15ebc0f5e623c88157a1550903428750597cda88304a00f35215bd3c317aa18"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/test_ui.c",
+      "bytes": 3532,
+      "sha256": "bbd61ea1f159faebab48750e4737223da293a44aefc9f336f052297aa641ea56"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/tests/test_driver_round2.py",
+      "bytes": 5264,
+      "sha256": "1ead0d1980ecd1d8f72971448fc1357eb5abdbb5f6de0788850ede3a12346a01"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/tests/test_driver_sequence.py",
+      "bytes": 1978,
+      "sha256": "bcaef4477ba9ec9b485d4fb5cc6c8d0194a32fffef68ceac2c2c6a7e55b0d8c2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/tests/test_driver_snapshot.py",
+      "bytes": 1817,
+      "sha256": "ee98827d0877770dd3a90be99d6fd98520cb68baf8ad4e258bb080ee184e4213"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/tests/test_preview_sync.c",
+      "bytes": 8857,
+      "sha256": "95d80bd592de6c9d2080bcc52cb860f5cce65414f8cc358db5e5f304b37127e0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/tests/test_preview_sync.sh",
+      "bytes": 908,
+      "sha256": "47234f4b8c96cc9de40da08192d6a39f678b7bf2751d20ace37bb2382a8c668e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/tests/test_preview_sync_native.c",
+      "bytes": 7887,
+      "sha256": "9cdbeae19695f001d14e7739e5032f60c6e9e6e6700726d8a88c0cd7703b22f9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/tests/test_settings.c",
+      "bytes": 2865,
+      "sha256": "57b0b237205c2333b07efed60486786950e31ca2fd5b1e2a8bc5d8dd8b96d28a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/tests/test_settings.sh",
+      "bytes": 761,
+      "sha256": "45b2e8907a4a3122a50f6828c2970672f8b62a4a6650604b053c720858df6dfa"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/ui.c",
+      "bytes": 7461,
+      "sha256": "5fd360d3d2f07c901d965f305ffaa261c3b8c990928bfae59db372acaa68d714"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/pb-fix37/ui.h",
       "bytes": 1180,
       "sha256": "19fa33ccd7275e691e7d2fc32951eee26ff36792ae54bdb3d366eb76b2c6b2b3"
     },
@@ -27127,6 +27922,1166 @@
       "sha256": "bb5a82ab1f9b0d20f93a53bcc23ab1474d7447db0f21e338bcfc01938dbee66d"
     },
     {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/PROMPT.md",
+      "bytes": 4221,
+      "sha256": "e481cde2fbbb5880892fcc2dbc223ee09f90af2ed3ee887e968cd2538f090e07"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/REPORT.md",
+      "bytes": 17435,
+      "sha256": "2f8b5c11ae8f6aab62441437a6ec24b56263036a70774ce0cf9b7e1ba7f18319"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/RESUME-1.md",
+      "bytes": 1566,
+      "sha256": "8f94df7013e1674240929e978cf6edf9402724fecb3c528833ca9b3ece37e4fc"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/analyze_v4.py",
+      "bytes": 4035,
+      "sha256": "eb391078534e4e0bd06164697f33cdbe77753649d4482e0bcc3f0fe39252055f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/audio/live_audio.c",
+      "bytes": 5745,
+      "sha256": "8cd05ea932143ecd2bd0e7487af48b181d9e4fd193a3d7fead314d89b1258a10"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/audio/live_audio.h",
+      "bytes": 3912,
+      "sha256": "3c9667ab0be4f29e80dd6713273a5109445a7d829950eb2b623d9ab0e3b4f606"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/audio/live_audio_mov.c",
+      "bytes": 3343,
+      "sha256": "e7d320614801ebfc8f6f24e9580f3c8dd733cf63c105677fc29794c90218a58c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/audio/live_audio_native.c",
+      "bytes": 1457,
+      "sha256": "dfbf158ad9297fc6f640cd26d5ae27f9fec3da755488ba8346613e87afd84498"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/audio/live_audio_z8.c",
+      "bytes": 7418,
+      "sha256": "a9f30bcc7fd798b2adc597728ecf55dd8e9eb80ad0f858e7cf9bd3412ca30b1a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/audio/live_audio_z8.h",
+      "bytes": 3065,
+      "sha256": "3480347cd005d14cf0da7d6ea7e1955168e6f5b89327d4120034d3dbcdd0827a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/audit_v4.py",
+      "bytes": 2629,
+      "sha256": "3584b90b10dbf2d351a248ab0ae8b63873cdfa237e86b357ad64d1b647d64d05"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/batch-v4-retry.py",
+      "bytes": 2562,
+      "sha256": "0673f5998cec81722d8254ee45889db4accc9919f1dd47dab7ccac9a52e10ef7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/batch-v4.py",
+      "bytes": 2561,
+      "sha256": "3e1ee2d2ec04ba6c958453174b408f7f9e4cec554b96717c5ecf31b0b1a69510"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/build.py",
+      "bytes": 7750,
+      "sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/INTEGRATION.md",
+      "bytes": 4696,
+      "sha256": "0ab25eec2388f55f66dba8dee75442398cf895201720cad425bc760fe1f6ae2e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/check.sh",
+      "bytes": 658,
+      "sha256": "def7b6540e847b3032608a6f38e57015aa4e7358d209dd123598f2d5abdc5426"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/hook_test.py",
+      "bytes": 4774,
+      "sha256": "9502e23d84b5613e2258d4c7c313ed8674ac1e63eb8c540045ea2f1a6b847915"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/live_alias.h",
+      "bytes": 1808,
+      "sha256": "557d68970d06cf0305e94c8e0d6083ead1e068eed8353e30669cf98d27398fdf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/live_capture.c",
+      "bytes": 7889,
+      "sha256": "fb2c66596d1dcf46f77d5cbb2ada69a9fe79427284cedb81bbd170707525ed39"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/live_capture.h",
+      "bytes": 3069,
+      "sha256": "0b5826a983261b740323db66209de783caa78eb766f2564ff90c2f8cb86c93ae"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/live_stream.c",
+      "bytes": 19858,
+      "sha256": "373696095024319f015e40f06a861ae356de8aab13c87d1392cf29c018166183"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/live_stream.h",
+      "bytes": 5670,
+      "sha256": "45a26f49c25a2ce26b3a17b3622c317e12a0b4f2962b05ced7c318e5237643b2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/native_capture.c",
+      "bytes": 9226,
+      "sha256": "867aa66250804236f2088b894dd31f4aa199d7e143746e08cacee8d4b7d132e5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/native_capture.h",
+      "bytes": 1104,
+      "sha256": "51098d3cd05d882b4962b3bb9aee8854b80832291207c03e32a7a5bc42afcb3f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/runtime-review.md",
+      "bytes": 2436,
+      "sha256": "5ede040fb6bc5af5e7e3d83011364fa0a5c5e64f85f719eefc493f804fb4a7c0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/test_capture.c",
+      "bytes": 3696,
+      "sha256": "a68a506402f6d92bcc7d9dbc29541633afc5dc118ba3b520ea7b5beb7ae38dca"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/test_reduced.c",
+      "bytes": 593,
+      "sha256": "73d4acd960aefca6844fc728fbe5fdfc396bc6d74639b62381f4370ca05180f0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/test_stream.c",
+      "bytes": 5140,
+      "sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/test_ticket_unicorn.py",
+      "bytes": 3140,
+      "sha256": "377003f34d0fc33758972cb07f72685fe020ec87b6bb616e48b099d2c97d96cb"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/capture/test_v2_hooks.py",
+      "bytes": 2790,
+      "sha256": "b4f621802ac6a176fde7f268b548b4a5de942ce8a59f2390075cdfaf1fe7420c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/check-v4.sh",
+      "bytes": 1053,
+      "sha256": "d6a1938d73890dbc29ec995d9969681de459ad344f65ba1990432ef84bae0e42"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/FS-EXCLUSIVE.md",
+      "bytes": 3713,
+      "sha256": "60572c755a52ada143556ff8d7920a0be18715f8c5b9f1a5e2ea558fa4b50602"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/NOTES.md",
+      "bytes": 5097,
+      "sha256": "019c4f9b0a6cdaa04255bd23e4250364ac9180ba8757311fb98e7e74ae05b3db"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/au_ring.c",
+      "bytes": 1620,
+      "sha256": "5ab69d1ab37e8dc28c0cc920a1d62b1f181b9771cf497fded0492939a501c661"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/au_ring.h",
+      "bytes": 596,
+      "sha256": "ab3bbe446b752f11bd72790cd04cfcfa9f0c1ee54b3979f2c6fa579b2e355f51"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/audio_mov_test.c",
+      "bytes": 1963,
+      "sha256": "1cfaea43d1f294e429a6ef9bf3994e2c48bea9c9a61cc3d64c36239fe6d5ae88"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/build_and_test.sh",
+      "bytes": 2031,
+      "sha256": "7ea129482c5e39cc5dc3df08e974667915dbc53cb3c9ee2651bf012f7a433412"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/freestanding/assert.h",
+      "bytes": 28,
+      "sha256": "960d0f5a819068ebb5977e6dbdcdc6900ca4b054c800c62514b964bf11712674"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/freestanding/endian.h",
+      "bytes": 81,
+      "sha256": "27a6224374b8931986dd626467a489537cd4a7a353ff18671f66ab16766bd177"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/freestanding/stdio.h",
+      "bytes": 52,
+      "sha256": "ead58ae45d54be0028df137e2f1974a75ee66a237a650f88e1ea86c92220e9d9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/freestanding/string.h",
+      "bytes": 184,
+      "sha256": "de12f521048a8e3e04a34dd086cd31832c71cdf86f1722eac35114d3821db9ff"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/host_test.c",
+      "bytes": 1811,
+      "sha256": "19727a6622d782acbdcbf99228b0d6f15bc9297c0b6bd17eabd99ebc478de84a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/live_codec.h",
+      "bytes": 2876,
+      "sha256": "7cd726acee531647128ee373bb0293090a69af9f90dd56f927f579ae9fd3f521"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/live_encoder.c",
+      "bytes": 3201,
+      "sha256": "4baf8ac86d1a0425e760c0bf2a307bae699cd248078b003a95aca8bda22f6605"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/live_h264_idr.c",
+      "bytes": 9908,
+      "sha256": "fc31fdc1a5b168eea0046f0369e79d93f7e781764ca15d18227bc2c4e5590b4d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/live_h264_idr.h",
+      "bytes": 1379,
+      "sha256": "7ea7e8b4ae4413f1dc372b04768128d4e83b13b53d4ec07e0dc3f0bb86a02b03"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/live_jpeg.c",
+      "bytes": 2450,
+      "sha256": "4a4fa5cd278b5478f175488b0bd50d3168a55f7d6b7cede843d72c272e6a6fbe"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/live_mov.c",
+      "bytes": 8958,
+      "sha256": "fb8adedba94512002e1e89d75ee6de032da9308b3f0495f3f2b58c78ff19c7f9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/live_transaction.c",
+      "bytes": 9015,
+      "sha256": "1f62fa284d44d8f5fc51e7e5fb5cba63d41f04adb6ce3a96098615e4a101415e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/live_transaction.h",
+      "bytes": 3362,
+      "sha256": "9f65668e2718d443fbe3627bfb6908380eb86a8a46f6715099e3ab650ec25a85"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/live_w5enc.c",
+      "bytes": 26698,
+      "sha256": "5040e200d86cf34cb04be09d04c6d863827d436590c8a3b5c65ca77bb4e87499"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/minih264e.h",
+      "bytes": 410421,
+      "sha256": "6df33ce8402b41320c5f75a1eab4197fe48130f58829aecd4d67a53b19a91fa9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/native_adapter_test.py",
+      "bytes": 4123,
+      "sha256": "45e17ae1b89c8eece4d04c9eed22e95f6a50b43ae6b6365a9e7d2ed94c05c9d6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/native_files.c",
+      "bytes": 3888,
+      "sha256": "e422b85e1eb6179091537b9e98972283a4ce9e7070a73ba66e91f184d6af85c1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/native_files.h",
+      "bytes": 530,
+      "sha256": "8497221cd7820b30ced02ca8e327d29bda1c9f8f8f022c9f2059f428ca33b63e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/preview_reader.c",
+      "bytes": 10143,
+      "sha256": "3d729fee2a8c63fd7414e92258fbf0a660bd02189a26561f006714e158d38699"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/preview_reader.h",
+      "bytes": 2316,
+      "sha256": "b18ab66b9269b7b2862caf3266d30e9ace11f1315e3ec0f31f5995b1a9aceaa8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/preview_writer.c",
+      "bytes": 13125,
+      "sha256": "6e0619cfad4815154e13bc82b8586c983ec063b2c0cc788a37ee95183860c7d6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/preview_writer.h",
+      "bytes": 2602,
+      "sha256": "cd1dfa1bfd9e852fbfa0fbd0717a6ac64c31e9bb78b610dc3bc530cfaa181fb6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/test_au_ring.c",
+      "bytes": 693,
+      "sha256": "496bb4915577911af7838b1ac92cc88318bb5601afb5d3076c451e9d166a7e16"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/test_paths.c",
+      "bytes": 882,
+      "sha256": "e56b8e6c7ea52fd474480f1d742e7f1735e93760343f5ec4774bce5c69d7e351"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/transaction_test.c",
+      "bytes": 5654,
+      "sha256": "3744d146e700d5bbf0710d7409957f50f408830a661e1824c1aa3d0f324e30b7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/codec/verify_artifacts.py",
+      "bytes": 1889,
+      "sha256": "332cb07b17db373a63c052a14a900a463cb820bf7ecf13ca17c39dd5d5cac339"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/driver/card_export.py",
+      "bytes": 7640,
+      "sha256": "c291f8a5d9e9980b9cbe3b36cd375719930a99752cf84404f07364dd98409aa7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/driver/diag-runtime-offsets.json",
+      "bytes": 339,
+      "sha256": "68a05ec3bd74929e9790baf9f8c67f44aeefaf56ee56ae6d80984f9f9505bd66"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/driver/exfat_put.py",
+      "bytes": 3670,
+      "sha256": "a1dacd2482465eea009c4f4ca6d410a22e073703cac314315afb385abf893ace"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/driver/pipe_transport.py",
+      "bytes": 2931,
+      "sha256": "7f84f091b15150ced8946e9ddbe90766ad87118c04a065e9b40532fb8283489c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/driver/run_live.py",
+      "bytes": 20031,
+      "sha256": "f732bd8ce766a71c022f41c5c172f2233e69a2beadf40ec05085e117104cf476"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/driver/test_navigation.py",
+      "bytes": 5257,
+      "sha256": "384e28f6d97dd709c3e121d5a52ac2f5de1ff1141c1d0a0e2f6887c4d0a24d53"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/driver/z8_capture_resources.py",
+      "bytes": 13618,
+      "sha256": "912aa9397859bc7efe7bc11fae9cf5fe6ffc8355d58497cdc703f815c5d594a2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/hooks.S",
+      "bytes": 1863,
+      "sha256": "96e0c016cbddfc71d716d1ee53b4e8168a87f1eabbbf8cb5e2d3e8036ac985a2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/offsets.c",
+      "bytes": 1943,
+      "sha256": "d2b93f97fe98cf30a5f6d724a59ba2f196e86a42b12ca43ed85e9695060047a4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/progress.py",
+      "bytes": 1046,
+      "sha256": "ea724bb13fe370da3edbab1e9fab92625eb536bde60a7b89bc2db3eca83056a3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/runtime-offsets.json",
+      "bytes": 1755,
+      "sha256": "1cae8092271b4e2a7c1b449a357ed13c069b36580a06c7cb5ff4f5419484ef68"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/runtime-test-offsets.json",
+      "bytes": 92,
+      "sha256": "b994feb6c7ac32752755006453c6fb2899b44958a224ef02ff4c5604bc3f0854"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/runtime.c",
+      "bytes": 27502,
+      "sha256": "811d030e3e1ad098961aaa6ecdb0532ad42d4e171a6535d70b6ea3e0f4452ab7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/runtime.h",
+      "bytes": 3064,
+      "sha256": "67ca331f80766b9a4f7c25e5a5a5356a6d56fbaa499e0ff44949569b78c65ca4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra.h",
+      "bytes": 4109,
+      "sha256": "d7113bdacb270d0045cd33837130a860bd81150b0df9da79fd82b47c23e70d03"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_accounting.h",
+      "bytes": 3565,
+      "sha256": "e963fb6aa7298910e4f8cdd11db314138b979ba01df7df43432de4150ec8cb88"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_accounting_sdk.h",
+      "bytes": 347,
+      "sha256": "3cf504f021f456f0a1763a46b7dc2d6c106ee948b8cebf6f29b267ad2fb72c0c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_accounting_service.h",
+      "bytes": 743,
+      "sha256": "1fe7120983247cfafe2635bb34b6c56a7e2f1ace6f05deaa43ae38260edae128"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_allocation_observer.h",
+      "bytes": 1267,
+      "sha256": "f2c29b5ecf654820e3495bbfefdc54ad86c5e18b59be5e76432cb23fb95b0812"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_api.h",
+      "bytes": 248,
+      "sha256": "1f596e167cd446ecec20e4571814db7806e9448d60d07a647e72ae615c1fc0a7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_binding_store.h",
+      "bytes": 3274,
+      "sha256": "70934f5a855e8be722a392a5c86216b13e0f3c8478807b7c141c329f7085aaff"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_bus_sdk.h",
+      "bytes": 2636,
+      "sha256": "dfb456d4c6a42ab7f52ef1499362aa00f040e4ab86828b5553ff94a9b1ffdf07"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_capture.h",
+      "bytes": 892,
+      "sha256": "1467a27e485df323daff57587074c66882b0351dd484e211c8381881836c1d39"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_capture_hooks.h",
+      "bytes": 2381,
+      "sha256": "276bdc5ea02c1d92c8110aa27d1b1bf20324fae0ef115efda643a92c90982ddc"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_capture_menu.h",
+      "bytes": 2444,
+      "sha256": "b4d481f7012dd4853054a96279d85b7ccfdf949d4326bd4f2cd4fcfc689b6e1f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_capture_quick.h",
+      "bytes": 1663,
+      "sha256": "acde982a4eb2095320764e786d5c7d181fb825a3f88f47772ee9dc32716d89aa"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_demo.h",
+      "bytes": 1379,
+      "sha256": "76b4e962ba9e4dc1ebb0a4f1d145c2313de23f6504f1c4aca0b30136a5bbe0f5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_display.h",
+      "bytes": 1387,
+      "sha256": "89f5d70046b42d09c7442e168e15967f6655928d2cfc20698913a7c86feea95e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_observation.h",
+      "bytes": 709,
+      "sha256": "39a9646563d38bfe6d9c0393443e6b3231f7d5a46519f40f54146e48bfb079e8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_panic.h",
+      "bytes": 234,
+      "sha256": "500743db071c820c1fc1806f2c0420fc32185d3b78aea620d4a18b0817ea52cd"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_rtos.h",
+      "bytes": 1014,
+      "sha256": "20bdab54f1c151ba30343ec2d9ee1e27ed9ca921e0e0bf0aa38cdbd195b1ce2d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_scene.h",
+      "bytes": 527,
+      "sha256": "d0821072d437736bb70f1fa6536befd06c57fe92ee134fb56c12b074113bc9f5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_services.h",
+      "bytes": 1260,
+      "sha256": "12a2af85638031c678dc735518756a90401cc532942eb3fc50047ceb6a977cd1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_startup.h",
+      "bytes": 1112,
+      "sha256": "70fc26055a1159ca3fc6bcc60f8bfe0834d91dd04ea31c1621114c77af4e3120"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_c110_usb.h",
+      "bytes": 386,
+      "sha256": "f245fb2ca13108e6ae6a58e6264485a8838d71fd64d29168a21f208c68f89505"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_canvas.h",
+      "bytes": 4925,
+      "sha256": "22140f7b59cb4c5e25628a9e217ab55a0dbb6c1cd46633a5364db81f09a30efe"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_capacity.h",
+      "bytes": 3711,
+      "sha256": "a0da52fa856ef4bac912d5b3a905564bdebeef87a3379dfbc51aeb28b6186929"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_capture.h",
+      "bytes": 1336,
+      "sha256": "7d6341dc945fd70764ed8df4dbb720e5ca1576ec6c0a236189df9d5633fa55c6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_capture_service.h",
+      "bytes": 894,
+      "sha256": "c74bf4c927c914226b612291f141823595b3fe2592a74af42476bd973fa85ae7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_critical.h",
+      "bytes": 1364,
+      "sha256": "2034b5dbba2a500847cf0ba75246a5257654152c897497a594173d468740ae00"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_critical_sdk.h",
+      "bytes": 656,
+      "sha256": "19f3065a10e10d4bac0e74a3fb8118b54abcf6e73e059bee78d0fddd9621d461"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_debug.h",
+      "bytes": 1757,
+      "sha256": "984d5856e59c32794691a953d56979d27efa9e4694a334726bc441a058311fd5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_demo.h",
+      "bytes": 1133,
+      "sha256": "49ea942ed2778aa85d18d69068f8dae0a39c5c87d83d9ff7453f9d27e3dc06ed"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_document_sdk.h",
+      "bytes": 1492,
+      "sha256": "a0189b4a8066e0c2c0563123d715c84258431daee4e9e3eae6d38da894864057"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_events.h",
+      "bytes": 1683,
+      "sha256": "d16a533dc1f27a616643b660271d3f3c9f8577e1d54886d183ecf8358a418181"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_events_sdk.h",
+      "bytes": 436,
+      "sha256": "4402cd3810212667414407dace9ed7afb19cde6fa01a81e42900607995bb98e5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_exec.h",
+      "bytes": 2956,
+      "sha256": "cb9fedd711a5df483e4c2f62fbabbd7f68d34789287d804a72cf4f2c831967f2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_exfat.h",
+      "bytes": 1519,
+      "sha256": "71d0817911ec59d517c7dd43747bee74d662ffdcca74aaa517c6f0531174da12"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_extension_services.h",
+      "bytes": 3449,
+      "sha256": "0246f1a1a7e20bcc0ecc185f13f285da064ae8ba5b686194b8a60c504efec86f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_fault_test.h",
+      "bytes": 339,
+      "sha256": "c2f1582b2be974736a9100e6a44ff5150e404e42c2fdedfbe444eb4d8484f3a0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_file_card.h",
+      "bytes": 1014,
+      "sha256": "932fc976b39179c5081f9792b35e48f05560bb328e33372ff2574069cd7363ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_file_observer.h",
+      "bytes": 1065,
+      "sha256": "656c048148258806254e0b89149e6e62d90047c89ebce23234d3533898110ba4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_file_sdk.h",
+      "bytes": 781,
+      "sha256": "e1716a2c41ca46911465d5d7e6352cd13373a0031333ea3568dad01fe7337853"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_hooks.h",
+      "bytes": 4033,
+      "sha256": "2c06613ca79077339f7d5df88c4dac274d01d6427136247db8c1699ae2586314"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_interrupt.h",
+      "bytes": 680,
+      "sha256": "321174bb69c145c99355fce250369388823e0549b41f5b2c409851144cc908d1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_irq.h",
+      "bytes": 3086,
+      "sha256": "1ea985818256142af8f8607fadb81f881b58bf43fa7158cac574769f0d692da3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_jobs.h",
+      "bytes": 2956,
+      "sha256": "fbb0dcf715dcecc02d80dd8dc064e0afcb713d5c8dc47e13373e51e0ef523e85"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_load_sequence.h",
+      "bytes": 909,
+      "sha256": "df240e9c3a6e3dbf18c0eb1ae0c14eaeb4e69b3589b4541315b5d2e6613d31de"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_loader.h",
+      "bytes": 2005,
+      "sha256": "1edd453528c126b75eaff182c321244fede097e148cb64c9528122ddae882371"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_lzss.h",
+      "bytes": 610,
+      "sha256": "a255c744e6bea5925eef43cec27b3084cedc8a9e3b42519bc4aa1b718a38380c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_machine.h",
+      "bytes": 841,
+      "sha256": "539904686f3962a0afbea449a4206047a026214667150ba3d6bda8bc3eee9f84"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_mapping.h",
+      "bytes": 3565,
+      "sha256": "09d791d179b2852a90cc959701517a94e89d5068ba060a31e467762bbad9839f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_mapping_sdk.h",
+      "bytes": 966,
+      "sha256": "139853fd89f65901df6cca3c0f97668047a705a55d3116c4707815ccf7392df6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_memory.h",
+      "bytes": 779,
+      "sha256": "88d25accb11aa9830da59fb55d2a5e9e2052aee570bdb445ee213d61dcb23910"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_mmu_context.h",
+      "bytes": 1513,
+      "sha256": "25e31442353418fa5a37317682455b0620c5e9be0f6cf54c2f9d4b8aaedfe4fe"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_mmu_sdk.h",
+      "bytes": 4844,
+      "sha256": "8cf362b3f71f136b4bed88dc1cef6fee0178c8fc66c4586ac1c115da24546cd9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_module.h",
+      "bytes": 3564,
+      "sha256": "3087802fe797467c91d67bf4cdaff58ae06aee79ce0ba159f0cbf48a113519e5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_module_bus.h",
+      "bytes": 2576,
+      "sha256": "7c580ef5884457724f7a5de502d18abce9516913354c1ec09fbffcc29783650b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_module_index.h",
+      "bytes": 1552,
+      "sha256": "bef2e1998303ba3ec12b6a42de6bdfa6e83786d7ea7300e6b0e6e724c499b65e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_module_load_buffer.h",
+      "bytes": 1248,
+      "sha256": "b03b3188a2493587d2f07d6714e70ba36e2f4389c02967ec8c62873062ed447e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_module_manager.h",
+      "bytes": 2964,
+      "sha256": "0a7835079610f8ef6f1377b8b295b02cfe8a344c1093115fa677795f5ae09308"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_mutex_sdk.h",
+      "bytes": 2160,
+      "sha256": "f97fcf2c4812a2535c2e3d7b60fb3e595702b03ee4df71a7e9df27aa07d55b12"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_apps.h",
+      "bytes": 4004,
+      "sha256": "56ed587d519951725a9d017c87477ad279d4904d5439fbd2974c9def66f19fef"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_call.h",
+      "bytes": 932,
+      "sha256": "ced7812cb3c4f5f5037069706e0f5fead97865b66e1386409934b1d70a876b5f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_context.h",
+      "bytes": 1078,
+      "sha256": "c6cc9148dc53ac056355e0f105beeaea2f54a0b29b8659fa2c4681a9c67c7e6c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_display.h",
+      "bytes": 4528,
+      "sha256": "47e7bac4dc36af4b6e365900f1cb5425ac9a5650041117fda6fd5a84a1906ee9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_editor.h",
+      "bytes": 3137,
+      "sha256": "ace14c79f00e97e133f7c52bb6da417a55d5b6ecf75e668d807eda0ce6a6c128"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_font.h",
+      "bytes": 2313,
+      "sha256": "20cc84cb5dfe7bb0d5a266717e8ad7c03be10b8444d8566011fa3e0849550695"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_linux.h",
+      "bytes": 1904,
+      "sha256": "e2d1c2e281137b823e84d2b29e36cb98491e441cb2601ffeb4f7ad5efba0c499"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_mapping.h",
+      "bytes": 444,
+      "sha256": "2e22ae35d92894ae59ced5c9090a689658ea6d0d16ed806a5d6c1eab644cbf3d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_menu.h",
+      "bytes": 4828,
+      "sha256": "776ba744de6e9b058b3ff449364110a6767cc95a51a8d314daa29c5a668c2bca"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_modules.h",
+      "bytes": 908,
+      "sha256": "9cf8de7e3c65ce2bb9dda6767cfc4058ad6004fd1a0b3e882dd275d942491708"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_namespace.h",
+      "bytes": 621,
+      "sha256": "91e9b3bd75852b95fca9082ce9870bbf18d63d3d413fdfb76e43422bc0866aaf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_panic.h",
+      "bytes": 1345,
+      "sha256": "6f7bb39d83e19427316e2043da691d9dbca758106fc6b9566b4e095f1179ddab"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_ptp.h",
+      "bytes": 1828,
+      "sha256": "cab699915115c698c1450e5b1d06906c7e6ebce3f4dab1344b774e0db5fe9787"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_rtos.h",
+      "bytes": 1824,
+      "sha256": "e476ee4f518dc55bde304ed086ac184a6094c0e3aced61b5a465c5b94bc5404f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_scene.h",
+      "bytes": 1165,
+      "sha256": "eab73b05d25bb68e60be682720e0316c8923cac3d32dabe93f620c52c2107c44"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_text.h",
+      "bytes": 677,
+      "sha256": "facb7e5b6867c785202cb25e473f32333d7153b63de7387020a480f68c4adb4d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_title.h",
+      "bytes": 577,
+      "sha256": "14ba5f16401eeea435efcf6c54223965723b31c0b0fdc49f7d46e3532c4916ce"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_ui.h",
+      "bytes": 11583,
+      "sha256": "65510aaf2cb97e9cf5649a60702d9760dcdc477cb7778c25c956bf6fb5432b64"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_ui_callbacks.h",
+      "bytes": 995,
+      "sha256": "37cd69d97e8835fc653fe43468abe756777812a2ed749fcd1457eed123c99c83"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_ui_dispatch.h",
+      "bytes": 3073,
+      "sha256": "9c7385edc4deacb508988a11033ddaeff194fda4da284a669e3df1fbdc4a3e4c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_ui_editor.h",
+      "bytes": 1241,
+      "sha256": "b52fca1c262324a6614c229b4eefe4ff172a8d78592b86608f3b247e143e3794"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_ui_pager.h",
+      "bytes": 2468,
+      "sha256": "a89918f7dd2a7bee687b6f30be5b5ee073f3525caeccb9ab0ba6621b840b4bbf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_ui_reader.h",
+      "bytes": 1216,
+      "sha256": "f538f6e2acca0fae2efed696a4bbd0b7f1d7d828002594e5b30cdb79b5d48bc3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_native_visibility.h",
+      "bytes": 1751,
+      "sha256": "53f5befcc09623c85e9838aa495f7a2e1dc90d69ee1bb905c5c0de76dd0101e7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_nef_metadata.h",
+      "bytes": 722,
+      "sha256": "a1d9dacb09a848ae6e196b693a5b1c218280267a7340044b6b92d72932de54e0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_nvme.h",
+      "bytes": 1251,
+      "sha256": "2a3947ba1ad2bc046e4d83f5e71eda8cc5c34606ce171e2c66f2685943ffc997"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_observation.h",
+      "bytes": 1647,
+      "sha256": "9474a2b04d85a20bee70293176a6cb8de1df8866db34b7db68510b95615f60f8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_overlay.h",
+      "bytes": 5425,
+      "sha256": "8c2d63deb8a245c02ed3495e3ea674d8ab094c6fe3a7ec7bd7b9826539e925ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_overlay_bulk.h",
+      "bytes": 1275,
+      "sha256": "29b86b4f3ff80a1eb8869282bc7f3331846c218c5411a1617130982911bb41ed"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_panic.h",
+      "bytes": 844,
+      "sha256": "9b7c097e68a43af160bbae21b3cb49a0059d6b6b4d3992c6a0e48da2fce4e159"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_platform.h",
+      "bytes": 18479,
+      "sha256": "ba82582ea4e0e0f908daa2094160b433b1e30fa3dd6a756682d790428f4a0025"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_platform_native.h",
+      "bytes": 866,
+      "sha256": "be62ceb61d65b73ed7ca7713facaaf1c17c7da4fe8476ef454c390f7c436b994"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_plugin_menu.h",
+      "bytes": 417,
+      "sha256": "455ea53220552565aafd7ea6df75c5f8005de0cab0d47c464a467b1ffa7a5a4e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_ptp.h",
+      "bytes": 3738,
+      "sha256": "f1eb3b317ae4a91633d091e2d908c2626b0876260875d6fc0521146afe55cb39"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_records.h",
+      "bytes": 593,
+      "sha256": "40d95cdc39000d0ecc5a77deca5388454b9c9f521e3b81ecece02fc6eea53526"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_resources.h",
+      "bytes": 2154,
+      "sha256": "e8441e5ebfc9b328f3a9c889281b9c5a82cb42f31aa086cc4131546037087ab2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_runtime_accounts.h",
+      "bytes": 992,
+      "sha256": "39bc6f986c8383c4381cbc076e678724ec9d8839aca611e6a289d35124b73455"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_scene.h",
+      "bytes": 2799,
+      "sha256": "0c304ce07c580d47f3761d856e84e95c8948f4d86d9e28bd7bcfdb2201a7b99a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_scene_sdk.h",
+      "bytes": 2365,
+      "sha256": "e9047ff936c8149cb086cd3f1d7c912cfc39e2af9d866484e249a0065dfafdb8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_schedule.h",
+      "bytes": 1241,
+      "sha256": "4dbe5d007a9d68cc9382d2a82e7250acd5ca0412a29fa0d013da66d9ff44d1f8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_sdk.h",
+      "bytes": 9281,
+      "sha256": "4a3d3112de7e32d2a8a68f5c0d99ad1ba57b4f81c76c484b0266c861c10bbb8f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_semaphore_sdk.h",
+      "bytes": 2116,
+      "sha256": "432ae1c33d2d8cc83dc137c494e717c22a0708c01aaeb2d95e4485a55c58db44"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_services.h",
+      "bytes": 6856,
+      "sha256": "8e3b564955ef84e4d7d2c49ed2bda33382dcaf086bc59947066caeada5445059"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_settings.h",
+      "bytes": 2158,
+      "sha256": "3de0599a452335e0945c459dec979971d382907b997f2d9ca930719fc6eb1413"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_sha256.h",
+      "bytes": 420,
+      "sha256": "41a3ee225d05934526304f18adad32bc0e70dd4c902ce85391bf4d1401d54d41"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_shared_accounts.h",
+      "bytes": 994,
+      "sha256": "dbf9a284eab7486b03c7795dfe4a48277f49c715c5ba0f66950b3ab59fb3dce1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_simd.h",
+      "bytes": 2676,
+      "sha256": "5dd6b001daaf036e3a0fc41b99e62d1b7f642f82ecf81aba52582bf345322ee3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_slot_pool.h",
+      "bytes": 1461,
+      "sha256": "1fb25a88f575440ec03290b9b2d0220ce0815e169856beb626cd6a29e65c6a52"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_startup.h",
+      "bytes": 1659,
+      "sha256": "4e252850216636010c90b9e361236098d0148145d15cb29b23da9b23b8f8b85e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_startup_files.h",
+      "bytes": 916,
+      "sha256": "28ac2e28e7e0d760571096c1b59c6e8fc6c72169c151c6be854ce3087c490b67"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_startup_service.h",
+      "bytes": 1120,
+      "sha256": "842d16bbee81011c14035175c03951b642aaa80f38e2bb6a6f9a9c36f044f5be"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_tasks.h",
+      "bytes": 2486,
+      "sha256": "60d743be50db352cd403b3774ec34ae60fd0783e70b77fcfb72d8c0449bd190e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_tasks_sdk.h",
+      "bytes": 819,
+      "sha256": "4b92360501437f80fac43bc6ad5049df9ea50bd3b43ea3cf824528855ee75439"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_text.h",
+      "bytes": 1389,
+      "sha256": "55f6f14261c7db7519c41dd90dfe4bb48299bd69dde7805f97d76bd34e0f0e7b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_text_fit.h",
+      "bytes": 486,
+      "sha256": "b5f775bfdfbd54269daa67465fece546c2404d29961277da5db270338f9fe4d5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_text_page.h",
+      "bytes": 684,
+      "sha256": "bf5eeb97c82f91cb73c3b65ae16e5010e43616397261a04c3d99efb4ad2b54f9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_text_regions.h",
+      "bytes": 1419,
+      "sha256": "3ae0db410f362b4b6111ad76717cb42f28e6e9ab7feb87a1d39808ecd807c8d5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_transfers.h",
+      "bytes": 1990,
+      "sha256": "44e8360e8a6596fe65c5a74609b32d61ae839ca7c512927c319919ebcf713ebf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_translation.h",
+      "bytes": 731,
+      "sha256": "2e185da44eabfb118f3e9c367f4ab9b517d8b328a328fea6aaa59679d31a0bd4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_ui_document.h",
+      "bytes": 1317,
+      "sha256": "0a10c61e915ba63b813014463001eb03677509f528cd282d0abdc9fd9df1f1ad"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_usb.h",
+      "bytes": 1479,
+      "sha256": "0338d72d42e9acca2b042043856590c6f10c48c98ae0e62aaa0de751cf8772f7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_video_configuration.h",
+      "bytes": 1856,
+      "sha256": "c177d6937a88fbe937aa8cb0484214e8bca4577b0763be7989b6ca0c05fa4d6f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_video_sdk.h",
+      "bytes": 2066,
+      "sha256": "008ad500e1613492adcc36af4080d4f3341c8be08d94298017644e4948060bee"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_video_service.h",
+      "bytes": 1866,
+      "sha256": "62831e0977c55e5ed96a3bdb4104f8eeb5a110092ebb7e150bd995b644bf1119"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_worker_pace.h",
+      "bytes": 988,
+      "sha256": "37e5f398ca4a183588d79f1a31c8cb318924f6b502dbe624ef829bf14fdaa3ab"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/core/include/fenestra_worker_wait.h",
+      "bytes": 1883,
+      "sha256": "31d528355f034a0fd9697c6c3630f8cb363db1dd92762dd88adfc1a951a7e1d8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/existing_core.ld",
+      "bytes": 408,
+      "sha256": "51661e4a8f9e8685d46ff3c434bfde914c84c79f663761178aaa62667f471dde"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/fx_registry.h",
+      "bytes": 3929,
+      "sha256": "86b91dbba6e12a0bdfdad3fc58a6edc38ebb4d1950b9dac179ccc63e34dfb4ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/icon32_alpha.h",
+      "bytes": 11209,
+      "sha256": "3792a7d3cf9c5ddcf531581f2631c9b1d519a361b2b76f17b89e48eaeba5294d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/icon32_layout.h",
+      "bytes": 2468,
+      "sha256": "b61040036aa10116cf30df9f8569c97c7daa703123a4497e4c8247ea24b00074"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/icon32_shoot.h",
+      "bytes": 8983,
+      "sha256": "fd613944770bb556b934e473bea08771f096dabbc7b8bebab87ae43492669b4e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/live_config.h",
+      "bytes": 1511,
+      "sha256": "c80e1566ce65abcd33e8239599e834584d208cb4348e3160e89e851d10c10f6d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/live_ui.c",
+      "bytes": 21424,
+      "sha256": "c351cb75ba792077e111ad584192b730f3958e789d394c78c397fd561c96d041"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/live_ui.h",
+      "bytes": 902,
+      "sha256": "7b70235b8a4ab17ce88699897f4222b0c43047d9c3fa3fa988de5029c9ebb3d7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/resolve_symbols.py",
+      "bytes": 2224,
+      "sha256": "7865db56248469136750c78c1ad636257f4dc1160d6e70e904f27bd1ca944e68"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/test.ld",
+      "bytes": 411,
+      "sha256": "073f6038d4be1aca74dbd1b361674bf297d9a61fdfd8f8497b76db5a7e2d9af0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/test_config.c",
+      "bytes": 1201,
+      "sha256": "88318dcb190b48d1be0d07597d2f295f982fbe450bf1b5bb2531350ef53e442b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/src-fix37/ui/test_ui.py",
+      "bytes": 6311,
+      "sha256": "bb5a82ab1f9b0d20f93a53bcc23ab1474d7447db0f21e338bcfc01938dbee66d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/check_mov.py",
+      "bytes": 2761,
+      "sha256": "9a8b254f3946739454420a094513911572df07feafe5b73be3ca51d634e9769d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/qemu/batch.sh",
+      "bytes": 873,
+      "sha256": "68e8d7518d858abf49f9642321600bb88e81570c68faa93587161427ca90c070"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/qemu/build_swenc.py",
+      "bytes": 3845,
+      "sha256": "628a5d72e99e96ce4a8f99bf0aeada5afcc440a9ab3bca80a32ed380b0cfd07e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/qemu/build_swenc.sh",
+      "bytes": 592,
+      "sha256": "2eaabdf4b4dc0e2501de3e445ffe748fb5f0dac22de2ca207f54594867f8f2e7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/qemu/compare.sh",
+      "bytes": 613,
+      "sha256": "c47ef7cd315e863b6b706c5d2dc7b0f6a3ad3a19911b759c8e985ba43fc2cb2f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/qemu/derive_manifest.py",
+      "bytes": 2111,
+      "sha256": "44f4fa1b9c21255eb372cc5637cd2765f0d19b9ca03cf7f31e7e6e394918229a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/qemu/offsets.py",
+      "bytes": 3738,
+      "sha256": "31a1f0221249fb82f3d7d0e326572eec3c7deca63dc26b8e94eb253a7e45956b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/qemu/run.sh",
+      "bytes": 641,
+      "sha256": "36eb08988ce791eb30c29737085a48263c96925010bb22e92298012512104a13"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/qemu/run_v37.py",
+      "bytes": 19893,
+      "sha256": "1ca90470503cb3f786f000552b94560c166f1a126d4698bab365d6a6e86a3540"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/qemu/status.sh",
+      "bytes": 530,
+      "sha256": "d2b2f0b95d003db35f913028f8ceb19987100d939e13e0065713466c0c5b1e37"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/qemu/summary.py",
+      "bytes": 2227,
+      "sha256": "1bc4026426ea428f8a30f0970ba617e670397a01ae833c5b98ad3b7643ff2b78"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/re/dump.py",
+      "bytes": 271,
+      "sha256": "8d5931a1aa720f89707798b134262a64a4b1ba09189326b3e572b22a6bce22e8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/re/ids.py",
+      "bytes": 727,
+      "sha256": "077d195fe30e66f3448a443e036f9c79becef51d013ab507b2d9645f02f89a35"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/re/immrange.py",
+      "bytes": 445,
+      "sha256": "71be7c905bfe5f2ad6200e21fc35f5b192a41467292418060ec3af0f9c5eaf00"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/re/mainre.py",
+      "bytes": 3505,
+      "sha256": "e7d4da1991c443a09074fb6202354e9270bf49c55dc535907ab762b8f507f111"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/re/re.sh",
+      "bytes": 369,
+      "sha256": "083e70920e84bae0a232b0333aba23b9c5e8565605834ce6458ef92b2b6dfa52"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/re/tbl.py",
+      "bytes": 352,
+      "sha256": "210e2e2556cc6b03733c16eeb9915a056df06ec75ef495e506acac7b58783f06"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/run_preview.sh",
+      "bytes": 2082,
+      "sha256": "f415621811aa3778ce8cbdacda391ac590d585b15927f1d02bea1edbac3380ce"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tests-v37/test_preview.c",
+      "bytes": 4954,
+      "sha256": "a49be2e110e580937740040bb34b5a738fff8c8553734ab56f42c8ed9302eb1f"
+    },
+    {
       "path": "research/z8-live/build-tools/livediag/feat-release/tools-v36/audit.py",
       "bytes": 7912,
       "sha256": "df151bc0dee7a0ca663ebb9debad90a1f6390effa4ae558de6e5aecbcbd4a40a"
@@ -27180,6 +29135,41 @@
       "path": "research/z8-live/build-tools/livediag/feat-release/tools-v36/prepare.py",
       "bytes": 4066,
       "sha256": "80ce1e6045b95f32df04465466bbce34fde1b294f1cb0b3eebac08ee91f3c552"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tools-v37/build.py",
+      "bytes": 7233,
+      "sha256": "e00001f82c37dd8ae411f25e95bcd6d6fd7d2e93859a8947cf4c5841fb80d437"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tools-v37/compiler/clang",
+      "bytes": 834,
+      "sha256": "3218ddfe429a60828fd3f107c5a9c41c0d752fc9ee5f12a9f3d78a1a0454a789"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tools-v37/make.sh",
+      "bytes": 616,
+      "sha256": "51c81a0196ae410c76abb5ee4170ca50c0fcc772dc290c05529e3905d929732b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tools-v37/patch_audio.py",
+      "bytes": 9671,
+      "sha256": "f07b39b3d27be322dcd0c6f2805a7ed5c87cd8975c3132396cd7cad00aca1ea8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tools-v37/patch_live.py",
+      "bytes": 7102,
+      "sha256": "8b6c9849ec491aed6d5f3aba4b95826b840fd7f0c2f34c736dd67c3f7fc3a5e2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tools-v37/patch_pb.py",
+      "bytes": 7155,
+      "sha256": "620f3fc58cf530d7def107c289cfaa98ffdc6cdee86a04991cc412c2186a0a68"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/verification-v37/build.json",
+      "bytes": 1120,
+      "sha256": "976e0ffdd4bfc56f563f1682504a470c2d611ad22b3ba14faae82eea23be5f61"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/w5in/chain.sh",

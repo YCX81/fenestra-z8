@@ -4,6 +4,35 @@
 匹配的参考清单、各阶段产物与最终封装记录。`RELEASE-v36.md` 记录的是此前
 源码交付时的状态；本文补充后续找到的证据与可移植入口，不把旧报告改写成新验证。
 
+## 在其他机器上复现
+
+`Ubuntu-26.04` 和下表中的 `$HOME` 路径只记录原实验室，既不是发行版要求，也不是克隆后会出现的文件。目标机器可以使用现有的 `Ubuntu`；无需安装同名发行版或重建原目录。
+
+公开仓库不携带这些私有 MAIN。离线源码检查不需要它们；ELF 链接及完整 MAIN 链需要单独迁移输入。迁移包 `v36-private-inputs.zip` 的布局为：
+
+```text
+v36-private-inputs/
+  core-baseline.main
+  merged-base.main
+  reference.main
+  bootguard.main
+  Z_8_0406.bin.v36
+  manifests/base.json
+  manifests/reference.json
+  SHA256.json
+  verify_inputs.py
+  README.md
+```
+
+该包单独保存在原环境并交付，不是 GitHub 下载附件。复制到目标机器后解压，先在包目录运行 `python3 verify_inputs.py`，全部通过再继续。`bootguard.main` 和完整 `.v36` 是输出对照；实际编译输入是核心底座、merged base、reference 及匹配清单。
+
+```sh
+export INPUTS=/absolute/path/to/v36-private-inputs
+python3 "$INPUTS/verify_inputs.py"
+```
+
+下方命令使用该变量。清单已随迁移包提供时可跳过 materialize 步骤，将其 `manifests/reference.json`、`manifests/base.json` 直接传给 link 和 chain。若只有源码而没有这些输入，link 之后仍无法执行；发行版名称或路径改名不能补回文件。
+
 ## 环境与源码检查
 
 在本目录创建自己的 Python 环境，安装 `pyelftools`、`capstone`、`keystone-engine`。
@@ -40,11 +69,11 @@ guard 用目标地址表达，其余原始 guard 从已固定哈希的核心底�
 mkdir -p private-v36
 python -B tools-v36/materialize_manifest.py \
   --recipe receipts-v36/reference-manifest-recipe.json \
-  --image "$HOME/.local/share/nikon-z8-qemu/live-audio/feat-rec/bg34.main" \
-  --baseline "$HOME/fxfix/base-c770f340.main" \
+  --image "$INPUTS/reference.main" \
+  --baseline "$INPUTS/core-baseline.main" \
   --output private-v36/reference-manifest.json
 python -B tools-v36/link.py \
-  --reference-main "$HOME/.local/share/nikon-z8-qemu/live-audio/feat-rec/bg34.main" \
+  --reference-main "$INPUTS/reference.main" \
   --reference-manifest private-v36/reference-manifest.json
 ```
 
@@ -56,11 +85,11 @@ python -B tools-v36/link.py \
 ```sh
 python -B tools-v36/materialize_manifest.py \
   --recipe receipts-v36/base-manifest-recipe.json \
-  --image "$HOME/nfp-rc2/newbase/newbase.main" \
-  --baseline "$HOME/fxfix/base-c770f340.main" \
+  --image "$INPUTS/merged-base.main" \
+  --baseline "$INPUTS/core-baseline.main" \
   --output private-v36/base-manifest.json
 python -B tools-v36/chain.py \
-  --base "$HOME/nfp-rc2/newbase/newbase.main" \
+  --base "$INPUTS/merged-base.main" \
   --manifest private-v36/base-manifest.json \
   --output-dir private-v36/chain
 ```

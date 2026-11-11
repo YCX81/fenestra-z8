@@ -43,8 +43,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5972,
-      "sha256": "59be927b61a765dfc1a526a2fe0f3e19321fddfc10d645d9040d063b6894c048"
+      "bytes": 6159,
+      "sha256": "d19bdb78ee436f20d2d0c536fc803b897c090ff029ce7180e78c5583327a1c98"
     },
     {
       "path": "docs/api-reference.md",
@@ -63,8 +63,8 @@
     },
     {
       "path": "docs/features-and-usage.zh-CN.md",
-      "bytes": 11561,
-      "sha256": "9f0e63c9ea23f63e98eec3d7f702f5af2ae08080d102ed36fe42d9ab34ade0e9"
+      "bytes": 11757,
+      "sha256": "64d5ea892bd3cdebea604e2f200d890262a5ca1def21a7319384d5badb8bbbe1"
     },
     {
       "path": "docs/getting-started.md",
@@ -1283,8 +1283,8 @@
     },
     {
       "path": "research/z8-live/README.md",
-      "bytes": 2675,
-      "sha256": "80b808029d1e3b726b21d0ea5be818331a0e61f4dc2f9646821005c7ab4647eb"
+      "bytes": 2938,
+      "sha256": "6417e8a4e415087da4d03671c3508825d1e65e179075b37f2071c4b0777a26a5"
     },
     {
       "path": "research/z8-live/audio-probe/README.md",
@@ -23337,14 +23337,24 @@
       "sha256": "bb5a82ab1f9b0d20f93a53bcc23ab1474d7447db0f21e338bcfc01938dbee66d"
     },
     {
+      "path": "research/z8-live/build-tools/livediag/feat-release/.gitignore",
+      "bytes": 47,
+      "sha256": "b1050486294493abd80fb07597f301a4bb338d78fc703e03858b67c887b2634a"
+    },
+    {
       "path": "research/z8-live/build-tools/livediag/feat-release/RELEASE-v36.md",
-      "bytes": 14113,
-      "sha256": "cc2d66f75fd7efeb8e1c5884dcf6f15076b5afdb1ef39664f0fae09612404edb"
+      "bytes": 14303,
+      "sha256": "549254a79ea336c8db7016c5549f49fd59f13698904fc10268a6c676871587b8"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/RELEASE.md",
       "bytes": 2604,
       "sha256": "fd5023401c15be29fe4fe201e51b493157572ac9bffc1d2603581ae6dea4de88"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/REPRODUCE-v36.md",
+      "bytes": 4803,
+      "sha256": "b74e36c13c3558262d5d931378af5bb0847b0e2f9607f8f6ec430553ebd97b45"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/icons-v36/README-icon32.md",
@@ -24985,6 +24995,36 @@
       "path": "research/z8-live/build-tools/livediag/feat-release/pbfix/live-playback-ui-icon/ui.h",
       "bytes": 1133,
       "sha256": "0608fe501a63bb7adf2e29526fc013e46c8d083665eb618d329b6cfffe226338"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/receipts-v36/base-manifest-recipe.json",
+      "bytes": 29347,
+      "sha256": "9539fd1c2ea9309edbc37b60f1a96c520389fd368061a4d4e7f0a3fddb2c93eb"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/receipts-v36/live-manifest-recipe.json",
+      "bytes": 30509,
+      "sha256": "3b9785f9dbbf849fde6d0627e02d46e30d4c9a13fe7a9ce927a171f8d996dca8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/receipts-v36/playback-manifest-recipe.json",
+      "bytes": 30532,
+      "sha256": "402e7349e6c52d5cfc8c5fc5aea09b667967ab2b50ba5616ff8942e9cb5951f3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/receipts-v36/pool-manifest-recipe.json",
+      "bytes": 35011,
+      "sha256": "4e219e0f83973aaecc88257c588fadb4dbbab47fd9aff0e57bd7347052cd3a04"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/receipts-v36/reference-manifest-recipe.json",
+      "bytes": 34526,
+      "sha256": "775ade8a7a5502c20bbd028ad727146dc522d561781db8e4c6331725af29bd7b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/receipts-v36/usb-manifest-recipe.json",
+      "bytes": 33714,
+      "sha256": "6e998ca4513bf73d1a40acf6fcd2be2e948e378d00a24b5b155f2fa34764d4bd"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/relive_w5.py",
@@ -27092,14 +27132,29 @@
       "sha256": "df151bc0dee7a0ca663ebb9debad90a1f6390effa4ae558de6e5aecbcbd4a40a"
     },
     {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tools-v36/bootguard_patch.py",
+      "bytes": 6094,
+      "sha256": "5de9dd5549dbbbeb74741892d8643ff829e40f3b62dec2ae49986c27198caf1c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tools-v36/chain.py",
+      "bytes": 5916,
+      "sha256": "1b057a5dbc387b2d1dfcfd604e69949f44a145eedfd2e60b79a17b26891ccda0"
+    },
+    {
       "path": "research/z8-live/build-tools/livediag/feat-release/tools-v36/check_icons.py",
       "bytes": 4243,
       "sha256": "77b1a09361807602a0537ee3d88a854fca732cccc53cdcc28aafcfc415933296"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/tools-v36/compile.py",
-      "bytes": 2516,
-      "sha256": "809512b1343edd92afd68592d70d8617cbc4cbdc745fe54d64cd604ef806c051"
+      "bytes": 2728,
+      "sha256": "2105c6a488a83c5e4b1dd1378a699f08e38d5e5c80dc75f3cd443952641170ab"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tools-v36/compiler/clang",
+      "bytes": 459,
+      "sha256": "868198a80d18212c69cca29eb29acc7a2d3f0f64eea37e72311e357064a0343b"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/tools-v36/delivery.py",
@@ -27108,13 +27163,18 @@
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/tools-v36/layout.py",
-      "bytes": 2944,
-      "sha256": "30d44ed9fcf54571aa90093ff2e2b15ab8dd9125cf8b2b07a3077b2d3e51b996"
+      "bytes": 2957,
+      "sha256": "20c3653a5f788b6cf6e05d281938e4e97d741e5ef98a16a1c7913e39fd9d6282"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/tools-v36/link.py",
-      "bytes": 4173,
-      "sha256": "34fc3b05e25d10eca1c6efd0f0202f9fcbe264774f6334c9791d26957f99e721"
+      "bytes": 4567,
+      "sha256": "cb63d2936d874a592dcc86ae72ce81996bb65814642d0eae918663dddfe19fac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-release/tools-v36/materialize_manifest.py",
+      "bytes": 2989,
+      "sha256": "6299f8975c493c6b84f9701d2bea0bbf32e3ed2e930da54fa07d6e813a64e111"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/tools-v36/prepare.py",

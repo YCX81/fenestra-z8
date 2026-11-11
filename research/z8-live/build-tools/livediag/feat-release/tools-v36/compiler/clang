@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+"""Lab build adapter: preserve builder flags, size-optimize the two PB UI units."""
+import os,sys
+from pathlib import Path
+args=sys.argv[1:]
+if any(Path(a).name in ('ui.c','native_ui.c') and 'pb-fix36' in Path(a).parts for a in args):
+    args=[a for a in args if a not in ('-Os','-O0','-O1','-O2','-O3','-Oz')]+['-Oz']
+real=os.environ['V36_REAL_CLANG']
+assert Path(real).resolve()!=Path(__file__).resolve()
+os.execv(real,[real,*args])

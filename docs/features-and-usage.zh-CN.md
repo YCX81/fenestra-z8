@@ -97,7 +97,7 @@ python -B tools-v36/audit.py
 
 输出在本地 `audit-v36/`。历史构建使用 clang 21，28 个 shipping 编译单元；更换编译器需重新核对结果。发布归档未携带历史对象和审计产物，因此文档里的部分本地产物链接不存在。
 
-完整链接另需对应的私有参考 MAIN、符号/范围 manifest 和 ELF linker；`tools-v36/link.py` 固定读取实验参考路径。`check_icons.py` 还依赖未发布的旧测试 fixtures，实验室 chain 又依赖外部 helper 与适配器。不要把这些历史命令当作克隆后可一键执行的发布流程。正常复编无需运行会复制/打补丁的 `prepare.py`。原始[候选说明](../research/z8-live/build-tools/livediag/feat-release/RELEASE-v36.md)保留生成时的验证与未覆盖项，不等于本次重新执行。
+完整链接另需对应的私有参考 MAIN、符号/范围 manifest 和 ELF linker。现已补齐 clang 适配器、可移植 chain 入口与本地清单重建工具；`link.py` 支持显式输入路径。2026-11-11 重跑了 28 个单元编译、布局、194 条独占指令审计、ELF 链接和完整 MAIN 链，最终 MAIN 与原 v36 逐字节一致。步骤和固定输入见[复现说明](../research/z8-live/build-tools/livediag/feat-release/REPRODUCE-v36.md)。`check_icons.py` 仍依赖未发布的旧测试 fixtures；本次没有重跑图标 fixture、QEMU 或真机回归。正常复编无需运行 `prepare.py`。原始[候选说明](../research/z8-live/build-tools/livediag/feat-release/RELEASE-v36.md)保留原交付时的记录。
 
 ## C64 标签补丁
 

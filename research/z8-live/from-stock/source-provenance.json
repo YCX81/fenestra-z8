@@ -1,0 +1,16 @@
+{
+  "schema": "v36.from-stock-source-provenance/v1",
+  "core_base_source": "research/z8-live/baseline-core",
+  "core_overlay": "preserved C64/native bridge sources; pre-job execution interfaces restored from project commit 1574b32",
+  "core_clang": "18.1.8",
+  "live_clang": "21.1.8",
+  "core_blob_sha256": "bc01ea90f042e036d2894879156c33f80873e8ad472295ebfe89dc9275c642a6",
+  "core_blob_bytes": 268776,
+  "historical_runtime_identity": "a45bb382924140bcc2c3655e777ae1138927c51a09f25ffdef618fb5766b7577",
+  "identity_normalization_bytes": 32,
+  "portrait_generator_git_blob": "c00e4620b7a89a7056356b7481b8e8190ddb1d1b",
+  "private_intermediate_inputs": [],
+  "third_party_mode": "unchanged public NFP toolkits, with corresponding source and licenses; verified prebuilt patch units",
+  "final_main_sha256": "fecbe07e3a0ea2a9136b8e6a396e06b81d3d4e81eda7881c4b98ae20653be1f4",
+  "final_package_sha256": "a6e1d92ef0c52fc4af066eb128460f8c01415e282ade12070e1c4bf5d70a6cde"
+}

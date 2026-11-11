@@ -33,18 +33,18 @@
     },
     {
       "path": "NOTICE",
-      "bytes": 1100,
-      "sha256": "d1a406487db417f4236de568b03edadbd4996d2c2e4d1865dfc96949419f6ff1"
+      "bytes": 1496,
+      "sha256": "d9ff49d6b31762dd112dd7b95818d916361953f00f305676d95eeda5eb7db0f0"
     },
     {
       "path": "PUBLICATION.json",
-      "bytes": 585,
-      "sha256": "0d9b064d6631a3a16816942e2ac305d4a261702b0c44c8e9bbb9eeb0ebad3d1c"
+      "bytes": 956,
+      "sha256": "e770bc437a3fba03153895f8ddcb5b90ccf6b888fad5b07bcb32e877cb1fc2bf"
     },
     {
       "path": "README.md",
-      "bytes": 6159,
-      "sha256": "d19bdb78ee436f20d2d0c536fc803b897c090ff029ce7180e78c5583327a1c98"
+      "bytes": 6184,
+      "sha256": "57a53e62e1ebbf78b2d78ec039e6cadb5b126206638f344bbd384546f705b8f8"
     },
     {
       "path": "docs/api-reference.md",
@@ -63,8 +63,8 @@
     },
     {
       "path": "docs/features-and-usage.zh-CN.md",
-      "bytes": 11757,
-      "sha256": "64d5ea892bd3cdebea604e2f200d890262a5ca1def21a7319384d5badb8bbbe1"
+      "bytes": 12088,
+      "sha256": "b1aece77bac95cd46c6f7430e201eac53846c2608a37440cdaf7d7212df68751"
     },
     {
       "path": "docs/getting-started.md",
@@ -1283,8 +1283,8 @@
     },
     {
       "path": "research/z8-live/README.md",
-      "bytes": 2938,
-      "sha256": "6417e8a4e415087da4d03671c3508825d1e65e179075b37f2071c4b0777a26a5"
+      "bytes": 3108,
+      "sha256": "bf753fabe553b1c4056b0401724e8457a967d286a0c9be3f64c2b5d77d07b89f"
     },
     {
       "path": "research/z8-live/audio-probe/README.md",
@@ -23353,8 +23353,8 @@
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/REPRODUCE-v36.md",
-      "bytes": 6066,
-      "sha256": "76f49264423ce8345c3b164955c7fbcee7364811dee5253226d4c3fdc4e7e1dc"
+      "bytes": 6819,
+      "sha256": "1839b0c060d440f790f7a73baf78d074913163e9deaa5197dc31c41891f110cc"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-release/icons-v36/README-icon32.md",
@@ -28632,6 +28632,161 @@
       "sha256": "1e66083a9faa8c104667db3eb026f267026e106eb9bcc310141023e0f5fa6f38"
     },
     {
+      "path": "research/z8-live/from-stock/.gitignore",
+      "bytes": 21,
+      "sha256": "0cf256cc9234b415f912f5b0e9f8c9364688466041611047cd3f599c35f4efa6"
+    },
+    {
+      "path": "research/z8-live/from-stock/README.md",
+      "bytes": 5400,
+      "sha256": "43ff4c554b21611dd93abf8ea414c0157bc56ee86a28e4af55c7432836a99fff"
+    },
+    {
+      "path": "research/z8-live/from-stock/build.py",
+      "bytes": 18088,
+      "sha256": "50c5c238e0c1cdccae38f078e403ab01aa7f790dd40676810e6b87ce5e694ec7"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/emulation/native_font_sites.py",
+      "bytes": 2839,
+      "sha256": "f518a6a575d61426425b1a085c5de2cbf0d90e38421870b95a6b91ebc43f75fd"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/emulation/native_ui_dispatch_sites.py",
+      "bytes": 4030,
+      "sha256": "4d2148449945150f62f7eae8085a4f2484e61e23a76a8461c327289984109212"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/emulation/z8_core.ld",
+      "bytes": 489,
+      "sha256": "65e82b82253d9233fc1c10a2288edca39854006a7315c666de9cb07686a3539c"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/host/build_z8_core.py",
+      "bytes": 12733,
+      "sha256": "6a4551ad685b6d32eca0bc03512255662c04d3ea977b00973f2edd5f5fdd46e4"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/host/compiler_dependencies.py",
+      "bytes": 2314,
+      "sha256": "f2f1250e39d228e6d0dd9df5264df6aecbdfff9f02dc9b0475e0c83557d504c8"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/host/displaced.py",
+      "bytes": 1362,
+      "sha256": "a77a507dcc79c90dfb51835c5c6e916eab69b50e28c64bb648dcf0cbd6ca4eab"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/host/platform_profiles.py",
+      "bytes": 25948,
+      "sha256": "21eeaa43dbaf8206d1baccd67d2178c5f232d708f9838a61c03b0e9cece52086"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/include/fenestra_platform.h",
+      "bytes": 18395,
+      "sha256": "8506bb04a50edfe1ba1fa6d5bd2ba407dc66da003ae8e10ddaeea4d1cbbeb993"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/include/fenestra_services.h",
+      "bytes": 6681,
+      "sha256": "9e6cc1ae41fef172615e13a8e1eba0c86837387ad1a28adde5668ad372de9da7"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/src/native_resources.c",
+      "bytes": 20993,
+      "sha256": "04a399628d375f077f2503721cdb5f44d6702dd876833e333595f7d0ab15e0df"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/src/platform/z8_c311/menu.c",
+      "bytes": 61480,
+      "sha256": "a694b9df410a699db6a2a9d8b29bd8f06dd67502f83ae56e297a4cf65c7e0234"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/src/platform/z8_c311/module_session.c",
+      "bytes": 14312,
+      "sha256": "0edf997de9025b399a4316680a87024f90693da89dcd7e2a6a7911896f013f3f"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/src/platform/z8_c311/module_session.h",
+      "bytes": 2937,
+      "sha256": "a7d02b2bc5cc9431477599a24090fac7f371b484b09dd0e08e75f5308f631b63"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/src/platform/z8_c311/module_worker.c",
+      "bytes": 13547,
+      "sha256": "5c51aa74fa8f7f7d5e713bb284cf7694c1bcb446d3469f4f1d3dfc54bef8f2cd"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/src/platform/z8_c311/private_call.S",
+      "bytes": 5609,
+      "sha256": "e681f2013147a2067a7633c479b3a2a90fd8a96b9a5a8bad6c58297782ee46bc"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/src/platform/z8_c311/ptp.c",
+      "bytes": 3118,
+      "sha256": "1ee658b4701b54509975760f6ac485085ed968d95bf8b481c96fcac390a125c3"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/src/platform/z8_c311/task.c",
+      "bytes": 1676,
+      "sha256": "29ea4010371064915daf48ca59e7c386e499b9198fa2581da8f1965a848c15f7"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/src/platform/z8_c311/task.h",
+      "bytes": 720,
+      "sha256": "e8d45f42f3b7e3a47d648a6b5c10990653bb253368e42667e3743367fe9217d5"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/src/platform/z8_c311/usb_debug.c",
+      "bytes": 1107,
+      "sha256": "8814c38f9c3a1946a14466db9c3a6f3e1b43060140cb6da55040b535cab0160f"
+    },
+    {
+      "path": "research/z8-live/from-stock/core-overlay/src/slots_state.inc",
+      "bytes": 8322,
+      "sha256": "c2f4daf65e868e75e99109464b124c1fbc0412ec1aefb79ae3ee5b4b6c5d67f1"
+    },
+    {
+      "path": "research/z8-live/from-stock/legacy/movie_hook.c",
+      "bytes": 27891,
+      "sha256": "e1447af31694a61a880f0aa6ab0d4f8bb4a133c09e8f758e29cfb04c65842fdf"
+    },
+    {
+      "path": "research/z8-live/from-stock/legacy/movie_hook.ld",
+      "bytes": 149,
+      "sha256": "afdbf138e33f0f683ffb700b1c82e9260648d93377ab4a296cab72e8e8ed8e9e"
+    },
+    {
+      "path": "research/z8-live/from-stock/nfp_backend.py",
+      "bytes": 2420,
+      "sha256": "e18a94519d6ab310495cb3e77afd0f13f3028dfe3f09d5248177eeba6cfef440"
+    },
+    {
+      "path": "research/z8-live/from-stock/requirements.txt",
+      "bytes": 56,
+      "sha256": "a23326c60a4a64de5c5fabb9085560a780b3a73856a38b067fca44141e4448d0"
+    },
+    {
+      "path": "research/z8-live/from-stock/source-provenance.json",
+      "bytes": 969,
+      "sha256": "9cf5bb53dbeaf62d588f55a9e394d9d9da74ad0407235f54654eaed49a79868f"
+    },
+    {
+      "path": "research/z8-live/from-stock/third-party/NikonFirmwarePatch-v0.3.0-r1-toolkit.zip",
+      "bytes": 1022549,
+      "sha256": "704dbb2e09abed4e641174810ad655a413a2eff4042845371499c896634591ed"
+    },
+    {
+      "path": "research/z8-live/from-stock/third-party/NikonFirmwarePatch-v0.4.0-rc.2-toolkit.zip",
+      "bytes": 8046605,
+      "sha256": "9a00183b54ee80e02e89445a59f5806a1e738ea22e2400538221ca27c21d9b4c"
+    },
+    {
+      "path": "research/z8-live/from-stock/third-party/README.md",
+      "bytes": 1505,
+      "sha256": "44daf471918252cd3fbcb1a14fa64c26dc6cfd62a6d2c69cf57e2ed3d13f6684"
+    },
+    {
       "path": "src/accounting.c",
       "bytes": 15918,
       "sha256": "29946f35d3fa52f7f47777f9b4cd084596cdeabf516c5accb54319eb9548c3b0"
@@ -29520,6 +29675,11 @@
       "path": "tests/test_cipher_patch.py",
       "bytes": 5861,
       "sha256": "5e122c7a6f27ac53495a9401c9f88e703f910b3a8e6de0d5913636236b792fbd"
+    },
+    {
+      "path": "tests/test_from_stock.py",
+      "bytes": 1486,
+      "sha256": "571a793d2d5ae1829c9326296d2b4eebc9bee5974d688a2981adf6801377501d"
     },
     {
       "path": "tests/test_ptp.c",

@@ -82,6 +82,8 @@ python host/build_sdk_module.py modules/demo/sdk.c \
 
 ## v36 开发与离线检查
 
+从原厂固件开始的完整入口见[原厂到 v36](../research/z8-live/from-stock/README.md)：只需两个仓库和原厂 C 3.11，历史核心用 clang 18，v36 用 clang 21。公开 NFP 工具包及对应源码/许可随仓库固定，无需私有 MAIN 或迁移包。下文的单独编译命令仍可用于源码检查。
+
 当前候选目录为 [`research/z8-live/build-tools/livediag/feat-release/`](../research/z8-live/build-tools/livediag/feat-release/)，Live 输入为 `src-fix36/`，回放输入为 `pb-fix36/`。它保留了 v32 Live、音频和竖屏逻辑，迁移 Wave5 关闭锁，并应用 110×44 的原创透明徽标。图标旧说明里的 112×44 / 中线 49 不代表 v36；v36 生成配置为拍照中线 54、y=98，回放 x=y=24，均需结合 viewport 解读。
 
 下面只编译对象、比较 ABI 并检查原子指令，不打开 USB、运行 QEMU 或生成升级包：

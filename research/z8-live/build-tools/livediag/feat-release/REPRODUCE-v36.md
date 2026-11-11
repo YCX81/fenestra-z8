@@ -4,7 +4,22 @@
 匹配的参考清单、各阶段产物与最终封装记录。`RELEASE-v36.md` 记录的是此前
 源码交付时的状态；本文补充后续找到的证据与可移植入口，不把旧报告改写成新验证。
 
-## 在其他机器上复现
+## 从原厂固件直接重建
+
+推荐使用新的[原厂到 v36 构建入口](../../../from-stock/README.md)。它只需要两个仓库和自行取得的原厂 `Z_8_0311.bin`，从源码生成核心、C64、布局、旧 Live 和 v36，并使用仓库内固定的公开 NFP 工具包。无需本页后面的迁移包、旧 MAIN 或私有参考清单。
+
+在 Fenestra 仓库根目录运行：
+
+```sh
+python -B research/z8-live/from-stock/build.py \
+  --stock /absolute/path/to/Z_8_0311.bin \
+  --qemu-root /absolute/path/to/z8-qemu \
+  --output-dir /absolute/path/to/v36-rebuilt
+```
+
+准备 clang 18、clang 21 和 LLVM 21 工具；依赖及逐阶段哈希见上述入口文档。下面保留的是使用历史中间 MAIN 的旧链复跑方式。
+
+## 使用历史输入复跑旧链
 
 `Ubuntu-26.04` 和下表中的 `$HOME` 路径只记录原实验室，既不是发行版要求，也不是克隆后会出现的文件。目标机器可以使用现有的 `Ubuntu`；无需安装同名发行版或重建原目录。
 

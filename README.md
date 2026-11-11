@@ -41,7 +41,7 @@ Place a compatible `.wlm` in `FENESTRA/` on the matching experiment's virtual ca
 
 ## Live development workflow
 
-Start with the [functional and usage guide](docs/features-and-usage.zh-CN.md), then the [archive map](research/z8-live/README.md) and [v36 candidate notes](research/z8-live/build-tools/livediag/feat-release/RELEASE-v36.md). The guide explains the Live menu, REC preview, file locations, C64 patch and offline compilation commands, and identifies the private inputs. The [v36 reproduction guide](research/z8-live/build-tools/livediag/feat-release/REPRODUCE-v36.md) includes the recovered compiler adapter, portable chain, hash recipes and a byte-identical offline MAIN reconstruction.
+Start with the [functional and usage guide](docs/features-and-usage.zh-CN.md), then the [archive map](research/z8-live/README.md) and [v36 candidate notes](research/z8-live/build-tools/livediag/feat-release/RELEASE-v36.md). The guide explains the Live menu, REC preview, file locations, C64 patch and offline compilation commands, and identifies the private inputs. The [stock-to-v36 workflow](research/z8-live/from-stock/README.md) builds the matching MAIN and update container from an original C 3.11 package, both repositories and bundled public NFP dependencies; no private intermediate MAIN is required.
 
 Historical source trees, failed experiments and local artifact references are retained for traceability. Source presence is not a claim of end-to-end acceptance, iPhone import compatibility, stock MOV playback compatibility or complete recording-mode regression.
 

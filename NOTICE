@@ -20,3 +20,9 @@ The project is not affiliated with or endorsed by Nikon or RED.
 The Creative Commons license text is dedicated to the public domain under
 CC0 by Creative Commons, as stated in that text. The photography permission
 is a separate grant by the applicable project rights holders.
+
+The stock-to-v36 workflow bundles unchanged NikonFirmwarePatch v0.3.0-r1 and
+v0.4.0-rc.2 public toolkit archives. Their source and compiled patch units retain
+GPL-3.0-only and the upstream LICENSE/NOTICE.md enclosed in each archive. They
+are outside the Fenestra license and additional photography permission. See
+research/z8-live/from-stock/third-party/README.md for identities and provenance.

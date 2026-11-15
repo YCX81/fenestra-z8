@@ -10,5 +10,17 @@
   "adaptation_target": "z8-c311",
   "upstream_repository": "https://github.com/WonderLantern/Fenestra",
   "upstream_commit": "67774849c9dd97cc7127066190528e245ee25650",
-  "qualification": "emulation only; no Z8 update-package or hardware qualification"
+  "qualification": "emulation only; no Z8 update-package or hardware qualification",
+  "bundled_third_party": [
+    {
+      "name": "NikonFirmwarePatch",
+      "versions": [
+        "v0.3.0-r1",
+        "v0.4.0-rc.2"
+      ],
+      "license": "GPL-3.0-only",
+      "location": "research/z8-live/from-stock/third-party/",
+      "contents": "unchanged public toolkit archives with corresponding source and compiled patch units; no Nikon firmware"
+    }
+  ]
 }

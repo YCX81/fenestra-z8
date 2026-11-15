@@ -82,6 +82,8 @@ python host/build_sdk_module.py modules/demo/sdk.c \
 
 ## v36 开发与离线检查
 
+从原厂固件开始的完整入口见[原厂到 v36](../research/z8-live/from-stock/README.md)：只需两个仓库和原厂 C 3.11，历史核心用 clang 18，v36 用 clang 21。公开 NFP 工具包及对应源码/许可随仓库固定，无需私有 MAIN 或迁移包。下文的单独编译命令仍可用于源码检查。
+
 当前候选目录为 [`research/z8-live/build-tools/livediag/feat-release/`](../research/z8-live/build-tools/livediag/feat-release/)，Live 输入为 `src-fix36/`，回放输入为 `pb-fix36/`。它保留了 v32 Live、音频和竖屏逻辑，迁移 Wave5 关闭锁，并应用 110×44 的原创透明徽标。图标旧说明里的 112×44 / 中线 49 不代表 v36；v36 生成配置为拍照中线 54、y=98，回放 x=y=24，均需结合 viewport 解读。
 
 下面只编译对象、比较 ABI 并检查原子指令，不打开 USB、运行 QEMU 或生成升级包：
@@ -97,7 +99,7 @@ python -B tools-v36/audit.py
 
 输出在本地 `audit-v36/`。历史构建使用 clang 21，28 个 shipping 编译单元；更换编译器需重新核对结果。发布归档未携带历史对象和审计产物，因此文档里的部分本地产物链接不存在。
 
-完整链接另需对应的私有参考 MAIN、符号/范围 manifest 和 ELF linker；`tools-v36/link.py` 固定读取实验参考路径。`check_icons.py` 还依赖未发布的旧测试 fixtures，实验室 chain 又依赖外部 helper 与适配器。不要把这些历史命令当作克隆后可一键执行的发布流程。正常复编无需运行会复制/打补丁的 `prepare.py`。原始[候选说明](../research/z8-live/build-tools/livediag/feat-release/RELEASE-v36.md)保留生成时的验证与未覆盖项，不等于本次重新执行。
+完整链接另需对应的私有参考 MAIN、符号/范围 manifest 和 ELF linker。现已补齐 clang 适配器、可移植 chain 入口与本地清单重建工具；`link.py` 支持显式输入路径。2026-11-11 重跑了 28 个单元编译、布局、194 条独占指令审计、ELF 链接和完整 MAIN 链，最终 MAIN 与原 v36 逐字节一致。步骤和固定输入见[复现说明](../research/z8-live/build-tools/livediag/feat-release/REPRODUCE-v36.md)。`check_icons.py` 仍依赖未发布的旧测试 fixtures；本次没有重跑图标 fixture、QEMU 或真机回归。正常复编无需运行 `prepare.py`。原始[候选说明](../research/z8-live/build-tools/livediag/feat-release/RELEASE-v36.md)保留原交付时的记录。
 
 ## C64 标签补丁
 

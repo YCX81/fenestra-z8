@@ -1,7 +1,7 @@
 from pathlib import Path
 import subprocess,struct,io,json
 from elftools.elf.elffile import ELFFile
-R=Path(__file__).resolve().parent.parent;O=R/'audit-v36/layout';O.mkdir(exist_ok=True)
+R=Path(__file__).resolve().parent.parent;O=R/'audit-v36/layout';O.mkdir(parents=True,exist_ok=True)
 flags='--target=aarch64-none-elf -Os -ffreestanding -fno-builtin -mgeneral-regs-only -mstrict-align -Wall -Wextra -Werror'.split()
 def symbol(p,name):
  e=ELFFile(io.BytesIO(p.read_bytes()));s=next(s for s in e.get_section_by_name('.symtab').iter_symbols() if s.name==name)

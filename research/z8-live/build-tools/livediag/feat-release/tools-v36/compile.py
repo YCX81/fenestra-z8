@@ -7,6 +7,10 @@ LIVE='runtime.c hooks.S capture/live_capture.c capture/native_capture.c ui/live_
 PB='hooks.S runtime.c preview.c preview_writer.c sync.c native_sync.c ui.c native_ui.c native_profile.c settings.c'.split()
 FLAGS='--target=aarch64-none-elf -Os -ffreestanding -fno-builtin -fno-stack-protector -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -mgeneral-regs-only -mstrict-align -Wall -Wextra -Werror'.split()
 DEFS='-DLA_WIDTH=1024 -DLA_HEIGHT=680 -DLA_RING_CAPACITY=96 -DLA_SAMPLE_INTERVAL_US=25000 -DLIVE_BITRATE=8000000 -DLIVE_IDR_US=500000 -DLIVE_ENCODE_SPEED=9'.split()
+import re
+version=subprocess.check_output(['clang','--version'],text=True)
+if not re.search(r'clang version 21\.',version):
+ raise SystemExit('v36 reproduction requires clang 21; found '+version.splitlines()[0])
 commands=[];results=[]
 for group,names in [('src',LIVE),('pb',PB)]:
     src=ROOT/('src-fix36' if group=='src' else 'pb-fix36');out=OUT/group;out.mkdir(exist_ok=True)

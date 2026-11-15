@@ -1,0 +1,36 @@
+{
+  "schema": "v37.build/v1",
+  "seed_sha256": "50f2a5b22217710c6f35faf1e4639ef675f2738184525be0190f36bcc42cb36b",
+  "compiler": "clang version 21.1.8 (https://github.com/llvm/llvm-project 2078da43e25a4623cab2d0d60decddf709aaea28)",
+  "stages": [
+    {
+      "stage": "playback",
+      "file": "pb/live-fixed.emulation-only.main",
+      "bytes": 81807709,
+      "sha256": "e3d10a7683f03c960ea184d10838cfe16c44525ad6028e3d48a64032c216bd8a"
+    },
+    {
+      "stage": "usb",
+      "file": "usb/usb.main",
+      "bytes": 81807709,
+      "sha256": "afd9bec7fc0c21395d1d1203aa4cd73d66ede4cfc39e02da1773a84bfd25db25"
+    },
+    {
+      "stage": "pool",
+      "file": "pool/pool.main",
+      "bytes": 81807709,
+      "sha256": "26679b45fddaab1e070a051bf208283d87a14848f8114878f673b096fc4af5ba"
+    },
+    {
+      "stage": "main",
+      "file": "v37.main",
+      "bytes": 81807709,
+      "sha256": "191e6e4fc73d68c3f20a36a5e5afaf7830fb071f3074d69ec98a9f3de4924b34"
+    }
+  ],
+  "physical_camera_verified": false,
+  "live_payload_bytes": 90008,
+  "live_free": 24680,
+  "playback_payload_bytes": 34872,
+  "playback_free": 6088
+}

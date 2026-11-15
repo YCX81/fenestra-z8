@@ -3,8 +3,15 @@ from pathlib import Path
 import json,subprocess,os,hashlib,io,shutil,struct
 from elftools.elf.elffile import ELFFile
 R=Path(__file__).resolve().parent.parent;O=R/'audit-v36'
-manifest=json.loads((R.parent/'feat-rec/bg34.changed-ranges.json').read_text())
-image=(R.parent/'feat-icon/bg34.main').read_bytes()
+import argparse
+p=argparse.ArgumentParser(description=__doc__)
+p.add_argument('--reference-main',type=Path,default=os.environ.get('V36_REFERENCE_MAIN'))
+p.add_argument('--reference-manifest',type=Path,default=os.environ.get('V36_REFERENCE_MANIFEST'))
+a=p.parse_args()
+if a.reference_main is None or a.reference_manifest is None:
+ p.error('provide --reference-main and --reference-manifest (or V36_REFERENCE_MAIN/V36_REFERENCE_MANIFEST)')
+manifest=json.loads(a.reference_manifest.read_text())
+image=a.reference_main.read_bytes()
 assert hashlib.sha256(image).hexdigest()==manifest['output_sha256']=='c7c6dbeea8a94064a10d47a7b9022ab26e4aa6b12ba5fb63b1ad85abac4fe4d4'
 DEFS={
 'src': 'fx_memset fx_native_menu_build fx_native_menu_link fx_native_display_attach_global fx_native_display_detach fx_native_display_is_current fx_native_display_present memcpy memmove memset memcmp live_old_menu_page live_old_menu_text live_old_system_dispatch live_old_movie_press live_old_writer live_old_pool live_irq_resume live_closed_resume live_start_resume live_stop_resume live_hold_resume live_w5_bringup_resume'.split(),
@@ -24,7 +31,8 @@ ASSERT(SIZEOF(.data) == 0 && SIZEOF(.bss) == 0, "writable static payload state")
  lld=shutil.which('ld.lld')
  if lld:cmd=[lld,'-T',str(script),*map(str,objects),'-o',str(elf)]
  else:
-  zig=next((R.parent/'feat-rec/.recorder-venv/lib').glob('python*/site-packages/ziglang/zig'))
+  zig=shutil.which('zig')
+  if not zig:raise SystemExit('install ld.lld or put zig on PATH')
   cmd=[str(zig),'cc','-target','aarch64-freestanding-none','-nostdlib',f'-Wl,-e,{entry}','-Wl,-T,'+str(script),*map(str,objects),'-o',str(elf)]
  subprocess.run(cmd,check=True,env={**os.environ,'ZIG_GLOBAL_CACHE_DIR':str(O/'zig-cache'),'ZIG_LOCAL_CACHE_DIR':str(O/'zig-local')})
  e=ELFFile(io.BytesIO(elf.read_bytes()));syms=list(e.get_section_by_name('.symtab').iter_symbols())

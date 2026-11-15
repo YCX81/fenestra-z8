@@ -43,8 +43,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6347,
-      "sha256": "3032d806f11f94c8077fb9bd63a264c7dd5a7c2a7cbac3a43422a7c1eee58b5e"
+      "bytes": 8280,
+      "sha256": "bf70894810d0dc271ee1b963f8b213f2e3fc1b2f018a28456b5fa768990ce379"
     },
     {
       "path": "docs/api-reference.md",
@@ -14563,8 +14563,8 @@
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-onemov/RELEASE-v62.md",
-      "bytes": 4651,
-      "sha256": "099d5a8440571ddb3bf36e4763339fad915bde69268e13ba9ef58af013106892"
+      "bytes": 5029,
+      "sha256": "772dead80615c529b661b4b023abf7f289d644d1cfe7c20b80b6d10e456598a3"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-onemov/build_onemov.py",

@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "input_main_sha256": "5b70b3352562984c352cdd774494317f49267cc4e709baa42f703d92959138db",
+  "candidate_main_sha256": "07fa0c935d4f9fbf7de02ca02404a581060856d5c0f1dc2c72c7a28110dd6359",
+  "test_script_sha256": "0791ee720aa04a7462940aa2611e23c56c0d5b212e2072a5af0d744cb22876be",
+  "patch_script_sha256": "d98f551280d459fe42d04ea162a902fbce82bebfee973a30d398397df76ba01b",
+  "groups": {
+    "baseline_NFP_swallowed_to_empty": 1620,
+    "NFP_restored_through_actual_tables": 3240,
+    "valid_dynamic_UI_hit_preserved_including_empty": 3240,
+    "pre_activation_native_fallback_unchanged": 1620,
+    "higher_UI_miss_stays_empty": 2088,
+    "stock_and_fixed_Fenestra_labels_unchanged": 324,
+    "wrong_SHA_or_instruction_guard_rejected": 2
+  },
+  "checks": 12134,
+  "table_guards": {
+    "languages": 36,
+    "native_count": 3225,
+    "restored_id_range": [
+      3180,
+      3224
+    ],
+    "native_texts_verified": 1620,
+    "native_texts_sha256": "38daca0ba1e6c4aa30eb5bb4e411ee54ebbd35bae173d116627c7c64b8657e62"
+  },
+  "changed_instruction_bytes": 12,
+  "candidate_changed_byte_count": 12,
+  "executed_entries": {
+    "original_core_trampoline": "0x401961f8",
+    "actual_fx_native_ui_text": "0x401bc67c"
+  },
+  "stubs": {
+    "state_getter": "0x401cc314",
+    "legacy_UI_getter": "0x401cd014",
+    "UI_owner_text_provider": "0x401c090c"
+  },
+  "scope": "Actual delivered AArch64 resolver, native UI text routine and all 36 NFP language tables. Explicit State/UI-owner stubs; not a QEMU raster or physical-camera proof.",
+  "remaining_namespace_boundary": "Valid Fenestra UI hits intentionally win even for overlapping NFP IDs. IDs 3154..3179 are fixed Fenestra strings and remain unchanged; module IDs >=3254 are outside this NFP table."
+}

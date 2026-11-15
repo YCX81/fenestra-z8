@@ -1,0 +1,25 @@
+{
+  "input": "build-tools/livediag/feat-onemov/v61/final/main.main",
+  "input_sha256": "db0c847b333f0a6e07222f2207435e9bf340ce1d544704f6d801ec3ecc1088e5",
+  "output": "build-tools/livediag/feat-onemov/v62/menu/test-v61.menu.main",
+  "output_sha256": "51ad136374427ebf134aff2bb48963bae97e4b9a59f3d7f0263e33348b7a6c62",
+  "instruction_window": {
+    "address": "0x401cd4c8",
+    "bytes": 12,
+    "before": "1f2003d568ea09107f0200b9",
+    "after": "bf623271c9020054e3ffff17"
+  },
+  "changed_byte_count": 12,
+  "source_guard": {
+    "languages": 36,
+    "native_count": 3225,
+    "restored_id_range": [
+      3180,
+      3224
+    ],
+    "native_texts_verified": 1620,
+    "native_texts_sha256": "38daca0ba1e6c4aa30eb5bb4e411ee54ebbd35bae173d116627c7c64b8657e62"
+  },
+  "build_id_recalculated": false,
+  "semantics": "Preserve successful dynamic UI text (including empty); on miss resolve NFP 3180..3224 through native language tables; higher legacy UI IDs remain empty."
+}

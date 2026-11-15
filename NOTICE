@@ -26,3 +26,8 @@ v0.4.0-rc.2 public toolkit archives. Their source and compiled patch units retai
 GPL-3.0-only and the upstream LICENSE/NOTICE.md enclosed in each archive. They
 are outside the Fenestra license and additional photography permission. See
 research/z8-live/from-stock/third-party/README.md for identities and provenance.
+
+QEMU-derived audio model headers, patches and fixtures in the V62 research
+verification directory retain their GPL-2.0-or-later SPDX notices and RdWing
+attribution. They are separate from the Fenestra license. See the accompanying
+LICENSE-QEMU.txt and the companion YCX81/z8-qemu repository.

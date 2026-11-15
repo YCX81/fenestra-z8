@@ -1,0 +1,15 @@
+{
+  "parent_driver_sha256": "e9c15f2eb268f33805a41b301c17eef58880f7f0ccae021001c86cf183b5de5e",
+  "driver_sha256": "1ec568271fd93739a4d92005b56790e765f19a9da6f3a1782e8a84ccb45a6add",
+  "functional_change": "existing z8-heif-secondary-stop-model=on only",
+  "observations_added": {
+    "240": "0x4115fbbc",
+    "241": "0x4115fbc0",
+    "242": "0x41151cf8",
+    "243": "0x41151ed8",
+    "244": "0x41151a5c",
+    "245": "0x4115faf8"
+  },
+  "final_only_qom_reads": true,
+  "firmware_deadlines_inputs_assertions_unchanged": true
+}

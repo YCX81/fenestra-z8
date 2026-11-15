@@ -1,0 +1,42 @@
+{
+  "v61-live.elf": {
+    "remote": "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/build/live/payload.elf",
+    "sha256": "b51739d2be15f2e4c8161706d44d79c5c2ab4e9d246203249309e0e3681370a2",
+    "bytes": 474784
+  },
+  "v61-pb.elf": {
+    "remote": "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/build/pb/payload.elf",
+    "sha256": "6067846bf88713c6e6d56221e93eda2327c1c3d18102da0844328531ed27e405",
+    "bytes": 77328
+  },
+  "v61-live-ranges.json": {
+    "remote": "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/build/live/changed-ranges.json",
+    "sha256": "68b2ba9d66fca635e1a2e34a0f54328913665dc9d988c10e00d4462292c37a79",
+    "bytes": 481019
+  },
+  "build_onemov.py": {
+    "remote": "/path/to/user/fxfix/onemov/build_onemov.py",
+    "sha256": "e746e20fcc08bf0e10c0136a6a344a09e2b8b22bcbe0960ead4471fdc0f3cb34",
+    "bytes": 832
+  },
+  "compose53.py": {
+    "remote": "/path/to/user/fxfix/v53-root/compose53.py",
+    "sha256": "4c27af7043eb1855f1cc7a539b28dee68bd0cd55c84f78803d78006f136c40dd",
+    "bytes": 4672
+  },
+  "v62-source-input.json": {
+    "remote": "/path/to/user/fxfix/onemov/v62-log-shutter-8ec4cb/source-input.json",
+    "sha256": "5ab50ae628bf41841640aacd7fa9e398afcee5536298f7e4c0ec3c285aad17c1",
+    "bytes": 45982
+  },
+  "v62-build.log": {
+    "remote": "/path/to/user/fxfix/onemov/v62-log-shutter-8ec4cb/build.log",
+    "sha256": "f5d36545e8724028cd23486eef4716d73a461f3f47406de633763e8142fe4e82",
+    "bytes": 391
+  },
+  "v62-compose.log": {
+    "remote": "/path/to/user/fxfix/onemov/v62-log-shutter-8ec4cb/compose.log",
+    "sha256": "506b7f9cdae18f81611f8ccc41bff0053917d396b21b03efa4f98b8216a111e4",
+    "bytes": 6077
+  }
+}

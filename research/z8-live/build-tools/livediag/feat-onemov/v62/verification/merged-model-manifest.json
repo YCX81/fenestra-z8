@@ -1,0 +1,15 @@
+{
+  "baseline_header_sha256": "532ecd8590c2b757066d51813c8c4280f06b83a9b5d6f05c5a327dc4f4cc1069",
+  "header_sha256": "fddf0b50cf383d3344069a942af6f975af4d5deed900e73d974b27198f1f75fb",
+  "source_functions": {
+    "static bool serial5_tx16_sfx_bytes(": "3b32d8549e51485ae94fdde89d5886af8f0fa6a430b5e0170e76d3b12e73df81",
+    "static int serial5_tx_drain_request(": "5394d74c00efd7f83bc8d19f90b17ea5f047227b2f251b7860a24f039e08800e",
+    "static bool serial5_tx_drain_same(": "70769f53777cbadad544a5472e3dc1ee731838569567ec602a4cd0e0edb00446",
+    "static void serial5_tx_drain_note_write(": "2ad38d918eb7550224ef3c352e0b6d9845d61e50c19cf98076853bff0aa81424",
+    "static void serial5_tx_drain_tick(": "7e520c00207ed8bf215839a5107597cd8a837c05d6ab6971828288dd571f6a4a",
+    "static uint64_t serial5_tx_clock_delay(": "f3e11d535feec4afd04aa699480a0cb644ee5c6d341f93a00bf65a6c6bfb66dc",
+    "static void serial5_tx_drain_schedule(": "3e5f7d4349b0a2b06029c41e068b3d2766e3f3266469db73f6703ac855d318af",
+    "static bool serial5_tx_drain_read(": "270d9f521393553338124c024daaac7143a0ddc7d1f45ccd1a5fcb3fd0e2a31f"
+  },
+  "scope": "actual candidate functions; only NikonZ9State typedef renamed to NikonZ8State for shared harness"
+}

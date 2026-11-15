@@ -1,0 +1,12 @@
+live_old_menu_page = 0x401cce84;
+live_old_menu_text = 0x401cd3ec;
+live_old_system_dispatch = 0x401cd788;
+fx_native_menu_build = 0x401b846c;
+fx_native_menu_link = 0x401b810c;
+fx_native_display_attach_global = 0x401a3c70;
+fx_native_display_present = 0x401a3d24;
+fx_native_display_detach = 0x401a4040;
+fx_native_display_is_current = 0x401a296c;
+memset = 0x401c6cd0;
+memcpy = 0x401c6cb4;
+fx_memset = 0x401c689c;

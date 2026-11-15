@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "cases": 104,
+  "sanitizers": [
+    "ASan",
+    "UBSan"
+  ],
+  "sanitizer_report": false,
+  "candidate_header_sha256": "59f9a9097a4b9845419b16d58b4574ae113491c5b169a81169368aafea80ad11",
+  "extracted_test_source_sha256": "0bbe08eecc5d8cea9c36074161012d5d76c854435bfac11b7b3b8ead607a3d35",
+  "new_length_positive_cases": 16,
+  "unsupported_length_cases": 15,
+  "tone10_tuple_and_format_reject_cases": 15,
+  "short_to_long_deadline_replacement_cases": 1,
+  "failed_read_or_changed_owner_no_irq_cases": 2,
+  "preserved_prior_cases": 55,
+  "scope": "Actual extracted request/tick/schedule/read functions. RAM mapping, timer and PDMA/IRQ leaves are instrumented; no physical DAC/acoustic claim."
+}

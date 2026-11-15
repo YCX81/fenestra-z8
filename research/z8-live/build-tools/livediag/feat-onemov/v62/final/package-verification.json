@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checksummed_files": 25,
+  "evidence_files": 19,
+  "zip_sha256": "d73d310ef25bb64cf26fb02a39bed8defc8f19a51d8349474b80af6765df799a",
+  "zip_bytes": 97508823,
+  "package_sha256": "ddb949630186af582d51993286ff468383292800ed53571a2147a95c46853d89",
+  "fenestra_identical_to_v61": true,
+  "release_checks_passed": true,
+  "all_observations_passed": false
+}

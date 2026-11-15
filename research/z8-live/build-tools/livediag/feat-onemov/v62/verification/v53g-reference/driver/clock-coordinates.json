@@ -1,0 +1,23 @@
+{
+  "native_cntfrq_hz": 24000000,
+  "qemu_counter_period_ns": 41,
+  "formula": "CNTPCT=floor(QOM_virtual_ns/41); native_us=CNTPCT/24; equivalently native_us~QOM_ns/984",
+  "ratio": 1.016260162601626,
+  "external_block_virtual_ns": 49200000,
+  "source_files": [
+    {
+      "path": "/path/to/user/.local/share/nikon-z8-qemu/merged/work/qemu-10.2.4/target/arm/cpu.c",
+      "sha256": "fba17218a70ec5767def6ef6cdbd9b0047028fe509714411f2dbdf39ece7805c"
+    },
+    {
+      "path": "/path/to/user/.local/share/nikon-z8-qemu/merged/work/qemu-10.2.4/target/arm/helper.c",
+      "sha256": "0ae5ddd4f1f4be7cec392177dd54460a0d2acfd4f57a3141b40c5ccecd64f634"
+    }
+  ],
+  "main_sha256": "c14894087d5fd03b0124c7d94f6cd521e94def58831a087738145ef91b60fcd2",
+  "native_cntfrq_setter_addr": "0x40160910",
+  "setter_bytes": "0ec086528ba2a1522c450a8bed030032ce2da07288810db96d0100b90ee01bd5",
+  "scope": "Read-only coordinate analysis. Does not change native CNTFRQ/generic timer, current running input, firmware freshness, or hardware clock semantics.",
+  "setter_sequence_start": "0x401608f4",
+  "previous_source_main_sha256": "b0cd7c40c3c6ffdf07b87fcbab20b98fbe9ed0c2a848550855d989b9e64fd8b0"
+}

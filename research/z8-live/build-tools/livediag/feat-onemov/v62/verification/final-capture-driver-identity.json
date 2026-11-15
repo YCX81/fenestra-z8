@@ -1,0 +1,7 @@
+{
+  "main_sha256": "36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5",
+  "qemu_sha256": "34059c8c62b3f32896b3d5685a461cd4da5a427ae5b9d3ba4e0f04318461f418",
+  "driver_sha256": "5f82c19d8cf756efc2673c4e968306f93fcb487e08046d746451bdc192441319",
+  "rx_observer_sha256": "74b745e446fb9b48d87647bb6c024aa3ad73ca0c3d9128c78727b8cfdfd30d0f",
+  "scope": "Native menu/MCU inputs, functional RX/TX. No guest RAM writes or physical camera."
+}

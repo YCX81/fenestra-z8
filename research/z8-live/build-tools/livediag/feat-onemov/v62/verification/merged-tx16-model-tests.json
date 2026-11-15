@@ -1,0 +1,11 @@
+{
+  "test_result": {
+    "passed": true,
+    "cases": 104,
+    "clock": "explicit functional48k stereoLE16,first1ms then1s per192000B",
+    "scope": "actual request/tick/schedule C; RAM/PDMA/IRQ leaves instrumented; no acoustic claim"
+  },
+  "compiler": "clang -O1 -g -fsanitize=address,undefined -Wno-unused-function -Wno-format",
+  "exit_code": 0,
+  "sanitizer_findings": false
+}

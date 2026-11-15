@@ -1,0 +1,62 @@
+{
+  "schema": "v62.native-new-capture-replay/v1",
+  "final_main_sha256": "36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5",
+  "native_decode_return_cleanup_passed": true,
+  "complete_source_frame_coverage_all_runs": false,
+  "complete_source_frame_coverage_reference": "off-r4",
+  "runs": [
+    {
+      "capture": "on-r2",
+      "source_card": "/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-on-r2/capture-card.raw",
+      "private_replay_card": "/path/to/user/fxfix/onemov/v62-playback-check-36c564c9/on-r2-reboot/private-card.raw",
+      "main_sha256": "36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5",
+      "qemu_sha256": "9804d5734610465613f80dc762dd3bef0307571b0b016f140cdec81252ba6123",
+      "source_movie_sha256": "21142258ce8c114d1391f72452657a645990a8a31239665041a5813d04977b19",
+      "source_movie_bytes": 1088316,
+      "source_frames": 92,
+      "decoded_picture_events": 92,
+      "covered_source_frames": 91,
+      "missing_source_indices": [
+        91
+      ],
+      "first_frame_extra_events": 1,
+      "frame_crc_order_match": "Event 0 repeats first frame; events 1..91 exactly match source frames 0..90. Last source frame 91 is not observed in native output.",
+      "complete_source_frame_coverage": false,
+      "native_decode_return_cleanup_passed": true,
+      "native_checks_passed": true,
+      "native_checks_count": 237,
+      "source_card_unchanged": true,
+      "summary": "build-tools/livediag/feat-onemov/v62/playback/on-r2-reboot/summary.json",
+      "summary_sha256": "560e383095bd2ebc284bd481bdac5406806d310fcf5731e80d89747342a43537",
+      "coverage_sha256": "b2e303adc15b7ae2ccfb3a72ef04246ae4bdcdec53a09207de9eb9a2a260c8d3",
+      "decoder_events_sha256": "d479c6ba6957b7b9a06a174e82740c04f0d5929d9abe28cd15322e555e769dfe"
+    },
+    {
+      "capture": "off-r4",
+      "source_card": "/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-off-r4/capture-card.raw",
+      "private_replay_card": "/path/to/user/fxfix/onemov/v62-playback-check-36c564c9/off-r4-reboot/private-card.raw",
+      "main_sha256": "36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5",
+      "qemu_sha256": "9804d5734610465613f80dc762dd3bef0307571b0b016f140cdec81252ba6123",
+      "source_movie_sha256": "9415a5749e2e302e44b75d2376846bb4432246df4051ed2975ea3235efade21c",
+      "source_movie_bytes": 1101375,
+      "source_frames": 93,
+      "decoded_picture_events": 94,
+      "covered_source_frames": 93,
+      "missing_source_indices": [],
+      "first_frame_extra_events": 1,
+      "frame_crc_order_match": "Event 0 repeats the first frame; events 1..93 exactly match every source frame 0..92 in order",
+      "complete_source_frame_coverage": true,
+      "native_decode_return_cleanup_passed": true,
+      "native_checks_passed": true,
+      "native_checks_count": 235,
+      "source_card_unchanged": true,
+      "summary": "build-tools/livediag/feat-onemov/v62/playback/off-r4-reboot/summary.json",
+      "summary_sha256": "397d0a2e4de6e9c367a02913ddeda0b3204b9bdc452023e1de4be30df25d9ed8",
+      "coverage_sha256": "fdbbccddadb826e4f4a0374574ce559e90b06f5cee7aca53312a82735a84a0d6",
+      "decoder_events_sha256": "f904b10cdfd8d53286e33e32f94b803ecfc67cd6bcaa5d433d7ca66de14c198b"
+    }
+  ],
+  "scope": "Stopped V62 capture cards copied privately, rebooted into same final MAIN, native MOV/RDW decoder path; not same-boot capture/playback, dual-card or physical-camera verification; playback audio output disabled.",
+  "qualification": "On-r2 outputs source frames 0..90 plus a duplicate first frame; source frame91 is absent. Off-r4 outputs every source frame0..92 in order plus exactly one duplicate first frame. Do not equate picture event count with source frame coverage.",
+  "on_r3": "Only private snapshot/capture receipt retained; no third native replay run performed."
+}

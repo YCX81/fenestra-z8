@@ -1,0 +1,834 @@
+{
+  "identity": {
+    "main_sha256": "36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5",
+    "source_card_stat": {
+      "bytes": 8589934592,
+      "mtime_ns": 1794733773778665907,
+      "inode": 2786925
+    },
+    "runner_sha256": "3549271a0b40781c910a032bf840244189eceb6150d323bf3864db062561aad8",
+    "expected_native_movie": "A:\\LIVE\\100NCZ_8\\DSC_0001.MOV",
+    "expected_decoded_pictures": 93,
+    "qemu_sha256": "9804d5734610465613f80dc762dd3bef0307571b0b016f140cdec81252ba6123",
+    "card_template": "/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-off-r4/capture-card.raw",
+    "private_card": "/path/to/user/fxfix/onemov/v62-playback-check-36c564c9/off-r4-reboot/private-card.raw",
+    "command": [
+      "/path/to/user/.local/share/nikon-z8-qemu/venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/user/fxfix/onemov/run-nb.py",
+      "--firmware",
+      "/path/to/user/fxfix/onemov/v62-log-shutter-8ec4cb/final/main.main",
+      "--qemu",
+      "/path/to/user/fxfix/v62-qemu-native-sfx-59f9/qemu-system-aarch64",
+      "--raw",
+      "/path/to/Nikon/z8-qemu/.local/input.raw",
+      "--mcu",
+      "/path/to/user/fxfix/exmcu/EX.bi",
+      "--output",
+      "/path/to/user/fxfix/onemov/v62-playback-check-36c564c9/off-r4-reboot/run",
+      "--mcu-pins",
+      "G1=1:G13=1:G14=1:G15=1",
+      "--experimental-shared221",
+      "--experimental-boundary-inputs",
+      "--experimental-sensor-source-clock",
+      "--experimental-yuv-channels",
+      "--experimental-movie-selector16",
+      "--card",
+      "/path/to/user/fxfix/onemov/v62-playback-check-36c564c9/off-r4-reboot/private-card.raw",
+      "--experimental-playback",
+      "--experimental-movie-playback",
+      "--movie-audio-output",
+      "none",
+      "--contact-replay",
+      "/path/to/user/fxfix/onemov/v62-playback-check-36c564c9/off-r4-reboot/contacts.json",
+      "--seconds",
+      "1500",
+      "--virtual-seconds",
+      "40"
+    ],
+    "scope": "Single NVMe model, private copy of this V62 capture card, rebooted into the same final MAIN; actual native MOV decoding/return/cleanup. Not same-boot capture, dual-card, or physical-camera verification."
+  },
+  "checks": {
+    "runner_exit_zero": true,
+    "correct_main_executed": true,
+    "native_checks_passed": true,
+    "no_runner_error": true,
+    "bridge_entered": true,
+    "bridge_returned": true,
+    "bridge_cleaned": true,
+    "open_redirected": true,
+    "temporary_bit_released": true,
+    "original_photo_selected_on_return": true,
+    "movie_page_observed": true,
+    "photo_page_observed": true,
+    "movie_pictures_decoded": true,
+    "new_capture_movie_selected": true,
+    "native_decoder_had_no_bridge_failure": true,
+    "source_card_unchanged": true,
+    "complete_source_frame_coverage": true
+  },
+  "passed": true,
+  "native_checks_count": 235,
+  "native_failed_checks": [],
+  "observations": [
+    {
+      "where": 2,
+      "nb_stage": 2,
+      "nb_photo": 52428832,
+      "nb_movie": 52428837,
+      "nb_starts": 1,
+      "nb_returns": 0,
+      "nb_redirects": 0,
+      "nb_w": 1024,
+      "nb_h": 682,
+      "nb_bit": 1,
+      "nb_fail": 0,
+      "nb_cleanups": 0,
+      "nb_from": "A:\\DCIM\\100NCZ_8\\DSC_0001.MOV",
+      "nb_to": "A:\\LIVE\\100NCZ_8\\DSC_0001.MOV"
+    },
+    {
+      "where": 4,
+      "nb_stage": 3,
+      "nb_photo": 52428832,
+      "nb_movie": 52428837,
+      "nb_starts": 1,
+      "nb_returns": 1,
+      "nb_redirects": 2,
+      "nb_w": 1024,
+      "nb_h": 682,
+      "nb_bit": 1,
+      "nb_fail": 0,
+      "nb_cleanups": 0,
+      "nb_from": "A:\\DCIM\\100NCZ_8\\DSC_0001.MOV",
+      "nb_to": "A:\\LIVE\\100NCZ_8\\DSC_0001.MOV"
+    },
+    {
+      "where": 3,
+      "nb_stage": 0,
+      "nb_photo": 52428832,
+      "nb_movie": 52428837,
+      "nb_starts": 1,
+      "nb_returns": 1,
+      "nb_redirects": 2,
+      "nb_w": 1024,
+      "nb_h": 682,
+      "nb_bit": 0,
+      "nb_fail": 0,
+      "nb_cleanups": 0,
+      "nb_from": "A:\\DCIM\\100NCZ_8\\DSC_0001.MOV",
+      "nb_to": "A:\\LIVE\\100NCZ_8\\DSC_0001.MOV"
+    }
+  ],
+  "pages": [
+    [
+      3,
+      1388
+    ],
+    [
+      3,
+      1362
+    ]
+  ],
+  "selected_ids": [
+    0,
+    52428832,
+    52428832,
+    52428837,
+    52428832,
+    52428832,
+    52428832
+  ],
+  "point_counts": {
+    "0x402dd4f8": 146,
+    "0x403ec3a0": 11,
+    "0x40196470": 3,
+    "0x406364d0": 1,
+    "0x403f6fac": 1,
+    "0x4085fcc4": 2,
+    "0x40711328": 1,
+    "0x403ad6a4": 2,
+    "0x403f7244": 1,
+    "0x40cf7d0c": 2,
+    "0x40cfc820": 2,
+    "0x4063b95c": 1
+  },
+  "runner_error": null,
+  "decoded_pictures": 94,
+  "source_movie_sha256": "9415a5749e2e302e44b75d2376846bb4432246df4051ed2975ea3235efade21c",
+  "frame_coverage": {
+    "passed": true,
+    "movie_sha256": "9415a5749e2e302e44b75d2376846bb4432246df4051ed2975ea3235efade21c",
+    "source_frames": 93,
+    "native_picture_events": 94,
+    "pixel_format": "nv12",
+    "frame_bytes": 1047552,
+    "match": "Event 0 repeats the first frame; events 1..93 exactly match every source frame 0..92 in order",
+    "extra_first_frame_events": 1,
+    "source_crc32": [
+      "b2a3ac7e",
+      "890ef56d",
+      "890ef56d",
+      "8296d7b7",
+      "a3a81832",
+      "6408ab41",
+      "813be62e",
+      "813be62e",
+      "5f383fe7",
+      "d3242465",
+      "1c9ed944",
+      "f4f858f0",
+      "3a935360",
+      "20665bf1",
+      "f4a0c04f",
+      "e34ea923",
+      "8a4f3531",
+      "18d72f52",
+      "7766b3b6",
+      "c55556fe",
+      "c7b84843",
+      "acf69971",
+      "4a265cb7",
+      "aaea06cb",
+      "ef4cf5ba",
+      "fe1aad57",
+      "1a8fd9cd",
+      "1a8fd9cd",
+      "c7363f24",
+      "1f58022b",
+      "d2e322c3",
+      "ec890cea",
+      "6e85829e",
+      "fefe1dbe",
+      "d06402ea",
+      "cbe83d17",
+      "dfe3e055",
+      "436433b1",
+      "e6a28c14",
+      "6e5e9258",
+      "ed307575",
+      "22598eae",
+      "fc9ddc68",
+      "3f5f8e71",
+      "6fe4f6f4",
+      "a75455cb",
+      "553a1ea5",
+      "1b6d2564",
+      "5cc0d482",
+      "ccde113d",
+      "24e2067d",
+      "16ecf062",
+      "713931fb",
+      "f8f0ffb4",
+      "5caf9979",
+      "c406b01d",
+      "5fa865bf",
+      "1b9630aa",
+      "ecd7ee3a",
+      "5e8cb481",
+      "04a489da",
+      "be003fe8",
+      "812a745d",
+      "6b48fef5",
+      "d17770f9",
+      "47506dc4",
+      "43c596bd",
+      "49146295",
+      "ac54b8a4",
+      "b0bde27c",
+      "dcbf909c",
+      "4ea7ce8a",
+      "082beadb",
+      "1e6e7d29",
+      "cffbad83",
+      "04a489da",
+      "5363f12f",
+      "265a4d7b",
+      "88377e43",
+      "9536fb31",
+      "e414ab3e",
+      "2641574e",
+      "087427cd",
+      "087427cd",
+      "e035ab0a",
+      "2708d459",
+      "e1c00b64",
+      "36a83731",
+      "257e4809",
+      "51d8bd0c",
+      "b40955b7",
+      "596aaba0",
+      "c9e7f911"
+    ],
+    "native_events": [
+      {
+        "index": 0,
+        "poc": 0,
+        "bytes": 1047552,
+        "crc": "b2a3ac7e"
+      },
+      {
+        "index": 0,
+        "poc": 0,
+        "bytes": 1047552,
+        "crc": "b2a3ac7e"
+      },
+      {
+        "index": 1,
+        "poc": 1,
+        "bytes": 1047552,
+        "crc": "890ef56d"
+      },
+      {
+        "index": 2,
+        "poc": 2,
+        "bytes": 1047552,
+        "crc": "890ef56d"
+      },
+      {
+        "index": 0,
+        "poc": 3,
+        "bytes": 1047552,
+        "crc": "8296d7b7"
+      },
+      {
+        "index": 1,
+        "poc": 4,
+        "bytes": 1047552,
+        "crc": "a3a81832"
+      },
+      {
+        "index": 2,
+        "poc": 5,
+        "bytes": 1047552,
+        "crc": "6408ab41"
+      },
+      {
+        "index": 0,
+        "poc": 6,
+        "bytes": 1047552,
+        "crc": "813be62e"
+      },
+      {
+        "index": 1,
+        "poc": 7,
+        "bytes": 1047552,
+        "crc": "813be62e"
+      },
+      {
+        "index": 2,
+        "poc": 8,
+        "bytes": 1047552,
+        "crc": "5f383fe7"
+      },
+      {
+        "index": 0,
+        "poc": 9,
+        "bytes": 1047552,
+        "crc": "d3242465"
+      },
+      {
+        "index": 1,
+        "poc": 10,
+        "bytes": 1047552,
+        "crc": "1c9ed944"
+      },
+      {
+        "index": 2,
+        "poc": 11,
+        "bytes": 1047552,
+        "crc": "f4f858f0"
+      },
+      {
+        "index": 0,
+        "poc": 12,
+        "bytes": 1047552,
+        "crc": "3a935360"
+      },
+      {
+        "index": 1,
+        "poc": 13,
+        "bytes": 1047552,
+        "crc": "20665bf1"
+      },
+      {
+        "index": 2,
+        "poc": 14,
+        "bytes": 1047552,
+        "crc": "f4a0c04f"
+      },
+      {
+        "index": 0,
+        "poc": 0,
+        "bytes": 1047552,
+        "crc": "e34ea923"
+      },
+      {
+        "index": 1,
+        "poc": 1,
+        "bytes": 1047552,
+        "crc": "8a4f3531"
+      },
+      {
+        "index": 2,
+        "poc": 2,
+        "bytes": 1047552,
+        "crc": "18d72f52"
+      },
+      {
+        "index": 0,
+        "poc": 3,
+        "bytes": 1047552,
+        "crc": "7766b3b6"
+      },
+      {
+        "index": 1,
+        "poc": 4,
+        "bytes": 1047552,
+        "crc": "c55556fe"
+      },
+      {
+        "index": 2,
+        "poc": 5,
+        "bytes": 1047552,
+        "crc": "c7b84843"
+      },
+      {
+        "index": 0,
+        "poc": 6,
+        "bytes": 1047552,
+        "crc": "acf69971"
+      },
+      {
+        "index": 1,
+        "poc": 7,
+        "bytes": 1047552,
+        "crc": "4a265cb7"
+      },
+      {
+        "index": 2,
+        "poc": 8,
+        "bytes": 1047552,
+        "crc": "aaea06cb"
+      },
+      {
+        "index": 0,
+        "poc": 9,
+        "bytes": 1047552,
+        "crc": "ef4cf5ba"
+      },
+      {
+        "index": 1,
+        "poc": 10,
+        "bytes": 1047552,
+        "crc": "fe1aad57"
+      },
+      {
+        "index": 2,
+        "poc": 11,
+        "bytes": 1047552,
+        "crc": "1a8fd9cd"
+      },
+      {
+        "index": 0,
+        "poc": 12,
+        "bytes": 1047552,
+        "crc": "1a8fd9cd"
+      },
+      {
+        "index": 1,
+        "poc": 13,
+        "bytes": 1047552,
+        "crc": "c7363f24"
+      },
+      {
+        "index": 2,
+        "poc": 14,
+        "bytes": 1047552,
+        "crc": "1f58022b"
+      },
+      {
+        "index": 0,
+        "poc": 0,
+        "bytes": 1047552,
+        "crc": "d2e322c3"
+      },
+      {
+        "index": 1,
+        "poc": 1,
+        "bytes": 1047552,
+        "crc": "ec890cea"
+      },
+      {
+        "index": 2,
+        "poc": 2,
+        "bytes": 1047552,
+        "crc": "6e85829e"
+      },
+      {
+        "index": 0,
+        "poc": 3,
+        "bytes": 1047552,
+        "crc": "fefe1dbe"
+      },
+      {
+        "index": 1,
+        "poc": 4,
+        "bytes": 1047552,
+        "crc": "d06402ea"
+      },
+      {
+        "index": 2,
+        "poc": 5,
+        "bytes": 1047552,
+        "crc": "cbe83d17"
+      },
+      {
+        "index": 0,
+        "poc": 6,
+        "bytes": 1047552,
+        "crc": "dfe3e055"
+      },
+      {
+        "index": 1,
+        "poc": 7,
+        "bytes": 1047552,
+        "crc": "436433b1"
+      },
+      {
+        "index": 2,
+        "poc": 8,
+        "bytes": 1047552,
+        "crc": "e6a28c14"
+      },
+      {
+        "index": 0,
+        "poc": 9,
+        "bytes": 1047552,
+        "crc": "6e5e9258"
+      },
+      {
+        "index": 1,
+        "poc": 10,
+        "bytes": 1047552,
+        "crc": "ed307575"
+      },
+      {
+        "index": 2,
+        "poc": 11,
+        "bytes": 1047552,
+        "crc": "22598eae"
+      },
+      {
+        "index": 0,
+        "poc": 12,
+        "bytes": 1047552,
+        "crc": "fc9ddc68"
+      },
+      {
+        "index": 1,
+        "poc": 13,
+        "bytes": 1047552,
+        "crc": "3f5f8e71"
+      },
+      {
+        "index": 2,
+        "poc": 14,
+        "bytes": 1047552,
+        "crc": "6fe4f6f4"
+      },
+      {
+        "index": 0,
+        "poc": 0,
+        "bytes": 1047552,
+        "crc": "a75455cb"
+      },
+      {
+        "index": 1,
+        "poc": 1,
+        "bytes": 1047552,
+        "crc": "553a1ea5"
+      },
+      {
+        "index": 2,
+        "poc": 2,
+        "bytes": 1047552,
+        "crc": "1b6d2564"
+      },
+      {
+        "index": 0,
+        "poc": 3,
+        "bytes": 1047552,
+        "crc": "5cc0d482"
+      },
+      {
+        "index": 1,
+        "poc": 4,
+        "bytes": 1047552,
+        "crc": "ccde113d"
+      },
+      {
+        "index": 2,
+        "poc": 5,
+        "bytes": 1047552,
+        "crc": "24e2067d"
+      },
+      {
+        "index": 0,
+        "poc": 6,
+        "bytes": 1047552,
+        "crc": "16ecf062"
+      },
+      {
+        "index": 1,
+        "poc": 7,
+        "bytes": 1047552,
+        "crc": "713931fb"
+      },
+      {
+        "index": 2,
+        "poc": 8,
+        "bytes": 1047552,
+        "crc": "f8f0ffb4"
+      },
+      {
+        "index": 0,
+        "poc": 9,
+        "bytes": 1047552,
+        "crc": "5caf9979"
+      },
+      {
+        "index": 1,
+        "poc": 10,
+        "bytes": 1047552,
+        "crc": "c406b01d"
+      },
+      {
+        "index": 2,
+        "poc": 11,
+        "bytes": 1047552,
+        "crc": "5fa865bf"
+      },
+      {
+        "index": 0,
+        "poc": 12,
+        "bytes": 1047552,
+        "crc": "1b9630aa"
+      },
+      {
+        "index": 1,
+        "poc": 13,
+        "bytes": 1047552,
+        "crc": "ecd7ee3a"
+      },
+      {
+        "index": 2,
+        "poc": 14,
+        "bytes": 1047552,
+        "crc": "5e8cb481"
+      },
+      {
+        "index": 0,
+        "poc": 0,
+        "bytes": 1047552,
+        "crc": "04a489da"
+      },
+      {
+        "index": 1,
+        "poc": 1,
+        "bytes": 1047552,
+        "crc": "be003fe8"
+      },
+      {
+        "index": 2,
+        "poc": 2,
+        "bytes": 1047552,
+        "crc": "812a745d"
+      },
+      {
+        "index": 0,
+        "poc": 3,
+        "bytes": 1047552,
+        "crc": "6b48fef5"
+      },
+      {
+        "index": 1,
+        "poc": 4,
+        "bytes": 1047552,
+        "crc": "d17770f9"
+      },
+      {
+        "index": 2,
+        "poc": 5,
+        "bytes": 1047552,
+        "crc": "47506dc4"
+      },
+      {
+        "index": 0,
+        "poc": 6,
+        "bytes": 1047552,
+        "crc": "43c596bd"
+      },
+      {
+        "index": 1,
+        "poc": 7,
+        "bytes": 1047552,
+        "crc": "49146295"
+      },
+      {
+        "index": 2,
+        "poc": 8,
+        "bytes": 1047552,
+        "crc": "ac54b8a4"
+      },
+      {
+        "index": 0,
+        "poc": 9,
+        "bytes": 1047552,
+        "crc": "b0bde27c"
+      },
+      {
+        "index": 1,
+        "poc": 10,
+        "bytes": 1047552,
+        "crc": "dcbf909c"
+      },
+      {
+        "index": 2,
+        "poc": 11,
+        "bytes": 1047552,
+        "crc": "4ea7ce8a"
+      },
+      {
+        "index": 0,
+        "poc": 12,
+        "bytes": 1047552,
+        "crc": "082beadb"
+      },
+      {
+        "index": 1,
+        "poc": 13,
+        "bytes": 1047552,
+        "crc": "1e6e7d29"
+      },
+      {
+        "index": 2,
+        "poc": 14,
+        "bytes": 1047552,
+        "crc": "cffbad83"
+      },
+      {
+        "index": 0,
+        "poc": 0,
+        "bytes": 1047552,
+        "crc": "04a489da"
+      },
+      {
+        "index": 1,
+        "poc": 1,
+        "bytes": 1047552,
+        "crc": "5363f12f"
+      },
+      {
+        "index": 2,
+        "poc": 2,
+        "bytes": 1047552,
+        "crc": "265a4d7b"
+      },
+      {
+        "index": 0,
+        "poc": 3,
+        "bytes": 1047552,
+        "crc": "88377e43"
+      },
+      {
+        "index": 1,
+        "poc": 4,
+        "bytes": 1047552,
+        "crc": "9536fb31"
+      },
+      {
+        "index": 2,
+        "poc": 5,
+        "bytes": 1047552,
+        "crc": "e414ab3e"
+      },
+      {
+        "index": 0,
+        "poc": 6,
+        "bytes": 1047552,
+        "crc": "2641574e"
+      },
+      {
+        "index": 1,
+        "poc": 7,
+        "bytes": 1047552,
+        "crc": "087427cd"
+      },
+      {
+        "index": 2,
+        "poc": 8,
+        "bytes": 1047552,
+        "crc": "087427cd"
+      },
+      {
+        "index": 0,
+        "poc": 9,
+        "bytes": 1047552,
+        "crc": "e035ab0a"
+      },
+      {
+        "index": 1,
+        "poc": 10,
+        "bytes": 1047552,
+        "crc": "2708d459"
+      },
+      {
+        "index": 2,
+        "poc": 11,
+        "bytes": 1047552,
+        "crc": "e1c00b64"
+      },
+      {
+        "index": 0,
+        "poc": 12,
+        "bytes": 1047552,
+        "crc": "36a83731"
+      },
+      {
+        "index": 1,
+        "poc": 13,
+        "bytes": 1047552,
+        "crc": "257e4809"
+      },
+      {
+        "index": 2,
+        "poc": 14,
+        "bytes": 1047552,
+        "crc": "51d8bd0c"
+      },
+      {
+        "index": 0,
+        "poc": 0,
+        "bytes": 1047552,
+        "crc": "b40955b7"
+      },
+      {
+        "index": 1,
+        "poc": 1,
+        "bytes": 1047552,
+        "crc": "596aaba0"
+      },
+      {
+        "index": 2,
+        "poc": 2,
+        "bytes": 1047552,
+        "crc": "c9e7f911"
+      }
+    ],
+    "decoder_log_sha256": "5428a444a5946a60b6c7c03e7c77718b6c67814da4347bd98721dfdfc26618a1",
+    "scope": "Complete ordered per-frame CRC match between actual native decoder NV12 output and independent ffmpeg decode of exact replay-card MOV; POC recorded per event and resets per GOP."
+  },
+  "native_decode_return_cleanup_passed": true
+}

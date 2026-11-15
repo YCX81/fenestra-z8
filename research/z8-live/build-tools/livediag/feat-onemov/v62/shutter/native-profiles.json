@@ -1,0 +1,503 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "enabled": 0,
+      "profile": 0,
+      "exposure_rational": [
+        6,
+        42
+      ],
+      "selected": [
+        60,
+        60
+      ],
+      "hits": [],
+      "envelopes": [],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 0,
+      "profile": 0,
+      "exposure_rational": [
+        6,
+        30
+      ],
+      "selected": [
+        60,
+        60
+      ],
+      "hits": [],
+      "envelopes": [],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 0,
+      "profile": 1,
+      "exposure_rational": [
+        6,
+        42
+      ],
+      "selected": [
+        60,
+        60
+      ],
+      "hits": [],
+      "envelopes": [],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 0,
+      "profile": 1,
+      "exposure_rational": [
+        6,
+        30
+      ],
+      "selected": [
+        60,
+        60
+      ],
+      "hits": [],
+      "envelopes": [],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 0,
+      "profile": 2,
+      "exposure_rational": [
+        6,
+        42
+      ],
+      "selected": [
+        60,
+        60
+      ],
+      "hits": [],
+      "envelopes": [],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 0,
+      "profile": 2,
+      "exposure_rational": [
+        6,
+        30
+      ],
+      "selected": [
+        60,
+        60
+      ],
+      "hits": [],
+      "envelopes": [],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 0,
+      "profile": 3,
+      "exposure_rational": [
+        6,
+        42
+      ],
+      "selected": [
+        60,
+        60
+      ],
+      "hits": [],
+      "envelopes": [],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 0,
+      "profile": 3,
+      "exposure_rational": [
+        6,
+        30
+      ],
+      "selected": [
+        60,
+        60
+      ],
+      "hits": [],
+      "envelopes": [],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 0,
+      "profile": 4,
+      "exposure_rational": [
+        6,
+        42
+      ],
+      "selected": [
+        60,
+        60
+      ],
+      "hits": [],
+      "envelopes": [],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 0,
+      "profile": 4,
+      "exposure_rational": [
+        6,
+        30
+      ],
+      "selected": [
+        60,
+        60
+      ],
+      "hits": [],
+      "envelopes": [],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 1,
+      "profile": 0,
+      "exposure_rational": [
+        6,
+        30
+      ],
+      "selected": [
+        1,
+        2
+      ],
+      "hits": [
+        {
+          "pc": "0x40f9caf4",
+          "tone": 1,
+          "duration": 0
+        },
+        {
+          "pc": "0x40f9cc04",
+          "tone": 2,
+          "duration": 0
+        }
+      ],
+      "envelopes": [
+        {
+          "tone": 1,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        },
+        {
+          "tone": 2,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        }
+      ],
+      "fire_mute_hook_calls": 1,
+      "passed": true
+    },
+    {
+      "enabled": 1,
+      "profile": 1,
+      "exposure_rational": [
+        6,
+        42
+      ],
+      "selected": [
+        10,
+        10
+      ],
+      "hits": [
+        {
+          "pc": "0x40f9caf4",
+          "tone": 10,
+          "duration": 0
+        }
+      ],
+      "envelopes": [
+        {
+          "tone": 10,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        }
+      ],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 1,
+      "profile": 1,
+      "exposure_rational": [
+        6,
+        30
+      ],
+      "selected": [
+        11,
+        12
+      ],
+      "hits": [
+        {
+          "pc": "0x40f9caf4",
+          "tone": 11,
+          "duration": 0
+        },
+        {
+          "pc": "0x40f9cc04",
+          "tone": 12,
+          "duration": 0
+        }
+      ],
+      "envelopes": [
+        {
+          "tone": 11,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        },
+        {
+          "tone": 12,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        }
+      ],
+      "fire_mute_hook_calls": 1,
+      "passed": true
+    },
+    {
+      "enabled": 1,
+      "profile": 2,
+      "exposure_rational": [
+        6,
+        42
+      ],
+      "selected": [
+        14,
+        14
+      ],
+      "hits": [
+        {
+          "pc": "0x40f9caf4",
+          "tone": 14,
+          "duration": 0
+        }
+      ],
+      "envelopes": [
+        {
+          "tone": 14,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        }
+      ],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 1,
+      "profile": 2,
+      "exposure_rational": [
+        6,
+        30
+      ],
+      "selected": [
+        15,
+        16
+      ],
+      "hits": [
+        {
+          "pc": "0x40f9caf4",
+          "tone": 15,
+          "duration": 0
+        },
+        {
+          "pc": "0x40f9cc04",
+          "tone": 16,
+          "duration": 0
+        }
+      ],
+      "envelopes": [
+        {
+          "tone": 15,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        },
+        {
+          "tone": 16,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        }
+      ],
+      "fire_mute_hook_calls": 1,
+      "passed": true
+    },
+    {
+      "enabled": 1,
+      "profile": 3,
+      "exposure_rational": [
+        6,
+        42
+      ],
+      "selected": [
+        18,
+        18
+      ],
+      "hits": [
+        {
+          "pc": "0x40f9caf4",
+          "tone": 18,
+          "duration": 0
+        }
+      ],
+      "envelopes": [
+        {
+          "tone": 18,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        }
+      ],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 1,
+      "profile": 3,
+      "exposure_rational": [
+        6,
+        30
+      ],
+      "selected": [
+        19,
+        20
+      ],
+      "hits": [
+        {
+          "pc": "0x40f9caf4",
+          "tone": 19,
+          "duration": 0
+        },
+        {
+          "pc": "0x40f9cc04",
+          "tone": 20,
+          "duration": 0
+        }
+      ],
+      "envelopes": [
+        {
+          "tone": 19,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        },
+        {
+          "tone": 20,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        }
+      ],
+      "fire_mute_hook_calls": 1,
+      "passed": true
+    },
+    {
+      "enabled": 1,
+      "profile": 4,
+      "exposure_rational": [
+        6,
+        42
+      ],
+      "selected": [
+        22,
+        22
+      ],
+      "hits": [
+        {
+          "pc": "0x40f9caf4",
+          "tone": 22,
+          "duration": 0
+        }
+      ],
+      "envelopes": [
+        {
+          "tone": 22,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        }
+      ],
+      "fire_mute_hook_calls": 0,
+      "passed": true
+    },
+    {
+      "enabled": 1,
+      "profile": 4,
+      "exposure_rational": [
+        6,
+        30
+      ],
+      "selected": [
+        23,
+        24
+      ],
+      "hits": [
+        {
+          "pc": "0x40f9caf4",
+          "tone": 23,
+          "duration": 0
+        },
+        {
+          "pc": "0x40f9cc04",
+          "tone": 24,
+          "duration": 0
+        }
+      ],
+      "envelopes": [
+        {
+          "tone": 23,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        },
+        {
+          "tone": 24,
+          "repeat": 1,
+          "callback": "0x40f9d194"
+        }
+      ],
+      "fire_mute_hook_calls": 1,
+      "passed": true
+    },
+    {
+      "case": "same-instance On/Off/On/Off",
+      "enabled": 1,
+      "submitted": [
+        10
+      ],
+      "passed": true
+    },
+    {
+      "case": "same-instance On/Off/On/Off",
+      "enabled": 0,
+      "submitted": [],
+      "passed": true
+    },
+    {
+      "case": "same-instance On/Off/On/Off",
+      "enabled": 1,
+      "submitted": [
+        10
+      ],
+      "passed": true
+    },
+    {
+      "case": "same-instance On/Off/On/Off",
+      "enabled": 0,
+      "submitted": [],
+      "passed": true
+    }
+  ],
+  "case_count": 23,
+  "main_sha256": "db0c847b333f0a6e07222f2207435e9bf340ce1d544704f6d801ec3ecc1088e5",
+  "boundaries": [
+    "Exact V61 native producer, SoundTask and constructor/rejection/completion instructions execute.",
+    "Settings profile and exposure rational are explicit fixture inputs; the native comparison executes. No persistent camera settings are modified.",
+    "Heap/queue/OS/duration are stubs. Driver5 rejection is real native code; this is not admitted DAC playback.",
+    "Separate tone0 and repeating/bulb protocols are intentionally outside this candidate."
+  ]
+}

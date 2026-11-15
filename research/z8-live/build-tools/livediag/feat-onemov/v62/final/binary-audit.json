@@ -1,0 +1,680 @@
+{
+  "passed": true,
+  "baseline_main_sha256": "db0c847b333f0a6e07222f2207435e9bf340ce1d544704f6d801ec3ecc1088e5",
+  "final_main_sha256": "36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5",
+  "bytes": 81807709,
+  "different_bytes": 7545,
+  "unexplained_difference_addresses": [],
+  "source": {
+    "files": 406,
+    "changed_files": [
+      {
+        "path": "src-fix37/audio/live_shutter_z8.c",
+        "old_sha256": "2c9b308ff90d6f234ffa4c87cb170444b05cd80c4908f8f0afa9190f760d2190",
+        "new_sha256": "5179121322cd6f37c5eac6b2d2d2ad5b1c2b115f22f2dac05bbd56709d7edb9f"
+      },
+      {
+        "path": "src-fix37/hooks.S",
+        "old_sha256": "3b9e0c9825bc9bb7c226eeec244cdd5a5d1fc1a3d439d44827c15bdb5c14b53d",
+        "new_sha256": "c8e1e46f1644b07cfe43d461f52e4e4f87312536d68a2394c4cffca1f4efafbe"
+      }
+    ],
+    "local_matches_remote_input": true,
+    "remote_compiled_work_matches_input": true
+  },
+  "compilation": {
+    "compiler": "Ubuntu clang version 21.1.8 (6ubuntu1)",
+    "linker": "Ubuntu LLD 21.1.8 (compatible with GNU linkers)",
+    "object_count": 31,
+    "unchanged_objects": 29,
+    "modified_units_recompiled_exactly": true,
+    "all_four_old_new_live_pb_elfs_relinked_exactly": true,
+    "receipt": "audit-inputs/remote-object-audit.json",
+    "receipt_sha256": "1237e974863c2edb9a8fac12f1548028f972fbf42e99bbd4c7f493c820d8c241"
+  },
+  "exact_elf_section_matches": [
+    {
+      "version": "v61",
+      "kind": "live",
+      "section": ".live_shutter",
+      "address": "0x4019f020",
+      "size": 3116,
+      "sha256": "aefb824e5b58642124fa744eae61c886353a6126d8152728335fbff26cc6fa1c",
+      "exact_elf_match": true
+    },
+    {
+      "version": "v61",
+      "kind": "live",
+      "section": ".text",
+      "address": "0x401e2000",
+      "size": 104292,
+      "sha256": "ad5605f9b8c388433caf5223cdd27382225a04a2a9f02df2e032d62f82cacdc9",
+      "exact_elf_match": true
+    },
+    {
+      "version": "v61",
+      "kind": "live",
+      "section": ".rodata",
+      "address": "0x401fb768",
+      "size": 5632,
+      "sha256": "fd0fc43287ce12fd7e6f40b367067b1ba54fb47c23a75fdda2dbded64bdd5a6f",
+      "exact_elf_match": true
+    },
+    {
+      "version": "v61",
+      "kind": "live",
+      "section": ".live_extra",
+      "address": "0x401fd218",
+      "size": 3548,
+      "sha256": "8e40ce199594df5c674ca9c9358291ce5fc18035eaa8a9c389bde232c3872ffa",
+      "exact_elf_match": true
+    },
+    {
+      "version": "v61",
+      "kind": "pb",
+      "section": ".text",
+      "address": "0x40196000",
+      "size": 32680,
+      "sha256": "f8a74353313975d27d063750881401dad57c4fd170a11b0eff06170850ea9f2b",
+      "exact_elf_match": true
+    },
+    {
+      "version": "v61",
+      "kind": "pb",
+      "section": ".rodata",
+      "address": "0x4019dfa8",
+      "size": 4096,
+      "sha256": "da44cdcc47187b90482fd60f3ec783b9b93db8d824e22288f63d0ce932ef77c7",
+      "exact_elf_match": true
+    },
+    {
+      "version": "v62",
+      "kind": "live",
+      "section": ".live_shutter",
+      "address": "0x4019f020",
+      "size": 3704,
+      "sha256": "9f8b8044b1a9dd8db5cce1a38ef87130b1819c389f56cd57c9f7b89ed76dceff",
+      "exact_elf_match": true
+    },
+    {
+      "version": "v62",
+      "kind": "live",
+      "section": ".text",
+      "address": "0x401e2000",
+      "size": 104620,
+      "sha256": "69088c5b0e08db0efbf181c7ed1012f1a20812cbfe239ae485afd637f36e0ebf",
+      "exact_elf_match": true
+    },
+    {
+      "version": "v62",
+      "kind": "live",
+      "section": ".rodata",
+      "address": "0x401fb8b0",
+      "size": 5632,
+      "sha256": "6b303976dd58531a6137ed90d3f8c01b405f98963349e16be4c871b7a3962052",
+      "exact_elf_match": true
+    },
+    {
+      "version": "v62",
+      "kind": "live",
+      "section": ".live_extra",
+      "address": "0x401fd218",
+      "size": 3548,
+      "sha256": "36144dbbef2cdb9e75c46c206a67db76c7545996105429027c81a155057824b5",
+      "exact_elf_match": true
+    },
+    {
+      "version": "v62",
+      "kind": "pb",
+      "section": ".text",
+      "address": "0x40196000",
+      "size": 32680,
+      "sha256": "f8a74353313975d27d063750881401dad57c4fd170a11b0eff06170850ea9f2b",
+      "exact_elf_match": true
+    },
+    {
+      "version": "v62",
+      "kind": "pb",
+      "section": ".rodata",
+      "address": "0x4019dfa8",
+      "size": 4096,
+      "sha256": "da44cdcc47187b90482fd60f3ec783b9b93db8d824e22288f63d0ce932ef77c7",
+      "exact_elf_match": true
+    }
+  ],
+  "regions": [
+    {
+      "name": "playback",
+      "start": "0x40196000",
+      "end_exclusive": "0x4019f020",
+      "old_sha256": "c43c058a99d8845d2e692d547dae2e3254008195610628889cca30e9dab915ff",
+      "new_sha256": "c43c058a99d8845d2e692d547dae2e3254008195610628889cca30e9dab915ff",
+      "different_bytes": 0,
+      "reconstructed_from_verified_elf_and_zero_padding": true,
+      "separate_menu_helper_included": false
+    },
+    {
+      "name": "shutter",
+      "start": "0x4019f020",
+      "end_exclusive": "0x4019ff40",
+      "old_sha256": "df7bd6c09905bdc1e74f3c87cc86fe817c9d71ce68b41b48be355bec67f24bef",
+      "new_sha256": "990d9957adb9908bdc228fd9af6945f30fc9349e42386438b7594b48dc617f19",
+      "different_bytes": 2111,
+      "reconstructed_from_verified_elf_and_zero_padding": true,
+      "separate_menu_helper_included": false
+    },
+    {
+      "name": "live_primary",
+      "start": "0x401e2000",
+      "end_exclusive": "0x401fd000",
+      "old_sha256": "cf309e8f8546bfcbbdcfc0f6c32b30fde6c61135e6551228ce76dc8599c696ff",
+      "new_sha256": "2443186a81e2f6ab33933ea1458b84b877e22f3228b30a5ee206ab447810f7b7",
+      "different_bytes": 5421,
+      "reconstructed_from_verified_elf_and_zero_padding": true,
+      "separate_menu_helper_included": true
+    },
+    {
+      "name": "live_extra",
+      "start": "0x401fd218",
+      "end_exclusive": "0x401fe000",
+      "old_sha256": "a1aa99bc439d5d2917b12ece26b5a2ef91daed28e042accdf751e97159ff7e6f",
+      "new_sha256": "239a554a817ba5357c00dabf0d2315351870eacd83a2c30afc27b527c960c85b",
+      "different_bytes": 4,
+      "reconstructed_from_verified_elf_and_zero_padding": true,
+      "separate_menu_helper_included": false
+    }
+  ],
+  "branches": [
+    {
+      "address": "0x403db694",
+      "instruction": "B",
+      "symbol": "live_ui_menu_page",
+      "old_target": "0x401e7270",
+      "new_target": "0x401e7270",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x4032e130",
+      "instruction": "B",
+      "symbol": "live_ui_menu_text",
+      "old_target": "0x401e72a8",
+      "new_target": "0x401e72a8",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40d60ec8",
+      "instruction": "B",
+      "symbol": "live_ui_system_dispatch",
+      "old_target": "0x401e7404",
+      "new_target": "0x401e7404",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40fdc9c8",
+      "instruction": "B",
+      "symbol": "live_press_entry",
+      "old_target": "0x401e562c",
+      "new_target": "0x401e562c",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40e90838",
+      "instruction": "B",
+      "symbol": "live_irq_entry",
+      "old_target": "0x401e5590",
+      "new_target": "0x401e5590",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40c26804",
+      "instruction": "B",
+      "symbol": "live_start_entry",
+      "old_target": "0x401e56c4",
+      "new_target": "0x401e56c4",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40c26818",
+      "instruction": "B",
+      "symbol": "live_stop_entry",
+      "old_target": "0x401e5760",
+      "new_target": "0x401e5760",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40c26828",
+      "instruction": "B",
+      "symbol": "live_hold_entry",
+      "old_target": "0x401e57fc",
+      "new_target": "0x401e57fc",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40e8b328",
+      "instruction": "BL",
+      "symbol": "live_pool_wrap",
+      "old_target": "0x401e5898",
+      "new_target": "0x401e5898",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x408b7c1c",
+      "instruction": "B",
+      "symbol": "live_closed_entry",
+      "old_target": "0x401e5930",
+      "new_target": "0x401e5930",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x406cd6a0",
+      "instruction": "BL",
+      "symbol": "live_finalize_wrap",
+      "old_target": "0x401e4c2c",
+      "new_target": "0x401e4c2c",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x406cd75c",
+      "instruction": "BL",
+      "symbol": "live_event_wrap",
+      "old_target": "0x401e4ce0",
+      "new_target": "0x401e4ce0",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40ea3638",
+      "instruction": "BL",
+      "symbol": "live_writer_wrap",
+      "old_target": "0x401e48e4",
+      "new_target": "0x401e48e4",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x406cd468",
+      "instruction": "BL",
+      "symbol": "live_open_wrap",
+      "old_target": "0x401e4620",
+      "new_target": "0x401e4620",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x402f2d58",
+      "instruction": "B",
+      "symbol": "live_w5_bringup_entry",
+      "old_target": "0x401e59d0",
+      "new_target": "0x401e59d0",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40f9cb64",
+      "instruction": "BL",
+      "symbol": "live_shutter_entry",
+      "old_target": "0x401e5a6c",
+      "new_target": "0x401e5a6c",
+      "origin": "generated Live build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x41020844",
+      "instruction": "B",
+      "symbol": "pb_key_entry",
+      "old_target": "0x40196000",
+      "new_target": "0x40196000",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40d60ecc",
+      "instruction": "B",
+      "symbol": "pb_system_entry",
+      "old_target": "0x40196144",
+      "new_target": "0x40196144",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x4085c424",
+      "instruction": "B",
+      "symbol": "pb_delete_wrap",
+      "old_target": "0x40197ec0",
+      "new_target": "0x40197ec0",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x4085bcb0",
+      "instruction": "B",
+      "symbol": "pb_protect_wrap",
+      "old_target": "0x401980d0",
+      "new_target": "0x401980d0",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x401cce84",
+      "instruction": "B",
+      "symbol": "pb_settings_menu_page",
+      "old_target": "0x4019de28",
+      "new_target": "0x4019de28",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x401cd3ec",
+      "instruction": "B",
+      "symbol": "pb_settings_menu_text",
+      "old_target": "0x4019ded8",
+      "new_target": "0x4019ded8",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x4061a724",
+      "instruction": "B",
+      "symbol": "pb_leave_entry",
+      "old_target": "0x4019600c",
+      "new_target": "0x4019600c",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40619de4",
+      "instruction": "B",
+      "symbol": "pb_state_entry",
+      "old_target": "0x401960a8",
+      "new_target": "0x401960a8",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40618be0",
+      "instruction": "BL",
+      "symbol": "pb_ui_poll_wrap",
+      "old_target": "0x40196778",
+      "new_target": "0x40196778",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x4063b958",
+      "instruction": "BL",
+      "symbol": "pb_native_return",
+      "old_target": "0x40196660",
+      "new_target": "0x40196660",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x402d9ba0",
+      "instruction": "BL",
+      "symbol": "pb_open_wrap",
+      "old_target": "0x40196474",
+      "new_target": "0x40196474",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x4085fcc0",
+      "instruction": "BL",
+      "symbol": "pb_stat_wrap",
+      "old_target": "0x4019654c",
+      "new_target": "0x4019654c",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40711334",
+      "instruction": "BL",
+      "symbol": "pb_info_record",
+      "old_target": "0x4019659c",
+      "new_target": "0x4019659c",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40618b84",
+      "instruction": "BL",
+      "symbol": "pb_ui_wait_wrap",
+      "old_target": "0x40196c9c",
+      "new_target": "0x40196c9c",
+      "origin": "generated playback build recipe",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40f6cff0",
+      "instruction": "BL",
+      "symbol": "live_shutter_prepare_entry",
+      "old_target": "0x401fd92c",
+      "new_target": "0x401fd92c",
+      "origin": "compose_base53 prepare overlay",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40f6e174",
+      "instruction": "BL",
+      "symbol": "live_shutter_fire_entry",
+      "old_target": "0x401fd9cc",
+      "new_target": "0x401fd9cc",
+      "origin": "compose_base53 fire overlay",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x40e30e3c",
+      "instruction": "B",
+      "symbol": "live_shutter_dispatch",
+      "old_target": "0x4019f5b0",
+      "new_target": "0x4019f5f4",
+      "origin": "compose53 SFX dispatch overlay",
+      "changed": true,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x401a3380",
+      "instruction": "BL",
+      "symbol": "pb_output_valid",
+      "old_target": "0x4019af08",
+      "new_target": "0x4019af08",
+      "origin": "core_output_patch EVF adapter",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x401a38c8",
+      "instruction": "B",
+      "symbol": "pb_output_initialize_global",
+      "old_target": "0x4019aff4",
+      "new_target": "0x4019aff4",
+      "origin": "core_output_patch EVF adapter",
+      "changed": false,
+      "actual_elf_target_verified": true
+    }
+  ],
+  "pointers": [
+    {
+      "address": "0x401deec0",
+      "symbol": "pb_output_target_enabled",
+      "old_target": "0x4019afc4",
+      "new_target": "0x4019afc4",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x401deec8",
+      "symbol": "pb_output_target_enable",
+      "old_target": "0x4019afdc",
+      "new_target": "0x4019afdc",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x401deed8",
+      "symbol": "pb_output_backing_rectangle",
+      "old_target": "0x4019af48",
+      "new_target": "0x4019af48",
+      "changed": false,
+      "actual_elf_target_verified": true
+    },
+    {
+      "address": "0x401def00",
+      "symbol": "live_ui_evf_submit",
+      "old_target": "0x401fdb08",
+      "new_target": "0x401fdb08",
+      "changed": false,
+      "actual_elf_target_verified": true
+    }
+  ],
+  "fixed_assembly_branches": [
+    {
+      "address": "0x40cf7d08",
+      "target": "0x4019ff40",
+      "symbol": "crop_fix",
+      "unchanged": true
+    },
+    {
+      "address": "0x407138d0",
+      "target": "0x4019ffc0",
+      "symbol": "aspect_fix",
+      "unchanged": true
+    }
+  ],
+  "unchanged_special_regions": [
+    {
+      "name": "crop_aspect_assembly",
+      "start": "0x4019ff40",
+      "end_exclusive": "0x401a0000",
+      "sha256": "3f116a1fe83f1fa963c7c329e7c8fb2a3088d16ff847fb5dad878583d6e7be6c",
+      "identical": true
+    },
+    {
+      "name": "bootguard_metadata_helpers",
+      "start": "0x401fd000",
+      "end_exclusive": "0x401fd218",
+      "sha256": "5ec0ab7aa9d657e615b5bc4677f201785e1ce99e237dc37015e1c60490c71237",
+      "identical": true
+    }
+  ],
+  "extra_prepare_tailcall": {
+    "address": "0x401fd9c8",
+    "old_symbol": "live_stock_shutter_prepare",
+    "old_target": "0x40f9cccc",
+    "new_symbol": "live_shutter_prepare",
+    "new_target": "0x401fb764",
+    "only_four_changed_bytes_in_extra": true
+  },
+  "rodata_relocation": {
+    "old_base": "0x401fb768",
+    "new_base": "0x401fb8b0",
+    "size": 5632,
+    "changed_content_bytes": 8,
+    "pointers": [
+      {
+        "offset": "0x1340",
+        "old_target": "0x401fb8e3",
+        "new_target": "0x401fba2b",
+        "same_rodata_relative_target": "0x17b"
+      },
+      {
+        "offset": "0x1348",
+        "old_target": "0x401fb7bf",
+        "new_target": "0x401fb907",
+        "same_rodata_relative_target": "0x57"
+      },
+      {
+        "offset": "0x1350",
+        "old_target": "0x401fb843",
+        "new_target": "0x401fb98b",
+        "same_rodata_relative_target": "0xdb"
+      },
+      {
+        "offset": "0x1358",
+        "old_target": "0x401fb84a",
+        "new_target": "0x401fb992",
+        "same_rodata_relative_target": "0xe2"
+      }
+    ],
+    "all_other_contents_identical": true
+  },
+  "menu": {
+    "hook_address": "0x401cd410",
+    "old_target": "0x401cc314",
+    "new_target": "0x401fcf40",
+    "helper_bytes": 80,
+    "helper_sha256": "6c7410c31e0520a51ce313f89f9163222b05146ec12376054e82fc37bcf3d006",
+    "original_current_page_call": "0x403dbdb4",
+    "original_state_tailcall": "0x401cc314",
+    "patch_script_sha256": "2dd8ed9e929d9b454acac2edfb66cfbf078d4a0a443ee186f33f1b5709ae3171",
+    "exact_reapplication_verified": true,
+    "changed_bytes_excluding_build_id": 76
+  },
+  "build_id": {
+    "address": "0x401fe060",
+    "value": "0xfb84a7ed",
+    "sha256_zero_then_low32_or_01000000_verified": true
+  },
+  "video_freeze": {
+    "source": "src-fix37/capture/live_stream.c",
+    "source_sha256": "0e9e7e88d136410e903df1c41007e18910dde6d325fc7a606bd8ccd4c954f071",
+    "source_unchanged": true,
+    "object": {
+      "name": "live/objects/capture_live_stream.c.o",
+      "old_sha256": "9f4ad11fd3c3d9d30d8f5eb8fff18f93b56d8b34edfdd26d5a4e3751a8e1c776",
+      "new_sha256": "9f4ad11fd3c3d9d30d8f5eb8fff18f93b56d8b34edfdd26d5a4e3751a8e1c776",
+      "identical": true
+    },
+    "linked_function": {
+      "address": "0x401f4834",
+      "size": 552,
+      "sha256": "3ad1b8249024cba19a6797fdca395e8ab7846d92607ef4ec6617b467733ad6e4"
+    },
+    "linked_function_identical": true,
+    "rule": "if(count>3u&&count%3u==1u&&s->frozen[count-2].pts_us>=s->clip_press){count--;bytes-=(unsigned)s->frozen[count].bytes;s->clip_end=s->frozen[count].pts_us;}"
+  },
+  "scope": "Every MAIN byte compared. Changed banks exactly reconstructed from independently recompiled/relinked ELF plus zero padding and the explicit menu helper. No camera/card access; static provenance audit, not hardware behavior proof."
+}

@@ -1,0 +1,220 @@
+{
+  "main_sha256": "c14894087d5fd03b0124c7d94f6cd521e94def58831a087738145ef91b60fcd2",
+  "live_size": 23744,
+  "pb_size": 9352,
+  "sites": {
+    "0x401e2138": "live_runtime_event",
+    "0x401e2000": "live_requested_set",
+    "0x40196478": "pb_ui_poll_entry",
+    "0x40196490": "pb_ui_after_old_poll",
+    "0x401965f8": "pb_ui_before_present",
+    "0x401965fc": "pb_ui_after_present",
+    "0x40196654": "pb_ui_before_attach",
+    "0x40196658": "pb_ui_after_attach",
+    "0x401966a4": "pb_ui_before_detach",
+    "0x401966a8": "pb_ui_after_detach",
+    "0x401967b4": "pb_ui_leave",
+    "0x4019686c": "pb_ui_state_notify"
+  },
+  "pb_fields": {
+    "magic": [
+      0,
+      4
+    ],
+    "bytes": [
+      4,
+      4
+    ],
+    "key": [
+      8,
+      4
+    ],
+    "media_epoch": [
+      12,
+      4
+    ],
+    "shutdown": [
+      16,
+      4
+    ],
+    "key_epoch": [
+      20,
+      4
+    ],
+    "start_request": [
+      24,
+      4
+    ],
+    "gate": [
+      32,
+      8
+    ],
+    "polls": [
+      48,
+      4
+    ],
+    "last_frame": [
+      80,
+      4
+    ],
+    "start_us": [
+      488,
+      8
+    ],
+    "preview_size": [
+      496,
+      8
+    ],
+    "preview_fd": [
+      504,
+      4
+    ],
+    "preview.width": [
+      512,
+      4
+    ],
+    "preview.height": [
+      516,
+      4
+    ],
+    "preview.frames": [
+      520,
+      4
+    ],
+    "preview.frame_bytes": [
+      524,
+      4
+    ],
+    "preview.duration_us": [
+      528,
+      4
+    ],
+    "preview.epoch": [
+      536,
+      8
+    ],
+    "display.display.page": [
+      2048,
+      8
+    ],
+    "display.display.surface": [
+      2056,
+      8
+    ],
+    "display.display.scene": [
+      2064,
+      8
+    ],
+    "display.display.attached": [
+      2080,
+      4
+    ],
+    "display.display.frames": [
+      2084,
+      4
+    ],
+    "display.display.callbacks": [
+      2088,
+      4
+    ],
+    "display.display.rectangles": [
+      2092,
+      4
+    ],
+    "display.display.error": [
+      2096,
+      4
+    ],
+    "display.display.readers": [
+      7904,
+      4
+    ],
+    "display.display.gate": [
+      7896,
+      8
+    ],
+    "render_request": [
+      8196,
+      4
+    ],
+    "ui_leaving": [
+      8200,
+      4
+    ],
+    "ui_polls": [
+      8204,
+      4
+    ],
+    "ui_presented": [
+      8208,
+      4
+    ],
+    "ui_detached": [
+      8212,
+      4
+    ],
+    "ui_render_error": [
+      8216,
+      4
+    ],
+    "rendered_frames": [
+      8220,
+      4
+    ],
+    "ui_state_calls": [
+      8232,
+      4
+    ],
+    "ui_state_detached": [
+      8236,
+      4
+    ],
+    "compose_epoch": [
+      8392,
+      8
+    ],
+    "decode_errors": [
+      9164,
+      4
+    ],
+    "scene.data": [
+      7984,
+      8
+    ],
+    "audio_bytes": [
+      9292,
+      4
+    ],
+    "audio_t": [
+      9304,
+      8
+    ],
+    "audio_ack": [
+      9280,
+      4
+    ]
+  },
+  "live_fields": {
+    "shutdown": [
+      1740,
+      4
+    ],
+    "card_epoch": [
+      1744,
+      4
+    ],
+    "requested": [
+      1728,
+      4
+    ]
+  },
+  "changed": {
+    "retry-driver/run_live.py": "215571031d4d4d3a12e2e9bafc0fcf434cde8d54d59da350a282e200408d093e",
+    "rx_observer.c": "59219a2f8676d8dd4e8bd45478c3640f66cdc768a575faf6b9b3cd25753c7714",
+    "runtime-offsets.json": "a6cbe30666d6f1a2a4f45f7f059a5503b1e73ff1bb35563a79c08c0f762a8c00",
+    "runtime-widths.json": "501253950293dc340d020f4a944d1ef78342e74f5c9dc90592525d5983ec8f99",
+    "pb-offsets.json": "7ec0996ab16230815482cecafe8307691ed1cbaad81cdeb987d67ba2514b3047",
+    "pb-widths.json": "a11e9497ff27eebdd5399b2873347865e85300e961e0226879ab62831de20a7e"
+  },
+  "scope": "Read-only host observations only; guest MAIN, clock, model, input contacts, pause/resume gates and 60s deadline unchanged. Removed stale relocatable PCM/PB observation sites. UI entry/return sampling only limits logging, never guest execution."
+}

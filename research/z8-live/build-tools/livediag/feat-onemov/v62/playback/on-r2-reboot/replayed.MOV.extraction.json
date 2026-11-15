@@ -1,0 +1,16 @@
+{
+  "volume": "/path/to/user/fxfix/onemov/v62-playback-check-36c564c9/on-r2-reboot/private-card.raw",
+  "entry": {
+    "path": "LIVE/100NCZ_8/DSC_0001.MOV",
+    "directory": false,
+    "bytes": 1088316,
+    "valid_bytes": 1088316,
+    "first_cluster": 37,
+    "contiguous": true
+  },
+  "output": "/path/to/user/fxfix/onemov/v62-playback-check-36c564c9/on-r2-reboot/replayed.MOV",
+  "bytes": 1088316,
+  "sha256": "21142258ce8c114d1391f72452657a645990a8a31239665041a5813d04977b19",
+  "camera_image_decoded": false,
+  "scope": "actual initialized file bytes extracted read-only; no substituted data, codec or camera-file acceptance"
+}

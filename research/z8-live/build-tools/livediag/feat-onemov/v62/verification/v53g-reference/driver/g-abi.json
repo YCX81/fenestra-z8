@@ -1,0 +1,9 @@
+{
+  "actual_source": "/path/to/user/fxfix/v53-root/integration-g-final/work/src-fix37",
+  "ABI": 23744,
+  "offsets_and_widths_match_approved_F_json": true,
+  "fields": 118,
+  "layout_sha256": "5b229651e864a0b5d9729b6af17e91e9bf1360229dfe765452b44794568e0b62",
+  "old_raw_layout_bin_is_stale": true,
+  "main_sha256": "c14894087d5fd03b0124c7d94f6cd521e94def58831a087738145ef91b60fcd2"
+}

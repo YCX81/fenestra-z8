@@ -1,0 +1,300 @@
+{
+  "passed": true,
+  "compiler": "Ubuntu clang version 21.1.8 (6ubuntu1)",
+  "linker": "Ubuntu LLD 21.1.8 (compatible with GNU linkers)",
+  "compile_flags": [
+    "--target=aarch64-none-elf",
+    "-Os",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-stack-protector",
+    "-fno-unwind-tables",
+    "-fno-asynchronous-unwind-tables",
+    "-ffunction-sections",
+    "-fdata-sections",
+    "-mgeneral-regs-only",
+    "-mstrict-align",
+    "-DLA_WIDTH=1024",
+    "-DLA_HEIGHT=680",
+    "-DLA_RING_CAPACITY=96",
+    "-DLA_SAMPLE_INTERVAL_US=25000",
+    "-DLIVE_BITRATE=8000000",
+    "-DLIVE_IDR_US=500000",
+    "-DLIVE_ENCODE_SPEED=9",
+    "-Wall",
+    "-Wextra",
+    "-Werror"
+  ],
+  "recipes": [
+    {
+      "name": "relive_v37.py",
+      "sha256": "51e58150c92bf1f2efb3e6a4d60346215f7b1ea9aec4780db3362fbf48337689",
+      "identical": true
+    },
+    {
+      "name": "relive_pb53.py",
+      "sha256": "6adf2dc855ea002feac3ed416a6667b45ad1950d1e4d36cd171828eac1ac01c9",
+      "identical": true
+    },
+    {
+      "name": "live/payload.ld",
+      "sha256": "2ac7ea13a352812dc2d3df6d93fb7df03935544536875aa32493a14b51b8cda5",
+      "identical": true
+    },
+    {
+      "name": "pb/payload.ld",
+      "sha256": "201c31fb6ed156324615f160add7817b5f48ce67ca5f6bcacbf9759f68be0822",
+      "identical": true
+    }
+  ],
+  "source_counts": [
+    406,
+    406
+  ],
+  "source_changes": [
+    "src-fix37/hooks.S",
+    "src-fix37/audio/live_shutter_z8.c"
+  ],
+  "work_source_matches_uploaded_input": true,
+  "objects": [
+    {
+      "name": "live/objects/audio_live_audio.c.o",
+      "old_sha256": "1c962d483150ebf16def768b2fb44589874b4fa8c0259b7f6024e5c5f18411dc",
+      "new_sha256": "1c962d483150ebf16def768b2fb44589874b4fa8c0259b7f6024e5c5f18411dc",
+      "identical": true
+    },
+    {
+      "name": "live/objects/audio_live_audio_mov.c.o",
+      "old_sha256": "b96d36b63e6594e9a40fed4702605c3e462ebe7e20515d4326c7ff476b70c201",
+      "new_sha256": "b96d36b63e6594e9a40fed4702605c3e462ebe7e20515d4326c7ff476b70c201",
+      "identical": true
+    },
+    {
+      "name": "live/objects/audio_live_audio_native.c.o",
+      "old_sha256": "282306944e93f2b6530f1d199741dfce6f96abbbdabcdc4a979644e853dd444a",
+      "new_sha256": "282306944e93f2b6530f1d199741dfce6f96abbbdabcdc4a979644e853dd444a",
+      "identical": true
+    },
+    {
+      "name": "live/objects/audio_live_audio_z8.c.o",
+      "old_sha256": "ceb9ebe4847128bcefd44d3224ff69c9edcf50ff5ad378ed983441b23da5328d",
+      "new_sha256": "ceb9ebe4847128bcefd44d3224ff69c9edcf50ff5ad378ed983441b23da5328d",
+      "identical": true
+    },
+    {
+      "name": "live/objects/audio_live_shutter_z8.c.o",
+      "old_sha256": "9f8e35fc0388bda759237ba431ecc565acdb0f59a4546718a2efeb796a44a0ee",
+      "new_sha256": "ed3a180192108999724a30b04b06b9cc0f5dd0ae0a277888d0a4b8eebde6428b",
+      "identical": false
+    },
+    {
+      "name": "live/objects/capture_live_capture.c.o",
+      "old_sha256": "6f04a9a3991690c3d7db9038c5eb01083d778087ffa19323be2bea457b1269fd",
+      "new_sha256": "6f04a9a3991690c3d7db9038c5eb01083d778087ffa19323be2bea457b1269fd",
+      "identical": true
+    },
+    {
+      "name": "live/objects/capture_live_stream.c.o",
+      "old_sha256": "9f4ad11fd3c3d9d30d8f5eb8fff18f93b56d8b34edfdd26d5a4e3751a8e1c776",
+      "new_sha256": "9f4ad11fd3c3d9d30d8f5eb8fff18f93b56d8b34edfdd26d5a4e3751a8e1c776",
+      "identical": true
+    },
+    {
+      "name": "live/objects/capture_native_capture.c.o",
+      "old_sha256": "faffa1b253288733fee161290463a6fbf33d1d1a1d5709524c285af0a73b89cc",
+      "new_sha256": "faffa1b253288733fee161290463a6fbf33d1d1a1d5709524c285af0a73b89cc",
+      "identical": true
+    },
+    {
+      "name": "live/objects/codec_au_ring.c.o",
+      "old_sha256": "b9bedf045fd51901eb7596c7ff0496f23ec05cb8e80947a996de566b7e906570",
+      "new_sha256": "b9bedf045fd51901eb7596c7ff0496f23ec05cb8e80947a996de566b7e906570",
+      "identical": true
+    },
+    {
+      "name": "live/objects/codec_live_h264_idr.c.o",
+      "old_sha256": "9908deb36227cde1c8c1bb1bc401dd42a2525abfc4882f809f894e54b40e0ad1",
+      "new_sha256": "9908deb36227cde1c8c1bb1bc401dd42a2525abfc4882f809f894e54b40e0ad1",
+      "identical": true
+    },
+    {
+      "name": "live/objects/codec_live_hevc.c.o",
+      "old_sha256": "abd61284045465ce0316cf8f1014d6702ba874a87f719c9a1ed8567d76de39f6",
+      "new_sha256": "abd61284045465ce0316cf8f1014d6702ba874a87f719c9a1ed8567d76de39f6",
+      "identical": true
+    },
+    {
+      "name": "live/objects/codec_live_jpeg.c.o",
+      "old_sha256": "b824de12bb5cdac65a4f1c6b2851cf1324832c3b2642b6d4fec22f03269c9851",
+      "new_sha256": "b824de12bb5cdac65a4f1c6b2851cf1324832c3b2642b6d4fec22f03269c9851",
+      "identical": true
+    },
+    {
+      "name": "live/objects/codec_live_mov.c.o",
+      "old_sha256": "ea0b565910e3cfd1cdb5c54ebaf152cb74a2c05e7b2fbd7d6263c506f102ae0b",
+      "new_sha256": "ea0b565910e3cfd1cdb5c54ebaf152cb74a2c05e7b2fbd7d6263c506f102ae0b",
+      "identical": true
+    },
+    {
+      "name": "live/objects/codec_live_transaction.c.o",
+      "old_sha256": "b5c09ef586d3e0ee66a623459288cea0784bc599c96634ea08956eb8cd3e0db8",
+      "new_sha256": "b5c09ef586d3e0ee66a623459288cea0784bc599c96634ea08956eb8cd3e0db8",
+      "identical": true
+    },
+    {
+      "name": "live/objects/codec_live_w5enc.c.o",
+      "old_sha256": "37653d7c95fe62d900545145d44442405ad526ba50043ea6f069a1b8461e7178",
+      "new_sha256": "37653d7c95fe62d900545145d44442405ad526ba50043ea6f069a1b8461e7178",
+      "identical": true
+    },
+    {
+      "name": "live/objects/codec_native_files.c.o",
+      "old_sha256": "1642f673262ce1f24faeb3fc482791a374dcee8aa56dac559c022ea71f3aa3cf",
+      "new_sha256": "1642f673262ce1f24faeb3fc482791a374dcee8aa56dac559c022ea71f3aa3cf",
+      "identical": true
+    },
+    {
+      "name": "live/objects/codec_preview_reader.c.o",
+      "old_sha256": "2b44af1491d47b1f4b889890b97bddee0e9b1dfe4ecfceb2c64507e6e26c51d0",
+      "new_sha256": "2b44af1491d47b1f4b889890b97bddee0e9b1dfe4ecfceb2c64507e6e26c51d0",
+      "identical": true
+    },
+    {
+      "name": "live/objects/codec_preview_writer.c.o",
+      "old_sha256": "213bd27e376f5a45f906b87dbc1e833a26b968a6ff6ce301fd5f5fd0ac7b0781",
+      "new_sha256": "213bd27e376f5a45f906b87dbc1e833a26b968a6ff6ce301fd5f5fd0ac7b0781",
+      "identical": true
+    },
+    {
+      "name": "live/objects/hooks.S.o",
+      "old_sha256": "75c1630fb049b2512a4b73bd70332f8753351530f03071a30cc5fcb369a75207",
+      "new_sha256": "923feae92efc59fb8e05df66dd5916d6a47682cc9723de517a5ff21865efddc2",
+      "identical": false
+    },
+    {
+      "name": "live/objects/runtime.c.o",
+      "old_sha256": "3106a7f34ecbbc6c255984c5b54d1faf869a30ba1d41c326645622635002797b",
+      "new_sha256": "3106a7f34ecbbc6c255984c5b54d1faf869a30ba1d41c326645622635002797b",
+      "identical": true
+    },
+    {
+      "name": "live/objects/ui_live_ui.c.o",
+      "old_sha256": "976971b6dc37351e560aecc9372ddc2bfe5773ad64b23996cef7d20db0a3473c",
+      "new_sha256": "976971b6dc37351e560aecc9372ddc2bfe5773ad64b23996cef7d20db0a3473c",
+      "identical": true
+    },
+    {
+      "name": "pb/objects/hooks.S.o",
+      "old_sha256": "62318ea7798d0924c032d6859a5669bdd6a3383beff2209530af8cb81689d2af",
+      "new_sha256": "62318ea7798d0924c032d6859a5669bdd6a3383beff2209530af8cb81689d2af",
+      "identical": true
+    },
+    {
+      "name": "pb/objects/native_profile.c.o",
+      "old_sha256": "92b784fe8ff99740d8188a7d73c5a59281f64d84cef6cd636df813a299bb0955",
+      "new_sha256": "92b784fe8ff99740d8188a7d73c5a59281f64d84cef6cd636df813a299bb0955",
+      "identical": true
+    },
+    {
+      "name": "pb/objects/native_sync.c.o",
+      "old_sha256": "df86f792afcc9c16227574dc69c4241b93dd46c9bd62b73526f76a94eeab11b3",
+      "new_sha256": "df86f792afcc9c16227574dc69c4241b93dd46c9bd62b73526f76a94eeab11b3",
+      "identical": true
+    },
+    {
+      "name": "pb/objects/native_ui.c.o",
+      "old_sha256": "6b829033c8da6e4ac149d50eb2fad04996e04aa2f99dc7a89bb9367cf7805b64",
+      "new_sha256": "6b829033c8da6e4ac149d50eb2fad04996e04aa2f99dc7a89bb9367cf7805b64",
+      "identical": true
+    },
+    {
+      "name": "pb/objects/preview.c.o",
+      "old_sha256": "09c3404d2be75403ea3d50e099a41810b2528a9b13dc57f743b63b96b97dd7d8",
+      "new_sha256": "09c3404d2be75403ea3d50e099a41810b2528a9b13dc57f743b63b96b97dd7d8",
+      "identical": true
+    },
+    {
+      "name": "pb/objects/preview_writer.c.o",
+      "old_sha256": "92a2c75a1737a24d6f4fbd60bd84f1bed0290dc1c862d4d1ed88cb208eee01d0",
+      "new_sha256": "92a2c75a1737a24d6f4fbd60bd84f1bed0290dc1c862d4d1ed88cb208eee01d0",
+      "identical": true
+    },
+    {
+      "name": "pb/objects/runtime.c.o",
+      "old_sha256": "c71d74371d766c307ae385ecafa8c65f2a7e31dc2d1e553dfbe9706f7a2a6f52",
+      "new_sha256": "c71d74371d766c307ae385ecafa8c65f2a7e31dc2d1e553dfbe9706f7a2a6f52",
+      "identical": true
+    },
+    {
+      "name": "pb/objects/settings.c.o",
+      "old_sha256": "bdff1e2d974e6e9055d8d26b18b988b036b1a6bd0a98f63e8baee7139c405551",
+      "new_sha256": "bdff1e2d974e6e9055d8d26b18b988b036b1a6bd0a98f63e8baee7139c405551",
+      "identical": true
+    },
+    {
+      "name": "pb/objects/sync.c.o",
+      "old_sha256": "9041f91df69f9f7974d47e2d9b8a296ccc82c31bc7b1edcc86e493d37de651f1",
+      "new_sha256": "9041f91df69f9f7974d47e2d9b8a296ccc82c31bc7b1edcc86e493d37de651f1",
+      "identical": true
+    },
+    {
+      "name": "pb/objects/ui.c.o",
+      "old_sha256": "40ae81d0707de1bc5fc6bcb1bc2badf836467d79e6680fb535b11e32e7c50948",
+      "new_sha256": "40ae81d0707de1bc5fc6bcb1bc2badf836467d79e6680fb535b11e32e7c50948",
+      "identical": true
+    }
+  ],
+  "recompiled": [
+    {
+      "build": "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/build",
+      "source": "hooks.S",
+      "sha256": "75c1630fb049b2512a4b73bd70332f8753351530f03071a30cc5fcb369a75207",
+      "exact_object_match": true
+    },
+    {
+      "build": "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/build",
+      "source": "audio/live_shutter_z8.c",
+      "sha256": "9f8e35fc0388bda759237ba431ecc565acdb0f59a4546718a2efeb796a44a0ee",
+      "exact_object_match": true
+    },
+    {
+      "build": "/path/to/user/fxfix/onemov/v62-log-shutter-8ec4cb/build",
+      "source": "hooks.S",
+      "sha256": "923feae92efc59fb8e05df66dd5916d6a47682cc9723de517a5ff21865efddc2",
+      "exact_object_match": true
+    },
+    {
+      "build": "/path/to/user/fxfix/onemov/v62-log-shutter-8ec4cb/build",
+      "source": "audio/live_shutter_z8.c",
+      "sha256": "ed3a180192108999724a30b04b06b9cc0f5dd0ae0a277888d0a4b8eebde6428b",
+      "exact_object_match": true
+    }
+  ],
+  "relinked": [
+    {
+      "build": "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/build",
+      "kind": "live",
+      "sha256": "b51739d2be15f2e4c8161706d44d79c5c2ab4e9d246203249309e0e3681370a2",
+      "exact_elf_match": true
+    },
+    {
+      "build": "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/build",
+      "kind": "pb",
+      "sha256": "6067846bf88713c6e6d56221e93eda2327c1c3d18102da0844328531ed27e405",
+      "exact_elf_match": true
+    },
+    {
+      "build": "/path/to/user/fxfix/onemov/v62-log-shutter-8ec4cb/build",
+      "kind": "live",
+      "sha256": "36bb43b0077cbd0c8a08c8ea1bad689a677755d92af4747ef770ae4a89a731d8",
+      "exact_elf_match": true
+    },
+    {
+      "build": "/path/to/user/fxfix/onemov/v62-log-shutter-8ec4cb/build",
+      "kind": "pb",
+      "sha256": "6067846bf88713c6e6d56221e93eda2327c1c3d18102da0844328531ed27e405",
+      "exact_elf_match": true
+    }
+  ],
+  "existing_source_or_artifact_modified": false
+}

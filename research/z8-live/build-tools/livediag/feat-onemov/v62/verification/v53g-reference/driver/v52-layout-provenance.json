@@ -1,0 +1,8 @@
+{
+  "source": "/path/to/Nikon/build-tools/livediag/feat-v53/integration-a/work",
+  "runtime_bytes": 23264,
+  "pb_bytes": 9352,
+  "source_layout_target": "aarch64-none-elf",
+  "changes": "Passive field offsets/widths and PB audio observations only; no deadline/input/assertion changes",
+  "driver_sha256": "779739437c2e731b9aa306c1d034cf128931cf62bba6e99b8f4f177534017615"
+}

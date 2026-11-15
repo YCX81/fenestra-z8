@@ -1,0 +1,1168 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 1,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 1,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 2,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 2,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 10,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 10,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 11,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 11,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 12,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 12,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 14,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 14,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 15,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 15,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 16,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 16,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 18,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 18,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 19,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 19,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 20,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 20,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 22,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 22,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 23,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 23,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 24,
+      "cancel": 31,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "software cancel before worker; complete native cleanup",
+      "tone": 24,
+      "cancel": 32,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 1,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 2,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 10,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 11,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 12,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 14,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 15,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 16,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 18,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 19,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 20,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 22,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 23,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "own108ACK then native accept then real032 done then resume",
+      "tone": 24,
+      "outer": [
+        {
+          "event": "0x4102000",
+          "status": 0
+        },
+        {
+          "event": "0x4102002",
+          "status": 0
+        }
+      ],
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 5,
+        "freed": 5
+      }
+    },
+    {
+      "case": "stale wake cannot submit replacement fire",
+      "passed": true
+    },
+    {
+      "case": "wake enqueue rejected then retry",
+      "passed": true
+    },
+    {
+      "case": "held canceled off",
+      "passed": true
+    },
+    {
+      "case": "held canceled hold",
+      "passed": true
+    },
+    {
+      "case": "held canceled shutdown",
+      "passed": true
+    },
+    {
+      "case": "held canceled muted",
+      "passed": true
+    },
+    {
+      "case": "held canceled timeout",
+      "passed": true
+    },
+    {
+      "case": "admitted canceled off waits native done",
+      "passed": true
+    },
+    {
+      "case": "admitted canceled hold waits native done",
+      "passed": true
+    },
+    {
+      "case": "admitted canceled timeout waits native done",
+      "passed": true
+    },
+    {
+      "case": "native passthrough mute",
+      "passed": true
+    },
+    {
+      "case": "native passthrough stockmute",
+      "passed": true
+    },
+    {
+      "case": "native passthrough video",
+      "passed": true
+    },
+    {
+      "case": "native passthrough inactive",
+      "passed": true
+    },
+    {
+      "case": "native passthrough cancelled",
+      "passed": true
+    },
+    {
+      "case": "native passthrough frozen",
+      "passed": true
+    },
+    {
+      "case": "native passthrough unsupported",
+      "passed": true
+    },
+    {
+      "case": "native passthrough runtime absent",
+      "passed": true
+    },
+    {
+      "case": "pending/frozen gate; partial resume failure cancels core for normal cleanup",
+      "passed": true
+    },
+    {
+      "case": "new holder publication during resume is not overwritten",
+      "passed": true
+    },
+    {
+      "case": "future began timestamp does not underflow timeout",
+      "native": false,
+      "passed": true
+    },
+    {
+      "case": "future began timestamp does not underflow timeout",
+      "native": true,
+      "passed": true
+    },
+    {
+      "case": "pre-pause error invalidates old ready and cancels held",
+      "error": -1,
+      "passed": true
+    },
+    {
+      "case": "pre-pause error invalidates old ready and cancels held",
+      "error": -5,
+      "passed": true
+    },
+    {
+      "case": "partial resume + new held START + cancel emits STOP for STARTING before idle wait",
+      "passed": true,
+      "state": {
+        "pending": 0,
+        "soundtask": 0,
+        "tone": 60,
+        "sfx": 0,
+        "deferred_cb": "0x0",
+        "allocated": 8,
+        "freed": 8
+      }
+    },
+    {
+      "case": "want1 mute retains microphone ownership",
+      "stage": "before pause",
+      "resumes": 0,
+      "passed": true
+    },
+    {
+      "case": "want1 stock mute retains microphone ownership",
+      "stage": "before pause",
+      "resumes": 0,
+      "passed": true
+    },
+    {
+      "case": "want1 timeout retains microphone ownership",
+      "stage": "before pause",
+      "resumes": 0,
+      "passed": true
+    },
+    {
+      "case": "want1 mute retains microphone ownership",
+      "stage": "stopping held",
+      "resumes": 1,
+      "passed": true
+    },
+    {
+      "case": "want1 stock mute retains microphone ownership",
+      "stage": "stopping held",
+      "resumes": 1,
+      "passed": true
+    },
+    {
+      "case": "want1 timeout retains microphone ownership",
+      "stage": "stopping held",
+      "resumes": 1,
+      "passed": true
+    },
+    {
+      "case": "want1 mute retains microphone ownership",
+      "stage": "stopped held",
+      "resumes": 1,
+      "passed": true
+    },
+    {
+      "case": "want1 stock mute retains microphone ownership",
+      "stage": "stopped held",
+      "resumes": 1,
+      "passed": true
+    },
+    {
+      "case": "want1 timeout retains microphone ownership",
+      "stage": "stopped held",
+      "resumes": 1,
+      "passed": true
+    },
+    {
+      "case": "want1 mute retains microphone ownership",
+      "stage": "native",
+      "resumes": 1,
+      "passed": true
+    },
+    {
+      "case": "want1 stock mute retains microphone ownership",
+      "stage": "native",
+      "resumes": 1,
+      "passed": true
+    },
+    {
+      "case": "want1 timeout retains microphone ownership",
+      "stage": "native",
+      "resumes": 1,
+      "passed": true
+    },
+    {
+      "case": "want1 mute retains microphone ownership",
+      "stage": "done",
+      "resumes": 1,
+      "passed": true
+    },
+    {
+      "case": "want1 stock mute retains microphone ownership",
+      "stage": "done",
+      "resumes": 1,
+      "passed": true
+    },
+    {
+      "case": "want1 timeout retains microphone ownership",
+      "stage": "done",
+      "resumes": 1,
+      "passed": true
+    },
+    {
+      "case": "owner exit Live off does not restart microphone",
+      "stage": "stopped held",
+      "passed": true
+    },
+    {
+      "case": "owner exit shutdown does not restart microphone",
+      "stage": "stopped held",
+      "passed": true
+    },
+    {
+      "case": "owner exit stock codec hold does not restart microphone",
+      "stage": "stopped held",
+      "passed": true
+    },
+    {
+      "case": "owner exit video does not restart microphone",
+      "stage": "stopped held",
+      "passed": true
+    },
+    {
+      "case": "owner exit inactive does not restart microphone",
+      "stage": "stopped held",
+      "passed": true
+    },
+    {
+      "case": "owner exit cancelled does not restart microphone",
+      "stage": "stopped held",
+      "passed": true
+    },
+    {
+      "case": "owner exit want0 does not restart microphone",
+      "stage": "stopped held",
+      "passed": true
+    },
+    {
+      "case": "owner exit Live off does not restart microphone",
+      "stage": "native",
+      "passed": true
+    },
+    {
+      "case": "owner exit shutdown does not restart microphone",
+      "stage": "native",
+      "passed": true
+    },
+    {
+      "case": "owner exit stock codec hold does not restart microphone",
+      "stage": "native",
+      "passed": true
+    },
+    {
+      "case": "owner exit video does not restart microphone",
+      "stage": "native",
+      "passed": true
+    },
+    {
+      "case": "owner exit inactive does not restart microphone",
+      "stage": "native",
+      "passed": true
+    },
+    {
+      "case": "owner exit cancelled does not restart microphone",
+      "stage": "native",
+      "passed": true
+    },
+    {
+      "case": "owner exit want0 does not restart microphone",
+      "stage": "native",
+      "passed": true
+    },
+    {
+      "case": "owner exit Live off does not restart microphone",
+      "stage": "done",
+      "passed": true
+    },
+    {
+      "case": "owner exit shutdown does not restart microphone",
+      "stage": "done",
+      "passed": true
+    },
+    {
+      "case": "owner exit stock codec hold does not restart microphone",
+      "stage": "done",
+      "passed": true
+    },
+    {
+      "case": "owner exit video does not restart microphone",
+      "stage": "done",
+      "passed": true
+    },
+    {
+      "case": "owner exit inactive does not restart microphone",
+      "stage": "done",
+      "passed": true
+    },
+    {
+      "case": "owner exit cancelled does not restart microphone",
+      "stage": "done",
+      "passed": true
+    },
+    {
+      "case": "owner exit want0 does not restart microphone",
+      "stage": "done",
+      "passed": true
+    },
+    {
+      "case": "muted frozen recording resumes only after thaw",
+      "condition": "mute",
+      "passed": true
+    },
+    {
+      "case": "muted frozen recording resumes only after thaw",
+      "condition": "stock mute",
+      "passed": true
+    },
+    {
+      "case": "selector guarded before dereference other id",
+      "passed": true
+    },
+    {
+      "case": "selector guarded before dereference other id valid payload bad parameters",
+      "passed": true
+    },
+    {
+      "case": "selector guarded before dereference soft stop",
+      "passed": true
+    },
+    {
+      "case": "selector guarded before dereference hard stop",
+      "passed": true
+    },
+    {
+      "case": "selector guarded before dereference foreign param",
+      "passed": true
+    },
+    {
+      "case": "selector guarded before dereference foreign tail",
+      "passed": true
+    },
+    {
+      "case": "selector guarded before dereference null payload",
+      "passed": true
+    },
+    {
+      "case": "selector guarded before dereference foreign outer callback",
+      "passed": true
+    },
+    {
+      "case": "selector guarded before dereference null parameters",
+      "passed": true
+    },
+    {
+      "case": "selector exact finite tone set across 65 inputs",
+      "passed": true
+    },
+    {
+      "case": "prepare byte8 adapter mute",
+      "passed": true,
+      "source_preserved": true,
+      "native_bytes": "896745230100000000776655443322119988776655443322",
+      "native_return_preserved": true
+    },
+    {
+      "case": "prepare byte8 adapter sound on",
+      "passed": true,
+      "source_preserved": true,
+      "native_bytes": "896745230100000001776655443322119988776655443322",
+      "native_return_preserved": true
+    },
+    {
+      "case": "prepare byte8 adapter Live off",
+      "passed": true,
+      "source_preserved": true,
+      "native_bytes": "896745230100000001776655443322119988776655443322",
+      "native_return_preserved": true
+    },
+    {
+      "case": "prepare byte8 adapter video",
+      "passed": true,
+      "source_preserved": true,
+      "native_bytes": "896745230100000001776655443322119988776655443322",
+      "native_return_preserved": true
+    },
+    {
+      "case": "prepare byte8 adapter shutdown",
+      "passed": true,
+      "source_preserved": true,
+      "native_bytes": "896745230100000001776655443322119988776655443322",
+      "native_return_preserved": true
+    },
+    {
+      "case": "prepare byte8 adapter runtime absent",
+      "passed": true,
+      "source_preserved": true,
+      "native_bytes": "896745230100000001776655443322119988776655443322",
+      "native_return_preserved": true
+    },
+    {
+      "case": "prepare byte8 adapter stock disabled",
+      "passed": true,
+      "source_preserved": true,
+      "native_bytes": "896745230100000000776655443322119988776655443322",
+      "native_return_preserved": true
+    }
+  ],
+  "case_count": 122,
+  "source_sha256": "5179121322cd6f37c5eac6b2d2d2ad5b1c2b115f22f2dac05bbd56709d7edb9f",
+  "object_alloc_bytes": 2608,
+  "runtime_offsets": {
+    "size": 23744,
+    "magic": 0,
+    "requested": 1728,
+    "shutdown": 1740,
+    "hold": 20076,
+    "active": 18088,
+    "cancelled": 18100,
+    "frozen": 18092,
+    "warm": 19236,
+    "error": 19220,
+    "backend": 19096,
+    "ctx": 23560,
+    "s_held": 23560,
+    "s_began": 23568,
+    "s_phase": 23576,
+    "s_generation": 23580,
+    "s_tone": 23584,
+    "s_wake": 23624,
+    "s_wake_busy": 23588,
+    "s_wake_generation": 23592,
+    "s_wake_cancel": 23596,
+    "s_cancel_posted": 23600,
+    "s_captured": 23604,
+    "s_played": 23608,
+    "s_completed": 23612,
+    "s_cancelled": 23616,
+    "s_errors": 23620
+  },
+  "hook": {
+    "site": "0x40e30e3c",
+    "original_word": "0x14000f3c",
+    "actual_test_entry": "0x4408018c"
+  },
+  "boundaries": [
+    "Actual source AArch64 adapter and delivered G manager/dispatcher/constructors/callback/free routines execute. Exact single manager branch is replaced in emulator only.",
+    "Registry/user-mute/clock and Live microphone stop/start are shims; separate ASan lifecycle covers actual microphone backend. Lower DAC service/resource calls are explicit success shims. Physical audible sound and scheduling are not asserted.",
+    "Injected publication tests exercise atomic state protection, not a full concurrent OS proof. No shared firmware or physical card is changed."
+  ]
+}

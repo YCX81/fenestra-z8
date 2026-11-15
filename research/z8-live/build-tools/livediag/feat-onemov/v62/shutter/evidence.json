@@ -1,0 +1,208 @@
+{
+  "candidate_C_sha256": "5179121322cd6f37c5eac6b2d2d2ad5b1c2b115f22f2dac05bbd56709d7edb9f",
+  "candidate_hooks_sha256": "c8e1e46f1644b07cfe43d461f52e4e4f87312536d68a2394c4cffca1f4efafbe",
+  "v61_main_sha256": "db0c847b333f0a6e07222f2207435e9bf340ce1d544704f6d801ec3ecc1088e5",
+  "adapter_native_baseline_sha256": "ed1e8496fccde443412e527a252de5029a55c749053b9b046da42bfc454aa613",
+  "native_equivalence": [
+    {
+      "range": [
+        "0x40e30d18",
+        "0x40e35000"
+      ],
+      "different_addresses": [
+        "0x40e30e3c",
+        "0x40e30e3d",
+        "0x40e30e3e",
+        "0x40e30e3f"
+      ],
+      "excluded_existing_hooks": [
+        [
+          "0x40e30e3c",
+          "0x40e30e40"
+        ]
+      ],
+      "all_other_native_bytes_identical": true
+    },
+    {
+      "range": [
+        "0x40f9c5cc",
+        "0x40f9d300"
+      ],
+      "different_addresses": [
+        "0x40f9cb64"
+      ],
+      "excluded_existing_hooks": [
+        [
+          "0x40f9cb64",
+          "0x40f9cb68"
+        ]
+      ],
+      "all_other_native_bytes_identical": true
+    }
+  ],
+  "real_V60_shutter_events": [
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 25598442,
+      "point": 0,
+      "incoming": 0,
+      "prepare_tone": 60,
+      "fire_tone": 60,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    },
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 25659855,
+      "point": 1,
+      "incoming": 1,
+      "prepare_tone": 60,
+      "fire_tone": 60,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    },
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 25689943,
+      "point": 2,
+      "incoming": 0,
+      "prepare_tone": 10,
+      "fire_tone": 10,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    },
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 29089087,
+      "point": 0,
+      "incoming": 0,
+      "prepare_tone": 10,
+      "fire_tone": 10,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    },
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 29090845,
+      "point": 1,
+      "incoming": 1,
+      "prepare_tone": 10,
+      "fire_tone": 10,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    },
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 29127006,
+      "point": 2,
+      "incoming": 0,
+      "prepare_tone": 10,
+      "fire_tone": 10,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    },
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 29580340,
+      "point": 1,
+      "incoming": 1,
+      "prepare_tone": 10,
+      "fire_tone": 10,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    },
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 29635840,
+      "point": 2,
+      "incoming": 0,
+      "prepare_tone": 10,
+      "fire_tone": 10,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    },
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 30088796,
+      "point": 1,
+      "incoming": 1,
+      "prepare_tone": 10,
+      "fire_tone": 10,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    },
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 30135977,
+      "point": 2,
+      "incoming": 0,
+      "prepare_tone": 10,
+      "fire_tone": 10,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    },
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 37376506,
+      "point": 0,
+      "incoming": 0,
+      "prepare_tone": 10,
+      "fire_tone": 10,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    },
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 37379804,
+      "point": 1,
+      "incoming": 1,
+      "prepare_tone": 10,
+      "fire_tone": 10,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    },
+    {
+      "log": "LIVELOG.BIN",
+      "t_us": 37427033,
+      "point": 2,
+      "incoming": 0,
+      "prepare_tone": 10,
+      "fire_tone": 10,
+      "driver": 5,
+      "stock_mute": 0,
+      "native_inhibit": 0
+    }
+  ],
+  "current_candidate_object_sections": {
+    ".text": 328,
+    ".live_shutter": 2280
+  },
+  "test_receipts": {
+    "adapter-arm.json": "494516b6f18903ead472b58daf0e13dbeb3c3790ae31166f0c2bbdc2b4ca7378",
+    "native-profiles.json": "d89618ada4635bf93c14ad1497c54eeb696fa2d41b61bd47fc77f22cc84acba7",
+    "resume-mute-before-fix.json": "a575421988a644867d92c870e00487d38118f9e236567cf83f16744fe31cb19e"
+  },
+  "production_files_modified": false,
+  "hardware_access": false,
+  "changed_source_files": [
+    "src-fix37/hooks.S",
+    "src-fix37/audio/live_shutter_z8.c"
+  ],
+  "patch_guards": [
+    "baseline path rejected before mutation",
+    "stale source rejected with both files unchanged"
+  ],
+  "adapter_case_count": 122
+}

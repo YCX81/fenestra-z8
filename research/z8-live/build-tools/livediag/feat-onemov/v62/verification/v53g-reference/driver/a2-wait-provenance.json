@@ -1,0 +1,131 @@
+{
+  "parent_driver_sha256": "0beabc10e20e5cc3786cd4d2af57fde71672ce6f55a40a8e5c60344a07623785",
+  "driver_sha256": "e9c15f2eb268f33805a41b301c17eef58880f7f0ccae021001c86cf183b5de5e",
+  "only_change": "additional sparse read-only PC/register observations; same deadlines, inputs, assertions, runtime layout and firmware",
+  "points": {
+    "200": {
+      "pc": "0x40ece93c",
+      "name": "capture_error"
+    },
+    "201": {
+      "pc": "0x41018a80",
+      "name": "history_error"
+    },
+    "202": {
+      "pc": "0x40f5b2a0",
+      "name": "status_classifier"
+    },
+    "203": {
+      "pc": "0x40f532bc",
+      "name": "capture_packet"
+    },
+    "204": {
+      "pc": "0x41155310",
+      "name": "stop_subprocess_entry"
+    },
+    "205": {
+      "pc": "0x41155434",
+      "name": "wait_0x1000_before"
+    },
+    "206": {
+      "pc": "0x41155438",
+      "name": "wait_0x1000_after"
+    },
+    "207": {
+      "pc": "0x4115545c",
+      "name": "wait_0x1000_failure_or100"
+    },
+    "208": {
+      "pc": "0x41152094",
+      "name": "completion_bit0_test"
+    },
+    "209": {
+      "pc": "0x411520c0",
+      "name": "completion_set1000"
+    },
+    "210": {
+      "pc": "0x41152044",
+      "name": "completion_event_entry"
+    },
+    "211": {
+      "pc": "0x41154db8",
+      "name": "stop_entry"
+    },
+    "212": {
+      "pc": "0x411552f0",
+      "name": "stop_return_mask"
+    },
+    "220": {
+      "pc": "0x41157930",
+      "name": "other_failure_status80_or100"
+    },
+    "221": {
+      "pc": "0x4115876c",
+      "name": "other_failure_status80_or100"
+    },
+    "222": {
+      "pc": "0x41159b28",
+      "name": "other_failure_status80_or100"
+    },
+    "223": {
+      "pc": "0x4115b80c",
+      "name": "other_failure_status80_or100"
+    },
+    "224": {
+      "pc": "0x4115b860",
+      "name": "other_failure_status80_or100"
+    },
+    "225": {
+      "pc": "0x4115bac0",
+      "name": "other_failure_status80_or100"
+    },
+    "226": {
+      "pc": "0x4115bb50",
+      "name": "other_failure_status80_or100"
+    },
+    "227": {
+      "pc": "0x4115bbac",
+      "name": "other_failure_status80_or100"
+    },
+    "228": {
+      "pc": "0x4115c724",
+      "name": "other_failure_status80_or100"
+    },
+    "229": {
+      "pc": "0x4115cf1c",
+      "name": "other_failure_status80_or100"
+    },
+    "230": {
+      "pc": "0x4115dae8",
+      "name": "other_failure_status80_or100"
+    },
+    "231": {
+      "pc": "0x4115e228",
+      "name": "other_failure_status80_or100"
+    },
+    "232": {
+      "pc": "0x4115e69c",
+      "name": "other_failure_status80_or100"
+    },
+    "233": {
+      "pc": "0x4115eee4",
+      "name": "other_failure_status80_or100"
+    },
+    "234": {
+      "pc": "0x4115fbe4",
+      "name": "other_failure_status80_or100"
+    },
+    "235": {
+      "pc": "0x41162b8c",
+      "name": "other_failure_status80_or100"
+    },
+    "236": {
+      "pc": "0x41162bc4",
+      "name": "other_failure_status80_or100"
+    },
+    "237": {
+      "pc": "0x41162cec",
+      "name": "other_failure_status80_or100"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "on": {
+    "run": "/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-final-tone10-on-r1",
+    "error": "InterruptedError('Owned probe stop requested')",
+    "result_sha256": "1315ae55dd9272715b7786d05cf2b75b4991e2f4cfd214aeddcbd89a749ad305",
+    "checkpoint_count": 200,
+    "full_press_checkpoints": [],
+    "last_runtime_full_presses": 0,
+    "classification": "harness menu selection error, stopped before FULL; not a firmware failure or capture test result"
+  },
+  "off": {
+    "run": "/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-final-tone10-off-r1",
+    "error": "InterruptedError('Owned probe stop requested')",
+    "result_sha256": "c7437d84dc17b9467d9aaa5270ec6a049e1fc8e8eba7b83132054efd670f4982",
+    "checkpoint_count": 194,
+    "full_press_checkpoints": [],
+    "last_runtime_full_presses": 0,
+    "classification": "harness menu selection error, stopped before FULL; not a firmware failure or capture test result"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "reproduced": true,
+  "source_sha256": "7b092dd6c07fac521f4fba6a8bfec006eaab8005cabaed52b4c2eb21dfcba466",
+  "cases": [
+    {
+      "mode": "held",
+      "step": 0,
+      "phase": 0,
+      "backend": 0,
+      "audio_active": 1,
+      "resumes": 0,
+      "expected_mic_resumed": true,
+      "actual_mic_resumed": false
+    },
+    {
+      "mode": "native",
+      "step": 0,
+      "phase": 0,
+      "backend": 0,
+      "audio_active": 1,
+      "resumes": 0,
+      "expected_mic_resumed": true,
+      "actual_mic_resumed": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "v61": {
+    ".text": 0,
+    ".live_shutter": 1692
+  },
+  "candidate": {
+    ".text": 0,
+    ".text.live_shutter_prepare": 160,
+    ".live_shutter": 2264,
+    ".text.normal": 208
+  }
+}

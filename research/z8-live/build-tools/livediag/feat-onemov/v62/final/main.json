@@ -1,0 +1,151 @@
+{
+  "version": "v62-private-candidate",
+  "base_sha256": "aa6e94e0042fb445c666de73c0f6b9e7e569010b7993a3ac3da0979b174a9433",
+  "old_rebuild_sha256": "736aa971ba99a0aef3e5d155fd9db3f7c028adb09f9576761407502d2ac36e70",
+  "rebuilt_sha256": "d24ae247c9dcbc86afb4d6b7498bbe41724a5b3e1094fc453733c2f493f5f45a",
+  "sha256": "36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5",
+  "build_id": "0xfb84a7ed",
+  "bytes": 81807709,
+  "splice_runs": 7607,
+  "physical_camera_verified": false,
+  "source_build": "/path/to/user/fxfix/onemov/v62-log-shutter-8ec4cb/build",
+  "live_payload_bytes": 110256,
+  "playback_payload_bytes": 36776,
+  "shutter_bytes": 3704,
+  "live_extra_bytes": 3548,
+  "extra_overlays": [
+    {
+      "address": "0x401fd218",
+      "size": 3548,
+      "purpose": "Live extra code"
+    },
+    {
+      "address": "0x4019f020",
+      "size": 3704,
+      "purpose": "Live shutter bank in bounded playback region"
+    },
+    {
+      "address": "0x40f6cff0",
+      "size": 4,
+      "purpose": "passive shutter prepare"
+    },
+    {
+      "address": "0x40f6e174",
+      "size": 4,
+      "purpose": "passive shutter fire"
+    }
+  ],
+  "evf_core_changes": [
+    {
+      "address": "0x401a38c8",
+      "old": "e8031faa",
+      "new": "cbddff17"
+    },
+    {
+      "address": "0x401a337c",
+      "old": "a80e41b9",
+      "new": "e00315aa"
+    },
+    {
+      "address": "0x401a3380",
+      "old": "1f050071",
+      "new": "e2deff97"
+    },
+    {
+      "address": "0x401a3384",
+      "old": "21230054",
+      "new": "20230034"
+    },
+    {
+      "address": "0x401deec0",
+      "old": "d409344000000000",
+      "new": "c4af194000000000"
+    },
+    {
+      "address": "0x401deec8",
+      "old": "a409344000000000",
+      "new": "dcaf194000000000"
+    },
+    {
+      "address": "0x401deed8",
+      "old": "640d344000000000",
+      "new": "48af194000000000"
+    }
+  ],
+  "portrait_records": 419,
+  "portrait_changed_bytes": 3518,
+  "v52_composition_sha256": "c78f04af22316fd480cde7ccd215fafa18aa408f6f17a26112ea019455f6f8b0",
+  "portrait53_records": 77,
+  "overlays53": [
+    {
+      "address": "0x40e30e3c",
+      "size": 4,
+      "purpose": "Original SFX owner dispatch with reviewed microphone handoff",
+      "expected": "3c0f0014",
+      "replacement": "eeb9cd17"
+    },
+    {
+      "address": "0x401def00",
+      "size": 8,
+      "purpose": "Passive EVF submit observation; no scanout change",
+      "expected": "d8fe3e4000000000",
+      "replacement": "08db1f4000000000"
+    },
+    {
+      "address": "0x4019ff40",
+      "size": 128,
+      "purpose": "Bounded native Live crop_fix",
+      "expected": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "replacement": "ea2fbfa90ac083523f010a6ba10200540a1c82521f010a6b410200540a0840b90a0200350a0440b95f050071a80100540a0200584b0d40b90a8080524a55a0727f010a6ba00000540aa080528a6aa0727f010a6b61000054693d0012687d1053ea2fc1a8692a00799000005800021fd6f8085f040a0000000c7dcf4000000000"
+    },
+    {
+      "address": "0x40cf7d08",
+      "size": 4,
+      "purpose": "Native crop_fix entry",
+      "expected": "692a0079",
+      "replacement": "8ea0d217"
+    },
+    {
+      "address": "0x4019ffc0",
+      "size": 64,
+      "purpose": "Bounded native Live aspect_fix",
+      "expected": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "replacement": "620100351f001071810000543fa80a71c0000054060000141f001471810000543f500d7141000054220080527000005800021fd600000000f008974000000000"
+    },
+    {
+      "address": "0x407138d0",
+      "size": 4,
+      "purpose": "Native aspect_fix entry",
+      "expected": "08740914",
+      "replacement": "bc31ea17"
+    }
+  ],
+  "scope": "V61 RAW/Live playback preserved; page-qualified native Log text; finite-profile shutter sound and prepare mute with microphone ownership recovery.",
+  "pre_menu_sha256": "c65a310dd7401cd5da633525082e73fc3ab6fb8aac9754a12860f50949930d8e",
+  "menu_patch_sha256": "a1be6568477959074c6d27cd6cee6e24e3269b454a0174a4907250639d710bb8",
+  "menu_context": {
+    "table_guards": {
+      "languages": 36,
+      "native_count": 3225,
+      "restored_id_range": [
+        3180,
+        3224
+      ],
+      "native_texts_verified": 1620,
+      "native_texts_sha256": "38daca0ba1e6c4aa30eb5bb4e411ee54ebbd35bae173d116627c7c64b8657e62"
+    },
+    "primary_payload_end": "0x401fceb0",
+    "helper": {
+      "address": "0x401fcf40",
+      "bytes": 80,
+      "reserved": 176
+    },
+    "hook": {
+      "address": "0x401cd410",
+      "before": "c1fbff97",
+      "after": "ccbe0094"
+    },
+    "changed_byte_count": 76
+  },
+  "playback_bank_identical_to_v61": true
+}

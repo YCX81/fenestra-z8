@@ -1,0 +1,13 @@
+{
+  "output": "/path/to/user/fxfix/v62-qemu-native-sfx-59f9",
+  "baseline_unchanged": true,
+  "hashes": {
+    "nikon-z8-lab.c": "ba5b1e46026bcac948621db12a846168c09a344691b471d78b11a5dc0614729d",
+    "nikon-z8-audio-tx.h": "59f9a9097a4b9845419b16d58b4574ae113491c5b169a81169368aafea80ad11",
+    "qemu-system-aarch64": "9804d5734610465613f80dc762dd3bef0307571b0b016f140cdec81252ba6123",
+    "private-compile.json": "eac3888ac384b61a057a08115a378422f114a9016dfe9cb4938dbd82a21c5a75",
+    "private-link.rsp": "537c3d213c112951fec690157e32c4bd76211b9fb09b934f13194961422115fa"
+  },
+  "machine_help_passed": true,
+  "scope": "Only private TX16 finite SFX lengths/time extension; no firmware or physical-camera operation."
+}

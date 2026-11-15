@@ -1,0 +1,32 @@
+{
+  "input": "/path/to/user/fxfix/onemov/v62-log-shutter-451b54/composed/q/main.main",
+  "input_sha256": "ef0998aae7993b13240507996af7f930a742eddd104382926c49f283b86b0863",
+  "output": "context-only.main",
+  "output_sha256": "53e5be61a223110496e7e97d5a5a71bcabe0f36b590a4917583509693e715a9b",
+  "build_manifest": "/path/to/user/fxfix/onemov/v62-log-shutter-451b54/build/build.json",
+  "build_manifest_sha256": "f62c260840149c6b23f0b4e0b4eb4709485c9cb0fa79d79773548375d36336ab",
+  "table_guards": {
+    "languages": 36,
+    "native_count": 3225,
+    "restored_id_range": [
+      3180,
+      3224
+    ],
+    "native_texts_verified": 1620,
+    "native_texts_sha256": "38daca0ba1e6c4aa30eb5bb4e411ee54ebbd35bae173d116627c7c64b8657e62"
+  },
+  "primary_payload_end": "0x401fceb0",
+  "helper": {
+    "address": "0x401fcf40",
+    "bytes": 80,
+    "reserved": 176
+  },
+  "hook": {
+    "address": "0x401cd410",
+    "before": "c1fbff97",
+    "after": "ccbe0094"
+  },
+  "changed_byte_count": 76,
+  "build_id_recalculated": false,
+  "semantics": "For overlapping IDs 3180..3224, native or absent current page uses original NFP text; group 2 extension pages [0x7000,0x9500) preserve all original dynamic text behavior including valid empty and miss. No 12-byte fallback patch."
+}

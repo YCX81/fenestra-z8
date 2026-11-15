@@ -1,0 +1,235 @@
+{
+  "schema": "v62-functional-audio-verification-v1",
+  "created_utc": "2026-11-15T09:15:14.919289+00:00",
+  "final_main_sha256": "36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5",
+  "final_main_remote": "/path/to/user/fxfix/onemov/v62-log-shutter-8ec4cb/final/main.main",
+  "capture_qemu_sha256": "34059c8c62b3f32896b3d5685a461cd4da5a427ae5b9d3ba4e0f04318461f418",
+  "native_playback_qemu_sha256": "9804d5734610465613f80dc762dd3bef0307571b0b016f140cdec81252ba6123",
+  "completed_capture_scope_passed": true,
+  "captures": [
+    {
+      "report": "capture-on-paired-r2.json",
+      "report_sha256": "a6b47688da0ea2c05694ef11be2ed0620eba18f7072b6461c1e66cf89336f22e",
+      "run": "/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-on-r2",
+      "passed": true,
+      "native_assertions_passed": 4127,
+      "expected_tones": [
+        11,
+        12
+      ],
+      "actual_sfx_pcm_bytes": 28800,
+      "actual_sfx_pcm_sha256": "600c4a1136e385b2a0a48f02fbd2c3a2c806910dc111fce174a7419b9f1fd380",
+      "checks": {
+        "executed_main_exact": true,
+        "no_synthetic_tone_resource": true,
+        "runner_no_error": true,
+        "native_assertions_all_passed": true,
+        "sound_preference": true,
+        "sound_preference_saved_crc": true,
+        "live_saved": true,
+        "microphone_recovered_after_save": true,
+        "continued_encoding_after_recovery": true,
+        "no_shutter_errors": true,
+        "no_cancel_timeout": true,
+        "movie_media_pass": true,
+        "actual_native_pcm_byte_identical": true,
+        "expected_sfx_jobs": true,
+        "native_completion_and_stop": true
+      },
+      "movie_sha256": "21142258ce8c114d1391f72452657a645990a8a31239665041a5813d04977b19",
+      "video_frames": 92,
+      "audio_frames": 147347,
+      "audio_silence_runs_over10ms": [
+        {
+          "first": 75146,
+          "end": 79918,
+          "seconds": 0.09941666666666667
+        },
+        {
+          "first": 87117,
+          "end": 94551,
+          "seconds": 0.154875
+        }
+      ],
+      "recovered_checkpoints": 5,
+      "source_evidence_sha256": {
+        "result.json": "c3a04294eeec35d4f4317eaee841eca03d235f576e67c9e3ee00a583a7e1db37",
+        "live-checkpoints.jsonl": "a399ec96f06e71b20058b4094d901eb1fe02e753126d2a3a543c96da5b8a59d6",
+        "stderr.log": "01056d5801ac6679ad60373297e9d2066b45afc708abe87bc16351a5be5ec240",
+        "actual-tx.pcm": "600c4a1136e385b2a0a48f02fbd2c3a2c806910dc111fce174a7419b9f1fd380",
+        "audio-events.jsonl=on": "0ce820121147def5019ccd0ede4f06168af2af3ad435a334a91b2e93d6c545f5"
+      },
+      "planned_post_photo_idle_seconds": 57,
+      "final_requested": 0,
+      "final_audio_active": 0,
+      "card_closed_before_handoff": true
+    },
+    {
+      "report": "capture-on-tone10-r3.json",
+      "report_sha256": "c294a9159203a66b66a33290094ad73c766ceb6c592697c9f5a0f3cc7cff15ec",
+      "run": "/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-on-r3",
+      "passed": true,
+      "native_assertions_passed": 4617,
+      "expected_tones": [
+        10
+      ],
+      "actual_sfx_pcm_bytes": 28800,
+      "actual_sfx_pcm_sha256": "1a0a4f9641500aba12c1ade65b80fd1ab0494e107f08baf267d2cbd0dfb3a123",
+      "checks": {
+        "executed_main_exact": true,
+        "no_synthetic_tone_resource": true,
+        "runner_no_error": true,
+        "native_assertions_all_passed": true,
+        "sound_preference": true,
+        "sound_preference_saved_crc": true,
+        "live_saved": true,
+        "microphone_recovered_after_save": true,
+        "continued_encoding_after_recovery": true,
+        "no_shutter_errors": true,
+        "no_cancel_timeout": true,
+        "movie_media_pass": true,
+        "actual_native_pcm_byte_identical": true,
+        "expected_sfx_jobs": true,
+        "native_completion_and_stop": true
+      },
+      "movie_sha256": "02f1a253585e9a8a8c2e50546c153c3d5e51755595eaf55f4fb3cce874e0ba03",
+      "video_frames": 92,
+      "audio_frames": 147347,
+      "audio_silence_runs_over10ms": [
+        {
+          "first": 72278,
+          "end": 84602,
+          "seconds": 0.25675
+        }
+      ],
+      "recovered_checkpoints": 9,
+      "source_evidence_sha256": {
+        "result.json": "a100e8baf1a3bd1e6cef5ee7a087143e960d6605fe7eebafc668d0ee1c46999d",
+        "live-checkpoints.jsonl": "c09137eb4c2259d4e5b9b8fdffec5380b5c553e08a1eaec7828e8d6995e22ebe",
+        "stderr.log": "2441aed532115c0d9b48b814113261c1f2fc3f72c44ccc645fa8311be3523bce",
+        "actual-tx.pcm": "1a0a4f9641500aba12c1ade65b80fd1ab0494e107f08baf267d2cbd0dfb3a123",
+        "audio-events.jsonl=on": "200f476a7b71f87f0cd17bbea150d0c53761b073a8314c8a4aafa90a8284d052"
+      },
+      "planned_post_photo_idle_seconds": 57,
+      "final_requested": 0,
+      "final_audio_active": 0,
+      "card_closed_before_handoff": true
+    },
+    {
+      "report": "capture-off-r4.json",
+      "report_sha256": "6ec0b4648f02723a1aa09b6f7bffd13bfd25390fe84c2d14487cb5b1d1cbe7dc",
+      "run": "/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-off-r4",
+      "passed": true,
+      "native_assertions_passed": 4170,
+      "expected_tones": [
+        10
+      ],
+      "actual_sfx_pcm_bytes": 0,
+      "actual_sfx_pcm_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "checks": {
+        "executed_main_exact": true,
+        "no_synthetic_tone_resource": true,
+        "runner_no_error": true,
+        "native_assertions_all_passed": true,
+        "sound_preference": true,
+        "sound_preference_saved_crc": true,
+        "live_saved": true,
+        "microphone_recovered_after_save": true,
+        "continued_encoding_after_recovery": true,
+        "no_shutter_errors": true,
+        "no_cancel_timeout": true,
+        "movie_media_pass": true,
+        "no_sfx_pcm": true,
+        "no_sfx_jobs": true,
+        "no_native_sfx_start": true
+      },
+      "movie_sha256": "9415a5749e2e302e44b75d2376846bb4432246df4051ed2975ea3235efade21c",
+      "video_frames": 93,
+      "audio_frames": 148949,
+      "audio_silence_runs_over10ms": [],
+      "recovered_checkpoints": 6,
+      "source_evidence_sha256": {
+        "result.json": "04054a54495a631c59ea428342c999a442f78c8184cbb8a6e3967c8ff3bb3573",
+        "live-checkpoints.jsonl": "9fa9675b39de52aec12823918d5e856b53c8b4625492fe8377465079efe56558",
+        "stderr.log": "1b299ffdbfc81e01fb9d2ecdf71ed05de2cb34af81df89da78c4409a7b8e6846",
+        "actual-tx.pcm": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "audio-events.jsonl=on": "33317a1c6e2cbf30398c1cbc88a087ae568d7f699d41d1a12cf27dcc41d54664"
+      },
+      "planned_post_photo_idle_seconds": 27,
+      "final_requested": 1,
+      "final_audio_active": 1,
+      "card_closed_before_handoff": true
+    }
+  ],
+  "private_model_sanitizer_cases": {
+    "capture_merged": 104,
+    "playback_rdw": 104
+  },
+  "owned_capture_processes": "all exited; virtual cards closed",
+  "native_playback": {
+    "owner": "/root/v62_menu",
+    "scope": "private copy of each newly captured card, reboot into native MOV playback; not same-boot capture/playback",
+    "on_r2": {
+      "protocol_entry_return_cleanup_passed": true,
+      "original_native_assertions_passed": 237,
+      "original_summary_checks_passed": 16,
+      "native_output_event_count": 92,
+      "unique_source_frame_count": 91,
+      "source_frames_covered": "0..90",
+      "source_frames_missing": [
+        91
+      ],
+      "source_frame_count": 92,
+      "repeated_initial_frame": true,
+      "complete_source_frame_coverage": false,
+      "scope_note": "Final CRC audit distinguishes native output event count from unique source frames. Last source frame was not output; file ffmpeg decode remains complete.",
+      "remote_report_directory": "/path/to/user/fxfix/onemov/v62-playback-check-36c564c9/on-r2-reboot"
+    },
+    "off_r4": {
+      "protocol_entry_return_cleanup_passed": true,
+      "native_assertions_passed": 235,
+      "summary_checks_passed": 16,
+      "native_output_event_count": 94,
+      "unique_source_frame_count": 93,
+      "source_frames_covered": "0..92",
+      "source_frames_missing": [],
+      "source_frame_count": 93,
+      "repeated_initial_frame": true,
+      "complete_source_frame_coverage": true,
+      "scope_note": "All 93 source frames covered by final frame CRC audit; native return and cleanup passed.",
+      "remote_report_directory": "/path/to/user/fxfix/onemov/v62-playback-check-36c564c9/off-r4-reboot"
+    },
+    "on_r3": "private snapshot only; no additional replay scheduled"
+  },
+  "limitations": [
+    "Actual modeled DMA resource consumption and native messages are verified; physical speaker, DAC loudness/clicks and real camera timing are not.",
+    "Tone10 On saved audio has a measured 0.25675 second silence during shared-codec handoff; no gapless claim.",
+    "On-r2 uses actual tones 11/12 despite original directory name containing tone10.",
+    "On runs use 57 seconds post-photo idle and reach native standby; Off-r4 uses 27 seconds and ends in observed Ready.",
+    "Off-r3 host-MCU ACK-high failure before Live/FULL remains unexplained. The original assertion passed in Off-r4.",
+    "No physical camera/USB/card write, firmware installation or flash was performed by this task.",
+    "On-r2 native playback emits repeated initial frame plus source frames 0..90 and omits source frame 91; its 92 output events are not full coverage of the 92-frame movie. Complete native source-frame coverage is proven only by Off-r4 (93 source frames, 94 output events including repeated initial frame)."
+  ],
+  "evidence_sha256": {
+    "RESULT.md": "361934fd8f554d9fe3c4d8023e81a3a476bcdab7684f61e3ce6f14b93ab578e4",
+    "PLAN.md": "15e4334d778e35449de9515fd7478460c9ae59b590814345c0c991d31bd56ead",
+    "native-sfx-assets.json": "b8fbc8615b854e11fbc1417039947ed23bb9e68a9190d895fcc70e3eb0ff88c5",
+    "ipc-and-retries.json": "3166192d8ab28ce94fd7f4079b1e22042ab6f5c5ae2c2e83c7f80792d2ba2160",
+    "harness-first-attempt.json": "2e1cd9121e0dc0262bbb59047eb72de8b2db06e588696b3825e5387a86526957",
+    "mode-contact-decoder.json": "ed3570caa2856bd1323ada815c627319e4eb8423d5e469383d45525492afebb5",
+    "merged-qemu-build-receipt.json": "369ff427105fef5fe486e939b58e39e0b8be5ead8ef3b674094d61cff9ac3d10",
+    "qemu-build-receipt.json": "4704657c9993b8dce7c49a9a4c724b88a39e454fed1a9b01e7d17102800f4df2",
+    "merged-tx16-model-tests.json": "87f1812ca6f69ada46b975ce8de13bdf73e36ab6c9a7b8d36837ff6b24366c7a",
+    "tx16-model-tests.json": "0017eed9d4c0dd974188f7c8bb98089810dc0df5d9ea0677ca89eef0ce0b0eba",
+    "merged-model-manifest.json": "b364ab1f75c3c9d8096eaf5288c8173f0b9a0aa45a83f42e1797e797edc2b63e",
+    "model-manifest.json": "cc80471264d976c3ee0af81eee21e15b5ee268b339f2751fb8b515e95a7ad92e",
+    "final-capture-layout-provenance.json": "a07a73234aaf18f3281c805628345a0088030b4ca1d110b851c5fddb1d5b2b1c",
+    "final-capture-driver-identity.json": "a148d135b9a2467a64a9e8d559d55bb16c23ce76c982f387741d45dd73d5da77",
+    "analyze_capture.py": "09c480076d3de7557791e29ab1f3d013adf6711d5d8409686a199a1bd58d9e29",
+    "adapt_capture_driver.py": "cbc2b793f18846dcec79f93e12f822fe61a2965b84558c6a3d901bf1100507c9",
+    "prepare_capture_driver.py": "77e8092146f3e651ace4020bf7fb484577f2217a9a49dd41e78e08ca12d59c4b",
+    "merged-native-sfx-model.patch": "6cdbfa3f37455bb134a8e9211028e6432a2b3c40a705e8cef40edaa85d5a4549",
+    "native-sfx-model.patch": "37987bb5bc2fb8e0bd2fe241349be4d005a4bf3965a2f44a36de0db9d84827b8"
+  },
+  "updated_utc": "2026-11-15T09:22:41.597350+00:00"
+}

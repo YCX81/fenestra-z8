@@ -1,0 +1,11 @@
+{
+  "work": "/path/to/Nikon/build-tools/livediag/feat-onemov/v62/shutter/candidate",
+  "before": {
+    "src-fix37/audio/live_shutter_z8.c": "2c9b308ff90d6f234ffa4c87cb170444b05cd80c4908f8f0afa9190f760d2190",
+    "src-fix37/hooks.S": "3b9e0c9825bc9bb7c226eeec244cdd5a5d1fc1a3d439d44827c15bdb5c14b53d"
+  },
+  "after": {
+    "src-fix37/audio/live_shutter_z8.c": "5179121322cd6f37c5eac6b2d2d2ad5b1c2b115f22f2dac05bbd56709d7edb9f",
+    "src-fix37/hooks.S": "c8e1e46f1644b07cfe43d461f52e4e4f87312536d68a2394c4cffca1f4efafbe"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "output": "/path/to/user/fxfix/v62-qemu-native-sfx-merged",
+  "baseline_unchanged": true,
+  "hashes": {
+    "nikon-z9-lab.c": "974216a2454e6fa46a86096485784e0c3bdfdb322475657bcc5f6a799dc3aceb",
+    "nikon-private-tx16.h": "fddf0b50cf383d3344069a942af6f975af4d5deed900e73d974b27198f1f75fb",
+    "qemu-system-aarch64": "34059c8c62b3f32896b3d5685a461cd4da5a427ae5b9d3ba4e0f04318461f418",
+    "private-compile.json": "e51f715de8f580197d141972d72d317da31c6731f7a6deeecf664c150f5a78ff",
+    "private-link.rsp": "75f22550103392c14432db2f8f0bc70256f9dc7e67da706dfeb6587a1d1be034"
+  },
+  "machine_help_passed": true,
+  "scope": "Only private TX16 finite SFX lengths/time extension; no firmware or physical-camera operation."
+}

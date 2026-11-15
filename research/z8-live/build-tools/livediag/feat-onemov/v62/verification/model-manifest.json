@@ -1,0 +1,22 @@
+{
+  "baseline_header_sha256": "f28c1c2bfa085b58775764c3e9bcbea9a58898e90f2965d17d62daff6bb19f0d",
+  "candidate_header_sha256": "59f9a9097a4b9845419b16d58b4574ae113491c5b169a81169368aafea80ad11",
+  "allowed_sfx_bytes": [
+    4800,
+    9600,
+    19200,
+    28800
+  ],
+  "duration_formula": "bytes / (48000 * 4), then existing counter-clock scale 984/1000 when enabled",
+  "functions": {
+    "static bool serial5_tx16_sfx_bytes(": "5a018d98c5d6bbd20dfd830b7f8076acb52b306c98e3478663243662e80d1ea7",
+    "static int serial5_tx_drain_request(": "6a6abb7c19e78025abe96b4120fe90cf2b5dd3d5a1bbcae006d2187a39fae01a",
+    "static bool serial5_tx_drain_same(": "70769f53777cbadad544a5472e3dc1ee731838569567ec602a4cd0e0edb00446",
+    "static void serial5_tx_drain_note_write(": "2ad38d918eb7550224ef3c352e0b6d9845d61e50c19cf98076853bff0aa81424",
+    "static void serial5_tx_drain_tick(": "7e520c00207ed8bf215839a5107597cd8a837c05d6ab6971828288dd571f6a4a",
+    "static uint64_t serial5_tx_clock_delay(": "f3e11d535feec4afd04aa699480a0cb644ee5c6d341f93a00bf65a6c6bfb66dc",
+    "static void serial5_tx_drain_schedule(": "3e5f7d4349b0a2b06029c41e068b3d2766e3f3266469db73f6703ac855d318af",
+    "static bool serial5_tx_drain_read(": "270d9f521393553338124c024daaac7143a0ddc7d1f45ccd1a5fcb3fd0e2a31f"
+  },
+  "limits": "Private functional model. No physical DAC/timing or hardware sound proof; no firmware change."
+}

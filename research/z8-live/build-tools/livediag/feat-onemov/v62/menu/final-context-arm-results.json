@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "checks": 114164,
+  "groups": {
+    "native_or_absent_scene_restores_NFP_despite_resident_UI": 72900,
+    "actual_extension_preserves_dynamic_hit_empty_and_miss": 32400,
+    "pre_activation_native_lookup_unchanged": 3240,
+    "outside_conflict_range_unchanged": 5616,
+    "resident_UI_blank_Log_regression_reproduced_and_fixed": 5,
+    "wrong_SHA_or_overlap_or_nonzero_reservation_rejected": 3
+  },
+  "input_main_sha256": "c65a310dd7401cd5da633525082e73fc3ab6fb8aac9754a12860f50949930d8e",
+  "candidate_main_sha256": "36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5",
+  "test_script_sha256": "2df01ce9cb3dfe532cc68c89c9dac9722cbd65f438cb78e62e2fd09b5c17aa7b",
+  "patch_script_sha256": "2dd8ed9e929d9b454acac2edfb66cfbf078d4a0a443ee186f33f1b5709ae3171",
+  "patch_guard": {
+    "table_guards": {
+      "languages": 36,
+      "native_count": 3225,
+      "restored_id_range": [
+        3180,
+        3224
+      ],
+      "native_texts_verified": 1620,
+      "native_texts_sha256": "38daca0ba1e6c4aa30eb5bb4e411ee54ebbd35bae173d116627c7c64b8657e62"
+    },
+    "primary_payload_end": "0x401fceb0",
+    "helper": {
+      "address": "0x401fcf40",
+      "bytes": 80,
+      "reserved": 176
+    },
+    "hook": {
+      "address": "0x401cd410",
+      "before": "c1fbff97",
+      "after": "ccbe0094"
+    },
+    "changed_byte_count": 76
+  },
+  "separate_build_id_update": {
+    "address": "0x401fe060",
+    "before": "378e7b03",
+    "after": "eda784fb"
+  },
+  "resolved_log_labels_resident_UI_on_native_page": {
+    "zh-CN": [
+      {
+        "id": 3217,
+        "text": "Log"
+      },
+      {
+        "id": 3218,
+        "text": "Log设定"
+      },
+      {
+        "id": 3219,
+        "text": "N-Log / BT.2020"
+      },
+      {
+        "id": 3220,
+        "text": "S-Log3 / S-Gamut3.Cine"
+      },
+      {
+        "id": 3221,
+        "text": "Log3G10 / REDWideGamutRGB"
+      }
+    ],
+    "en": [
+      {
+        "id": 3217,
+        "text": "Log"
+      },
+      {
+        "id": 3218,
+        "text": "Log settings"
+      },
+      {
+        "id": 3219,
+        "text": "N-Log / BT.2020"
+      },
+      {
+        "id": 3220,
+        "text": "S-Log3 / S-Gamut3.Cine"
+      },
+      {
+        "id": 3221,
+        "text": "Log3G10 / REDWideGamutRGB"
+      }
+    ]
+  },
+  "resident_UI_regression": [
+    {
+      "id": 3217,
+      "before": " ",
+      "after": "Log"
+    },
+    {
+      "id": 3218,
+      "before": " ",
+      "after": "Log设定"
+    },
+    {
+      "id": 3219,
+      "before": " ",
+      "after": "N-Log / BT.2020"
+    },
+    {
+      "id": 3220,
+      "before": " ",
+      "after": "S-Log3 / S-Gamut3.Cine"
+    },
+    {
+      "id": 3221,
+      "before": " ",
+      "after": "Log3G10 / REDWideGamutRGB"
+    }
+  ],
+  "actual_ARM_entries": [
+    "0x401961f8",
+    "0x401fcf40",
+    "0x403dbdb4",
+    "0x403e9a90",
+    "0x401bc67c"
+  ],
+  "native_current_page_executions": 108555,
+  "preserved_original_UI_miss_branch": true,
+  "scope": "Actual composed ARM64 context wrapper, native stack getter/top, dispatcher and native UI resolver; State/UI/owner service stubs. No menu pixel or physical-camera proof."
+}

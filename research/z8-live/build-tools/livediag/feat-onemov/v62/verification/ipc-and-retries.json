@@ -1,0 +1,97 @@
+{
+  "runs": {
+    "v62-36c5-tone10-on-r2": {
+      "error": null,
+      "result_sha256": "c3a04294eeec35d4f4317eaee841eca03d235f576e67c9e3ee00a583a7e1db37",
+      "local_transport": "named-pipe",
+      "ipc": {
+        "-serial": "none",
+        "-monitor": "none",
+        "-qmp": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-p54uqhce/qmp",
+        "-gdb": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-p54uqhce/gdb",
+        "-qtest": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-p54uqhce/qtest"
+      },
+      "card": "file=/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-on-r2/capture-card.raw,if=none,id=card,format=raw",
+      "failed_checks": [],
+      "full_presses": 1
+    },
+    "v62-36c5-tone10-off-r2": {
+      "error": "AssertionError('Actual Live sound toggle not reached')",
+      "result_sha256": "ee1e0065f05c0249c9eabcb4cc1e04d910264dc2a45c4422453bc4bc07b3b97b",
+      "local_transport": "named-pipe",
+      "ipc": {
+        "-serial": "none",
+        "-monitor": "none",
+        "-qmp": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-v_amibwu/qmp",
+        "-gdb": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-v_amibwu/gdb",
+        "-qtest": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-v_amibwu/qtest"
+      },
+      "card": "file=/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-off-r2/capture-card.raw,if=none,id=card,format=raw",
+      "failed_checks": [],
+      "full_presses": 0
+    },
+    "v62-36c5-tone10-off-r3": {
+      "error": "AssertionError('continuous native MCU reads ACK high')",
+      "result_sha256": "c64876507cbd1202f397ad32cbaba5f947320b55eeed8df7c3eb5c28ce903979",
+      "local_transport": "named-pipe",
+      "ipc": {
+        "-serial": "none",
+        "-monitor": "none",
+        "-qmp": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-j4jxocy2/qmp",
+        "-gdb": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-j4jxocy2/gdb",
+        "-qtest": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-j4jxocy2/qtest"
+      },
+      "card": "file=/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-off-r3/capture-card.raw,if=none,id=card,format=raw",
+      "failed_checks": [
+        {
+          "name": "continuous native MCU reads ACK high",
+          "passed": false
+        }
+      ],
+      "full_presses": 0
+    },
+    "v62-36c5-tone10-on-r3": {
+      "error": null,
+      "result_sha256": "a100e8baf1a3bd1e6cef5ee7a087143e960d6605fe7eebafc668d0ee1c46999d",
+      "local_transport": "named-pipe",
+      "ipc": {
+        "-serial": "none",
+        "-monitor": "none",
+        "-qmp": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-hjqkc3yn/qmp",
+        "-gdb": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-hjqkc3yn/gdb",
+        "-qtest": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-hjqkc3yn/qtest"
+      },
+      "card": "file=/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-on-r3/capture-card.raw,if=none,id=card,format=raw",
+      "failed_checks": [],
+      "full_presses": 1
+    },
+    "v62-36c5-tone10-off-r4": {
+      "error": null,
+      "result_sha256": "04054a54495a631c59ea428342c999a442f78c8184cbb8a6e3967c8ff3bb3573",
+      "local_transport": "named-pipe",
+      "ipc": {
+        "-serial": "none",
+        "-monitor": "none",
+        "-qmp": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-s8vvc_a3/qmp",
+        "-gdb": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-s8vvc_a3/gdb",
+        "-qtest": "pipe:/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/wl-z8-runtime-s8vvc_a3/qtest"
+      },
+      "card": "file=/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-off-r4/capture-card.raw,if=none,id=card,format=raw",
+      "failed_checks": [],
+      "full_presses": 1,
+      "native_assertions_passed": 4170,
+      "original_ack_assertion_retained": true,
+      "post_photo_idle_seconds": 27
+    }
+  },
+  "ipc_shared": false,
+  "basis": "Each QMP/qtest/GDB named FIFO has a unique mkdtemp runtime directory. Serial and monitor are none. Each virtual card is unique. MCU peers are separate Python-process objects; no TCP ports or shared sockets are used.",
+  "ack_failure_cause": "Unresolved host-MCU ACK observation before Live/FULL. No shared IPC was found. Off-r4 passed the original ACK and all other native assertions without another task-owned QEMU running. This does not establish parallel load as the cause of Off-r3.",
+  "preexisting_unowned_process": {
+    "pid": 80617,
+    "age_seconds_observed": 256159,
+    "kernel": "/path/to/user/fxfix/shutter/q/main.main",
+    "card": "font-5/capture-card.raw",
+    "action": "not modified or terminated"
+  }
+}

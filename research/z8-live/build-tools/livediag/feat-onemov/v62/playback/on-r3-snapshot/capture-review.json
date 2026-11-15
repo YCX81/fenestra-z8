@@ -1,0 +1,880 @@
+{
+  "passed": true,
+  "checks": {
+    "executed_main_exact": true,
+    "no_synthetic_tone_resource": true,
+    "runner_no_error": true,
+    "native_assertions_all_passed": true,
+    "sound_preference": true,
+    "sound_preference_saved_crc": true,
+    "live_saved": true,
+    "microphone_recovered_after_save": true,
+    "continued_encoding_after_recovery": true,
+    "no_shutter_errors": true,
+    "no_cancel_timeout": true,
+    "movie_media_pass": true,
+    "actual_native_pcm_byte_identical": true,
+    "expected_sfx_jobs": true,
+    "native_completion_and_stop": true
+  },
+  "run": "/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-on-r3",
+  "sound": "on",
+  "main_sha256": "36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5",
+  "qemu_sha256": "34059c8c62b3f32896b3d5685a461cd4da5a427ae5b9d3ba4e0f04318461f418",
+  "tx_bytes": 28800,
+  "tx_sha256": "1a0a4f9641500aba12c1ade65b80fd1ab0494e107f08baf267d2cbd0dfb3a123",
+  "expected_tones": [
+    10
+  ],
+  "expected_pcm_sha256": "1a0a4f9641500aba12c1ade65b80fd1ab0494e107f08baf267d2cbd0dfb3a123",
+  "jobs": [
+    {
+      "job": "1",
+      "kind": "sfx",
+      "ns": "138005394677",
+      "source": "a15c1b200",
+      "bytes": "28800",
+      "channel": "8",
+      "line": 83170
+    }
+  ],
+  "native_sequences": [
+    {
+      "tone": 10,
+      "start_line": 236,
+      "ordered_event_lines": [
+        236,
+        238,
+        242,
+        243,
+        244,
+        247,
+        248
+      ],
+      "complete": true
+    }
+  ],
+  "media": [
+    {
+      "path": "/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-on-r3/files/LIVE/100NCZ_8/DSC_0001.MOV",
+      "sha256": "02f1a253585e9a8a8c2e50546c153c3d5e51755595eaf55f4fb3cce874e0ba03",
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "hevc",
+          "codec_long_name": "H.265 / HEVC (High Efficiency Video Coding)",
+          "profile": "Main",
+          "codec_type": "video",
+          "codec_tag_string": "hvc1",
+          "codec_tag": "0x31637668",
+          "width": 1024,
+          "height": 682,
+          "coded_width": 1024,
+          "coded_height": 688,
+          "has_b_frames": 0,
+          "pix_fmt": "yuv420p",
+          "level": 120,
+          "color_range": "tv",
+          "chroma_location": "left",
+          "refs": 1,
+          "view_ids_available": "",
+          "view_pos_available": "",
+          "id": "0x1",
+          "r_frame_rate": "30000/1001",
+          "avg_frame_rate": "30000/1001",
+          "time_base": "1/30000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 92092,
+          "duration": "3.069733",
+          "bit_rate": "261109",
+          "nb_frames": "92",
+          "nb_read_frames": "92",
+          "extradata_size": 108,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "vendor_id": "[0][0][0][0]"
+          }
+        },
+        {
+          "index": 1,
+          "codec_name": "pcm_s24le",
+          "codec_long_name": "PCM signed 24-bit little-endian",
+          "codec_type": "audio",
+          "codec_tag_string": "lpcm",
+          "codec_tag": "0x6d63706c",
+          "sample_fmt": "s32",
+          "sample_rate": "48000",
+          "channels": 2,
+          "bits_per_sample": 24,
+          "initial_padding": 0,
+          "id": "0x3",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/48000",
+          "start_pts": 1,
+          "start_time": "0.000021",
+          "duration_ts": 147347,
+          "duration": "3.069729",
+          "bit_rate": "2304000",
+          "bits_per_raw_sample": "24",
+          "nb_frames": "147347",
+          "nb_read_frames": "148",
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "eng",
+            "handler_name": "Live audio",
+            "vendor_id": "[0][0][0][0]"
+          }
+        },
+        {
+          "index": 2,
+          "codec_type": "data",
+          "codec_tag_string": "mebx",
+          "codec_tag": "0x7862656d",
+          "id": "0x2",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/1000000",
+          "start_pts": 1534866,
+          "start_time": "1.534866",
+          "duration_ts": 33367,
+          "duration": "0.033367",
+          "bit_rate": "2157",
+          "nb_frames": "1",
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und"
+          }
+        }
+      ],
+      "video_frames": 92,
+      "pcm_bytes": 589388,
+      "pcm_sha256": "583ed4e6af8b254658ce7e58f0149cbafee5bf941aac53cb049ae271f46b0423",
+      "pcm_nonzero": true,
+      "zero_runs_over10ms": [
+        {
+          "first": 72278,
+          "end": 84602,
+          "seconds": 0.25675
+        }
+      ],
+      "decode_exit": 0,
+      "decode_error": "",
+      "checks": {
+        "one_video": true,
+        "one_stereo_48k_audio": true,
+        "full_decode_clean": true,
+        "nonempty_audio": true,
+        "frame_count_guard": true
+      }
+    }
+  ],
+  "final_runtime": {
+    "magic": 1279349297,
+    "size": 23744,
+    "requested": 0,
+    "task_started": 1,
+    "task_error": 0,
+    "poll_count": 27498,
+    "full_presses": 1,
+    "writer_returns": 1,
+    "jpeg_returns": 0,
+    "last_native_path": "",
+    "transaction_count": 1,
+    "transaction_error": 0,
+    "encode_started_us": 141676116,
+    "encode_finished_us": 142771116,
+    "frame_encode_started_us": 141795192,
+    "frame_encode_finished_us": 142771116,
+    "frame_encode_target": 92,
+    "frame_encode_completed": 92,
+    "debug_ticket_path": "A:\\DCIM\\100NCZ_8\\DSC_0001.JPG",
+    "debug_dir_path": "A:\\LIVEDATA\\100NCZ_8",
+    "debug_path_result": 0,
+    "debug_fs_error": 0,
+    "debug_dir_stage": 3,
+    "capture.phase": 0,
+    "capture.reason": 0,
+    "capture.irq_seq": 2878,
+    "capture.copied": 819,
+    "capture.dropped": 220,
+    "capture.actual_bytes": 0,
+    "capture.count": 0,
+    "capture.accepted_presses": 1,
+    "capture.rejected_presses": 0,
+    "capture.press_us": 140087521,
+    "stream.width": 1024,
+    "stream.height": 682,
+    "stream.allocation_requested": 67141896,
+    "stream.bitrate": 8000000,
+    "stream.idr_interval_us": 500000,
+    "stream.job": 0,
+    "stream.frozen_count": 92,
+    "stream.frozen_size": 100122,
+    "stream.last_duration_us": 33367,
+    "stream.error": 0,
+    "stream.cleanup_failed": 0,
+    "stream.mux_started": 1,
+    "stream.mux_error": 0,
+    "stream.first_pts": 0,
+    "stream.last_pts": 0,
+    "stream.encoded": 1225,
+    "stream.encode_total_us": 12947197,
+    "stream.encode_max_us": 47163,
+    "stream.encode_last_us": 7006,
+    "stream.encode_avg_us": 10569,
+    "stream.effective_fps_milli": 29970,
+    "stream.ring_fill": 9083,
+    "stream.ring_peak": 263113,
+    "stream.backlog_dropped": 217,
+    "stream.copy_dropped": 2,
+    "stream.ignored_presses": 0,
+    "stream.low_fps": 1,
+    "stream.snapshot_encoded": 107,
+    "stream.mux_start_encoded": 107,
+    "stream.mux_end_encoded": 107,
+    "stream.snapshot_first": 138542505,
+    "stream.snapshot_last": 141578871,
+    "stream.clip_press": 140087521,
+    "stream.clip_end": 141612238,
+    "stream.geometry_changes": 0,
+    "capture.irq_timestamp": 183028454,
+    "capture.descriptor": 0,
+    "stream.fr_desc": 43243977840,
+    "stream.encoder.hw": 37033603072,
+    "audio.active": 0,
+    "audio.descriptor": 0,
+    "audio.cancelled": 1,
+    "audio_z8.phase": 0,
+    "audio_z8.closed": 2147483648,
+    "audio_z8.stop_ack": 1,
+    "audio_z8.stop_timeouts": 0,
+    "audio_z8.blocks": 920,
+    "audio_z8.dropped": 0,
+    "audio_phase": 0,
+    "audio_error": 0,
+    "audio_starts": 1,
+    "audio_tracks": 1,
+    "audio_skipped": 0,
+    "crumb_pad": 0,
+    "stock_handoff_lock": 0,
+    "stream.cfr_epoch": 0,
+    "stream.cfr_index": 0,
+    "stream.cfr_source_us": 0,
+    "stream.cfr_repeats": 404,
+    "stream.cfr_have": 0,
+    "audio_warm": 0,
+    "audio.first_index": 8659442,
+    "audio.next_index": 8851442,
+    "audio.marked": 0,
+    "audio.frozen": 0,
+    "audio_z8.head": 883,
+    "audio_z8.tail": 883,
+    "audio_z8.unmuted": 0,
+    "audio_z8.anchor_us": 140305062,
+    "audio_z8.frames": 2116800,
+    "audio_z8.go": 72340172821233664,
+    "audio_z8.resume_bridge": 0,
+    "shutter.phase": 0,
+    "shutter.generation": 1,
+    "shutter.captured": 1,
+    "shutter.played": 1,
+    "shutter.completed": 1,
+    "shutter.cancelled": 0,
+    "shutter.errors": 0,
+    "shutter.held": 0,
+    "shutter.began": 140088903,
+    "shutter.tone": 10,
+    "shutter.wake_cancel": 0,
+    "shutter.cancel_posted": 0,
+    "shutter.wake_generation": 1,
+    "shutdown": 1,
+    "card_epoch": 1
+  },
+  "final_native_audio": {
+    "driver": 1,
+    "stock_mute": 0,
+    "live_mute": 0
+  },
+  "recovered_checkpoints": [
+    {
+      "label": "probe-018",
+      "encoded": 193,
+      "completed": 1,
+      "virtual_clock": {
+        "virtual_ns": 143320676686,
+        "virtual_rt_ns": 112244068141,
+        "next_deadline_ns": 11085,
+        "qtest_accelerator": false,
+        "running": false,
+        "all_cpus_idle": true,
+        "cpus": [
+          {
+            "index": 0,
+            "halted": false,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 1,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 2,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 3,
+            "halted": true,
+            "stopped": true,
+            "event_pending": false,
+            "event_waiting": true,
+            "event_sleeps": 450895,
+            "event_wakes": 450894
+          }
+        ]
+      },
+      "native_audio": {
+        "driver": 5,
+        "stock_mute": 0,
+        "live_mute": 0
+      }
+    },
+    {
+      "label": "probe-019",
+      "encoded": 391,
+      "completed": 1,
+      "virtual_clock": {
+        "virtual_ns": 149830639471,
+        "virtual_rt_ns": 122968552203,
+        "next_deadline_ns": 192341,
+        "qtest_accelerator": false,
+        "running": false,
+        "all_cpus_idle": true,
+        "cpus": [
+          {
+            "index": 0,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 1,
+            "halted": false,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 2,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 3,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 473842,
+            "event_wakes": 473842
+          }
+        ]
+      },
+      "native_audio": {
+        "driver": 5,
+        "stock_mute": 0,
+        "live_mute": 0
+      }
+    },
+    {
+      "label": "step-255-post-encode-30s",
+      "encoded": 402,
+      "completed": 1,
+      "virtual_clock": {
+        "virtual_ns": 150189243619,
+        "virtual_rt_ns": 124492308543,
+        "next_deadline_ns": -1,
+        "qtest_accelerator": false,
+        "running": false,
+        "all_cpus_idle": true,
+        "cpus": [
+          {
+            "index": 0,
+            "halted": false,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 1,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 2,
+            "halted": false,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 3,
+            "halted": true,
+            "stopped": true,
+            "event_pending": false,
+            "event_waiting": true,
+            "event_sleeps": 475165,
+            "event_wakes": 475164
+          }
+        ]
+      },
+      "native_audio": {
+        "driver": 5,
+        "stock_mute": 0,
+        "live_mute": 0
+      }
+    },
+    {
+      "label": "probe-020",
+      "encoded": 491,
+      "completed": 1,
+      "virtual_clock": {
+        "virtual_ns": 153102631812,
+        "virtual_rt_ns": 136728109753,
+        "next_deadline_ns": -1,
+        "qtest_accelerator": false,
+        "running": false,
+        "all_cpus_idle": true,
+        "cpus": [
+          {
+            "index": 0,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 1,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 2,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 3,
+            "halted": true,
+            "stopped": true,
+            "event_pending": false,
+            "event_waiting": true,
+            "event_sleeps": 485977,
+            "event_wakes": 485976
+          }
+        ]
+      },
+      "native_audio": {
+        "driver": 5,
+        "stock_mute": 0,
+        "live_mute": 0
+      }
+    },
+    {
+      "label": "probe-021",
+      "encoded": 589,
+      "completed": 1,
+      "virtual_clock": {
+        "virtual_ns": 156328066977,
+        "virtual_rt_ns": 150740353458,
+        "next_deadline_ns": -1,
+        "qtest_accelerator": false,
+        "running": false,
+        "all_cpus_idle": true,
+        "cpus": [
+          {
+            "index": 0,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 1,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 2,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 3,
+            "halted": true,
+            "stopped": true,
+            "event_pending": false,
+            "event_waiting": true,
+            "event_sleeps": 497834,
+            "event_wakes": 497833
+          }
+        ]
+      },
+      "native_audio": {
+        "driver": 5,
+        "stock_mute": 0,
+        "live_mute": 0
+      }
+    },
+    {
+      "label": "probe-022",
+      "encoded": 686,
+      "completed": 1,
+      "virtual_clock": {
+        "virtual_ns": 159523869640,
+        "virtual_rt_ns": 164549529770,
+        "next_deadline_ns": 209991,
+        "qtest_accelerator": false,
+        "running": false,
+        "all_cpus_idle": true,
+        "cpus": [
+          {
+            "index": 0,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 1,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 2,
+            "halted": false,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 3,
+            "halted": true,
+            "stopped": true,
+            "event_pending": false,
+            "event_waiting": true,
+            "event_sleeps": 509763,
+            "event_wakes": 509762
+          }
+        ]
+      },
+      "native_audio": {
+        "driver": 5,
+        "stock_mute": 0,
+        "live_mute": 0
+      }
+    },
+    {
+      "label": "probe-023",
+      "encoded": 787,
+      "completed": 1,
+      "virtual_clock": {
+        "virtual_ns": 162825735127,
+        "virtual_rt_ns": 178526327729,
+        "next_deadline_ns": 784685,
+        "qtest_accelerator": false,
+        "running": false,
+        "all_cpus_idle": true,
+        "cpus": [
+          {
+            "index": 0,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 1,
+            "halted": false,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 2,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 3,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 521923,
+            "event_wakes": 521923
+          }
+        ]
+      },
+      "native_audio": {
+        "driver": 5,
+        "stock_mute": 0,
+        "live_mute": 0
+      }
+    },
+    {
+      "label": "probe-024",
+      "encoded": 892,
+      "completed": 1,
+      "virtual_clock": {
+        "virtual_ns": 166269407548,
+        "virtual_rt_ns": 192420192487,
+        "next_deadline_ns": 128264,
+        "qtest_accelerator": false,
+        "running": false,
+        "all_cpus_idle": true,
+        "cpus": [
+          {
+            "index": 0,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 1,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 2,
+            "halted": false,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 3,
+            "halted": true,
+            "stopped": true,
+            "event_pending": false,
+            "event_waiting": true,
+            "event_sleeps": 534555,
+            "event_wakes": 534554
+          }
+        ]
+      },
+      "native_audio": {
+        "driver": 5,
+        "stock_mute": 0,
+        "live_mute": 0
+      }
+    },
+    {
+      "label": "probe-025",
+      "encoded": 993,
+      "completed": 1,
+      "virtual_clock": {
+        "virtual_ns": 169597189154,
+        "virtual_rt_ns": 206331462809,
+        "next_deadline_ns": 234658,
+        "qtest_accelerator": false,
+        "running": false,
+        "all_cpus_idle": true,
+        "cpus": [
+          {
+            "index": 0,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 1,
+            "halted": true,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 2,
+            "halted": false,
+            "stopped": true,
+            "event_pending": true,
+            "event_waiting": false,
+            "event_sleeps": 0,
+            "event_wakes": 0
+          },
+          {
+            "index": 3,
+            "halted": true,
+            "stopped": true,
+            "event_pending": false,
+            "event_waiting": true,
+            "event_sleeps": 546884,
+            "event_wakes": 546883
+          }
+        ]
+      },
+      "native_audio": {
+        "driver": 5,
+        "stock_mute": 0,
+        "live_mute": 0
+      }
+    }
+  ],
+  "saved_config": [
+    {
+      "path": "/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v62-36c5-tone10-on-r3/files/FENESTRA/LIVE-Z8.1",
+      "generation": 1,
+      "requested": 1,
+      "mute": 0,
+      "sha256": "8245f7c07f525d3f88ddbc5904d653cb3bbe58d92e4f97e0031e9752974c795d",
+      "crc_valid": true
+    }
+  ],
+  "end_state_note": "The original bounded capture driver idles 12+30+15 seconds after FULL. Recovery is required after completed SFX and successful save, with subsequent encoding progress. The final checkpoint can be after native standby; it is not mislabeled Ready.",
+  "failed_native_checks": [],
+  "boundary": "Exact virtual-card files, actual DMA source consumption, native messages and real modeled RX data. No physical speaker/DAC or hardware timing claim. Capture only; native playback is separately reported."
+}

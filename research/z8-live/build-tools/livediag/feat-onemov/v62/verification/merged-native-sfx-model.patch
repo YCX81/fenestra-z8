@@ -1,0 +1,54 @@
+--- a/nikon-private-tx16.h
++++ b/nikon-private-tx16.h
+@@ -5,6 +5,10 @@
+  * optional host submission precede DMA status/IRQ; no physical DAC/rate claim.
+  */
+ #define Z8_AUDIO_TX_BUDGET (16u * 1024u * 1024u)
++
++/* Only pinned native finite one-shot resource lengths. */
++static bool serial5_tx16_sfx_bytes(unsigned bytes)
++{ return bytes==4800 || bytes==9600 || bytes==19200 || bytes==28800; }
+ 
+ static int serial5_tx_drain_request(NikonZ9State *s, uint64_t *physical,
+                                    unsigned *bytes)
+@@ -28,7 +32,7 @@
+         unsigned request=(r[0]>>24)&0x3f;
+         if(request!=27 && !((paired || narrow16) && request==28)) { return -1; }
+         unsigned lane=request-27,length=((r[0]&0xffff)+1)*4;uint64_t source;
+-        if(lanes[lane]>=0 || (narrow16 && !((s->serial5_tx16_ring_model && length==192000) || (s->serial5_tx16_sfx_model && request==27 && length==4800))) || (r[0]&0x40ff0000) || (r[1]&0x70000) ||
++        if(lanes[lane]>=0 || (narrow16 && !((s->serial5_tx16_ring_model && length==192000) || (s->serial5_tx16_sfx_model && request==27 && serial5_tx16_sfx_bytes(length)))) || (r[0]&0x40ff0000) || (r[1]&0x70000) ||
+             (r[1]&~0x001f0000u)!=0x29e00000 || (r[2]&~0x404u) || r[3] ||
+             !(s->peripheral_global[ch/8]&0x80000000) || (r[4]&3) ||
+             !pdma_ram_address(s,0,r[4],length,&source)) { return -1; }
+@@ -38,7 +42,7 @@
+         addresses[0]<addresses[1]+lengths[1] && addresses[1]<addresses[0]+lengths[0]) { return -1; }
+     /* SFX is one original request27 only. Reject mixed owners/bank lengths;
+      * a zero-length native descriptor underflows to262144 and stays rejected. */
+-    bool sfx=narrow16 && lanes[0]>=0 && lengths[0]==4800;
++    bool sfx=s->serial5_tx16_sfx_model && lanes[0]>=0 && serial5_tx16_sfx_bytes(lengths[0]);
+     if (sfx && lanes[1]>=0) { return -1; }
+     unsigned lane=sfx?0:(paired || narrow16)?s->serial5_tx_drain_phase:0;
+     if(lanes[lane]<0) { return -1; }
+@@ -95,11 +99,11 @@
+     s->serial5_tx_drain_jobs++;
+     s->serial5_tx_drain_last_source = source;
+     bool paired=(s->serial5_config[0][0]&2)!=0;
+-    bool sfx=s->serial5_tx16_sfx_model && bytes==4800;
++    bool sfx=s->serial5_tx16_sfx_model && serial5_tx16_sfx_bytes(bytes);
+     if(sfx) { s->serial5_tx16_sfx_jobs++; }
+     else if(s->serial5_tx16_ring_model) { s->serial5_tx16_ring_jobs++; }
+     fprintf(stderr,"Z8_PRIVATE_TX16 job=%"PRIu64" kind=%s ns=%"PRId64" source=%"PRIx64" bytes=%u channel=%d\n",
+-        s->serial5_tx_drain_jobs,sfx?"sfx4800":"ring192000",qemu_clock_get_ns(QEMU_CLOCK_VIRTUAL),source,bytes,channel);
++        s->serial5_tx_drain_jobs,sfx?"sfx":"ring192000",qemu_clock_get_ns(QEMU_CLOCK_VIRTUAL),source,bytes,channel);
+     pdma_progress(s, channel, 0);
+     if(!sfx && (paired || s->serial5_tx16_ring_model)) { s->serial5_tx_drain_phase^=1;s->serial5_tx_drain_prefilled=true; }
+     /* A second descriptor, if any, is a separate transfer and deadline. */
+@@ -135,7 +139,7 @@
+          * block. This is neither measured FIFO depth nor silicon timing. */
+         timer_mod(s->serial5_tx_drain_timer,
+                   qemu_clock_get_ns(QEMU_CLOCK_VIRTUAL) +
+-                  serial5_tx_clock_delay(s,(s->serial5_tx16_sfx_model && bytes==4800 ? UINT64_C(25000000) :
++                  serial5_tx_clock_delay(s,(s->serial5_tx16_sfx_model && serial5_tx16_sfx_bytes(bytes) ? (uint64_t)bytes*1000000000/(48000*4) :
+                    ((s->serial5_config[0][0]&2) || s->serial5_tx16_ring_model) && s->serial5_tx_drain_prefilled ?
+                    MAX(UINT64_C(1000000),(uint64_t)bytes*1000000000/(48000*(s->serial5_tx16_ring_model?4:8))) : 1000000)));
+     }

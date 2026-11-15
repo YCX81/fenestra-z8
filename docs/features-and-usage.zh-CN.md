@@ -1,26 +1,26 @@
 # Z8 功能与使用指南
 
-更新日期：2026-11-11。仓库默认分支为 `z8-c311`。Live 开发进展已合并，原临时进展分支已清理。
+更新日期：2026-11-15。仓库默认分支为 `z8-c311`。Live 开发进展已合并，原临时进展分支已清理。
 
 ## 选择使用入口
 
-本仓库提供两套需要区分的源码：根目录是 Fenestra Z8 C3.11 核心移植；`research/z8-live/` 是后续 Live 与回放开发归档，包含基线、候选版、诊断版和历史失败方案。合并归档不改变根目录构建器的功能，也不会自动把 v36 加入核心构建。
+本仓库提供两套需要区分的源码：根目录是 Fenestra Z8 C3.11 核心移植；`research/z8-live/` 是后续 Live 与回放开发归档，包含基线、候选版、诊断版和历史失败方案。合并归档不改变根目录构建器的功能，也不会自动把 V62 加入核心构建。
 
 | 功能 | 入口与使用方式 | 当前状态 |
 |---|---|---|
 | Fenestra 菜单与激活 | Setup → Fenestra；Activate、Auto activate、Shutdown guard、Modules；WonderLantern 打开模块页 | 根目录核心有 QEMU 菜单/激活记录；自动激活、真实断电和实体 USB 的覆盖范围见[移植记录](../port-z8/PORT-STATUS.md) |
 | 独立模块与显示 | 构建目标为 `z8-c311` 的 `.wlm`；hello 菜单示例、demo 字符雨、SDK 和原生显示适配 | 有 QEMU 运行记录；根目录核心未作真机验收 |
 | Linux INFO 桥与主机调试 | 核心构建生成匹配的 INFO agent；入口为 `host/ptp_linux.py`，详见[调试说明](debugging.md) | 仅无参数 INFO；共享内存软件回环有记录，实体 USB/PTP 未验；不提供 Z8 shell/任意命令执行 |
-| Live 拍摄开关与状态 | 集成版中 Setup → Fenestra → Live Photo → On / Off；界面报告 Off、Requested、Ready、Busy、Unavailable 或 card error | 在后续 Live 源码中；v36 是候选，不能把源码存在视为完整真机通过 |
+| Live 拍摄开关与状态 | 集成版中 Setup → Fenestra → Live Photo → On / Off；界面报告 Off、Requested、Ready、Busy、Unavailable 或 card error | 在后续 Live 源码中；本次归档至 V62，不能把源码存在视为完整真机通过 |
 | 快门前后视频与照片配对 | Live Ready 后正常拍照；Wave5 H.264、MOV 时间戳与静态照片标记；目标窗口为快门前后各 1.5 秒 | 窗口可受启动时间、关键帧、丢帧影响；不是 RAW 预拍，不保证每张固定三秒 |
-| Live 音频 | 同步音频采集、与短片窗口配对、MOV 音轨及增益处理 | 采集失败可退回无声短片；v36 音量、同步与连续保存仍需回归 |
-| Live 照片回放 | 单张照片回放页显示 LIVE 徽标，默认以 REC 触发 LVP 预览；另有 REC / Off 键设置源码 | LVP 预览和原厂 MOV 播放是两条路径；菜单是否出现取决于 PB 构建宏，见下文 |
+| Live 音频 | 同步音频采集、与短片窗口配对、MOV 音轨及增益处理 | V62 支持快门声 On/Off；发声交接有短暂录音静音，保存期间连拍可能无短片 |
+| Live 照片回放 | 单张照片回放页显示 LIVE 徽标，V62 以 REC 触发原厂 MOV 播放；旧版有 LVP 预览 | V61/V62 支持 RAW 优先、原厂 JPEG 跨卡副本配对及失败缓存重试；用户已确认播放返回 |
 | 横竖持与 LIVE 图标 | 拍照静态/忙碌扫光徽标；回放静态徽标；按显示目标、viewport 和方向刷新 | v36 素材为 110×44；LCD/EVF 实际表现和切屏时序待按版本核验 |
 | Wave5 交还与 REC 兼容改动 | v36 将关闭锁移到缓存 runtime，保留原照片/录像切档及 bring-up 交还策略 | 离线源码/对象审计有历史记录；v9b 的用户硬件报告不等于 v36 硬件回归通过 |
 | C64 标签字号 | 独立补丁把既有 C10…C64 共享描述符的样式改为 28 号，见下文 | 只调整已扩容输入的标签，不创建 C64 槽位；会影响共用标签的多个页面，完整显示仍需验证 |
 | REC 诊断与分析工具 | `feat-rec/` 保存记录器、灯码、解码器、检查脚本；`codex-w5/` 保存生命周期分析 | 属于指定诊断版，非普通拍照开关；v36 未引入 v9b recorder/lamp，不应混用工具或结构偏移 |
 
-尚未提供可从本仓库直接下载、安装并完成真机验收的 Z8 发布包。没有把 iPhone 导入、原厂播放器接受 Live MOV、全部 RAW+JPEG/双卡组合或连续 REC 往返列为已完成能力。根目录保留的 ZR/Z9 工具和上游 Releases 也不是 Z8 下载入口。
+尚未提供可从本仓库直接下载、安装并完成真机验收的 Z8 发布包。V54–V60 已有原厂播放器路径及指定素材的真机观察；iPhone 导入、全部 RAW+JPEG/双卡组合与连续 REC 往返未完成验收。根目录保留的 ZR/Z9 工具和上游 Releases 也不是 Z8 下载入口。
 
 ## 获取源码与依赖
 
@@ -57,7 +57,13 @@ python host/build_sdk_module.py modules/demo/sdk.c \
 
 `port-z8/run-boot.sh` / `fenestra_boot.py` 是依赖独立研究环境的启动器，需 `FENESTRA_NIKON_WORKSPACE` 等配置；单独克隆本仓库并不能复现整套实验。QEMU 的基础构建及运行入口见[配套使用指南](https://github.com/YCX81/z8-qemu/blob/main/docs/features-and-usage.zh-CN.md)。
 
-## 在匹配的 Live 集成版中操作
+## V62 操作与当前归档入口
+
+V62 使用单 MOV 与原厂播放器，保留 V61 RAW 优先和跨卡 JPEG 配对。Ready 后拍照，等待保存结束；回放 RAW 或 JPEG 时按 REC，结束返回原照片。保留 LIVE 与 LIVEDATA 配对文件。保存忙碌时拍摄可能没有短片。Log 菜单文字及 Live 快门声 On/Off 已修复，原厂 Silent 仍生效。用户已确认 V62 实际验证、编译测试完成；本次不重复运行。见 [V62 检查点](../research/z8-live/build-tools/livediag/feat-onemov/RELEASE-v62.md)。
+
+真实固件构建和 QEMU 位于 Windows 实验室的 WSL Linux；`/home/…` 是 WSL 路径。Mac 的 `/Users/…/Nikon` 保存归档和交付副本。历史根目录核心与 v36 离线命令仍按下文的独立路线阅读。
+
+## 历史 v36 集成版操作与文件布局
 
 以下描述的是归档代码中的交互契约，前提是已经有匹配的完整集成构建；仅构建上述根目录核心不会出现这些功能。
 
@@ -84,7 +90,7 @@ python host/build_sdk_module.py modules/demo/sdk.c \
 
 从原厂固件开始的完整入口见[原厂到 v36](../research/z8-live/from-stock/README.md)：只需两个仓库和原厂 C 3.11，历史核心用 clang 18，v36 用 clang 21。公开 NFP 工具包及对应源码/许可随仓库固定，无需私有 MAIN 或迁移包。下文的单独编译命令仍可用于源码检查。
 
-当前候选目录为 [`research/z8-live/build-tools/livediag/feat-release/`](../research/z8-live/build-tools/livediag/feat-release/)，Live 输入为 `src-fix36/`，回放输入为 `pb-fix36/`。它保留了 v32 Live、音频和竖屏逻辑，迁移 Wave5 关闭锁，并应用 110×44 的原创透明徽标。图标旧说明里的 112×44 / 中线 49 不代表 v36；v36 生成配置为拍照中线 54、y=98，回放 x=y=24，均需结合 viewport 解读。
+历史 v36 候选目录为 [`research/z8-live/build-tools/livediag/feat-release/`](../research/z8-live/build-tools/livediag/feat-release/)，Live 输入为 `src-fix36/`，回放输入为 `pb-fix36/`。它保留了 v32 Live、音频和竖屏逻辑，迁移 Wave5 关闭锁，并应用 110×44 的原创透明徽标。图标旧说明里的 112×44 / 中线 49 不代表 v36；v36 生成配置为拍照中线 54、y=98，回放 x=y=24，均需结合 viewport 解读。
 
 下面只编译对象、比较 ABI 并检查原子指令，不打开 USB、运行 QEMU 或生成升级包：
 
@@ -118,4 +124,4 @@ python research/z8-live/build-tools/livediag/feat-c64label/c64label_patch.py \
 
 先运行 `python -B verify_source.py` 校验源码清单。复现问题时记录仓库提交、精确版本目录、MAIN/manifest 哈希、构建命令、菜单/按键序列和错误计数。分别写清“源码推断”“历史仿真记录”“该版本真机观察”；只报告必要的数字与身份，不上传固件、密钥、转储或私人素材。
 
-本次更新只维护文档和分支，不新增硬件、USB、QEMU 或导入兼容性验收。许可适用范围见 [LICENSE-Z8.md](../LICENSE-Z8.md) 与 [EXCEPTIONS.md](../EXCEPTIONS.md)，独立依赖保留原许可。
+本次发布维护截至 V62 的源码、既有验证与用户实机确认，不重复运行 V62 编译测试；不新增硬件、USB、QEMU 或导入兼容性验收。许可适用范围见 [LICENSE-Z8.md](../LICENSE-Z8.md) 与 [EXCEPTIONS.md](../EXCEPTIONS.md)，独立依赖保留原许可。

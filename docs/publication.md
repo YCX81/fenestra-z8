@@ -1,5 +1,7 @@
 # Contributing and releases
 
+V62 source checkpoint (2026-11-15): see the [versioned source, Windows/WSL build environment and evidence limits](../research/z8-live/build-tools/livediag/feat-onemov/RELEASE-v62.md). V62 adds Log text and Live shutter sound fixes, retaining V61 RAW/JPEG peer playback. The user confirmed physical validation and completed compilation/testing; this publication does not repeat those runs.
+
 ## Licensing
 
 Project code and documentation use [CC BY-NC-SA 4.0](../LICENSE), with the [commercial photography permission](../EXCEPTIONS.md). Submit original contributions only if you can grant them under those terms. Retain third-party license notices and establish compatibility before incorporating third-party code. The project license does not cover original camera firmware, keys, or vendor hardware documentation.

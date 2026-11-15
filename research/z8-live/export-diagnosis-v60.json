@@ -5,7 +5,8 @@
       "source": "build-tools/livediag/feat-onemov/v60-diagnosis/RESULT.md",
       "destination": "research/z8-live/build-tools/livediag/feat-onemov/v60-diagnosis/RESULT.md",
       "source_sha256": "ee84288455b816a435841f7629324dc1565b6f0b7cebe495d3c4c7b50ef4f79e",
-      "published_sha256": "ee84288455b816a435841f7629324dc1565b6f0b7cebe495d3c4c7b50ef4f79e"
+      "published_sha256": "2cc392dda66a13ee9a6748ec27377302bc02f5a1c6516a35ffb37d479ed509ec",
+      "publication_edit": "version status/usage notes updated during final V62 publication"
     },
     {
       "source": "build-tools/livediag/feat-onemov/v60-diagnosis/card-lookup-analysis.md",
@@ -23,7 +24,8 @@
       "source": "build-tools/livediag/feat-onemov/v60-diagnosis/freeze/README.md",
       "destination": "research/z8-live/build-tools/livediag/feat-onemov/v60-diagnosis/freeze/README.md",
       "source_sha256": "16d208cb85dd7a14d1506c9ced4ba10a0e421336951e6c56b4bf309a4ad2c599",
-      "published_sha256": "16d208cb85dd7a14d1506c9ced4ba10a0e421336951e6c56b4bf309a4ad2c599"
+      "published_sha256": "8a9cc4129a2f28634cc512087411f1c61340135cf4081ff5c4bcc04436e966e3",
+      "publication_edit": "version status/usage notes updated during final V62 publication"
     },
     {
       "source": "build-tools/livediag/feat-onemov/v60-diagnosis/freeze/test.c",
@@ -47,7 +49,8 @@
       "source": "build-tools/livediag/feat-onemov/v60-diagnosis/cache-repro/RESULT.md",
       "destination": "research/z8-live/build-tools/livediag/feat-onemov/v60-diagnosis/cache-repro/RESULT.md",
       "source_sha256": "dff5f51fab5736d3a4ef5e947d47283d5877b93b837577f0cf3c94f5e63232f9",
-      "published_sha256": "dff5f51fab5736d3a4ef5e947d47283d5877b93b837577f0cf3c94f5e63232f9"
+      "published_sha256": "cfc208d37300e20d7ca274be1c6ced8767fc2d0b6c164f46a78068ee76df87f0",
+      "publication_edit": "version status/usage notes updated during final V62 publication"
     }
   ]
 }

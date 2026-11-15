@@ -1,6 +1,6 @@
 # Getting started
 
-For **Nikon Z8 C3.11**, start with the [current feature and usage guide](features-and-usage.zh-CN.md). The root core uses `host/build_z8_core.py`; the later Live/v36 source archive is a separate build route. The ZR/Z9 package examples below do not produce a Z8 update package.
+For **Nikon Z8 C3.11**, start with the [current feature and usage guide](features-and-usage.zh-CN.md). The root core uses `host/build_z8_core.py`; the later Live source archive through v62 is a separate build route. The ZR/Z9 package examples below do not produce a Z8 update package.
 
 ## 1. Choose a workflow
 

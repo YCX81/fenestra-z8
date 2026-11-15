@@ -5,7 +5,7 @@
 在仓库根目录运行：
 
 ```sh
-sh build-tools/livediag/feat-onemov/v60-diagnosis/freeze/run.sh
+sh research/z8-live/build-tools/livediag/feat-onemov/v60-diagnosis/freeze/run.sh
 ```
 
 需要支持 AddressSanitizer 和 UndefinedBehaviorSanitizer 的 Clang；可用 `CC` 指定编译器。程序在临时目录编译并运行，退出后清理二进制，不修改生产源码。

@@ -1,3 +1,5 @@
+> 当前归档至 **V62**：Windows/WSL 构建来源、菜单文字与快门声修复、V61 RAW 配对以及用户实机确认见 [V62 检查点](RELEASE-v62.md)。下文保留 V54–V60 的历史演进。
+
 # one-MOV Live（v54）：只写一个 MOV，机内用原厂播放器播放
 
 2026-11-15。基于 codex 的 v53 G（MAIN c1489408，源码 `feat-v53/integration-g-final/work`）。

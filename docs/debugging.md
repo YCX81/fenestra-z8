@@ -1,5 +1,7 @@
 # USB/PTP and native debugging
 
+V62 source checkpoint (2026-11-15): see the [versioned source, Windows/WSL build environment and evidence limits](../research/z8-live/build-tools/livediag/feat-onemov/RELEASE-v62.md). V62 adds Log text and Live shutter sound fixes, retaining V61 RAW/JPEG peer playback. The user confirmed physical validation and completed compilation/testing; this publication does not repeat those runs.
+
 ## Connection and identity
 
 Start the camera normally, activate Fenestra as needed, and enable USB Debug. Host tools use native PTP vendor operations. No external root-shell utility or replacement Windows camera driver is required. Importing a Python module does not open a device; an explicit CLI command establishes the connection.

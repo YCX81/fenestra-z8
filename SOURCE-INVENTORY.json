@@ -18658,8 +18658,8 @@
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-onemov/v62/copy_sd.py",
-      "bytes": 4051,
-      "sha256": "ceeb471bc6f332830a8907710487e8dabfab593c6a5e0accfe4efe7c2111ea10"
+      "bytes": 4043,
+      "sha256": "9432ed3848f7885eb4b3450b6449e9f8b0893f066b81a1b1ee139ddfbb57243e"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-onemov/v62/final/BINARY-AUDIT.md",
@@ -49043,8 +49043,8 @@
     },
     {
       "path": "research/z8-live/export-diagnosis-v60.json",
-      "bytes": 3153,
-      "sha256": "32bae6574a8e2421c44db04d9d8aa9cde40982423b47d68cf6bf3852724d39cf"
+      "bytes": 3432,
+      "sha256": "ee7bd6e0bf47c7a5527f8b35840b88e34f8cc8b07fa2897dcb8fc1c26ae94072"
     },
     {
       "path": "research/z8-live/export-foundation-v60.json",
@@ -49058,8 +49058,8 @@
     },
     {
       "path": "research/z8-live/export-onemov-v60.json",
-      "bytes": 15938,
-      "sha256": "e367aaf6f1e9d41ae5ab213b12986d227eb83457d65618eb5e06df3b4473125f"
+      "bytes": 16124,
+      "sha256": "763a0c4b2e95e3b3d34d40f79eec63c203d9588646b11f2820160cecd36d9ede"
     },
     {
       "path": "research/z8-live/export-v61.json",
@@ -49068,8 +49068,8 @@
     },
     {
       "path": "research/z8-live/export-v62.json",
-      "bytes": 376603,
-      "sha256": "0a7c0638cc6fc5c5a486fd6d53e64a56c40923e42ccd1c2170326385a90d0387"
+      "bytes": 377107,
+      "sha256": "574af288d0dc5922e2b07947e3303cb6a622e97dd7286652cafb8ca1512b28d7"
     },
     {
       "path": "research/z8-live/from-stock/.gitignore",

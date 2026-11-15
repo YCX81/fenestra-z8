@@ -9,7 +9,7 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parent
 CARD = Path('/Volumes/NIKON Z 8  ')
-UUID = '9D59454C-7746-3814-8B03-E2B56691AE15'
+UUID = 'CONFIGURE_SD_UUID_BEFORE_USE'
 OLD_SHA = '9c9654c694d61a8c4b289e49ededdc4048a32155e34e710d7e3637702c8f767d'
 MAIN_SHA = '36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5'
 OLD_BACKUP = Path('/path/to/Nikon/delivery/Z8-v61-Live-RAWPeer-db0c847b/Z_8_0406.bin')

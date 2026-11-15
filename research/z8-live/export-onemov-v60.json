@@ -11,7 +11,8 @@
       "source": "build-tools/livediag/feat-onemov/README.md",
       "destination": "research/z8-live/build-tools/livediag/feat-onemov/README.md",
       "source_sha256": "5a6be225c7d6572ea8855782a512a48d0937a6300c5f59bd68349a12520ee314",
-      "published_sha256": "99f8bd297a8240b7e5f7c5d5ae9f05cad8844697d6d180c54c65e239206683eb"
+      "published_sha256": "fff1d8146437eee4fb88f6866f31f37ea0d026a13d403643dcd36b7c6c698d88",
+      "publication_edit": "version status/usage notes updated during final V62 publication"
     },
     {
       "source": "build-tools/livediag/feat-onemov/README54.txt",
@@ -53,7 +54,8 @@
       "source": "build-tools/livediag/feat-onemov/README60.txt",
       "destination": "research/z8-live/build-tools/livediag/feat-onemov/README60.txt",
       "source_sha256": "3e0dd0c96dae0a50974fbb5d80f226283af36596a3de7d824879c427be72cdcb",
-      "published_sha256": "3e0dd0c96dae0a50974fbb5d80f226283af36596a3de7d824879c427be72cdcb"
+      "published_sha256": "d6590bd772ef0d3230f2ce5b802afe8e047fbf469ac3d09b400647150f6688a5",
+      "publication_edit": "version status/usage notes updated during final V62 publication"
     },
     {
       "source": "build-tools/livediag/feat-onemov/build_onemov.py",

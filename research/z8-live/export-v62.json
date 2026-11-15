@@ -2226,13 +2226,15 @@
       "source": "build-tools/livediag/feat-onemov/v62/README62.txt",
       "destination": "research/z8-live/build-tools/livediag/feat-onemov/v62/README62.txt",
       "source_sha256": "5fc97d4e9a7bad10c24d280b051e485f3561b2f689f042f6da12f71bc44e1c3f",
-      "published_sha256": "5fc97d4e9a7bad10c24d280b051e485f3561b2f689f042f6da12f71bc44e1c3f"
+      "published_sha256": "aee8e3678fe214cfd442904902d418c8ffd94bc5f8dd5cb36cbae568bb973095",
+      "publication_edit": "user validation status added; removable-media identifier replaced with configuration placeholder"
     },
     {
       "source": "build-tools/livediag/feat-onemov/v62/RESULT.md",
       "destination": "research/z8-live/build-tools/livediag/feat-onemov/v62/RESULT.md",
       "source_sha256": "e891efdc910a3c9dc19f380acf6a2eb1b9f5aea63b0db7b9810f575948ee5b42",
-      "published_sha256": "8b6187eb19b00a039ea2ff9f9da3ab76f6ee44a33ff3232cd48e150aec9076a1"
+      "published_sha256": "332299d42f7004d1357d32cb54dcf3ff4cecd2bdf7747e21c542fb1f20aa8140",
+      "publication_edit": "user validation status added; removable-media identifier replaced with configuration placeholder"
     },
     {
       "source": "build-tools/livediag/feat-onemov/v62/STATUS-history-before-final-checks.md",
@@ -2244,7 +2246,8 @@
       "source": "build-tools/livediag/feat-onemov/v62/STATUS.md",
       "destination": "research/z8-live/build-tools/livediag/feat-onemov/v62/STATUS.md",
       "source_sha256": "465d00d9585d51a4d171f53755d9f176cf2d1085e8d885db50c704674c0df903",
-      "published_sha256": "70bf8676e8fa4b30221517725a2533258b6ccaf393d857f3584ef925cb988ec9"
+      "published_sha256": "d2af1634bcb60ce001c51a7bcee0a80a8a41d6d6b5326764f80240dfca96a793",
+      "publication_edit": "user validation status added; removable-media identifier replaced with configuration placeholder"
     },
     {
       "source": "build-tools/livediag/feat-onemov/v62/build_candidate.py",
@@ -2256,7 +2259,8 @@
       "source": "build-tools/livediag/feat-onemov/v62/copy_sd.py",
       "destination": "research/z8-live/build-tools/livediag/feat-onemov/v62/copy_sd.py",
       "source_sha256": "a1fa6daaa8ca0fb588c6076876127d0d3f7b8382217d7d221c3b4f8a121e8ec2",
-      "published_sha256": "ceeb471bc6f332830a8907710487e8dabfab593c6a5e0accfe4efe7c2111ea10"
+      "published_sha256": "9432ed3848f7885eb4b3450b6449e9f8b0893f066b81a1b1ee139ddfbb57243e",
+      "publication_edit": "user validation status added; removable-media identifier replaced with configuration placeholder"
     },
     {
       "source": "build-tools/livediag/feat-onemov/v62/finalize_candidate.py",

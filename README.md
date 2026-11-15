@@ -10,8 +10,8 @@ This is YCX81's Z8 C3.11 adaptation of [WonderLantern/Fenestra](https://github.c
 |---|---|---|
 | Core runtime | Native Fenestra / WonderLantern menus, activation and shutdown guard, card module loading, SDK, hello and animated demo | The root core has recorded QEMU runs; physical-camera qualification remains incomplete |
 | Host bridge | Z8 C3.11 bindings, hash-pinned AArch64 Linux agent and parameterless INFO protocol | File-backed software round trip recorded; camera USB/PTP and shell execution are not established capabilities |
-| Live capture | On/Off menu, rolling Wave5 H.264 capture around a still, MOV/photo pairing, audio integration and file transactions | Separate research source, with multiple historical revisions; v36 is a candidate |
-| Live playback and UI | LVP preview via REC, portrait handling, transparent LIVE badges and busy animation | Archived implementation; v36 includes the 110×44 assets, with final display/hardware regression pending |
+| Live capture | On/Off menu, rolling Wave5 H.264 capture around a still, MOV/photo pairing, audio integration and file transactions | Separate research source, with multiple historical revisions; v62 is the published checkpoint; later local revisions are outside this snapshot |
+| Live playback and UI | Native MOV playback via REC in v54–v62, portrait handling, LIVE badges and busy animation | v62 includes RAW/JPEG peer playback, Log text and shutter sound fixes; user validation recorded |
 | Wave5 hand-back | Cached runtime close lock and preserved bring-up hand-back behavior | v36 source/object audit recorded; earlier diagnostic-version hardware reports do not qualify v36 |
 | C64 labels | A separate guarded descriptor-style patch for an already expanded C64 MAIN | Not a slot expansion tool; shared-page rendering needs verification |
 | Diagnostics | REC recorders/lamp-code experiments, Wave5 lifecycle analysis, media/icon checks and build tools | Version-specific development tools, not interchangeable with the ordinary candidate |
@@ -41,7 +41,7 @@ Place a compatible `.wlm` in `FENESTRA/` on the matching experiment's virtual ca
 
 ## Live development workflow
 
-Start with the [functional and usage guide](docs/features-and-usage.zh-CN.md), then the [archive map](research/z8-live/README.md) and [v36 candidate notes](research/z8-live/build-tools/livediag/feat-release/RELEASE-v36.md). The guide explains the Live menu, REC preview, file locations, C64 patch and offline compilation commands, and identifies the private inputs. The [stock-to-v36 workflow](research/z8-live/from-stock/README.md) builds the matching MAIN and update container from an original C 3.11 package, both repositories and bundled public NFP dependencies; no private intermediate MAIN is required.
+Start with the [functional and usage guide](docs/features-and-usage.zh-CN.md), then the [archive map](research/z8-live/README.md) and [v62 checkpoint notes](research/z8-live/build-tools/livediag/feat-onemov/RELEASE-v62.md). The guide explains the Live menu, REC preview, file locations, C64 patch and offline compilation commands, and identifies the private inputs. The [stock-to-v36 workflow](research/z8-live/from-stock/README.md) builds the matching MAIN and update container from an original C 3.11 package, both repositories and bundled public NFP dependencies; no private intermediate MAIN is required.
 
 Historical source trees, failed experiments and local artifact references are retained for traceability. Source presence is not a claim of end-to-end acceptance, iPhone import compatibility, stock MOV playback compatibility or complete recording-mode regression.
 
@@ -54,7 +54,7 @@ Historical source trees, failed experiments and local artifact references are re
 - [Host debugging and INFO bridge](docs/debugging.md)
 - [Validation](docs/validation.md), [source publication](docs/publication.md)
 
-Run `python -B verify_source.py` to check the source inventory. This checks bytes, not camera safety or firmware behavior. The current documentation update does not add QEMU, USB or hardware acceptance results.
+Run `python -B verify_source.py` to check the source inventory. This checks bytes, not camera safety or firmware behavior. This checkpoint publishes existing v62 source and test receipts with user validation; no repeated build or runtime tests; historical QEMU and hardware observations remain version-specific.
 
 ## License
 

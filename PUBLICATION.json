@@ -10,7 +10,7 @@
   "adaptation_target": "z8-c311",
   "upstream_repository": "https://github.com/WonderLantern/Fenestra",
   "upstream_commit": "67774849c9dd97cc7127066190528e245ee25650",
-  "qualification": "emulation only; no Z8 update-package or hardware qualification",
+  "qualification": "root core: experimental port; Live v62: existing compile/test receipts and user-confirmed physical validation, with documented model limits",
   "bundled_third_party": [
     {
       "name": "NikonFirmwarePatch",
@@ -22,5 +22,8 @@
       "location": "research/z8-live/from-stock/third-party/",
       "contents": "unchanged public toolkit archives with corresponding source and compiled patch units; no Nikon firmware"
     }
-  ]
+  ],
+  "development_checkpoint": "v62",
+  "checkpoint_date": "2026-11-15",
+  "build_environment": "Windows host / WSL Linux; macOS archive and delivery copy"
 }

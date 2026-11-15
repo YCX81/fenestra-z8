@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "source": "/path/to/Nikon/build-tools/livediag/feat-onemov/v61/work/pb-fix37/runtime.c",
+  "runtime_sha256": "2e09c019fa19fbf46da71100b222f4a33b1c10e368157b636290510508ef7dbc",
+  "header_sha256": "d619706dc42226c4ee54d3cb1d4887899df0880b45805739dfd4e24725ead929",
+  "sync_sha256": "f2f3298ffb3d498fa0cf2f71c1f1e4320ace9a2159c836f878f7949df8eb96c8",
+  "source_stable_during_run": true,
+  "extracted_ranges": [
+    {
+      "start": "static uint64_t pb_close_gate(",
+      "first_line": 40,
+      "sha256": "b43360ca471d81c1b2345bdb326f2f745ec02b2a2a1180a2f03271e32ff1f5f8"
+    },
+    {
+      "start": "static int lock(",
+      "first_line": 55,
+      "sha256": "d2e6487c50e6581f1ab5b75b3335b392fdec46279998bd8c6f6b26009953e0cb"
+    },
+    {
+      "start": "static void hide(",
+      "first_line": 74,
+      "sha256": "137786786ecae8ef796117fb3a2f7b6e588a8bdd5167521698981eab4fa9ffae"
+    },
+    {
+      "start": "static int pair_lock(",
+      "first_line": 120,
+      "sha256": "6f9481f0787e73169c9ed76b314cc5a5b2c91c767bd04fdd6c83740e9ad5dc09"
+    },
+    {
+      "start": "void pb_ui_leave(",
+      "first_line": 242,
+      "sha256": "af0eeef04d8761e82650739baecc77fa84acc922e9a7716124a890c0c92accc4"
+    },
+    {
+      "start": "static uint32_t be32(",
+      "first_line": 259,
+      "sha256": "43af815ead48d6de0f72a5fb973cd79f50f6b5cbf86eb5ba1b9eba46fa2b08e4"
+    },
+    {
+      "start": "static void worker(",
+      "first_line": 358,
+      "sha256": "1bb102289aeac1ade639a683763466768d4833a1abb9b55751f6c29a4e30b698"
+    },
+    {
+      "start": "void pb_system_notify(",
+      "first_line": 421,
+      "sha256": "00c1f4171c8168ea8dcddeb37096360ca6485e09eb3e8b55cf17534ed1787b07"
+    },
+    {
+      "start": "static void enqueue(",
+      "first_line": 460,
+      "sha256": "2b10272eb1556f81209af4439b486d089326d5c4eeb15670628d6f83d8e43739"
+    }
+  ],
+  "compile_command": [
+    "clang",
+    "-std=c11",
+    "-O0",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wno-unused-parameter",
+    "-Wno-unused-function",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-I",
+    "/path/to/Nikon/build-tools/livediag/feat-onemov/v61/work/pb-fix37",
+    "-I",
+    "/path/to/Nikon/build-tools/livediag/feat-onemov/v61/work/pb-fix37/core-include",
+    "/path/to/Nikon/build-tools/livediag/feat-onemov/v61/tests/harness.generated.c",
+    "/path/to/Nikon/build-tools/livediag/feat-onemov/v61/work/pb-fix37/sync.c",
+    "-o",
+    "/path/to/Nikon/build-tools/livediag/feat-onemov/v61/tests/host-regression"
+  ],
+  "passed_cases": 92,
+  "static_checks": {
+    "media_notify_global_epoch_update_precedes_card_epoch_update": true
+  },
+  "returncode": 0,
+  "stdout": "PASS A_RAW_to_B_Live_return_delay_redirect_and_fast_REC\nPASS B_RAW_to_A_Live_return_delay_redirect_and_fast_REC\nPASS original_A_JPG_direct_Live_preserved\nPASS original_B_JPG_direct_Live_preserved\nPASS same_card_A_NEF_exact_JPG_member_Live\nPASS same_card_B_NEF_exact_JPG_member_Live\nPASS RAW_without_native_peer_rejected\nPASS native_peer_query_failure_rejected\nPASS native_peer_invalid_flag_rejected\nPASS same_card_returned_as_peer_rejected\nPASS invalid_card_peer_rejected\nPASS malformed_MAN_rejected\nPASS MAN_native_path_mismatch_rejected\nPASS JPG_size_mismatch_rejected\nPASS missing_target_JPG_rejected\nPASS missing_MOV_rejected\nPASS malformed_MOV_rejected\nPASS epoch_change_during_lookup_rejected\nPASS shutdown_lookup_rejected\nPASS existing_native_MOV_member_not_borrowed_or_cleared\nPASS missing_DCF_node_rejected\nPASS media_change_before_REC_rejected\nPASS selection_change_before_REC_rejected\nPASS new_current_id_with_old_cached_id_rejected\nPASS media_change_disables_redirect_info_return_and_old_bit_cleanup\nPASS replacement_DCF_node_not_cleared\nPASS return_does_not_override_new_photo_selection\nPASS mode_exit_deferred_cleanup\nPASS cross_card_RAW_delete_protect_native_only\nPASS same_card_RAW_delete_protect_native_only\nPASS direct_JPG_delete_protect_sync_preserved\nPASS native_delete_protect_failure_not_enqueued\nPASS virtual_MOV_delete_refused\nPASS stale_epoch_delete_protect_not_enqueued\nPASS late_MAN_same_photo_retries_after_one_second\nPASS media_event_same_photo_relooks_up\nPASS stale_valid_publication_after_media_event_requeries_immediately\nPASS stale_epoch_cache_cannot_publish_badge_or_own_REC_while_pair_locked\nPASS failed_lookup_records_new_epoch_and_does_not_retry_each_poll\nPASS worker_held_pair_lock_prevents_start_without_unlocking_owner\nPASS successful_start_releases_pair_lock\nPASS invalid_cache_start_releases_pair_lock\nPASS missing_node_start_releases_pair_lock\nPASS worker_skips_locked_pairing_and_releases_after_lookup\nPASS failed_worker_lookup_releases_pair_lock\nPASS event_22_A_source_changed_peer_card_return_and_cleanup\nPASS event_22_A_source_changed_source_card_return_and_cleanup\nPASS event_23_A_source_changed_peer_card_return_and_cleanup\nPASS event_23_A_source_changed_source_card_return_and_cleanup\nPASS event_24_A_source_changed_peer_card_return_and_cleanup\nPASS event_24_A_source_changed_source_card_return_and_cleanup\nPASS event_25_A_source_changed_peer_card_return_and_cleanup\nPASS event_25_A_source_changed_source_card_return_and_cleanup\nPASS event_26_A_source_changed_peer_card_return_and_cleanup\nPASS event_26_A_source_changed_source_card_return_and_cleanup\nPASS event_27_A_source_changed_peer_card_return_and_cleanup\nPASS event_27_A_source_changed_source_card_return_and_cleanup\nPASS event_28_A_source_changed_peer_card_return_and_cleanup\nPASS event_28_A_source_changed_source_card_return_and_cleanup\nPASS event_29_A_source_changed_peer_card_return_and_cleanup\nPASS event_29_A_source_changed_source_card_return_and_cleanup\nPASS event_30_A_source_changed_peer_card_return_and_cleanup\nPASS event_30_A_source_changed_source_card_return_and_cleanup\nPASS event_31_A_source_changed_peer_card_return_and_cleanup\nPASS event_31_A_source_changed_source_card_return_and_cleanup\nPASS event_22_B_source_changed_peer_card_return_and_cleanup\nPASS event_22_B_source_changed_source_card_return_and_cleanup\nPASS event_23_B_source_changed_peer_card_return_and_cleanup\nPASS event_23_B_source_changed_source_card_return_and_cleanup\nPASS event_24_B_source_changed_peer_card_return_and_cleanup\nPASS event_24_B_source_changed_source_card_return_and_cleanup\nPASS event_25_B_source_changed_peer_card_return_and_cleanup\nPASS event_25_B_source_changed_source_card_return_and_cleanup\nPASS event_26_B_source_changed_peer_card_return_and_cleanup\nPASS event_26_B_source_changed_source_card_return_and_cleanup\nPASS event_27_B_source_changed_peer_card_return_and_cleanup\nPASS event_27_B_source_changed_source_card_return_and_cleanup\nPASS event_28_B_source_changed_peer_card_return_and_cleanup\nPASS event_28_B_source_changed_source_card_return_and_cleanup\nPASS event_29_B_source_changed_peer_card_return_and_cleanup\nPASS event_29_B_source_changed_source_card_return_and_cleanup\nPASS event_30_B_source_changed_peer_card_return_and_cleanup\nPASS event_30_B_source_changed_source_card_return_and_cleanup\nPASS event_31_B_source_changed_peer_card_return_and_cleanup\nPASS event_31_B_source_changed_source_card_return_and_cleanup\nPASS invalid_slot_2_A_source_invalidates_both_and_preserves_reused_node\nPASS invalid_slot_UINT32_MAX_A_source_invalidates_both_and_preserves_reused_node\nPASS invalid_slot_2_B_source_invalidates_both_and_preserves_reused_node\nPASS invalid_slot_UINT32_MAX_B_source_invalidates_both_and_preserves_reused_node\nPASS peer_remove_A_source_times_out_even_when_4910_still_movie\nPASS peer_remove_B_source_times_out_even_when_4910_still_movie\nPASS unrelated_events_do_not_invalidate_pairing\n",
+  "stderr": "",
+  "hardware_access": false,
+  "limitations": "Host Nikon API/file/DCF memory/scheduler/GUI stubs. Actual extracted functions are not rewritten. Does not establish native ref layout, card-selection behavior, decoder success or hardware timing."
+}

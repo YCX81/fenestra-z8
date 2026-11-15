@@ -1,0 +1,336 @@
+#include <assert.h>
+#include <errno.h>
+#include <setjmp.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/mman.h>
+#include <unistd.h>
+#include "runtime.h"
+#include "ui.h"
+
+#define LOAD(p) atomic_load_explicit((p),memory_order_acquire)
+#define STORE(p,v) atomic_store_explicit((p),(v),memory_order_release)
+#define FN(a,t) ((t)native_function((uintptr_t)(a)))
+#define RAW_A ((108u<<19)|(9089u<<4)|2u)
+#define JPG_A ((108u<<19)|(9089u<<4)|0u)
+#define RAW_B (RAW_A|(1u<<29))
+#define JPG_B (JPG_A|(1u<<29))
+#define OTHER_A ((108u<<19)|(9090u<<4)|0u)
+#define FILE_LIMIT 16
+#define SLOT_BYTES 0x224000u
+typedef struct {char path[64];unsigned char bytes[4608];uint64_t size;uint64_t pos;int exists;} FakeFile;
+static PbRuntime runtime;
+static FakeFile files[FILE_LIMIT];
+static unsigned file_count,peer_calls,open_calls,delete_calls,protect_calls,observed_starts,observed_ends,badge_requests;
+static uint32_t selected_id,setting_id,peer_id,native_status,delete_last_id,protect_last_id;
+static uint32_t peer_status,peer_flags,group_primary[2];
+static unsigned ref_acquires,ref_releases;
+static struct {uint32_t id,active;char path[64];} member_ref;
+static uint64_t clock_us;
+static int active,node_missing,node_replaced,change_epoch_on_read;
+static uintptr_t slots[2];
+static char last_open[64],last_stat[64];
+static unsigned char original_info[0x48];
+static jmp_buf worker_done;
+static unsigned worker_ticks,worker_limit,worker_action;
+
+static void (*native_function(uintptr_t address))(void);
+static uint64_t now_us(void) {return clock_us;}
+static int current(uint32_t *id) {if(!active)return 0;*id=selected_id;return 1;}
+static int playback_owner(void) {return active;}
+static void yield(void);
+PbRuntime *pb_runtime_get(void) {return &runtime;}
+void pb_boot(void) {}
+void pb_settings_poll(PbRuntime *r) {}
+int live_native_sync_gc_boot(LiveSyncJournal *j,LiveNativeSync *s) {return 0;}
+int live_native_sync_step(LiveSyncJournal *j,LiveNativeSync *s) {return 0;}
+FxResult pb_scene_badge(FxDemoScene *s,FxSceneCommand c[PB_SCENE_COMMANDS]) {badge_requests++;return FX_OK;}
+FxResult pb_scene_badge_bitmap(FxDemoScene *s,FxSceneCommand c[PB_SCENE_COMMANDS],void *d,uint32_t n) {badge_requests++;return FX_OK;}
+void pb_display_detach(PbNativeDisplay *d) {d->display.attached=0;}
+
+static void path_for(uint32_t id,char *out) {
+ unsigned card=(id>>29)&3u,number=(id>>4)&0x7fffu;
+ snprintf(out,64,"%c:\\DCIM\\108NCZ_8\\DSC_%04u.%s",card?'B':'A',number,(id&15u)==2u?"NEF":(id&15u)==5u?"MOV":"JPG");
+}
+static uint32_t native_path(uint32_t id,char *out) {
+ /* The real formatter discards the requested low format and uses the group's primary. */
+ path_for((id&~15u)|group_primary[(id>>29)&1u],out);return 0;
+}
+static uint32_t native_peer(uint32_t id,uint32_t which,uint64_t *out) {
+ assert(which==2);assert(*out==0);peer_calls++;*out=peer_id|((uint64_t)peer_flags<<32);return peer_status;
+}
+static FakeFile *find_file(const char *path) {
+ for(unsigned i=0;i<file_count;i++)if(files[i].exists&&!strcmp(files[i].path,path))return &files[i];
+ return 0;
+}
+static FakeFile *add_file(const char *path,const void *bytes,uint64_t size) {
+ assert(file_count<FILE_LIMIT);FakeFile *f=&files[file_count++];memset(f,0,sizeof(*f));
+ snprintf(f->path,sizeof(f->path),"%s",path);f->exists=1;f->size=size;
+ if(bytes){assert(size<=sizeof(f->bytes));memcpy(f->bytes,bytes,(size_t)size);}return f;
+}
+static void *native_member_ref(uint32_t id) {
+ assert((id&15u)==0u);assert(!member_ref.active);char path[64];path_for(id,path);
+ if(!find_file(path))return 0;
+ member_ref.id=id;member_ref.active=1;strcpy(member_ref.path,path);ref_acquires++;return &member_ref;
+}
+static const char *native_member_path(void *ref) {assert(ref==&member_ref&&member_ref.active);return member_ref.path;}
+static void native_member_release(void *ref) {assert(ref==&member_ref&&member_ref.active);member_ref.active=0;memset(member_ref.path,0xdd,sizeof member_ref.path);ref_releases++;}
+static int32_t native_open(const char *path,uint32_t a,uint32_t b) {
+ open_calls++;snprintf(last_open,sizeof(last_open),"%s",path);FakeFile *f=find_file(path);
+ if(!f)return -1;f->pos=0;return (int32_t)(f-files)+10;
+}
+static FakeFile *fd_file(int32_t fd) {assert(fd>=10&&(unsigned)(fd-10)<file_count);return &files[fd-10];}
+static uint32_t native_seek(int32_t fd,int64_t at,uint32_t whence,uint64_t *pos) {
+ FakeFile *f=fd_file(fd);uint64_t p=whence==2?f->size+(uint64_t)at:(uint64_t)at;
+ if(p>f->size)return 0;f->pos=p;*pos=p;return 1;
+}
+static uint32_t native_read(int32_t fd,void *out,uint32_t n,uint32_t *got) {
+ FakeFile *f=fd_file(fd);if(f->pos+n>f->size)n=(uint32_t)(f->size-f->pos);
+ assert(f->pos+n<=sizeof(f->bytes));memcpy(out,f->bytes+f->pos,n);f->pos+=n;*got=n;
+ if(change_epoch_on_read){change_epoch_on_read=0;runtime.media_epoch++;}return 0;
+}
+static uint32_t native_close(int32_t fd) {(void)fd_file(fd);return 0;}
+static uint32_t native_stat(const char *path,void *out) {snprintf(last_stat,sizeof(last_stat),"%s",path);return find_file(path)?0:1;}
+static uint32_t native_setting(uint32_t key) {assert(key==0x4910);return setting_id;}
+static void native_set_setting(uint32_t key,uint32_t value) {assert(key==0x4910);setting_id=value;}
+static void *native_info(void *ref) {(void)ref;return original_info;}
+static uintptr_t native_dir(uintptr_t slot,uint32_t directory) {assert(directory==108);return slot+0x400;}
+static uintptr_t native_node(uintptr_t dir,uint32_t id,void *zero) {
+ assert(!zero);if(node_missing)return 0;return dir+0xc00+(node_replaced?0x100:0);
+}
+static void native_slot_lock(uintptr_t lock,uint32_t a,uint32_t b) {(void)lock;assert(a==0x64&&b==0x64);}
+static void native_slot_unlock(uintptr_t lock) {(void)lock;}
+static uint32_t native_page(uint32_t kind,uint32_t page) {assert(kind==3);assert(page==0x56c||page==0x552);return 0x1234;}
+static void native_busy(uint32_t value) {assert(value<=1);}
+static void native_nop(void) {}
+uint32_t pb_delete_original(uint32_t id,uint32_t flags) {delete_calls++;delete_last_id=id;return native_status;}
+uint32_t pb_protect_original(void *obj,uint32_t value) {protect_calls++;protect_last_id=*(uint32_t*)((uint8_t*)obj+0x28);return native_status;}
+static void (*native_function(uintptr_t address))(void) {
+ switch(address) {
+  case 0x407b95e4:return (void(*)(void))native_path;
+  case 0x403fb59c:return (void(*)(void))native_peer;
+  case 0x4085a8e0:return (void(*)(void))native_member_ref;
+  case 0x4085c0d0:return (void(*)(void))native_member_path;
+  case 0x4085aa7c:return (void(*)(void))native_member_release;
+  case 0x402dd4f8:return (void(*)(void))native_open;
+  case 0x402dd8e8:return (void(*)(void))native_seek;
+  case 0x402dd6c8:return (void(*)(void))native_read;
+  case 0x402dd558:return (void(*)(void))native_close;
+  case 0x402dadf4:return (void(*)(void))native_stat;
+  case 0x403ec398:return (void(*)(void))native_setting;
+  case 0x403ec3a0:return (void(*)(void))native_set_setting;
+  case 0x406bc37c:return (void(*)(void))native_info;
+  case 0x4085e91c:return (void(*)(void))native_dir;
+  case 0x4086c378:return (void(*)(void))native_node;
+  case 0x40875834:return (void(*)(void))native_slot_lock;
+  case 0x408758b4:return (void(*)(void))native_slot_unlock;
+  case 0x403ad6a4:return (void(*)(void))native_page;
+  case 0x403fb660:return (void(*)(void))native_busy;
+  case 0x4085d348:case 0x4085d364:case 0x406364d0:return native_nop;
+  default:fprintf(stderr,"Unexpected native function 0x%llx\n",(unsigned long long)address);abort();
+ }
+}
+
+/* ACTUAL_FIRMWARE_FUNCTIONS */
+
+#line 1 "host-regression-tests"
+static uint16_t *mask_for(uint32_t id,int replaced) {return (uint16_t*)(slots[(id>>29)&1u]+0x1024+(replaced?0x100:0));}
+static void map_native_memory(void) {
+ size_t page=(size_t)sysconf(_SC_PAGESIZE);uintptr_t table=UINT64_C(0xa04822af8)&~(uintptr_t)(page-1);
+ void *p=mmap((void*)table,page,PROT_READ|PROT_WRITE,MAP_ANON|MAP_PRIVATE|MAP_FIXED,-1,0);assert(p==(void*)table);
+ for(unsigned i=0;i<2;i++){slots[i]=UINT64_C(0x900000000)+(uintptr_t)i*0x20000000u;p=mmap((void*)slots[i],SLOT_BYTES,PROT_READ|PROT_WRITE,MAP_ANON|MAP_PRIVATE|MAP_FIXED,-1,0);assert(p==(void*)slots[i]);}
+ memcpy((void*)(uintptr_t)UINT64_C(0xa04822af8),slots,sizeof(slots));
+}
+static void reset(uint32_t origin,uint32_t peer) {
+ memset(&runtime,0,sizeof(runtime));memset(files,0,sizeof(files));file_count=0;
+ peer_calls=open_calls=delete_calls=protect_calls=observed_starts=observed_ends=badge_requests=0;
+ selected_id=setting_id=origin;peer_id=peer;native_status=0x04320080;delete_last_id=protect_last_id=0;
+ peer_status=1;peer_flags=0;group_primary[0]=group_primary[1]=0;group_primary[(origin>>29)&1u]=origin&15u;
+ ref_acquires=ref_releases=0;memset(&member_ref,0,sizeof member_ref);
+ clock_us=1000000;active=1;node_missing=node_replaced=change_epoch_on_read=0;
+ memset(last_open,0,sizeof last_open);memset(last_stat,0,sizeof last_stat);memset(original_info,0x5a,sizeof original_info);
+ for(unsigned i=0;i<2;i++){*mask_for(i?RAW_B:RAW_A,0)=4;*mask_for(i?RAW_B:RAW_A,1)=4;}
+ runtime.key=9;runtime.preview_fd=-1;runtime.media_epoch=1;runtime.current_id=origin;
+ char path[64];path_for(origin,path);add_file(path,0,4096);
+}
+static void put_be32(uint8_t *p,uint32_t v) {p[0]=v>>24;p[1]=v>>16;p[2]=v>>8;p[3]=v;}
+static void atom(uint8_t *p,uint32_t size,const char tag[4]) {put_be32(p,size);memcpy(p+4,tag,4);}
+static void add_live(uint32_t target) {
+ char path[64],manpath[64],movpath[64],manifest[256];path_for(target,path);assert(strstr(path,".JPG"));
+ FakeFile *jpg=find_file(path);if(jpg)jpg->size=2048;else add_file(path,0,2048);
+ assert(!live_sync_file(manpath,path,LIVE_FILE_MAN));assert(!live_sync_file(movpath,path,LIVE_FILE_MOV));
+ int n=snprintf(manifest,sizeof manifest,"native=%s\nsize=2048\nuuid=19FEF38C-CA15-4047-D02B-A6A72CC4A198\nvolume_generation=3\n",path);
+ add_file(manpath,manifest,(uint64_t)n);
+ uint8_t movie[4236]={0};atom(movie,24,"ftyp");memcpy(movie+8,"qt  ",4);memcpy(movie+20,"niko",4);
+ atom(movie+24,8,"mdat");atom(movie+32,4204,"moov");atom(movie+40,100,"trak");atom(movie+48,92,"tkhd");
+ put_be32(movie+132,1024u<<16);put_be32(movie+136,682u<<16);atom(movie+140,4096,"udta");
+ add_file(movpath,movie,sizeof movie);
+}
+static void do_lookup(void) {lookup(&runtime,selected_id);}
+static void emit_event(uint32_t ev,uint32_t card) {uint8_t msg[48]={0};memcpy(msg+32,&ev,4);memcpy(msg+40,&card,4);pb_system_notify(msg);}
+static void media_event(void) {emit_event(24,0);}
+static uint32_t press_rec(void) {uint8_t body[128]={0};body[9]=1;return pb_key_notify(body);}
+static void release_rec(void) {uint8_t body[128]={0};(void)pb_key_notify(body);}
+static void yield(void) {
+ worker_ticks++;clock_us+=100000;
+ if(worker_action==1&&worker_ticks==1)add_live(JPG_B);
+ if(worker_action==2&&worker_ticks==1)media_event();
+ if(worker_action==3&&worker_ticks==1){media_event();runtime.cache_valid=1;}
+ if(worker_action==4&&worker_ticks==1){runtime.media_epoch++;runtime.pair_lock=1;runtime.render_request=0;}
+ if(worker_action==5&&worker_ticks==1)runtime.media_epoch++;
+ if(worker_ticks>=worker_limit)longjmp(worker_done,1);
+}
+static void run_worker(unsigned ticks,unsigned action) {worker_ticks=0;worker_limit=ticks;worker_action=action;if(!setjmp(worker_done))worker(&runtime);}
+static void pass(const char *name) {assert(!member_ref.active&&ref_acquires==ref_releases);printf("PASS %s\n",name);}
+
+static void expect_ready(uint32_t origin,uint32_t target) {
+ char from[64],owner[64];path_for(origin,from);path_for(target,owner);
+ assert(runtime.cache_valid&&runtime.lookup_error==0&&runtime.lookup_epoch==runtime.media_epoch);
+ assert(runtime.current_id==origin&&runtime.cached_id==origin);
+ assert(!strcmp(runtime.native_path,from)&&!strcmp(runtime.manifest.native_path,owner));
+ assert(runtime.nb_w==1024&&runtime.nb_h==682);
+}
+static void test_playback(uint32_t origin,uint32_t target,const char *name) {
+ reset(origin,target);add_live(target);do_lookup();expect_ready(origin,target);
+ if((origin&15u)==2u)assert(ref_acquires>0);
+ assert(press_rec()==1&&runtime.nb_request==1);STORE(&runtime.nb_request,0);nb_start(&runtime);
+ assert(runtime.nb_stage==2&&runtime.nb_starts==1&&runtime.nb_photo==origin);
+ assert(runtime.nb_movie==((origin&~15u)|5u)&&setting_id==runtime.nb_movie);
+ assert(*mask_for(origin,0)==0x24&&runtime.nb_bit);
+ char from[64],owner[64],to[64];path_for(origin,from);memcpy(from+25,".MOV",5);path_for(target,owner);
+ assert(!live_sync_file(to,owner,LIVE_FILE_MOV));assert(!strcmp(runtime.nb_from,from)&&!strcmp(runtime.nb_to,to));
+ int32_t fd=pb_open_wrap(from,0,0x20);assert(fd>=10&&!strcmp(last_open,to));native_close(fd);
+ assert(pb_stat_wrap(from,0)==0&&!strcmp(last_stat,to));
+ char other[64]="A:\\DCIM\\108NCZ_8\\DSC_9090.MOV";assert(pb_open_wrap(other,0,0x20)<0&&!strcmp(last_open,other));
+ assert(pb_stat_wrap(other,0)!=0&&!strcmp(last_stat,other));
+ uint8_t before[0x48];memcpy(before,original_info,sizeof before);uint8_t *info=pb_info_record((void*)0x1234);
+ assert(info!=original_info&&info[4]==3&&info[0xc]==0&&info[0xd]==4&&info[0xe]==0xaa&&info[0xf]==2);
+ assert(!memcmp(original_info,before,sizeof before));
+ unsigned lookups=runtime.lookup_count;selected_id=runtime.nb_movie;run_worker(3,0);
+ assert(runtime.lookup_count==lookups&&runtime.nb_w==1024&&runtime.nb_h==682);
+ release_rec();assert(press_rec()==0);nb_start(&runtime);assert(runtime.nb_starts==1);
+ selected_id=origin;assert(pb_native_return(3,0x552)==0x1234);assert(runtime.nb_stage==3&&setting_id==origin);
+ release_rec();assert(press_rec()==0);nb_start(&runtime);assert(runtime.nb_starts==1);
+ *mask_for(origin,0)|=0x40;run_worker(24,0);assert(runtime.nb_stage==3&&(*mask_for(origin,0)&0x20));
+ run_worker(3,0);assert(runtime.nb_stage==0&&*mask_for(origin,0)==0x44&&runtime.ui_leaving==0);
+ pass(name);
+}
+static void reject_ready(const char *name) {
+ do_lookup();assert(!runtime.cache_valid);assert(!press_rec());nb_start(&runtime);
+ assert(runtime.nb_stage==0&&runtime.nb_starts==0&&*mask_for(selected_id,0)==4);pass(name);
+}
+static void test_rejections(void) {
+ reset(RAW_A,0);reject_ready("RAW_without_native_peer_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);peer_status=0;reject_ready("native_peer_query_failure_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);peer_flags=2;reject_ready("native_peer_invalid_flag_rejected");
+ reset(RAW_A,JPG_A);add_live(JPG_B);reject_ready("same_card_returned_as_peer_rejected");
+ reset(RAW_A,JPG_B|(2u<<29));add_live(JPG_B);reject_ready("invalid_card_peer_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);find_file("B:\\LIVEDATA\\108NCZ_8\\DSC_9089.MAN")->bytes[0]='x';reject_ready("malformed_MAN_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);find_file("B:\\LIVEDATA\\108NCZ_8\\DSC_9089.MAN")->bytes[7]='A';reject_ready("MAN_native_path_mismatch_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);find_file("B:\\DCIM\\108NCZ_8\\DSC_9089.JPG")->size++;reject_ready("JPG_size_mismatch_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);find_file("B:\\DCIM\\108NCZ_8\\DSC_9089.JPG")->exists=0;reject_ready("missing_target_JPG_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);find_file("B:\\LIVE\\108NCZ_8\\DSC_9089.MOV")->exists=0;reject_ready("missing_MOV_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);find_file("B:\\LIVE\\108NCZ_8\\DSC_9089.MOV")->bytes[4]='x';reject_ready("malformed_MOV_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);change_epoch_on_read=1;reject_ready("epoch_change_during_lookup_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);runtime.shutdown=1;reject_ready("shutdown_lookup_rejected");
+}
+static void start_pair(void) {reset(RAW_A,JPG_B);add_live(JPG_B);do_lookup();expect_ready(RAW_A,JPG_B);nb_start(&runtime);assert(runtime.nb_stage==2);}
+static void test_bridge_guards(void) {
+ reset(RAW_A,JPG_B);add_live(JPG_B);do_lookup();*mask_for(RAW_A,0)|=0x20;nb_start(&runtime);
+ assert(!runtime.nb_stage&&!runtime.nb_bit&&runtime.nb_starts==0&&*mask_for(RAW_A,0)==0x24);nb_end(&runtime);assert(*mask_for(RAW_A,0)==0x24);pass("existing_native_MOV_member_not_borrowed_or_cleared");
+ reset(RAW_A,JPG_B);add_live(JPG_B);do_lookup();node_missing=1;nb_start(&runtime);assert(!runtime.nb_stage&&runtime.nb_fail==2);pass("missing_DCF_node_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);do_lookup();media_event();assert(!press_rec());nb_start(&runtime);assert(!runtime.nb_stage);pass("media_change_before_REC_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);do_lookup();selected_id=OTHER_A;assert(!press_rec());nb_start(&runtime);assert(!runtime.nb_stage);pass("selection_change_before_REC_rejected");
+ reset(RAW_A,JPG_B);add_live(JPG_B);do_lookup();selected_id=OTHER_A;runtime.current_id=OTHER_A;
+ assert(!press_rec());nb_start(&runtime);assert(!runtime.nb_stage);pass("new_current_id_with_old_cached_id_rejected");
+ start_pair();media_event();char from[64];strcpy(from,runtime.nb_from);assert(pb_open_wrap(from,0,0x20)<0&&!strcmp(last_open,from));assert(pb_info_record(0)==original_info);
+ setting_id=runtime.nb_movie;pb_native_return(3,0x552);assert(setting_id==runtime.nb_movie);nb_end(&runtime);assert(*mask_for(RAW_A,0)==0x24);pass("media_change_disables_redirect_info_return_and_old_bit_cleanup");
+ start_pair();node_replaced=1;*mask_for(RAW_A,1)|=0x20;nb_end(&runtime);assert(*mask_for(RAW_A,1)==0x24);pass("replacement_DCF_node_not_cleared");
+ start_pair();setting_id=OTHER_A;pb_native_return(3,0x552);assert(setting_id==OTHER_A);pass("return_does_not_override_new_photo_selection");
+ start_pair();active=0;run_worker(14,0);assert(!runtime.nb_stage&&*mask_for(RAW_A,0)==4);pass("mode_exit_deferred_cleanup");
+}
+static uint32_t protect_selected(uint32_t id) {uint8_t object[0x30]={0};memcpy(object+0x28,&id,4);return pb_protect_wrap(object,1);}
+static void test_sync_guards(void) {
+ reset(RAW_A,JPG_B);add_live(JPG_B);do_lookup();assert(protect_selected(RAW_A)==native_status&&protect_calls==1&&protect_last_id==RAW_A&&!runtime.journal.count);
+ assert(pb_delete_wrap(RAW_A,0)==native_status&&delete_calls==1&&delete_last_id==RAW_A&&!runtime.journal.count);pass("cross_card_RAW_delete_protect_native_only");
+ reset(RAW_A,0);add_live(JPG_A);do_lookup();assert(runtime.cache_valid);
+ assert(protect_selected(RAW_A)==native_status&&!runtime.journal.count);assert(pb_delete_wrap(RAW_A,0)==native_status&&!runtime.journal.count);pass("same_card_RAW_delete_protect_native_only");
+ reset(JPG_A,0);add_live(JPG_A);do_lookup();assert(protect_selected(JPG_A)==native_status&&runtime.journal.count==1);
+ assert(pb_delete_wrap(JPG_A,0)==native_status&&runtime.journal.count==2);assert(!strcmp(runtime.journal.entries[0].identity.native_path,"A:\\DCIM\\108NCZ_8\\DSC_9089.JPG"));pass("direct_JPG_delete_protect_sync_preserved");
+ reset(JPG_A,0);add_live(JPG_A);do_lookup();native_status=0x0432008b;assert(protect_selected(JPG_A)==native_status);assert(pb_delete_wrap(JPG_A,0)==native_status);assert(!runtime.journal.count);pass("native_delete_protect_failure_not_enqueued");
+ start_pair();assert(pb_delete_wrap(runtime.nb_movie,0)==0x0432008b&&!delete_calls&&runtime.nb_stage==2);pass("virtual_MOV_delete_refused");
+ reset(JPG_A,0);add_live(JPG_A);do_lookup();media_event();assert(protect_selected(JPG_A)==native_status);assert(pb_delete_wrap(JPG_A,0)==native_status);assert(!runtime.journal.count);pass("stale_epoch_delete_protect_not_enqueued");
+}
+static void test_worker_retry(void) {
+ reset(RAW_A,JPG_B);run_worker(30,1);assert(runtime.cache_valid&&runtime.lookup_count==2&&runtime.nb_w==1024);pass("late_MAN_same_photo_retries_after_one_second");
+ reset(RAW_A,JPG_B);add_live(JPG_B);run_worker(30,2);assert(runtime.cache_valid&&runtime.lookup_epoch==runtime.media_epoch&&runtime.lookup_count==2);pass("media_event_same_photo_relooks_up");
+ reset(RAW_A,JPG_B);add_live(JPG_B);run_worker(3,3);
+ assert(runtime.cache_valid&&runtime.lookup_count==2&&runtime.lookup_epoch==runtime.media_epoch&&runtime.lookup_us==1100000);
+ pass("stale_valid_publication_after_media_event_requeries_immediately");
+ reset(RAW_A,JPG_B);add_live(JPG_B);run_worker(3,4);
+ assert(runtime.cache_valid&&runtime.lookup_count==1&&runtime.lookup_epoch!=runtime.media_epoch&&runtime.pair_lock==1&&badge_requests==1);
+ assert(!press_rec());runtime.pair_lock=0;pass("stale_epoch_cache_cannot_publish_badge_or_own_REC_while_pair_locked");
+ reset(RAW_A,0);run_worker(8,5);
+ assert(!runtime.cache_valid&&runtime.lookup_count==2&&runtime.lookup_epoch==runtime.media_epoch&&runtime.lookup_us==1100000);
+ pass("failed_lookup_records_new_epoch_and_does_not_retry_each_poll");
+}
+static void test_pair_lock(void) {
+ reset(RAW_A,JPG_B);add_live(JPG_B);do_lookup();runtime.pair_lock=1;nb_start(&runtime);
+ assert(!runtime.nb_stage&&!runtime.nb_starts&&runtime.pair_lock==1&&*mask_for(RAW_A,0)==4);pass("worker_held_pair_lock_prevents_start_without_unlocking_owner");
+ runtime.pair_lock=0;nb_start(&runtime);assert(runtime.nb_stage==2&&runtime.pair_lock==0);pass("successful_start_releases_pair_lock");
+ reset(RAW_A,JPG_B);add_live(JPG_B);do_lookup();runtime.cached_id=OTHER_A;nb_start(&runtime);
+ assert(!runtime.nb_stage&&runtime.nb_fail==1&&runtime.pair_lock==0);pass("invalid_cache_start_releases_pair_lock");
+ reset(RAW_A,JPG_B);add_live(JPG_B);do_lookup();node_missing=1;nb_start(&runtime);
+ assert(!runtime.nb_stage&&runtime.nb_fail==2&&runtime.pair_lock==0);pass("missing_node_start_releases_pair_lock");
+ reset(RAW_A,JPG_B);add_live(JPG_B);runtime.pair_lock=1;run_worker(2,0);
+ assert(runtime.lookup_count==0&&runtime.pair_lock==1);runtime.pair_lock=0;run_worker(2,0);
+ assert(runtime.cache_valid&&runtime.lookup_count==1&&!runtime.pair_lock);pass("worker_skips_locked_pairing_and_releases_after_lookup");
+ reset(RAW_A,0);run_worker(2,0);assert(!runtime.cache_valid&&runtime.lookup_count==1&&!runtime.pair_lock);pass("failed_worker_lookup_releases_pair_lock");
+}
+static void test_per_card_lifecycle(void) {
+ for(unsigned source_card=0;source_card<2;source_card++)for(uint32_t event=22;event<=31;event++)for(unsigned on_source=0;on_source<2;on_source++){
+  uint32_t origin=source_card?RAW_B:RAW_A,target=source_card?JPG_A:JPG_B;
+  reset(origin,target);add_live(target);do_lookup();expect_ready(origin,target);nb_start(&runtime);assert(runtime.nb_stage==2);
+  uint32_t epoch=runtime.media_epoch,source_epoch=runtime.card_epoch[source_card],target_epoch=runtime.card_epoch[1-source_card];
+  unsigned affected=on_source?source_card:1-source_card;emit_event(event,affected);
+  assert(runtime.media_epoch==epoch+1&&!runtime.cache_valid&&runtime.sync_reset&&runtime.sync.generation==0);
+  assert(runtime.card_epoch[source_card]==source_epoch+(on_source?1u:0u));
+  assert(runtime.card_epoch[1-source_card]==target_epoch+(on_source?0u:1u));
+  assert(!nb_match(&runtime,runtime.nb_from)&&pb_info_record(0)==original_info);
+  uint32_t movie=runtime.nb_movie;assert(setting_id==movie);pb_native_return(3,0x552);
+  assert(runtime.nb_stage==3&&setting_id==(on_source?movie:origin));
+  nb_end(&runtime);assert(runtime.nb_stage==0&&runtime.nb_bit==0);
+  assert(*mask_for(origin,0)==(on_source?0x24:4));
+  char label[96];snprintf(label,sizeof label,"event_%u_%c_source_%s_card_return_and_cleanup",event,source_card?'B':'A',on_source?"changed_source":"changed_peer");pass(label);
+ }
+ for(unsigned source_card=0;source_card<2;source_card++)for(unsigned which=0;which<2;which++){
+  uint32_t origin=source_card?RAW_B:RAW_A,target=source_card?JPG_A:JPG_B;
+  reset(origin,target);add_live(target);do_lookup();nb_start(&runtime);uint32_t e0=runtime.card_epoch[0],e1=runtime.card_epoch[1];
+  emit_event(23,which?UINT32_MAX:2u);assert(runtime.card_epoch[0]==e0+1&&runtime.card_epoch[1]==e1+1);
+  uint32_t movie=runtime.nb_movie;pb_native_return(3,0x552);assert(setting_id==movie);nb_end(&runtime);assert(*mask_for(origin,0)==0x24);
+  char label[96];snprintf(label,sizeof label,"invalid_slot_%s_%c_source_invalidates_both_and_preserves_reused_node",which?"UINT32_MAX":"2",source_card?'B':'A');pass(label);
+ }
+ for(unsigned source_card=0;source_card<2;source_card++){
+  uint32_t origin=source_card?RAW_B:RAW_A,target=source_card?JPG_A:JPG_B;
+  reset(origin,target);add_live(target);do_lookup();nb_start(&runtime);uint32_t movie=runtime.nb_movie;
+  emit_event(23,1-source_card);for(unsigned i=0;i<file_count;i++)if(files[i].path[0]==(source_card?'A':'B'))files[i].exists=0;
+  selected_id=movie;assert(setting_id==movie&&active);run_worker(14,0);
+  assert(!runtime.nb_stage&&!runtime.nb_bit&&runtime.nb_cleanups==1&&*mask_for(origin,0)==4&&runtime.ui_leaving==0);
+  char label[96];snprintf(label,sizeof label,"peer_remove_%c_source_times_out_even_when_4910_still_movie",source_card?'B':'A');pass(label);
+ }
+ reset(RAW_A,JPG_B);add_live(JPG_B);do_lookup();uint32_t epoch=runtime.media_epoch;
+ emit_event(21,0);emit_event(32,1);assert(runtime.media_epoch==epoch&&runtime.cache_valid);pass("unrelated_events_do_not_invalidate_pairing");
+}
+static void run_cases(void) {
+ setvbuf(stdout,0,_IONBF,0);
+ test_playback(RAW_A,JPG_B,"A_RAW_to_B_Live_return_delay_redirect_and_fast_REC");
+ test_playback(RAW_B,JPG_A,"B_RAW_to_A_Live_return_delay_redirect_and_fast_REC");
+ test_playback(JPG_A,JPG_A,"original_A_JPG_direct_Live_preserved");
+ test_playback(JPG_B,JPG_B,"original_B_JPG_direct_Live_preserved");
+ test_playback(RAW_A,JPG_A,"same_card_A_NEF_exact_JPG_member_Live");
+ test_playback(RAW_B,JPG_B,"same_card_B_NEF_exact_JPG_member_Live");
+ test_rejections();test_bridge_guards();test_sync_guards();test_worker_retry();test_pair_lock();test_per_card_lifecycle();
+}
+
+int main(void) {map_native_memory();run_cases();return 0;}

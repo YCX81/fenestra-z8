@@ -1,0 +1,124 @@
+{
+  "version": "composed-private-candidate",
+  "base_sha256": "aa6e94e0042fb445c666de73c0f6b9e7e569010b7993a3ac3da0979b174a9433",
+  "old_rebuild_sha256": "736aa971ba99a0aef3e5d155fd9db3f7c028adb09f9576761407502d2ac36e70",
+  "rebuilt_sha256": "3f460330336e1102ed89190323544acdee9d8330497e9ef94f735b1d541bb11c",
+  "sha256": "db0c847b333f0a6e07222f2207435e9bf340ce1d544704f6d801ec3ecc1088e5",
+  "build_id": "0x59fc29e8",
+  "bytes": 81807709,
+  "splice_runs": 7611,
+  "physical_camera_verified": false,
+  "source_build": "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/build",
+  "live_payload_bytes": 109928,
+  "playback_payload_bytes": 36776,
+  "shutter_bytes": 3116,
+  "live_extra_bytes": 3548,
+  "extra_overlays": [
+    {
+      "address": "0x401fd218",
+      "size": 3548,
+      "purpose": "Live extra code"
+    },
+    {
+      "address": "0x4019f020",
+      "size": 3116,
+      "purpose": "Live shutter bank in bounded playback region"
+    },
+    {
+      "address": "0x40f6cff0",
+      "size": 4,
+      "purpose": "passive shutter prepare"
+    },
+    {
+      "address": "0x40f6e174",
+      "size": 4,
+      "purpose": "passive shutter fire"
+    }
+  ],
+  "evf_core_changes": [
+    {
+      "address": "0x401a38c8",
+      "old": "e8031faa",
+      "new": "cbddff17"
+    },
+    {
+      "address": "0x401a337c",
+      "old": "a80e41b9",
+      "new": "e00315aa"
+    },
+    {
+      "address": "0x401a3380",
+      "old": "1f050071",
+      "new": "e2deff97"
+    },
+    {
+      "address": "0x401a3384",
+      "old": "21230054",
+      "new": "20230034"
+    },
+    {
+      "address": "0x401deec0",
+      "old": "d409344000000000",
+      "new": "c4af194000000000"
+    },
+    {
+      "address": "0x401deec8",
+      "old": "a409344000000000",
+      "new": "dcaf194000000000"
+    },
+    {
+      "address": "0x401deed8",
+      "old": "640d344000000000",
+      "new": "48af194000000000"
+    }
+  ],
+  "portrait_records": 419,
+  "portrait_changed_bytes": 3518,
+  "v52_composition_sha256": "bed8bdc14e6d5c502178de7762c1549c24d0deb124b86883613f6debe026a022",
+  "portrait53_records": 77,
+  "overlays53": [
+    {
+      "address": "0x40e30e3c",
+      "size": 4,
+      "purpose": "Original SFX owner dispatch with reviewed microphone handoff",
+      "expected": "3c0f0014",
+      "replacement": "ddb9cd17"
+    },
+    {
+      "address": "0x401def00",
+      "size": 8,
+      "purpose": "Passive EVF submit observation; no scanout change",
+      "expected": "d8fe3e4000000000",
+      "replacement": "08db1f4000000000"
+    },
+    {
+      "address": "0x4019ff40",
+      "size": 128,
+      "purpose": "Bounded native Live crop_fix",
+      "expected": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "replacement": "ea2fbfa90ac083523f010a6ba10200540a1c82521f010a6b410200540a0840b90a0200350a0440b95f050071a80100540a0200584b0d40b90a8080524a55a0727f010a6ba00000540aa080528a6aa0727f010a6b61000054693d0012687d1053ea2fc1a8692a00799000005800021fd6f8085f040a0000000c7dcf4000000000"
+    },
+    {
+      "address": "0x40cf7d08",
+      "size": 4,
+      "purpose": "Native crop_fix entry",
+      "expected": "692a0079",
+      "replacement": "8ea0d217"
+    },
+    {
+      "address": "0x4019ffc0",
+      "size": 64,
+      "purpose": "Bounded native Live aspect_fix",
+      "expected": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "replacement": "620100351f001071810000543fa80a71c0000054060000141f001471810000543f500d7141000054220080527000005800021fd600000000f008974000000000"
+    },
+    {
+      "address": "0x407138d0",
+      "size": 4,
+      "purpose": "Native aspect_fix entry",
+      "expected": "08740914",
+      "replacement": "bc31ea17"
+    }
+  ],
+  "scope": "REC audio routing and bounded buffers; microphone startup and shutter handoff; aspect fit; portrait recording layout; native crop/aspect; passive EVF diagnostic. Native REC bridge and physical EVF icon fix not implemented."
+}

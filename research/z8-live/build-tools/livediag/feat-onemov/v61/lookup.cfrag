@@ -1,0 +1,45 @@
+/* The displayed photo remains native_path/current_id. The validated Live
+ * owner is manifest.native_path and may be a JPEG on the other card. */
+static int live_manifest_for(PbRuntime*r,const char*photo){
+ uint8_t text[256];char p[64];uint32_t n=0;uint64_t size=0;
+ if(live_sync_file(p,photo,LIVE_FILE_MAN)||readfile(p,text,sizeof(text),&n,0)||
+    live_manifest_parse(text,n,&r->manifest)||memcmp(r->manifest.native_path,photo,30)||
+    readfile(photo,0,0,0,&size)||size!=r->manifest.native_size)return 0;
+ r->photo_size=size;return 1;
+}
+static int live_jpeg_for(PbRuntime*r,uint32_t id){
+ char photo[64]={0};
+ /* Unlike 407b95e4 (group primary), this ref retains precise format 0. */
+ void *ref=FN(0x4085a8e0,void*(*)(uint32_t))(id&~15u);
+ if(!ref)return 0;
+ const char *path=FN(0x4085c0d0,const char*(*)(void*))(ref);
+ if(path)memcpy(photo,path,30);
+ FN(0x4085aa7c,void(*)(void*))(ref);
+ return !memcmp(photo+25,".JPG",5)&&live_manifest_for(r,photo);
+}
+static void lookup(PbRuntime*r,uint32_t id){
+ uint32_t epoch=LOAD(&r->media_epoch);
+ r->lookup_us=now_us();r->cache_valid=0;r->lookup_epoch=epoch;r->cached_id=id;r->lookup_count++;
+ r->nb_w=r->nb_h=0;r->native_path[0]=0;r->directory[0]=0;
+ if(FN(0x407b95e4,uint32_t(*)(uint32_t,char*))(id,r->native_path)||
+    live_sync_directory(r->directory,r->native_path)){r->lookup_error=1;return;}
+ if(!live_manifest_for(r,r->native_path)){
+  if(memcmp(r->native_path+25,".NEF",5)){r->lookup_error=2;return;}
+  if(!live_jpeg_for(r,id)){
+   /* Same query as Nikon's "Jump to copy on other card", not a card-bit
+    * toggle or filename guess. No DCF/journal/GUI lock is held here. */
+   uint64_t other=0;
+   uint32_t queried=FN(0x403fb59c,uint32_t(*)(uint32_t,uint32_t,uint64_t*))(id,2u,&other);
+   uint32_t peer=(uint32_t)other;
+   if(!(queried&1u)||!peer||(other>>32&2u)||(peer>>29&3u)>1u||
+      (peer>>29&3u)==(id>>29&3u)||!live_jpeg_for(r,peer)){
+    r->lookup_error=2;return;
+   }
+  }
+ }
+ mov_size(r);
+ if(!r->nb_w){r->lookup_error=3;return;}
+ if(epoch!=LOAD(&r->media_epoch)||LOAD(&r->shutdown)){r->lookup_error=4;return;}
+ r->lookup_epoch=epoch;r->lookup_error=0;r->cache_valid=1;
+}
+

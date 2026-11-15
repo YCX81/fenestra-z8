@@ -1,0 +1,79 @@
+{
+  "status": "FAIL",
+  "source": "/path/to/Nikon/build-tools/livediag/feat-onemov/v61/work/pb-fix37/runtime.c",
+  "runtime_sha256": "f97554f555bcbe5d2e44d9b18caca1caf605bbc605d993f56240b422d0a93f60",
+  "header_sha256": "19a0d187855baf8435b1c34a8e85e6d882ef6e048f3dd913e211449996be299e",
+  "sync_sha256": "f2f3298ffb3d498fa0cf2f71c1f1e4320ace9a2159c836f878f7949df8eb96c8",
+  "extracted_ranges": [
+    {
+      "start": "static uint64_t pb_close_gate(",
+      "first_line": 40,
+      "sha256": "b43360ca471d81c1b2345bdb326f2f745ec02b2a2a1180a2f03271e32ff1f5f8"
+    },
+    {
+      "start": "static int lock(",
+      "first_line": 55,
+      "sha256": "d2e6487c50e6581f1ab5b75b3335b392fdec46279998bd8c6f6b26009953e0cb"
+    },
+    {
+      "start": "static void hide(",
+      "first_line": 74,
+      "sha256": "137786786ecae8ef796117fb3a2f7b6e588a8bdd5167521698981eab4fa9ffae"
+    },
+    {
+      "start": "/* ---- one-MOV bridge ---- */",
+      "first_line": 119,
+      "sha256": "42e5c64d10c7b4c9df67ac5f75a69c3d11645f976cff890fda3d470f9a6202fe"
+    },
+    {
+      "start": "void pb_ui_leave(",
+      "first_line": 240,
+      "sha256": "af0eeef04d8761e82650739baecc77fa84acc922e9a7716124a890c0c92accc4"
+    },
+    {
+      "start": "static uint32_t be32(",
+      "first_line": 257,
+      "sha256": "cd874e8127e8333ea20b0c9e7c3761b219c91cfc9fff88e04c48f0498124dc61"
+    },
+    {
+      "start": "static void worker(",
+      "first_line": 351,
+      "sha256": "9ab39d213f94898e06956345ed79fff0da251a50f30a8b978b4020fd7af8d621"
+    },
+    {
+      "start": "void pb_system_notify(",
+      "first_line": 411,
+      "sha256": "63f3e3cf10f0cacc3d93de6b55444229fcf80d447bf4e7bba12d9544431df257"
+    },
+    {
+      "start": "static void enqueue(",
+      "first_line": 446,
+      "sha256": "2b10272eb1556f81209af4439b486d089326d5c4eeb15670628d6f83d8e43739"
+    }
+  ],
+  "compile_command": [
+    "clang",
+    "-std=c11",
+    "-O0",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wno-unused-parameter",
+    "-Wno-unused-function",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-I",
+    "/path/to/Nikon/build-tools/livediag/feat-onemov/v61/work/pb-fix37",
+    "-I",
+    "/path/to/Nikon/build-tools/livediag/feat-onemov/v61/work/pb-fix37/core-include",
+    "/path/to/Nikon/build-tools/livediag/feat-onemov/v61/tests/harness.generated.c",
+    "/path/to/Nikon/build-tools/livediag/feat-onemov/v61/work/pb-fix37/sync.c",
+    "-o",
+    "/path/to/Nikon/build-tools/livediag/feat-onemov/v61/tests/host-regression"
+  ],
+  "returncode": -6,
+  "stdout": "PASS A_RAW_to_B_Live_return_delay_redirect_and_fast_REC\nPASS B_RAW_to_A_Live_return_delay_redirect_and_fast_REC\nPASS original_A_JPG_direct_Live_preserved\nPASS original_B_JPG_direct_Live_preserved\nPASS RAW_without_native_peer_rejected\nPASS native_peer_query_failure_rejected\nPASS native_peer_invalid_flag_rejected\nPASS same_card_returned_as_peer_rejected\nPASS invalid_card_peer_rejected\nPASS malformed_MAN_rejected\nPASS MAN_native_path_mismatch_rejected\nPASS JPG_size_mismatch_rejected\nPASS missing_MOV_rejected\nPASS malformed_MOV_rejected\nPASS epoch_change_during_lookup_rejected\nPASS shutdown_lookup_rejected\nPASS existing_native_MOV_member_not_borrowed_or_cleared\nPASS missing_DCF_node_rejected\nPASS media_change_before_REC_rejected\nPASS selection_change_before_REC_rejected\n",
+  "stderr": "Assertion failed: (!press_rec()), function test_bridge_guards, file host-regression-tests, line 103.\n",
+  "hardware_access": false,
+  "limitations": "Host Nikon API/file/DCF memory/scheduler/GUI stubs. Actual extracted functions are not rewritten. Does not establish native ref layout, card-selection behavior, decoder success or hardware timing."
+}

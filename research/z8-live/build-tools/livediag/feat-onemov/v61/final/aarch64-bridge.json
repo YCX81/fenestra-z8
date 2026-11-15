@@ -1,0 +1,122 @@
+{
+  "main_sha256": "db0c847b333f0a6e07222f2207435e9bf340ce1d544704f6d801ec3ecc1088e5",
+  "elf_sha256": "6067846bf88713c6e6d56221e93eda2327c1c3d18102da0844328531ed27e405",
+  "layout_sha256": "571b4b566658d27ff32836c0521196e3b2f5da8d06d7d36cb9e93d9efd0ded76",
+  "scope": "Final AArch64 bridge with explicit stock/GUI service stubs; cached pairing is supplied. No dual-card hardware, lookup identity, scheduler or codec acceptance.",
+  "tests": [
+    {
+      "name": "JPG return",
+      "passed": true,
+      "source_id": "0x36237d0",
+      "source": "A:\\DCIM\\108NCZ_8\\DSC_9085.JPG",
+      "target": "A:\\DCIM\\108NCZ_8\\DSC_9085.JPG",
+      "calls": [
+        [
+          "setting",
+          18704,
+          56768469
+        ],
+        [
+          "page",
+          3,
+          1388
+        ],
+        [
+          "open",
+          "A:\\LIVE\\108NCZ_8\\DSC_9085.MOV"
+        ],
+        [
+          "stat",
+          "A:\\LIVE\\108NCZ_8\\DSC_9085.MOV"
+        ],
+        [
+          "setting",
+          18704,
+          56768464
+        ],
+        [
+          "page",
+          3,
+          1362
+        ]
+      ]
+    },
+    {
+      "name": "JPG existing MOV preserved",
+      "passed": true
+    },
+    {
+      "name": "JPG stale epoch rejected",
+      "passed": true
+    },
+    {
+      "name": "JPG stale photo cache rejected",
+      "passed": true
+    },
+    {
+      "name": "JPG other-card removal restores source",
+      "passed": true
+    },
+    {
+      "name": "JPG source-card replacement is not mutated",
+      "passed": true
+    },
+    {
+      "name": "RAW peer return",
+      "passed": true,
+      "source_id": "0x36237d2",
+      "source": "A:\\DCIM\\108NCZ_8\\DSC_9085.NEF",
+      "target": "B:\\DCIM\\108NCZ_8\\DSC_9085.JPG",
+      "calls": [
+        [
+          "setting",
+          18704,
+          56768469
+        ],
+        [
+          "page",
+          3,
+          1388
+        ],
+        [
+          "open",
+          "B:\\LIVE\\108NCZ_8\\DSC_9085.MOV"
+        ],
+        [
+          "stat",
+          "B:\\LIVE\\108NCZ_8\\DSC_9085.MOV"
+        ],
+        [
+          "setting",
+          18704,
+          56768466
+        ],
+        [
+          "page",
+          3,
+          1362
+        ]
+      ]
+    },
+    {
+      "name": "RAW existing MOV preserved",
+      "passed": true
+    },
+    {
+      "name": "RAW stale epoch rejected",
+      "passed": true
+    },
+    {
+      "name": "RAW stale photo cache rejected",
+      "passed": true
+    },
+    {
+      "name": "RAW other-card removal restores source",
+      "passed": true
+    },
+    {
+      "name": "RAW source-card replacement is not mutated",
+      "passed": true
+    }
+  ]
+}

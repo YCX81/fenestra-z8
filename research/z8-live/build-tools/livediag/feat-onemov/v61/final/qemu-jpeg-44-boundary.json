@@ -1,0 +1,157 @@
+{
+  "identity": {
+    "main_sha256": "db0c847b333f0a6e07222f2207435e9bf340ce1d544704f6d801ec3ecc1088e5",
+    "qemu_sha256": "dd4da89142651ca3658b0e70b9d2d0b62ae7eb38e7fe1b3ab1778525260a0762",
+    "card_template": "/path/to/user/fxfix/onemov/pom8f-card.raw",
+    "private_card": "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/qemu-jpeg/private-card.raw",
+    "command": [
+      "/path/to/user/.local/share/nikon-z8-qemu/venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/user/fxfix/onemov/run-nb.py",
+      "--firmware",
+      "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/composed/q/main.main",
+      "--qemu",
+      "/path/to/user/fxfix/v53-tx16-counter-rdw-v3/qemu-system-aarch64",
+      "--raw",
+      "/path/to/Nikon/z8-qemu/.local/input.raw",
+      "--mcu",
+      "/path/to/user/fxfix/exmcu/EX.bi",
+      "--output",
+      "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/qemu-jpeg/run",
+      "--mcu-pins",
+      "G1=1:G13=1:G14=1:G15=1",
+      "--experimental-shared221",
+      "--experimental-boundary-inputs",
+      "--experimental-sensor-source-clock",
+      "--experimental-yuv-channels",
+      "--experimental-movie-selector16",
+      "--card",
+      "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/qemu-jpeg/private-card.raw",
+      "--experimental-playback",
+      "--experimental-movie-playback",
+      "--movie-audio-output",
+      "none",
+      "--contact-replay",
+      "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/qemu-jpeg/contacts.json",
+      "--seconds",
+      "1500",
+      "--virtual-seconds",
+      "44"
+    ],
+    "scope": "Single NVMe model, pre-existing JPEG/MOV/MAN; native entry and return. Not same-boot capture or dual-card hardware."
+  },
+  "checks": {
+    "runner_exit_zero": false,
+    "correct_main_executed": true,
+    "native_checks_passed": false,
+    "no_runner_error": false,
+    "bridge_entered": true,
+    "bridge_returned": true,
+    "bridge_cleaned": true,
+    "open_redirected": true,
+    "temporary_bit_released": true,
+    "original_photo_selected_on_return": true,
+    "movie_page_observed": true,
+    "photo_page_observed": true
+  },
+  "passed": false,
+  "native_checks_count": 236,
+  "native_failed_checks": [
+    {
+      "name": "native run has no unmodeled MMIO",
+      "passed": false
+    }
+  ],
+  "observations": [
+    {
+      "where": 2,
+      "nb_stage": 2,
+      "nb_photo": 52428832,
+      "nb_movie": 52428837,
+      "nb_starts": 1,
+      "nb_returns": 0,
+      "nb_redirects": 0,
+      "nb_w": 1024,
+      "nb_h": 682,
+      "nb_bit": 1,
+      "nb_fail": 0,
+      "nb_cleanups": 0,
+      "nb_from": "A:\\DCIM\\100NCZ_8\\DSC_0001.MOV",
+      "nb_to": "A:\\LIVE\\100NCZ_8\\DSC_0001.MOV"
+    },
+    {
+      "where": 4,
+      "nb_stage": 3,
+      "nb_photo": 52428832,
+      "nb_movie": 52428837,
+      "nb_starts": 1,
+      "nb_returns": 1,
+      "nb_redirects": 2,
+      "nb_w": 1024,
+      "nb_h": 682,
+      "nb_bit": 1,
+      "nb_fail": 0,
+      "nb_cleanups": 0,
+      "nb_from": "A:\\DCIM\\100NCZ_8\\DSC_0001.MOV",
+      "nb_to": "A:\\LIVE\\100NCZ_8\\DSC_0001.MOV"
+    },
+    {
+      "where": 3,
+      "nb_stage": 0,
+      "nb_photo": 52428832,
+      "nb_movie": 52428837,
+      "nb_starts": 1,
+      "nb_returns": 1,
+      "nb_redirects": 2,
+      "nb_w": 1024,
+      "nb_h": 682,
+      "nb_bit": 0,
+      "nb_fail": 0,
+      "nb_cleanups": 0,
+      "nb_from": "A:\\DCIM\\100NCZ_8\\DSC_0001.MOV",
+      "nb_to": "A:\\LIVE\\100NCZ_8\\DSC_0001.MOV"
+    }
+  ],
+  "pages": [
+    [
+      3,
+      1388
+    ],
+    [
+      3,
+      1362
+    ]
+  ],
+  "selected_ids": [
+    0,
+    52428832,
+    52428832,
+    52428837,
+    52428832,
+    52428832,
+    52428832
+  ],
+  "point_counts": {
+    "0x402dd4f8": 161,
+    "0x403ec3a0": 11,
+    "0x40196470": 3,
+    "0x406364d0": 1,
+    "0x403f6fac": 1,
+    "0x4085fcc4": 2,
+    "0x40711328": 1,
+    "0x403ad6a4": 2,
+    "0x403f7244": 1,
+    "0x40cf7d0c": 2,
+    "0x40cfc820": 2,
+    "0x4063b95c": 1,
+    "0x403f6e88": 1,
+    "0x403f6f10": 1
+  },
+  "runner_error": "AssertionError('native run has no unmodeled MMIO')",
+  "decoded_pictures": 91,
+  "unknown_mmio_lines": [
+    "Z8_UNKNOWN cpu=0 pc=0x8201164 write addr=0xd154340 size=4 value=0x1ffffff"
+  ],
+  "interpretation": "Playback bridge entry/decoding/return/cleanup observed; global run failed after entering power-down at the 44s bound. Not an all-checks pass. A fresh 40s regression is separate."
+}

@@ -1,0 +1,10 @@
+{
+  "directory": "/path/to/Nikon/delivery/Z8-v61-Live-RAWPeer-db0c847b",
+  "zip": "/path/to/Nikon/delivery/Z8-v61-Live-RAWPeer-db0c847b.zip",
+  "package_sha256": "9c9654c694d61a8c4b289e49ededdc4048a32155e34e710d7e3637702c8f767d",
+  "zip_sha256": "a922377385702b1cb0b27b40fa4959ec1a5ea47518a04f5fc129441f7a3c24b7",
+  "main_sha256": "db0c847b333f0a6e07222f2207435e9bf340ce1d544704f6d801ec3ecc1088e5",
+  "checksummed_files": 6,
+  "zip_integrity_passed": true,
+  "package_main_crc_and_non_eg_verified_by": "pack61.py independent decode"
+}

@@ -1,0 +1,269 @@
+{
+  "baseline_main_sha256": "641725cec49a702a9440e790a6495b6aef4fb0f7ef5a71b6acbda2719ba47d49",
+  "final_main_sha256": "db0c847b333f0a6e07222f2207435e9bf340ce1d544704f6d801ec3ecc1088e5",
+  "different_bytes": 32935,
+  "unexplained_difference_addresses": [],
+  "allowed_regions": [
+    {
+      "start": "0x40196000",
+      "end_exclusive": "0x4019f020"
+    },
+    {
+      "start": "0x401fe060",
+      "end_exclusive": "0x401fe064"
+    },
+    {
+      "start": "0x41020844",
+      "end_exclusive": "0x41020848"
+    },
+    {
+      "start": "0x40d60ecc",
+      "end_exclusive": "0x40d60ed0"
+    },
+    {
+      "start": "0x4085c424",
+      "end_exclusive": "0x4085c428"
+    },
+    {
+      "start": "0x4085bcb0",
+      "end_exclusive": "0x4085bcb4"
+    },
+    {
+      "start": "0x401cce84",
+      "end_exclusive": "0x401cce88"
+    },
+    {
+      "start": "0x401cd3ec",
+      "end_exclusive": "0x401cd3f0"
+    },
+    {
+      "start": "0x4061a724",
+      "end_exclusive": "0x4061a728"
+    },
+    {
+      "start": "0x40619de4",
+      "end_exclusive": "0x40619de8"
+    },
+    {
+      "start": "0x40618be0",
+      "end_exclusive": "0x40618be4"
+    },
+    {
+      "start": "0x4063b958",
+      "end_exclusive": "0x4063b95c"
+    },
+    {
+      "start": "0x402d9ba0",
+      "end_exclusive": "0x402d9ba4"
+    },
+    {
+      "start": "0x4085fcc0",
+      "end_exclusive": "0x4085fcc4"
+    },
+    {
+      "start": "0x40711334",
+      "end_exclusive": "0x40711338"
+    },
+    {
+      "start": "0x40618b84",
+      "end_exclusive": "0x40618b88"
+    },
+    {
+      "start": "0x401a3380",
+      "end_exclusive": "0x401a3384"
+    },
+    {
+      "start": "0x401a38c8",
+      "end_exclusive": "0x401a38cc"
+    },
+    {
+      "start": "0x401deec0",
+      "end_exclusive": "0x401deec8"
+    },
+    {
+      "start": "0x401deec8",
+      "end_exclusive": "0x401deed0"
+    },
+    {
+      "start": "0x401deed8",
+      "end_exclusive": "0x401deee0"
+    }
+  ],
+  "branches": [
+    {
+      "address": "0x41020844",
+      "target": "0x40196000",
+      "names": [
+        "pb_key_entry"
+      ],
+      "changed": false
+    },
+    {
+      "address": "0x40d60ecc",
+      "target": "0x40196144",
+      "names": [
+        "pb_system_entry"
+      ],
+      "changed": false
+    },
+    {
+      "address": "0x4085c424",
+      "target": "0x40197ec0",
+      "names": [
+        "pb_delete_wrap"
+      ],
+      "changed": true
+    },
+    {
+      "address": "0x4085bcb0",
+      "target": "0x401980d0",
+      "names": [
+        "pb_protect_wrap"
+      ],
+      "changed": true
+    },
+    {
+      "address": "0x401cce84",
+      "target": "0x4019de28",
+      "names": [
+        "pb_settings_menu_page"
+      ],
+      "changed": true
+    },
+    {
+      "address": "0x401cd3ec",
+      "target": "0x4019ded8",
+      "names": [
+        "pb_settings_menu_text"
+      ],
+      "changed": true
+    },
+    {
+      "address": "0x4061a724",
+      "target": "0x4019600c",
+      "names": [
+        "pb_leave_entry"
+      ],
+      "changed": false
+    },
+    {
+      "address": "0x40619de4",
+      "target": "0x401960a8",
+      "names": [
+        "pb_state_entry"
+      ],
+      "changed": false
+    },
+    {
+      "address": "0x40618be0",
+      "target": "0x40196778",
+      "names": [
+        "pb_ui_poll_wrap"
+      ],
+      "changed": true
+    },
+    {
+      "address": "0x4063b958",
+      "target": "0x40196660",
+      "names": [
+        "pb_native_return"
+      ],
+      "changed": true
+    },
+    {
+      "address": "0x402d9ba0",
+      "target": "0x40196474",
+      "names": [
+        "pb_open_wrap"
+      ],
+      "changed": false
+    },
+    {
+      "address": "0x4085fcc0",
+      "target": "0x4019654c",
+      "names": [
+        "pb_stat_wrap"
+      ],
+      "changed": true
+    },
+    {
+      "address": "0x40711334",
+      "target": "0x4019659c",
+      "names": [
+        "pb_info_record"
+      ],
+      "changed": true
+    },
+    {
+      "address": "0x40618b84",
+      "target": "0x40196c9c",
+      "names": [
+        "pb_ui_wait_wrap"
+      ],
+      "changed": true
+    },
+    {
+      "address": "0x401a3380",
+      "target": "0x4019af08",
+      "names": [
+        "pb_output_valid"
+      ],
+      "changed": true
+    },
+    {
+      "address": "0x401a38c8",
+      "target": "0x4019aff4",
+      "names": [
+        "pb_output_initialize_global"
+      ],
+      "changed": true
+    }
+  ],
+  "pointers": [
+    {
+      "address": "0x401deec0",
+      "target": "0x4019afc4",
+      "names": [
+        "pb_output_target_enabled"
+      ]
+    },
+    {
+      "address": "0x401deec8",
+      "target": "0x4019afdc",
+      "names": [
+        "pb_output_target_enable"
+      ]
+    },
+    {
+      "address": "0x401deed8",
+      "target": "0x4019af48",
+      "names": [
+        "pb_output_backing_rectangle"
+      ]
+    }
+  ],
+  "unchanged_payload_regions": [
+    {
+      "name": "shutter",
+      "start": "0x4019f020",
+      "end_exclusive": "0x4019ff40",
+      "identical": true,
+      "sha256": "df7bd6c09905bdc1e74f3c87cc86fe817c9d71ce68b41b48be355bec67f24bef"
+    },
+    {
+      "name": "live_primary",
+      "start": "0x401e2000",
+      "end_exclusive": "0x401fd000",
+      "identical": true,
+      "sha256": "cf309e8f8546bfcbbdcfc0f6c32b30fde6c61135e6551228ce76dc8599c696ff"
+    },
+    {
+      "name": "live_extra",
+      "start": "0x401fd218",
+      "end_exclusive": "0x401fe000",
+      "identical": true,
+      "sha256": "a1aa99bc439d5d2917b12ece26b5a2ef91daed28e042accdf751e97159ff7e6f"
+    }
+  ],
+  "scope": "Every final MAIN byte compared to independently decoded V60 package; all differences confined to PB bank, enumerated PB references, and build ID."
+}

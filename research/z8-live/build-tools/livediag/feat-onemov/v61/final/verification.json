@@ -1,0 +1,72 @@
+{
+  "version": "v61",
+  "status": "offline_verified_test_candidate",
+  "main_sha256": "db0c847b333f0a6e07222f2207435e9bf340ce1d544704f6d801ec3ecc1088e5",
+  "build_id": "0x59fc29e8",
+  "identity": "04.06.p0",
+  "source_runtime_sha256": "2e09c019fa19fbf46da71100b222f4a33b1c10e368157b636290510508ef7dbc",
+  "source_header_sha256": "d619706dc42226c4ee54d3cb1d4887899df0880b45805739dfd4e24725ead929",
+  "baseline_main_sha256": "641725cec49a702a9440e790a6495b6aef4fb0f7ef5a71b6acbda2719ba47d49",
+  "host_tests": {
+    "passed": true,
+    "cases": 92,
+    "sanitizers": [
+      "ASan",
+      "UBSan"
+    ],
+    "source_stable_during_run": true
+  },
+  "aarch64_bridge_tests": {
+    "passed": true,
+    "cases": 12,
+    "scope": "Final AArch64 bridge with explicit stock/GUI service stubs; cached pairing is supplied. No dual-card hardware, lookup identity, scheduler or codec acceptance.",
+    "includes_real_rec_decode": true
+  },
+  "binary_audit": {
+    "passed": true,
+    "different_bytes": 32935,
+    "unexplained_differences": 0
+  },
+  "playback_bytes": 36776,
+  "playback_free": 120,
+  "physical_camera_verified": false,
+  "real_dual_card_verified": false,
+  "qemu_jpeg": {
+    "passed": true,
+    "virtual_seconds": 40,
+    "native_checks": 235,
+    "bridge_checks": 13,
+    "decoded_picture_events": 91,
+    "scope": "Single NVMe model, pre-existing JPEG/MOV/MAN; native entry and return. Not same-boot capture or dual-card hardware."
+  },
+  "qemu_raw_anchor": {
+    "passed": true,
+    "virtual_seconds": 40,
+    "native_checks": 235,
+    "bridge_checks": 18,
+    "scope": "Single NVMe, synthetic NEF/Live pairing; not same-exposure or dual-card proof. RAW-only mode uses direct NEF MAN and does not exercise JPG/peer resolver.",
+    "selected_id_sequence": [
+      "0x03200022",
+      "0x03200025",
+      "0x03200022"
+    ],
+    "actual_DCF_member_masks": [
+      "0x24",
+      "0x24",
+      "0x04"
+    ]
+  },
+  "known_validation_limits": [
+    "Real dual-card hardware not tested; native peer API is disassembly-backed and stub-tested.",
+    "RAW QEMU uses a real NEF and synthetic direct NEF MAN; does not execute a second-card backend.",
+    "The 44-second JPEG run completed playback/return/cleanup, then hit unmodeled standby MMIO 0x0d154340; recorded separately without widening tolerance."
+  ],
+  "evidence_sha256": {
+    "tests/results.json": "dea9e1bbd8117ab9e7f82e54aae58c0ec0eecae1df1e2da338a685d640033cfe",
+    "final/binary-audit.json": "4275ac1623f2edb1124b7c5e1b4b742aa5752304a203c851f8b00b93d26f832f",
+    "final/aarch64-bridge-with-key.json": "6bafe654d49ce4529ac73d4d61b7e1acaf1675330664e310709d46cb28fc7281",
+    "final/qemu-jpeg.json": "68926320a599649cfbdaae10bb3a3484812593ccbdf51c5e96d1f6de7bf1f764",
+    "final/qemu-raw-anchor.json": "e54ac7bdb50ef247b4dd820e0dd72fa66ce1ca4c97332094508dfe07188a0709",
+    "final/qemu-jpeg-44-boundary.json": "553eb422e61e0ae827b50ddf12362c2bb5cc7059e423c066ff7ffbcac64df032"
+  }
+}

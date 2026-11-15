@@ -1,0 +1,221 @@
+{
+  "identity": {
+    "main_sha256": "db0c847b333f0a6e07222f2207435e9bf340ce1d544704f6d801ec3ecc1088e5",
+    "qemu_sha256": "dd4da89142651ca3658b0e70b9d2d0b62ae7eb38e7fe1b3ab1778525260a0762",
+    "observer_sha256": "a95b8264298be10c45a820131399fcc1279dae30cd7e160da2ddbdb065797d22",
+    "observer_source_sha256": "3438c659cf95d7bccf56d620d3b0130e56dadf9dd8c4321bf68207cfea9de0b5",
+    "runner_source_sha256": "cfa03b9d340748968c10419a82e0937d1a36af0133f810b8f25d2f53510cccd7",
+    "qemu_plugin_header_sha256": "335d4e472067e914add598b60d1f7cf0dc029cd48f62f66656d6a88c54d8d9f9",
+    "layout_sha256": "571b4b566658d27ff32836c0521196e3b2f5da8d06d7d36cb9e93d9efd0ded76",
+    "card_template": "/path/to/user/fxfix/onemov/pom8f-card.raw",
+    "private_card": "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/raw-anchor-tests/run-nef-only/private-raw-card.raw",
+    "nef_sha256": "d519a7bb2b7365a9ede204718d8ab80e9d369829d9767d16a40ccdf5649bf3ee",
+    "command": [
+      "/path/to/user/.local/share/nikon-z8-qemu/venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/raw-anchor-tests/run-nef-only/run-nb-raw.py",
+      "--firmware",
+      "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/composed/q/main.main",
+      "--qemu",
+      "/path/to/user/fxfix/v53-tx16-counter-rdw-v3/qemu-system-aarch64",
+      "--raw",
+      "/path/to/Nikon/z8-qemu/.local/input.raw",
+      "--mcu",
+      "/path/to/user/fxfix/exmcu/EX.bi",
+      "--output",
+      "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/raw-anchor-tests/run-nef-only/run",
+      "--mcu-pins",
+      "G1=1:G13=1:G14=1:G15=1",
+      "--experimental-shared221",
+      "--experimental-boundary-inputs",
+      "--experimental-sensor-source-clock",
+      "--experimental-yuv-channels",
+      "--experimental-movie-selector16",
+      "--card",
+      "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/raw-anchor-tests/run-nef-only/private-raw-card.raw",
+      "--experimental-playback",
+      "--experimental-movie-playback",
+      "--movie-audio-output",
+      "none",
+      "--contact-replay",
+      "/path/to/user/fxfix/onemov/v61-raw-peer-final-d9f5/raw-anchor-tests/run-nef-only/contacts.json",
+      "--seconds",
+      "1500",
+      "--virtual-seconds",
+      "40"
+    ],
+    "raw_only": true,
+    "scope": "Single NVMe, synthetic NEF/Live pairing; not same-exposure or dual-card proof. RAW-only mode uses direct NEF MAN and does not exercise JPG/peer resolver."
+  },
+  "checks": {
+    "runner_exit_zero": true,
+    "correct_main_executed": true,
+    "native_checks_passed": true,
+    "no_runner_error": true,
+    "bridge_entered": true,
+    "bridge_returned": true,
+    "bridge_cleaned": true,
+    "actual_selected_path_is_NEF": true,
+    "actual_live_owner_matches_fixture": true,
+    "movie_id_derived_from_raw_anchor": true,
+    "open_redirected": true,
+    "actual_DCF_MOV_bit_present_during_play": true,
+    "actual_DCF_MOV_bit_cleared_after_play": true,
+    "original_RAW_id_selected_on_return": true,
+    "video_decode_calls_observed": true,
+    "NEF_file_opened": true,
+    "movie_page_observed": true,
+    "photo_page_observed": true
+  },
+  "passed": true,
+  "native_checks_count": 235,
+  "native_failed_checks": [],
+  "observations": [
+    {
+      "where": 2,
+      "trace_index": 157,
+      "nb_stage": 2,
+      "nb_photo": 52428834,
+      "nb_movie": 52428837,
+      "nb_starts": 1,
+      "nb_returns": 0,
+      "nb_redirects": 0,
+      "nb_w": 1024,
+      "nb_h": 682,
+      "nb_bit": 1,
+      "nb_fail": 0,
+      "nb_cleanups": 0,
+      "nb_from": "A:\\DCIM\\100NCZ_8\\DSC_0001.MOV",
+      "nb_to": "A:\\LIVE\\100NCZ_8\\DSC_0001.MOV",
+      "selected_native": "A:\\DCIM\\100NCZ_8\\DSC_0001.NEF",
+      "manifest_native": "A:\\DCIM\\100NCZ_8\\DSC_0001.NEF",
+      "dcf_member_mask": 36
+    },
+    {
+      "where": 4,
+      "trace_index": 175,
+      "nb_stage": 3,
+      "nb_photo": 52428834,
+      "nb_movie": 52428837,
+      "nb_starts": 1,
+      "nb_returns": 1,
+      "nb_redirects": 2,
+      "nb_w": 1024,
+      "nb_h": 682,
+      "nb_bit": 1,
+      "nb_fail": 0,
+      "nb_cleanups": 0,
+      "nb_from": "A:\\DCIM\\100NCZ_8\\DSC_0001.MOV",
+      "nb_to": "A:\\LIVE\\100NCZ_8\\DSC_0001.MOV",
+      "selected_native": "A:\\DCIM\\100NCZ_8\\DSC_0001.NEF",
+      "manifest_native": "A:\\DCIM\\100NCZ_8\\DSC_0001.NEF",
+      "dcf_member_mask": 36
+    },
+    {
+      "where": 3,
+      "trace_index": 183,
+      "nb_stage": 0,
+      "nb_photo": 52428834,
+      "nb_movie": 52428837,
+      "nb_starts": 1,
+      "nb_returns": 1,
+      "nb_redirects": 2,
+      "nb_w": 1024,
+      "nb_h": 682,
+      "nb_bit": 0,
+      "nb_fail": 0,
+      "nb_cleanups": 0,
+      "nb_from": "A:\\DCIM\\100NCZ_8\\DSC_0001.MOV",
+      "nb_to": "A:\\LIVE\\100NCZ_8\\DSC_0001.MOV",
+      "selected_native": "A:\\DCIM\\100NCZ_8\\DSC_0001.NEF",
+      "manifest_native": "A:\\DCIM\\100NCZ_8\\DSC_0001.NEF",
+      "dcf_member_mask": 4
+    }
+  ],
+  "pages": [
+    [
+      3,
+      1388
+    ],
+    [
+      3,
+      1362
+    ]
+  ],
+  "selected_ids": [
+    0,
+    52428834,
+    52428834,
+    52428837,
+    52428834,
+    52428834,
+    52428834
+  ],
+  "selected_events": [
+    {
+      "trace_index": 112,
+      "id": 0
+    },
+    {
+      "trace_index": 144,
+      "id": 52428834
+    },
+    {
+      "trace_index": 154,
+      "id": 52428834
+    },
+    {
+      "trace_index": 156,
+      "id": 52428837
+    },
+    {
+      "trace_index": 172,
+      "id": 52428834
+    },
+    {
+      "trace_index": 176,
+      "id": 52428834
+    },
+    {
+      "trace_index": 181,
+      "id": 52428834
+    }
+  ],
+  "opened_paths": [
+    "A:\\DCIM",
+    "A:\\DCIM\\100NCZ_8\\DSC_0001.NEF",
+    "A:\\DCIM\\100NCZ_8\\NC_FLLST.DAT",
+    "A:\\FENESTRA\\boot-z8.flag",
+    "A:\\FENESTRA\\live-z8.0",
+    "A:\\FENESTRA\\live-z8.1",
+    "A:\\FENESTRA\\portrait.wlm",
+    "A:\\FENESTRA\\sc00000001.rec",
+    "A:\\FENESTRA\\slotcard.wlm",
+    "A:\\FENESTRA\\startup-z8.0",
+    "A:\\FENESTRA\\startup-z8.1",
+    "A:\\LIVEDATA\\100NCZ_8\\DSC_0001.MAN",
+    "A:\\LIVEDATA\\LIVELOG.BIN",
+    "A:\\LIVEDATA\\LIVEPREV.BIN",
+    "A:\\LIVE\\100NCZ_8\\DSC_0001.MOV",
+    "A:\\NIKON001.DSC",
+    "A:\\NIKON\\Z_8\\FTPSENDL.bin",
+    "A:\\NIKON\\Z_8\\PCSENDLT.bin",
+    "A:\\NIKON\\Z_8\\SBSENDLT.BIN"
+  ],
+  "point_counts": {
+    "0x402dd4f8": 157,
+    "0x403ec3a0": 11,
+    "0x40196470": 3,
+    "0x406364d0": 1,
+    "0x403f6fac": 1,
+    "0x4085fcc4": 2,
+    "0x40711328": 1,
+    "0x403ad6a4": 2,
+    "0x403f7244": 1,
+    "0x40cf7d0c": 2,
+    "0x40cfc820": 2,
+    "0x4063b95c": 1
+  },
+  "runner_error": null
+}

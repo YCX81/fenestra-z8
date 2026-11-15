@@ -1,0 +1,9 @@
+{
+  "reported_on": "2026-11-15",
+  "version": "v61",
+  "main_sha256": "db0c847b333f0a6e07222f2207435e9bf340ce1d544704f6d801ec3ecc1088e5",
+  "report_source": "user response in this conversation",
+  "question": "RAW优先回放时9085、9089、9090是否出现Live标志，按REC播放后回到原RAW",
+  "user_answer": "已恢复标志，播放和返回都正常",
+  "scope": "User-reported hardware confirmation of these RAW Live playback behaviors only; not full hardware certification."
+}

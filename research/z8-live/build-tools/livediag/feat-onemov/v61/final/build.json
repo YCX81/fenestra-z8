@@ -1,0 +1,40 @@
+{
+  "schema": "v53.build/v1",
+  "seed_sha256": "50f2a5b22217710c6f35faf1e4639ef675f2738184525be0190f36bcc42cb36b",
+  "compiler": "Ubuntu clang version 21.1.8 (6ubuntu1)",
+  "stages": [
+    {
+      "stage": "playback",
+      "file": "pb/live-fixed.emulation-only.main",
+      "bytes": 81807709,
+      "sha256": "0b9078e1b60d429464f7b7c6589cb1233705709e082ce200def79b90164c9877"
+    },
+    {
+      "stage": "usb",
+      "file": "usb/usb.main",
+      "bytes": 81807709,
+      "sha256": "24adde452cf2a43fc65be85766cc0d4bd782290ed131df0382afd18492b1f066"
+    },
+    {
+      "stage": "pool",
+      "file": "pool/pool.main",
+      "bytes": 81807709,
+      "sha256": "97bfdd1f658dc4d0cbb449e2bc8977b21677e04b243e759e76a0c129430b5d6c"
+    },
+    {
+      "stage": "main",
+      "file": "v37.main",
+      "bytes": 81807709,
+      "sha256": "3f460330336e1102ed89190323544acdee9d8330497e9ef94f735b1d541bb11c"
+    }
+  ],
+  "physical_camera_verified": false,
+  "shutter_bytes": 3116,
+  "shutter_free": 756,
+  "live_payload_bytes": 109928,
+  "live_free": 664,
+  "live_extra_bytes": 3548,
+  "live_extra_free": 12,
+  "playback_payload_bytes": 36776,
+  "playback_free": 120
+}

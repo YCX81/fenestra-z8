@@ -1,0 +1,10 @@
+# Exact G gui2 independent media review
+
+PASS for the recorded functional-model run. The same G image remains SHA c1489408…; the saved MOV is 1b817607… . This review reads original saved files and passive observations, without running or changing firmware.
+
+- Decoded audio contains 145745 stereo 48k samples (3.036354 s); neither its beginning nor end is silent. The actual REC DMA export contains every one of the 582980 PCM bytes in order, followed by 185020 zero padding bytes. Thus no source tail is missing.
+- The first 9600 exported bytes are two 4800-byte SFX jobs, each matching the declared original-tone synthetic fixture. Both raw event sequences show native driver completion 42040110, service block-done 4318001b, then ordinary STOP/cleanup and microphone restart. `cancel_posted=0` and errors remain zero throughout. Began-to-DMA-consumed intervals are 35.497 and 34.831 ms in the pinned functional guest clock; these are not physical speaker completion times.
+- The 150.020833-ms zero run comprises the configured 150-ms duck plus one adjacent naturally zero waveform sample. The first SFX microphone gap lies inside that duck. The second zero run is the explicit 4181-sample bridge (87.104167 ms) plus one adjacent zero sample, giving measured 87.125 ms. Old/new PCM indices and resumed backend anchor agree with those boundaries. There is no earlier 1.57-second artificial silent tail.
+- The recorded run passes 3210 assertions, presents 45 frames through index 44, and restores actual audio/video Ready. This does not identify the cause of the earlier G GUI failure; that failed run remains archived separately.
+
+`independent-media-review.json` records identities, event lines, ordered native completion chains, sample boundaries and byte comparisons. `raw-evidence.tar.gz` preserves the exact original MOV, result, PCM export and event logs. `verify_media.py` contains the independent assertions. This validates the declared synthetic resource and strict QEMU DMA model, not camera acoustics or physical speaker output.

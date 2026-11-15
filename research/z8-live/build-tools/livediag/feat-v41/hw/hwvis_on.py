@@ -1,0 +1,15 @@
+import sys,json,struct
+sys.path.insert(0,'.')
+import livectl,z8_audio_probe as zp
+O=json.load(open('push/ndoffs.json'))
+t,p=livectl.connect()
+rd=lambda a,n:int.from_bytes(bytes(p.debug.read(a,n)),'little')
+call=lambda a,*x:zp.native_call(p,a,x,10000)
+root=rd(0xa032b50c8+16,8);state=rd(root+663*96+80,8);u=rd(state+2528,8)
+if rd(u,4)==0x47525846:u=rd(u+8,8)
+P=O['profile'];fp=lambda k:rd(P+O[k],8)
+tg=struct.unpack('<3I',bytes(p.debug.read(u+O['d_target'],12)))
+print('profile fns',hex(fp('p_target_enabled')),hex(fp('p_target_enable')))
+print('before',call(fp('p_target_enabled'),*tg)&0xffffffff)
+call(fp('p_target_enable'),tg[0],tg[1],tg[2],1)
+print('after',call(fp('p_target_enabled'),*tg)&0xffffffff)

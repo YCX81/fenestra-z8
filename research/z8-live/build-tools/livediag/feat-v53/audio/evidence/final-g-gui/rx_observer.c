@@ -1,0 +1,127 @@
+#define _GNU_SOURCE
+#include <qemu-plugin.h>
+#include <glib.h>
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include <time.h>
+QEMU_PLUGIN_EXPORT int qemu_plugin_version=QEMU_PLUGIN_VERSION;
+static int low_write[4];static FILE *fp;static GMutex lock;static char* pcm_path;static int captured;
+static struct qemu_plugin_register *ct[4],*cf[4];static int tf[4],ff[4];
+static struct qemu_plugin_register *r0[4],*r1[4];static int f1[4];static int found[4];static GByteArray *b[4],*m[4];
+static void hex(FILE*f,const uint8_t*p,size_t n){for(size_t i=0;i<n;i++)fprintf(f,"%02x",p[i]);}
+static uint64_t read64(unsigned cpu,uint64_t a){uint64_t v=0;if(a>=0xa00000000ull&&a<0xa40000000ull&&qemu_plugin_read_memory_vaddr(a,m[cpu],8))memcpy(&v,m[cpu]->data,8);return v;}
+static uint64_t runtime(unsigned cpu){uint64_t a=read64(cpu,0xa032b50d8ull);a=read64(cpu,a+663*96+80);a=read64(cpu,a+2528);a=read64(cpu,a+16);return a;}
+static void live_snapshot(unsigned cpu){
+ uint64_t a=read64(cpu,0xa032b50d8ull);a=read64(cpu,a+663*96+80);a=read64(cpu,a+2528);a=read64(cpu,a+8);a=read64(cpu,a+8);
+ if(a<0xa00000000ull||a>=0xa40000000ull||!qemu_plugin_read_memory_vaddr(a,m[cpu],23744))return;
+ uint32_t magic;memcpy(&magic,m[cpu]->data,4);if(magic!=0x4c415231)return;
+ fprintf(fp,",\"live\":{");
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+1752,8);fprintf(fp,"\"poll_count\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+1696,8);fprintf(fp,",\"capture.irq_timestamp\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+1688,8);fprintf(fp,",\"capture.irq_seq\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+1620,4);fprintf(fp,",\"capture.phase\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+56,8);fprintf(fp,",\"capture.descriptor\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+12712,8);fprintf(fp,",\"stream.encoded\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+12632,4);fprintf(fp,",\"stream.width\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+9096,8);fprintf(fp,",\"stream.encoder.hw\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+18088,4);fprintf(fp,",\"audio.active\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+18100,4);fprintf(fp,",\"audio.cancelled\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+19096,4);fprintf(fp,",\"audio_z8.phase\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+18680,8);fprintf(fp,",\"audio_z8.go\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+19100,4);fprintf(fp,",\"audio_z8.unmuted\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+19136,4);fprintf(fp,",\"audio_z8.blocks\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+19092,4);fprintf(fp,",\"audio_z8.closed\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+19156,4);fprintf(fp,",\"audio_z8.stop_ack\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+19144,4);fprintf(fp,",\"audio_z8.stop_timeouts\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+19236,4);fprintf(fp,",\"audio_warm\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+19220,4);fprintf(fp,",\"audio_error\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+19224,4);fprintf(fp,",\"audio_starts\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+20076,4);fprintf(fp,",\"crumb_pad\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+23576,4);fprintf(fp,",\"shutter.phase\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+23604,4);fprintf(fp,",\"shutter.captured\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+23608,4);fprintf(fp,",\"shutter.played\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+23612,4);fprintf(fp,",\"shutter.completed\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+23620,4);fprintf(fp,",\"shutter.errors\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+1680,8);fprintf(fp,",\"capture.press_us\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+18040,8);fprintf(fp,",\"audio.first_index\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+18048,8);fprintf(fp,",\"audio.next_index\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+18092,4);fprintf(fp,",\"audio.frozen\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+19120,8);fprintf(fp,",\"audio_z8.anchor_us\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+19128,8);fprintf(fp,",\"audio_z8.frames\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+19168,4);fprintf(fp,",\"audio_z8.resume_bridge\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+23568,8);fprintf(fp,",\"shutter.began\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+23584,4);fprintf(fp,",\"shutter.tone\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+23596,4);fprintf(fp,",\"shutter.wake_cancel\":%llu",(unsigned long long)v);}
+ {uint64_t v=0;memcpy(&v,m[cpu]->data+23600,4);fprintf(fp,",\"shutter.cancel_posted\":%llu",(unsigned long long)v);}
+{uint64_t v=0;memcpy(&v,m[cpu]->data+1740,4);fprintf(fp,",\"shutdown\":%llu",(unsigned long long)v);}
+{uint64_t v=0;memcpy(&v,m[cpu]->data+1744,4);fprintf(fp,",\"card_epoch\":%llu",(unsigned long long)v);}
+{uint64_t v=0;memcpy(&v,m[cpu]->data+1728,4);fprintf(fp,",\"requested\":%llu",(unsigned long long)v);}
+fprintf(fp,"}");uint64_t v=read64(cpu,0xa02d3274c);fprintf(fp,",\"w5_state\":%u",(unsigned)v);}
+static void snapshot(unsigned cpu){
+ live_snapshot(cpu);
+ fprintf(fp,",\"volume_cache\":%u,\"volume_preference\":%u",(unsigned)(read64(cpu,0xa033868d0ull)&65535),(unsigned)(read64(cpu,0xa03d47afcull)&65535));
+ uint64_t r=runtime(cpu);if(r<0xa00000000ull||r>=0xa40000000ull)return;
+ if(!qemu_plugin_read_memory_vaddr(r,m[cpu],9352))return;
+ uint32_t magic=0;memcpy(&magic,m[cpu]->data,4);if(magic!=0x50425549)return;
+ fprintf(fp,",\"pb\":{");
+ const unsigned offs[]={72,76,9300,9296,9332,9328,9340,8224,24,0,4,8,12,16,20,32,48,80,488,496,504,512,516,520,524,528,536,2048,2056,2064,2080,2084,2088,2092,2096,7904,7896,8196,8200,8204,8208,8212,8216,8220,8232,8236,8392,9164,7984,9292,9304,9280,9284,9288,9320,9324,9336,9348,9344};
+ const unsigned widths[]={4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,8,4,4,8,8,4,4,4,4,4,4,8,8,8,8,4,4,4,4,4,4,8,4,4,4,4,4,4,4,4,4,8,4,8,4,8,4,4,4,4,4,4,4,4};
+ const char*names[]={"frames","playing","audio_plays","audio_errors","audio_source_frames","audio_reason","audio_gate","consumed_rec","start_request","magic","bytes","key","media_epoch","shutdown","key_epoch","gate","polls","last_frame","start_us","preview_size","preview_fd","preview.width","preview.height","preview.frames","preview.frame_bytes","preview.duration_us","preview.epoch","display.display.page","display.display.surface","display.display.scene","display.display.attached","display.display.frames","display.display.callbacks","display.display.rectangles","display.display.error","display.display.readers","display.display.gate","render_request","ui_leaving","ui_polls","ui_presented","ui_detached","ui_render_error","rendered_frames","ui_state_calls","ui_state_detached","compose_epoch","decode_errors","scene.data","audio_bytes","audio_t","audio_ack","audio_stage","audio_stop","audio_waits","audio_skipped","audio_pending","audio_request_gate","audio_stop_retries"};
+ for(unsigned i=0;i<59;i++){uint64_t v=0;memcpy(&v,m[cpu]->data+offs[i],widths[i]);fprintf(fp,"%s\"%s\":%llu",i?",":"",names[i],(unsigned long long)v);}fprintf(fp,"}");
+}
+static const char*diagnostic_site(uint64_t pc){switch(pc){case 0x401e2138:return "live_runtime_event";case 0x401e2000:return "live_requested_set";case 0x40196478:return "pb_ui_poll_entry";case 0x40196490:return "pb_ui_after_old_poll";case 0x401965f8:return "pb_ui_before_present";case 0x401965fc:return "pb_ui_after_present";case 0x40196654:return "pb_ui_before_attach";case 0x40196658:return "pb_ui_after_attach";case 0x401966a4:return "pb_ui_before_detach";case 0x401966a8:return "pb_ui_after_detach";case 0x401967b4:return "pb_ui_leave";case 0x4019686c:return "pb_ui_state_notify";default:return 0;}}
+static uint64_t diagnostic_hits[4][2];
+static void hit(unsigned cpu,void *opaque){
+ if(cpu>=4)return;uint64_t a=0,pc=(uintptr_t)opaque;g_byte_array_set_size(b[cpu],0);
+ if(!found[cpu]||!qemu_plugin_read_register(r0[cpu],b[cpu])||b[cpu]->len!=8)return;memcpy(&a,b[cpu]->data,8);
+ if(pc==0x40c7f824){low_write[cpu]=a<=0x16;if(!low_write[cpu])return;}if(pc==0x40c7f944&&!low_write[cpu])return;
+ if(0){
+  uint64_t count=0;g_byte_array_set_size(b[cpu],0);if(f1[cpu]&&qemu_plugin_read_register(r1[cpu],b[cpu])&&b[cpu]->len==8)memcpy(&count,b[cpu]->data,8);
+  g_mutex_lock(&lock);fprintf(fp,"{\"pc\":\"401fb7c0\",\"native_pcm_callback_bytes\":%llu,\"pcm_first64\":\"",(unsigned long long)count);
+  if(count==9600&&qemu_plugin_read_memory_vaddr(a,m[cpu],64))hex(fp,m[cpu]->data,64);fprintf(fp,"\"");snapshot(cpu);fprintf(fp,"}\n");fflush(fp);g_mutex_unlock(&lock);return;
+ }
+ struct timespec ts;clock_gettime(CLOCK_MONOTONIC,&ts);
+ const char*diag=diagnostic_site(pc);
+ if(diag){
+  int emit=1;
+  if(pc==0x40196478||pc==0x40196490){
+   unsigned side=pc==0x40196490;uint64_t n=++diagnostic_hits[cpu][side];
+   uint64_t pr=runtime(cpu);uint32_t playing=0,request=0;
+   if(pr>=0xa00000000ull&&pr<0xa40000000ull&&qemu_plugin_read_memory_vaddr(pr,m[cpu],9352)){
+    memcpy(&playing,m[cpu]->data+76,4);memcpy(&request,m[cpu]->data+8196,4);
+   }
+   emit=playing||request||n<=3||!(n&63u);
+  }
+  if(!emit)return;
+  g_mutex_lock(&lock);fprintf(fp,"{\"diagnostic\":\"%s\",\"pc\":\"%llx\",\"cpu\":%u,\"x0\":\"%llx\",\"host_ns\":%llu",diag,(unsigned long long)pc,cpu,(unsigned long long)a,(unsigned long long)ts.tv_sec*1000000000+ts.tv_nsec);
+  uint64_t vp=read64(cpu,0xa032280c8ull);fprintf(fp,",\"native_view_ptr\":\"%llx\"",(unsigned long long)vp);
+  if(!(vp&7)&&vp>=0xa00000000ull&&vp<=0xa40000000ull-0x110){fprintf(fp,",\"native_view_id\":%u,\"native_view_state\":%u",(unsigned)(read64(cpu,vp+0x54)&0xffffffff),(unsigned)(read64(cpu,vp+0xd0)&0xffffffff));}
+  snapshot(cpu);fprintf(fp,"}\n");fflush(fp);g_mutex_unlock(&lock);return;
+ }
+
+ if(pc==0x40c7fd08||pc==0x40c7fe3c||pc==0x40c7f824||pc==0x40c7f944||pc==0x40c16674||pc==0x40c17954||pc==0x40c17c48||pc==0x40c17cf8){
+  g_mutex_lock(&lock);fprintf(fp,"{\"pc\":\"%llx\",\"x0\":\"%llx\",\"host_ns\":%llu",(unsigned long long)pc,(unsigned long long)a,(unsigned long long)ts.tv_sec*1000000000+ts.tv_nsec);
+  g_byte_array_set_size(b[cpu],0);if(tf[cpu]&&qemu_plugin_read_register(ct[cpu],b[cpu])&&b[cpu]->len==8){uint64_t v=0;memcpy(&v,b[cpu]->data,8);fprintf(fp,",\"cntpct\":%llu",(unsigned long long)v);}
+  g_byte_array_set_size(b[cpu],0);if(ff[cpu]&&qemu_plugin_read_register(cf[cpu],b[cpu])&&b[cpu]->len==8){uint64_t v=0;memcpy(&v,b[cpu]->data,8);fprintf(fp,",\"cntfrq\":%llu",(unsigned long long)v);}
+  if(pc==0x40c16674&&f1[cpu]){g_byte_array_set_size(b[cpu],0);if(qemu_plugin_read_register(r1[cpu],b[cpu])&&b[cpu]->len==8){uint64_t q;memcpy(&q,b[cpu]->data,8);if(q>=0x800000000ull&&q<0xa40000000ull&&qemu_plugin_read_memory_vaddr(q,m[cpu],48)){fprintf(fp,",\"dma_descriptor\":\"");hex(fp,m[cpu]->data,48);fputc('"',fp);}}}
+  if(pc==0x40c7fd08){
+   if(qemu_plugin_read_memory_vaddr(0xa02d4c908ull,m[cpu],0x28)){fprintf(fp,",\"codec_globals\":\"");hex(fp,m[cpu]->data,0x28);fputc('"',fp);}
+   uint64_t gp=read64(cpu,0xa02d4c908ull);if(gp>=0xa00000000ull&&qemu_plugin_read_memory_vaddr(gp,m[cpu],64)){fprintf(fp,",\"gpio_object\":\"");hex(fp,m[cpu]->data,64);fputc('"',fp);}
+   if(qemu_plugin_read_memory_vaddr(0xa028135f0ull,m[cpu],0xe8*3)){fprintf(fp,",\"serial_handles012\":\"");hex(fp,m[cpu]->data,0xe8*3);fputc('"',fp);}
+   if(qemu_plugin_read_memory_vaddr(0xa02808780ull,m[cpu],0x68*3)){fprintf(fp,",\"serial_objects012\":\"");hex(fp,m[cpu]->data,0x68*3);fputc('"',fp);}
+  }
+  snapshot(cpu);fprintf(fp,"}\n");fflush(fp);g_mutex_unlock(&lock);return;
+ }
+ if(a<0x800000000ull||a>=0xa40000000ull)return;
+ if(!qemu_plugin_read_memory_vaddr(a,m[cpu],64))return;uint32_t id;uint64_t p;memcpy(&id,m[cpu]->data+32,4);memcpy(&p,m[cpu]->data+40,8);
+ if(id==0x4318001a&&!captured&&p>=0x800000000ull&&qemu_plugin_read_memory_vaddr(p,m[cpu],16)){uint64_t src;uint32_t n,count;memcpy(&src,m[cpu]->data,8);memcpy(&n,m[cpu]->data+8,4);memcpy(&count,m[cpu]->data+12,4);if(count&&count<=8&&n<=1000000/count)n*=count;else n=0;if(n==960000&&count==5&&qemu_plugin_read_memory_vaddr(src,m[cpu],n)){FILE*pf=fopen(pcm_path,"wx");if(pf){fwrite(m[cpu]->data,1,n,pf);fclose(pf);captured=1;}}}
+ g_mutex_lock(&lock);fprintf(fp,"{\"pc\":\"%llx\",\"cpu\":%u,\"event\":\"%08x\",\"payload\":",(unsigned long long)pc,cpu,id);
+ if(p>=0x800000000ull&&p<0xa40000000ull&&qemu_plugin_read_memory_vaddr(p,m[cpu],64)){fputc('"',fp);hex(fp,m[cpu]->data,64);fputc('"',fp);}else fprintf(fp,"null");
+ if(qemu_plugin_read_memory_vaddr(0xa031f8c4cull,m[cpu],0x110)){fprintf(fp,",\"service_cache\":\"");hex(fp,m[cpu]->data,0x110);fputc('"',fp);}
+ if(qemu_plugin_read_memory_vaddr(0xa02d4cb48ull,m[cpu],0x60)){fprintf(fp,",\"driver\":\"");hex(fp,m[cpu]->data,0x60);fputc('"',fp);}
+ snapshot(cpu);fprintf(fp,"}\n");fflush(fp);g_mutex_unlock(&lock);
+}
+static void trans(qemu_plugin_id_t id,struct qemu_plugin_tb*tb){(void)id;for(size_t i=0;i<qemu_plugin_tb_n_insns(tb);i++){struct qemu_plugin_insn*in=qemu_plugin_tb_get_insn(tb,i);uint64_t pc=qemu_plugin_insn_vaddr(in);if(diagnostic_site(pc)||pc==0x40c7fd08||pc==0x40c7fe3c||pc==0x40c7f824||pc==0x40c7f944||pc==0x40d233d0||pc==0x40c80988||pc==0x40c17954||pc==0x40c17c48||pc==0x40c17cf8||pc==0x40c16674)qemu_plugin_register_vcpu_insn_exec_cb(in,hit,QEMU_PLUGIN_CB_R_REGS,(void*)(uintptr_t)pc);}}
+static void init(qemu_plugin_id_t id,unsigned cpu){(void)id;if(cpu>=4)return;b[cpu]=g_byte_array_new();m[cpu]=g_byte_array_new();GArray*a=qemu_plugin_get_registers();for(unsigned i=0;i<a->len;i++){qemu_plugin_reg_descriptor*d=&g_array_index(a,qemu_plugin_reg_descriptor,i);if(!strcmp(d->name,"x0")){r0[cpu]=d->handle;found[cpu]=1;}if(!strcmp(d->name,"x1")){r1[cpu]=d->handle;f1[cpu]=1;}if(!g_ascii_strcasecmp(d->name,"CNTPCT_EL0")){ct[cpu]=d->handle;tf[cpu]=1;}if(strstr(d->name,"CNT")){fprintf(fp,"{\"register_name\":\"%s\",\"cpu\":%u}\n",d->name,cpu);fflush(fp);}if(!g_ascii_strcasecmp(d->name,"CNTFRQ_EL0")){cf[cpu]=d->handle;ff[cpu]=1;}}g_array_free(a,1);}
+QEMU_PLUGIN_EXPORT int qemu_plugin_install(qemu_plugin_id_t id,const qemu_info_t*info,int argc,char**argv){(void)info;if(argc!=1)return-1;pcm_path=g_strdup_printf("%s.pcm",argv[0]);fp=fopen(argv[0],"wx");if(!fp)return-1;qemu_plugin_register_vcpu_init_cb(id,init);qemu_plugin_register_vcpu_tb_trans_cb(id,trans);return 0;}

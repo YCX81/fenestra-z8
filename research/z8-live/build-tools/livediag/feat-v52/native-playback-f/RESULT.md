@@ -1,0 +1,9 @@
+# v52f exact-MAIN native playback and link audit
+
+The Live Off native reference lane passed: exit 0, 95 decoded pictures, 11 LPCM commands, no failed checks, and its owned QEMU stopped. Frozen loaded MAIN and the ordinary driver SHA both equal `ceefa749d298066d3666c083d4a15a1985939f22ca13ebd8d80244b28963857b`; no SHA-reporting monkeypatch was used.
+
+The independent link audit reproduced final composition from the v51d base plus the compiler delta and explicit overlays. Every allocated ELF section matches final MAIN, published symbols match both build manifests, no undefined symbol remains, and the payload/cave ranges do not overlap. Live is 110544 bytes (48 bytes free), extra 2064 bytes (1496 free), and PB 36848 bytes (4112 free). The fixed dimension/meta caves are byte-for-byte preserved.
+
+This is **not overall F acceptance**. Root's independent core and close lanes failed before initial encoding. The new readiness check treated `0xa02d32788 == 0` as a persistent success condition. Existing Eopen evidence already had this word equal to `0xffffffff` while the same instance was encoding successfully in worker state 4. Original native code at `0x40c3d8a8` writes zero before publishing state 2; a later rejected INIT at `0x40c3b17c..0x40c3b1a0` writes -1 without changing that state. This invalidates the original predicate and the zero-only test fixtures. Portrait's G revision removes this predicate while retaining state/owner/instance checks and the unchanged bounded wait. Its native-code test verifies that HEADER is accepted after that overwrite. G still needs its own exact-image runtime results.
+
+Artifacts: `evidence/summary.json`, `evidence/linked-review.json`, full original result/stderr, loader identity, launch scripts and two screenshots. This QEMU test uses the functional host libavcodec model and recorded external inputs. It does not establish physical Live On resource handoff.

@@ -1,0 +1,1677 @@
+{
+  "version": "v51",
+  "internal_build": "v51d",
+  "main_sha256": "aa6e94e0042fb445c666de73c0f6b9e7e569010b7993a3ac3da0979b174a9433",
+  "release_status": "offline_test_candidate",
+  "core_regression_passed": false,
+  "writer_host_passed": true,
+  "binary_audit_passed": true,
+  "physical_camera_verified": false,
+  "copied_to_physical_card": false,
+  "summary": "Live拍摄和REC预览通过；最终恢复断言失败。原厂4K格式fixture完整播放；实际1024x682片仅解首帧，后续显示模型缺口。不是可刷版验收。",
+  "source_authority": "/path/to/Nikon/build-tools/livediag/feat-v50/integration-writer/v51d-work",
+  "build_directory": "/path/to/user/v37build/v51d",
+  "source_audit": {
+    "result": "passed",
+    "main_sha256": "aa6e94e0042fb445c666de73c0f6b9e7e569010b7993a3ac3da0979b174a9433",
+    "v50_sha256": "4cb5235fc709220f64af5400680653999d2a03b0d5a4821975e0f6a7b2d50977",
+    "v51d_sha256": "736aa971ba99a0aef3e5d155fd9db3f7c028adb09f9576761407502d2ac36e70",
+    "changed_bytes_vs_v50": 86809,
+    "rebuilt_layer_changed_bytes": 86783,
+    "allowed_spans": 31,
+    "payloads": [
+      {
+        "name": "live",
+        "address": "0x401e2000",
+        "bytes": 108136
+      },
+      {
+        "name": "pb",
+        "address": "0x40196000",
+        "bytes": 35272
+      },
+      {
+        "name": "apple_meta",
+        "address": "0x401fd200",
+        "bytes": 24
+      }
+    ],
+    "source_files_compared": 335,
+    "source_changes": [
+      "src-fix37/audio/live_audio_mov.c",
+      "src-fix37/audio/live_audio.h",
+      "src-fix37/codec/preview_reader.c",
+      "src-fix37/codec/live_transaction.c",
+      "src-fix37/codec/preview_writer.c",
+      "src-fix37/codec/preview_writer.h",
+      "src-fix37/codec/preview_reader.h",
+      "src-fix37/codec/live_codec.h",
+      "src-fix37/codec/live_mov.c",
+      "src-fix37/codec/live_w5enc.c",
+      "pb-fix37/runtime.c",
+      "pb-fix37/preview.h"
+    ],
+    "font_retarget_disabled": true,
+    "live_status_preparing": true,
+    "v50_handoff_gain_runtime_byte_exact": true,
+    "portrait_and_size_patches_unchanged": true,
+    "symbols_match_v51d": true,
+    "manifest_replays_full_image": true,
+    "build_id": "0xc3b2068a",
+    "scope": "read-only source and complete MAIN audit; no camera or new simulation"
+  },
+  "portrait_source_commit": "8357634600b1a31a9a74fc0c6d0db704a37a9f9b",
+  "writer_patch_sha256": "3f97c87d32d97581b647ae4725549dd2ffa5ebd76fce59c0434bd1718eb45009",
+  "writer_final_patch_sha256": "94f00a7ae315100c8a3a464e9dabfcc7a0afad77f261ab189971ca01cd2531d1",
+  "host_transactions": {
+    "source": "/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-work",
+    "status": "PASS",
+    "results": [
+      {
+        "name": "audio",
+        "fault": 0,
+        "log": "PASS full writer 95 HEVC, 162287 audio, 46 previews\n",
+        "movie": true
+      },
+      {
+        "name": "frame-fail",
+        "fault": 1,
+        "log": "PASS rollback fault=1\n",
+        "movie": false
+      },
+      {
+        "name": "ncth-write-fail",
+        "fault": 2,
+        "log": "PASS rollback fault=2\n",
+        "movie": false
+      },
+      {
+        "name": "cancel",
+        "fault": 3,
+        "log": "PASS rollback fault=3\n",
+        "movie": false
+      },
+      {
+        "name": "silent",
+        "fault": 4,
+        "log": "PASS full writer 95 HEVC, 0 audio, 46 previews\n",
+        "movie": true
+      },
+      {
+        "name": "audio-read-fallback",
+        "fault": 5,
+        "log": "PASS full writer 95 HEVC, 162287 audio, 46 previews\n",
+        "movie": true
+      },
+      {
+        "name": "audio-trak-fail",
+        "fault": 6,
+        "log": "PASS rollback fault=6\n",
+        "movie": false
+      },
+      {
+        "name": "cancel-after-ncdt",
+        "fault": 7,
+        "log": "PASS rollback fault=7\n",
+        "movie": false
+      },
+      {
+        "name": "metadata-tail-write-fail",
+        "fault": 8,
+        "log": "PASS rollback fault=8\n",
+        "movie": false
+      },
+      {
+        "name": "moov-size-write-fail",
+        "fault": 9,
+        "log": "PASS rollback fault=9\n",
+        "movie": false
+      }
+    ],
+    "files": {
+      "codec/live_mov.c": "7b8e81bf3e9ccbe5d68d63470df0c3f05b36809c912018ae338bb7acebb54254",
+      "codec/live_transaction.c": "e0998b17b609f6468c3b12de10cbf5514dd67a84fa577d03296401cd702dd085",
+      "codec/live_jpeg.c": "4a4fa5cd278b5478f175488b0bd50d3168a55f7d6b7cede843d72c272e6a6fbe",
+      "codec/preview_writer.c": "14d6462636231f480290eb0b7692dd569eef845895e3fafc8acb3f92183d508e",
+      "codec/preview_reader.c": "d8f6a2e138b21e1ce4983fc153952c6703fe9b706de04b775fe3a7a4470f9e10",
+      "audio/live_audio_mov.c": "9843f2cecee3c835e8bceedd3b6b34b9eadafc5d431cb9e0ec1e4a6fffa44b06"
+    }
+  },
+  "stock_parser": {
+    "status": "PASS",
+    "scope": "Actual C 3.11 parser with narrow meta-handler hook; no native UI",
+    "firmware_sha256": "6b0e340bb77026a26842a5e1dfebed5beaf3af9f6ec3f25ebc0224c0c43ad08f",
+    "results": [
+      {
+        "path": "/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-tests/final/host-sample.MOV",
+        "sha256": "84d3f5d81d42c91973467e8a2f0b3a904338f5f7fd421b6dbca33b5e9960bb39",
+        "track_order": [
+          "vide",
+          "soun",
+          "meta"
+        ],
+        "expected": [
+          0,
+          0,
+          110933,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "path": "/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-tests/final/no-audio.MOV",
+        "sha256": "a5a3995963bc4b2ad57280c60927da620344d18ac2876fe4b9e2741a22e05b99",
+        "track_order": [
+          "vide",
+          "meta"
+        ],
+        "expected": [
+          0,
+          0,
+          110933,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "path": "/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-tests/final/audio-fallback.MOV",
+        "sha256": "a5a3995963bc4b2ad57280c60927da620344d18ac2876fe4b9e2741a22e05b99",
+        "track_order": [
+          "vide",
+          "meta"
+        ],
+        "expected": [
+          0,
+          0,
+          110933,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "path": "/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-tests/final/audio-partial-fallback.MOV",
+        "sha256": "5fb78b2d7a6371038728901a30a7804093cac4c9e7843aa6c2bf6f478e98940d",
+        "track_order": [
+          "vide",
+          "meta"
+        ],
+        "expected": [
+          0,
+          0,
+          110933,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "path": "/path/to/Nikon/build-tools/livediag/feat-v50/audio/writer-review/audio-paths/audio.MOV",
+        "sha256": "84d3f5d81d42c91973467e8a2f0b3a904338f5f7fd421b6dbca33b5e9960bb39",
+        "track_order": [
+          "vide",
+          "soun",
+          "meta"
+        ],
+        "expected": [
+          0,
+          0,
+          110933,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "path": "/path/to/Nikon/build-tools/livediag/feat-v50/audio/writer-review/audio-paths/silent.MOV",
+        "sha256": "a5a3995963bc4b2ad57280c60927da620344d18ac2876fe4b9e2741a22e05b99",
+        "track_order": [
+          "vide",
+          "meta"
+        ],
+        "expected": [
+          0,
+          0,
+          110933,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "path": "/path/to/Nikon/build-tools/livediag/feat-v50/audio/writer-review/audio-paths/audio-read-fallback.MOV",
+        "sha256": "5fb78b2d7a6371038728901a30a7804093cac4c9e7843aa6c2bf6f478e98940d",
+        "track_order": [
+          "vide",
+          "meta"
+        ],
+        "expected": [
+          0,
+          0,
+          110933,
+          0,
+          1,
+          0
+        ]
+      }
+    ],
+    "log": "/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-tests/final/host-sample.MOV: udta=110933 outer=1 status=0 images=[(160, 120, 0), (1280, 720, 1), (640, 360, 2), (1920, 1080, 3)]\n/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-tests/final/no-audio.MOV: udta=110933 outer=1 status=0 images=[(160, 120, 0), (1280, 720, 1), (640, 360, 2), (1920, 1080, 3)]\n/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-tests/final/audio-fallback.MOV: udta=110933 outer=1 status=0 images=[(160, 120, 0), (1280, 720, 1), (640, 360, 2), (1920, 1080, 3)]\n/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-tests/final/audio-partial-fallback.MOV: udta=110933 outer=1 status=0 images=[(160, 120, 0), (1280, 720, 1), (640, 360, 2), (1920, 1080, 3)]\n/path/to/Nikon/build-tools/livediag/feat-v50/audio/writer-review/audio-paths/audio.MOV: udta=110933 outer=1 status=0 images=[(160, 120, 0), (1280, 720, 1), (640, 360, 2), (1920, 1080, 3)]\n/path/to/Nikon/build-tools/livediag/feat-v50/audio/writer-review/audio-paths/silent.MOV: udta=110933 outer=1 status=0 images=[(160, 120, 0), (1280, 720, 1), (640, 360, 2), (1920, 1080, 3)]\n/path/to/Nikon/build-tools/livediag/feat-v50/audio/writer-review/audio-paths/audio-read-fallback.MOV: udta=110933 outer=1 status=0 images=[(160, 120, 0), (1280, 720, 1), (640, 360, 2), (1920, 1080, 3)]\n/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-tests/final/host-sample.MOV: [0, 0, 110933, 0, 1, 0]\n/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-tests/final/no-audio.MOV: [0, 0, 110933, 0, 1, 0]\n/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-tests/final/audio-fallback.MOV: [0, 0, 110933, 0, 1, 0]\n/path/to/Nikon/build-tools/livediag/feat-v50/writer/nctg-tests/final/audio-partial-fallback.MOV: [0, 0, 110933, 0, 1, 0]\n/path/to/Nikon/build-tools/livediag/feat-v50/audio/writer-review/audio-paths/audio.MOV: [0, 0, 110933, 0, 1, 0]\n/path/to/Nikon/build-tools/livediag/feat-v50/audio/writer-review/audio-paths/silent.MOV: [0, 0, 110933, 0, 1, 0]\n/path/to/Nikon/build-tools/livediag/feat-v50/audio/writer-review/audio-paths/audio-read-fallback.MOV: [0, 0, 110933, 0, 1, 0]\n"
+  },
+  "audio_integrity": {
+    "status": "PASS",
+    "results": [
+      {
+        "name": "audio",
+        "nctg_audio": true,
+        "lpcm_v2_le24": true,
+        "source_pcm_bit_exact": true,
+        "lvjb": true,
+        "apple_marker": true
+      },
+      {
+        "name": "silent",
+        "nctg_audio": false,
+        "lpcm_v2_le24": false,
+        "source_pcm_bit_exact": false,
+        "lvjb": false,
+        "apple_marker": true
+      },
+      {
+        "name": "audio-read-fallback",
+        "nctg_audio": false,
+        "lpcm_v2_le24": false,
+        "source_pcm_bit_exact": false,
+        "lvjb": false,
+        "apple_marker": true
+      }
+    ]
+  },
+  "pb_audio": {
+    "passed": true,
+    "runtime_sha256": "73871a5f09dca7b1a8e1e43032a0c98329a31614460d5c60bdd6fe7488baf222",
+    "body_sha256": "036aa5fa0c6b9d752fb35d7b3679d22c0cbbb2cf6fc52f03615410ab50ee2e73",
+    "stdout": "PASS LVJA/LVJB exact stereo PCM, read chunk boundaries, 2.4s cap, zero padding, guard bytes, read failure, truncated bounds\n",
+    "stderr": "",
+    "host_adaptations": [
+      "mock device address range",
+      "omit ARM cache maintenance"
+    ]
+  },
+  "final_live_capture": {
+    "run": "/path/to/Nikon/build-tools/livediag/feat-v50/audio/qemu-v51d/runs/v51d-final-live",
+    "exit_code": 0,
+    "finished": true,
+    "runtime": {
+      "stream.encoded": 911,
+      "transaction_count": 1,
+      "transaction_error": 0,
+      "audio_tracks": 0,
+      "audio_skipped": 1,
+      "audio_error": 0,
+      "size": 23184
+    },
+    "movie_sha256": "5bbc309ce4363e4d0040a2de0add71ddafca0d386cdf3324b7c298979da006d7",
+    "early_final_identical": true,
+    "decode": {
+      "ffmpeg_exit": 0,
+      "ffmpeg_error_log_bytes": 0,
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "codec_type": "video",
+          "width": 1024,
+          "height": 682,
+          "pix_fmt": "yuv420p",
+          "duration": "3.298696",
+          "nb_frames": "77",
+          "nb_read_frames": "77"
+        },
+        {
+          "codec_name": null,
+          "codec_type": "data",
+          "width": null,
+          "height": null,
+          "pix_fmt": null,
+          "duration": "0.033875",
+          "nb_frames": "1",
+          "nb_read_frames": null
+        }
+      ]
+    },
+    "container": {
+      "status": "PASS",
+      "movie_sha256": "5bbc309ce4363e4d0040a2de0add71ddafca0d386cdf3324b7c298979da006d7",
+      "bytes": 912118,
+      "niko": true,
+      "video_frames": 77,
+      "gop_chunks": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        2
+      ],
+      "aud_per_frame": 1,
+      "apple_uuid": "48DC1B01-5BAA-9824-AB8D-F80CBDBAB995",
+      "apple_still_image_time": true,
+      "ncdt_jpegs": [
+        {
+          "tag": "NCTH",
+          "width": 160,
+          "height": 120,
+          "bytes": 2285,
+          "sampling": [
+            33,
+            17,
+            17
+          ]
+        },
+        {
+          "tag": "NCVW",
+          "width": 1280,
+          "height": 720,
+          "bytes": 31668,
+          "sampling": [
+            33,
+            17,
+            17
+          ]
+        },
+        {
+          "tag": "NCM1",
+          "width": 640,
+          "height": 360,
+          "bytes": 11156,
+          "sampling": [
+            33,
+            17,
+            17
+          ]
+        },
+        {
+          "tag": "NCM2",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 62714,
+          "sampling": [
+            33,
+            17,
+            17
+          ]
+        }
+      ],
+      "audio_track": false,
+      "audio_chunks": [],
+      "physical_camera_verified": false
+    },
+    "physical_camera_verified": false
+  },
+  "final_rec_recovery": [
+    {
+      "name": "v51d-final-pb-recovery",
+      "complete": true,
+      "error": "AssertionError('No new Live frames/encoding after half-press return')",
+      "owned_qemu_stopped": true,
+      "input_unchanged": true,
+      "live_a": {
+        "mode": "pb",
+        "prepared_stock_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+        "executed_main_sha256": "aa6e94e0042fb445c666de73c0f6b9e7e569010b7993a3ac3da0979b174a9433",
+        "executed_main": "/path/to/user/fxfix/v51d/q/main.main",
+        "flashable": false
+      },
+      "check_failures": [],
+      "checkpoint_count": 139,
+      "rec_owned_expectation": {
+        "before": 0,
+        "expected_hex": "0002000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "body_hex": "01000000010000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": 1
+      },
+      "recovery_before": {
+        "irq": 1584,
+        "encoded": 413,
+        "preview_frames": 38
+      },
+      "recovery_after": null,
+      "trace_complete": false,
+      "maxima": {
+        "full_presses": 1,
+        "writer_returns": 1,
+        "capture.accepted_presses": 1,
+        "stream.encoded": 413,
+        "transaction_count": 1,
+        "transaction_error": 0
+      },
+      "preview_max_frames": 38,
+      "preview_max_lookup_error": 0,
+      "last_preview": {
+        "started": 1,
+        "current_id": 0,
+        "cache_valid": 1,
+        "lookup_count": 1,
+        "lookup_error": 0,
+        "frames": 38,
+        "playing": 0,
+        "native_path": "A:\\DCIM\\100NCZ_8\\DSC_0001.JPG",
+        "directory": "A:\\LIVEDATA\\100NCZ_8\\DSC_0001",
+        "consumed_rec": 1,
+        "error": 0
+      },
+      "files": [
+        {
+          "path": "DCIM/100NCZ_8/DSC_0001.JPG",
+          "bytes": 1169905,
+          "sha256": "79f0dd6cbab0eb0ad72acb720fd14376258763506c65cfd3e1a112467cddda1b"
+        },
+        {
+          "path": "DCIM/100NCZ_8/DSC_0001.JPG.extraction.json",
+          "bytes": 684,
+          "sha256": "ece241f2758f4062cd7397fbc853c022b8fc784a10c29c92bb76bb15b121b50d"
+        },
+        {
+          "path": "DCIM/100NCZ_8/NC_FLLST.DAT",
+          "bytes": 122880,
+          "sha256": "f0b2e7c07085aec6df6d834c8d497c944e7b4f7ec272f9d46746bdb31892f9d5"
+        },
+        {
+          "path": "DCIM/100NCZ_8/NC_FLLST.DAT.extraction.json",
+          "bytes": 681,
+          "sha256": "bae7ece4ff27a9e3fb4639a457ec101ef39ec2e1fc51e59bdf1a324cee08e338"
+        },
+        {
+          "path": "FENESTRA/LIVE-Z8.1",
+          "bytes": 64,
+          "sha256": "8245f7c07f525d3f88ddbc5904d653cb3bbe58d92e4f97e0031e9752974c795d"
+        },
+        {
+          "path": "FENESTRA/LIVE-Z8.1.extraction.json",
+          "bytes": 653,
+          "sha256": "c37c38cd043294b2c4119fb508441d74b9ae829043a90384431cfb666974dcd3"
+        },
+        {
+          "path": "LIVE/100NCZ_8/DSC_0001.JPG",
+          "bytes": 1169905,
+          "sha256": "76b68ee8d4f91149c5139239350d8391071ec8b507152cc54b2564647b609425"
+        },
+        {
+          "path": "LIVE/100NCZ_8/DSC_0001.JPG.extraction.json",
+          "bytes": 684,
+          "sha256": "eb455b567984875078420de1ae41772c3a6aba4878d5c01d88b1d9105aa61b84"
+        },
+        {
+          "path": "LIVE/100NCZ_8/DSC_0001.MOV",
+          "bytes": 916997,
+          "sha256": "fdba7a341696ef9f7164c23dc00f4ef431806dd7b158fecc8b1f62ee1fed5ef9"
+        },
+        {
+          "path": "LIVE/100NCZ_8/DSC_0001.MOV.extraction.json",
+          "bytes": 681,
+          "sha256": "debdfe10a936d39c391a897226e499026bab5f58a767030a2afcf50090c4f663"
+        },
+        {
+          "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN",
+          "bytes": 112,
+          "sha256": "e157305197b9a76235eeedff103639c34b0e9953267a70f4bb3bd169c29fe8da"
+        },
+        {
+          "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN.extraction.json",
+          "bytes": 680,
+          "sha256": "4ddc37fa4d15d779b996d61306356a624d052daef22d5ab61f9b433d54819976"
+        },
+        {
+          "path": "LIVEDATA/LIVELOG.BIN",
+          "bytes": 3872,
+          "sha256": "f149db2a08557623d50e405bb6f8f11b7da70658e5fb042c7ef53c5fe323129e"
+        },
+        {
+          "path": "LIVEDATA/LIVELOG.BIN.extraction.json",
+          "bytes": 663,
+          "sha256": "990733846c4190e3c81747f6fd99caa2e8c727f5a07af9a4ec884f5b81e7f1ef"
+        },
+        {
+          "path": "NIKON001.DSC",
+          "bytes": 512,
+          "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560"
+        },
+        {
+          "path": "NIKON001.DSC.extraction.json",
+          "bytes": 643,
+          "sha256": "c02a3fdde60d20473ef9ceeb662fc435e78d96747117c2672b8bb18ad6f2c17b"
+        }
+      ]
+    }
+  ],
+  "stock_error": [
+    {
+      "name": "v51d-final-pb-recovery",
+      "error": "AssertionError('No new Live frames/encoding after half-press return')",
+      "trace_complete": false,
+      "firmware_sha256": "aa6e94e0042fb445c666de73c0f6b9e7e569010b7993a3ac3da0979b174a9433",
+      "qemu_sha256": "5ccbfc7e051a78dd24176aec98b3ab767709bc078dd3e179923c74b2f50a2ac2",
+      "driver_sha256": "0beabc10e20e5cc3786cd4d2af57fde71672ce6f55a40a8e5c60344a07623785",
+      "observer": {
+        "sha256": "23fd2779f0a33edf91cf5e108ea9eec41b340297f1063601b3f34971a629eb3c",
+        "head": 7165,
+        "overwritten": 0,
+        "reg_errors": 0
+      },
+      "events": [
+        {
+          "seq": 7137,
+          "host_ns": 361513262898630,
+          "after_checkpoint": "step-114-pb-enter-release",
+          "before_checkpoint": "step-115-pb-view",
+          "pc": "0x40ece93c",
+          "args": [
+            "0x40",
+            "0x0",
+            "0x1",
+            "0x1"
+          ],
+          "lr": "0x40f53390",
+          "cpu": 0,
+          "kind": 200
+        },
+        {
+          "seq": 7138,
+          "host_ns": 361513263102855,
+          "after_checkpoint": "step-114-pb-enter-release",
+          "before_checkpoint": "step-115-pb-view",
+          "pc": "0x41018a80",
+          "args": [
+            "0xa2",
+            "0x0",
+            "0x1",
+            "0xa06c54ca0"
+          ],
+          "lr": "0x40eced94",
+          "cpu": 0,
+          "kind": 201
+        }
+      ],
+      "history": {
+        "address": "0xa03e04f44",
+        "hex": "a200000070ed5c320100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "layout": "five 32-byte ErrorInformationService history records; raw evidence"
+      },
+      "before": {
+        "irq": 1584,
+        "encoded": 413,
+        "preview_frames": 38
+      },
+      "after": null,
+      "runtime": {
+        "capture.irq_seq": 1584,
+        "stream.encoded": 413,
+        "transaction_count": 1,
+        "stream.error": 0
+      },
+      "inputs_unchanged": true,
+      "owned_qemu_stopped": true
+    }
+  ],
+  "native_tests": [
+    {
+      "qemu_sha256": "a88a921c9759deced131e372b2c9881b1f648690cfa306b51f3814b0d7961e5d",
+      "raw_sha256": "50f30107b952e0f0f2469f3546d8e485a311e0069de4eabdd7ccd127b773370d",
+      "mcu_sha256": "8ce129fa3689d1d619f25ba1c44a3a9f1964c76fe77b95adeb4ea912463c8c63",
+      "cpu_register_redirection": false,
+      "ram_patches": [],
+      "error": null,
+      "owned_qemu_stopped": true,
+      "driver_reported_firmware_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+      "main_loader": "loader,file=/path/to/user/fxfix/v51c/q/main.main,addr=0x40160000,force-raw=on,cpu-num=0",
+      "loaded_main_file_sha256": "04f530dda16763ffbe02df893f9e9ef65cffe43e0bb8dbf27e15e3230a10b4a8",
+      "firmware_hash_scope": "run_native_any wrapper reports the stock hash; actual MAIN is the QEMU loader path with separately verified file hash; candidates were immutable throughout their runs",
+      "name": "cwriter-422",
+      "driver_exit": 0,
+      "sample_sha256": "ff85458cce6688e7034a4399e5dacfaa9cc95cfb13e47a9ba80a024dd8229074",
+      "sample_bytes": 2370613,
+      "decode_frames": 95,
+      "lpcm_jobs": 11,
+      "unknown_accesses": [],
+      "decoder_evidence": [
+        "Z8_WAVE5_DEC_SEQUENCE ok=1 rd=7f4b0198 wr=7f4b0198 width=3840 height=2160 depth=8 frames=1",
+        "Z8_WAVE5_DEC_PICTURE idx=0 poc=0 bytes=12441600 crc=10e6eac2",
+        "Z8_WAVE5_DEC_SEQUENCE ok=1 rd=7f4af198 wr=7f4be5da width=3840 height=2160 depth=8 frames=1"
+      ]
+    },
+    {
+      "qemu_sha256": "a88a921c9759deced131e372b2c9881b1f648690cfa306b51f3814b0d7961e5d",
+      "raw_sha256": "50f30107b952e0f0f2469f3546d8e485a311e0069de4eabdd7ccd127b773370d",
+      "mcu_sha256": "8ce129fa3689d1d619f25ba1c44a3a9f1964c76fe77b95adeb4ea912463c8c63",
+      "cpu_register_redirection": false,
+      "ram_patches": [],
+      "error": "AssertionError('native run has no unmodeled MMIO')",
+      "owned_qemu_stopped": true,
+      "driver_reported_firmware_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+      "main_loader": "loader,file=/path/to/user/fxfix/v51d/q/main.main,addr=0x40160000,force-raw=on,cpu-num=0",
+      "loaded_main_file_sha256": "aa6e94e0042fb445c666de73c0f6b9e7e569010b7993a3ac3da0979b174a9433",
+      "firmware_hash_scope": "run_native_any wrapper reports the stock hash; actual MAIN is the QEMU loader path with separately verified file hash; candidates were immutable throughout their runs",
+      "name": "final-silent",
+      "driver_exit": 1,
+      "sample_sha256": "a5a3995963bc4b2ad57280c60927da620344d18ac2876fe4b9e2741a22e05b99",
+      "sample_bytes": 2092605,
+      "decode_frames": 1,
+      "lpcm_jobs": 0,
+      "unknown_accesses": [
+        "Z8_UNKNOWN cpu=1 pc=0x40c27244 write addr=0x15421104 size=4 value=0x1001"
+      ],
+      "decoder_evidence": [
+        "Z8_WAVE5_DEC_SEQUENCE ok=1 rd=9f60e61d wr=9f60e61d width=1024 height=682 depth=8 frames=1",
+        "Z8_WAVE5_DEC_PICTURE idx=0 poc=0 bytes=1047552 crc=a1b4070c"
+      ]
+    },
+    {
+      "qemu_sha256": "a88a921c9759deced131e372b2c9881b1f648690cfa306b51f3814b0d7961e5d",
+      "raw_sha256": "50f30107b952e0f0f2469f3546d8e485a311e0069de4eabdd7ccd127b773370d",
+      "mcu_sha256": "8ce129fa3689d1d619f25ba1c44a3a9f1964c76fe77b95adeb4ea912463c8c63",
+      "cpu_register_redirection": false,
+      "ram_patches": [],
+      "error": null,
+      "owned_qemu_stopped": true,
+      "driver_reported_firmware_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+      "main_loader": "loader,file=/path/to/user/fxfix/v51d/q/main.main,addr=0x40160000,force-raw=on,cpu-num=0",
+      "loaded_main_file_sha256": "aa6e94e0042fb445c666de73c0f6b9e7e569010b7993a3ac3da0979b174a9433",
+      "firmware_hash_scope": "run_native_any wrapper reports the stock hash; actual MAIN is the QEMU loader path with separately verified file hash; candidates were immutable throughout their runs",
+      "name": "final-audio",
+      "driver_exit": 0,
+      "sample_sha256": "2aa43b037738eba33005aa524e69ca35b8234bbffe01ebb16923a12843dd843a",
+      "sample_bytes": 2370613,
+      "decode_frames": 95,
+      "lpcm_jobs": 11,
+      "unknown_accesses": [],
+      "decoder_evidence": [
+        "Z8_WAVE5_DEC_SEQUENCE ok=1 rd=7f4b0198 wr=7f4b0198 width=3840 height=2160 depth=8 frames=1",
+        "Z8_WAVE5_DEC_PICTURE idx=0 poc=0 bytes=12441600 crc=10e6eac2",
+        "Z8_WAVE5_DEC_SEQUENCE ok=1 rd=7f4af198 wr=7f4be5da width=3840 height=2160 depth=8 frames=1"
+      ]
+    },
+    {
+      "qemu_sha256": "a88a921c9759deced131e372b2c9881b1f648690cfa306b51f3814b0d7961e5d",
+      "raw_sha256": "50f30107b952e0f0f2469f3546d8e485a311e0069de4eabdd7ccd127b773370d",
+      "mcu_sha256": "8ce129fa3689d1d619f25ba1c44a3a9f1964c76fe77b95adeb4ea912463c8c63",
+      "cpu_register_redirection": false,
+      "ram_patches": [],
+      "error": "AssertionError('native run has no unmodeled MMIO')",
+      "owned_qemu_stopped": true,
+      "driver_reported_firmware_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+      "main_loader": "loader,file=/path/to/user/fxfix/v51d/q/main.main,addr=0x40160000,force-raw=on,cpu-num=0",
+      "loaded_main_file_sha256": "aa6e94e0042fb445c666de73c0f6b9e7e569010b7993a3ac3da0979b174a9433",
+      "firmware_hash_scope": "run_native_any wrapper reports the stock hash; actual MAIN is the QEMU loader path with separately verified file hash; candidates were immutable throughout their runs",
+      "name": "final-recorded",
+      "driver_exit": 1,
+      "sample_sha256": "5bbc309ce4363e4d0040a2de0add71ddafca0d386cdf3324b7c298979da006d7",
+      "sample_bytes": 912118,
+      "decode_frames": 1,
+      "lpcm_jobs": 0,
+      "unknown_accesses": [
+        "Z8_UNKNOWN cpu=1 pc=0x40c27244 write addr=0x15421104 size=4 value=0x1001"
+      ],
+      "decoder_evidence": [
+        "Z8_WAVE5_DEC_SEQUENCE ok=1 rd=9f600ec0 wr=9f600ec0 width=1024 height=682 depth=8 frames=1",
+        "Z8_WAVE5_DEC_PICTURE idx=0 poc=0 bytes=1047552 crc=af6118a1"
+      ]
+    }
+  ],
+  "native_scope": {
+    "final-audio": "Final C writer host container/audio/JPEG/metadata with known 4K video substituted for model support; 95 decoded frames and 11 LPCM jobs; audio_output none",
+    "final-silent": "Final C writer host 1024x682 silent file; unchanged original video samples; first frame then unmodeled 0x15421104 display",
+    "final-recorded": "Actual final v51d QEMU-recorded MOV copied byte-for-byte onto isolated virtual card; original 1024x682 samples"
+  },
+  "prior_recovery_controls": {
+    "qemu-v50-recovery.json": [
+      {
+        "name": "v50-final-pb-recovery",
+        "complete": true,
+        "error": null,
+        "owned_qemu_stopped": true,
+        "input_unchanged": true,
+        "live_a": {
+          "mode": "pb",
+          "prepared_stock_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+          "executed_main_sha256": "4cb5235fc709220f64af5400680653999d2a03b0d5a4821975e0f6a7b2d50977",
+          "executed_main": "/path/to/user/fxfix/v50/q/main.main",
+          "flashable": false
+        },
+        "check_failures": [],
+        "checkpoint_count": 141,
+        "rec_owned_expectation": {
+          "before": 0,
+          "expected_hex": "0002000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "body_hex": "01000000010000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "after": 1
+        },
+        "recovery_before": {
+          "irq": 1580,
+          "encoded": 421,
+          "preview_frames": 45
+        },
+        "recovery_after": {
+          "irq": 2074,
+          "encoded": 667,
+          "phase": 2,
+          "preview_frames": 45
+        },
+        "trace_complete": true,
+        "maxima": {
+          "full_presses": 1,
+          "writer_returns": 1,
+          "capture.accepted_presses": 1,
+          "stream.encoded": 715,
+          "transaction_count": 1,
+          "transaction_error": 0
+        },
+        "preview_max_frames": 45,
+        "preview_max_lookup_error": 0,
+        "last_preview": {
+          "started": 1,
+          "current_id": 0,
+          "cache_valid": 1,
+          "lookup_count": 1,
+          "lookup_error": 0,
+          "frames": 45,
+          "playing": 0,
+          "native_path": "A:\\DCIM\\100NCZ_8\\DSC_0001.JPG",
+          "directory": "A:\\LIVEDATA\\100NCZ_8\\DSC_0001",
+          "consumed_rec": 1,
+          "error": 0
+        },
+        "files": [
+          {
+            "path": "DCIM/100NCZ_8/DSC_0001.JPG",
+            "bytes": 1169905,
+            "sha256": "1fd5145fe18a8b30cf07c5a11686eb0c31fe71baa92b9ffcce395c3079368b46"
+          },
+          {
+            "path": "DCIM/100NCZ_8/DSC_0001.JPG.extraction.json",
+            "bytes": 682,
+            "sha256": "f7937c9f33e8638f0f134466b9b211ff39baf3954934c984b841977fba64c949"
+          },
+          {
+            "path": "DCIM/100NCZ_8/NC_FLLST.DAT",
+            "bytes": 122880,
+            "sha256": "f0b2e7c07085aec6df6d834c8d497c944e7b4f7ec272f9d46746bdb31892f9d5"
+          },
+          {
+            "path": "DCIM/100NCZ_8/NC_FLLST.DAT.extraction.json",
+            "bytes": 679,
+            "sha256": "815866a7af5959feef67f85f28840b116c017d7759077adf96c9206e6bdf6307"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1",
+            "bytes": 64,
+            "sha256": "8245f7c07f525d3f88ddbc5904d653cb3bbe58d92e4f97e0031e9752974c795d"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1.extraction.json",
+            "bytes": 651,
+            "sha256": "1bc0fc3b54eb4ab93da3722c5c0f04a5dd15fae16efd45931b73066a322e4d0b"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.JPG",
+            "bytes": 1169905,
+            "sha256": "9d64b4193a7d1ff56b27dc30cd8cbf6e9b2cbaf483c2675a01c1e43e433f9dad"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.JPG.extraction.json",
+            "bytes": 682,
+            "sha256": "58df17903a63f8ed6d732b5c1481767cfb5cddda6365c7bbcb3e5b0712077e46"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.MOV",
+            "bytes": 808354,
+            "sha256": "a48a6bed88f4b409c1a687cfe57ddc4bae41a5611120b3a81a10043823b49ce4"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.MOV.extraction.json",
+            "bytes": 679,
+            "sha256": "f0133dd3fe8399a4f853b7f42c56349245abb2ab5970b2a88050ef2206fb8358"
+          },
+          {
+            "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN",
+            "bytes": 112,
+            "sha256": "bd83ed70de738f680ba463bbfe67645d60f0c9251d3442749214e7d4a4099ab8"
+          },
+          {
+            "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN.extraction.json",
+            "bytes": 678,
+            "sha256": "e7d2bbc547d3b7c05e762b148be4b0e1f9fdddc7b2e15ded67695389af17b2d0"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN",
+            "bytes": 3872,
+            "sha256": "4de18cdd18575bcb18742359c06eaed867c234eda7f1c51d2df30a9455779be4"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN.extraction.json",
+            "bytes": 661,
+            "sha256": "e0617afb33ac19d5c71e1ed06025dfebcf0c91eade5a35d5f39b087a58664010"
+          },
+          {
+            "path": "NIKON001.DSC",
+            "bytes": 512,
+            "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560"
+          },
+          {
+            "path": "NIKON001.DSC.extraction.json",
+            "bytes": 641,
+            "sha256": "4e860baf657f6c6fb0f1824d5e963651abafdab69524c190d198fb332bf63304"
+          }
+        ]
+      }
+    ],
+    "qemu-recovery-r3-compare.json": [
+      {
+        "name": "v51-final-pb-recovery-r3",
+        "complete": true,
+        "error": "AssertionError('No new Live frames/encoding after half-press return')",
+        "owned_qemu_stopped": true,
+        "input_unchanged": true,
+        "live_a": {
+          "mode": "pb",
+          "prepared_stock_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+          "executed_main_sha256": "1b0ecc754467c893e37085653f286479f7ea9341d3c10653b28ab1aca93e782b",
+          "executed_main": "/path/to/user/fxfix/v51/q/main.main",
+          "flashable": false
+        },
+        "check_failures": [],
+        "checkpoint_count": 139,
+        "rec_owned_expectation": {
+          "before": 0,
+          "expected_hex": "0002000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "body_hex": "01000000010000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "after": 1
+        },
+        "recovery_before": {
+          "irq": 1568,
+          "encoded": 417,
+          "preview_frames": 39
+        },
+        "recovery_after": null,
+        "trace_complete": false,
+        "maxima": {
+          "full_presses": 1,
+          "writer_returns": 1,
+          "capture.accepted_presses": 1,
+          "stream.encoded": 417,
+          "transaction_count": 1,
+          "transaction_error": 0
+        },
+        "preview_max_frames": 39,
+        "preview_max_lookup_error": 0,
+        "last_preview": {
+          "started": 1,
+          "current_id": 0,
+          "cache_valid": 1,
+          "lookup_count": 1,
+          "lookup_error": 0,
+          "frames": 39,
+          "playing": 0,
+          "native_path": "A:\\DCIM\\100NCZ_8\\DSC_0001.JPG",
+          "directory": "A:\\LIVEDATA\\100NCZ_8\\DSC_0001",
+          "consumed_rec": 1,
+          "error": 0
+        },
+        "files": [
+          {
+            "path": "DCIM/100NCZ_8/DSC_0001.JPG",
+            "bytes": 1169905,
+            "sha256": "1be6336cb287fdefe5579eb3db42b026a5af346ac6eb4fa7ace56f0ea196437c"
+          },
+          {
+            "path": "DCIM/100NCZ_8/DSC_0001.JPG.extraction.json",
+            "bytes": 688,
+            "sha256": "f6fea1d3db9d94d56cc549aa4d8897951dfa63bfae856d182f03693c09d4c444"
+          },
+          {
+            "path": "DCIM/100NCZ_8/NC_FLLST.DAT",
+            "bytes": 122880,
+            "sha256": "f0b2e7c07085aec6df6d834c8d497c944e7b4f7ec272f9d46746bdb31892f9d5"
+          },
+          {
+            "path": "DCIM/100NCZ_8/NC_FLLST.DAT.extraction.json",
+            "bytes": 685,
+            "sha256": "f94fbad70b31ecc84d5ba880f8e069b899b11b5395db89a6686eac03cb198f4a"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1",
+            "bytes": 64,
+            "sha256": "8245f7c07f525d3f88ddbc5904d653cb3bbe58d92e4f97e0031e9752974c795d"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1.extraction.json",
+            "bytes": 657,
+            "sha256": "bc052db8f25636a830050364df7f3ca2e458e4ed19b237a0b1fc6bc0421534a8"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.JPG",
+            "bytes": 1169905,
+            "sha256": "2e6a2ed541b7d375bc0c0a1135d78a4e1398a88569be2b2aa37d5bc5fbf6f584"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.JPG.extraction.json",
+            "bytes": 688,
+            "sha256": "d912159b453cb7e32dd388bbde66c68293179ba35780568b339ea9946a77b80d"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.MOV",
+            "bytes": 866443,
+            "sha256": "d0c94bac16b1c3a9281d3b248f1c00f64f33b6ebd76f8ab65ead3ee267aede64"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.MOV.extraction.json",
+            "bytes": 685,
+            "sha256": "70d20d5ebccbe27a7d4ecc63ac9acb07f1e9e5a88d9de51d7a8db8cf03ec121c"
+          },
+          {
+            "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN",
+            "bytes": 112,
+            "sha256": "d78146994b79225072bb1187032d641379be7606f6cb19388a4f105cfc23ad2b"
+          },
+          {
+            "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN.extraction.json",
+            "bytes": 684,
+            "sha256": "e6a97f618f1e201867bbee2b2264883480a30547c396b1c405fb9fa447a25a08"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN",
+            "bytes": 3872,
+            "sha256": "63bf0f6ad7d4ef709b8a68582c5b76d53db2016585adb25a5caff6d98e0b6dcf"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN.extraction.json",
+            "bytes": 667,
+            "sha256": "ee7ea80ccdeeab348fc629a4a6b5248ae94fc1b2776a413f891324d6305ddb96"
+          },
+          {
+            "path": "NIKON001.DSC",
+            "bytes": 512,
+            "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560"
+          },
+          {
+            "path": "NIKON001.DSC.extraction.json",
+            "bytes": 647,
+            "sha256": "35308d2dc6920c1542b89d6f98b36f3197ac1a59a4dabb38bc1ea7ec87378442"
+          }
+        ]
+      },
+      {
+        "name": "v50-recovery-control-r3",
+        "complete": true,
+        "error": "AssertionError('No new Live frames/encoding after half-press return')",
+        "owned_qemu_stopped": true,
+        "input_unchanged": true,
+        "live_a": {
+          "mode": "pb",
+          "prepared_stock_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+          "executed_main_sha256": "4cb5235fc709220f64af5400680653999d2a03b0d5a4821975e0f6a7b2d50977",
+          "executed_main": "/path/to/user/fxfix/v50/q/main.main",
+          "flashable": false
+        },
+        "check_failures": [],
+        "checkpoint_count": 139,
+        "rec_owned_expectation": {
+          "before": 0,
+          "expected_hex": "0002000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "body_hex": "01000000010000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "after": 1
+        },
+        "recovery_before": {
+          "irq": 1594,
+          "encoded": 428,
+          "preview_frames": 39
+        },
+        "recovery_after": null,
+        "trace_complete": false,
+        "maxima": {
+          "full_presses": 1,
+          "writer_returns": 1,
+          "capture.accepted_presses": 1,
+          "stream.encoded": 428,
+          "transaction_count": 1,
+          "transaction_error": 0
+        },
+        "preview_max_frames": 39,
+        "preview_max_lookup_error": 0,
+        "last_preview": {
+          "started": 1,
+          "current_id": 0,
+          "cache_valid": 1,
+          "lookup_count": 1,
+          "lookup_error": 0,
+          "frames": 39,
+          "playing": 0,
+          "native_path": "A:\\DCIM\\100NCZ_8\\DSC_0001.JPG",
+          "directory": "A:\\LIVEDATA\\100NCZ_8\\DSC_0001",
+          "consumed_rec": 1,
+          "error": 0
+        },
+        "files": [
+          {
+            "path": "DCIM/100NCZ_8/DSC_0001.JPG",
+            "bytes": 1169905,
+            "sha256": "591244402465c8e02902184b210a593410a1f778f61183e4951a73c07a054082"
+          },
+          {
+            "path": "DCIM/100NCZ_8/DSC_0001.JPG.extraction.json",
+            "bytes": 686,
+            "sha256": "74f202d6dca4b03cdcf466495e7667ed89743406473fb585b1cb40687ac8babf"
+          },
+          {
+            "path": "DCIM/100NCZ_8/NC_FLLST.DAT",
+            "bytes": 122880,
+            "sha256": "f0b2e7c07085aec6df6d834c8d497c944e7b4f7ec272f9d46746bdb31892f9d5"
+          },
+          {
+            "path": "DCIM/100NCZ_8/NC_FLLST.DAT.extraction.json",
+            "bytes": 683,
+            "sha256": "58003782af841d64caa7c16d559e6c92f32b00ad50756a8edbc4722bc0999625"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1",
+            "bytes": 64,
+            "sha256": "8245f7c07f525d3f88ddbc5904d653cb3bbe58d92e4f97e0031e9752974c795d"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1.extraction.json",
+            "bytes": 655,
+            "sha256": "3d34c093c7b516396393d3b59eba1442c578e6ded6b470c1342ca61d20a89ff0"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.JPG",
+            "bytes": 1169905,
+            "sha256": "b414d30f8a748aa10c9bf5e46a89b011678dbb15cd97307ba477c86c1cf37722"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.JPG.extraction.json",
+            "bytes": 686,
+            "sha256": "7c489d31d05a216f15b194230c8fa7cf884b35bee15440978f75689f863e96fe"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.MOV",
+            "bytes": 807672,
+            "sha256": "148ac9e7edca609d97087f1b406aa1ef56f1308d5a876f6b907ef26fc13c3079"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.MOV.extraction.json",
+            "bytes": 683,
+            "sha256": "9c8050e8e8b7cd5dd0a7e47992ba70c9c869b4b173db8d0260d37c2a82b1a3e0"
+          },
+          {
+            "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN",
+            "bytes": 112,
+            "sha256": "dbb9e216e90e5ebf796fbd61f84964d97fb54937c5d42273bbfcc9b9394a5e7a"
+          },
+          {
+            "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN.extraction.json",
+            "bytes": 682,
+            "sha256": "75fc20264e5cefa0cdf3c44ce975380a585608ebec2d0d49784cfd6da164e75f"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN",
+            "bytes": 3872,
+            "sha256": "2770920a1ffeb6b19cd89626c2aa4d3d25857a7856a137ecf12288db54419898"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN.extraction.json",
+            "bytes": 665,
+            "sha256": "e63e0d7573f1505be6065be5b9f6298a067b66adda0f389f7f4f6d3fbb84a889"
+          },
+          {
+            "path": "NIKON001.DSC",
+            "bytes": 512,
+            "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560"
+          },
+          {
+            "path": "NIKON001.DSC.extraction.json",
+            "bytes": 645,
+            "sha256": "f0b97321622651e389e71961164277d73c7bdbb97168a98a0958941be6e353a5"
+          }
+        ]
+      }
+    ],
+    "qemu-noobserve-compare.json": [
+      {
+        "name": "v50-pb-noobserve",
+        "complete": true,
+        "error": "AssertionError('No new Live frames/encoding after half-press return')",
+        "owned_qemu_stopped": true,
+        "input_unchanged": true,
+        "live_a": {
+          "mode": "pb",
+          "prepared_stock_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+          "executed_main_sha256": "4cb5235fc709220f64af5400680653999d2a03b0d5a4821975e0f6a7b2d50977",
+          "executed_main": "/path/to/user/fxfix/v50/q/main.main",
+          "flashable": false
+        },
+        "check_failures": [],
+        "checkpoint_count": 139,
+        "rec_owned_expectation": {
+          "before": 0,
+          "expected_hex": "0002000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "body_hex": "01000000010000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "after": 1
+        },
+        "recovery_before": {
+          "irq": 1572,
+          "encoded": 428,
+          "preview_frames": 38
+        },
+        "recovery_after": null,
+        "trace_complete": false,
+        "maxima": {
+          "full_presses": 1,
+          "writer_returns": 1,
+          "capture.accepted_presses": 1,
+          "stream.encoded": 428,
+          "transaction_count": 1,
+          "transaction_error": 0
+        },
+        "preview_max_frames": 38,
+        "preview_max_lookup_error": 0,
+        "last_preview": {
+          "started": 1,
+          "current_id": 0,
+          "cache_valid": 1,
+          "lookup_count": 1,
+          "lookup_error": 0,
+          "frames": 38,
+          "playing": 0,
+          "native_path": "A:\\DCIM\\100NCZ_8\\DSC_0001.JPG",
+          "directory": "A:\\LIVEDATA\\100NCZ_8\\DSC_0001",
+          "consumed_rec": 1,
+          "error": 0
+        },
+        "files": [
+          {
+            "path": "DCIM/100NCZ_8/DSC_0001.JPG",
+            "bytes": 1169905,
+            "sha256": "47573f98c4aa2e1c250bd70f765bafb32f37f020be0efc5a44691ac99748e4f1"
+          },
+          {
+            "path": "DCIM/100NCZ_8/DSC_0001.JPG.extraction.json",
+            "bytes": 672,
+            "sha256": "111cc66bdb4708dfc906b06e5cd9078bdec031f65b7d2bb29130495952f506ef"
+          },
+          {
+            "path": "DCIM/100NCZ_8/NC_FLLST.DAT",
+            "bytes": 122880,
+            "sha256": "f0b2e7c07085aec6df6d834c8d497c944e7b4f7ec272f9d46746bdb31892f9d5"
+          },
+          {
+            "path": "DCIM/100NCZ_8/NC_FLLST.DAT.extraction.json",
+            "bytes": 669,
+            "sha256": "cdd385f87b92f1c10b5a27f1ca02582ac19c7a18e3da9173f48639c41805a497"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1",
+            "bytes": 64,
+            "sha256": "8245f7c07f525d3f88ddbc5904d653cb3bbe58d92e4f97e0031e9752974c795d"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1.extraction.json",
+            "bytes": 641,
+            "sha256": "3861885e6c41424be179c4a26d75fbe82b759a95a4fc63df95bde4dfdfdaa26f"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.JPG",
+            "bytes": 1169905,
+            "sha256": "95097d4278182ca2a77d70ce1de4ec611379ceb39cb14949f9c872b429b8321e"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.JPG.extraction.json",
+            "bytes": 672,
+            "sha256": "05f52f82633b3773d69440a12367c76d1996a2bac8f3b5b36aee23b37416988a"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.MOV",
+            "bytes": 808739,
+            "sha256": "643718ffd1254d11c88a1a0b63198556e6a9f110ffa63d3a8bc7e0562210f7f7"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.MOV.extraction.json",
+            "bytes": 669,
+            "sha256": "bb1a877fc02b91b83ffb0c0dd43a735aae8e9cdcb83fd1e498fa5bde28547ebb"
+          },
+          {
+            "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN",
+            "bytes": 112,
+            "sha256": "f8cf681bef01bdf948fc2b9faafc167be4a92ae535b79c04ecaf26b5ad9ece65"
+          },
+          {
+            "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN.extraction.json",
+            "bytes": 668,
+            "sha256": "39fbdc5e29fa1d801fecd6682e3bbaab68ac4d11be8dc8f4456c75930279d277"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN",
+            "bytes": 3872,
+            "sha256": "76d70a46f9abb77f7cf3582d6d9665a7831eaf296e0e5e59d7223675aadba3c5"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN.extraction.json",
+            "bytes": 651,
+            "sha256": "5058bb9248f71c9a9db912608b626907d6a23e6185a5c1a8ef1f2ac5a3ff893f"
+          },
+          {
+            "path": "NIKON001.DSC",
+            "bytes": 512,
+            "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560"
+          },
+          {
+            "path": "NIKON001.DSC.extraction.json",
+            "bytes": 631,
+            "sha256": "38beb7f8171930c40251ed24934384d0a5a36f501a7ed6f7d47bd561db8604d5"
+          }
+        ]
+      },
+      {
+        "name": "v51-pb-noobserve",
+        "complete": true,
+        "error": "AssertionError('No new Live frames/encoding after half-press return')",
+        "owned_qemu_stopped": true,
+        "input_unchanged": true,
+        "live_a": {
+          "mode": "pb",
+          "prepared_stock_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+          "executed_main_sha256": "1b0ecc754467c893e37085653f286479f7ea9341d3c10653b28ab1aca93e782b",
+          "executed_main": "/path/to/user/fxfix/v51/q/main.main",
+          "flashable": false
+        },
+        "check_failures": [],
+        "checkpoint_count": 139,
+        "rec_owned_expectation": {
+          "before": 0,
+          "expected_hex": "0002000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "body_hex": "01000000010000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "after": 1
+        },
+        "recovery_before": {
+          "irq": 1568,
+          "encoded": 420,
+          "preview_frames": 37
+        },
+        "recovery_after": null,
+        "trace_complete": false,
+        "maxima": {
+          "full_presses": 1,
+          "writer_returns": 1,
+          "capture.accepted_presses": 1,
+          "stream.encoded": 420,
+          "transaction_count": 1,
+          "transaction_error": 0
+        },
+        "preview_max_frames": 37,
+        "preview_max_lookup_error": 0,
+        "last_preview": {
+          "started": 1,
+          "current_id": 0,
+          "cache_valid": 1,
+          "lookup_count": 1,
+          "lookup_error": 0,
+          "frames": 37,
+          "playing": 0,
+          "native_path": "A:\\DCIM\\100NCZ_8\\DSC_0001.JPG",
+          "directory": "A:\\LIVEDATA\\100NCZ_8\\DSC_0001",
+          "consumed_rec": 1,
+          "error": 0
+        },
+        "files": [
+          {
+            "path": "DCIM/100NCZ_8/DSC_0001.JPG",
+            "bytes": 1169905,
+            "sha256": "44fd50fc083c54987f3aacd8762ca854eb93c3a60187e5c08e1450e330d21e41"
+          },
+          {
+            "path": "DCIM/100NCZ_8/DSC_0001.JPG.extraction.json",
+            "bytes": 672,
+            "sha256": "848c8fa71360a832dcd19d6c935ce18d8984abf97e687cb8ceccbe2d76b8c796"
+          },
+          {
+            "path": "DCIM/100NCZ_8/NC_FLLST.DAT",
+            "bytes": 122880,
+            "sha256": "f0b2e7c07085aec6df6d834c8d497c944e7b4f7ec272f9d46746bdb31892f9d5"
+          },
+          {
+            "path": "DCIM/100NCZ_8/NC_FLLST.DAT.extraction.json",
+            "bytes": 669,
+            "sha256": "9b239c30cb4e6a0492daa705eea6b01b709582e41082a54104ca9e582c2c5dcc"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1",
+            "bytes": 64,
+            "sha256": "8245f7c07f525d3f88ddbc5904d653cb3bbe58d92e4f97e0031e9752974c795d"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1.extraction.json",
+            "bytes": 641,
+            "sha256": "7b25d5e1e50ba0687020b4efaa137e81cf825a80cdcddba1b9ed7be53831a055"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.JPG",
+            "bytes": 1169905,
+            "sha256": "ddca8f610dd7d7a7e77b97dc0ab725ce13a383d45ad04f21334bfe77cfcb55e3"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.JPG.extraction.json",
+            "bytes": 672,
+            "sha256": "e8319d428cb5e925182b910a53d35b415df5a917478fe068389a39d74ada01ba"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.MOV",
+            "bytes": 890623,
+            "sha256": "d3ff137f88bb9bc5d032429d43d5c2f0d06bcfd1d2ed0406fe815ea86adc9f29"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.MOV.extraction.json",
+            "bytes": 669,
+            "sha256": "882082e6f21aea395a421b92ab0f31a3d37f9eff5e280f63bb1c69506f8d879e"
+          },
+          {
+            "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN",
+            "bytes": 112,
+            "sha256": "ed4517e923bd6b69111db3c744f73626d71cc2adc9607249346cbb2ff4249e79"
+          },
+          {
+            "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN.extraction.json",
+            "bytes": 668,
+            "sha256": "b940eb9ba519a7ad93b9807854e08f1591802f79a7bceb9269c505d435426dfe"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN",
+            "bytes": 3872,
+            "sha256": "533737ea1f05547c3e00c24410dd2f0da308e1fa909d82f9e63e260a3a88e4ec"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN.extraction.json",
+            "bytes": 651,
+            "sha256": "ba9751b264506af4da0012e69df6b4656364bd409c05ebecd471f98cd9198238"
+          },
+          {
+            "path": "NIKON001.DSC",
+            "bytes": 512,
+            "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560"
+          },
+          {
+            "path": "NIKON001.DSC.extraction.json",
+            "bytes": 631,
+            "sha256": "c24dbc1f20ba3946c6bc3377fb6d7328dd55aa9421b798abca0c6f6fd7147380"
+          }
+        ]
+      }
+    ],
+    "qemu-v49-v50-error-compare.json": [
+      {
+        "name": "v50-pb-error-observer",
+        "complete": true,
+        "error": null,
+        "owned_qemu_stopped": true,
+        "input_unchanged": true,
+        "live_a": {
+          "mode": "pb",
+          "prepared_stock_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+          "executed_main_sha256": "4cb5235fc709220f64af5400680653999d2a03b0d5a4821975e0f6a7b2d50977",
+          "executed_main": "/path/to/user/fxfix/v50/q/main.main",
+          "flashable": false
+        },
+        "check_failures": [],
+        "checkpoint_count": 141,
+        "rec_owned_expectation": {
+          "before": 0,
+          "expected_hex": "0002000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "body_hex": "01000000010000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "after": 1
+        },
+        "recovery_before": {
+          "irq": 1558,
+          "encoded": 428,
+          "preview_frames": 45
+        },
+        "recovery_after": {
+          "irq": 2052,
+          "encoded": 675,
+          "phase": 2,
+          "preview_frames": 45
+        },
+        "trace_complete": true,
+        "maxima": {
+          "full_presses": 1,
+          "writer_returns": 1,
+          "capture.accepted_presses": 1,
+          "stream.encoded": 723,
+          "transaction_count": 1,
+          "transaction_error": 0
+        },
+        "preview_max_frames": 45,
+        "preview_max_lookup_error": 0,
+        "last_preview": {
+          "started": 1,
+          "current_id": 0,
+          "cache_valid": 1,
+          "lookup_count": 1,
+          "lookup_error": 0,
+          "frames": 45,
+          "playing": 0,
+          "native_path": "A:\\DCIM\\100NCZ_8\\DSC_0001.JPG",
+          "directory": "A:\\LIVEDATA\\100NCZ_8\\DSC_0001",
+          "consumed_rec": 1,
+          "error": 0
+        },
+        "files": [
+          {
+            "path": "DCIM/100NCZ_8/DSC_0001.JPG",
+            "bytes": 1169905,
+            "sha256": "32b773db32d21996c2688cd1d983902dd6ac9d2c4c7c88cdbed7adaa9be41acf"
+          },
+          {
+            "path": "DCIM/100NCZ_8/DSC_0001.JPG.extraction.json",
+            "bytes": 682,
+            "sha256": "8078f7de2779263502b8d7b18fb5595f8d69a0432109a1b561d1768f5d6718f9"
+          },
+          {
+            "path": "DCIM/100NCZ_8/NC_FLLST.DAT",
+            "bytes": 122880,
+            "sha256": "f0b2e7c07085aec6df6d834c8d497c944e7b4f7ec272f9d46746bdb31892f9d5"
+          },
+          {
+            "path": "DCIM/100NCZ_8/NC_FLLST.DAT.extraction.json",
+            "bytes": 679,
+            "sha256": "5e2585fc13c364b9c48adceb7181dfc9ce427d8315b8a003e24fb8a6dd28cb47"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1",
+            "bytes": 64,
+            "sha256": "8245f7c07f525d3f88ddbc5904d653cb3bbe58d92e4f97e0031e9752974c795d"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1.extraction.json",
+            "bytes": 651,
+            "sha256": "2a45f66fbcb90fde4e21ad69f864c0833e3030d47ca4bae478c77afced4afdf7"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.JPG",
+            "bytes": 1169905,
+            "sha256": "ebd74c0765f05d05ef12786a3e29b0906d808e78d57b86523d0a0636334ebee1"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.JPG.extraction.json",
+            "bytes": 682,
+            "sha256": "54486b6effe349b0db92bd4add9004b84b6368c15738bf67b1d4cdc8653b2372"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.MOV",
+            "bytes": 798708,
+            "sha256": "a05f4b94d3ed28f09b145ba52a1aefb8781b63e29b851779a43eb62b8ce69186"
+          },
+          {
+            "path": "LIVE/100NCZ_8/DSC_0001.MOV.extraction.json",
+            "bytes": 679,
+            "sha256": "b769b157c77fca69a6df2bedc31436e942d00f9204ab0d0d895b30ba63fca17c"
+          },
+          {
+            "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN",
+            "bytes": 112,
+            "sha256": "e3ebf816b9e1e5b5862eeaa13ea412b79cce23e105a9d40bf9d28aad53b12d83"
+          },
+          {
+            "path": "LIVEDATA/100NCZ_8/DSC_0001.MAN.extraction.json",
+            "bytes": 678,
+            "sha256": "ffc1b5f666ccdb8d61efbdb0ade62b1026062d3f8a4f322dba239ea275e705c9"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN",
+            "bytes": 3872,
+            "sha256": "507f9197cf9b2f8856c854edaf2f49b321320c5d7495c89d8404bb1d65d375cf"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN.extraction.json",
+            "bytes": 661,
+            "sha256": "88798523237fcdbe57a75ef561df3417760896bb5da6fbeed9ba71fea72d8980"
+          },
+          {
+            "path": "NIKON001.DSC",
+            "bytes": 512,
+            "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560"
+          },
+          {
+            "path": "NIKON001.DSC.extraction.json",
+            "bytes": 641,
+            "sha256": "0be4edb2d7b914d863a08bdc96687596b3612fd28c60f8e430f813cc91dc12f0"
+          }
+        ]
+      },
+      {
+        "name": "v49-pb-error-baseline",
+        "complete": true,
+        "error": "AssertionError('No verified Live photo owner for REC')",
+        "owned_qemu_stopped": true,
+        "input_unchanged": true,
+        "live_a": {
+          "mode": "pb",
+          "prepared_stock_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+          "executed_main_sha256": "63240425765acad54030e58f2dad83b2f4679a9e511a7e5b03e2c4ba1a28718a",
+          "executed_main": "/path/to/user/fxfix/v49/q/main.main",
+          "flashable": false
+        },
+        "check_failures": [],
+        "checkpoint_count": 128,
+        "rec_owned_expectation": null,
+        "recovery_before": null,
+        "recovery_after": null,
+        "trace_complete": false,
+        "maxima": {
+          "full_presses": 1,
+          "writer_returns": 0,
+          "capture.accepted_presses": 0,
+          "stream.encoded": 0,
+          "transaction_count": 0,
+          "transaction_error": 0
+        },
+        "preview_max_frames": 0,
+        "preview_max_lookup_error": 0,
+        "last_preview": {
+          "started": 1,
+          "current_id": 0,
+          "cache_valid": 0,
+          "lookup_count": 0,
+          "lookup_error": 0,
+          "frames": 0,
+          "playing": 0,
+          "native_path": "",
+          "directory": ""
+        },
+        "files": [
+          {
+            "path": "FENESTRA/LIVE-Z8.1",
+            "bytes": 64,
+            "sha256": "8245f7c07f525d3f88ddbc5904d653cb3bbe58d92e4f97e0031e9752974c795d"
+          },
+          {
+            "path": "FENESTRA/LIVE-Z8.1.extraction.json",
+            "bytes": 651,
+            "sha256": "c3054436ca024ac411a3b4b011a09fdc4f6253a9cbe737fa87584029b2179a4f"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN",
+            "bytes": 3872,
+            "sha256": "fb233f5ed7155df99242c49fd59ddffe8f0b23de37b4a7df4dc1322c7a523c89"
+          },
+          {
+            "path": "LIVEDATA/LIVELOG.BIN.extraction.json",
+            "bytes": 661,
+            "sha256": "dd93175ee79b97950acc2868ced0f2a762cb14af623abf3492e9389bae4f945f"
+          },
+          {
+            "path": "NIKON001.DSC",
+            "bytes": 512,
+            "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560"
+          },
+          {
+            "path": "NIKON001.DSC.extraction.json",
+            "bytes": 641,
+            "sha256": "1e5beca3ddeb2be66d72c0b35d1f6b46c40c49101a60f7441e2168834685ed7b"
+          }
+        ]
+      }
+    ]
+  },
+  "limits": [
+    "No physical camera/card/flash use",
+    "Microphone-enabled shutter sound unresolved",
+    "True Live/native contention and audio output/synchronization not hardware verified",
+    "Portrait full video UI blocked by model interfaces; byte and ARM execution validation only",
+    "NCTG uses nominal configured FPS; stts retains actual VFR timestamps",
+    "Files remain in LIVE directory; no new native DCF registration or REC player substitution"
+  ],
+  "evidence_manifest": [
+    {
+      "path": "playback/candidate-v51d-review.json",
+      "sha256": "8986127058fe2b02f990a80cdc928addeb623612005391fdc479a8b540a9107d"
+    },
+    {
+      "path": "writer/v51d-source-portrait-audit.json",
+      "sha256": "1d2508729b523e233c9628795afda88d2d52924468a89b3ab7f927db289cb929"
+    },
+    {
+      "path": "writer/nctg-tests/final/tests.json",
+      "sha256": "3ef455ea57bc27ccf0529eee5b091fc9b4a4c6f40da59ddba34688cdd1a94b97"
+    },
+    {
+      "path": "audio/writer-review/audio-paths/transactions.json",
+      "sha256": "00742ec58d6e9b71d4f1412c10c8fd28178331b0b02c5f1f3a8aab65a0ac6c1e"
+    },
+    {
+      "path": "audio/writer-review/audio-paths/final-parser.json",
+      "sha256": "e7491ac43215e245aef4e7de5cea4908d64f40a92dc97dcedc1d8f39ee5e52bd"
+    },
+    {
+      "path": "audio/writer-review/audio-paths/audio-integrity.json",
+      "sha256": "3e3425ce92aa0acb1d221c5b3394413db7e71faead3d2f1ec60c991a32fb583f"
+    },
+    {
+      "path": "audio/writer-review/pb-audio-final-v51d.json",
+      "sha256": "ded3497a32e3b53a693a35305f3a009b0ff5e7e4d79b803120fcadc235585975"
+    },
+    {
+      "path": "audio/qemu-v51d/v51d-summary.json",
+      "sha256": "4ab170ddef8e57fc3715a5384c730af8a7e07be8bf500219be2d387c866d4b18"
+    },
+    {
+      "path": "writer/parser/final-native-results.json",
+      "sha256": "08dc56973962631b38036c69357dc08e7ffc7121c3ce88a6dcc700d8a3f190c2"
+    },
+    {
+      "path": "playback/qemu-v51d-final-recovery.json",
+      "sha256": "8bef371b5603c06cc35d466d149871506161a903d0bc2aa706081ad759d27011"
+    },
+    {
+      "path": "playback/qemu-v51d-stock-error.json",
+      "sha256": "a2dabe3850dbb10bc7a0cc7b6f3dad7e3ad469e5a5ced627737b5f214ad1cf8c"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Independent review of private TX counter-coordinate v3
+
+Verified remote emulator `0f341f3285e968f3121d40bf08828fb7faeb40ae6aa65b2a720ef5290b795914`, header `532ecd8590c2b757066d51813c8c4280f06b83a9b5d6f05c5a327dc4f4cc1069`, source `974216a2454e6fa46a86096485784e0c3bdfdb322475657bcc5f6a799dc3aceb`. The complete two-file patch exactly matches the independently archived v2 source difference.
+
+Only the explicit optional TX clock-domain property, its fixed interval conversion and reported clock metadata are added. It defaults off. On the pinned ARM model, 24 MHz counter frequency uses integer 41 ns QOM ticks, so 1000 guest ns correspond to 984 QOM ns. The flag applies the same 984/1000 coordinate conversion to the entire admitted interval: 1 ms prefill, 25 ms synthetic sound and one-second ring transfer. It does not change ARM timing, guest deadlines, bytes, PCM content, descriptor admission, completion semantics or source ownership. Changing the property is refused while TX/RX request bits are active, after a TX job, or with nonzero pending-bank phase.
+
+The actual model functions plus exact original F and candidate PB `frame` bodies passed 70 cases under ASan/UBSan. The 55 prior default-off cases remain. New independent cases cover initial false property, prohibited clock changes, exact integer intervals, identical descriptor rearm receiving a fresh deadline, stopped late callback producing no IRQ, future-bank rearm preserving current deadline and actual armed RAM read failure producing no IRQ.
+
+The 3.003-second four-cell comparison is discriminating: original F stops after three banks with either clock; fixed PB with old QOM clock also stops before bank four; fixed PB with matching counter-domain clock reaches bank four. Thus the conversion does not conceal the original fixed-three-second image EOS defect. It removes a separate emulator coordinate mismatch that could falsely reject a correct guest deadline near a one-second DMA boundary.
+
+The first-block prefill and subsequent ring timing are still declared functional model assumptions. The test uses instrumented RAM, clock, PDMA and GUI leaves, and does not validate physical FIFO depth, ADC/DAC rate, speaker routing or acoustic duration. A later complete QEMU run must record the flag and exact binary identity. No production firmware was changed by this model review.

@@ -1,0 +1,57 @@
+#define _GNU_SOURCE
+#include <qemu-plugin.h>
+#include <glib.h>
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+QEMU_PLUGIN_EXPORT int qemu_plugin_version=QEMU_PLUGIN_VERSION;
+static FILE *fp;static GMutex guard;
+static struct qemu_plugin_register *reg[4][5];
+static unsigned found[4];
+static GByteArray *bytes[4],*mem[4];
+static const uint64_t points[]={0x403f6fac,0x40718484,0x4071867c,0x40719a90,
+ 0x40cf8668,0x40cf8710,0x40cfc820,0x40cf8614,0x403f6e88,0x403f6f10,
+ 0x40712ca8,0x406bdd50,0x408747d8,0x40344b20,0x402dd4f8};
+static void dump(unsigned cpu,const char *name,uint64_t addr,unsigned n){
+ if(addr<0x800000000ull||addr>0xa40000000ull-n)return;
+ if(!qemu_plugin_read_memory_vaddr(addr,mem[cpu],n))return;
+ fprintf(fp,",\"%s\":\"",name);
+ for(unsigned i=0;i<mem[cpu]->len;i++)fprintf(fp,"%02x",mem[cpu]->data[i]);
+ fputc('"',fp);
+}
+static void hit(unsigned cpu,void *opaque){
+ if(cpu>=4)return;uint64_t v[5]={0},pc=(uintptr_t)opaque;
+ for(unsigned i=0;i<5;i++){
+  g_byte_array_set_size(bytes[cpu],0);
+  if(!(found[cpu]&(1u<<i))||!qemu_plugin_read_register(reg[cpu][i],bytes[cpu])||bytes[cpu]->len!=8)return;
+  memcpy(v+i,bytes[cpu]->data,8);
+ }
+ g_mutex_lock(&guard);
+ fprintf(fp,"{\"pc\":\"%llx\",\"cpu\":%u,\"regs\":[",(unsigned long long)pc,cpu);
+ for(unsigned i=0;i<5;i++)fprintf(fp,"%s\"%llx\"",i?",":"",(unsigned long long)v[i]);
+ fputc(']',fp);dump(cpu,"x0_mem",v[0],128);dump(cpu,"x1_mem",v[1],128);
+ if(pc!=0x402dd4f8){dump(cpu,"movie_ids",0xa045f4208ull,40);dump(cpu,"file_info",0xa045f08f8ull,0x60);}
+ fprintf(fp,"}\n");fflush(fp);g_mutex_unlock(&guard);
+}
+static void trans(struct qemu_plugin_tb *tb,void *ud){
+ (void)ud;
+ for(size_t i=0;i<qemu_plugin_tb_n_insns(tb);i++){
+  struct qemu_plugin_insn *in=qemu_plugin_tb_get_insn(tb,i);uint64_t pc=qemu_plugin_insn_vaddr(in);
+  for(unsigned j=0;j<sizeof(points)/sizeof(points[0]);j++)if(pc==points[j])
+   qemu_plugin_register_vcpu_insn_exec_cb(in,hit,QEMU_PLUGIN_CB_R_REGS,(void*)(uintptr_t)pc);
+ }
+}
+static void init(unsigned cpu,void *ud){
+ (void)ud;if(cpu>=4)return;bytes[cpu]=g_byte_array_new();mem[cpu]=g_byte_array_new();
+ const char *names[]={"x0","x1","x2","x3","x30"};GArray *a=qemu_plugin_get_registers();
+ for(unsigned i=0;i<a->len;i++){
+  qemu_plugin_reg_descriptor *d=&g_array_index(a,qemu_plugin_reg_descriptor,i);
+  for(unsigned j=0;j<5;j++)if(!strcmp(d->name,names[j])){reg[cpu][j]=d->handle;found[cpu]|=1u<<j;}
+ }
+ g_array_free(a,1);
+}
+QEMU_PLUGIN_EXPORT int qemu_plugin_install(qemu_plugin_id_t id,const qemu_info_t *info,int argc,char **argv){
+ (void)info;if(argc!=1||strncmp(argv[0],"out=",4))return -1;
+ fp=fopen(argv[0]+4,"wx");if(!fp)return -1;
+ qemu_plugin_register_vcpu_init_cb(id,init,0);qemu_plugin_register_vcpu_tb_trans_cb(id,trans,0);return 0;
+}

@@ -1,0 +1,34 @@
+from pathlib import Path
+import json,hashlib,struct,re,sys
+sys.path.insert(0,'/path/to/user/fxfix/v52-root/driver-g/retry-driver')
+import card_export
+D=Path('/path/to/user/fxfix/v53-playback/rec-legacy-observe-g');p=D/'run-rec';r=json.loads((p/'result.json').read_text());sha=lambda b:hashlib.sha256(b).hexdigest()
+source=Path('/path/to/user/.local/share/nikon-z8-qemu/live-audio/regress/runs/v53f-final-counter-audio-capture-rec/files/LIVE/100NCZ_8/DSC_0001.MOV').read_bytes();card_export.extract(D/'rec-card.raw','LIVE/100NCZ_8/LIV_9013.MOV',p/'source-card.MOV');mov=(p/'source-card.MOV').read_bytes();assert mov==source and sha(mov)=='7dcea6e00591a88b8e17a4a2471a02a25978bfccc757ce216841d5094e719fee'
+at=len(mov)-struct.unpack('<I',mov[-8:-4])[0];nf,dt=struct.unpack_from('<II',mov,at+20);off,n,hz=struct.unpack_from('<III',mov,mov.rfind(b'LVJB')+4);assert n==147347 and hz==48000 and (nf,dt)==(45,66667);pcm24=mov[off:off+n*6];pcm=bytes(v for i,v in enumerate(pcm24) if i%3);assert len(pcm)==589388
+ring=(p/'messages.jsonl=on.pcm').read_bytes();tx=(p/'actual-tx.pcm').read_bytes();rows=[json.loads(l) for l in (p/'messages.jsonl=on').read_text().splitlines()];pbs=[(i,x['pb']) for i,x in enumerate(rows) if 'pb'in x];last=pbs[-1][1];events=[]
+for i,x in enumerate(rows):
+ if x.get('event') in ['43180014','43180017','4318001a','43180015','43180016','4318001c']:
+  events.append({'observer_row':i,'pc':x['pc'],'event':x['event'],'payload':x['payload'],'pb':x.get('pb',{})})
+stop=next(x for x in events if x['event']=='43180016');ackpath=next(x for x in events if x['event']=='4318001c');released=next((i,x) for i,x in pbs if i>ackpath['observer_row'] and x['audio_stage']==0 and x['audio_gate']==0 and x['audio_plays']==1)
+state=json.loads((p/'serial5-tx-drain-state.json').read_text());stderr=(p/'stderr.log').read_text();unknown=[l for l in stderr.splitlines() if 'Z8_UNKNOWN' in l];jobs=[]
+for l in stderr.splitlines():
+ m=re.search(r'Z8_PRIVATE_TX16 job=(\d+) kind=(\w+) ns=(\d+) source=([0-9a-f]+) bytes=(\d+) channel=(\d+)',l)
+ if m:jobs.append(dict(job=int(m[1]),kind=m[2],qom_ns=int(m[3]),source=m[4],bytes=int(m[5]),channel=int(m[6])))
+complete=len(tx)>=len(pcm) and tx[:len(pcm)]==pcm and not any(tx[len(pcm):]) and ring[:len(pcm)]==pcm
+endpoint=(n*1000000+47999)//48000
+sp=stop['pb'];terminal=released[1]
+natural=sp['audio_stop']==0 and sp['shutdown']==0 and sp['key_epoch']==sp['preview.epoch'] and sp['audio_t']-sp['start_us']>=endpoint and terminal['playing']==0 and terminal['shutdown']==0 and terminal['key_epoch']==sp['key_epoch'] and terminal['decode_errors']==0 and terminal['ui_render_error']==0 and r['delivered_contacts'][-1]['at']<=26.4
+observed=[];seen=None
+for i,pb in pbs:
+ if pb['frames'] and pb['audio_source_frames']==n:
+  key=(pb['frames'],pb['rendered_frames'],pb['last_frame'],pb['playing'],pb['audio_stage'])
+  if key!=seen:observed.append({'row':i,'pc':rows[i]['pc'],'frames':key[0],'rendered':key[1],'last_frame':key[2],'playing':key[3],'audio_stage':key[4],'start_us':pb['start_us'],'audio_t':pb['audio_t'],'decode_errors':pb['decode_errors'],'ui_render_error':pb['ui_render_error'],'preview_duration_us':pb['preview.duration_us']});seen=key
+indices=[]
+for x in observed:
+ if not indices or indices[-1]!=x['last_frame']:indices.append(x['last_frame'])
+video=len(indices)>1 and indices==sorted(set(indices)) and all(0<=x<nf for x in indices) and terminal['rendered_frames']>1 and terminal['decode_errors']==0 and terminal['ui_render_error']==0 and natural
+
+cleanup=last['audio_stage']==0 and last['audio_gate']==0 and last['audio_errors']==0 and last['audio_reason']==0 and state['pending_bytes']==0 and not state['fault']
+checks={'rec_video_sequence_passed':bool(video),'observed_video_indices':indices,'observed_video_timeline':observed,'video_gate_scope':'Clock-based frame dropping allowed; multiple actual renders and advancing indices through the original3s cadence, validPCM natural deadline, unchanged keyepoch and subsequent playing0/cleanup. No requirement to render all45 images.','rec_pcm_dma_passed':bool(complete and cleanup),'natural_eof_passed':bool(natural),'stop_cleanup_passed':bool(cleanup),'fixture_unchanged':True,'identities':{'kernel':r['kernel_identity'],'model_sha256':sha(Path(r['command'][0]).read_bytes()),'driver_sha256':sha((D/'peer_driver2.py').read_bytes()),'observer_sha256':sha((D/'observer.so').read_bytes()),'source_movie_sha256':sha(mov)},'runner_error':r.get('error'),'runner_checks':{'total':len(r['checks']),'passed':sum(x['passed'] for x in r['checks']),'failed':[x for x in r['checks'] if not x['passed']]},'whole_runner_passed':r.get('error') is None and all(x['passed'] for x in r['checks']),'unknown':unknown,'source_movie_bytes':len(mov),'legacy_preview_frames':nf,'legacy_preview_dt_us':dt,'legacy_preview_duration_us':nf*dt,'source_pcm_frames':n,'source_pcm_bytes':len(pcm),'source_pcm_sha256':sha(pcm),'ring_sha256':sha(ring),'actual_tx_bytes':len(tx),'actual_tx_sha256':sha(tx),'complete_source_pcm_exact':complete,'zero_tail_bytes':len(tx)-len(pcm),'events':events,'released_sample':{'observer_row':released[0],'pc':rows[released[0]]['pc'],'pb':released[1]},'pb_final':last,'tx_final':state,'tx_jobs':jobs,'automatic_stop_elapsed_guest_us':stop['pb']['audio_t']-stop['pb']['start_us'],'required_pcm_guest_us_ceil':(n*1000000+47999)//48000,'delivered_contacts':r['delivered_contacts'],'final_clock':r['native_samples'][-1]['runtime-clock-state'],'source_run':str(p),'scope':'Same exact G and legacy media, only59-field read-only snapshot extension at existing event frequency. Strict native PCM DMA export and original firmware EOF/STOP/ownership release. No physical DAC/acoustic claim. Original40s runner and all unknown/error checks retained.'}
+(p/'legacy-summary.json').write_text(json.dumps(checks,indent=2)+'\n');(p/'source-audio.s16le').write_bytes(pcm)
+print(json.dumps({'sha256':sha((p/'legacy-summary.json').read_bytes()),'rec_pcm_dma_passed':checks['rec_pcm_dma_passed'],'natural_eof_passed':checks['natural_eof_passed'],'cleanup':cleanup,'tx':len(tx),'source':len(pcm),'runner_error':r.get('error'),'elapsed_us':checks['automatic_stop_elapsed_guest_us']}))

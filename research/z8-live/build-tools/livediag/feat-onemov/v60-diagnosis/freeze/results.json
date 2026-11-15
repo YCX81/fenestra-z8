@@ -1,0 +1,67 @@
+{
+  "schema": "v60-freeze-audit/v1",
+  "status": "PASS",
+  "date": "2026-11-15",
+  "scope": "Offline host test of extracted freeze() plus V60 production rule and extracted is_cfr(); not firmware execution or camera verification",
+  "cases": 1474560,
+  "trimmed_cases": 483840,
+  "near_press_guard_cases": 7560,
+  "coverage": {
+    "frame_counts": [
+      1,
+      128
+    ],
+    "cfr_grid_phases": 30,
+    "ring_heads": [
+      0,
+      255,
+      200
+    ],
+    "ring_prefix_entries": 3,
+    "press_positions": "every selected frame timestamp, and +1 microsecond except beyond the last selected frame"
+  },
+  "checks": [
+    "successful freeze publication",
+    "at most one frame removed",
+    "press retained within clip and at or before last frame",
+    "selected frame timestamps and pointers",
+    "byte count",
+    "33366/33367 microsecond last frame duration",
+    "is_cfr() accepts resulting clip",
+    "audio sample-window length consistent within one sample"
+  ],
+  "sanitizers": [
+    "AddressSanitizer",
+    "UndefinedBehaviorSanitizer"
+  ],
+  "sanitizer_reports": 0,
+  "fixture_sha256": "1228b0bf3e600274a1ec069f8c09f55c9cb99f2edb47f40d7155e26128823c85",
+  "source_files": [
+    {
+      "path": "build-tools/livediag/feat-v53/integration-g-final/work/src-fix37/capture/live_stream.c",
+      "sha256": "59b735c64afe83903c14f7531ee99dcfd58fd3ab6074a084a7003ddba5ae2010"
+    },
+    {
+      "path": "build-tools/livediag/feat-onemov/patch_om7.py",
+      "sha256": "e77d7f48495df3ab07cb7010fc4bdb8ad2238a492a80d780bd80e28886a88e1d"
+    },
+    {
+      "path": "build-tools/livediag/feat-v53/integration-g-final/work/src-fix37/codec/live_mov.c",
+      "sha256": "2da20c693acbc32c50951c70beaa63a086c70c6e46fd2cda71c4a2447f4a5dcf"
+    }
+  ],
+  "extracted_fragments": {
+    "freeze_with_production_rule_sha256": "2bd0843397da4373230c3930b71a3d990119832ec65c31e2f8c773d65e1693e8",
+    "production_rule_sha256": "a60399964a6ff71d4b3bfef285cef5ffb03aba414cd200e8fe1b3ab02f9f0df4",
+    "is_cfr_sha256": "ef0e2caa53bf4dea4acce74cc1da4a949cb5922d425b960a7a82578b79410489"
+  },
+  "provenance_checked_on_save": "Extracted current source fragments exactly occur in the already executed temporary fixture; saved test.c is byte-identical to that fixture.",
+  "command": "sh build-tools/livediag/feat-onemov/v60-diagnosis/freeze/run.sh",
+  "observed_stdout": "PASS: 1474560 actual-freeze cases; trimmed=483840, near-press guard=7560; all successful phases, bytes, CFR, press containment, audio-window counts consistent",
+  "limits": [
+    "ring copy/find operations are host stubs",
+    "test structs contain the fields required by extracted functions; firmware ABI/layout not tested",
+    "audio sample count checked arithmetically; audio backend not executed",
+    "no concurrent workers, writer I/O, QEMU, USB, storage card or camera execution"
+  ]
+}

@@ -14707,6 +14707,46 @@
       "sha256": "428a36ff3e4330102665304b0da5c899c477272a4fd4ec4e46614e75acfb3993"
     },
     {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v60-diagnosis/RESULT.md",
+      "bytes": 7593,
+      "sha256": "ee84288455b816a435841f7629324dc1565b6f0b7cebe495d3c4c7b50ef4f79e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v60-diagnosis/cache-repro/RESULT.md",
+      "bytes": 7240,
+      "sha256": "dff5f51fab5736d3a4ef5e947d47283d5877b93b837577f0cf3c94f5e63232f9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v60-diagnosis/capture-log-analysis.md",
+      "bytes": 3546,
+      "sha256": "b99476e5a1ada1ac8c2b601c9837240f567b52dfd8d9583e8cc090e082c82d4f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v60-diagnosis/card-lookup-analysis.md",
+      "bytes": 3123,
+      "sha256": "1984e75da487ac0755d08f21bccf337554184d4dc3072fd4082c489f93e81352"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v60-diagnosis/freeze/README.md",
+      "bytes": 1547,
+      "sha256": "16d208cb85dd7a14d1506c9ced4ba10a0e421336951e6c56b4bf309a4ad2c599"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v60-diagnosis/freeze/results.json",
+      "bytes": 2846,
+      "sha256": "b400f72ab14d4775fd1f5bba5571a8d834c451ba7d4269d2b385e81fcf06fccb"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v60-diagnosis/freeze/run.sh",
+      "bytes": 307,
+      "sha256": "570eddf6547910d7efdfe888cdd14d446a18bee9f7864b820c509540bce576fe"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v60-diagnosis/freeze/test.c",
+      "bytes": 5052,
+      "sha256": "1228b0bf3e600274a1ec069f8c09f55c9cb99f2edb47f40d7155e26128823c85"
+    },
+    {
       "path": "research/z8-live/build-tools/livediag/feat-onemov/v60-source/pb-fix37/core-include/fenestra.h",
       "bytes": 4109,
       "sha256": "d7113bdacb270d0045cd33837130a860bd81150b0df9da79fd82b47c23e70d03"
@@ -42575,6 +42615,11 @@
       "path": "research/z8-live/build-tools/w5/test_idr.c",
       "bytes": 2078,
       "sha256": "081fb857eadc829aa0d36ba8d0ed0917b30d933067dd1288006ba732f05bb2a0"
+    },
+    {
+      "path": "research/z8-live/export-diagnosis-v60.json",
+      "bytes": 3153,
+      "sha256": "32bae6574a8e2421c44db04d9d8aa9cde40982423b47d68cf6bf3852724d39cf"
     },
     {
       "path": "research/z8-live/export-foundation-v60.json",

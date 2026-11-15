@@ -1,0 +1,14 @@
+{
+ "release_status": "qemu_test_candidate", "base": "v58 d6fe25c2 (v59 16a4ef21 superseded: turned the video track VFR when the rule fired)",
+ "main_sha256": "641725cec49a702a9440e790a6495b6aef4fb0f7ef5a71b6acbda2719ba47d49",
+ "source_patches": ["patch_e3.py", "patch_om1.py", "patch_om3.py", "patch_om4.py", "patch_om5.py", "patch_om6.py", "patch_om7.py (rule in capture/live_stream.c freeze())"],
+ "physical_camera_verified": false,
+ "hardware_controls_plain_dcim_movie": {"freeze": {"LIV_0010": 100, "LIV_0011": 100, "LIV_0012": 100, "LIV_0016": 97}, "ok": {"LIV_0013": 99, "LIV_0014": 99, "LIV_0015": 98}},
+ "rule": "at freeze: if count>3 and count%3==1 and the previous frame is still after the press: drop last AU, clip_end = its pts",
+ "qemu": {
+  "forced_3k1_no_rule": {"frames": 88, "cfr": true, "end": "page 0x56c, stop(2), page 0x552"},
+  "forced_3k1_with_rule": {"frames": 90, "cfr": true, "audio_frames": 144144, "ffmpeg_decode": true, "native_pictures": 91, "end": "page 0x56c, page 0x552", "failed_checks": 0},
+  "release_build_capture": {"passed_on_second_run": true, "first_run": "harness menu navigation did not enable Live (three QEMUs in parallel); no firmware assertion", "frames": 92, "audio_frames": 147347}},
+ "playback_layer": "byte-identical to v58", "root_cause_known": false,
+ "not_fixed": ["existing 3k+1 clips", "shutter sound while Live records"]
+}

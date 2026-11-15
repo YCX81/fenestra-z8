@@ -1,0 +1,13 @@
+{
+ "release_status": "qemu_test_candidate", "base": "v55 34cf691b",
+ "main_sha256": "c7e0bc51c8656e60775f18cec5d17f9e9f2009c44f5b70eb7c5b5b691d49342d",
+ "source_patches": ["patch_e3.py", "patch_om1.py", "patch_om3.py", "patch_om4.py"],
+ "physical_camera_verified": false,
+ "change": "live_shutter_z8.c allowed() returns 0: SFX requests are never held, microphone never paused for the shutter tone",
+ "hardware_evidence_v55": {"boot_with_log": {"DSC_9075": "mute on, audio ok", "DSC_9076": "mute off, hand-off captured 0, audio ok", "DSC_9077": "mute off, hand-off captured 0, audio ok"},
+  "earlier_boot_no_log": {"DSC_9070..9074": "silent fallback track (recording failed)"}, "user_report": "Off: audio continuous; On: some clips freeze at end of playback, some do not"},
+ "capture": {"passed": true, "video_frames": 93, "audio_frames": 148949, "zero_runs": []},
+ "playback": "playback layer byte-identical to v55 (silent-track clip: 94 pictures, 11 LPCM jobs, 235 checks)",
+ "inference_not_proven": "freeze caused by the hand-off; no log survived from a boot that froze",
+ "not_fixed": "shutter sound while Live records"
+}

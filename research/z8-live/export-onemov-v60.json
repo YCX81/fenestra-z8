@@ -1,0 +1,281 @@
+{
+  "schema": "z8.source-export/v1",
+  "date": "2026-11-15",
+  "scope": "through v60; v61/v62 excluded",
+  "transforms": [
+    "workstation paths replaced with /path/to placeholders",
+    "CRLF normalized to LF"
+  ],
+  "files": [
+    {
+      "source": "build-tools/livediag/feat-onemov/README.md",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/README.md",
+      "source_sha256": "5a6be225c7d6572ea8855782a512a48d0937a6300c5f59bd68349a12520ee314",
+      "published_sha256": "99f8bd297a8240b7e5f7c5d5ae9f05cad8844697d6d180c54c65e239206683eb"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/README54.txt",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/README54.txt",
+      "source_sha256": "0e83ed74f7b45bfd92551f43e21dd81c159bcbfaf88dd1cb00fae01024e25b07",
+      "published_sha256": "0e83ed74f7b45bfd92551f43e21dd81c159bcbfaf88dd1cb00fae01024e25b07"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/README55.txt",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/README55.txt",
+      "source_sha256": "36b38f40fff1faeb18bf6cfdd0420abb1e9a9b36fde07243319d81fc198fa1e8",
+      "published_sha256": "36b38f40fff1faeb18bf6cfdd0420abb1e9a9b36fde07243319d81fc198fa1e8"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/README56.txt",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/README56.txt",
+      "source_sha256": "d3956b6ce3cba094f093f8d4dc6531a5fa92db0f7dfee6bffde561b447e1d9a4",
+      "published_sha256": "d3956b6ce3cba094f093f8d4dc6531a5fa92db0f7dfee6bffde561b447e1d9a4"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/README57.txt",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/README57.txt",
+      "source_sha256": "1b42a1a8e2c3b22673aec6fe832d38a5930c3c448dae7a16d28ed88466e2193c",
+      "published_sha256": "1b42a1a8e2c3b22673aec6fe832d38a5930c3c448dae7a16d28ed88466e2193c"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/README58.txt",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/README58.txt",
+      "source_sha256": "700576abcb93b12192353eeb81783e468f7880a339f9ed60f17a03e92a0146b6",
+      "published_sha256": "700576abcb93b12192353eeb81783e468f7880a339f9ed60f17a03e92a0146b6"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/README59.txt",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/README59.txt",
+      "source_sha256": "324e4d59af2e721a70504df41872b5d02fc89540187a2ecddcc75a1c222ce177",
+      "published_sha256": "324e4d59af2e721a70504df41872b5d02fc89540187a2ecddcc75a1c222ce177"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/README60.txt",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/README60.txt",
+      "source_sha256": "3e0dd0c96dae0a50974fbb5d80f226283af36596a3de7d824879c427be72cdcb",
+      "published_sha256": "3e0dd0c96dae0a50974fbb5d80f226283af36596a3de7d824879c427be72cdcb"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/build_onemov.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/build_onemov.py",
+      "source_sha256": "e746e20fcc08bf0e10c0136a6a344a09e2b8b22bcbe0960ead4471fdc0f3cb34",
+      "published_sha256": "27a52fd7eeeff9dad59ef93cc07b34fcc30db534d2094b3814048fa733f27ff7"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/cap.sh",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/cap.sh",
+      "source_sha256": "227eb9bb886e6b2faf53a60bf86193064604bdd038dac90333280f9afeed7814",
+      "published_sha256": "865a2f5fd06a7c6c7283f044152bbf09b6db2daa10354f897aebcfedca13ca09"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/drop_last_frame.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/drop_last_frame.py",
+      "source_sha256": "fa11e97b5743d3da1b6d197b7505bd94dab603c5d822e747c2548a43732a2ec9",
+      "published_sha256": "fa11e97b5743d3da1b6d197b7505bd94dab603c5d822e747c2548a43732a2ec9"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/fwd.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/fwd.py",
+      "source_sha256": "edfd5eee1bc64fff4c5ec389d0f67a073ddae8aaa179ef8c14fcc39bbbde893e",
+      "published_sha256": "79e56eb886199ea8b955a0c4aa1ca4b89cad637305ca019e4eed3e1567847eff"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/go.sh",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/go.sh",
+      "source_sha256": "15da6445ff1603d422ffb63d3ebcb06d9658456d3092492d1e2f5a5dacdafd2f",
+      "published_sha256": "99667e6464455af8e8d94cee83ec9f61c02254e46e0cfa2e5dc5658084bea643"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/livelog.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/livelog.py",
+      "source_sha256": "70f4953313928418ecef0fe2c6b274055af006e7e1dc5d181eb2ebc1af2e7cdc",
+      "published_sha256": "70f4953313928418ecef0fe2c6b274055af006e7e1dc5d181eb2ebc1af2e7cdc"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/movinfo.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/movinfo.py",
+      "source_sha256": "313756fd6ecbc65946501569c37724299472031eba264e4ed677f4312f737a32",
+      "published_sha256": "313756fd6ecbc65946501569c37724299472031eba264e4ed677f4312f737a32"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/nbobs.c",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/nbobs.c",
+      "source_sha256": "24f16851210232df0a06ae169b73acca823b374235d479e5f662b1f72d6ce8f2",
+      "published_sha256": "24f16851210232df0a06ae169b73acca823b374235d479e5f662b1f72d6ce8f2"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/pack54.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/pack54.py",
+      "source_sha256": "b48de3359214cba123888dd6863bd5320d109f91406ed41f3a3c8d2df8ecb53e",
+      "published_sha256": "8b0df7ae7bde64afa36d00e4b98b9acb9e4625f3023a055f2748fdd559aab677"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/pack55.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/pack55.py",
+      "source_sha256": "d9646d8469015dcb9e1aa24672e1eaf78b2c5257ae4119ec0eeb09cae7aa7cc9",
+      "published_sha256": "0998a87feca467eb66f5f0a5ac4e6f677bac86c6505b3bf46c880db9a50015b5"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/pack56.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/pack56.py",
+      "source_sha256": "7e0cd1f1a0a1bb6733002abffa2e430528b780bf47241297bde10c3c358415a9",
+      "published_sha256": "3e7366cb1757cf85066ef029ad8d82e52ac02900002fb012f8b1e11d100f395b"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/pack57.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/pack57.py",
+      "source_sha256": "74adbd8c3c16a832abb75c66c054aa5c7c3603485a10b678ada7d7d55de8fbe6",
+      "published_sha256": "df46762eb6d939759f2de68d94bd71c531d2a5f8f700f89ba642861a65bbd61b"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/pack58.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/pack58.py",
+      "source_sha256": "674655178f84e99fec932fddf2fd186795bbeeae479655013e889bb1e5187735",
+      "published_sha256": "b6de629929cbe521febcef4efd57c462d65593fdd66c79ba7eb030a352482460"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/pack59.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/pack59.py",
+      "source_sha256": "4c54b797cba64749d9de1d15f7499372211e43356fbc0087df3cb65ffb333dce",
+      "published_sha256": "ec13201fc9eb4b23288214a0a5578956a42ab31a8436904582f4fc9a879df91f"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/pack60.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/pack60.py",
+      "source_sha256": "13c3c119a0c2783e47ba84e45f297c47cdec7a8e030ccc4b148576532b18fffa",
+      "published_sha256": "5e26fe806bdddcdc56eae545619c5f67bb9f98811986622de401ef67ef7cc4d9"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/patch_e1.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/patch_e1.py",
+      "source_sha256": "e2bb80cd70e86c55a27e5d60ea6d85b982c6466002140d714b8e4acde826a755",
+      "published_sha256": "e2bb80cd70e86c55a27e5d60ea6d85b982c6466002140d714b8e4acde826a755"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/patch_e3.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/patch_e3.py",
+      "source_sha256": "b7dfd97a4c327ecd6beee1ec7b6c7cb72967ef613430d8e4e985fbc547ae4492",
+      "published_sha256": "b7dfd97a4c327ecd6beee1ec7b6c7cb72967ef613430d8e4e985fbc547ae4492"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/patch_om1.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/patch_om1.py",
+      "source_sha256": "0bff41fc1ce5e863fcceaffae5f6ae31b2293e95a96e43cd9e00800ce3ace2a1",
+      "published_sha256": "0bff41fc1ce5e863fcceaffae5f6ae31b2293e95a96e43cd9e00800ce3ace2a1"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/patch_om3.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/patch_om3.py",
+      "source_sha256": "8c38de0c5a6dce20682e1c112991f6336f8815aa97ae270417f2c9654bb5fbc5",
+      "published_sha256": "8c38de0c5a6dce20682e1c112991f6336f8815aa97ae270417f2c9654bb5fbc5"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/patch_om3s.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/patch_om3s.py",
+      "source_sha256": "c4116a6b1a82fb66a4d6d19d1b70445ca240f7a3adc0254db050e44f2b6112e0",
+      "published_sha256": "c4116a6b1a82fb66a4d6d19d1b70445ca240f7a3adc0254db050e44f2b6112e0"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/patch_om4.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/patch_om4.py",
+      "source_sha256": "33529164df51f0894c8311d23270914fd1ef94e7e182d887fc5c6f1b52f2ada8",
+      "published_sha256": "33529164df51f0894c8311d23270914fd1ef94e7e182d887fc5c6f1b52f2ada8"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/patch_om5.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/patch_om5.py",
+      "source_sha256": "cce7767fd5cb2f2a46481f1afc64400ffdc3d72bda38a905f0ca5ee9b89bfe69",
+      "published_sha256": "cce7767fd5cb2f2a46481f1afc64400ffdc3d72bda38a905f0ca5ee9b89bfe69"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/patch_om6.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/patch_om6.py",
+      "source_sha256": "bfb90f9ad8ac649b05f2a26adcf11837de3e6cd9e3fad5033885a95ed65510fc",
+      "published_sha256": "bfb90f9ad8ac649b05f2a26adcf11837de3e6cd9e3fad5033885a95ed65510fc"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/patch_om6f.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/patch_om6f.py",
+      "source_sha256": "4130d43648dfaec2c725028e4e22b7a97049ac6f9131d0c6e164f6cb84aa54e9",
+      "published_sha256": "4130d43648dfaec2c725028e4e22b7a97049ac6f9131d0c6e164f6cb84aa54e9"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/patch_om7.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/patch_om7.py",
+      "source_sha256": "e77d7f48495df3ab07cb7010fc4bdb8ad2238a492a80d780bd80e28886a88e1d",
+      "published_sha256": "e77d7f48495df3ab07cb7010fc4bdb8ad2238a492a80d780bd80e28886a88e1d"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/patch_om7f.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/patch_om7f.py",
+      "source_sha256": "2b0511afc69a3b105c001fc2d1abd3548e4b08c0762166af4bd6c5a3ba0eedcc",
+      "published_sha256": "2b0511afc69a3b105c001fc2d1abd3548e4b08c0762166af4bd6c5a3ba0eedcc"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/run-nb.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/run-nb.py",
+      "source_sha256": "dd5381e92a9a546bedab8692656f69f720c063cbcd208f01a228619f12b247ab",
+      "published_sha256": "bf9b5d4ee7ff7b018d54cdb7fab27ab2de3d7535106d318f19fdf331ef9a0a25"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/sum2.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/sum2.py",
+      "source_sha256": "04045a5cdf9b439c0e57ab2af63da45340a1ade51e47210e41df7cf9326a1f55",
+      "published_sha256": "04045a5cdf9b439c0e57ab2af63da45340a1ade51e47210e41df7cf9326a1f55"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/sumtrace.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/sumtrace.py",
+      "source_sha256": "05b255fe8bfa25a2c0fa536333a8ab534e0a24f65018cef94f50ec85f9a06f54",
+      "published_sha256": "05b255fe8bfa25a2c0fa536333a8ab534e0a24f65018cef94f50ec85f9a06f54"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/trim_audio.py",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/trim_audio.py",
+      "source_sha256": "428a36ff3e4330102665304b0da5c899c477272a4fd4ec4e46614e75acfb3993",
+      "published_sha256": "428a36ff3e4330102665304b0da5c899c477272a4fd4ec4e46614e75acfb3993"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/verification54.json",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/verification54.json",
+      "source_sha256": "0dba6db5723fbee3824e85d3964948073da9cf90a79afce04082b03359001f74",
+      "published_sha256": "0dba6db5723fbee3824e85d3964948073da9cf90a79afce04082b03359001f74"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/verification55.json",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/verification55.json",
+      "source_sha256": "f5af2776f97ce533b28efdc260e5e683757be4444e67a5c54f42f870b95ff280",
+      "published_sha256": "f5af2776f97ce533b28efdc260e5e683757be4444e67a5c54f42f870b95ff280"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/verification56.json",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/verification56.json",
+      "source_sha256": "2314fc99d72d4a54fe218878dd186ab61c74bec1b512c8b6a267ec0d6fff7868",
+      "published_sha256": "2314fc99d72d4a54fe218878dd186ab61c74bec1b512c8b6a267ec0d6fff7868"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/verification57.json",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/verification57.json",
+      "source_sha256": "c570f5f05de88118f17ca0d1b0b471506e161fc9142e888046ddbbc8d4fa7ab2",
+      "published_sha256": "c570f5f05de88118f17ca0d1b0b471506e161fc9142e888046ddbbc8d4fa7ab2"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/verification58.json",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/verification58.json",
+      "source_sha256": "03f2c17f389a84a88e5256d908793c381b5c42b31043d6f59ada69c55c84ac38",
+      "published_sha256": "03f2c17f389a84a88e5256d908793c381b5c42b31043d6f59ada69c55c84ac38"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/verification59.json",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/verification59.json",
+      "source_sha256": "ae315424380451d87583c70e7e08847ef03660e815b95a49b3abe2f1518bb76d",
+      "published_sha256": "ae315424380451d87583c70e7e08847ef03660e815b95a49b3abe2f1518bb76d"
+    },
+    {
+      "source": "build-tools/livediag/feat-onemov/verification60.json",
+      "destination": "research/z8-live/build-tools/livediag/feat-onemov/verification60.json",
+      "source_sha256": "51e247ff3c9405fa7215f16cc2725ac5aea8d9c0a3942cde93eab2f9275948f9",
+      "published_sha256": "51e247ff3c9405fa7215f16cc2725ac5aea8d9c0a3942cde93eab2f9275948f9"
+    }
+  ]
+}

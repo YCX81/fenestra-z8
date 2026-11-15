@@ -1,0 +1,21 @@
+{
+ "release_status": "qemu_test_candidate",
+ "base": "v53 G MAIN c14894087d5fd03b0124c7d94f6cd521e94def58831a087738145ef91b60fcd2 source tree integration-g-final",
+ "main_sha256": "d417c5a288c74657a1e334b90385ad4cd4a29ae7279676864ccbe137e13e80ab",
+ "source_patches": ["patch_e3.py", "patch_om1.py", "build_onemov.py (5 extra BL sites: 4063b958 402d9ba0 4085fcc0 40711334 + v53 compose)"],
+ "physical_camera_verified": false,
+ "capture": {"qemu": "v53-tx16-counter-merged-v3", "mode": "on", "passed": true,
+  "files": ["DCIM/100NCZ_8/DSC_0001.JPG", "LIVE/100NCZ_8/DSC_0001.JPG", "LIVE/100NCZ_8/DSC_0001.MOV 1086381 B", "LIVEDATA/100NCZ_8/DSC_0001.MAN 112 B"],
+  "mov_atoms": ["ftyp 24", "mdat 976324", "moov 110033"], "preview_atom": false,
+  "video": "hevc 1024x682 91 frames 3.036 s", "audio": "pcm_s24le 145746 frames", "ffmpeg_full_decode": true},
+ "playback_new_file": {"qemu": "v53-tx16-counter-rdw-v3 + codec peer", "card": "files of the capture run above", "checks": 237, "failed": 0,
+  "native_pictures": 92, "lpcm_jobs": 11, "unknown_mmio": 0, "entered_page": "0x56c", "returned_page": "0x552", "index_restored": true},
+ "playback_v53_file": {"native_pictures": 97, "lpcm_jobs": 11, "checks": 235, "failed": 0, "note": "v53 MOV with LVJ1 preview atom; atom ignored"},
+ "stock_4k": {"qemu": "rdw", "native_pictures": 95, "lpcm_jobs": 11, "checks": 235, "failed": 0},
+ "not_verified": [
+  "leaving the movie page mid-playback: QEMU hangs after the stock stop call for an ordinary 4K movie as well (model limit), so the 0.4 s background restore path never ran",
+  "delete refusal inside the movie page",
+  "sound output, aspect on the real panel/EVF, Live-On decoder handoff on hardware",
+  "two-card shooting with the bridge"
+ ]
+}

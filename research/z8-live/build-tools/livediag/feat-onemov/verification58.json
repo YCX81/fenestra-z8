@@ -1,0 +1,11 @@
+{
+ "release_status": "qemu_test_candidate", "base": "v57 5328dc05 (never on card) / v56 c7e0bc51",
+ "main_sha256": "d6fe25c2ee68e40955be1cf81238f06b2fe339a0475afeb4bcf2edafae4161b3",
+ "source_patches": ["patch_e3.py", "patch_om1.py", "patch_om3.py", "patch_om4.py", "patch_om5.py", "patch_om6.py"],
+ "physical_camera_verified": false,
+ "user_report": "DSC_9072 and DSC_9076 freeze every time (v56); both 100 video frames / 160160 audio frames",
+ "qemu_observation": "9076 ends with stock stop(2)+teardown, 4910 reset to the photo and a photo decode BEFORE the page switch; 9077 switches page directly",
+ "change": "no ui_leaving clear in the return hook; worker: stage 3 -> restore + badge after 2.5 s; stage 2 fallback only after 1 s outside playback or 5 s with 4910 changed",
+ "qemu": {"hw_clip_9076_twice": {"native_pictures": 202, "lpcm_jobs": 22, "checks": 237, "failed": 0}, "hw_clip_9077_twice": {"native_pictures": 200, "lpcm_jobs": 22, "checks": 235, "failed": 0}},
+ "live_layer": "byte-identical to v56", "not_reproduced": "freeze", "not_fixed": "shutter sound while Live records"
+}

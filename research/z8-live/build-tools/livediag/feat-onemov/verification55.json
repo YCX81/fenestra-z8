@@ -1,0 +1,13 @@
+{
+ "release_status": "qemu_test_candidate", "base": "v54 d417c5a2 (one-MOV) on v53 G c1489408",
+ "main_sha256": "34cf691bf1b401a3012c7d9de369754c104c4c3d7f89fda30c0bc915f1a5cac7",
+ "source_patches": ["patch_e3.py", "patch_om1.py", "patch_om3.py"],
+ "physical_camera_verified": false,
+ "hardware_evidence_20261115": {"no_audio_track": ["DSC_9064", "DSC_9065", "DSC_9067"], "audio_with_150ms_zero_at_press": ["DSC_9066", "DSC_9068", "DSC_9069"], "user_report": "shutter-on clips freeze at end of playback; dropout at shutter; no shutter sound"},
+ "changes": ["silent sound track when recording failed", "exposure duck removed (gain unity)", "flight-log record 31 with shutter hand-off counters", "unused live_preview_write removed"],
+ "capture_normal": {"passed": true, "video_frames": 94, "audio_frames": 150551, "zero_runs_s": [[1.651, 0.050], [1.901, 0.066]], "note": "runs are the QEMU shutter-tone hand-off, press at 1.602 s; no 0.150 s duck"},
+ "capture_forced_silent_test_build": {"passed": true, "audio_frames": 148948, "all_zero": true},
+ "playback_silent_clip": {"native_pictures": 94, "lpcm_jobs": 11, "checks": 235, "failed": 0, "returned_page": "0x552"},
+ "not_reproduced": "end-of-clip freeze with a no-audio clip (QEMU plays it to the end)",
+ "not_fixed": "shutter sound while Live records"
+}

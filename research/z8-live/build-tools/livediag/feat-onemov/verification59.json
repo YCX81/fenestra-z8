@@ -1,0 +1,12 @@
+{
+ "release_status": "qemu_test_candidate", "base": "v58 d6fe25c2",
+ "main_sha256": "16a4ef21fd8a0498feb7ff22c0d166c40f2bc2d69589b79f064b92797e7d901d",
+ "source_patches": ["patch_e3.py", "patch_om1.py", "patch_om3.py", "patch_om4.py", "patch_om5.py", "patch_om6.py", "patch_om7.py"],
+ "physical_camera_verified": false,
+ "hardware_evidence": {"freeze_as_plain_dcim_movie": ["LIV_0010 (=9076)", "LIV_0011 (audio -1)", "LIV_0012 (audio -1602)"], "ok": ["LIV_0013 (=9077, 99 frames)"],
+  "freezing_frame_counts": {"DSC_9064": 91, "DSC_9065": 91, "DSC_9072": 100, "DSC_9076": 100}},
+ "qemu_end_path_by_frames": {"player_stop2": [91, 91, 94, 100], "clean": [93, 96, 99]},
+ "change": "count-- when count>3 and count%3==1; recorded audio clamped to count*8008/5 frames",
+ "capture": {"passed": true, "video_frames": 92, "audio_frames": 147347, "transaction_error": 0, "drop_branch_exercised": false},
+ "playback_layer": "byte-identical to v58", "root_cause_known": false, "not_fixed": "shutter sound while Live records; existing 3k+1 clips"
+}

@@ -1,0 +1,12 @@
+{
+ "release_status": "qemu_test_candidate", "base": "v56 c7e0bc51",
+ "main_sha256": "5328dc057d8ba4e4be338c0f557c9104d70593cac2db05e9a84d321c3a1723e8",
+ "source_patches": ["patch_e3.py", "patch_om1.py", "patch_om3.py", "patch_om4.py", "patch_om5.py"],
+ "physical_camera_verified": false,
+ "user_report": "v55: DSC_9076 froze at end of playback (audio ok, shutter hand-off not engaged)",
+ "change": "return hook marks stage 3 only; hooks stay active for stage>=2; worker restores the DCF member bit 1.5 s later under the DCF lock; nb_start sets bit and stage under the same lock",
+ "qemu": {"hw_clip_9076_twice": {"native_pictures": 202, "lpcm_jobs": 22, "checks": 237, "failed": 0, "sequence": "start, stop(2), teardown, return, restore; twice"},
+          "hw_clip_9077": {"native_pictures": 100, "lpcm_jobs": 11, "sequence": "start, return, restore", "failed_check": "unmodeled MMIO 0xd154340 at harness power-down (also on v56 control)"}},
+ "live_layer": "byte-identical to v56 (capture regression passed there)",
+ "not_reproduced": "end-of-playback freeze", "not_fixed": "shutter sound while Live records"
+}

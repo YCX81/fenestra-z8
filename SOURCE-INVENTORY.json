@@ -43,8 +43,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 8280,
-      "sha256": "bf70894810d0dc271ee1b963f8b213f2e3fc1b2f018a28456b5fa768990ce379"
+      "bytes": 19191,
+      "sha256": "edfd161083ff503e24cfa3531372c88e913d2584fef1669b45d51bec93938f86"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "bytes": 20339,
+      "sha256": "b573f87703a8550f64afaf304c5e39d9a91e2e5f58ebb61f05e039696394f77f"
     },
     {
       "path": "docs/api-reference.md",
@@ -70,6 +75,81 @@
       "path": "docs/getting-started.md",
       "bytes": 7230,
       "sha256": "e79a657eafb6241f1c1534c5b1a7379e7784cc693f6ac0529646886fbcf5c751"
+    },
+    {
+      "path": "docs/images/abnormal-shutdown.png",
+      "bytes": 115871,
+      "sha256": "284119ed7dec252ac550935a2ffd4533df38e4315f872ad48631666758f7461d"
+    },
+    {
+      "path": "docs/images/c64-slot-list.png",
+      "bytes": 106274,
+      "sha256": "62d7a0bc982d61c30ce1bfa002ffd2c80eb48f1ff8e152cb5c37258d0a89a55a"
+    },
+    {
+      "path": "docs/images/demo-module.png",
+      "bytes": 40332,
+      "sha256": "ca28608b41dd406dcdf6be650d2c255f9469bbcdfd3b398a1df2a3ac165c23f0"
+    },
+    {
+      "path": "docs/images/evf-viewfinder-live.png",
+      "bytes": 34441,
+      "sha256": "48c81de216ae2899062cc126628a12482fc3b5a9de4966e306168922909c4d35"
+    },
+    {
+      "path": "docs/images/fenestra-menu.png",
+      "bytes": 94680,
+      "sha256": "c23c6823da3f41ba31bd8574666a79071eb7614a6d1f3f33f74b43567888c536"
+    },
+    {
+      "path": "docs/images/live-badge-states.png",
+      "bytes": 18427,
+      "sha256": "1898a794991705872fc709d31445dd07304b19e4d37e799ca1d0a65b52c400ca"
+    },
+    {
+      "path": "docs/images/live-photo-menu.png",
+      "bytes": 45991,
+      "sha256": "52f2674c0fcda7090b898a09307865038bf3b36e3832c977487f73c072b8cbc5"
+    },
+    {
+      "path": "docs/images/liveview-lcd-live.png",
+      "bytes": 110705,
+      "sha256": "61ee812c63559c440c97de0cfc17076dbd16af07dfdf864265cb4a8c61eed4e7"
+    },
+    {
+      "path": "docs/images/playback-live-photo.png",
+      "bytes": 92880,
+      "sha256": "18a44c262fd51d418703c0635b18b29f12f50d8c2016dd3a1f0d739a9347c8ab"
+    },
+    {
+      "path": "docs/images/playback-mov-player.png",
+      "bytes": 84396,
+      "sha256": "87c7281a46168f9481d07508e22ceb53b6899a104ffce69a52bbdf3275214b53"
+    },
+    {
+      "path": "docs/images/portrait-video-rec.png",
+      "bytes": 93871,
+      "sha256": "59c9745ae3110dfca4914d684a21f2d374f257e6505f563d89c3287bb37911e9"
+    },
+    {
+      "path": "docs/images/portrait-video-standby.png",
+      "bytes": 91196,
+      "sha256": "e8ec68e074c9ee5f1303c9a5b4a80ee4b40ad5b024d0cb108a091abefbf9c41a"
+    },
+    {
+      "path": "docs/images/setup-menu.png",
+      "bytes": 121644,
+      "sha256": "6cd6799a7f7c204464d18b7c3c9f1f9698f6406bb3970be9358efba90b4dfe4e"
+    },
+    {
+      "path": "docs/images/slot-card-c64.png",
+      "bytes": 70870,
+      "sha256": "9412401f489a13580c2c17d04263420e57d3a82e2c5d587486140a133d6ac918"
+    },
+    {
+      "path": "docs/images/video-log-settings.png",
+      "bytes": 81277,
+      "sha256": "e7a8ce621bbe7bc277319fa9e62687bb456171b2cc5f54ec109b25f5886ef872"
     },
     {
       "path": "docs/module-development.md",
@@ -14563,8 +14643,8 @@
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-onemov/RELEASE-v62.md",
-      "bytes": 5029,
-      "sha256": "772dead80615c529b661b4b023abf7f289d644d1cfe7c20b80b6d10e456598a3"
+      "bytes": 4993,
+      "sha256": "74251939f62deac63735e125da8ee09eaed642aacc6e9c8d1f53d8118ac4a09f"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-onemov/build_onemov.py",

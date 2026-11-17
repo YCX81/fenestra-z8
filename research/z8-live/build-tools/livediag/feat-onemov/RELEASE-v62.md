@@ -37,4 +37,4 @@ MAIN SHA256：`36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5`
 
 已合并的 Mac `fenestra-z8-v37` 与 Windows/WSL `v37cs` 工作树清理前均备份；Mac 保存 9 个改动文件及补丁，WSL 保存完整 6345 文件副本及补丁。备份分别位于工作区外的 `worktree-backups/v37-before-removal-20261115` 和 WSL 的 `worktree-backups/v37cs-before-removal-20261115`。仍供构建使用的 WSL `v51src`、未合并 portrait 分支和 QEMU 实验树保留。
 
-2026-11-15 后续清理：portrait 工作树合并到 QEMU main 后备份删除；WSL 的 v37hevc-src、v37src、v39src、v40src 已确认源码归档覆盖且无活跃引用，备份删除。其余含未归档历史改动或构建引用的目录保留，详情见[仓库 README](../../../../../README.md#worktree-cleanup--工作树清理2026-11-15)。未重复编译测试。
+2026-11-15 后续清理：portrait 工作树合并到 QEMU main 后备份删除；WSL 的 v37hevc-src、v37src、v39src、v40src 已确认源码归档覆盖且无活跃引用，备份删除。其余含未归档历史改动或构建引用的目录（如 WSL `v41src`、`v43src`–`v50src`、`v51src`）继续保留。未重复编译测试。

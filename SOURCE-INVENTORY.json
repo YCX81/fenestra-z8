@@ -38,18 +38,18 @@
     },
     {
       "path": "PUBLICATION.json",
-      "bytes": 1799,
-      "sha256": "f31c56393f244ef3ea789f200ea1503d7d9ab244c1ab3763eb75764aeada90b7"
+      "bytes": 1905,
+      "sha256": "fc734eed03d724ee765ba58c6dadc7e4f328345ab5a08e496663e5251f934416"
     },
     {
       "path": "README.md",
-      "bytes": 28434,
-      "sha256": "84e66ff63a650abb6161fe7889599c7bb05851493866a0aac7adf49b34e92231"
+      "bytes": 28863,
+      "sha256": "6e8cf37236c09e98c55221b8bb530b1c6e16e9c14fc5c6a57ff4c0b7faf6d832"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 25379,
-      "sha256": "9579dc50d6096e259cc85a25b3c540ee030d734aaf2f1dca301db608344e6e9a"
+      "bytes": 25738,
+      "sha256": "be0da185e77ac525a1f96018f28c3135bbaca4774984fdb3bba69f79a5668ded"
     },
     {
       "path": "docs/api-reference.md",
@@ -23855,6 +23855,11 @@
       "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/dryrun_wsl_compile.py",
       "bytes": 10249,
       "sha256": "d447c9c461bcaa3b6c67e4ce87920ebf36763934bb9ec52bc97a4e954368a912"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/filmsim_section.ld.inc",
+      "bytes": 1041,
+      "sha256": "391042a009542367d350a3952118a689eae76cb0d3d156c3120691c110592121"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/patch_photo_v69.py",
@@ -52425,6 +52430,91 @@
       "path": "research/z8-live/export-v62.json",
       "bytes": 377107,
       "sha256": "574af288d0dc5922e2b07947e3303cb6a622e97dd7286652cafb8ca1512b28d7"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/README.md",
+      "bytes": 3446,
+      "sha256": "eed81fbf38baae101ae83f9b45c933f3595832bd29239ef252dd544cdc72b7fb"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/cardslot_v71r4/build_cardslot.py",
+      "bytes": 7401,
+      "sha256": "3790772be4e5b47798a528367e3f458a05c41438c625047d5645164057ee145b"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/cardslot_v71r4/cardslot.c",
+      "bytes": 12293,
+      "sha256": "f102fd9fb4586bf51301ae4a98041e3a66bafbda98019372889607b406358cb4"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/legacy_steps/c64_gate_patch.py",
+      "bytes": 5917,
+      "sha256": "7a4944fcfa91f0aa591e4e9cba9f90014d64e0562eee9060d7c4a8debf612db1"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/legacy_steps/c64_move.py",
+      "bytes": 6941,
+      "sha256": "8c7f8a389ef699839b598d55181e7ac629913eab1279d89370e12c5083e06f95"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/legacy_steps/meta_handler_patch.py",
+      "bytes": 1537,
+      "sha256": "34866d251716ca60f1b80fd2ffe29394cfc957e24b50a0fa7e54a2ed9cc208e0"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/legacy_steps/osd_tableb_fix.py",
+      "bytes": 2093,
+      "sha256": "10fe8c0812852a779621ed50c72de4bb260783e7623ae180b8d377f39609adc1"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/legacy_steps/portrait_gate_patch.py",
+      "bytes": 7687,
+      "sha256": "7213430809ffc071d977b161c6f514d73c03645f66b4e720345ff36711ff4e41"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/nfp_v050/build_nfp_v050_bundle.py",
+      "bytes": 45420,
+      "sha256": "5bd0d53dc51e1ca43f511f680d040c6fe884824ccf08daaac5f6da426348240b"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/nfp_v050/manifest.json",
+      "bytes": 771592,
+      "sha256": "25196da15f6e26051f071c34ed5ef1b9f431534a71374ce2b86b53685d5b6af7"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/nfp_v050/v050_bundle.bin",
+      "bytes": 407906,
+      "sha256": "96685b010c4aa1cacfac75acd1b7df85ec2376d0b249ad58284ea3d877f583f7"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/portrait_pb/audit_portrait_pb.py",
+      "bytes": 6296,
+      "sha256": "3e47082b7780c0e8bfd95eb4e2f220efeaf5ec40ddbe8971ce9c3be0f122629a"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/portrait_pb/patch_portrait_pb.py",
+      "bytes": 18524,
+      "sha256": "e63be8190251da064bc5de8625bbaf099cec813df0a0dc223783ae9222692dac"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/xm6_elf0/coexist_nikondma/coexist_manifest.json",
+      "bytes": 9981,
+      "sha256": "4f73dac1e9932f47aa5e29e017ac3aaf2d9156473dad55e94c5eba5e8fa60ff9"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/xm6_elf0/coexist_nikondma/rodata_idm_0x0003bc40.bin",
+      "bytes": 2016,
+      "sha256": "2c70df3b3f3884c6026bf203c14832b2aaeafb0ea9b8f096b6020205d108b2af"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/assets/xm6_elf0/coexist_nikondma/text_z8fx_0x418c4580.bin",
+      "bytes": 156736,
+      "sha256": "5a1d2771eab00f4e1771fc0556bf50ed239ff0a73eaf89a55c6efb4d190ddcd2"
+    },
+    {
+      "path": "research/z8-live/from-stock-v71r7/build.py",
+      "bytes": 59587,
+      "sha256": "c95267f19b4abbfc41795a08370c4d5bc1b73c1c789c507b6d91a6ad7b546132"
     },
     {
       "path": "research/z8-live/from-stock/.gitignore",

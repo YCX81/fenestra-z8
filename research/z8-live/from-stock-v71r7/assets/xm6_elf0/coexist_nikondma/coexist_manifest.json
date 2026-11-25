@@ -1,0 +1,314 @@
+{
+  "schema": "v71r6.xm6_elf0_coexist_manifest/v1",
+  "variant": "coexist_nikondma",
+  "phase": "V71.6/V71.7-XM6 Production Hardware NikonDMA Monolithic 2-PHDR (Slot 39/40 Zf FilmGrain + Slot 41 Ricoh HDF v2, fixed .ds2 + 16B DMA align)",
+  "target_firmware": "Nikon Z8 C3.11 z8_xm6_elf0.elf (CEVA-XM6 Core 0, RTL v1.2.0, FP=1, VFP=0)",
+  "toolchain": {
+    "suite": "CEVA-ToolBox V18.0.3 (win-lab)",
+    "compiler": "clang++ 7.1.0 (20200127.1)",
+    "arch_flags": [
+      "--target=cevaxm6-unknown-unknown-elf",
+      "-mcpu=rtlv1.2.0",
+      "-mfp=1",
+      "-mvfp=0",
+      "-mnonlinear=2"
+    ],
+    "filmgrain_flags": [
+      "-O2",
+      "-DXM6_TARGET_Z8_ELF0",
+      "-DXM6_USE_NIKON_DMA",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-ffunction-sections",
+      "-fdata-sections"
+    ],
+    "hdf_v2_flags": [
+      "-O3",
+      "-fmerge-all-constants",
+      "-DXM6_TARGET_Z8_ELF0",
+      "-DXM6_USE_NIKON_DMA",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-ffunction-sections",
+      "-fdata-sections"
+    ],
+    "link_flags": [
+      "--gc-sections",
+      "-u",
+      "Z8_FilmGrain_Slot39_40",
+      "-u",
+      "Z8_RicohHdf_Slot41",
+      "-T",
+      "z8_elf0_coexist.ld"
+    ]
+  },
+  "source_inputs": {
+    "zf_grain_xm6_opt.cpp": {
+      "bytes": 69429,
+      "sha256": "d7db315e3c7af02a1a91f9899ad55dd7c26944f49f63d5ce237648a278ab7fe1"
+    },
+    "zf_grain_xm6_ref.h": {
+      "bytes": 6277,
+      "sha256": "6464e2bff4a594364e3361e4863d2f1cadf291222848d792d854607916b4ffba"
+    },
+    "ricoh_hdf_xm6_opt.cpp": {
+      "bytes": 294620,
+      "sha256": "cf4677cb901ffed04862d9cb82eca51625ac6341441d9327e5641b19ba1f28e5"
+    },
+    "xm6_hdf_simd.h": {
+      "bytes": 19318,
+      "sha256": "5440f55d286e9c171d189f3f264b5fb747933f4bf9d19561f661b8eb7769c154"
+    },
+    "ricoh_hdf_xm6_v2.h": {
+      "bytes": 9601,
+      "sha256": "4d33c7854632390bed16d6b06cb2fff53123841d474b12fbf9392978d3f1bc0c"
+    },
+    "z8_elf0_coexist.ld": {
+      "bytes": 2914,
+      "sha256": "90981bb4104116c15f1213734a4acc40cf297203e9517ee795dc956ec985584d"
+    }
+  },
+  "entries": {
+    "Z8_FilmGrain_Slot39_40": {
+      "vma_hex": "0x418c4580",
+      "vma_u32": 1099711872,
+      "size_bytes": 66,
+      "slots": [
+        39,
+        40
+      ]
+    },
+    "Z8_RicohHdf_Slot41": {
+      "vma_hex": "0x418c45e0",
+      "vma_u32": 1099711968,
+      "size_bytes": 166,
+      "slots": [
+        41
+      ]
+    }
+  },
+  "function_table_patch": {
+    "table_symbol": "g_NikonDspFrameworkFunctionTable",
+    "table_base_idm_vma": "0x000394b8",
+    "patches": [
+      {
+        "slot": 39,
+        "purpose": "FilmGrain Still (EXACT/SHARP, NikonDMA 16B-aligned)",
+        "idm_vma": "0x00039554",
+        "elf0_offset": "0x00b774",
+        "main_main_offset": "0x01528214",
+        "stock_vma": "0x418bbdc0",
+        "new_vma": "0x418c4580",
+        "new_vma_u32": 1099711872,
+        "new_le_hex": "80458c41"
+      },
+      {
+        "slot": 40,
+        "purpose": "FilmGrain EVF / Video (EXACT/SHARP, NikonDMA 16B-aligned)",
+        "idm_vma": "0x00039558",
+        "elf0_offset": "0x00b778",
+        "main_main_offset": "0x01528218",
+        "stock_vma": "0x418bbdc0",
+        "new_vma": "0x418c4580",
+        "new_vma_u32": 1099711872,
+        "new_le_hex": "80458c41"
+      },
+      {
+        "slot": 41,
+        "purpose": "Ricoh Optical HDF v2 (LIVE_256_YC + STILL_GENERAL, NikonDMA, 0x .ds2)",
+        "idm_vma": "0x0003955c",
+        "elf0_offset": "0x00b77c",
+        "main_main_offset": "0x0152821c",
+        "stock_vma": "0x418bbdc0",
+        "new_vma": "0x418c45e0",
+        "new_vma_u32": 1099711968,
+        "new_le_hex": "e0458c41"
+      }
+    ]
+  },
+  "sections": {
+    ".text.z8fx": {
+      "phdr_idx": 14,
+      "p_flags": "0x5",
+      "p_align": 32,
+      "vma": "0x418c4580",
+      "end_vma": "0x418ea9c0",
+      "size_bytes": 156736,
+      "budget_bytes": 158336,
+      "headroom_bytes": 1600,
+      "byte_order": "expeed7_16byte_reversed",
+      "expeed7_reversed_file": "text_z8fx_0x418c4580.bin",
+      "expeed7_reversed_sha256": "5a1d2771eab00f4e1771fc0556bf50ed239ff0a73eaf89a55c6efb4d190ddcd2",
+      "raw_le_file": "text_z8fx_0x418c4580_raw_le.bin",
+      "raw_le_sha256": "35d567a011aa3c2224b68ef2e9f718266848c5ab7d71dde69d15ef5544ad89f1"
+    },
+    ".rodata.z8fx": {
+      "phdr_idx": 15,
+      "p_flags": "0x4",
+      "p_align": 32,
+      "vma": "0x0003bc40",
+      "end_vma": "0x0003c420",
+      "size_bytes": 2016,
+      "target_budget_bytes": 2048,
+      "headroom_to_2kib_bytes": 32,
+      "idm_gap_budget_bytes": 5056,
+      "headroom_to_stack_0x3d000_bytes": 3040,
+      "byte_order": "little_endian",
+      "file": "rodata_idm_0x0003bc40.bin",
+      "sha256": "2c70df3b3f3884c6026bf203c14832b2aaeafb0ea9b8f096b6020205d108b2af"
+    },
+    ".data": {
+      "size_bytes": 0
+    },
+    ".bss": {
+      "size_bytes": 0
+    }
+  },
+  "audits": {
+    "all_passed": true,
+    "rcheck_full": {
+      "zf_grain_o": {
+        "file": "obj/zf_grain_nikondma.o",
+        "exit_code": 0,
+        "passed": true,
+        "violation_count": 0,
+        "violation_lines": [],
+        "output_tail": []
+      },
+      "ricoh_hdf_xm6_v2_o": {
+        "file": "obj/ricoh_hdf_nikondma.o",
+        "exit_code": 0,
+        "passed": true,
+        "violation_count": 0,
+        "violation_lines": [],
+        "output_tail": []
+      },
+      "combined_coexist_o": {
+        "file": "out_nikondma/z8_xm6_coexist_nikondma.o",
+        "exit_code": 0,
+        "passed": true,
+        "violation_count": 0,
+        "violation_lines": [],
+        "output_tail": []
+      },
+      "linked_coexist_elf_with_pmss_stub": {
+        "file": "out_nikondma/z8_xm6_coexist_nikondma_rcheck.elf",
+        "exit_code": 0,
+        "passed": true,
+        "violation_count": 0,
+        "violation_lines": [],
+        "output_tail": [],
+        "text_bit_identical_to_shipped_elf": true,
+        "verified_text_sha256": "35d567a011aa3c2224b68ef2e9f718266848c5ab7d71dde69d15ef5544ad89f1"
+      }
+    },
+    "obj_unresolved_symbols": [
+      "_ZN8NikonDMA11WaitRequestEjj",
+      "_ZN8NikonDMA15DispatchRequestEPvPKvPKNS_10DescriptorE",
+      "_ZN8NikonDMA18CreateDescriptor1DEPNS_10DescriptorEjjNS_12TRANSFER_DIRENS_13TRANSFER_MODEE",
+      "_ZN8NikonDMA18CreateDescriptor2DEPNS_10DescriptorEjjjjjNS_12TRANSFER_DIRENS_13TRANSFER_MODEE",
+      "_ZN8NikonDMA21DispatchRequestNoSyncEPvPKvPKNS_10DescriptorE",
+      "memset"
+    ],
+    "linked_unresolved_symbols": [],
+    "external_calls": {
+      "_ZN8NikonDMA11WaitRequestEjj": "0x00002ac0",
+      "_ZN8NikonDMA18CreateDescriptor1DEPNS_10DescriptorEjjNS_12TRANSFER_DIRENS_13TRANSFER_MODEE": "0x000023c0",
+      "_ZN8NikonDMA15DispatchRequestEPvPKvPKNS_10DescriptorE": "0x00002960",
+      "memset": "0x00006300",
+      "_ZN8NikonDMA21DispatchRequestNoSyncEPvPKvPKNS_10DescriptorE": "0x00002560",
+      "_ZN8NikonDMA18CreateDescriptor2DEPNS_10DescriptorEjjjjjNS_12TRANSFER_DIRENS_13TRANSFER_MODEE": "0x00002480"
+    },
+    "external_call_counts": {
+      "_ZN8NikonDMA11WaitRequestEjj": 6,
+      "_ZN8NikonDMA18CreateDescriptor1DEPNS_10DescriptorEjjNS_12TRANSFER_DIRENS_13TRANSFER_MODEE": 2,
+      "_ZN8NikonDMA15DispatchRequestEPvPKvPKNS_10DescriptorE": 6,
+      "memset": 26,
+      "_ZN8NikonDMA21DispatchRequestNoSyncEPvPKvPKNS_10DescriptorE": 3,
+      "_ZN8NikonDMA18CreateDescriptor2DEPNS_10DescriptorEjjjjjNS_12TRANSFER_DIRENS_13TRANSFER_MODEE": 1
+    },
+    "fp_instructions_found": 0,
+    "soft_fp_symbols_found": 0,
+    "hdf_v1_dead_symbols_found": 0,
+    "isa_gather_audit": {
+      "vpld_histogram": {
+        "vpld{abs} (rX.ui+vXl.c32).ds+#0": 21,
+        "vpld{abs} (rX.ui+vXh.c32).ds+#0": 21,
+        "vpld{abs} (rX.ui+vX.s16).uc+#0": 22,
+        "vpld{abs} (rX.ui+vX.s16).ds+#0": 36
+      },
+      "vpld_illegal_ds2_c2_c4_s2_count": 0,
+      "vpst_count": 0
+    },
+    "slot41_avoids_0x41930000_uses_0x41930040": true,
+    "stack_audit": {
+      "freertos_task_stack_bytes": 12288,
+      "budget_bytes": 1024,
+      "worst_overall_bytes": 552,
+      "filmgrain_worst_chain_asm": {
+        "total_bytes": 12,
+        "chain": [
+          {
+            "function": "Z8_FilmGrain_Slot39_40",
+            "frame_bytes": 12
+          }
+        ]
+      },
+      "filmgrain_worst_chain_disasm": {
+        "total_bytes": 552,
+        "chain": [
+          {
+            "function": "Z8_FilmGrain_Slot39_40",
+            "frame_bytes": 12
+          },
+          {
+            "function": "zf_grain_xm6_run",
+            "frame_bytes": 536
+          },
+          {
+            "function": "_ZL10pad_row_u8Phjjii",
+            "frame_bytes": 4
+          }
+        ]
+      },
+      "ricoh_hdf_worst_chain_asm": {
+        "total_bytes": 8,
+        "chain": [
+          {
+            "function": "Z8_RicohHdf_Slot41",
+            "frame_bytes": 8
+          }
+        ]
+      },
+      "ricoh_hdf_worst_chain_disasm": {
+        "total_bytes": 20,
+        "chain": [
+          {
+            "function": "Z8_RicohHdf_Slot41",
+            "frame_bytes": 8
+          },
+          {
+            "function": "ricoh_hdf_xm6_v2_run",
+            "frame_bytes": 0
+          },
+          {
+            "function": "_ZL15run_live_256_ycPK14Z8Xm6HdfParamsPK15Z8Xm6ImageParamP14Xm6LiveV2IdmWsP14Xm6LiveV2ExtWsPK9HdfDmaCtxP15Z8Xm6HdfProfile",
+            "frame_bytes": 0
+          },
+          {
+            "function": "_ZL12hdf_dma_2d_rPK9HdfDmaCtxPvjyjjj",
+            "frame_bytes": 0
+          },
+          {
+            "function": "_ZL19nikon_dma_2d_r_syncPvjyjjj",
+            "frame_bytes": 8
+          },
+          {
+            "function": "_ZL14nikon_dma_waitjj",
+            "frame_bytes": 4
+          }
+        ]
+      }
+    }
+  }
+}

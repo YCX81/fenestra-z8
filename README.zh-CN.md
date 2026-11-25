@@ -18,7 +18,7 @@
 > [!IMPORTANT]
 > **编译、升级与验收边界必读**
 > - **不分发专有文件**：本仓库**不分发**任何预编译固件二进制（`.bin` / `.main`）、Nikon 密钥或提取出的 `ZF_GRAIN.BIN` / `.cube` 素材，你必须自行准备官方 Nikon Z8 `C3.11` 原厂固件（`Z_8_0311.bin` 或提取的 `MAIN`）。
-> - **分清公开构建范围**：根目录 `host/build_z8_core.py` 生成的是**仅供 [`z8-qemu`](https://github.com/YCX81/z8-qemu) 模拟器运行的裸 `MAIN` 镜像**，**严禁**当作升级包刷机；`research/z8-live/from-stock/build.py` 仅凭原厂 `Z_8_0311.bin` 即可重现 `v36`。
+> - **分清公开构建范围**：根目录 `host/build_z8_core.py` 生成的是**仅供 [`z8-qemu`](https://github.com/YCX81/z8-qemu) 模拟器运行的裸 `MAIN` 镜像**，**严禁**当作升级包刷机；`research/z8-live/from-stock/build.py` 仅凭原厂 `Z_8_0311.bin` 即可重现 `v36`；**[`research/z8-live/from-stock-v71r7/build.py`](research/z8-live/from-stock-v71r7/README.md)** 现已支持**在单机 Linux/WSL 下仅凭原厂 `Z_8_0311.bin` 逐字节从零重建完整 `V71.7-r7`**（`main.main` `362ee2a5...` 与 `Z_8_0406.bin` `eca451be...`，零私有中间固件依赖，并支持 `--no-xm6` 纯 `clang` 构建与 `--skip-fontzh`）。
 > - **真机 vs 仿真验证诚实状态（`V71.7-r7`：`physical_camera_verified = false`）**：
 >   - `V71.1–V71.6` 在实体 Nikon Z8 上的实拍、USB 只读探针与 Live `.MOV` 取证直接驱动了 `V71.7-r7` 的四项核心流畅度根修。
 >   - **`V71.7-r7`（`362ee2a5`，Bootguard `0x8394568f`）** 已通过全部自动化验证——**CEVA-XM6 `dcli.exe` 51/51 PASS**、**0-Q-Spill 静态审计（1,114 函数，0 spill）**、**Host ASan+UBSan 全套（`lut_core` 8/8、`xm6_bridge` 9/9、`layer0` 9/9、`photo_menu` 6/6）**、**6 套 ARM64/Unicorn 套件**（含 5 插件 0 缺字审计）以及 **两套整机 QEMU 验收（`#19-r7` 14/14 PASS、`#20-r7` 13/13 PASS）**；当前明确标记为 **`physical_camera_verified = false`**，待真机刷写并复测 EVF/背屏帧率、XM6 回退率与实拍 Live `.MOV` 后半段帧率。

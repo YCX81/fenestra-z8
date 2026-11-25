@@ -38,18 +38,18 @@
     },
     {
       "path": "PUBLICATION.json",
-      "bytes": 1187,
-      "sha256": "26ef4f926430e1af8e9bf19254141cb6ea3e99c6d47fac50ba2788cabf7faa7a"
+      "bytes": 1274,
+      "sha256": "231f841eb01f986d49fcdda5c3f833d298afacd0467ba3124e53fdbad795416d"
     },
     {
       "path": "README.md",
-      "bytes": 19191,
-      "sha256": "edfd161083ff503e24cfa3531372c88e913d2584fef1669b45d51bec93938f86"
+      "bytes": 25084,
+      "sha256": "3da101bb26681363e5618d8b3106e76893245c2b978ec2df1fcef016eb144efa"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 20339,
-      "sha256": "b573f87703a8550f64afaf304c5e39d9a91e2e5f58ebb61f05e039696394f77f"
+      "bytes": 22124,
+      "sha256": "b03e1686e148e5445de4f3ece47caf37ff9762320608c75cae32f2686655b034"
     },
     {
       "path": "docs/api-reference.md",
@@ -67,9 +67,14 @@
       "sha256": "42596abe9476ad1bf9cfd693f051187770b724b1fbe99c19751e5fa428ef89ec"
     },
     {
+      "path": "docs/features-and-usage.md",
+      "bytes": 33952,
+      "sha256": "227a11e92b7c6fa0115804565692c661647315aa3b009bca420ef2a8b9d67748"
+    },
+    {
       "path": "docs/features-and-usage.zh-CN.md",
-      "bytes": 12998,
-      "sha256": "9cb0e94c9259d80fb410bc68d164daed69e2edc80a278dfbe24b21bf21930a4e"
+      "bytes": 27753,
+      "sha256": "e075c86078475a1b43c09a5ba91bda1de7c5f18a91eb7ae48d7318f57be5ae0f"
     },
     {
       "path": "docs/getting-started.md",
@@ -145,6 +150,211 @@
       "path": "docs/images/slot-card-c64.png",
       "bytes": 70870,
       "sha256": "9412401f489a13580c2c17d04263420e57d3a82e2c5d587486140a133d6ac918"
+    },
+    {
+      "path": "docs/images/v71-fenestra-settings-zh.png",
+      "bytes": 103694,
+      "sha256": "b278cdfa1ea8cddb1285899ad05b41b845c9e00b9f8b348049266ae52ba43ac7"
+    },
+    {
+      "path": "docs/images/v71-filmsim-4case-proof.png",
+      "bytes": 479108,
+      "sha256": "4f253dbced9f6a56cee562bfa847191c413f1f1d9bd2e222b6fec0940029e309"
+    },
+    {
+      "path": "docs/images/v71-filmsim-bottom-en.png",
+      "bytes": 104671,
+      "sha256": "7eb71340d3dba8a33abafad0a48ec152893e20e2750250c132ce35eb053af95d"
+    },
+    {
+      "path": "docs/images/v71-filmsim-bottom-zh.png",
+      "bytes": 117940,
+      "sha256": "70e2d313f42cfa84283639519c0bc7571c69f403e29200121da0bea1e78d347e"
+    },
+    {
+      "path": "docs/images/v71-filmsim-hdf-picker-en.png",
+      "bytes": 63458,
+      "sha256": "1ff84133cf312a5973e544ebf47cb529a11f39c42735f33a9d81705a2a9a2053"
+    },
+    {
+      "path": "docs/images/v71-filmsim-hdf-picker-zh.png",
+      "bytes": 53795,
+      "sha256": "6a5baf44b57b3603db5cf38859ad72eb9e52555f2f60c284d9e24d80ff7295eb"
+    },
+    {
+      "path": "docs/images/v71-filmsim-mid-en.png",
+      "bytes": 102503,
+      "sha256": "e12901fa03a681a39b9d8332bc75240abfe96474b758b5eca86927c21c6861f7"
+    },
+    {
+      "path": "docs/images/v71-filmsim-mid-zh.png",
+      "bytes": 138085,
+      "sha256": "44ad89aadc8961fe1c3c5a0ca6c6c07a3c63793b0c6336ce61f08119fa83a4a1"
+    },
+    {
+      "path": "docs/images/v71-filmsim-reset-en.png",
+      "bytes": 64614,
+      "sha256": "b475ec11e864ead728a0ac4b72bb39e770b47f38b5ed298b140ab1b0695ee0c6"
+    },
+    {
+      "path": "docs/images/v71-filmsim-reset-zh.png",
+      "bytes": 71798,
+      "sha256": "624dbf260f9e17cbc39c7d60381a153b334129152cc28e90afe811094990c55b"
+    },
+    {
+      "path": "docs/images/v71-filmsim-style-picker-en.png",
+      "bytes": 46321,
+      "sha256": "5b3c8b8cb3280827a45c74ebf502ac004fcf9291b947312675105a98d32db30b"
+    },
+    {
+      "path": "docs/images/v71-filmsim-style-picker-zh.png",
+      "bytes": 60421,
+      "sha256": "9b975566f936b46e1a91997d035ace4a3da9711f890b86b7d5d9e4d8f6a92589"
+    },
+    {
+      "path": "docs/images/v71-filmsim-top-en.png",
+      "bytes": 106322,
+      "sha256": "6075680aece8b8a08cd8f812bb1cbf0be76ea25963c5adf938896412e08860fe"
+    },
+    {
+      "path": "docs/images/v71-filmsim-top-zh.png",
+      "bytes": 147628,
+      "sha256": "446a1f3c8c50ce4b1104dad8b730cf6fab48c21cb4241949a6dc4f8c8234688c"
+    },
+    {
+      "path": "docs/images/v71-live-pb-key-zh.png",
+      "bytes": 40295,
+      "sha256": "637d0d89596d0fbf7332d64a64d03b6dc0738068b889ad279468da8902982df2"
+    },
+    {
+      "path": "docs/images/v71-live-photo-zh.png",
+      "bytes": 46196,
+      "sha256": "baa6899b23bff28a091b9d85fbb0f1d5f68e95101814adb9b288c504c54d7714"
+    },
+    {
+      "path": "docs/images/v71-plugin-manager-en.png",
+      "bytes": 54794,
+      "sha256": "22654c462ff4b9ee596335b56ad43564c7908d95d2756a0402bdaef06e1aec35"
+    },
+    {
+      "path": "docs/images/v71-plugin-manager-zh.png",
+      "bytes": 70756,
+      "sha256": "101b9bb054bd86f691e48cecd9a90983e301c7da12684d9d3eb42b4cf42d0cf3"
+    },
+    {
+      "path": "docs/images/v71-portrait-wlm-en.png",
+      "bytes": 65409,
+      "sha256": "649cd6b0efa1d341a6bbccd6e46253c360ca4eb3a1745dd4785c4d39b881c4d8"
+    },
+    {
+      "path": "docs/images/v71-portrait-wlm-zh.png",
+      "bytes": 73105,
+      "sha256": "5264e9a9b117d1dccd5621a3e1b9f0abf48b3a89467b93374cd7d87d3d81639a"
+    },
+    {
+      "path": "docs/images/v71-setup-plugin-manager-en.png",
+      "bytes": 121023,
+      "sha256": "ed98b2b9310090f12f88dad44c0c87b7d824d754e48301fa2d14a70bfc272077"
+    },
+    {
+      "path": "docs/images/v71-setup-plugin-manager-zh.png",
+      "bytes": 112080,
+      "sha256": "71c4365586862bdc30264502ffe060da699c34aeb2692bfc9bbf68062d9cdf6e"
+    },
+    {
+      "path": "docs/images/v71-slotcard-en.png",
+      "bytes": 101060,
+      "sha256": "07859195a8a56caa3715389fcc4588a2bd44f96309c85938859b408189dac2b7"
+    },
+    {
+      "path": "docs/images/v71-slotcard-zh.png",
+      "bytes": 105885,
+      "sha256": "cdc0a12fc7bddb95ad6be4a031f1b1212ec97af09203e95ca70d96dfc5125e39"
+    },
+    {
+      "path": "docs/images/v715-c64-fn-strip-zh.png",
+      "bytes": 78912,
+      "sha256": "db1f2edff51c6b00c66df5ff396f0539d3731b9f84271b43d0c8c17f992572e7"
+    },
+    {
+      "path": "docs/images/v715-c64-imenu-zh.png",
+      "bytes": 89023,
+      "sha256": "68cd593664af664c4daf47f3907777759a948f0c0eade5b765a34a435bee2dfe"
+    },
+    {
+      "path": "docs/images/v715-filmsim-blur-picker-zh.png",
+      "bytes": 45923,
+      "sha256": "57b969b7109a122eedf16f0dc94440c68f30c1da683c753589bdd0c3a929c9b0"
+    },
+    {
+      "path": "docs/images/v715-filmsim-bottom-zh.png",
+      "bytes": 120215,
+      "sha256": "40dcdcdff08bb81df066bded2e0ce10f16a5ea9f970713b3ba68d23d171d6f6c"
+    },
+    {
+      "path": "docs/images/v715-filmsim-top-zh.png",
+      "bytes": 142221,
+      "sha256": "e1678ea710a30778b278c8e650d8b671f2c062368667e10f87b4afaa9f8af7ef"
+    },
+    {
+      "path": "docs/images/v717-fenestra-home-zh.png",
+      "bytes": 92545,
+      "sha256": "24d65289808d49acac020ac31639833c8d8053a3b7717b95e72a3335f7bc1b9b"
+    },
+    {
+      "path": "docs/images/v717-filmsim-debug-zh.png",
+      "bytes": 128693,
+      "sha256": "0f7bd845bd58a6c48478059ac26f4cc74da54ef4e563c2454ad2b9bc274de0d9"
+    },
+    {
+      "path": "docs/images/v717-filmsim-root-zh.png",
+      "bytes": 149582,
+      "sha256": "9b3b7cfaa796c16e93316fd7632db713837de4c8173a4f10fa984d029ee0fb2c"
+    },
+    {
+      "path": "docs/images/v717-livephoto-root-zh.png",
+      "bytes": 93035,
+      "sha256": "4955a9583f907dad27bea6e9299166ff9079fab9ffbc3fc56c033e939a89c28e"
+    },
+    {
+      "path": "docs/images/v717-lut-categories-zh.png",
+      "bytes": 31276,
+      "sha256": "68699c6c3bf75d07fc6b6c01778afa6eb5480fcc099ddf0cb65e69753645d38e"
+    },
+    {
+      "path": "docs/images/v717-lut-list-zh.png",
+      "bytes": 33650,
+      "sha256": "bcb7a4bbb027abf2a4a28a447797b96fc845b98a90a80f3a250112b6e001ecd4"
+    },
+    {
+      "path": "docs/images/v717-lut-liveview-active.png",
+      "bytes": 110955,
+      "sha256": "e15fc101481e2d7c626f50aa3f623e08a354cb0114ca1fc650f12a40ccc39280"
+    },
+    {
+      "path": "docs/images/v717-lut-loaded-zh.png",
+      "bytes": 36551,
+      "sha256": "72fe03f1c6e58930c625979eed8bcd5fd3542ac6fb9a7d9d36db5c727a76436c"
+    },
+    {
+      "path": "docs/images/v717-lut-photo-menu-zh.png",
+      "bytes": 114856,
+      "sha256": "b10cc0091fd3c918a8b405405ef60e6e8d5e3ec460d1649251f8290deeea2d04"
+    },
+    {
+      "path": "docs/images/v717-lut-plugin-root-zh.png",
+      "bytes": 111677,
+      "sha256": "cec2a6b11978d197a6244c62fab43c4bb28a530b457735d5601a79ff71e21750"
+    },
+    {
+      "path": "docs/images/v717-plugin-manager-5wlm-zh.png",
+      "bytes": 88191,
+      "sha256": "61676aa739e0fb3c8d99dbac8f6355ca55a1f6a51882996b6173f22b287f3289"
+    },
+    {
+      "path": "docs/images/v717-xm6-diag-zh.png",
+      "bytes": 134201,
+      "sha256": "5ed8f3d05e15b0aa71769a56fa716d948cb40655b896f9e1bb022cf6c37f1126"
     },
     {
       "path": "docs/images/video-log-settings.png",
@@ -1075,6 +1285,121 @@
       "path": "modules/demo/sdk.c",
       "bytes": 5746,
       "sha256": "bf264f9ab62cfc921aaa0bf10cc04b6a1ddcb1827132ca43c8c4a971bf12e6ea"
+    },
+    {
+      "path": "modules/filmframe/filmframe_abi.h",
+      "bytes": 3958,
+      "sha256": "aaca0d13c6fc32967323de280b35685ae0355c97c46e5ecf601313a54493137d"
+    },
+    {
+      "path": "modules/filmframe/filmframe_core.h",
+      "bytes": 49629,
+      "sha256": "be3cf717a98fdca9203138e6bd304ccd0624b61a38b1769a4758e9494d9ef009"
+    },
+    {
+      "path": "modules/filmframe/module.c",
+      "bytes": 268,
+      "sha256": "a8eb4a0b9aa770a09b8e99eff2dce76d86f2d2e6ca1ac829849de07c6abdd9f2"
+    },
+    {
+      "path": "modules/filmsim/build_wlm_zh.py",
+      "bytes": 8938,
+      "sha256": "3582e33487feedba338cc8dfc1643e8e043b67b583e3ab74fe2ac9a45fbee3d8"
+    },
+    {
+      "path": "modules/filmsim/filmsim_abi.h",
+      "bytes": 34625,
+      "sha256": "eeac3e243fc4c6038a75a8fd80635d0f03a916f86b55de5445b0388eff511b7e"
+    },
+    {
+      "path": "modules/filmsim/filmsim_core.h",
+      "bytes": 129568,
+      "sha256": "b1ca87386094dc56527ff39f1d6b9b4854a64bfb55effa459a748bc5234aad52"
+    },
+    {
+      "path": "modules/filmsim/module.c",
+      "bytes": 262,
+      "sha256": "c1e4d33f13f8e4645d128026a562ea4fa92aceb0dd5df4f1a00b918d83cf6eea"
+    },
+    {
+      "path": "modules/livephoto/build_livephoto_wlm.py",
+      "bytes": 7465,
+      "sha256": "2decf9b724a7ab938cf9d91750d631cc59ae349eebc4291b4e3aa44dddf24d5a"
+    },
+    {
+      "path": "modules/livephoto/livephoto_abi.h",
+      "bytes": 9014,
+      "sha256": "f4ec85f3a60ff52f619e80d1683162ce2ce7be09b8ee40739fbfe3d9cd59bc40"
+    },
+    {
+      "path": "modules/livephoto/livephoto_core.h",
+      "bytes": 53768,
+      "sha256": "7e1bd042440b4f83eb35d7db909edcd45fdb89ce435c4c58fc9f32ecc40e8646"
+    },
+    {
+      "path": "modules/livephoto/module.c",
+      "bytes": 261,
+      "sha256": "e0a181f9c528b6446f840d7fce02960bb3bfd796ce6f816f30bea1e386035908"
+    },
+    {
+      "path": "modules/lut/build_lut_wlm.py",
+      "bytes": 7373,
+      "sha256": "30c6f59d7bbb28f87dca293f7ec9e8f997dfd125bdb463f204c9e8cae96f13ee"
+    },
+    {
+      "path": "modules/lut/lut_core.h",
+      "bytes": 53546,
+      "sha256": "06150ec0a7d25ae0b7d8aba9cde45a187832360bdd1ffbcd4c455695005f266f"
+    },
+    {
+      "path": "modules/lut/lut_wlm_abi.h",
+      "bytes": 8289,
+      "sha256": "a3ec28dfe2415ea0c4275858932c780b6195d25b8ad40910e5bd88400d6ad2d7"
+    },
+    {
+      "path": "modules/lut/module.c",
+      "bytes": 249,
+      "sha256": "c91c5295450df550fa89893a59efcda3f0c69d605fb2e7b0c8dc558e1ad17333"
+    },
+    {
+      "path": "modules/portrait/build_portrait_wlm.py",
+      "bytes": 7273,
+      "sha256": "938e9be661c4e877aa7df4331e871ac2ee9a9145e52c6dabc34dad18148db227"
+    },
+    {
+      "path": "modules/portrait/module.c",
+      "bytes": 15535,
+      "sha256": "1f7b4e83550296c1182dc3b31cf9b3fa11669d001b2abc5ee3ed8a29970e6f13"
+    },
+    {
+      "path": "modules/slotcard/build_and_verify_wlm.py",
+      "bytes": 8451,
+      "sha256": "6d8920dce5a762691ad107b06f1496d77d20574a49430e68aa67ada0ad368404"
+    },
+    {
+      "path": "modules/slotcard/module.c",
+      "bytes": 106084,
+      "sha256": "f8ed2b4531e1da75bbe3a1799fa4fd4ab1ec2a7a7aa2fa26cc0e97532d1fea8a"
+    },
+    {
+      "path": "modules/slotcard/pack_np3_z8fx.py",
+      "bytes": 22417,
+      "sha256": "78fcaea1ccd304a53c5775afd88a38ed29aa10a475de4633a6321830823301d1"
+    },
+    {
+      "path": "modules/slotcard/slotcard.c",
+      "bytes": 24435,
+      "sha256": "c27018c09587d10a99e175f784fe98d78fe20e00b9e036313732240babf577eb"
+    },
+    {
+      "path": "modules/slotcard/slotcard.h",
+      "bytes": 3918,
+      "sha256": "488e0e6f10a035342a12b74022a66c85a44e50bf891ea7a95949910f904b1af0"
+    },
+    {
+      "path": "modules/slotcard/slotcard_cfg.h",
+      "bytes": 11660,
+      "sha256": "4945798531945eb6fd3b35485baccfb644fb9991b3faabc6daf4f7a0c969f5ca"
     },
     {
       "path": "patcher.py",
@@ -23095,6 +23420,2956 @@
       "path": "research/z8-live/build-tools/livediag/feat-onemov/v62/work/src-fix37/ui/test_ui.py",
       "bytes": 6311,
       "sha256": "bb5a82ab1f9b0d20f93a53bcc23ab1474d7447db0f21e338bcfc01938dbee66d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/callsite-guards-r5.json",
+      "bytes": 6080,
+      "sha256": "087d54ac5e0eee8ddf3063bb1b56cb9981043dc6cbefb3e3391b72c250894992"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/patch_boot_panic03_cardslot.py",
+      "bytes": 26372,
+      "sha256": "a17c8c6acbe2c4f7ef6d02868cff38e2c57ec40848934ce1f492a2fd769a075a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/patch_c64_imenu_ui.py",
+      "bytes": 59702,
+      "sha256": "ec93887f32e5f2eeee7dc65bd8e273decdaa85a2a0d7177c3c6d59f3fa97032c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/patch_menu_context.py",
+      "bytes": 4653,
+      "sha256": "84af6f32ad552628cf1ad283d8e224c2372f6091226cfc118aec614c0c260e94"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/patch_menu_fallback.py",
+      "bytes": 6012,
+      "sha256": "d8f20d592aac4f31f31d5913ad540fe342a5d6e6660414eb1e3d4960b8f774d3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/patch_nfp_v050.py",
+      "bytes": 25532,
+      "sha256": "6498fbed357274a08531740006ac373acb6fd35da18e531b3c2716fdee94ae8d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/patch_review_call.py",
+      "bytes": 2528,
+      "sha256": "8701b25663fe6302d1f2900ba5085df693f230ff4632b9e740668691bd497543"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/patch_shutter_calls.py",
+      "bytes": 2152,
+      "sha256": "2103285656a4e98b4b97d40af36c19a3ede543bc898f3bdcf37eb7cbb0cb06a0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/patch_xm6_elf0_stage0.py",
+      "bytes": 46071,
+      "sha256": "66e82651bad1f1cf30a73125d52bf11521ccccd66914ea65b243865b0b477101"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/payload.ld",
+      "bytes": 3214,
+      "sha256": "9e3eefc5a6931ccba10e8f98b1545a32289d95aa096efc98c15c1741da152bff"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/pb-ranges.json",
+      "bytes": 174672,
+      "sha256": "984cf907eeb124da1cd385a87e46815a5787b44a6bafb7d6c598042a7536b39b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/publish_delivery.py",
+      "bytes": 24411,
+      "sha256": "15483e68b9c2a8327f65fdfe4f3c973c42c8504ba7b232d6fe078030aa8fc592"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/publish_delivery_v71r5.py",
+      "bytes": 24620,
+      "sha256": "9e5afe38b47926aa90c6f5631e9804f65008374fdce006eff5db9e566f6682c2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/publish_delivery_v71r7.py",
+      "bytes": 24275,
+      "sha256": "4f5525f0be25ee8e0034ec2a3442123876bd4eb67ae55defeaf6f469125bae33"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/publish_delivery_v71r7r2.py",
+      "bytes": 9492,
+      "sha256": "0aee8c2755f3c0648be508c82bf33a32d7ea34fcd349c36ab84808352289d9e5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/publish_delivery_v71r7r3.py",
+      "bytes": 14519,
+      "sha256": "dbd5cde9f046b426a0cb5146fa2faaa313ffabe6e6889343e5c96aeaa24ee72a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/publish_delivery_v71r7r4.py",
+      "bytes": 17726,
+      "sha256": "2ad8817141a244cf5b1c0542aa1bcd644a0cf7f588948c42840ebaaec19db63d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/publish_delivery_v71r7r5.py",
+      "bytes": 19128,
+      "sha256": "95b39599d04dcc59efbd2a73b72dbf26f3bf1ccdd87e37ee6b1697bf14f2d041"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/publish_delivery_v71r7r6.py",
+      "bytes": 19053,
+      "sha256": "36a66e02d8cde7d6acaeb6d999ea5a20a26c4fcb340126aed0a6d6f819235744"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/publish_delivery_v71r7r7.py",
+      "bytes": 19833,
+      "sha256": "bb9f1f36f9c5923de3efc71ea161984b87386c55ba7b4d1130ac2de1b669a06c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/relive_pb53.py",
+      "bytes": 6741,
+      "sha256": "40073ea034249d2ced79ff1b22094b7cb39e3417bffcb84482fc0ff3e20bee31"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/relive_v37.py",
+      "bytes": 8905,
+      "sha256": "51e58150c92bf1f2efb3e6a4d60346215f7b1ea9aec4780db3362fbf48337689"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/stage0_build_base.py",
+      "bytes": 17137,
+      "sha256": "65071e795cff79b3758653d885366ab649a77d1f66e4365beecc5ad6c0c17ea4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/stage1_build_unified.py",
+      "bytes": 48951,
+      "sha256": "6b7522d248e81185e3b9cc87bdfff010debf9849ee23900cb375933b8ed98f9a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/stage3_apply_fontzh.py",
+      "bytes": 6440,
+      "sha256": "ebfe81055c1acd9441081b9344fb97f5f7bc4be9f0f835411dc686aaf6218b06"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/stage4_pack_and_manifest.py",
+      "bytes": 23481,
+      "sha256": "55ecc412ee8147d198d738cd4d60300135398222e71a4faccd0c45c3b546c121"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/audit_whole_image.json",
+      "bytes": 21716,
+      "sha256": "112b23388a26cb52c2d2e1f51aacb6ed8f6b7b2dcd3e4aa5b701bcefd77aa7b7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/boot_panic03_cardslot_arm.json",
+      "bytes": 4404,
+      "sha256": "96f04965562a2133b5c89463b6cbf936f99e8a4e1f7e4aa1d0f11b2020bd8c26"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/c64_bug9_png_arm.json",
+      "bytes": 8445,
+      "sha256": "40668e1535207f704852af4d938489e60c150dff46435e8de3c28635bcbee766"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/evf_pool6_arm.json",
+      "bytes": 9824,
+      "sha256": "d8a297c8cf9336b0b46ba00c8aed65e012210eb9f5b4d03e76505bcc7c96d496"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/qspill_audit_r3.json",
+      "bytes": 236,
+      "sha256": "ec7b96f0800f57708d9d6b71d697f8dd75a3314dfbd6a5f41a43596aae3a2dde"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/qspill_audit_r4.json",
+      "bytes": 168,
+      "sha256": "ea6031b3a80c6aa2da639a3871b3d0644f97f10678d9043d08525d7875a427a8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/qspill_audit_r5.json",
+      "bytes": 168,
+      "sha256": "5c6799d78784ddaefe5aadc829e99252d7311c24f9b7496e07231db9edc737c2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/qspill_audit_r6.json",
+      "bytes": 168,
+      "sha256": "bdedfd985974ba755377baecf1c06ef064d15ec961087d84f5b56abdc721f3da"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/qspill_audit_r7.json",
+      "bytes": 168,
+      "sha256": "6b51bd39575755304b54b0f84d9d0cc359c2fca0ce8ea1eaaab51434a0f8ffef"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite1a_picker_abi.json",
+      "bytes": 502,
+      "sha256": "f9517850f819bda85c05ba9fdb371e7cbf47d56f19baa77fdeede433a0131881"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite1b_audio_arm.json",
+      "bytes": 741,
+      "sha256": "07011486ab946326d57f6e7ec47325549faa96b7a33d6ab61fcc1ae956d50afc"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite1c_duplex_final.json",
+      "bytes": 33318,
+      "sha256": "132341abde93de734cdbebc7067d0b4c864565fa65c46d7adce7232f8240f2c6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite1d_review_arm.json",
+      "bytes": 1086,
+      "sha256": "f3c73c93be873100198a29b4be9a980d55eab50533d2b201e1ccb31a0b0f673f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite2_hangfix_arm.json",
+      "bytes": 8750,
+      "sha256": "b2b3f3bb3750a7260ca7f2768f16f2507b0006fc80b4b59f04cedec2a831a8ae"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite3_portrait_pb_final.json",
+      "bytes": 2278,
+      "sha256": "f68b35089fb1ea2be982c69cd5037361af186c20154c15f67e4b568347de6a85"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite4_filmsim_final.json",
+      "bytes": 10795,
+      "sha256": "e895aa02d41f51684012c92786ab9847aa111b7111895a0aa3f5d48741686f88"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite5_font_cjk_final.json",
+      "bytes": 750,
+      "sha256": "47166997c4e60db452ca1daadf045ea9c7961bffb59fcc12b0219947df04c7a0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite6_pb_icon_final.json",
+      "bytes": 819,
+      "sha256": "104bdc62485d95c19b079ef40be2a99267a2563e2599c90ef8b9d6905f065e90"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite7_v70_silky30fps_arm.json",
+      "bytes": 6056,
+      "sha256": "f5f35f0b750b95451b3c9e82fd4b86fefdfaa8eb9d4afa2162e5a84cb7a6a275"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/summary.json",
+      "bytes": 27889,
+      "sha256": "fe48e20a206310bbc50062851eed0558b510b3569bc4c82ea5f7ac99665d0a8d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/v71_e2e_bench_arm.json",
+      "bytes": 4548,
+      "sha256": "159af044cbd6b4406e660c77de92b64f0f2581311406f5b43b915e197cfa9d93"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/v71r7_lut_preview_arm.json",
+      "bytes": 16132,
+      "sha256": "0d28da480bf67babe05e0ac096e4a2ef9685bc8f49b501e3505d85ef1050a03b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/xm6_bridge_arm.json",
+      "bytes": 29017,
+      "sha256": "f4d5876591eeac745711d5c99183df8959a2cb06e3ccfae5bc3bdb551eb67073"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/suite19_r3_xm6_ui.json",
+      "bytes": 67429,
+      "sha256": "9e27ca01abbffc93357a5264e59a695c222b61195af119a08a50e89c7c1e6852"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/suite19_r4_plugins_xm6_ui.json",
+      "bytes": 11328,
+      "sha256": "3b287e6ad01cca0baad75814fc03c3741c5aba1c19244404ac0c3f3866e58bc9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/suite19_r5_plugins_xm6_ui.json",
+      "bytes": 11328,
+      "sha256": "a6293ce8337ff3d83d1e60f10f8e224b26d3ace96fa9fd6e33c6870cc49253ce"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/suite19_r6_plugins_xm6_ui.json",
+      "bytes": 11328,
+      "sha256": "35169de86fd58c821597bf0cba37a2bcdee0fc0b43b57dc93cc6e24c4efc2c34"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/suite19_r7_plugins_xm6_ui.json",
+      "bytes": 11326,
+      "sha256": "3576c2531c3b7f0c5bf000290ca53f07b4c88e4600283244f4314a5eaed00bcf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/suite20_r3_lut_preview.json",
+      "bytes": 137792,
+      "sha256": "f5dea7276b32b9c950347c3ac5ff317827cf75d339b2fbdfd3154550a6c04fce"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/suite20_r4_lut_preview.json",
+      "bytes": 14206,
+      "sha256": "5f88d42651257a570bc081e9cf8639651de646af87905d276ab35f3248ba3d78"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/suite20_r5_lut_preview.json",
+      "bytes": 14206,
+      "sha256": "388d66722bc1be4931cf8abec28671a3e788ffc142076251f416417de3e074a1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/suite20_r6_lut_preview.json",
+      "bytes": 15754,
+      "sha256": "3444d1a19832947184e9ebba181fe4cbf6bc21644883e5d843852657fc2ef3ff"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/suite20_r7_lut_preview.json",
+      "bytes": 16308,
+      "sha256": "30f359df9fbbebe17c7f0943985251333059030701034b84100a3da1c4fdd33d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_c64_imenu_final.json",
+      "bytes": 4009,
+      "sha256": "40b709b1380426e9e5914d60f9aaeed791e60a3687e2a8723be8222bf5bb3c35"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_case_a_mode1_grain.json",
+      "bytes": 13399,
+      "sha256": "5d9174f4bdb0dedf891863d88d8a20667486cf8f50c827f315956e8b9b8a43c2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_case_b_mode2_full.json",
+      "bytes": 25180,
+      "sha256": "a69dce58499cc2a3f49c485a94dc41d8727c9ae2b2287daa9bdc5e06aecaef92"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_case_c_legacy_migration_duplex.json",
+      "bytes": 25269,
+      "sha256": "5b28253c17baffe7c850095f282850ec89dc334f4fbce1c4ba3d9f42daef7902"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_case_c_mode1_full_cycle.json",
+      "bytes": 290329,
+      "sha256": "4b270c6e2b500ebc95014990611177ff17a2e1c71e22d8d53ad63b3c37ae5198"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_case_c_mode2_full_cycle.json",
+      "bytes": 290366,
+      "sha256": "646f5880bd5bef448128926014dd9b43615aed9904a556a38dbbb3f5c83657bd"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_fn_pc_final.json",
+      "bytes": 3264,
+      "sha256": "6377c8430c1d66ef994438d7ae5a5d29716425fc0e7ca7a015910ab18a079074"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_nfp_v050_final.json",
+      "bytes": 13556,
+      "sha256": "d68aebe0d3df1e637ddad7a3357925d3cbfd4f86f44848d9269dd254fc6198e0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_run1a_normal_duplex.json",
+      "bytes": 21996,
+      "sha256": "d18ee6de7f13b6cc311cd6c9c319241b0ea718e5e9f07ea22cc5439aae4be391"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_run1b_movs_pb_0x552.json",
+      "bytes": 10673,
+      "sha256": "5de8499648a278142c33311bb27f5874f7a1cb39e3066abbcda82c63525de85e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_run1c_movs_pb_0x562.json",
+      "bytes": 10766,
+      "sha256": "037d970614ab0c84d6c4f77301e1a290c60e74bb77e995a48a8528e70ab13dec"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_run2a_hangfix_l1.json",
+      "bytes": 183411,
+      "sha256": "33ab189c12ff6c1f2d194bcf2d217d17617c6d4d38566e8e1f408b83a1b0b57a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_run2b_hangfix_l2a.json",
+      "bytes": 177119,
+      "sha256": "07759a412d9305455b802620df1ba3487e73f32a7ccaf20ae1f6b90285de4170"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_slotcard_87rec_scsel0.json",
+      "bytes": 3999,
+      "sha256": "9506215ad469efe302bed1a72c62204463f778a16e0fd19de62487998f7039f9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r4_slotcard_postupdate_replay.json",
+      "bytes": 46330,
+      "sha256": "add32c63a2ed0ad7c716b1371f160a075a38abceb9fed0d2b43e4d571f002dd0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r5_ev7_plugins_final.json",
+      "bytes": 22070,
+      "sha256": "3ec9aea9b2623167ea52a55f845fc205b79efe160887ac4209bf3dfd99434aa0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r5_np3_recipe_final.json",
+      "bytes": 50732,
+      "sha256": "27a8d6646926c3c470bc5176cdfdf12c6f6dad71db8be6d5b4650cb5f94417b7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r5_pb_bounce_final.json",
+      "bytes": 4854,
+      "sha256": "4f16e992bdc37c7694c2d49730e39480efad353884246fa16b0fb36c084f8fb7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r6_xm6_ui_and_fallback_final.json",
+      "bytes": 67473,
+      "sha256": "e4ca8cf8a282b87bf815d3828e663291f2d4477a595db2ab0aabfbeb73a5b286"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/v71r7_lut_preview_final.json",
+      "bytes": 137805,
+      "sha256": "38e1ffb6866c18dbb29dd8a6f544b48b09eeb083f01f6dd33e62a9ab2d2ccbfb"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tools/import_luts_to_card.py",
+      "bytes": 18261,
+      "sha256": "c7282bd8ba576b335e5f4ee3775bb7162da0e1b17c4939d8a752086e24c9e77f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tools/probe_z8_r4_live.py",
+      "bytes": 12270,
+      "sha256": "6995cfbeaff1a4c3740a783f8c101646654596cc447166400154dd23df75063f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tools/probe_z8_r5_live.py",
+      "bytes": 12394,
+      "sha256": "0272ccba383960e673a81801e21f78ba9a1f39ef4fdf4aec1923b7696bec23e8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/tools/r6probe.py",
+      "bytes": 5001,
+      "sha256": "0d3236954af7840226d36efa27ec3935993bdc81c9c8aac19c1e840973ed5afb"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/verification-v71r7r7.json",
+      "bytes": 9278,
+      "sha256": "0f1d28173e2afecfe5d48e1474819f505d08e3036ebc22e123a99a3974cea762"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/audit_filmsim_bank.py",
+      "bytes": 19935,
+      "sha256": "5884d82d5eb6e67cf9fc297584345acb9cd2295d29aff4c30889880956ba895e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/build_filmsim_objs.sh",
+      "bytes": 2823,
+      "sha256": "ff3650554a818a9819deb77fb6a82057e921c674844758e78e82c9165d8ed191"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/dryrun_wsl_compile.py",
+      "bytes": 10249,
+      "sha256": "d447c9c461bcaa3b6c67e4ce87920ebf36763934bb9ec52bc97a4e954368a912"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/patch_photo_v69.py",
+      "bytes": 8192,
+      "sha256": "7272dcbcddc124da802db280f84a4bd4dc3e2959ad4d281139d379a1d4fe7c74"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/hdf/z8_hdf.c",
+      "bytes": 52121,
+      "sha256": "97c8ae8a8ee7526a7987a5a47538246f8852fabd1b9a3faf90cb48b325a68aa4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/hdf/z8_hdf.h",
+      "bytes": 4721,
+      "sha256": "08c7b8ed41aec3c76e2f1d019643188688c90c1a095127f15a6b7de009d8c8b7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/hdf/z8_hdf_kernels.c",
+      "bytes": 263069,
+      "sha256": "6f2a71c16c3aa2eebba931bb996fbde90340f2d1edca677f9c574681f4f52cb3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/hdf/z8_hdf_kernels.h",
+      "bytes": 13346,
+      "sha256": "9d5d3287e317e5a1528cbd8b27ce681c3294b7bd21b8b74d2683c6a9860fee44"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/include/z8_filmsim_abi.h",
+      "bytes": 34625,
+      "sha256": "eeac3e243fc4c6038a75a8fd80635d0f03a916f86b55de5445b0388eff511b7e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/photo/photo_hooks.S",
+      "bytes": 1477,
+      "sha256": "ac0514146f8f5b5ec186a3dba1cc130426f1319738b8b95bd85543b8c161bb7f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/photo/photo_hooks.c",
+      "bytes": 6218,
+      "sha256": "f2c7ba51c0b505fe3709587283445c4ba13b3de5315506d8ad940c71d737208b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/photo/z8_native_filmsim_photo.c",
+      "bytes": 74669,
+      "sha256": "ad973754085f352e3b728df9347cc75c0b623315c5ffbcddaaa9f6383de9084f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/photo/z8_native_filmsim_photo.h",
+      "bytes": 7293,
+      "sha256": "291f3fc8d5b91cfba4b60092bfa2ee5ee88d98f8fdb485cac735b1b134b4add8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/photo/z8_native_photo_platform.c",
+      "bytes": 13345,
+      "sha256": "f99ab965782d073c9b53530875c922f34d9cc6fd579cfcefc4f03edbd3b3d972"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/photo/z8_native_photo_platform.h",
+      "bytes": 2371,
+      "sha256": "572e62e5cd558c91604fd96221dec88f26bc22f2453f17a0b06f342c740d0428"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/photo/z8_photo_source.c",
+      "bytes": 5437,
+      "sha256": "3c62a40fa11f76a91e5ecb396d82ee774eba9a31068af5367d17c055700029c7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/photo/z8_photo_source.h",
+      "bytes": 2817,
+      "sha256": "a7c141286470f666152d1cf39f2eee3423ddd63a5941bcf7d949cd4db559eb38"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/pipeline/z8_filmsim_assets.c",
+      "bytes": 6149,
+      "sha256": "1da98be9f18d7cffa167faab0ef483e259b36100b91987753c17fd8f177fd7fa"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/pipeline/z8_filmsim_assets.h",
+      "bytes": 2954,
+      "sha256": "8ab01dc3bd75b564fd357089eb9976d29d0e90ff6d234ec95c80ba40d74a6b16"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/pipeline/z8_filmsim_pipeline.c",
+      "bytes": 19051,
+      "sha256": "e90b15c8f25c8fc21ab76a863865a8168d57aa92c02f1e660fb137732abb6859"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/pipeline/z8_filmsim_pipeline.h",
+      "bytes": 7007,
+      "sha256": "e1bf2a88e44d926968c246e8a7edd63537ed301de196b0d5ca49dc1c1102bc02"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/pipeline/z8_filmsim_stage_grain.c",
+      "bytes": 7059,
+      "sha256": "7c46842470dfae6924f6b60e6825510a492179e231406712763e4673bb66f3eb"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/pipeline/z8_filmsim_stage_hdf.c",
+      "bytes": 4650,
+      "sha256": "a55185785a31ea4abe8f53561ff111d9f6a36fc65a575839f3b745ea00fa9494"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/pipeline/z8_filmsim_stages.h",
+      "bytes": 3537,
+      "sha256": "0c513352efb3d74f12255006a82eddbb11315949d8bc3aaf499bb640d33b654c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/runtime/filmsim_runtime.c",
+      "bytes": 142737,
+      "sha256": "cc27cedc39e45cf360b8558e201067957a59f0d3e475800e6caa79becdb4f293"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/runtime/filmsim_runtime.h",
+      "bytes": 9229,
+      "sha256": "ab892434a309805e8a763583e68e03618dac2995b699b1d4b80cc9138c615df6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/xm6/z8_xm6_bridge.c",
+      "bytes": 93849,
+      "sha256": "32d5add0b86dc1cc36d9e39afc3bdbeca0cf0b3e0c19f1d57eec76b79ff8ea29"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/xm6/z8_xm6_bridge.h",
+      "bytes": 24989,
+      "sha256": "db9be0fdd3e6fa826d921901e84eacaa084eb3a3628151d79cd230c551784b49"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/zf_grain/z8_zf_grain.c",
+      "bytes": 43815,
+      "sha256": "98dbe9c3e4c8709aa16f7752ca40b20cea013726a91b8a449608d929210be5f5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/zf_grain/z8_zf_grain.h",
+      "bytes": 12918,
+      "sha256": "fd98ecf5a0eb1e72dc9511eac91414e054961d27c17ff574f3f9b212b4ebff4f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/zf_grain/z8_zf_grain_kernels.c",
+      "bytes": 56647,
+      "sha256": "a9b05ec157f27ac83fefe7e16538cc07ae467622e68edf3ae0b5c820d4a2f66d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src/zf_grain/z8_zf_grain_kernels.h",
+      "bytes": 5146,
+      "sha256": "09459857e6bf00299cac8b6d8b90d86cd0c7fd3cecf8b784e1dc5dc78e71093c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/src_fix37_filmsim_hooks.md",
+      "bytes": 6610,
+      "sha256": "4be237ea5733493594414d4c6f0496fcc7b1f0b6f1373c3a5a5bba28e0c82b15"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/tests/bench_unicorn_hdf.py",
+      "bytes": 15122,
+      "sha256": "c7096631361ec51e5439e8c29f727c1025e36270dd54a0de09de0ceebb645410"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/tests/run_xm6_bridge_test.sh",
+      "bytes": 2467,
+      "sha256": "3797158cdad6eb4e65945fedb5ead9db9df59641f6e9b72441a67c60495d1ddd"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/tests/test_hdf_v71r4.c",
+      "bytes": 37233,
+      "sha256": "315be9486b55085f312687b5846969c329b88af0b1be11290d6b9f724075f53e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/tests/test_xm6_bridge.c",
+      "bytes": 140251,
+      "sha256": "d825812612e8974bb721d80545dae53a0ce8213a0d9558a25ae34b1337bd5285"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/filmsim/tests/unicorn_hdf_v71r4_bench.json",
+      "bytes": 11581,
+      "sha256": "334c92882824f7b5f011b46852bc8aeab8841c8f5e68ac792ce6e0b8c108f1fa"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/font-zh/audit_v68.py",
+      "bytes": 9018,
+      "sha256": "f8c5c6cd1f7a6a05909f212acb31f2c65e0d83b8083e8f103be7f53f9b1d8c6f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/font-zh/build_cjk_hif.py",
+      "bytes": 29591,
+      "sha256": "58a50dcad1ef8a22de04a3a2ffa0aed975059cf461444a606573dd5027407370"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/font-zh/pack68.py",
+      "bytes": 8429,
+      "sha256": "3db295fb8919595e90b6ffef0b31cc7d6d83181f61910f1766c391e62497bd62"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/font-zh/patch_v68.py",
+      "bytes": 15571,
+      "sha256": "bd1d65b1fa4a2ec17e0f719549d412d3e9ad715fd236fa8d9e810eb491f65a20"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/font-zh/run_v68_zh_qemu.py",
+      "bytes": 22473,
+      "sha256": "8fae446c92915efd68ffb9c8333c6a324820a1083e4c79221bbc7a2adb9044bb"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/font-zh/test_v68_arm.py",
+      "bytes": 26787,
+      "sha256": "627d6e58a67bd2336d686f0e8f9c5d10715934ec2a71511e41bb9d954c1d3016"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/font-zh/v68_patch_code.c",
+      "bytes": 11874,
+      "sha256": "a229544ba727dc642d4cedd50085d2df42a822ba8803044bf059e4fca9da6d06"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/font-zh/wlm/portrait_module.c",
+      "bytes": 5797,
+      "sha256": "83c840268f6686badcdad53db5f64ef84970ec6e426abffdbd39a2de57416cf1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/font-zh/wlm/slotcard_module.c",
+      "bytes": 19536,
+      "sha256": "3d57fd3a5c280f2f4df9f2ae1c1a8e4c7f3fa2ab47ad8214e40ee2f638537d19"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/cube.c",
+      "bytes": 14670,
+      "sha256": "90b625d736b9cf55958d93af021a1a17ba065f10d259fd7c85d08ebdb454b9e5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/cube.h",
+      "bytes": 2346,
+      "sha256": "c62c983d03291b44c4854ef72e25a6b16ac4d5733f3667f98ee69b1255a2345f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/cube_frame.c",
+      "bytes": 5404,
+      "sha256": "8980e4dccdd74371c69d6801e92893aab6e5a4cdcceb4f6d11df8c2a9b778ec7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/cube_frame.h",
+      "bytes": 1485,
+      "sha256": "6063bba2907e9285be77d52f12b326a7b79414e7b2bbc2aafb06e0ecc0290354"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/cube_frame_neon.c",
+      "bytes": 8850,
+      "sha256": "723f14a34b7da10fcb8182e1eef64addcfd8dc3e7e21905e65e0c142985f5f8e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/layer0_color.c",
+      "bytes": 10787,
+      "sha256": "bb07510801f808ade32d49d4c52ac285a1560a3e4d27a9271cc7d9e34e755686"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/layer0_color.h",
+      "bytes": 3685,
+      "sha256": "f100fce378f290098096e9ba54cc03e97fe5c5396a0294e5f79c1efceeb0cdb8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/layer0_color_neon.c",
+      "bytes": 16039,
+      "sha256": "6ab1826e59b2b96e2542c1dd0dae2a50963e2bdbc1b8d20e645777f4c3b00037"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/lut_runtime.c",
+      "bytes": 37318,
+      "sha256": "0b9ff1770b3602526e1012e0824bcb1b304a9ee7a677559c7481006af770418e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/lut_runtime.h",
+      "bytes": 2406,
+      "sha256": "e90948dd21734660e093b34055e16cc129b3f634d4e07a4ab3ae716b716ee9af"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/neon_sentinel.c",
+      "bytes": 5453,
+      "sha256": "7d7c43d4d38f5560d10cd1fc91745345ae9d806d17cf75968f5dd2112ee94d0e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/neon_sentinel.h",
+      "bytes": 6583,
+      "sha256": "46d9b1b0c11dbfb056a41ae86f89952fb9cc4a57f81a7bfa0d74c764b947ff11"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/photo_flight.c",
+      "bytes": 23814,
+      "sha256": "bdbe56d2122ae83bb666ce2a5832de1ea80fb83e5474fb74a09a2a8073f0c556"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/photo_flight.h",
+      "bytes": 3358,
+      "sha256": "f241898003519075ed3d7300ebdeb5c5fbe7d5df8ec5c356d51f998790ea630c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/run_lut_core_tests.sh",
+      "bytes": 6851,
+      "sha256": "d4f6e4312d238681bafe2c7f0abea8960c0e9c3259b9e29abf1cad95e9175aaa"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/smp.c",
+      "bytes": 33871,
+      "sha256": "e5e727be921600f45b6d55e06b331c16a679bfd9249185f073a39c4ccf40732c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/smp.h",
+      "bytes": 3943,
+      "sha256": "d55b5291844fb95ca1c0ba21730c03b9fdd4a09ca6409d7732ca703d8aaeb4dd"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/test_lut_core_host.c",
+      "bytes": 81138,
+      "sha256": "3bef17809f2d4df4b27c44939274b268891b94f63c9e42ce4212e237f1713ba7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_core/v71r7_lut_abi.h",
+      "bytes": 28674,
+      "sha256": "e4c55fdb2ba625f41fa53936398cda8c8d75f84065b41e1ab1668faaf5bda635"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_menu/gen_photo_menu_tables.py",
+      "bytes": 30291,
+      "sha256": "e065d9a6cbd11b0cdfd6089f5ba923c92ad0d53409d0aac5aa7e123c0a9e9db9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_menu/photo_catalog.c",
+      "bytes": 9121,
+      "sha256": "490f79d1ea283657bf62f353c2259e93872d14a80cf06287ce10baadba138496"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_menu/photo_journal.c",
+      "bytes": 11107,
+      "sha256": "e26b5d7861e76568531345ef202126663464f64db2e3ebafd222353bf39a1a2b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_menu/photo_menu.h",
+      "bytes": 18924,
+      "sha256": "873654ebae34f36ab97727120a2f4f5dda9f0d3f2b568c9d3c6e259962217a7a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_menu/photo_menu_ro_tables.c",
+      "bytes": 31497,
+      "sha256": "f59cc953a7c820a1b575d9e64ed20765a6a0ed7b02393783a7e36e203854334a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_menu/photo_menu_tables.json",
+      "bytes": 4752,
+      "sha256": "48f6baae7ef0f4b6f4575ee5574a36228a3a224878c6944fef36615175e2a795"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_menu/photo_ui.c",
+      "bytes": 41365,
+      "sha256": "6887f6b76a2e5f75b4df8017c7885d540f7d5c3d7b4193c1f613c98597e930ff"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_menu/photo_worker.c",
+      "bytes": 65693,
+      "sha256": "4138799a2e57c3bcf14f4fa9afa9614aa07f0d49bbcd15cc6a7145cf1517e92c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_menu/run_photo_menu_tests.sh",
+      "bytes": 5227,
+      "sha256": "13a9d3d1d1fe68c95f046ef79a89eddd2de50f0b24daaccd0c06bcbdaa903552"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_menu/test_photo_menu_host.c",
+      "bytes": 73763,
+      "sha256": "51b9fe64b5d6769404aacf91b857de996c108ba2ef3240d966dea1094fed1312"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_preview/layer0_provider.c",
+      "bytes": 130996,
+      "sha256": "f19e54f8104bd9313513b36a1e8d3574301a9f6c2380e40c0c4319a8f1dc3214"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_preview/layer0_provider.h",
+      "bytes": 12770,
+      "sha256": "b6b4acd96763b8f44f346dbf05e36b8df6288a9dec36ec5d2228a6b534e06b8f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_preview/lut_hooks.S",
+      "bytes": 2899,
+      "sha256": "04cbb67711fb325804e2900ce48369ac0396cdadf07176766aee04eaac8f16a0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_preview/photo_workspace.c",
+      "bytes": 18249,
+      "sha256": "1c73a8af9b78b1f5e13458509f026ecd6ed0fe777c19b7b0e5f220d432e26208"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_preview/photo_workspace.h",
+      "bytes": 5154,
+      "sha256": "151280b6a29650dcdd0bc79adf34cdf36474bb3115e94ebfb5d74e15da56d49a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_preview/run_layer0_tests.sh",
+      "bytes": 5297,
+      "sha256": "532e022dc2bf0b845913afb6fcb0a6f0b0469b006660476055fc8d35ea0beeac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_preview/test_layer0_host.c",
+      "bytes": 83863,
+      "sha256": "67123dba0c9929befb703bf05b9ae87f5140648524e45e5c340575c1d16d1a7a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/neon_scale/live_scale_neon.c",
+      "bytes": 88527,
+      "sha256": "87aa3a1efcd0bf4b4a012ed6508cc188296053f90fe654f887df7e11ddace56b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/neon_scale/live_scale_neon.h",
+      "bytes": 3725,
+      "sha256": "be8023e6708b5eae8d2c902095fce55c7f6645234003c3400be9710e2bc43605"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/neon_scale/test_v71r4_exhaustive.c",
+      "bytes": 21492,
+      "sha256": "da9096fd8198416ce47e4aa699e2b6969288e75ea7e9405b14855033efb48d2c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/neon_scale/v71r4-grain-bench-receipt.json",
+      "bytes": 9854,
+      "sha256": "2be28a46e132b27bc7b0c6b83a2029dc3e474cd300e741e37fa443226f7a80c3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/neon_scale/verify_v71r4_grain_bench.py",
+      "bytes": 33522,
+      "sha256": "41ad3874584a4a1f03466c2e1182acafa837b7813e702d137b74456ed7284e58"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra.h",
+      "bytes": 4109,
+      "sha256": "d7113bdacb270d0045cd33837130a860bd81150b0df9da79fd82b47c23e70d03"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_accounting.h",
+      "bytes": 3565,
+      "sha256": "e963fb6aa7298910e4f8cdd11db314138b979ba01df7df43432de4150ec8cb88"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_accounting_sdk.h",
+      "bytes": 347,
+      "sha256": "3cf504f021f456f0a1763a46b7dc2d6c106ee948b8cebf6f29b267ad2fb72c0c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_accounting_service.h",
+      "bytes": 743,
+      "sha256": "1fe7120983247cfafe2635bb34b6c56a7e2f1ace6f05deaa43ae38260edae128"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_allocation_observer.h",
+      "bytes": 1267,
+      "sha256": "f2c29b5ecf654820e3495bbfefdc54ad86c5e18b59be5e76432cb23fb95b0812"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_api.h",
+      "bytes": 248,
+      "sha256": "1f596e167cd446ecec20e4571814db7806e9448d60d07a647e72ae615c1fc0a7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_binding_store.h",
+      "bytes": 3274,
+      "sha256": "70934f5a855e8be722a392a5c86216b13e0f3c8478807b7c141c329f7085aaff"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_bus_sdk.h",
+      "bytes": 2636,
+      "sha256": "dfb456d4c6a42ab7f52ef1499362aa00f040e4ab86828b5553ff94a9b1ffdf07"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_capture.h",
+      "bytes": 892,
+      "sha256": "1467a27e485df323daff57587074c66882b0351dd484e211c8381881836c1d39"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_capture_hooks.h",
+      "bytes": 2381,
+      "sha256": "276bdc5ea02c1d92c8110aa27d1b1bf20324fae0ef115efda643a92c90982ddc"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_capture_menu.h",
+      "bytes": 2444,
+      "sha256": "b4d481f7012dd4853054a96279d85b7ccfdf949d4326bd4f2cd4fcfc689b6e1f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_capture_quick.h",
+      "bytes": 1663,
+      "sha256": "acde982a4eb2095320764e786d5c7d181fb825a3f88f47772ee9dc32716d89aa"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_demo.h",
+      "bytes": 1379,
+      "sha256": "76b4e962ba9e4dc1ebb0a4f1d145c2313de23f6504f1c4aca0b30136a5bbe0f5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_display.h",
+      "bytes": 1387,
+      "sha256": "89f5d70046b42d09c7442e168e15967f6655928d2cfc20698913a7c86feea95e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_observation.h",
+      "bytes": 709,
+      "sha256": "39a9646563d38bfe6d9c0393443e6b3231f7d5a46519f40f54146e48bfb079e8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_panic.h",
+      "bytes": 234,
+      "sha256": "500743db071c820c1fc1806f2c0420fc32185d3b78aea620d4a18b0817ea52cd"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_rtos.h",
+      "bytes": 1014,
+      "sha256": "20bdab54f1c151ba30343ec2d9ee1e27ed9ca921e0e0bf0aa38cdbd195b1ce2d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_scene.h",
+      "bytes": 527,
+      "sha256": "d0821072d437736bb70f1fa6536befd06c57fe92ee134fb56c12b074113bc9f5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_services.h",
+      "bytes": 1260,
+      "sha256": "12a2af85638031c678dc735518756a90401cc532942eb3fc50047ceb6a977cd1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_startup.h",
+      "bytes": 1112,
+      "sha256": "70fc26055a1159ca3fc6bcc60f8bfe0834d91dd04ea31c1621114c77af4e3120"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_c110_usb.h",
+      "bytes": 386,
+      "sha256": "f245fb2ca13108e6ae6a58e6264485a8838d71fd64d29168a21f208c68f89505"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_canvas.h",
+      "bytes": 4925,
+      "sha256": "22140f7b59cb4c5e25628a9e217ab55a0dbb6c1cd46633a5364db81f09a30efe"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_capacity.h",
+      "bytes": 3711,
+      "sha256": "a0da52fa856ef4bac912d5b3a905564bdebeef87a3379dfbc51aeb28b6186929"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_capture.h",
+      "bytes": 1336,
+      "sha256": "7d6341dc945fd70764ed8df4dbb720e5ca1576ec6c0a236189df9d5633fa55c6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_capture_service.h",
+      "bytes": 894,
+      "sha256": "c74bf4c927c914226b612291f141823595b3fe2592a74af42476bd973fa85ae7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_critical.h",
+      "bytes": 1364,
+      "sha256": "2034b5dbba2a500847cf0ba75246a5257654152c897497a594173d468740ae00"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_critical_sdk.h",
+      "bytes": 656,
+      "sha256": "19f3065a10e10d4bac0e74a3fb8118b54abcf6e73e059bee78d0fddd9621d461"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_debug.h",
+      "bytes": 1757,
+      "sha256": "984d5856e59c32794691a953d56979d27efa9e4694a334726bc441a058311fd5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_demo.h",
+      "bytes": 1133,
+      "sha256": "49ea942ed2778aa85d18d69068f8dae0a39c5c87d83d9ff7453f9d27e3dc06ed"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_document_sdk.h",
+      "bytes": 1492,
+      "sha256": "a0189b4a8066e0c2c0563123d715c84258431daee4e9e3eae6d38da894864057"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_events.h",
+      "bytes": 1683,
+      "sha256": "d16a533dc1f27a616643b660271d3f3c9f8577e1d54886d183ecf8358a418181"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_events_sdk.h",
+      "bytes": 436,
+      "sha256": "4402cd3810212667414407dace9ed7afb19cde6fa01a81e42900607995bb98e5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_exec.h",
+      "bytes": 2956,
+      "sha256": "cb9fedd711a5df483e4c2f62fbabbd7f68d34789287d804a72cf4f2c831967f2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_exfat.h",
+      "bytes": 1519,
+      "sha256": "71d0817911ec59d517c7dd43747bee74d662ffdcca74aaa517c6f0531174da12"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_extension_services.h",
+      "bytes": 3449,
+      "sha256": "0246f1a1a7e20bcc0ecc185f13f285da064ae8ba5b686194b8a60c504efec86f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_fault_test.h",
+      "bytes": 339,
+      "sha256": "c2f1582b2be974736a9100e6a44ff5150e404e42c2fdedfbe444eb4d8484f3a0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_file_card.h",
+      "bytes": 1014,
+      "sha256": "932fc976b39179c5081f9792b35e48f05560bb328e33372ff2574069cd7363ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_file_observer.h",
+      "bytes": 1065,
+      "sha256": "656c048148258806254e0b89149e6e62d90047c89ebce23234d3533898110ba4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_file_sdk.h",
+      "bytes": 781,
+      "sha256": "e1716a2c41ca46911465d5d7e6352cd13373a0031333ea3568dad01fe7337853"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_hooks.h",
+      "bytes": 4033,
+      "sha256": "2c06613ca79077339f7d5df88c4dac274d01d6427136247db8c1699ae2586314"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_interrupt.h",
+      "bytes": 680,
+      "sha256": "321174bb69c145c99355fce250369388823e0549b41f5b2c409851144cc908d1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_irq.h",
+      "bytes": 3086,
+      "sha256": "1ea985818256142af8f8607fadb81f881b58bf43fa7158cac574769f0d692da3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_jobs.h",
+      "bytes": 2956,
+      "sha256": "fbb0dcf715dcecc02d80dd8dc064e0afcb713d5c8dc47e13373e51e0ef523e85"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_load_sequence.h",
+      "bytes": 909,
+      "sha256": "df240e9c3a6e3dbf18c0eb1ae0c14eaeb4e69b3589b4541315b5d2e6613d31de"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_loader.h",
+      "bytes": 2005,
+      "sha256": "1edd453528c126b75eaff182c321244fede097e148cb64c9528122ddae882371"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_lzss.h",
+      "bytes": 610,
+      "sha256": "a255c744e6bea5925eef43cec27b3084cedc8a9e3b42519bc4aa1b718a38380c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_machine.h",
+      "bytes": 841,
+      "sha256": "539904686f3962a0afbea449a4206047a026214667150ba3d6bda8bc3eee9f84"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_mapping.h",
+      "bytes": 3565,
+      "sha256": "09d791d179b2852a90cc959701517a94e89d5068ba060a31e467762bbad9839f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_mapping_sdk.h",
+      "bytes": 966,
+      "sha256": "139853fd89f65901df6cca3c0f97668047a705a55d3116c4707815ccf7392df6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_memory.h",
+      "bytes": 779,
+      "sha256": "88d25accb11aa9830da59fb55d2a5e9e2052aee570bdb445ee213d61dcb23910"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_mmu_context.h",
+      "bytes": 1513,
+      "sha256": "25e31442353418fa5a37317682455b0620c5e9be0f6cf54c2f9d4b8aaedfe4fe"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_mmu_sdk.h",
+      "bytes": 4844,
+      "sha256": "8cf362b3f71f136b4bed88dc1cef6fee0178c8fc66c4586ac1c115da24546cd9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_module.h",
+      "bytes": 3564,
+      "sha256": "3087802fe797467c91d67bf4cdaff58ae06aee79ce0ba159f0cbf48a113519e5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_module_bus.h",
+      "bytes": 2576,
+      "sha256": "7c580ef5884457724f7a5de502d18abce9516913354c1ec09fbffcc29783650b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_module_index.h",
+      "bytes": 1552,
+      "sha256": "bef2e1998303ba3ec12b6a42de6bdfa6e83786d7ea7300e6b0e6e724c499b65e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_module_load_buffer.h",
+      "bytes": 1248,
+      "sha256": "b03b3188a2493587d2f07d6714e70ba36e2f4389c02967ec8c62873062ed447e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_module_manager.h",
+      "bytes": 2964,
+      "sha256": "0a7835079610f8ef6f1377b8b295b02cfe8a344c1093115fa677795f5ae09308"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_mutex_sdk.h",
+      "bytes": 2160,
+      "sha256": "f97fcf2c4812a2535c2e3d7b60fb3e595702b03ee4df71a7e9df27aa07d55b12"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_apps.h",
+      "bytes": 4004,
+      "sha256": "56ed587d519951725a9d017c87477ad279d4904d5439fbd2974c9def66f19fef"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_call.h",
+      "bytes": 932,
+      "sha256": "ced7812cb3c4f5f5037069706e0f5fead97865b66e1386409934b1d70a876b5f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_context.h",
+      "bytes": 1078,
+      "sha256": "c6cc9148dc53ac056355e0f105beeaea2f54a0b29b8659fa2c4681a9c67c7e6c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_display.h",
+      "bytes": 4528,
+      "sha256": "47e7bac4dc36af4b6e365900f1cb5425ac9a5650041117fda6fd5a84a1906ee9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_editor.h",
+      "bytes": 3137,
+      "sha256": "ace14c79f00e97e133f7c52bb6da417a55d5b6ecf75e668d807eda0ce6a6c128"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_font.h",
+      "bytes": 2313,
+      "sha256": "20cc84cb5dfe7bb0d5a266717e8ad7c03be10b8444d8566011fa3e0849550695"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_linux.h",
+      "bytes": 1904,
+      "sha256": "e2d1c2e281137b823e84d2b29e36cb98491e441cb2601ffeb4f7ad5efba0c499"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_mapping.h",
+      "bytes": 444,
+      "sha256": "2e22ae35d92894ae59ced5c9090a689658ea6d0d16ed806a5d6c1eab644cbf3d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_menu.h",
+      "bytes": 4828,
+      "sha256": "776ba744de6e9b058b3ff449364110a6767cc95a51a8d314daa29c5a668c2bca"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_modules.h",
+      "bytes": 908,
+      "sha256": "9cf8de7e3c65ce2bb9dda6767cfc4058ad6004fd1a0b3e882dd275d942491708"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_namespace.h",
+      "bytes": 621,
+      "sha256": "91e9b3bd75852b95fca9082ce9870bbf18d63d3d413fdfb76e43422bc0866aaf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_panic.h",
+      "bytes": 1345,
+      "sha256": "6f7bb39d83e19427316e2043da691d9dbca758106fc6b9566b4e095f1179ddab"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_ptp.h",
+      "bytes": 1828,
+      "sha256": "cab699915115c698c1450e5b1d06906c7e6ebce3f4dab1344b774e0db5fe9787"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_rtos.h",
+      "bytes": 1824,
+      "sha256": "e476ee4f518dc55bde304ed086ac184a6094c0e3aced61b5a465c5b94bc5404f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_scene.h",
+      "bytes": 1165,
+      "sha256": "eab73b05d25bb68e60be682720e0316c8923cac3d32dabe93f620c52c2107c44"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_text.h",
+      "bytes": 677,
+      "sha256": "facb7e5b6867c785202cb25e473f32333d7153b63de7387020a480f68c4adb4d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_title.h",
+      "bytes": 577,
+      "sha256": "14ba5f16401eeea435efcf6c54223965723b31c0b0fdc49f7d46e3532c4916ce"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_ui.h",
+      "bytes": 11583,
+      "sha256": "65510aaf2cb97e9cf5649a60702d9760dcdc477cb7778c25c956bf6fb5432b64"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_ui_callbacks.h",
+      "bytes": 995,
+      "sha256": "37cd69d97e8835fc653fe43468abe756777812a2ed749fcd1457eed123c99c83"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_ui_dispatch.h",
+      "bytes": 3073,
+      "sha256": "9c7385edc4deacb508988a11033ddaeff194fda4da284a669e3df1fbdc4a3e4c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_ui_editor.h",
+      "bytes": 1241,
+      "sha256": "b52fca1c262324a6614c229b4eefe4ff172a8d78592b86608f3b247e143e3794"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_ui_pager.h",
+      "bytes": 2468,
+      "sha256": "a89918f7dd2a7bee687b6f30be5b5ee073f3525caeccb9ab0ba6621b840b4bbf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_ui_reader.h",
+      "bytes": 1216,
+      "sha256": "f538f6e2acca0fae2efed696a4bbd0b7f1d7d828002594e5b30cdb79b5d48bc3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_native_visibility.h",
+      "bytes": 1751,
+      "sha256": "53f5befcc09623c85e9838aa495f7a2e1dc90d69ee1bb905c5c0de76dd0101e7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_nef_metadata.h",
+      "bytes": 722,
+      "sha256": "a1d9dacb09a848ae6e196b693a5b1c218280267a7340044b6b92d72932de54e0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_nvme.h",
+      "bytes": 1251,
+      "sha256": "2a3947ba1ad2bc046e4d83f5e71eda8cc5c34606ce171e2c66f2685943ffc997"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_observation.h",
+      "bytes": 1647,
+      "sha256": "9474a2b04d85a20bee70293176a6cb8de1df8866db34b7db68510b95615f60f8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_overlay.h",
+      "bytes": 5425,
+      "sha256": "8c2d63deb8a245c02ed3495e3ea674d8ab094c6fe3a7ec7bd7b9826539e925ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_overlay_bulk.h",
+      "bytes": 1275,
+      "sha256": "29b86b4f3ff80a1eb8869282bc7f3331846c218c5411a1617130982911bb41ed"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_panic.h",
+      "bytes": 844,
+      "sha256": "9b7c097e68a43af160bbae21b3cb49a0059d6b6b4d3992c6a0e48da2fce4e159"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_platform.h",
+      "bytes": 18479,
+      "sha256": "ba82582ea4e0e0f908daa2094160b433b1e30fa3dd6a756682d790428f4a0025"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_platform_native.h",
+      "bytes": 866,
+      "sha256": "be62ceb61d65b73ed7ca7713facaaf1c17c7da4fe8476ef454c390f7c436b994"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_plugin_menu.h",
+      "bytes": 417,
+      "sha256": "455ea53220552565aafd7ea6df75c5f8005de0cab0d47c464a467b1ffa7a5a4e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_ptp.h",
+      "bytes": 3738,
+      "sha256": "f1eb3b317ae4a91633d091e2d908c2626b0876260875d6fc0521146afe55cb39"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_records.h",
+      "bytes": 593,
+      "sha256": "40d95cdc39000d0ecc5a77deca5388454b9c9f521e3b81ecece02fc6eea53526"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_resources.h",
+      "bytes": 2154,
+      "sha256": "e8441e5ebfc9b328f3a9c889281b9c5a82cb42f31aa086cc4131546037087ab2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_runtime_accounts.h",
+      "bytes": 992,
+      "sha256": "39bc6f986c8383c4381cbc076e678724ec9d8839aca611e6a289d35124b73455"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_scene.h",
+      "bytes": 2799,
+      "sha256": "0c304ce07c580d47f3761d856e84e95c8948f4d86d9e28bd7bcfdb2201a7b99a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_scene_sdk.h",
+      "bytes": 2365,
+      "sha256": "e9047ff936c8149cb086cd3f1d7c912cfc39e2af9d866484e249a0065dfafdb8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_schedule.h",
+      "bytes": 1241,
+      "sha256": "4dbe5d007a9d68cc9382d2a82e7250acd5ca0412a29fa0d013da66d9ff44d1f8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_sdk.h",
+      "bytes": 9281,
+      "sha256": "4a3d3112de7e32d2a8a68f5c0d99ad1ba57b4f81c76c484b0266c861c10bbb8f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_semaphore_sdk.h",
+      "bytes": 2116,
+      "sha256": "432ae1c33d2d8cc83dc137c494e717c22a0708c01aaeb2d95e4485a55c58db44"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_services.h",
+      "bytes": 6856,
+      "sha256": "8e3b564955ef84e4d7d2c49ed2bda33382dcaf086bc59947066caeada5445059"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_settings.h",
+      "bytes": 2158,
+      "sha256": "3de0599a452335e0945c459dec979971d382907b997f2d9ca930719fc6eb1413"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_sha256.h",
+      "bytes": 420,
+      "sha256": "41a3ee225d05934526304f18adad32bc0e70dd4c902ce85391bf4d1401d54d41"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_shared_accounts.h",
+      "bytes": 994,
+      "sha256": "dbf9a284eab7486b03c7795dfe4a48277f49c715c5ba0f66950b3ab59fb3dce1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_simd.h",
+      "bytes": 2676,
+      "sha256": "5dd6b001daaf036e3a0fc41b99e62d1b7f642f82ecf81aba52582bf345322ee3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_slot_pool.h",
+      "bytes": 1461,
+      "sha256": "1fb25a88f575440ec03290b9b2d0220ce0815e169856beb626cd6a29e65c6a52"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_startup.h",
+      "bytes": 1659,
+      "sha256": "4e252850216636010c90b9e361236098d0148145d15cb29b23da9b23b8f8b85e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_startup_files.h",
+      "bytes": 916,
+      "sha256": "28ac2e28e7e0d760571096c1b59c6e8fc6c72169c151c6be854ce3087c490b67"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_startup_service.h",
+      "bytes": 1120,
+      "sha256": "842d16bbee81011c14035175c03951b642aaa80f38e2bb6a6f9a9c36f044f5be"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_tasks.h",
+      "bytes": 2486,
+      "sha256": "60d743be50db352cd403b3774ec34ae60fd0783e70b77fcfb72d8c0449bd190e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_tasks_sdk.h",
+      "bytes": 819,
+      "sha256": "4b92360501437f80fac43bc6ad5049df9ea50bd3b43ea3cf824528855ee75439"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_text.h",
+      "bytes": 1389,
+      "sha256": "55f6f14261c7db7519c41dd90dfe4bb48299bd69dde7805f97d76bd34e0f0e7b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_text_fit.h",
+      "bytes": 486,
+      "sha256": "b5f775bfdfbd54269daa67465fece546c2404d29961277da5db270338f9fe4d5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_text_page.h",
+      "bytes": 684,
+      "sha256": "bf5eeb97c82f91cb73c3b65ae16e5010e43616397261a04c3d99efb4ad2b54f9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_text_regions.h",
+      "bytes": 1419,
+      "sha256": "3ae0db410f362b4b6111ad76717cb42f28e6e9ab7feb87a1d39808ecd807c8d5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_transfers.h",
+      "bytes": 1990,
+      "sha256": "44e8360e8a6596fe65c5a74609b32d61ae839ca7c512927c319919ebcf713ebf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_translation.h",
+      "bytes": 731,
+      "sha256": "2e185da44eabfb118f3e9c367f4ab9b517d8b328a328fea6aaa59679d31a0bd4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_ui_document.h",
+      "bytes": 1317,
+      "sha256": "0a10c61e915ba63b813014463001eb03677509f528cd282d0abdc9fd9df1f1ad"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_usb.h",
+      "bytes": 1479,
+      "sha256": "0338d72d42e9acca2b042043856590c6f10c48c98ae0e62aaa0de751cf8772f7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_video_configuration.h",
+      "bytes": 1856,
+      "sha256": "c177d6937a88fbe937aa8cb0484214e8bca4577b0763be7989b6ca0c05fa4d6f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_video_sdk.h",
+      "bytes": 2066,
+      "sha256": "008ad500e1613492adcc36af4080d4f3341c8be08d94298017644e4948060bee"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_video_service.h",
+      "bytes": 1866,
+      "sha256": "62831e0977c55e5ed96a3bdb4104f8eeb5a110092ebb7e150bd995b644bf1119"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_worker_pace.h",
+      "bytes": 988,
+      "sha256": "37e5f398ca4a183588d79f1a31c8cb318924f6b502dbe624ef829bf14fdaa3ab"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/core-include/fenestra_worker_wait.h",
+      "bytes": 1883,
+      "sha256": "31d528355f034a0fd9697c6c3630f8cb363db1dd92762dd88adfc1a951a7e1d8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/fx_registry.h",
+      "bytes": 3929,
+      "sha256": "86b91dbba6e12a0bdfdad3fc58a6edc38ebb4d1950b9dac179ccc63e34dfb4ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/global_output.h",
+      "bytes": 3764,
+      "sha256": "937d0ef1c1b66b2df353e1a559217be989a0cbcdf0d7d58522b3510c773031af"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/hooks.S",
+      "bytes": 1847,
+      "sha256": "a2749621fea1c916fe1c750dcb14677c6b2aa8ac5417b8c2b206d1547ede1e40"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/icon32_alpha.h",
+      "bytes": 11299,
+      "sha256": "3c101766f6f35cc70d02248998ff16d87b190ce14c7199bb8d3997f1225ac98b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/icon32_layout.h",
+      "bytes": 2468,
+      "sha256": "b61040036aa10116cf30df9f8569c97c7daa703123a4497e4c8247ea24b00074"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/icon32_pb.h",
+      "bytes": 8139,
+      "sha256": "61ec792a1e2d64427728ea59d7a5fb47e4cffad873d103a936feb7b19630c330"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/live_badge.h",
+      "bytes": 11818,
+      "sha256": "d53ba1869b15f125c32935471b363cabf9e2b4a85ddfc314d512f63a60daa8b5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/native_profile.c",
+      "bytes": 3026,
+      "sha256": "a7cd5b6485297fe3b29c867022b5b815c0fa5c48475a357e7f6a310936a2f4ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/native_sync.c",
+      "bytes": 12348,
+      "sha256": "268a5636efb67cea6cea2f48a2a78cb9b437bfa7ec24874aa2fb701576c3c9e4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/native_sync.h",
+      "bytes": 2285,
+      "sha256": "7212a56c26b4fe5da41ed70116d5e07aadcc48b33c7b5a4c1dfba0e763358b51"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/native_ui.c",
+      "bytes": 38455,
+      "sha256": "41da9ebf466eae497ddfba6452bed5d5f8aaae90e42c7a47d3fe18f4e303fc16"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/native_ui.h",
+      "bytes": 1523,
+      "sha256": "a9b890c31ea9e739cbe62dded82a0619c1225c8d8533522c4db58df9390cce86"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/preview.c",
+      "bytes": 123,
+      "sha256": "c70db4acbc62af1397ae22d947270c6f6b97e2e206a81d16a352cd339dcee12e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/preview.h",
+      "bytes": 2474,
+      "sha256": "6443f636a77ba253bb9db3f57c19a9f7c9f2915ce5f3832ace7795b0b5c6c0a3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/preview_writer.c",
+      "bytes": 116,
+      "sha256": "a3852aae9efb055a77205119654d90a915d7fb1a4367744df0293c233884ae63"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/preview_writer.h",
+      "bytes": 1198,
+      "sha256": "bb71025d8ea766d6a849fa9a89e5edd8592331ebf2fa50f476396087f0925dcf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/runtime.c",
+      "bytes": 35095,
+      "sha256": "451a732eaf167be3ea2d083ba7b895a7e476894ecc045a80d82946968b82f395"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/runtime.h",
+      "bytes": 4027,
+      "sha256": "c6b67d7e453ad0e990fb1db6a28c5f0687b59a6af6b8ce1909de6c50880060f9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/settings.c",
+      "bytes": 5353,
+      "sha256": "7238d930de1280bf511296707f3e5fb100c847a498c0a9dafe7841f9dfa9ecc6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/settings.h",
+      "bytes": 1211,
+      "sha256": "070a579a94d9e76dc8aae5011cb2615ddd14f6b07541a0191751a1e56610a3a5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/sync.c",
+      "bytes": 6220,
+      "sha256": "f2f3298ffb3d498fa0cf2f71c1f1e4320ace9a2159c836f878f7949df8eb96c8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/sync.h",
+      "bytes": 3139,
+      "sha256": "f5d6b5a1381fb6171147e20a0a232f01955770dc794e543d4165efac5b96df96"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/test_native_restore.c",
+      "bytes": 5623,
+      "sha256": "e15ebc0f5e623c88157a1550903428750597cda88304a00f35215bd3c317aa18"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/test_ui.c",
+      "bytes": 3532,
+      "sha256": "bbd61ea1f159faebab48750e4737223da293a44aefc9f336f052297aa641ea56"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/tests/test_driver_round2.py",
+      "bytes": 5264,
+      "sha256": "1ead0d1980ecd1d8f72971448fc1357eb5abdbb5f6de0788850ede3a12346a01"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/tests/test_driver_sequence.py",
+      "bytes": 1978,
+      "sha256": "bcaef4477ba9ec9b485d4fb5cc6c8d0194a32fffef68ceac2c2c6a7e55b0d8c2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/tests/test_driver_snapshot.py",
+      "bytes": 1817,
+      "sha256": "ee98827d0877770dd3a90be99d6fd98520cb68baf8ad4e258bb080ee184e4213"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/tests/test_pb_v71r5_unicorn.py",
+      "bytes": 30927,
+      "sha256": "a69ba650b071bf73687ea9b2e0b8fef842d160c903e5a66f946ab7ab31b11458"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/tests/test_preview_sync.c",
+      "bytes": 8857,
+      "sha256": "95d80bd592de6c9d2080bcc52cb860f5cce65414f8cc358db5e5f304b37127e0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/tests/test_preview_sync.sh",
+      "bytes": 908,
+      "sha256": "47234f4b8c96cc9de40da08192d6a39f678b7bf2751d20ace37bb2382a8c668e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/tests/test_preview_sync_native.c",
+      "bytes": 11277,
+      "sha256": "d1304ffaa6fa50980f5aee3a373f43250a0d32376578699719534e415ea2abc4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/tests/test_settings.c",
+      "bytes": 3020,
+      "sha256": "e4e0a77a52801d09084ccc3816a4af6a999a43634fb7fabeaf7475a497789b8e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/tests/test_settings.sh",
+      "bytes": 761,
+      "sha256": "45b2e8907a4a3122a50f6828c2970672f8b62a4a6650604b053c720858df6dfa"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/ui.c",
+      "bytes": 5208,
+      "sha256": "13c57b097884e4763a10bb9e488c9f0edd08e9b732b8dc7548a7f91890e559f8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/pb-fix37/ui.h",
+      "bytes": 1180,
+      "sha256": "19fa33ccd7275e691e7d2fc32951eee26ff36792ae54bdb3d366eb76b2c6b2b3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/PROMPT.md",
+      "bytes": 4221,
+      "sha256": "e481cde2fbbb5880892fcc2dbc223ee09f90af2ed3ee887e968cd2538f090e07"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/REPORT.md",
+      "bytes": 17435,
+      "sha256": "2f8b5c11ae8f6aab62441437a6ec24b56263036a70774ce0cf9b7e1ba7f18319"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/RESUME-1.md",
+      "bytes": 1566,
+      "sha256": "8f94df7013e1674240929e978cf6edf9402724fecb3c528833ca9b3ece37e4fc"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/analyze_v4.py",
+      "bytes": 4035,
+      "sha256": "eb391078534e4e0bd06164697f33cdbe77753649d4482e0bcc3f0fe39252055f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/audio/live_audio.c",
+      "bytes": 6968,
+      "sha256": "a4c8d65013bedb9912ba7e3c614a9056fb06d2a42fc6d689a8540857461b6186"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/audio/live_audio.h",
+      "bytes": 4364,
+      "sha256": "70ccd7ea70617d1e8a8d1c306ba87e9e4dcd6c7582b0acc02252d2f650251676"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/audio/live_audio_mov.c",
+      "bytes": 3974,
+      "sha256": "743db31bd598943a89faa7b9bc0f85b6cabf678b2e19a8c07b4ee5194d6244d6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/audio/live_audio_native.c",
+      "bytes": 1457,
+      "sha256": "dfbf158ad9297fc6f640cd26d5ae27f9fec3da755488ba8346613e87afd84498"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/audio/live_audio_z8.c",
+      "bytes": 9846,
+      "sha256": "0014f57ddc5431079a6c8cb84326c084273eb1d4b8466f4343100eb1dd964152"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/audio/live_audio_z8.h",
+      "bytes": 3529,
+      "sha256": "4cfec241c2e3b41ca1bf0502c12f16862c04c1b944decf6174cd81ebf8b49655"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/audio/live_shutter_z8.c",
+      "bytes": 15282,
+      "sha256": "aa2ced94e863fb8c954a58bb44a66c00a07469d69a8712d30f3052695dd4c96f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/audio/live_shutter_z8.h",
+      "bytes": 1076,
+      "sha256": "f455350f20a9fe536123922b45b19c68a0764a38b37fe2757cad3d52d6dad6c9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/audit_v4.py",
+      "bytes": 2629,
+      "sha256": "3584b90b10dbf2d351a248ab0ae8b63873cdfa237e86b357ad64d1b647d64d05"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/batch-v4-retry.py",
+      "bytes": 2562,
+      "sha256": "0673f5998cec81722d8254ee45889db4accc9919f1dd47dab7ccac9a52e10ef7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/batch-v4.py",
+      "bytes": 2561,
+      "sha256": "3e1ee2d2ec04ba6c958453174b408f7f9e4cec554b96717c5ecf31b0b1a69510"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/build.py",
+      "bytes": 7750,
+      "sha256": "73a3f2ef630376ee532ee525089b3fd5a1caba9402c7dd5b0ac862ee9f0f0273"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/INTEGRATION.md",
+      "bytes": 4696,
+      "sha256": "0ab25eec2388f55f66dba8dee75442398cf895201720cad425bc760fe1f6ae2e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/check.sh",
+      "bytes": 658,
+      "sha256": "def7b6540e847b3032608a6f38e57015aa4e7358d209dd123598f2d5abdc5426"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/hook_test.py",
+      "bytes": 4774,
+      "sha256": "9502e23d84b5613e2258d4c7c313ed8674ac1e63eb8c540045ea2f1a6b847915"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/live_alias.h",
+      "bytes": 2102,
+      "sha256": "9576a56d538983a45d1afc9b54f75ff58b7e1d355d546f3bb0e09078cde04c9f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/live_capture.c",
+      "bytes": 7923,
+      "sha256": "973cd293542a84be35eef021953b913a02cde75f793318ace272224011176f75"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/live_capture.h",
+      "bytes": 3168,
+      "sha256": "e363e1bdf07b64530fcd293cec054b3ec776dc666354a111147f54588ae2fa61"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/live_scale_neon.c",
+      "bytes": 79949,
+      "sha256": "7df0386ba06b69a004d36d557db21e60bc208c7260cd8ea0b520abb4f749f055"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/live_scale_neon.h",
+      "bytes": 3725,
+      "sha256": "be8023e6708b5eae8d2c902095fce55c7f6645234003c3400be9710e2bc43605"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/live_stream.c",
+      "bytes": 88842,
+      "sha256": "4a8ceb0247f45961a13af49dab91abf7a4521a3eb6ebd7c1cd840385ee6e4597"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/live_stream.h",
+      "bytes": 11110,
+      "sha256": "6ff89b30351a77a3a02056fc033a397056eaeb3505381826ccbc667a5a45d9ce"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/native_capture.c",
+      "bytes": 12462,
+      "sha256": "9547229e68e8499159104734f009ac98d02d106a2a916cfb87e09bceed972738"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/native_capture.h",
+      "bytes": 1104,
+      "sha256": "51098d3cd05d882b4962b3bb9aee8854b80832291207c03e32a7a5bc42afcb3f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/runtime-review.md",
+      "bytes": 2436,
+      "sha256": "5ede040fb6bc5af5e7e3d83011364fa0a5c5e64f85f719eefc493f804fb4a7c0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/test_capture.c",
+      "bytes": 3696,
+      "sha256": "a68a506402f6d92bcc7d9dbc29541633afc5dc118ba3b520ea7b5beb7ae38dca"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/test_reduced.c",
+      "bytes": 593,
+      "sha256": "73d4acd960aefca6844fc728fbe5fdfc396bc6d74639b62381f4370ca05180f0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/test_stream.c",
+      "bytes": 5140,
+      "sha256": "7c5e48f93639832f7e91ae690d4020a288fb0130d23c510e882266f33a5326a8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/test_ticket_unicorn.py",
+      "bytes": 3140,
+      "sha256": "377003f34d0fc33758972cb07f72685fe020ec87b6bb616e48b099d2c97d96cb"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/capture/test_v2_hooks.py",
+      "bytes": 2790,
+      "sha256": "b4f621802ac6a176fde7f268b548b4a5de942ce8a59f2390075cdfaf1fe7420c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/check-v4.sh",
+      "bytes": 1053,
+      "sha256": "d6a1938d73890dbc29ec995d9969681de459ad344f65ba1990432ef84bae0e42"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/FS-EXCLUSIVE.md",
+      "bytes": 3713,
+      "sha256": "60572c755a52ada143556ff8d7920a0be18715f8c5b9f1a5e2ea558fa4b50602"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/NOTES.md",
+      "bytes": 5097,
+      "sha256": "019c4f9b0a6cdaa04255bd23e4250364ac9180ba8757311fb98e7e74ae05b3db"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/au_ring.c",
+      "bytes": 2690,
+      "sha256": "60cb48c522c75b8b24fa893089ac71a6ac867c4589e7504edc9da3f7ee4099c9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/au_ring.h",
+      "bytes": 657,
+      "sha256": "260c70cf12562f9f74751132364522b48dd01e2bc7ecdf93072ba1b8158a8558"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/audio_mov_test.c",
+      "bytes": 1963,
+      "sha256": "1cfaea43d1f294e429a6ef9bf3994e2c48bea9c9a61cc3d64c36239fe6d5ae88"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/build_and_test.sh",
+      "bytes": 2031,
+      "sha256": "7ea129482c5e39cc5dc3df08e974667915dbc53cb3c9ee2651bf012f7a433412"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/freestanding/assert.h",
+      "bytes": 28,
+      "sha256": "960d0f5a819068ebb5977e6dbdcdc6900ca4b054c800c62514b964bf11712674"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/freestanding/endian.h",
+      "bytes": 81,
+      "sha256": "27a6224374b8931986dd626467a489537cd4a7a353ff18671f66ab16766bd177"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/freestanding/stdio.h",
+      "bytes": 52,
+      "sha256": "ead58ae45d54be0028df137e2f1974a75ee66a237a650f88e1ea86c92220e9d9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/freestanding/string.h",
+      "bytes": 184,
+      "sha256": "de12f521048a8e3e04a34dd086cd31832c71cdf86f1722eac35114d3821db9ff"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/hevc_test.c",
+      "bytes": 2951,
+      "sha256": "267a849981dad03f7bad006998eda92c98038b200a50a9ae276beb0f58852a19"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/host_test.c",
+      "bytes": 1811,
+      "sha256": "19727a6622d782acbdcbf99228b0d6f15bc9297c0b6bd17eabd99ebc478de84a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/live_codec.h",
+      "bytes": 7085,
+      "sha256": "0d1a4631276ba5b975604aec82fc54885507b2b5121792964d92e731fae1a4f9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/live_encoder.c",
+      "bytes": 3242,
+      "sha256": "1b45759198d6ba501eda65c231700328afc248a0eaf04de397fd92d593fd512f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/live_h264_idr.c",
+      "bytes": 10396,
+      "sha256": "fcde82bfbe3303682e35839116ab6c2501ace587ef594262ba7f86aed97a01a0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/live_h264_idr.h",
+      "bytes": 1430,
+      "sha256": "ec28921ebe64feb7189f448ddb86ed6206525d1625a78fce54be0eb02174bc68"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/live_hevc.c",
+      "bytes": 9855,
+      "sha256": "5509a8278b65fdf982c5ab0b465af7ded068be667ba9cdf500c31e1391b68cd5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/live_hevc.h",
+      "bytes": 1515,
+      "sha256": "dd876426bed8029d2d1f44c77c2014fd0af8e10f19275d92a270a49e1da1a133"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/live_jpeg.c",
+      "bytes": 2450,
+      "sha256": "4a4fa5cd278b5478f175488b0bd50d3168a55f7d6b7cede843d72c272e6a6fbe"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/live_mov.c",
+      "bytes": 15146,
+      "sha256": "2da20c693acbc32c50951c70beaa63a086c70c6e46fd2cda71c4a2447f4a5dcf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/live_transaction.c",
+      "bytes": 17136,
+      "sha256": "ce67fa2f6d5d0e5d3eff97581f7ab2884c6209a32a319ebc0bec6915f9abedf7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/live_transaction.h",
+      "bytes": 4562,
+      "sha256": "d90923019dcfc77c4cfc816653775a4102e4f7334d0071ea81ce73ccf67f0d5b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/live_w5_mirror.h",
+      "bytes": 3949,
+      "sha256": "c2fabce3ae3ba175102b15ae96adf9cd8468130a7293b2b7dc21bc66099800c1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/live_w5enc.c",
+      "bytes": 62844,
+      "sha256": "4f03db529fef6dc394bffb7a4a8d88ca5a82720f3e0b1d29bdeb3e8c89b89859"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/minih264e.h",
+      "bytes": 410421,
+      "sha256": "6df33ce8402b41320c5f75a1eab4197fe48130f58829aecd4d67a53b19a91fa9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/native_adapter_test.py",
+      "bytes": 4123,
+      "sha256": "45e17ae1b89c8eece4d04c9eed22e95f6a50b43ae6b6365a9e7d2ed94c05c9d6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/native_files.c",
+      "bytes": 4487,
+      "sha256": "c04661e5959b3f2fb69f773dcb5fddb52fae0f2aadc3d16998bca59a137d2e72"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/native_files.h",
+      "bytes": 530,
+      "sha256": "8497221cd7820b30ced02ca8e327d29bda1c9f8f8f022c9f2059f428ca33b63e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/preview_reader.c",
+      "bytes": 11205,
+      "sha256": "82edbae22e273254971000be915474310b77df7c8b582faa33e7437757fc9a37"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/preview_reader.h",
+      "bytes": 2474,
+      "sha256": "6443f636a77ba253bb9db3f57c19a9f7c9f2915ce5f3832ace7795b0b5c6c0a3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/preview_writer.c",
+      "bytes": 29909,
+      "sha256": "5b8ff412040b703121fec91adc5b304ca14cdbd1f194d7ecaa537f1e18d6cae6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/preview_writer.h",
+      "bytes": 3580,
+      "sha256": "a08907b2fc19ed9006018d575a03b4854ee0dccb797b0c053d35b9165f88dcab"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/test_au_ring.c",
+      "bytes": 693,
+      "sha256": "496bb4915577911af7838b1ac92cc88318bb5601afb5d3076c451e9d166a7e16"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/test_paths.c",
+      "bytes": 882,
+      "sha256": "e56b8e6c7ea52fd474480f1d742e7f1735e93760343f5ec4774bce5c69d7e351"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/transaction_test.c",
+      "bytes": 5654,
+      "sha256": "3744d146e700d5bbf0710d7409957f50f408830a661e1824c1aa3d0f324e30b7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/twin_test.c",
+      "bytes": 6602,
+      "sha256": "044403334810a1c134a755849f2ea88d5ec22fe3bfc08bf6c07748adbfe2ea84"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/codec/verify_artifacts.py",
+      "bytes": 1889,
+      "sha256": "332cb07b17db373a63c052a14a900a463cb820bf7ecf13ca17c39dd5d5cac339"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/driver/card_export.py",
+      "bytes": 7640,
+      "sha256": "c291f8a5d9e9980b9cbe3b36cd375719930a99752cf84404f07364dd98409aa7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/driver/diag-runtime-offsets.json",
+      "bytes": 339,
+      "sha256": "68a05ec3bd74929e9790baf9f8c67f44aeefaf56ee56ae6d80984f9f9505bd66"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/driver/exfat_put.py",
+      "bytes": 3670,
+      "sha256": "a1dacd2482465eea009c4f4ca6d410a22e073703cac314315afb385abf893ace"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/driver/pipe_transport.py",
+      "bytes": 2931,
+      "sha256": "7f84f091b15150ced8946e9ddbe90766ad87118c04a065e9b40532fb8283489c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/driver/run_live.py",
+      "bytes": 20031,
+      "sha256": "f732bd8ce766a71c022f41c5c172f2233e69a2beadf40ec05085e117104cf476"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/driver/test_navigation.py",
+      "bytes": 5257,
+      "sha256": "384e28f6d97dd709c3e121d5a52ac2f5de1ff1141c1d0a0e2f6887c4d0a24d53"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/driver/z8_capture_resources.py",
+      "bytes": 13618,
+      "sha256": "912aa9397859bc7efe7bc11fae9cf5fe6ffc8355d58497cdc703f815c5d594a2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/hangfix_hooks.json",
+      "bytes": 4695,
+      "sha256": "c214d606e87ad6bd874e701695a6bf67d78c0b4e56ffdffd2f2ea19bc1737d74"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/hooks.S",
+      "bytes": 3280,
+      "sha256": "fc091344d94602dc28b6a287374460e05d62897bac832560327cf609ad54daf8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/offsets.c",
+      "bytes": 1943,
+      "sha256": "d2b93f97fe98cf30a5f6d724a59ba2f196e86a42b12ca43ed85e9695060047a4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/progress.py",
+      "bytes": 1046,
+      "sha256": "ea724bb13fe370da3edbab1e9fab92625eb536bde60a7b89bc2db3eca83056a3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/runtime-offsets.json",
+      "bytes": 1755,
+      "sha256": "1cae8092271b4e2a7c1b449a357ed13c069b36580a06c7cb5ff4f5419484ef68"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/runtime-test-offsets.json",
+      "bytes": 92,
+      "sha256": "b994feb6c7ac32752755006453c6fb2899b44958a224ef02ff4c5604bc3f0854"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/runtime.c",
+      "bytes": 53776,
+      "sha256": "265c4a2d08b520baa03f95844797d87434002641c27287e18165b4b661c12238"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/runtime.h",
+      "bytes": 6715,
+      "sha256": "713950020b1b6f2e860fd0bb450b997e8594fc52e1ad3dd13ea557c25badc693"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra.h",
+      "bytes": 4109,
+      "sha256": "d7113bdacb270d0045cd33837130a860bd81150b0df9da79fd82b47c23e70d03"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_accounting.h",
+      "bytes": 3565,
+      "sha256": "e963fb6aa7298910e4f8cdd11db314138b979ba01df7df43432de4150ec8cb88"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_accounting_sdk.h",
+      "bytes": 347,
+      "sha256": "3cf504f021f456f0a1763a46b7dc2d6c106ee948b8cebf6f29b267ad2fb72c0c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_accounting_service.h",
+      "bytes": 743,
+      "sha256": "1fe7120983247cfafe2635bb34b6c56a7e2f1ace6f05deaa43ae38260edae128"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_allocation_observer.h",
+      "bytes": 1267,
+      "sha256": "f2c29b5ecf654820e3495bbfefdc54ad86c5e18b59be5e76432cb23fb95b0812"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_api.h",
+      "bytes": 248,
+      "sha256": "1f596e167cd446ecec20e4571814db7806e9448d60d07a647e72ae615c1fc0a7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_binding_store.h",
+      "bytes": 3274,
+      "sha256": "70934f5a855e8be722a392a5c86216b13e0f3c8478807b7c141c329f7085aaff"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_bus_sdk.h",
+      "bytes": 2636,
+      "sha256": "dfb456d4c6a42ab7f52ef1499362aa00f040e4ab86828b5553ff94a9b1ffdf07"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_capture.h",
+      "bytes": 892,
+      "sha256": "1467a27e485df323daff57587074c66882b0351dd484e211c8381881836c1d39"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_capture_hooks.h",
+      "bytes": 2381,
+      "sha256": "276bdc5ea02c1d92c8110aa27d1b1bf20324fae0ef115efda643a92c90982ddc"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_capture_menu.h",
+      "bytes": 2444,
+      "sha256": "b4d481f7012dd4853054a96279d85b7ccfdf949d4326bd4f2cd4fcfc689b6e1f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_capture_quick.h",
+      "bytes": 1663,
+      "sha256": "acde982a4eb2095320764e786d5c7d181fb825a3f88f47772ee9dc32716d89aa"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_demo.h",
+      "bytes": 1379,
+      "sha256": "76b4e962ba9e4dc1ebb0a4f1d145c2313de23f6504f1c4aca0b30136a5bbe0f5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_display.h",
+      "bytes": 1387,
+      "sha256": "89f5d70046b42d09c7442e168e15967f6655928d2cfc20698913a7c86feea95e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_observation.h",
+      "bytes": 709,
+      "sha256": "39a9646563d38bfe6d9c0393443e6b3231f7d5a46519f40f54146e48bfb079e8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_panic.h",
+      "bytes": 234,
+      "sha256": "500743db071c820c1fc1806f2c0420fc32185d3b78aea620d4a18b0817ea52cd"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_rtos.h",
+      "bytes": 1014,
+      "sha256": "20bdab54f1c151ba30343ec2d9ee1e27ed9ca921e0e0bf0aa38cdbd195b1ce2d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_scene.h",
+      "bytes": 527,
+      "sha256": "d0821072d437736bb70f1fa6536befd06c57fe92ee134fb56c12b074113bc9f5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_services.h",
+      "bytes": 1260,
+      "sha256": "12a2af85638031c678dc735518756a90401cc532942eb3fc50047ceb6a977cd1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_startup.h",
+      "bytes": 1112,
+      "sha256": "70fc26055a1159ca3fc6bcc60f8bfe0834d91dd04ea31c1621114c77af4e3120"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_c110_usb.h",
+      "bytes": 386,
+      "sha256": "f245fb2ca13108e6ae6a58e6264485a8838d71fd64d29168a21f208c68f89505"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_canvas.h",
+      "bytes": 4925,
+      "sha256": "22140f7b59cb4c5e25628a9e217ab55a0dbb6c1cd46633a5364db81f09a30efe"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_capacity.h",
+      "bytes": 3711,
+      "sha256": "a0da52fa856ef4bac912d5b3a905564bdebeef87a3379dfbc51aeb28b6186929"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_capture.h",
+      "bytes": 1336,
+      "sha256": "7d6341dc945fd70764ed8df4dbb720e5ca1576ec6c0a236189df9d5633fa55c6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_capture_service.h",
+      "bytes": 894,
+      "sha256": "c74bf4c927c914226b612291f141823595b3fe2592a74af42476bd973fa85ae7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_critical.h",
+      "bytes": 1364,
+      "sha256": "2034b5dbba2a500847cf0ba75246a5257654152c897497a594173d468740ae00"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_critical_sdk.h",
+      "bytes": 656,
+      "sha256": "19f3065a10e10d4bac0e74a3fb8118b54abcf6e73e059bee78d0fddd9621d461"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_debug.h",
+      "bytes": 1757,
+      "sha256": "984d5856e59c32794691a953d56979d27efa9e4694a334726bc441a058311fd5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_demo.h",
+      "bytes": 1133,
+      "sha256": "49ea942ed2778aa85d18d69068f8dae0a39c5c87d83d9ff7453f9d27e3dc06ed"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_document_sdk.h",
+      "bytes": 1492,
+      "sha256": "a0189b4a8066e0c2c0563123d715c84258431daee4e9e3eae6d38da894864057"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_events.h",
+      "bytes": 1683,
+      "sha256": "d16a533dc1f27a616643b660271d3f3c9f8577e1d54886d183ecf8358a418181"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_events_sdk.h",
+      "bytes": 436,
+      "sha256": "4402cd3810212667414407dace9ed7afb19cde6fa01a81e42900607995bb98e5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_exec.h",
+      "bytes": 2956,
+      "sha256": "cb9fedd711a5df483e4c2f62fbabbd7f68d34789287d804a72cf4f2c831967f2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_exfat.h",
+      "bytes": 1519,
+      "sha256": "71d0817911ec59d517c7dd43747bee74d662ffdcca74aaa517c6f0531174da12"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_extension_services.h",
+      "bytes": 3449,
+      "sha256": "0246f1a1a7e20bcc0ecc185f13f285da064ae8ba5b686194b8a60c504efec86f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_fault_test.h",
+      "bytes": 339,
+      "sha256": "c2f1582b2be974736a9100e6a44ff5150e404e42c2fdedfbe444eb4d8484f3a0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_file_card.h",
+      "bytes": 1014,
+      "sha256": "932fc976b39179c5081f9792b35e48f05560bb328e33372ff2574069cd7363ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_file_observer.h",
+      "bytes": 1065,
+      "sha256": "656c048148258806254e0b89149e6e62d90047c89ebce23234d3533898110ba4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_file_sdk.h",
+      "bytes": 781,
+      "sha256": "e1716a2c41ca46911465d5d7e6352cd13373a0031333ea3568dad01fe7337853"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_hooks.h",
+      "bytes": 4033,
+      "sha256": "2c06613ca79077339f7d5df88c4dac274d01d6427136247db8c1699ae2586314"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_interrupt.h",
+      "bytes": 680,
+      "sha256": "321174bb69c145c99355fce250369388823e0549b41f5b2c409851144cc908d1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_irq.h",
+      "bytes": 3086,
+      "sha256": "1ea985818256142af8f8607fadb81f881b58bf43fa7158cac574769f0d692da3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_jobs.h",
+      "bytes": 2956,
+      "sha256": "fbb0dcf715dcecc02d80dd8dc064e0afcb713d5c8dc47e13373e51e0ef523e85"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_load_sequence.h",
+      "bytes": 909,
+      "sha256": "df240e9c3a6e3dbf18c0eb1ae0c14eaeb4e69b3589b4541315b5d2e6613d31de"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_loader.h",
+      "bytes": 2005,
+      "sha256": "1edd453528c126b75eaff182c321244fede097e148cb64c9528122ddae882371"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_lzss.h",
+      "bytes": 610,
+      "sha256": "a255c744e6bea5925eef43cec27b3084cedc8a9e3b42519bc4aa1b718a38380c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_machine.h",
+      "bytes": 841,
+      "sha256": "539904686f3962a0afbea449a4206047a026214667150ba3d6bda8bc3eee9f84"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_mapping.h",
+      "bytes": 3565,
+      "sha256": "09d791d179b2852a90cc959701517a94e89d5068ba060a31e467762bbad9839f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_mapping_sdk.h",
+      "bytes": 966,
+      "sha256": "139853fd89f65901df6cca3c0f97668047a705a55d3116c4707815ccf7392df6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_memory.h",
+      "bytes": 779,
+      "sha256": "88d25accb11aa9830da59fb55d2a5e9e2052aee570bdb445ee213d61dcb23910"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_mmu_context.h",
+      "bytes": 1513,
+      "sha256": "25e31442353418fa5a37317682455b0620c5e9be0f6cf54c2f9d4b8aaedfe4fe"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_mmu_sdk.h",
+      "bytes": 4844,
+      "sha256": "8cf362b3f71f136b4bed88dc1cef6fee0178c8fc66c4586ac1c115da24546cd9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_module.h",
+      "bytes": 3564,
+      "sha256": "3087802fe797467c91d67bf4cdaff58ae06aee79ce0ba159f0cbf48a113519e5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_module_bus.h",
+      "bytes": 2576,
+      "sha256": "7c580ef5884457724f7a5de502d18abce9516913354c1ec09fbffcc29783650b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_module_index.h",
+      "bytes": 1552,
+      "sha256": "bef2e1998303ba3ec12b6a42de6bdfa6e83786d7ea7300e6b0e6e724c499b65e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_module_load_buffer.h",
+      "bytes": 1248,
+      "sha256": "b03b3188a2493587d2f07d6714e70ba36e2f4389c02967ec8c62873062ed447e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_module_manager.h",
+      "bytes": 2964,
+      "sha256": "0a7835079610f8ef6f1377b8b295b02cfe8a344c1093115fa677795f5ae09308"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_mutex_sdk.h",
+      "bytes": 2160,
+      "sha256": "f97fcf2c4812a2535c2e3d7b60fb3e595702b03ee4df71a7e9df27aa07d55b12"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_apps.h",
+      "bytes": 4004,
+      "sha256": "56ed587d519951725a9d017c87477ad279d4904d5439fbd2974c9def66f19fef"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_call.h",
+      "bytes": 932,
+      "sha256": "ced7812cb3c4f5f5037069706e0f5fead97865b66e1386409934b1d70a876b5f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_context.h",
+      "bytes": 1078,
+      "sha256": "c6cc9148dc53ac056355e0f105beeaea2f54a0b29b8659fa2c4681a9c67c7e6c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_display.h",
+      "bytes": 4528,
+      "sha256": "47e7bac4dc36af4b6e365900f1cb5425ac9a5650041117fda6fd5a84a1906ee9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_editor.h",
+      "bytes": 3137,
+      "sha256": "ace14c79f00e97e133f7c52bb6da417a55d5b6ecf75e668d807eda0ce6a6c128"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_font.h",
+      "bytes": 2313,
+      "sha256": "20cc84cb5dfe7bb0d5a266717e8ad7c03be10b8444d8566011fa3e0849550695"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_linux.h",
+      "bytes": 1904,
+      "sha256": "e2d1c2e281137b823e84d2b29e36cb98491e441cb2601ffeb4f7ad5efba0c499"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_mapping.h",
+      "bytes": 444,
+      "sha256": "2e22ae35d92894ae59ced5c9090a689658ea6d0d16ed806a5d6c1eab644cbf3d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_menu.h",
+      "bytes": 4828,
+      "sha256": "776ba744de6e9b058b3ff449364110a6767cc95a51a8d314daa29c5a668c2bca"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_modules.h",
+      "bytes": 908,
+      "sha256": "9cf8de7e3c65ce2bb9dda6767cfc4058ad6004fd1a0b3e882dd275d942491708"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_namespace.h",
+      "bytes": 621,
+      "sha256": "91e9b3bd75852b95fca9082ce9870bbf18d63d3d413fdfb76e43422bc0866aaf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_panic.h",
+      "bytes": 1345,
+      "sha256": "6f7bb39d83e19427316e2043da691d9dbca758106fc6b9566b4e095f1179ddab"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_ptp.h",
+      "bytes": 1828,
+      "sha256": "cab699915115c698c1450e5b1d06906c7e6ebce3f4dab1344b774e0db5fe9787"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_rtos.h",
+      "bytes": 1824,
+      "sha256": "e476ee4f518dc55bde304ed086ac184a6094c0e3aced61b5a465c5b94bc5404f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_scene.h",
+      "bytes": 1165,
+      "sha256": "eab73b05d25bb68e60be682720e0316c8923cac3d32dabe93f620c52c2107c44"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_text.h",
+      "bytes": 677,
+      "sha256": "facb7e5b6867c785202cb25e473f32333d7153b63de7387020a480f68c4adb4d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_title.h",
+      "bytes": 577,
+      "sha256": "14ba5f16401eeea435efcf6c54223965723b31c0b0fdc49f7d46e3532c4916ce"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_ui.h",
+      "bytes": 11583,
+      "sha256": "65510aaf2cb97e9cf5649a60702d9760dcdc477cb7778c25c956bf6fb5432b64"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_ui_callbacks.h",
+      "bytes": 995,
+      "sha256": "37cd69d97e8835fc653fe43468abe756777812a2ed749fcd1457eed123c99c83"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_ui_dispatch.h",
+      "bytes": 3073,
+      "sha256": "9c7385edc4deacb508988a11033ddaeff194fda4da284a669e3df1fbdc4a3e4c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_ui_editor.h",
+      "bytes": 1241,
+      "sha256": "b52fca1c262324a6614c229b4eefe4ff172a8d78592b86608f3b247e143e3794"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_ui_pager.h",
+      "bytes": 2468,
+      "sha256": "a89918f7dd2a7bee687b6f30be5b5ee073f3525caeccb9ab0ba6621b840b4bbf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_ui_reader.h",
+      "bytes": 1216,
+      "sha256": "f538f6e2acca0fae2efed696a4bbd0b7f1d7d828002594e5b30cdb79b5d48bc3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_native_visibility.h",
+      "bytes": 1751,
+      "sha256": "53f5befcc09623c85e9838aa495f7a2e1dc90d69ee1bb905c5c0de76dd0101e7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_nef_metadata.h",
+      "bytes": 722,
+      "sha256": "a1d9dacb09a848ae6e196b693a5b1c218280267a7340044b6b92d72932de54e0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_nvme.h",
+      "bytes": 1251,
+      "sha256": "2a3947ba1ad2bc046e4d83f5e71eda8cc5c34606ce171e2c66f2685943ffc997"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_observation.h",
+      "bytes": 1647,
+      "sha256": "9474a2b04d85a20bee70293176a6cb8de1df8866db34b7db68510b95615f60f8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_overlay.h",
+      "bytes": 5425,
+      "sha256": "8c2d63deb8a245c02ed3495e3ea674d8ab094c6fe3a7ec7bd7b9826539e925ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_overlay_bulk.h",
+      "bytes": 1275,
+      "sha256": "29b86b4f3ff80a1eb8869282bc7f3331846c218c5411a1617130982911bb41ed"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_panic.h",
+      "bytes": 844,
+      "sha256": "9b7c097e68a43af160bbae21b3cb49a0059d6b6b4d3992c6a0e48da2fce4e159"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_platform.h",
+      "bytes": 18479,
+      "sha256": "ba82582ea4e0e0f908daa2094160b433b1e30fa3dd6a756682d790428f4a0025"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_platform_native.h",
+      "bytes": 866,
+      "sha256": "be62ceb61d65b73ed7ca7713facaaf1c17c7da4fe8476ef454c390f7c436b994"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_plugin_menu.h",
+      "bytes": 417,
+      "sha256": "455ea53220552565aafd7ea6df75c5f8005de0cab0d47c464a467b1ffa7a5a4e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_ptp.h",
+      "bytes": 3738,
+      "sha256": "f1eb3b317ae4a91633d091e2d908c2626b0876260875d6fc0521146afe55cb39"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_records.h",
+      "bytes": 593,
+      "sha256": "40d95cdc39000d0ecc5a77deca5388454b9c9f521e3b81ecece02fc6eea53526"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_resources.h",
+      "bytes": 2154,
+      "sha256": "e8441e5ebfc9b328f3a9c889281b9c5a82cb42f31aa086cc4131546037087ab2"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_runtime_accounts.h",
+      "bytes": 992,
+      "sha256": "39bc6f986c8383c4381cbc076e678724ec9d8839aca611e6a289d35124b73455"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_scene.h",
+      "bytes": 2799,
+      "sha256": "0c304ce07c580d47f3761d856e84e95c8948f4d86d9e28bd7bcfdb2201a7b99a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_scene_sdk.h",
+      "bytes": 2365,
+      "sha256": "e9047ff936c8149cb086cd3f1d7c912cfc39e2af9d866484e249a0065dfafdb8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_schedule.h",
+      "bytes": 1241,
+      "sha256": "4dbe5d007a9d68cc9382d2a82e7250acd5ca0412a29fa0d013da66d9ff44d1f8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_sdk.h",
+      "bytes": 9281,
+      "sha256": "4a3d3112de7e32d2a8a68f5c0d99ad1ba57b4f81c76c484b0266c861c10bbb8f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_semaphore_sdk.h",
+      "bytes": 2116,
+      "sha256": "432ae1c33d2d8cc83dc137c494e717c22a0708c01aaeb2d95e4485a55c58db44"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_services.h",
+      "bytes": 6856,
+      "sha256": "8e3b564955ef84e4d7d2c49ed2bda33382dcaf086bc59947066caeada5445059"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_settings.h",
+      "bytes": 2158,
+      "sha256": "3de0599a452335e0945c459dec979971d382907b997f2d9ca930719fc6eb1413"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_sha256.h",
+      "bytes": 420,
+      "sha256": "41a3ee225d05934526304f18adad32bc0e70dd4c902ce85391bf4d1401d54d41"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_shared_accounts.h",
+      "bytes": 994,
+      "sha256": "dbf9a284eab7486b03c7795dfe4a48277f49c715c5ba0f66950b3ab59fb3dce1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_simd.h",
+      "bytes": 2676,
+      "sha256": "5dd6b001daaf036e3a0fc41b99e62d1b7f642f82ecf81aba52582bf345322ee3"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_slot_pool.h",
+      "bytes": 1461,
+      "sha256": "1fb25a88f575440ec03290b9b2d0220ce0815e169856beb626cd6a29e65c6a52"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_startup.h",
+      "bytes": 1659,
+      "sha256": "4e252850216636010c90b9e361236098d0148145d15cb29b23da9b23b8f8b85e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_startup_files.h",
+      "bytes": 916,
+      "sha256": "28ac2e28e7e0d760571096c1b59c6e8fc6c72169c151c6be854ce3087c490b67"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_startup_service.h",
+      "bytes": 1120,
+      "sha256": "842d16bbee81011c14035175c03951b642aaa80f38e2bb6a6f9a9c36f044f5be"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_tasks.h",
+      "bytes": 2486,
+      "sha256": "60d743be50db352cd403b3774ec34ae60fd0783e70b77fcfb72d8c0449bd190e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_tasks_sdk.h",
+      "bytes": 819,
+      "sha256": "4b92360501437f80fac43bc6ad5049df9ea50bd3b43ea3cf824528855ee75439"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_text.h",
+      "bytes": 1389,
+      "sha256": "55f6f14261c7db7519c41dd90dfe4bb48299bd69dde7805f97d76bd34e0f0e7b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_text_fit.h",
+      "bytes": 486,
+      "sha256": "b5f775bfdfbd54269daa67465fece546c2404d29961277da5db270338f9fe4d5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_text_page.h",
+      "bytes": 684,
+      "sha256": "bf5eeb97c82f91cb73c3b65ae16e5010e43616397261a04c3d99efb4ad2b54f9"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_text_regions.h",
+      "bytes": 1419,
+      "sha256": "3ae0db410f362b4b6111ad76717cb42f28e6e9ab7feb87a1d39808ecd807c8d5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_transfers.h",
+      "bytes": 1990,
+      "sha256": "44e8360e8a6596fe65c5a74609b32d61ae839ca7c512927c319919ebcf713ebf"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_translation.h",
+      "bytes": 731,
+      "sha256": "2e185da44eabfb118f3e9c367f4ab9b517d8b328a328fea6aaa59679d31a0bd4"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_ui_document.h",
+      "bytes": 1317,
+      "sha256": "0a10c61e915ba63b813014463001eb03677509f528cd282d0abdc9fd9df1f1ad"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_usb.h",
+      "bytes": 1479,
+      "sha256": "0338d72d42e9acca2b042043856590c6f10c48c98ae0e62aaa0de751cf8772f7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_video_configuration.h",
+      "bytes": 1856,
+      "sha256": "c177d6937a88fbe937aa8cb0484214e8bca4577b0763be7989b6ca0c05fa4d6f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_video_sdk.h",
+      "bytes": 2066,
+      "sha256": "008ad500e1613492adcc36af4080d4f3341c8be08d94298017644e4948060bee"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_video_service.h",
+      "bytes": 1866,
+      "sha256": "62831e0977c55e5ed96a3bdb4104f8eeb5a110092ebb7e150bd995b644bf1119"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_worker_pace.h",
+      "bytes": 988,
+      "sha256": "37e5f398ca4a183588d79f1a31c8cb318924f6b502dbe624ef829bf14fdaa3ab"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/core/include/fenestra_worker_wait.h",
+      "bytes": 1883,
+      "sha256": "31d528355f034a0fd9697c6c3630f8cb363db1dd92762dd88adfc1a951a7e1d8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/evf_diag.h",
+      "bytes": 448,
+      "sha256": "fe8fbb1750de31632c72167c5d0b381a01517e9881079ecc53aa5216c1e9b0e6"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/existing_core.ld",
+      "bytes": 408,
+      "sha256": "51661e4a8f9e8685d46ff3c434bfde914c84c79f663761178aaa62667f471dde"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/fx_registry.h",
+      "bytes": 3929,
+      "sha256": "86b91dbba6e12a0bdfdad3fc58a6edc38ebb4d1950b9dac179ccc63e34dfb4ac"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/icon32_alpha.h",
+      "bytes": 11299,
+      "sha256": "3c101766f6f35cc70d02248998ff16d87b190ce14c7199bb8d3997f1225ac98b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/icon32_layout.h",
+      "bytes": 2468,
+      "sha256": "b61040036aa10116cf30df9f8569c97c7daa703123a4497e4c8247ea24b00074"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/icon32_shoot.h",
+      "bytes": 8983,
+      "sha256": "fd613944770bb556b934e473bea08771f096dabbc7b8bebab87ae43492669b4e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/live_config.h",
+      "bytes": 1718,
+      "sha256": "6390b41516236f7e32d7ba5c3f82f78e445683620a12377140cfdadc735be494"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/live_ipc.h",
+      "bytes": 4198,
+      "sha256": "c902ad07da3384cff18a6c77a7ea3792504b2a39062fe2ad850be47dbe58955e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/live_ui.c",
+      "bytes": 36271,
+      "sha256": "b161be5eb66daaa0410d277a208bd8c77165591575f776b629c8c0ae2cf5403f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/live_ui.h",
+      "bytes": 1669,
+      "sha256": "b9fb2e48188571c97699d1f3d09938293144cd28cd27e3f899ccff99db1fccad"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/resolve_symbols.py",
+      "bytes": 2224,
+      "sha256": "7865db56248469136750c78c1ad636257f4dc1160d6e70e904f27bd1ca944e68"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/test.ld",
+      "bytes": 411,
+      "sha256": "073f6038d4be1aca74dbd1b361674bf297d9a61fdfd8f8497b76db5a7e2d9af0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/test_config.c",
+      "bytes": 1245,
+      "sha256": "5bdeb0e7684aeee315c8fbdc93e8def34e829342f0ac5a00c667dd93943b65a1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/src-fix37/ui/test_ui.py",
+      "bytes": 6311,
+      "sha256": "bb5a82ab1f9b0d20f93a53bcc23ab1474d7447db0f21e338bcfc01938dbee66d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/filmsim/build_wlm_zh.py",
+      "bytes": 8938,
+      "sha256": "3582e33487feedba338cc8dfc1643e8e043b67b583e3ab74fe2ac9a45fbee3d8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/filmsim/filmsim_abi.h",
+      "bytes": 34625,
+      "sha256": "eeac3e243fc4c6038a75a8fd80635d0f03a916f86b55de5445b0388eff511b7e"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/filmsim/filmsim_core.h",
+      "bytes": 129568,
+      "sha256": "b1ca87386094dc56527ff39f1d6b9b4854a64bfb55effa459a748bc5234aad52"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/filmsim/module.c",
+      "bytes": 262,
+      "sha256": "c1e4d33f13f8e4645d128026a562ea4fa92aceb0dd5df4f1a00b918d83cf6eea"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/livephoto/build_livephoto_wlm.py",
+      "bytes": 7465,
+      "sha256": "2decf9b724a7ab938cf9d91750d631cc59ae349eebc4291b4e3aa44dddf24d5a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/livephoto/livephoto_abi.h",
+      "bytes": 9014,
+      "sha256": "f4ec85f3a60ff52f619e80d1683162ce2ce7be09b8ee40739fbfe3d9cd59bc40"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/livephoto/livephoto_core.h",
+      "bytes": 53768,
+      "sha256": "7e1bd042440b4f83eb35d7db909edcd45fdb89ce435c4c58fc9f32ecc40e8646"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/livephoto/module.c",
+      "bytes": 261,
+      "sha256": "e0a181f9c528b6446f840d7fce02960bb3bfd796ce6f816f30bea1e386035908"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/lut/build_lut_wlm.py",
+      "bytes": 7373,
+      "sha256": "30c6f59d7bbb28f87dca293f7ec9e8f997dfd125bdb463f204c9e8cae96f13ee"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/lut/lut_core.h",
+      "bytes": 53546,
+      "sha256": "06150ec0a7d25ae0b7d8aba9cde45a187832360bdd1ffbcd4c455695005f266f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/lut/lut_wlm_abi.h",
+      "bytes": 8289,
+      "sha256": "a3ec28dfe2415ea0c4275858932c780b6195d25b8ad40910e5bd88400d6ad2d7"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/lut/module.c",
+      "bytes": 249,
+      "sha256": "c91c5295450df550fa89893a59efcda3f0c69d605fb2e7b0c8dc558e1ad17333"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/portrait/build_portrait_wlm.py",
+      "bytes": 7273,
+      "sha256": "938e9be661c4e877aa7df4331e871ac2ee9a9145e52c6dabc34dad18148db227"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/portrait/module.c",
+      "bytes": 15535,
+      "sha256": "1f7b4e83550296c1182dc3b31cf9b3fa11669d001b2abc5ee3ed8a29970e6f13"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/slotcard/build_and_verify_wlm.py",
+      "bytes": 8451,
+      "sha256": "6d8920dce5a762691ad107b06f1496d77d20574a49430e68aa67ada0ad368404"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/slotcard/module.c",
+      "bytes": 106084,
+      "sha256": "f8ed2b4531e1da75bbe3a1799fa4fd4ab1ec2a7a7aa2fa26cc0e97532d1fea8a"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/slotcard/pack_np3_z8fx.py",
+      "bytes": 22417,
+      "sha256": "78fcaea1ccd304a53c5775afd88a38ed29aa10a475de4633a6321830823301d1"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/slotcard/slotcard.c",
+      "bytes": 24435,
+      "sha256": "c27018c09587d10a99e175f784fe98d78fe20e00b9e036313732240babf577eb"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/slotcard/slotcard.h",
+      "bytes": 3918,
+      "sha256": "488e0e6f10a035342a12b74022a66c85a44e50bf891ea7a95949910f904b1af0"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/slotcard/slotcard_cfg.h",
+      "bytes": 11660,
+      "sha256": "4945798531945eb6fd3b35485baccfb644fb9991b3faabc6daf4f7a0c969f5ca"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/build_coexist_nikondma.py",
+      "bytes": 26420,
+      "sha256": "3f7874f5101b0532d92345fa9ed16e9edec5bbeae65b523ea35db8398c9d0ff8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/ricoh_hdf_xm6_v2.h",
+      "bytes": 9601,
+      "sha256": "4d33c7854632390bed16d6b06cb2fff53123841d474b12fbf9392978d3f1bc0c"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/ricoh_hdf_xm6_v2_host.c",
+      "bytes": 138979,
+      "sha256": "ccc2bd42e24409f817236ea3fce3e269e007484e60bebf2215d7af60b2b2a553"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/tests/dcli_nikondma_test.ld",
+      "bytes": 6320,
+      "sha256": "d056d27cebbf70632ad4799960250abf78a437634c211a89f7a49d6747ce1a85"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/tests/hdf_expected.h",
+      "bytes": 2537,
+      "sha256": "858c360598756771b4fc1e00c7394d62bf6a038e8e2f215cab5d75b4791005b8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/tests/hdf_matrix_cases.h",
+      "bytes": 9290,
+      "sha256": "93f16a18c90d2f616332a2401f24251cd8a75be02a1249ab6aca72ac793e601f"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/tests/nikondma_mock.c",
+      "bytes": 6411,
+      "sha256": "81f35c837abd407afa13ce67a96c033602f002296d53802c587698065ee542e8"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/tests/nikondma_mock.h",
+      "bytes": 1054,
+      "sha256": "d9060e8b1234316e852b63022369e433e1ecf19784bbb42bbe414244938fd88b"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/tests/run_dcli_suite.py",
+      "bytes": 7130,
+      "sha256": "fb10fc3adb30d410381c154071492991ce03567eacd7e09e3edf74ce9798d8a5"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/tests/xm6_hdf_nikondma_test.c",
+      "bytes": 7113,
+      "sha256": "90d6f9bccfe54f0c3d62c0433a43906014fa1de18aaa6982f3fcbc5c0c14b382"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/xm6_cycles_port.h",
+      "bytes": 676,
+      "sha256": "62f52ff7fa6dd22205ce61bbd95e031733c1ae687aa89dcdf889821e41fdd4ba"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/xm6_hdf_simd.h",
+      "bytes": 19318,
+      "sha256": "5440f55d286e9c171d189f3f264b5fb747933f4bf9d19561f661b8eb7769c154"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/z8_elf0_coexist.ld",
+      "bytes": 2914,
+      "sha256": "90981bb4104116c15f1213734a4acc40cf297203e9517ee795dc956ec985584d"
+    },
+    {
+      "path": "research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/xm6_coexist_src/zf_grain_xm6_ref.h",
+      "bytes": 6277,
+      "sha256": "6464e2bff4a594364e3361e4863d2f1cadf291222848d792d854607916b4ffba"
     },
     {
       "path": "research/z8-live/build-tools/livediag/feat-onemov/verification54.json",

@@ -1,53 +1,156 @@
 # Fenestra for Nikon Z8 (`C3.11`)
 
-**English** | [简体中文](README.zh-CN.md)
+**English** | [简体中文](README.zh-CN.md) · [Detailed V71.7-r7 Feature & Menu Reference (EN)](docs/features-and-usage.md) | [V71.7-r7 详细功能与全菜单设置手册 (简体中文)](docs/features-and-usage.zh-CN.md)
 
-`fenestra-z8` is the **Nikon Z8 (firmware C3.11)** adaptation of [WonderLantern/Fenestra](https://github.com/WonderLantern/Fenestra) (default branch: `z8-c311`). It provides two complementary tracks in a single source repository:
+`fenestra-z8` is the **Nikon Z8 (firmware C3.11)** adaptation of [WonderLantern/Fenestra](https://github.com/WonderLantern/Fenestra) (default branch: `z8-c311`). It spans three clearly separated tracks built on the same Z8 `C3.11` (`04.06.p0`) foundation:
 
 1. **Core Extension Runtime & `.wlm` Module SDK (`src/`, `host/`, `examples/`, `modules/`)**
-   Adds native **Fenestra** and **WonderLantern** menus inside the Z8 Setup Menu, an abnormal-shutdown boot guard, dynamic `.wlm` module loading from the memory card, an AArch64 C SDK for custom UI/OpenVG scenes, and a restricted `INFO` host debug bridge.
-2. **Integrated Live Photo, C64 & Portrait Firmware Line (`research/z8-live/`, up to `V62`)**
-   Full source archive for the integrated Z8 feature set: **in-camera Live Photo** (rolling pre/post-shutter video + synced audio + shutter sound `On/Off`), **native `REC` video playback directly from RAW/JPEG photo review** (including dual-card setups), **LCD & EVF `◎LIVE` indicators**, **vertical/portrait video HUD layout**, **64 custom Picture Control slots (`C64`)**, and **restored Video Log (`N-Log` / `S-Log3` / `Log3G10`) menu labels**.
+   Adds native **Fenestra** and **Plugin Manager** (`插件管理`) menus inside the Z8 Setup Menu, an abnormal-shutdown boot guard, dynamic `.wlm` module loading from the memory card, an AArch64 C SDK for custom UI/OpenVG scenes, and a restricted `INFO` host debug bridge.
+2. **Public Integrated Firmware Archive (`research/z8-live/`, `v36` through `V62` & `v71r7-lut-preview`)**
+   Reproducible stock-to-`v36` reconstruction (`from-stock/build.py`), public incremental checkpoints through **`V62`** (`feat-onemov/`), and the **`V71.7-r7`** native Photo Shooting Menu LUT browser & plugin sources (`modules/` and `research/z8-live/build-tools/livediag/feat-onemov/v71r7-lut-preview/`).
+3. **`V71.7-r7` All-in-One Feature Line (`Z8-v71.7r7-LutPreview-362ee2a5`, internal `04.06.p0`, Bootguard Build ID `0x8394568f`)**
+   The latest integrated firmware & 5-plugin generation delivering:
+   - **Real-Time 3D LUT Preview (EVF + LCD + 45.4MP JPEG + Live Photo)**: Native Nikon **Photo Shooting Menu row 47 (`Select LUT` / `选择 LUT`)** category & `.cube` browser + dedicated **`lut.wlm`** plugin, powered by a **528 KiB L2-resident pre-baked `64×64×33` YCbCr 3D LUT** (`0 B` heap growth, Class `0x24` frozen at `0xE8C000`), inline NEON plane copy, auto-restore across cold reboots, clean Movie-mode `pool_suspend` (`0 B` RAM), and `14-bit .NEF` RAW `0-diff` untouched.
+   - **EXPEED 7 CEVA-XM6 Hardware Vector DSP Acceleration (`Slot 39/40/41`)**: Coexists bit-identically inside stock `z8_xm6_elf0.elf` (`51/51` `dcli.exe` PASS, `0-diff`) with zero-risk automatic ARM NEON fallback, on-device 4-case self-test (`XM6_DIAG.LOG`), and **`V71.7-r7` XM6 bridge de-contention** (splitting static readiness from up-to-16 ms mailbox-idle waiting with `dly_tsk(0)` handoff and hoisting IOMMU/D-Cache ops outside `xm6_busy`, eliminating the ~21% `ERR_NOT_READY` fallback measured on `V71.7-r6`).
+   - **Reverse Single-Pass `Layer 0 → Live` Sharing + Post-Shutter 45MP Still Deferral**: Both EVF (`1280×852`) and LCD (`1024×682`) push pre-grain LUT+HDF NV12 frames directly into Live `LBUF` (`FS_TB_GRADED_READY`), eliminating duplicate CPU2 grading and lifting the LCD 30 fps ceiling; post-shutter 45.4MP still processing defers until Live post-roll finishes (hard-capped at `1.65 s`, bypassed when burst queue is full), eliminating post-shutter Live `.MOV` freezes.
+   - **Clean 7-Row `Fenestra` Home + 5 Built-In Trilingual `.wlm` Plugins**: `filmsim.wlm`, `livephoto.wlm`, `lut.wlm`, `slotcard.wlm`, and `portrait.wlm` (EN / 简体中文 / 繁體中文 with `FontCJK-ZhUI` + live `1 s` language sync + native `Debug Settings` subpages), plus **C64 Native Cloud Icons (`[FC]C-10..C-64`)** and **Upstream NFP `v0.5.1` (`25fefa1`)**.
 
 > [!IMPORTANT]
-> **Read Before Building or Deploying**
-> - **No prebuilt firmware binaries or keys are distributed here.** You must supply your own official Nikon Z8 `C3.11` firmware (`Z_8_0311.bin` or extracted `MAIN`).
-> - **Understand the two build outputs:**
->   - `host/build_z8_core.py` outputs a raw **`MAIN` image for QEMU emulation only** (`z8-qemu`)—it is **not** a flashable camera update file, and `fenestra.py make-patch` (inherited for ZR/Z9) does **not** build Z8 packages.
->   - `research/z8-live/from-stock/build.py` reconstructs both `v36.main` and a complete `Z_8_0406.bin` container from stock `Z_8_0311.bin`, while later checkpoints through **`V62`** live under `research/z8-live/build-tools/livediag/feat-onemov/`.
+> **Read Before Building, Testing, or Deploying**
+> - **No prebuilt firmware binaries, Nikon keys, or extracted `ZF_GRAIN.BIN` tables are distributed in this repository.** You must supply your own official Nikon Z8 `C3.11` firmware (`Z_8_0311.bin` or extracted `MAIN`) and any proprietary grain or `.cube` LUT assets.
+> - **Understand each build track and archive boundary:**
+>   - `host/build_z8_core.py` outputs a raw **`MAIN` image for QEMU emulation only** ([`z8-qemu`](https://github.com/YCX81/z8-qemu))—it is **not** a flashable camera update file, and `fenestra.py make-patch` (inherited for ZR/Z9) does **not** build Z8 packages. `host/build_sdk_module.py` builds standalone `.wlm` SDK modules without requiring stock firmware.
+>   - `research/z8-live/from-stock/build.py` reconstructs `v36.main` and a complete `Z_8_0406.bin` container directly from stock `Z_8_0311.bin`.
+> - **Honest Verification Status (`physical_camera_verified = false` for `V71.7-r7`):**
+>   - Prior `V71.1–V71.6` physical Nikon Z8 field profiling and USB/Live `.MOV` telemetry directly identified and drove the four `V71.7-r7` fluency root-fixes.
+>   - **`V71.7-r7` (`362ee2a5`, Bootguard `0x8394568f`)** has passed all automated suites — **CEVA-XM6 `dcli.exe` 51/51 PASS**, **0-Q-Spill static audit (1,114 linked functions, 0 Q-spills)**, **Host ASan+UBSan (`lut_core` 8/8, `xm6_bridge` 9/9, `layer0` 9/9, `photo_menu` 6/6)**, **6 ARM64/Unicorn suites** (`FontCJK`, `Layer0` 63 checks, `XM6 Bridge` 124 checks, `FilmSim` 70 checks, `HangFix`, `5-WLM CJK` 0 missing glyphs), and **both whole-guest QEMU suites (`#19-r7` 14/14 PASS, `#20-r7` 13/13 PASS)** — and is explicitly marked **`physical_camera_verified = false`** pending physical Z8 flashing and field verification.
 
 ---
 
-## Interface Gallery
+## UI & Feature Preview (`V71.7-r7`, 5 `.wlm` Plugins + Native Photo Menu 3D LUT + XM6 DSP)
 
-| Setup Menu Injection (`Fenestra` & `WonderLantern`) | Fenestra Runtime Control Menu |
+| Clean 7-Row `Fenestra` Home Menu | `Plugin Manager` Listing All 5 `.wlm` Plugins |
 | :---: | :---: |
-| ![Setup Menu Injection](docs/images/setup-menu.png) | ![Fenestra Control Menu](docs/images/fenestra-menu.png) |
-| **LCD Live View with `◎LIVE` Ready Badge** | **EVF Electronic Viewfinder (`Output 4`) with `◎LIVE`** |
-| ![LCD Live View with LIVE Badge](docs/images/liveview-lcd-live.png) | ![EVF Viewfinder with LIVE Badge](docs/images/evf-viewfinder-live.png) |
-| **Photo Playback (`◎LIVE` Indicator)** | **Press `REC` → Native MOV Player (`00m03s`)** |
-| ![Photo Playback with LIVE Badge](docs/images/playback-live-photo.png) | ![Native MOV Playback via REC](docs/images/playback-mov-player.png) |
-| **Portrait Video Standby & Recording HUD** | **Restored Video `Log settings` (`V62`)** |
-| ![Portrait Video Recording HUD](docs/images/portrait-video-rec.png) | ![Video Log Settings Menu](docs/images/video-log-settings.png) |
+| ![Fenestra Home Menu](docs/images/v717-fenestra-home-zh.png) | ![Plugin Manager 5 WLM Plugins](docs/images/v717-plugin-manager-5wlm-zh.png) |
+| **Photo Shooting Menu Row 47 (`Select LUT` / `选择 LUT`)** | **Native 3D LUT Category Browser (`FENESTRA/LUTS/`)** |
+| ![Photo Shooting Menu Row 47 Select LUT](docs/images/v717-lut-photo-menu-zh.png) | ![3D LUT Categories](docs/images/v717-lut-categories-zh.png) |
+| **Paginated `.cube` File List in Photo Menu** | **Loaded 3D LUT Status (`Ready` / `已载入`)** |
+| ![3D LUT File List](docs/images/v717-lut-list-zh.png) | ![3D LUT Loaded Status](docs/images/v717-lut-loaded-zh.png) |
+| **Live View with Real-Time 3D LUT Applied** | **`3D LUT` Plugin (`lut.wlm`) Root Menu** |
+| ![Live View with Real-Time 3D LUT](docs/images/v717-lut-liveview-active.png) | ![3D LUT Plugin Root Menu](docs/images/v717-lut-plugin-root-zh.png) |
+| **`Film Simulation` (`filmsim.wlm`) Root Menu** | **`filmsim.wlm` Debug & XM6 DSP Subpage** |
+| ![FilmSim Root Menu](docs/images/v717-filmsim-root-zh.png) | ![FilmSim Debug Subpage](docs/images/v717-filmsim-debug-zh.png) |
+| **EXPEED 7 CEVA-XM6 Hardware DSP Self-Test Readout** | **`Live Photo` (`livephoto.wlm`) Root Menu** |
+| ![XM6 Hardware DSP Diagnostic](docs/images/v717-xm6-diag-zh.png) | ![Live Photo Plugin Root Menu](docs/images/v717-livephoto-root-zh.png) |
+| **C64 Native Cloud Icons (`Fn` Dial Strip `[FC]C-10..C-64`)** | **C64 Native Cloud Icons (`i`-Menu 12-Grid)** |
+| ![C64 Fn Dial Strip Native Icons](docs/images/v715-c64-fn-strip-zh.png) | ![C64 i-Menu Native Icons](docs/images/v715-c64-imenu-zh.png) |
+| **Dual-Card C64 `Slot card` (`slotcard.wlm`)** | **`Portrait Video` Runtime Gate (`portrait.wlm`)** |
+| ![Slot Card Dual Card Plugin](docs/images/v71-slotcard-en.png) | ![Portrait Video Plugin](docs/images/v71-portrait-wlm-en.png) |
 
 ---
 
-## Feature Summary
+## V71.7-r7 Feature Architecture & Highlights
 
-| Feature | Where It Lives | What It Does |
-| :--- | :--- | :--- |
-| **Fenestra Menu & Boot Guard** | `src/`, `host/build_z8_core.py` | Native `Setup → Fenestra` menu (`Activate`, `Auto activate`, `Shutdown guard`, `Modules`) that automatically disables loading if the previous session crashed or lost power mid-run. |
-| **Loadable `.wlm` Modules & SDK** | `include/`, `examples/hello/`, `modules/demo/` | Build standalone `.wlm` apps in C without needing Nikon firmware or keys; place in `FENESTRA/` on the card and open via `Setup → WonderLantern`. |
-| **Live Photo Capture & Audio** | `research/z8-live/` (`V62`) | Rolling Wave5 video (~1.5 s before and ~1.5 s after shutter) paired with still photos, synced ambient audio, and selectable Live Shutter Sound (`On` / `Off`). |
-| **In-Camera Live Photo Playback** | `feat-onemov/` (`V54`–`V62`) | Displays a `◎LIVE` badge in single-photo playback (RAW-primary and cross-card JPEG aware); press **`REC`** to play the paired `.MOV` in Nikon's native player and automatically return to the photo. |
-| **Portrait Video HUD & EVF Support** | `feat-v52/`, `feat-v53/` | Rotates and aligns vertical video status icons (`REC`, timecode, `2160 30p`, codec, exposure bar, histogram) to native vertical photo anchors across LCD and EVF. |
-| **Video Log Menu Fix (`V62`)** | `feat-onemov/v62/` | Fixes dynamic UI text-ID collisions so `Log settings` (`N-Log / BT.2020`, `S-Log3 / S-Gamut3.Cine`, `Log3G10 / REDWideGamutRGB`) displays properly even after opening `Modules`. |
-| **C32 / C64 Slots & Label Sizing** | `from-stock/`, `feat-c64label/` | Supports 32/64 custom Picture Control slots (`Slot card` boot switch in integrated builds) plus a standalone `c64label_patch.py` 28-pt label descriptor helper. |
-| **Host `INFO` Debug Bridge** | `host/ptp_linux.py`, `linux/` | Hash-pinned static AArch64 Linux agent supporting a strict parameterless `INFO` query (arbitrary shell execution is disabled on Z8 C3.11). |
+> For exhaustive menu-by-menu tables (every root row, every `Debug Settings` subpage row, exact EN/ZH-CN/ZH-TW labels, defaults, and diagnostic token decoders), see **[docs/features-and-usage.md](docs/features-and-usage.md)**.
+
+### 1. Real-Time 3D LUT Preview (Native Photo Menu Row 47 + `lut.wlm`)
+
+- **Native Nikon Photo Shooting Menu Integration (Row 47, `Select LUT` / `选择 LUT`)**:
+  - Opens a native 23-row paginated submenu (`Page 0x5D6`) directly inside **Photo Shooting Menu**, supporting `Off` (`无LUT`), 20 items/page (`Prev` / `Next`), 1-level category subfolders under `FENESTRA/LUTS/<category>/*.cube` (with built-in localized names for `01-Fuji-Film` through `10-Creative-Vintage` plus any custom category folder), and flat `FENESTRA/*.cube` files under `Root LUTs` (`根目录 LUT`), up to `2 MiB` per `.cube` file.
+  - Persisted atomically in dual-slot CRC32 **`FENESTRA/FXPHOTO0.CFG` / `FXPHOTO1.CFG`** for automatic cold-reboot restore; cleanly suspends its pool (`0 B` RAM) in Movie mode; leaves **14-bit `.NEF` RAW `0-diff` untouched**.
+- **V71.7-r7 528 KiB L2-Resident Pre-Baked `64×64×33` YCbCr 3D LUT**:
+  - Carved from the unused tail of `photo_workspace` (`stage_cpu + 0x80000`) — **`0 B` General heap growth**, Class `0x24` strictly frozen at `0xE8C000`.
+  - Uses `2×2` Bayer chroma dithering + 3-bit Y linear interpolation (neutral-gray zero color cast, NEON == Scalar bit-exact `0-diff`), inline NEON plane copy, and fused per-row Grain D-Cache clean.
+- **`lut.wlm` Plugin Controls (`Plugin Manager → 3D LUT`)**:
+  - Root switches (`FXLUT0/1.CFG`, all default `On`): `3D LUT Enable`, `Active LUT` (read-only filename), `Live View Preview` (Layer 0 gate), `Still JPEG LUT` (Stage 0 Still gate), `Live Photo LUT` (Stage 0 Live gate), `Clear Active LUT`, and `Debug Settings` (`Pipeline & Accel`, `Layer 0 Preview`, `Health & Drive`, `Watchdog`, `Reset Preview Pool`).
+
+### 2. EXPEED 7 CEVA-XM6 Hardware DSP Acceleration + `filmsim.wlm`
+
+```text
+  [14-bit .NEF RAW] ──────────────────────────────────────────► Written untouched (0-diff bit-identical)
+  [Layer 0 Live View / JPEG YCbCr / Live NV12]
+        │
+        ▼ Stage 0: Real-Time 3D LUT (528 KiB L2 Baked 64×64×33 YCbCr / 1D-XM6 / 3D-NEON)
+        ▼ Stage 1: Ricoh Optical HDF (CEVA-XM6 Slot 41 hardware DSP or ARM NEON fallback; 1/8, 1/4, 1/2)
+        ▼ Stage 2: Nikon Zf C3.01 18-Level Silver-Halide Film Grain (CEVA-XM6 Slot 39/40 or ARM NEON; default Sharp)
+        ▼
+  [EVF / LCD Preview · 45.4MP JPEG · 1280×852 HEVC Live Photo]
+```
+
+- **CEVA-XM6 Coexistence & Zero-Risk Fallback**: Both Nikon Zf Grain (`Slot 39/40`) and Ricoh Optical HDF (`Slot 41`) coexist inside stock `z8_xm6_elf0.elf` (`.text.z8fx = 156,736 / 158,336 B`, `.rodata.z8fx = 2,016 / 2,048 B`, `51/51` `dcli.exe` PASS, `0-diff`). Any hardware fault or busy breaker seamlessly falls back to bit-exact ARM NEON.
+- **V71.7-r7 XM6 Bridge De-Contention**: Splits static hardware-ready checking from locked mailbox-idle waiting (up to `16 ms` queuing + `dly_tsk(0)` waiter handoff) and hoists IOMMU mapping + pre-submit D-Cache clean/invalidate outside `xm6_busy`, eliminating the **~21–22.5% `ERR_NOT_READY` fallback** measured on `V71.7-r6`.
+- **`filmsim.wlm` (16 Controls with `Debug Settings` Subpage)**:
+  - Root controls: `Apply Mode` (`Global` / `Per-NP3`), `Grain Intensity` (`Off`, `1..6`), `Grain Size` (`1 Small` / `2 Medium` / `3 Large`), `Grain Texture` (`Soft (Zf)` / `Sharp`, default **`Sharp`**), `HDF Level` (`Off` / `Weak 1/8` / `Medium 1/4` / `Strong 1/2`), `Live Photo Link` (`Off` / `On`), `WYSIWYG Preview` (`Off` / `On`), `Bind Active NP3`, `Clear Active NP3`, and `Debug Settings`.
+  - `Debug Settings` subpage: `XM6 DSP Mode` (`Auto` / `CPU Only`), `Run XM6 Self-Test` (4-case 0-diff hardware check + writes `FENESTRA/XM6_DIAG.LOG`), `Reset XM6 Breaker`, `Hardware & Runtime` (`EL1:ON/DM S:<n> L:<n> XM6:OK <ok>/<fb> [A|B]`), and `Reset Defaults`.
+  - Per-NP3 recipe binding persists across 95 slots (`FLMREC0/1.CFG` + `SC*.REC +0x39C` `'Z8FX'`), automatically entering `0 B` dormant bypass on unbound Picture Controls.
+
+### 3. Reverse Single-Pass `Layer 0 → Live` Sharing & Post-Shutter 45MP Deferral (`V71.7-r7`)
+
+- **Reverse Single-Pass `Layer 0 → Live` Sharing (EVF `1280×852` & LCD `1024×682`)**:
+  - When LUT / Layer 0 preview is active, Layer 0 pushes the already-graded + HDF NV12 frame (after Stage 1 HDF, before Stage 2 Grain) directly into the Live ring buffer (`LBUF`) as `FS_TB_GRADED_READY` at `>= 18 ms` cadence.
+  - CPU0 skips duplicate scaling/submission, `live_worker` and XM6 avoid running a second redundant LUT + HDF pass, and LCD preview is no longer capped at 30 fps by legacy `Live → LCD` sharing. Adaptive 30 fps EVF pacing engages only when standalone Live runs without reverse sharing.
+- **Post-Shutter 45.4MP Still Deferral**:
+  - While `live_runtime_post_roll_active()` is true and the 2-slot burst queue is not full, 45.4MP still `PENDING → COPY` defers until Live post-roll finishes (hard-capped at **`1.65 s`**, well under the 30 s timeout), keeping post-shutter Live `.MOV` tail frames at a smooth `29.97 fps` instead of freezing.
+
+### 4. All 5 Trilingual `.wlm` Plugins & Clean 7-Row `Fenestra` Home
+
+| Plugin File (`FENESTRA/`) | Exact Size (`V71.7-r7`) | English / 简体中文 / 繁體中文 | Purpose & Subpage |
+| :--- | :---: | :--- | :--- |
+| **`filmsim.wlm`** | `32,540 B` | `Film Simulation` / `胶片模拟 / HDF` / `膠片模擬 / HDF` | Nikon Zf 18-level Grain, Ricoh Optical HDF, WYSIWYG Preview, Per-NP3 Binding + `Debug Settings` (XM6 DSP mode/self-test/breaker/HW status). |
+| **`livephoto.wlm`** | `15,860 B` | `Live Photo` / `实况照片` / `實況照片` | Live Photo `On/Off`, Full-Duplex `Shutter Sound` (`0.0 ms` gap), `Playback Key` (`REC/Off`), live `Status` + `Debug Settings` (Capture/Wave5/Audio/PB/Flag stats & `Export LIVELOG.BIN`). |
+| **`lut.wlm`** | `15,624 B` | `3D LUT` / `3D LUT 调色` / `3D LUT 調色` | Master `3D LUT Enable`, `Active LUT`, independent `Live View` / `Still JPEG` / `Live Photo` LUT switches, `Clear Active LUT` + `Debug Settings` (Pipeline/L0/Health/Watchdog/Reset Pool). |
+| **`slotcard.wlm`** | `56,552 B` | `C64 Filter Slots` / `C64 滤镜槽` / `C64 濾鏡槽` | `Slot Limit` (`C64`/`C32`), strict dual-card `Storage Card` (`Auto`/`CFexpress (A)`/`SD (B)`), `[FC]C-10..C-64` native cloud icons, `Fn`+Dial C1–C64 + `Debug Settings` (`Slot State`, `Store Journal`, `Boot Card Latch`). |
+| **`portrait.wlm`** | `7,348 B` | `Portrait Video` / `竖屏录像` / `直拍錄影` | Instant runtime `Portrait Video` (`On`/`Off`) gate for 8-hook `PortraitPB` (`tkhd` + `NCTG 0x0018`, vertical video OSD + histogram) + `Debug Settings` (`Runtime Status`, `Note`). |
+
+- **`FontCJK-ZhUI` & Live Language Sync**: Hooks `set_primary_font` to chain stock ASCII `Font[18]` with `CJK_EXT_1` + `CJK_EXT_2` (`3,755/3,755` SC + `3,755/3,755` TC, `0` missing glyphs across all 5 plugins). Changing `Setup Menu → Language` updates all 5 plugins live via `SLOTS_LANG_GET` (op `15`) with no reboot required.
+- **Upstream NFP `v0.5.1` (`25fefa1`) & Hardening**: Retains Open-Gate 4.1K 3:2 fixes, 10-bit SDR HEIF, Still Crops (`4:3 / 2.39:1 / 65:24`), EVF Pool #6 `0x001C2000` green-edge fix, playback freeze/bounce-back fix, and A2 non-fatal transient IPC hardening across all 5 `.wlm` plugins.
 
 ---
 
-## Deployment & Build Guide
+## Memory Card Layout & `V71.7-r7` Upgrade Guide
+
+```text
+<Card Root>/
+├── Z_8_0406.bin                     # Firmware update container (ONLY during camera update; delete afterward)
+├── FENESTRA/
+│   ├── STARTUP-Z8.0                 # [64 B]     Fenestra boot & auto-activate config
+│   ├── filmsim.wlm                  # [32,540 B] Zf Grain / Ricoh HDF / XM6 DSP / Per-NP3 plugin
+│   ├── livephoto.wlm                # [15,860 B] Live Photo & Full-Duplex Audio plugin
+│   ├── lut.wlm                      # [15,624 B] Real-Time 3D LUT control & debug plugin
+│   ├── slotcard.wlm                 # [56,552 B] Dual-card C32/C64 Picture Control plugin
+│   ├── portrait.wlm                 # [7,348 B]  Portrait Video runtime gate plugin
+│   ├── ZF_GRAIN.BIN                 # [27,588 B] Nikon Zf C3.01 grain table (ZFG1+CRC32, user-supplied)
+│   ├── *.cube                       # [Optional] Flat .cube LUTs (shown under "Root LUTs" in Photo Menu)
+│   ├── LUTS/
+│   │   ├── 01-Fuji-Film/*.cube      # [Optional] Categorized .cube 3D LUTs (<= 2 MiB each, 1-level folders)
+│   │   └── <CustomCategory>/*.cube  # [Optional] Custom category folders browsable in Photo Menu Row 47
+│   ├── FXPHOTO0.CFG / FXPHOTO1.CFG  # [Auto]     Dual-slot CRC32 active 3D LUT path persistence
+│   ├── FXLUT0.CFG / FXLUT1.CFG      # [Auto]     Dual-slot CRC32 lut.wlm switches (32 B 'ZLT1')
+│   ├── FLMSIM0.CFG / FLMSIM1.CFG    # [Auto]     Dual-slot CRC32 global FilmSim/HDF/XM6 config (64 B 'ZFS1')
+│   ├── FLMREC0.CFG / FLMREC1.CFG    # [Auto]     95-slot Per-NP3 recipe binding table
+│   ├── SLTCARD0.CFG / SLTCARD1.CFG  # [Auto]     Dual-slot CRC32 C64 drive selector (Auto/A/B)
+│   ├── SCSEL0.CFG / SCSEL1.CFG      # [Auto]     C64 active slot persistence (Fn dial)
+│   ├── SC*.REC                      # [Auto]     C10–C64 Picture Control archive (+0x39C 'Z8FX' binding)
+│   ├── live-z8.0 / live-z8.1        # [Auto]     Dual-slot CRC32 Live Photo config (64 B 'FLP1')
+│   ├── XM6_DIAG.LOG / LIVELOG.BIN   # [Auto]     On-demand diagnostic logs exported from Debug subpages
+│   └── <name>.wlm.disabled          # [Optional] Disabled plugin (takes effect next boot)
+├── DCIM/100NCZ_8/
+│   └── DSC_0001.NEF / .JPG          # Original still photo (14-bit .NEF is ALWAYS 0-diff untouched)
+├── LIVE/100NCZ_8/
+│   └── DSC_0001.MOV                 # Paired 1280×852 HEVC + 48 kHz 24-bit stereo PCM Live Photo (~3 s)
+└── LIVEDATA/100NCZ_8/
+    └── DSC_0001.MAN / .LVP          # In-camera Live Photo pairing manifest & index
+```
+
+> [!TIP]
+> **Upgrading Safely to `V71.7-r7` (`Z8-v71.7r7-LutPreview-362ee2a5`)**
+> - **From `V71.7-r6`**: All 7 files inside `FENESTRA/` are byte-for-byte identical to `r6` — you only need to flash `Z_8_0406.bin` and delete it afterward.
+> - **From `V71.7-r5` or earlier (`V71.5` / `V71.2` / `V62`)**: Replace all 7 shipping files inside `FENESTRA/` (`STARTUP-Z8.0`, `filmsim.wlm`, `livephoto.wlm`, `lut.wlm`, `slotcard.wlm`, `portrait.wlm`, and your `ZF_GRAIN.BIN`) **and** flash `Z_8_0406.bin`.
+> - **Always preserve** `DCIM/`, `LIVE/`, `LIVEDATA/`, `FENESTRA/LUTS/`, `FXPHOTO*.CFG`, `FXLUT*.CFG`, `FLMSIM*.CFG`, `FLMREC*.CFG`, `SLTCARD*.CFG`, `SCSEL*.CFG`, `SC*.REC`, and `live-z8.*`.
+
+---
+
+## Build & Developer Guide (Core SDK, `v36` Reconstruction & `V62` Archive)
 
 ### 1. Prerequisites
 
@@ -55,7 +158,7 @@
 - **Toolchains**:
   - Python `3.11+`
   - LLVM (`clang`, `ld.lld`, `llvm-objcopy`, `llvm-nm`) supporting `aarch64-none-elf`
-  - `aarch64-linux-gnu-gcc` (with static linking support, used by `build_z8_core.py` to build the `INFO` agent)
+  - `aarch64-linux-gnu-gcc` (with static linking support, used by `build_z8_core.py` for the `INFO` agent)
 
 ```bash
 git clone --branch z8-c311 https://github.com/YCX81/fenestra-z8.git
@@ -68,45 +171,35 @@ python -m pip install -r requirements.txt
 python -m pip install -r requirements-host.txt
 ```
 
----
-
-### 2. Route A: Build the Core Emulation Image & `.wlm` SDK Modules
-
-Use this route when developing `.wlm` modules or testing the base Fenestra core inside [`z8-qemu`](https://github.com/YCX81/z8-qemu).
-
-#### Build `.wlm` Modules (No Firmware Required)
+### 2. Route A: Build `.wlm` SDK Modules & Core Emulation `MAIN`
 
 ```bash
-# Build the minimal menu action example -> build/hello-z8/hello.wlm
+# Minimal menu action example -> build/hello-z8/hello.wlm (no Nikon firmware required)
 python host/build_sdk_module.py examples/hello/module.c \
   --id hello --target z8-c311 --output-dir build/hello-z8
 
-# Build the OpenVG animated character-rain demo -> build/demo-z8/demo.wlm
+# OpenVG animated character-rain demo -> build/demo-z8/demo.wlm
 python host/build_sdk_module.py modules/demo/sdk.c \
   --id demo --target z8-c311 --output-dir build/demo-z8
-```
 
-#### Build the Z8 Core Emulation `MAIN`
+# Optional v3 module with custom stack sizes (up to 1 MiB pkg / 4 MiB image) and SIMD context preservation
+python host/build_sdk_module.py examples/hello/module.c \
+  --id hello --target z8-c311 \
+  --native-stack-bytes 131072 --user-stack-bytes 131072 --simd \
+  --output-dir build/hello-v3-z8
 
-Supply your extracted `81,807,709`-byte stock Z8 C3.11 `MAIN` (`SHA-256: 2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853`):
-
-```bash
+# Build QEMU-only Z8 Core MAIN (input: 81,807,709 B stock Z8 C3.11 MAIN,
+# SHA-256: 2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853)
 python host/build_z8_core.py \
   --firmware /absolute/path/to/z8-c311-main.bin \
   --output-dir build/z8-core-local
 ```
 
-> **Note:** `--output-dir` must not already exist. Pass `--agent-cc /path/to/aarch64-linux-gnu-gcc` if your cross-GCC has a custom name. The generated `z8-core.main` is **strictly for QEMU emulation**, not for flashing to a camera.
+> **Note:** `--output-dir` must not already exist. The generated `z8-core.main` is **strictly for QEMU emulation**, not for flashing to a camera.
 
----
+### 3. Route B: Reconstruct Integrated Firmware (`v36`) from Stock `Z_8_0311.bin`
 
-### 3. Route B: Reconstruct Integrated Firmware from Stock `Z_8_0311.bin`
-
-To reproducibly build the integrated Live Photo + C64 + Portrait + NFP baseline (`v36`) directly from an unmodified official `Z_8_0311.bin` (`99,051,117` bytes, `SHA-256: d67413c2ede6b9ce8887175f20700bd9fbad2a973a4820968c45503d15d80d96`) without any private intermediate files:
-
-1. Clone both `fenestra-z8` (`z8-c311`) and [`z8-qemu`](https://github.com/YCX81/z8-qemu) (`main`) in Linux / WSL.
-2. Install **Clang 18** (`clang-18`, used for the historical core) and **Clang/LLVM 21** (`clang-21`, `ld.lld`, `llvm-nm`, `llvm-objcopy`, `llvm-objdump`, used for Live/Playback/bootguard), plus Python packages from `research/z8-live/from-stock/requirements.txt`.
-3. Run the single-command builder:
+To reproducibly build the integrated Live Photo + C64 + Portrait + NFP baseline (`v36`) from unmodified official `Z_8_0311.bin` (`99,051,117` bytes, `SHA-256: d67413c2ede6b9ce8887175f20700bd9fbad2a973a4820968c45503d15d80d96`) with **Clang 18** + **Clang/LLVM 21**:
 
 ```bash
 python -m pip install -r research/z8-live/from-stock/requirements.txt
@@ -117,133 +210,38 @@ python -B research/z8-live/from-stock/build.py \
   --output-dir /absolute/path/to/v36-rebuilt
 ```
 
-- Pass `--core-clang`, `--live-clang`, and `--llvm-bin` if multiple LLVM versions are installed side-by-side; add `--main-only` to skip repacking the outer update container.
-- The script verifies every intermediate and final SHA-256 against pinned values (`v36.main` and `Z_8_0406.bin`). See [research/z8-live/from-stock/README.md](research/z8-live/from-stock/README.md).
-- Incremental source checkpoints from `V54` through **`V62`** (single-MOV native playback, RAW cross-card pairing, Log menu text fix, and Live shutter sound handoff) are documented in [RELEASE-v62.md](research/z8-live/build-tools/livediag/feat-onemov/RELEASE-v62.md).
+- See [research/z8-live/from-stock/README.md](research/z8-live/from-stock/README.md) and [RELEASE-v62.md](research/z8-live/build-tools/livediag/feat-onemov/RELEASE-v62.md).
+- **Host `INFO` Bridge**: `FENESTRA_PTP_PROFILE=z8-c311` permits only the parameterless `info` query against SHA-256-pinned `fenestra-agent-z8-info` (arbitrary shell execution disabled). See [docs/debugging.md](docs/debugging.md).
 
 ---
 
-### 4. Memory Card Deployment Layout
+## Verification Matrix, Precautions & Limitations
 
-When using `.wlm` modules or running an integrated Live Photo build, the memory card uses the following directory layout:
+### `V71.7-r7` (`362ee2a5`, `0x8394568f`) Verification Receipts
 
-```text
-<Card Root>/
-├── Z_8_0406.bin              # Update package (only placed at root during a camera firmware update)
-├── FENESTRA/
-│   ├── hello.wlm             # Active loadable module (.wlm)
-│   ├── demo.wlm.disabled     # Disabled module (ignored on next boot)
-│   └── live-z8.0 / live-z8.1 # Dual-copy Live Photo settings (managed by camera; do not edit as text)
-├── DCIM/100NCZ_8/
-│   ├── DSC_0001.NEF / .JPG   # Original still photo written by Nikon's native writer
-│   └── LIV_0001.MOV          # Optional DCIM clip copy (when enabled on historical builds)
-├── LIVE/100NCZ_8/
-│   └── DSC_0001.MOV          # Paired Live Photo video+audio clip (~3s H.264/HEVC + audio)
-└── LIVEDATA/100NCZ_8/
-    └── DSC_0001.MAN / .LVP   # Pairing manifest (.MAN) & internal preview metadata
-```
+| Verification Suite | Result | Verified Scope |
+| :--- | :---: | :--- |
+| **CEVA-XM6 `dcli.exe` Cycle-Accurate Sim** | **51/51 PASS** | GRAIN `25/25` + HDF `26/26` `0-diff` bit-exact (`.text.z8fx = 156,736 / 158,336 B`, `.rodata.z8fx = 2,016 / 2,048 B`). |
+| **0-Q-Spill Static Audit** | **PASS (`0` spills)** | `1,114` linked functions audited, `q_spills = 0`. |
+| **Host ASan + UBSan Suites** | **ALL PASS** | `lut_core` 8/8 (528 KiB baked LUT NEON==Scalar `0-diff`/PSNR/SMP/NEON copy), `xm6_bridge` 9/9 (pre-lock wait 0 fallback, reverse Layer 0→Live, post-shutter deferral, fused grain cache clean), `layer0` 9/9, `photo_menu` 6/6. |
+| **ARM64 / Unicorn Suites (6 Suites)** | **ALL PASS** | Suite #5 FontCJK (`3,755/3,755` SC + TC + ops 13..16), Suite #14 Layer0 (`63` checks), XM6 Bridge (`124` checks, `0` forbidden hits), Suite #4 FilmSim (`70` checks), Suite #2 HangFix, and 5-WLM CJK glyph audit (`0` missing SC/TC). |
+| **Whole-Guest QEMU `#19-r7`** | **14/14 PASS** | Clean 7-row Fenestra + 5 `.wlm` plugins + XM6 self-test/persistence/fallback (`z8_unk = 0`, `panic = 0`). |
+| **Whole-Guest QEMU `#20-r7`** | **13/13 PASS** | Photo Menu Row 47 streaming `.cube` LUT + Layer 0 528 KiB baked LUT + Still + Movie `pool_suspend` (`0 B`) + reboot restore/clear (`z8_unk = 0`, `panic = 0`). |
+| **Physical Nikon Z8 Hardware** | **`physical_camera_verified = false`** | Prior `V71.1–V71.6` physical Z8 profiling drove the four `r7` fluency fixes; **`V71.7-r7` (`362ee2a5`) awaits physical Z8 flash & field verification** (EVF/LCD fps, XM6 fallback rate, and post-shutter Live `.MOV` cadence). |
 
-> **Updating between Live versions:** Only replace `Z_8_0406.bin` at the card root and follow the standard Nikon firmware update steps (full battery, stable card). **Keep your existing `FENESTRA/`, `DCIM/`, `LIVE/`, and `LIVEDATA/` folders intact** so saved settings and existing Live Photo pairings continue to work.
+### Key Precautions
 
----
-
-## Detailed Feature Usage
-
-### 1. Fenestra Menu, Modules & Abnormal Shutdown Guard
-
-| Abnormal Shutdown Protection | Running the `demo.wlm` OpenVG Module |
-| :---: | :---: |
-| ![Abnormal Shutdown Guard](docs/images/abnormal-shutdown.png) | ![Demo Module Matrix Rain](docs/images/demo-module.png) |
-
-1. **Copy Modules**: Place `.wlm` files built with `--target z8-c311` into `FENESTRA/` on the card.
-2. **Activate Fenestra**: Press `MENU` → go to the **Setup Menu (wrench icon)** → open **`Fenestra`** → press **`Activate`**. `Status` changes from `Ready` to `Active`.
-   - *Tip*: On the Z8 menu tab bar, pressing `Right` once moves focus into the menu list; pressing `Right` or `OK` again opens the highlighted item.
-3. **Manage Modules**: Open `Fenestra → Modules` to inspect discovered `.wlm` files and toggle them `On` / `Off` for the next boot (disabled files are renamed `.wlm.disabled`).
-4. **Open Module UI**: Return to the Setup Menu and open **`WonderLantern`** to access custom pages registered by active modules (such as `Hello module` or `demo`).
-5. **Recover from Abnormal Shutdown**: If the camera lost power or crashed while Fenestra was active, the boot flag triggers **`Disabled due to abnormal shutdown`** on the next boot to prevent boot loops. Verify camera stability first, then clear the abnormal flag in `Shutdown guard` before re-activating.
-
----
-
-### 2. Shooting Live Photos (LCD, EVF & Shutter Sound)
-
-| `Live Photo` Menu & Shutter Sound (`V62`) | `◎LIVE` Badge States (Ready / Busy Sweep / Playback) |
-| :---: | :---: |
-| ![Live Photo Menu](docs/images/live-photo-menu.png) | ![LIVE Badge States](docs/images/live-badge-states.png) |
-
-1. **Enable Live Photo**: In photo mode, open `Setup → Fenestra → Live Photo` and select **`On`**.
-   - Menu status meanings:
-     - `Off`: Disabled.
-     - `Requested` / `Preparing`: Encoder is initializing—wait a moment before shooting.
-     - `Ready`: Rolling capture is active; the **`◎LIVE`** badge appears on the shooting screen.
-     - `Busy`: Finishing file pairing/saving for the shot just taken (the `◎LIVE` ring animates a sweep).
-     - `card error` / `Unavailable`: Card write failure or video pipeline busy/unavailable.
-2. **Configure Shutter Sound (`V62`)**: Inside `Live Photo`, toggle **`Shutter sound`** between **`On`** and **`Off`**.
-   - `On` plays the camera's selected shutter tone and automatically hands the shared audio codec back to the microphone afterward.
-   - `Off` mutes both the prepare and fire shutter sound stages so the Live clip records uninterrupted ambient audio.
-   - **Camera Silent Mode always wins**: If Nikon's native Silent Photography mode is enabled, `Shutter sound: On` will **not** force the speaker to make noise.
-3. **Take the Photo**: Once `◎LIVE` is visible (on LCD or EVF), shoot normally (JPEG, RAW, or dual-card RAW + JPEG). Wait for the `◎LIVE` busy sweep animation to finish saving.
-
----
-
-### 3. Playing Back Live Photos (`REC` Button)
-
-1. Press the **Playback (`▶`)** button to view your photos. Any still photo (`.NEF` or `.JPG`, including dual-card RAW + JPEG pairs) with a valid paired clip displays a crisp white **`◎LIVE`** badge in the top-left corner.
-   - *Note*: If the `.MAN` manifest was still flushing when first viewed, `V61`/`V62` automatically retries pairing with rate limiting.
-2. Press the red **`REC` (movie record)** button while viewing that photo:
-   - In `V54`–`V62`, the camera opens the paired `.MOV` clip directly in **Nikon's native video player** with full resolution, audio playback, volume indicator, and progress bar.
-   - When the ~3-second clip finishes—or if you press `REC` / back early—the screen cleanly returns to the exact still photo you were viewing (including returning to the original RAW file).
-3. Non-Live photos ignore `REC` or keep stock playback key behavior.
-
----
-
-### 4. Portrait Video HUD, Video Log Menu & C64 Slots
-
-| Portrait Video Standby (`90°` Upright) | `Slot card` (`C32` / `C64` Next-Boot Switch) |
-| :---: | :---: |
-| ![Portrait Video Standby](docs/images/portrait-video-standby.png) | ![Slot Card C64 Menu](docs/images/slot-card-c64.png) |
-
-- **Portrait Video Layout**: Rotating the camera vertically in video mode automatically rearranges top/bottom status rows (`REC`, timecode, `2160 30p`, `FX`, codec, shutter, aperture, ISO) and keeps the live histogram inside the vertical frame instead of clipping off-screen.
-- **Video `Log settings` (`V62`)**: Open `VIDEO RECORDING MENU → Log settings` to select `N-Log / BT.2020`, `S-Log3 / S-Gamut3.Cine`, or `Log3G10 / REDWideGamutRGB` (available when a compatible 10-bit/RAW video format is selected). `V62` ensures these labels remain intact even after opening and exiting `Fenestra → Modules`.
-- **C32 / C64 Picture Control Slots & Label Patch**:
-  - In integrated builds that include `Slot card`, choose `C32` or `C64` under `Fenestra → Slot card` and reboot to switch active slot capacity.
-  - For offline development on an already-expanded C64 `MAIN`, `c64label_patch.py` adjusts the 275 shared slot descriptors to 28-pt font size:
-    ```bash
-    python research/z8-live/build-tools/livediag/feat-c64label/c64label_patch.py \
-      /path/to/input.main /path/to/output-c64label.main \
-      --reference /path/to/bg34.main \
-      --json /path/to/output-c64label.changed.json
-    ```
-    *(Note: `c64label_patch.py` only edits label font size on an existing C64 layout; it does not create C64 slots on a stock `MAIN`.)*
-
----
-
-### 5. Developing Custom Modules & Host `INFO` Debugging
-
-- **Custom Stack / SIMD Options**: For larger `.wlm` modules (up to `1 MiB` package / `4 MiB` loaded image), request a `v3` header with custom stacks or SIMD context preservation:
-  ```bash
-  python host/build_sdk_module.py examples/hello/module.c \
-    --id hello --target z8-c311 \
-    --native-stack-bytes 131072 --user-stack-bytes 131072 --simd \
-    --output-dir build/hello-v3-z8
-  ```
-  See [docs/module-development.md](docs/module-development.md) and [docs/api-reference.md](docs/api-reference.md).
-- **Host `INFO` Bridge**: On Z8 C3.11, `FENESTRA_PTP_PROFILE=z8-c311` only permits the parameterless `info` query against the SHA-256-pinned `fenestra-agent-z8-info` binary (arbitrary `exec`/shell commands are rejected by design). See [docs/debugging.md](docs/debugging.md).
-
----
-
-## Precautions & Limitations
-
-1. **Do not confuse `.main` with `.bin`**: Raw `.main` outputs (`z8-core.main`, `v36.main`) are unwrapped application images for QEMU or intermediate linking—**never** copy a `.main` file onto a card expecting a camera update.
-2. **Wait for Live saving between rapid shots**: If you fire another still while the previous Live Photo is still in `Busy` saving state, the new photo saves normally as a still, **without** a paired Live video clip.
-3. **Brief mic mute when `Shutter sound: On`**: Because the Z8 speaker and microphone share audio codec hardware, playing the shutter sound inserts a brief (~0.25 s) silent gap near the shutter moment in the Live audio track. Set `Shutter sound: Off` if you want continuous ambient audio.
-4. **Exporting Live Photos to PC/Phone**: Copy both the still photo (`DCIM/.../DSC_xxxx.JPG` or `.NEF`) **and** its paired clip (`LIVE/.../DSC_xxxx.MOV`). Files inside `LIVEDATA/` (`.MAN` / `.LVP`) are camera-internal pairing metadata, not playable standalone videos, and macOS/iOS Photos will not automatically merge camera-written `DSC_xxxx.JPG` + `.MOV` into an Apple Live Photo without desktop pairing tools.
-5. **Module unloading requires a reboot**: Disabling or renaming a `.wlm` to `.wlm.disabled` prevents it from loading on the **next** boot; already-loaded modules stay resident until you power-cycle the camera. Never enable two copies of the same module ID at once.
-6. **Verify source integrity before publishing**: Placeholder paths like `/path/to/Nikon` or `/path/to/user` in archived research scripts must be adapted to your local environment. Never commit Nikon firmware, keys, or personal media; run `python -B verify_source.py` to check the source inventory.
+1. **Never confuse `.main` with `.bin`**: Raw `.main` files (`z8-core.main`, `v36.main`) are unwrapped images for QEMU or linking—never copy a `.main` onto a memory card expecting a firmware update.
+2. **Wait for Live saving between rapid shots**: Firing another still while `◎LIVE` is in its `Busy` sweep saves the new still normally, without a paired Live clip.
+3. **Unloading `.wlm` plugins requires a reboot**: Disabling a `.wlm` in `Setup → Fenestra → Modules` (`已加载插件`) renames it to `.wlm.disabled` for the **next** boot; never enable two copies of the same module ID simultaneously.
+4. **Source hygiene**: Never commit Nikon firmware, keys, `ZF_GRAIN.BIN`, or personal media; run `python -B verify_source.py` to verify the tracked source inventory.
 
 ---
 
 ## Documentation & License
 
+- **V71.7-r7 Complete User & Menu Reference**: **[Detailed V71.7-r7 Feature & Menu Reference (EN)](docs/features-and-usage.md)** · [V71.7-r7 详细功能与全菜单设置手册 (简体中文)](docs/features-and-usage.zh-CN.md)
 - **Core & SDK Docs**: [Getting Started](docs/getting-started.md) · [Architecture](docs/architecture.md) · [SDK API Reference](docs/api-reference.md) · [Module Development](docs/module-development.md) · [Module Format](docs/module-format.md) · [Debugging & PTP](docs/debugging.md) · [Porting Guide](docs/porting.md)
 - **Z8 Live Archive**: [Live Source Map](research/z8-live/README.md) · [Stock-to-v36 Reconstruction](research/z8-live/from-stock/README.md) · [V62 Release Notes](research/z8-live/build-tools/livediag/feat-onemov/RELEASE-v62.md) · [Core Port Notes](port-z8/PORT-STATUS.md)
-- **License**: [CC BY-NC-SA 4.0](LICENSE) with the [Commercial Photography Exception](EXCEPTIONS.md) and [Z8 Adaptation Terms](LICENSE-Z8.md). Using the software for paid photography and filmmaking is explicitly permitted; selling covered software, modules, or paid flashing services is **not** permitted. Third-party components (such as bundled public [NikonFirmwarePatch](https://github.com/XinmiaoZhao/NikonFirmwarePatch) toolkits in `from-stock` and `minih264e.h`) retain their respective licenses.
+- **Companion Emulator**: [`YCX81/z8-qemu`](https://github.com/YCX81/z8-qemu) (Nikon Z8 `C3.11` QEMU `10.2.4` machine model & whole-guest `V71.7-r7` verification harness)
+- **License**: [CC BY-NC-SA 4.0](LICENSE) with the [Commercial Photography Exception](EXCEPTIONS.md) and [Z8 Adaptation Terms](LICENSE-Z8.md). Using the software for paid photography and filmmaking is explicitly permitted; selling covered software, modules, or paid flashing services is **not** permitted. Third-party components retain their respective licenses.

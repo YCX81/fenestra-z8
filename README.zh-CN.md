@@ -1,61 +1,151 @@
 # Fenestra for Nikon Z8 (`C3.11`)
 
-[English](README.md) | **简体中文**
+[English](README.md) | **简体中文** · [V71.7-r7 详细功能与全菜单设置手册（中文）](docs/features-and-usage.zh-CN.md) | [Detailed V71.7-r7 Feature & Menu Reference (EN)](docs/features-and-usage.md)
 
-`fenestra-z8` 是面向 **Nikon Z8（原厂固件 C3.11）** 移植与扩展的 [WonderLantern/Fenestra](https://github.com/WonderLantern/Fenestra) 仓库（默认分支：`z8-c311`）。仓库内包含两条相互独立但彼此配合的源码路线，使用前请先区分清楚：
+`fenestra-z8` 是面向 **Nikon Z8（原厂固件 C3.11）** 移植与扩展的 [WonderLantern/Fenestra](https://github.com/WonderLantern/Fenestra) 仓库（默认分支：`z8-c311`）。使用与构建前，请先区分仓库及集成演进线中的三条路线：
 
-1. **基础核心框架与 `.wlm` 模块开发 SDK（根目录 `src/`、`host/`、`examples/`、`modules/`）**
-   在 Z8 原厂设定菜单中注入 **Fenestra** 与 **WonderLantern** 入口，提供异常关机防变砖保护、存储卡 `.wlm` 模块动态加载、C 语言 UI/OpenVG 绘图 SDK，以及受限的 `INFO` 主机调试桥。
-2. **Live Photo（实况照片）+ C64 + 竖屏集成固件源码（`research/z8-live/`，更新至 `V62`）**
-   完整归档 Z8 增强功能开发链：包括**机内 Live Photo 实况照片**（快门前后循环录影 + 同步环境录音 + 实况快门声开关）、**回放界面按 `REC` 调用原厂播放器直接播放配对短片**（支持 RAW 优先与双卡 RAW+JPEG 跨卡配对）、**LCD 与 EVF 取景器 `◎LIVE` 状态徽标**、**竖屏视频界面与直方图重排**、**64 个自定义优化校准槽位（`C64`）**，以及 **`V62` 视频 Log 菜单文字修复**。
+1. **基础核心框架与 `.wlm` 插件开发 SDK（根目录 `src/`、`host/`、`examples/`、`modules/`）**
+   在 Z8 原厂设定菜单中注入纯净 7 行 **Fenestra** 与顶层 **插件管理**（`Plugin Manager`）入口，提供异常关机防变砖保护、存储卡 `.wlm` 模块动态加载、C 语言 UI / OpenVG 绘图 SDK，以及受限的 `INFO` 主机调试桥。
+2. **集成固件研究与公开构建归档（`research/z8-live/`，含 `from-stock` `v36`、`feat-onemov/` `V62` 与 `v71r7-lut-preview`）**
+   归档从原厂 `Z_8_0311.bin` 一键重现 `v36` 集成固件基线的完整脚本、演进至 `V62` 的公开补丁，以及最新 **`V71.7-r7`** 原厂照片拍摄菜单 LUT 浏览器与 5 款内置 `.wlm` 插件源码。
+3. **`V71.7-r7` 全功能演进线（`Z8-v71.7r7-LutPreview-362ee2a5`，内部标识 `04.06.p0`，Bootguard Build ID `0x8394568f`）**
+   基于同一 Z8 `C3.11` 底座，集齐以下核心能力与四项流畅度根修：
+   - **实时 3D LUT 预览（EVF + 背屏 + 45.4MP JPEG + 实况照片）**：原生接入 **照片拍摄菜单第 47 项（`选择 LUT` / `Select LUT`）** 分类与 `.cube` 浏览器 + 独立 **`lut.wlm`** 插件；`r7` 新增 **528 KiB L2 常驻预烘焙 `64×64×33` YCbCr 3D LUT**（从 `stage_cpu + 0x80000` 未使用尾部切出，**零堆增长**，Class `0x24` 严格保持 `0xE8C000`）、内联 NEON 平面拷贝与融合颗粒缓存清洗；支持冷重启自动恢复、录像模式 `0 B` 内存挂起，**14-bit `.NEF` RAW 严格 0 改动**。
+   - **EXPEED 7 CEVA-XM6 硬件 DSP 加速（`Slot 39/40/41`）**：原地共存于原厂 `z8_xm6_elf0.elf`（`51/51` `dcli.exe` 仿真通过，`0-diff` 位精确），自带零风险自动回退 ARM NEON 熔断器与机内一键自检（导出 `XM6_DIAG.LOG`）；`r7` 拆分静态就绪与持锁后邮箱空闲等待（最长 `16 ms` + `dly_tsk(0)` 交接）并将 IOMMU/D-Cache 提前到锁前，根除 `V71.7-r6` 实测约 `21–22.5%` 的 `ERR_NOT_READY` 回退。
+   - **反向「Layer 0 → Live」单通道共享 + 快门后 45MP 静图顺延**：EVF（`1280×852`）与背屏（`1024×682`）均在 HDF 后、颗粒前直接将已调色+HDF 的 NV12 推入 Live `LBUF`（`FS_TB_GRADED_READY`），消除 CPU2 与 XM6 重复计算并解除背屏 30 fps 封顶；快门后在 Live post-roll 期间自动顺延 45.4MP 静图处理（硬上限 `1.65 s`，连拍满槽自动旁路），根除快门后实况 `.MOV` 冻结。
+   - **纯净 7 行 `Fenestra` 主菜单 + 5 款内置三语 `.wlm` 插件**：`filmsim.wlm`、`livephoto.wlm`、`lut.wlm`、`slotcard.wlm`、`portrait.wlm` 全部统一配备 `调试设置` 子页与简/繁/英热切换，同时保留 **C64 原生云创图标（`[FC]C-10..C-64`）** 与 **上游 NFP `v0.5.1`（`25fefa1`）**。
 
 > [!IMPORTANT]
-> **编译与上机前必读**
-> - **本仓库不分发任何预编译固件包或密钥**，你必须自行准备官方 Nikon Z8 `C3.11` 原厂固件（`Z_8_0311.bin` 或提取出的 `MAIN`）。
-> - **分清两种构建产物，切勿混用：**
->   - 根目录 `host/build_z8_core.py` 生成的是**仅供 [`z8-qemu`](https://github.com/YCX81/z8-qemu) 模拟器加载的裸 `MAIN` 镜像**，**不是**相机升级文件；上游给 ZR/Z9 用的 `fenestra.py make-patch` 也**不能**用于 Z8。
->   - `research/z8-live/from-stock/build.py` 支持仅凭一份官方原厂 `Z_8_0311.bin` 一键重现 `v36.main` 及完整升级包 `Z_8_0406.bin`；后续演进至 **`V62`** 的源码与补丁链保存在 `research/z8-live/build-tools/livediag/feat-onemov/`。
+> **编译、升级与验收边界必读**
+> - **不分发专有文件**：本仓库**不分发**任何预编译固件二进制（`.bin` / `.main`）、Nikon 密钥或提取出的 `ZF_GRAIN.BIN` / `.cube` 素材，你必须自行准备官方 Nikon Z8 `C3.11` 原厂固件（`Z_8_0311.bin` 或提取的 `MAIN`）。
+> - **分清公开构建范围**：根目录 `host/build_z8_core.py` 生成的是**仅供 [`z8-qemu`](https://github.com/YCX81/z8-qemu) 模拟器运行的裸 `MAIN` 镜像**，**严禁**当作升级包刷机；`research/z8-live/from-stock/build.py` 仅凭原厂 `Z_8_0311.bin` 即可重现 `v36`。
+> - **真机 vs 仿真验证诚实状态（`V71.7-r7`：`physical_camera_verified = false`）**：
+>   - `V71.1–V71.6` 在实体 Nikon Z8 上的实拍、USB 只读探针与 Live `.MOV` 取证直接驱动了 `V71.7-r7` 的四项核心流畅度根修。
+>   - **`V71.7-r7`（`362ee2a5`，Bootguard `0x8394568f`）** 已通过全部自动化验证——**CEVA-XM6 `dcli.exe` 51/51 PASS**、**0-Q-Spill 静态审计（1,114 函数，0 spill）**、**Host ASan+UBSan 全套（`lut_core` 8/8、`xm6_bridge` 9/9、`layer0` 9/9、`photo_menu` 6/6）**、**6 套 ARM64/Unicorn 套件**（含 5 插件 0 缺字审计）以及 **两套整机 QEMU 验收（`#19-r7` 14/14 PASS、`#20-r7` 13/13 PASS）**；当前明确标记为 **`physical_camera_verified = false`**，待真机刷写并复测 EVF/背屏帧率、XM6 回退率与实拍 Live `.MOV` 后半段帧率。
 
 ---
 
-## 界面与功能预览
+## 界面与功能预览（`V71.7-r7` 5 插件 + 原厂照片菜单 3D LUT + XM6 硬件 DSP）
 
-| 设定菜单入口（`Fenestra` 与 `WonderLantern`） | Fenestra 运行控制菜单 |
+| 纯净 7 行 `Fenestra` 主菜单 | `插件管理` 列出全部 5 款 `.wlm` 插件 |
 | :---: | :---: |
-| ![设定菜单入口](docs/images/setup-menu.png) | ![Fenestra 控制菜单](docs/images/fenestra-menu.png) |
-| **LCD 实时取景（左上角 `◎LIVE` 就绪徽标）** | **EVF 电子取景器（`Output 4` 含 `◎LIVE`）** |
-| ![LCD 实时取景 LIVE 徽标](docs/images/liveview-lcd-live.png) | ![EVF 电子取景器 LIVE 徽标](docs/images/evf-viewfinder-live.png) |
-| **单张照片回放（显示 `◎LIVE` 标志）** | **回放中按 `REC` 键 → 原厂播放器回放短片** |
-| ![单张照片回放 LIVE 标志](docs/images/playback-live-photo.png) | ![按 REC 调用原厂播放器](docs/images/playback-mov-player.png) |
-| **竖屏视频待机与录制界面（对齐竖拍布局）** | **`V62` 修复后的视频 `Log settings` 菜单** |
-| ![竖屏视频录制界面](docs/images/portrait-video-rec.png) | ![视频 Log 设定菜单](docs/images/video-log-settings.png) |
+| ![Fenestra 主菜单](docs/images/v717-fenestra-home-zh.png) | ![插件管理 5 插件列表](docs/images/v717-plugin-manager-5wlm-zh.png) |
+| **照片拍摄菜单第 47 项（`选择 LUT`）** | **原生 3D LUT 分类浏览（`FENESTRA/LUTS/`）** |
+| ![照片拍摄菜单选择 LUT](docs/images/v717-lut-photo-menu-zh.png) | ![3D LUT 分类列表](docs/images/v717-lut-categories-zh.png) |
+| **分页浏览 `.cube` 文件列表** | **3D LUT 已载入状态显示** |
+| ![3D LUT 文件列表](docs/images/v717-lut-list-zh.png) | ![3D LUT 已载入状态](docs/images/v717-lut-loaded-zh.png) |
+| **实时取景 3D LUT 生效画面** | **`3D LUT 调色` 插件（`lut.wlm`）主菜单** |
+| ![实时取景 3D LUT 生效](docs/images/v717-lut-liveview-active.png) | ![3D LUT 插件主菜单](docs/images/v717-lut-plugin-root-zh.png) |
+| **`胶片模拟 / HDF`（`filmsim.wlm`）主菜单** | **`filmsim.wlm` 调试设置与 XM6 DSP 子页** |
+| ![胶片模拟主菜单](docs/images/v717-filmsim-root-zh.png) | ![胶片模拟调试设置子页](docs/images/v717-filmsim-debug-zh.png) |
+| **EXPEED 7 CEVA-XM6 硬件 DSP 自检读数** | **`实况照片` 插件（`livephoto.wlm`）主菜单** |
+| ![XM6 硬件 DSP 自检](docs/images/v717-xm6-diag-zh.png) | ![实况照片插件主菜单](docs/images/v717-livephoto-root-zh.png) |
+| **C64 云创原生图标（`Fn` 快捷键拨盘 `[FC]C-10..C-64`）** | **C64 云创原生图标（`i` 键 12 宫格）** |
+| ![C64 Fn 拨盘原生图标](docs/images/v715-c64-fn-strip-zh.png) | ![C64 i 键菜单原生图标](docs/images/v715-c64-imenu-zh.png) |
+| **双卡 `C64 滤镜槽`（`slotcard.wlm`）** | **`竖屏录像` 运行期开关（`portrait.wlm`）** |
+| ![C64 滤镜槽插件](docs/images/v71-slotcard-zh.png) | ![竖屏录像插件](docs/images/v71-portrait-wlm-zh.png) |
 
 ---
 
-## 功能总览
+## `V71.7-r7` 核心架构与四项流畅度根修
 
-| 功能模块 | 所在位置 | 功能说明 |
-| :--- | :--- | :--- |
-| **Fenestra 菜单与异常关机保护** | `src/`、`host/build_z8_core.py` | 在 `设定菜单 → Fenestra` 提供激活（`Activate`）、开机自启（`Auto activate`）、关机保护（`Shutdown guard`）与模块开关；上次死机或断电会自动拦截加载，防止循环卡死。 |
-| **`.wlm` 扩展模块与开发 SDK** | `include/`、`examples/hello/`、`modules/demo/` | 无需原厂固件或密钥即可用 C 语言编写 `.wlm` 插件，拷入存储卡 `FENESTRA/` 目录后在 `WonderLantern` 中打开运行。 |
-| **Live Photo 实况拍照与录音** | `research/z8-live/`（至 `V62`） | 拍照时自动保留快门前后各约 1.5 秒的 Wave5 视频与同步环境音轨，支持单独开关实况快门声（`Shutter sound: On / Off`）。 |
-| **机内实况回放（支持双卡 RAW/JPEG）** | `feat-onemov/`（`V54`–`V62`） | 单张回放自动识别配对照片并显示 `◎LIVE`（支持 RAW 优先与双卡分存 JPEG 配对）；按红色 **`REC`** 键直接用尼康原厂播放器有声回放短片，播完自动退回原照片。 |
-| **竖屏视频界面重排与 EVF 适配** | `feat-v52/`、`feat-v53/` | 竖拍视频时，`REC`、时间码、`2160 30p`、编码图标、底部曝光栏与实时直方图自动对齐竖屏拍照坐标，兼顾 LCD 与 EVF 显示。 |
-| **视频 Log 菜单文字修复（`V62`）** | `feat-onemov/v62/` | 解决动态菜单文字编号冲突，确保 `Log settings`（`N-Log / BT.2020`、`S-Log3 / S-Gamut3.Cine`、`Log3G10 / REDWideGamutRGB`）在进出 `Modules` 后依然正常显示。 |
-| **C32 / C64 槽位扩容与字号调整** | `from-stock/`、`feat-c64label/` | 集成版支持在 `Slot card` 切换 32/64 个自定义优化校准槽位；另附 `c64label_patch.py` 独立字号调整脚本。 |
-| **Linux `INFO` 主机调试桥** | `host/ptp_linux.py`、`linux/` | 绑定 SHA-256 校验的静态 AArch64 Linux agent，仅开放安全的无参数 `INFO` 状态查询（Z8 C3.11 默认禁用任意 shell 命令执行）。 |
+> 全部 5 款 `.wlm` 插件与原厂照片拍摄菜单的**逐行中/繁/英菜单项、子页、默认值与诊断字段解码表**，请参阅 **[V71.7-r7 详细功能与全菜单设置手册（中文）](docs/features-and-usage.zh-CN.md)**。
+
+### 1. 实时 3D LUT 预览（原厂照片拍摄菜单第 47 项 + `lut.wlm`）
+
+- **原生照片拍摄菜单第 47 项（`选择 LUT` / `Select LUT`）**：
+  - 打开原生 23 行分页子菜单（`Page 0x5D6`）：首行 `无LUT`（清除），支持每页 20 项（`上一页` / `下一页`）、一级分类目录 `FENESTRA/LUTS/<分类>/*.cube`（内置 10 组中文分类译名 `01-Fuji-Film` 至 `10-Creative-Vintage`，同时支持任意自定义分类目录）以及直接放于 `FENESTRA/*.cube` 的平铺文件（`根目录 LUT`），单文件上限 `2 MiB`。
+  - 通过双槽 CRC32 **`FENESTRA/FXPHOTO0.CFG` / `FXPHOTO1.CFG`** 原子持久化，冷重启自动恢复；进入视频模式自动 `pool_suspend`（`0 B` RAM）；**14-bit `.NEF` RAW 严格 `0-diff` 不改动**。
+- **`V71.7-r7` 528 KiB L2 常驻预烘焙 `64×64×33` YCbCr 3D LUT**：
+  - 从 `photo_workspace` 已有 `stage_cpu + 0x80000` 未使用尾部切出 528 KiB 预烘焙表（**零 General 堆增长**、Class `0x24` 严格保持 `0xE8C000`），配合 `2×2` Bayer 色度抖动 + 3-bit Y 线性插值（中性灰零偏色，NEON == Scalar 逐位 `0-diff`）、内联 NEON 平面拷贝与融合逐行颗粒缓存清洗。
+- **`lut.wlm` 独立控制开关（`插件管理 → 3D LUT 调色`）**：
+  - 主页开关（`FXLUT0/1.CFG`，默认全开）：`3D LUT 开关`、`当前 LUT`、`取景实时预览`（图层 0 门控）、`照片 LUT`（静图门控）、`实况照片 LUT`（实况门控）、`清除当前 LUT`，以及 `调试设置` 子页（`管线与加速`、`图层 0 预览`、`健康与隔离`、`看门狗状态`、`重置预览工作区`）。
+
+### 2. EXPEED 7 CEVA-XM6 硬件 DSP 加速与 `filmsim.wlm`
+
+```text
+  [14-bit .NEF RAW] ──────────────────────────────────────────► 严格 0 改动原样写入
+  [Layer 0 取景 / 45.4MP JPEG YCbCr / 实况 NV12]
+        │
+        ▼ Stage 0: 实时 3D LUT（528 KiB L2 预烘焙 64×64×33 YCbCr / 1D-XM6 / 3D-NEON）
+        ▼ Stage 1: 理光光学 HDF（CEVA-XM6 Slot 41 硬件 DSP 或 ARM NEON 回退；1/8、1/4、1/2）
+        ▼ Stage 2: 尼康 Zf C3.01 18 档银盐颗粒（CEVA-XM6 Slot 39/40 或 ARM NEON；默认「清晰」）
+        ▼
+  [EVF / 背屏实时取景 · 45.4MP JPEG · 1280×852 HEVC 实况短片]
+```
+
+- **CEVA-XM6 原地共存与零风险熔断回退**：Zf 颗粒（`Slot 39/40`）与理光 HDF（`Slot 41`）原地嵌入原厂 `z8_xm6_elf0.elf`（`.text.z8fx = 156,736 / 158,336 B`，`.rodata.z8fx = 2,016 / 2,048 B`，`51/51` `dcli.exe` 通过，`0-diff`）；遇到异常自动无缝回退位精确 ARM NEON。
+- **`V71.7-r7` XM6 桥接去竞争根修**：拆分锁前静态就绪检查与锁后邮箱空闲等待（最长 `16 ms` 排队 + `dly_tsk(0)` 交接），并将 IOMMU 映射与提交前 D-Cache 清洗提前到持锁之前，消除 `V71.7-r6` 实测约 `21–22.5%` 的 `ERR_NOT_READY` 回退。
+- **`filmsim.wlm`（16 项控件 + `调试设置` 子页）**：
+  - 主页：`生效模式`（`全局生效` / `按优化校准`）、`颗粒强度`（`关闭`, `1..6`）、`颗粒大小`（`1 小` / `2 中` / `3 大`）、`颗粒质感`（`柔和 (Zf)` / **`清晰`** 默认）、`高光柔焦 HDF`（`关闭` / `弱 1/8` / `中 1/4` / `强 1/2`）、`实况照片联动`、`取景实时预览`、`绑定当前配方`、`清除当前配方`、`调试设置`。
+  - `调试设置` 子页：`XM6 DSP 模式`（`自动` / `仅 CPU`）、`运行 XM6 自检`（4 场景 `0-diff` 硬件自检并写入 `FENESTRA/XM6_DIAG.LOG`）、`重置 XM6 熔断器`、`硬件与运行状态`、`恢复默认设置`。
+
+### 3. 反向「Layer 0 → Live」单通道共享 + 快门后 45MP 静图顺延（`V71.7-r7`）
+
+- **反向单通道共享（EVF `1280×852` 与背屏 `1024×682` 均生效）**：开启 LUT / 图层 0 预览时，Layer 0 在 Stage 1 HDF 完成后、Stage 2 颗粒之前，按 `>= 18 ms` 节奏将已调色+HDF 的 NV12 直接推入 Live 环形缓冲（`LBUF`）标记为 `FS_TB_GRADED_READY`；CPU0 跳过重复缩放与提交，`live_worker` 与 XM6 不再做第二份重复调色与 HDF，同时解除旧版「Live → 背屏」30 fps 封顶；仅在独立 Live 运行时启用自适应 30 fps EVF 均匀节拍。
+- **快门后 45.4MP 静图顺延**：在 `live_runtime_post_roll_active()` 期间且非连拍双槽满载时，将 45.4MP 静图 `PENDING → COPY` 顺延至 post-roll 结束（硬上限 **`1.65 s`**，远低于 30 s 超时阈值），让实况照片快门后 1.5 s 保持流畅 `29.97 fps`。
+
+### 4. 5 款内置三语 `.wlm` 插件总览
+
+| 插件文件（`FENESTRA/`） | 精确体积（`V71.7-r7`） | 简体中文 / 繁體中文 / English | 核心功能与 `调试设置` 子页 |
+| :--- | :---: | :--- | :--- |
+| **`filmsim.wlm`** | `32,540 B` | `胶片模拟 / HDF` / `膠片模擬 / HDF` / `Film Simulation` | 尼康 Zf 18 档颗粒、理光光学 HDF、取景实时预览、95 槽按云创 NP3 绑定 + `调试设置`（XM6 模式 / 自检 / 熔断器 / 硬件状态）。 |
+| **`livephoto.wlm`** | `15,860 B` | `实况照片` / `實況照片` / `Live Photo` | 实况开关、全双工 `快门声音`（`0.0 ms` 断层）、`回放按键`（`REC 键`/`关闭`）、`当前状态` + `调试设置`（录制/Wave5/音频/回放/关机日志统计与 `导出诊断日志`）。 |
+| **`lut.wlm`** | `15,624 B` | `3D LUT 调色` / `3D LUT 調色` / `3D LUT` | `3D LUT 开关`、`当前 LUT`、`取景实时预览`、`照片 LUT`、`实况照片 LUT`、`清除当前 LUT` + `调试设置`（管线/图层 0/健康/看门狗/重置预览工作区）。 |
+| **`slotcard.wlm`** | `56,552 B` | `C64 滤镜槽` / `C64 濾鏡槽` / `C64 Filter Slots` | `滤镜槽容量`（`C64`/`C32`）、双卡严格模式 `存储卡`（`自动`/`CFx (A)`/`SD (B)`）、`[FC]C-10..C-64` 原生云创图标、`Fn` 拨盘 + `调试设置`（插槽状态/存储日志/卡槽引导）。 |
+| **`portrait.wlm`** | `7,348 B` | `竖屏录像` / `直拍錄影` / `Portrait Video` | 运行期按 `OK` 即时开关 `PortraitPB` 竖屏录像与回放正立元数据（`tkhd` + `NCTG 0x0018`）+ `调试设置`（`运行状态`、`说明`）。 |
 
 ---
 
-## 部署与编译方式
+## 存储卡目录结构与 `V71.7-r7` 升级指南
+
+```text
+<存储卡根目录>/
+├── Z_8_0406.bin                     # 固件升级包（仅刷写更新时放置于根目录，更新完成后请删除）
+├── FENESTRA/
+│   ├── STARTUP-Z8.0                 # [必需 64 B]     Fenestra 启动与自动激活配置
+│   ├── filmsim.wlm                  # [必需 32,540 B] Zf 颗粒 / 理光 HDF / XM6 DSP / NP3 绑定插件
+│   ├── livephoto.wlm                # [必需 15,860 B] 实况照片与全双工音频插件
+│   ├── lut.wlm                      # [必需 15,624 B] 实时 3D LUT 控制与调试插件
+│   ├── slotcard.wlm                 # [必需 56,552 B] 双卡 C32/C64 滤镜槽插件
+│   ├── portrait.wlm                 # [必需 7,348 B]  竖屏录像运行期开关插件
+│   ├── ZF_GRAIN.BIN                 # [颗粒必需 27,588 B] 尼康 Zf C3.01 颗粒图谱（ZFG1+CRC32，用户自备）
+│   ├── *.cube                       # [可选] 平铺 .cube LUT（在照片菜单「根目录 LUT」下显示）
+│   ├── LUTS/
+│   │   ├── 01-Fuji-Film/*.cube      # [可选] 分类 .cube 3D LUT（单文件 <= 2 MiB，支持一级目录）
+│   │   └── <自定义分类>/*.cube       # [可选] 自定义分类目录（照片拍摄菜单第 47 项直接浏览）
+│   ├── FXPHOTO0.CFG / FXPHOTO1.CFG  # [自动维护] 双槽 CRC32 当前 3D LUT 路径持久化
+│   ├── FXLUT0.CFG / FXLUT1.CFG      # [自动维护] 双槽 CRC32 lut.wlm 开关配置（32 B 'ZLT1'）
+│   ├── FLMSIM0.CFG / FLMSIM1.CFG    # [自动维护] 双槽 CRC32 全局 FilmSim/HDF/XM6 配置（64 B 'ZFS1'）
+│   ├── FLMREC0.CFG / FLMREC1.CFG    # [自动维护] 95 槽按云创配方独立绑定表
+│   ├── SLTCARD0.CFG / SLTCARD1.CFG  # [自动维护] 双槽 CRC32 C64 存储卡选择配置（自动/A/B）
+│   ├── SCSEL0.CFG / SCSEL1.CFG      # [自动维护] C64 槽位选择防抖缓存（Fn 拨盘）
+│   ├── SC*.REC                      # [自动维护] C10–C64 优化校准存档（支持 +0x39C 'Z8FX' 嵌入）
+│   ├── live-z8.0 / live-z8.1        # [自动维护] 双槽 CRC32 实况照片配置（64 B 'FLP1'）
+│   ├── XM6_DIAG.LOG / LIVELOG.BIN   # [按需导出] 从调试子页导出的诊断日志
+│   └── <name>.wlm.disabled          # [可选] 在「已加载插件」禁用后的插件（下次重启生效）
+├── DCIM/100NCZ_8/
+│   └── DSC_0001.NEF / .JPG          # 原厂静态照片（14-bit .NEF 严格 0 改动）
+├── LIVE/100NCZ_8/
+│   └── DSC_0001.MOV                 # 配对 1280×852 HEVC + 48kHz 24-bit 立体声实况短片（约 3 秒）
+└── LIVEDATA/100NCZ_8/
+    └── DSC_0001.MAN / .LVP          # 机内配对清单与预览索引
+```
+
+> [!TIP]
+> **安全升级至 `V71.7-r7`（`Z8-v71.7r7-LutPreview-362ee2a5`）**
+> - **从 `V71.7-r6` 升级**：卡内 `FENESTRA/` 全部 7 个文件与 `r6` 逐字节一致，**仅需刷入新的 `Z_8_0406.bin`**，升级完成后删除即可。
+> - **从 `V71.7-r5` 或更早版本（`V71.5` / `V71.2` / `V62`）升级**：请完整覆盖卡内 `FENESTRA/` 全部 7 个发行文件并刷入 `Z_8_0406.bin`。
+> - **请始终保留** `DCIM/`、`LIVE/`、`LIVEDATA/`、`FENESTRA/LUTS/`、`FXPHOTO*.CFG`、`FXLUT*.CFG`、`FLMSIM*.CFG`、`FLMREC*.CFG`、`SLTCARD*.CFG`、`SCSEL*.CFG`、`SC*.REC` 与 `live-z8.*`。
+
+---
+
+## 源码编译与本地开发
 
 ### 1. 基础环境准备
 
-- **推荐系统**：完整固件编译与配套 [`z8-qemu`](https://github.com/YCX81/z8-qemu) 整机仿真建议使用 **Linux** 或 **Windows 11 WSL2（`Ubuntu`）**；若只开发编译 `.wlm` 模块，macOS / Linux / Windows 均可直接运行。
-- **编译工具链**：
-  - Python `3.11+`
-  - LLVM 工具链（`clang`、`ld.lld`、`llvm-objcopy`、`llvm-nm`，需支持 `aarch64-none-elf` 目标）
-  - `aarch64-linux-gnu-gcc`（需支持 `-static` 静态链接，供 `build_z8_core.py` 编译 `INFO` agent）
+- **推荐系统**：完整固件编译与 [`z8-qemu`](https://github.com/YCX81/z8-qemu) 整机仿真推荐使用 **Linux** 或 **Windows 11 WSL2（`Ubuntu`）**；仅编译 `.wlm` 插件时 macOS / Linux / Windows 均可直接运行。
+- **编译工具链**：Python `3.11+`、LLVM（`clang`、`ld.lld`、`llvm-objcopy`、`llvm-nm`，支持 `aarch64-none-elf`）、`aarch64-linux-gnu-gcc`（支持 `-static` 静态链接，供 `build_z8_core.py` 编译 `INFO` agent）。
 
 ```bash
 git clone --branch z8-c311 https://github.com/YCX81/fenestra-z8.git
@@ -64,186 +154,56 @@ cd fenestra-z8
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-# 可选：仅在使用 USB/PTP 主机连接脚本时需要
+# 可选：仅在使用 USB/PTP 主机调试脚本时需要
 python -m pip install -r requirements-host.txt
 ```
 
----
-
-### 2. 部署方式一：编译 `.wlm` 扩展模块与 QEMU 核心镜像
-
-适合用 SDK 开发自定义模块，或在 [`z8-qemu`](https://github.com/YCX81/z8-qemu) 模拟器中测试基础菜单与插件。
-
-#### 编译 `.wlm` 模块（不需要原厂固件）
+### 2. 编译 `.wlm` 插件、QEMU 核心镜像与 `from-stock`（`v36`）
 
 ```bash
-# 编译最简菜单示例 -> 生成 build/hello-z8/hello.wlm
+# 编译独立 .wlm 插件（不需要原厂固件）
 python host/build_sdk_module.py examples/hello/module.c \
   --id hello --target z8-c311 --output-dir build/hello-z8
-
-# 编译 OpenVG 字符雨动画示例 -> 生成 build/demo-z8/demo.wlm
 python host/build_sdk_module.py modules/demo/sdk.c \
   --id demo --target z8-c311 --output-dir build/demo-z8
-```
 
-#### 编译 Z8 核心仿真 `MAIN`
-
-准备好从官方 C3.11 升级包提取出的 `81,807,709` 字节原厂 `MAIN`（`SHA-256: 2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853`）：
-
-```bash
+# 编译 Z8 核心仿真 MAIN（仅限 QEMU，输入 81,807,709 B 原厂 C3.11 MAIN）
 python host/build_z8_core.py \
-  --firmware /absolute/path/to/z8-c311-main.bin \
+  --firmware /path/to/z8-c311-main.bin \
   --output-dir build/z8-core-local
-```
 
-> **提示**：`--output-dir` 必须是尚未存在的新目录；若交叉编译器名字不同，可通过 `--agent-cc` 指定。生成的 `z8-core.main` **只能放进 QEMU 仿真运行，不能用于真机升级**。
-
----
-
-### 3. 部署方式二：从官方原厂 `Z_8_0311.bin` 一键重建集成固件（`from-stock`）
-
-如果你想从零构建包含 Live Photo + C64 + 竖屏布局 + NFP 视频增强的集成固件基线（`v36`），无需任何私有中间文件，只需准备一份官方未修改的 `Z_8_0311.bin`（`99,051,117` 字节，`SHA-256: d67413c2ede6b9ce8887175f20700bd9fbad2a973a4820968c45503d15d80d96`）：
-
-1. 在 Linux / WSL2 中同时克隆本仓库（`z8-c311` 分支）和 [`z8-qemu`](https://github.com/YCX81/z8-qemu)（`main` 分支）。
-2. 安装 **Clang 18**（编译核心底座）与 **Clang / LLVM 21**（`clang-21`、`ld.lld`、`llvm-nm`、`llvm-objcopy`、`llvm-objdump`，编译 Live/回放/bootguard），并安装 `research/z8-live/from-stock/requirements.txt`。
-3. 执行一条命令完成构建与封装校验：
-
-```bash
+# 从官方原厂 Z_8_0311.bin 一键重建 v36 集成基线（需 Clang 18 + Clang/LLVM 21 与 z8-qemu）
 python -m pip install -r research/z8-live/from-stock/requirements.txt
-
 python -B research/z8-live/from-stock/build.py \
-  --stock /absolute/path/to/Z_8_0311.bin \
-  --qemu-root /absolute/path/to/z8-qemu \
-  --output-dir /absolute/path/to/v36-rebuilt
+  --stock /path/to/Z_8_0311.bin \
+  --qemu-root /path/to/z8-qemu \
+  --output-dir /path/to/v36-rebuilt
 ```
 
-- 多版本编译器并存时可通过 `--core-clang`、`--live-clang`、`--llvm-bin` 显式指定路径；如果只需要 `MAIN` 供 QEMU 测试可加 `--main-only`。
-- 脚本会自动利用仓库内置的公开 NFP 工具包完成编译、链接、CRC16 与外层封装，并逐阶段校验 `v36.main` 与 `Z_8_0406.bin` 的固定 SHA-256，详见 [from-stock 说明](research/z8-live/from-stock/README.md)。
-- 后续演进至 **`V62`**（单 MOV 原厂播放器回放、RAW 跨卡配对、Log 菜单文字修复与快门声交接修复）的源码与 WSL 实验室构建说明见 [RELEASE-v62.md](research/z8-live/build-tools/livediag/feat-onemov/RELEASE-v62.md)。
-
 ---
 
-### 4. 存储卡目录结构与升级部署说明
+## `V71.7-r7` 验证回执与常见注意事项
 
-相机存储卡（CFexpress 或 SD）上的相关目录用途如下：
+| 验证套件 | 结果 | 核验内容 |
+| :--- | :---: | :--- |
+| **CEVA-XM6 `dcli.exe` 周期精确仿真** | **51/51 PASS** | GRAIN `25/25` + HDF `26/26` `0-diff`（`.text.z8fx = 156,736 / 158,336 B`，`.rodata.z8fx = 2,016 / 2,048 B`）。 |
+| **0-Q-Spill 静态审计** | **PASS（`0` spill）** | `1,114` 个链接函数全量审计，`q_spills = 0`。 |
+| **Host ASan + UBSan 套件** | **全通过** | `lut_core` 8/8（528 KiB 烘焙 LUT NEON==Scalar `0-diff`/PSNR/SMP/NEON 拷贝）、`xm6_bridge` 9/9（锁前排队 0 回退/反向 Layer 0→Live/快门后顺延/颗粒融合清洗）、`layer0` 9/9、`photo_menu` 6/6。 |
+| **ARM64 / Unicorn 套件（6 套）** | **全通过** | Suite #5 FontCJK（3,755/3,755 简繁 + ops 13..16）、Suite #14 Layer0（63 项）、XM6 Bridge（124 项，0 违规调用）、Suite #4 FilmSim（70 项）、Suite #2 HangFix、5-WLM 0 缺字审计。 |
+| **Whole-Guest QEMU `#19-r7`** | **14/14 PASS** | 纯净 Fenestra 7 行 + 5 插件 + XM6 自检/持久化/回退（`z8_unk = 0`、`panic = 0`）。 |
+| **Whole-Guest QEMU `#20-r7`** | **13/13 PASS** | Row 47 流式 `.cube` LUT + Layer 0 528 KiB 预烘焙 LUT + Still + Movie 挂起 `0 B` + 重启恢复/清除（`z8_unk = 0`、`panic = 0`）。 |
+| **实体 Nikon Z8 真机验收** | **`physical_camera_verified = false`** | `V71.1–V71.6` 真机实测与 USB 取证驱动了 `r7` 四项根修；**`V71.7-r7`（`362ee2a5`）待真机刷入后复测 EVF/背屏帧率、XM6 回退率与实拍 Live `.MOV` 后半段帧率**。 |
 
-```text
-<存储卡根目录>/
-├── Z_8_0406.bin              # 固件升级包（仅在执行相机固件升级时放在根目录）
-├── FENESTRA/
-│   ├── hello.wlm             # 已启用的扩展模块 (.wlm)
-│   ├── demo.wlm.disabled     # 已禁用的扩展模块（下次开机生效）
-│   └── live-z8.0 / live-z8.1 # Live 开关与配置双备份文件（机内自动维护，请勿当普通文本手工编辑）
-├── DCIM/100NCZ_8/
-│   ├── DSC_0001.NEF / .JPG   # 原厂写入的静态照片（不会被篡改）
-│   └── LIV_0001.MOV          # 早期版本可选开启的 DCIM 短片副本
-├── LIVE/100NCZ_8/
-│   └── DSC_0001.MOV          # 与照片配对的实况有声短片（约 3 秒）
-└── LIVEDATA/100NCZ_8/
-    └── DSC_0001.MAN / .LVP   # 机内配对清单 (.MAN) 与预览索引数据
-```
-
-> **版本升级方法（如更新至 `V62`）**：确保电池电量充足，**只替换存储卡根目录下的 `Z_8_0406.bin`**，然后在相机“设定菜单 → 固件版本”按常规升级流程操作即可。**请保留卡上原有的 `FENESTRA/`、`DCIM/`、`LIVE/` 和 `LIVEDATA/` 文件夹**，无需格式化或覆盖已有配置，旧实况照片的配对与回放会继续保留。内部版本号统一显示为 `04.06.p0`，具体版本以构建目录和 SHA-256 区分。
-
----
-
-## 各功能详细使用说明
-
-### 1. Fenestra 菜单、模块加载与异常关机保护
-
-| 异常关机自动拦截（`Abnormal shutdown`） | 在 `WonderLantern` 中运行 `demo.wlm` 字符雨 |
-| :---: | :---: |
-| ![异常关机保护界面](docs/images/abnormal-shutdown.png) | ![demo 模块字符雨界面](docs/images/demo-module.png) |
-
-1. **放入模块**：将针对 `z8-c311` 编译的 `.wlm` 文件拷入存储卡根目录的 `FENESTRA/` 文件夹。
-2. **激活运行**：按机身 `MENU` 键 → 切到左侧**扳手图标（设定菜单）** → 进入 **`Fenestra`** → 点击 **`Activate`**，`Status` 由 `Ready` 变为 `Active`。
-   - *按键小贴士*：焦点在左侧图标栏时，按第一下方向键 `右` 是进入列表，再按一次 `右` 或 `OK` 才是打开子页面。
-3. **管理模块**：进入 `Fenestra → Modules` 可查看已识别的模块，切换 `On` / `Off`（禁用后会改名为 `.wlm.disabled`，重启后不再加载）。
-4. **打开模块界面**：返回设定菜单打开 **`WonderLantern`**，即可看到并进入模块注册的功能页（如 `Hello module` 或 `demo`）。
-5. **异常关机恢复**：如果相机在激活期间曾意外断电或崩溃，下次开机会显示 **`Disabled due to abnormal shutdown`** 并拒绝自动激活，避免坏模块导致开机死循环。确认排障后，进入 `Shutdown guard` 清除异常标志（`Clear abnormal flag`），即可重新激活。
-
----
-
-### 2. 拍摄 Live Photo 实况照片（LCD / EVF / 快门声设置）
-
-| `Live Photo` 菜单与快门声开关（`V62`） | `◎LIVE` 徽标状态（就绪 / 保存扫光动画 / 回放高亮） |
-| :---: | :---: |
-| ![Live Photo 菜单设置](docs/images/live-photo-menu.png) | ![LIVE 徽标多状态示意](docs/images/live-badge-states.png) |
-
-1. **开启实况拍照**：在拍照模式下，进入 `设定菜单 → Fenestra → Live Photo`，选择 **`On`**。
-   - 状态提示含义：
-     - `Off`：已关闭。
-     - `Requested` / `Preparing`：正在初始化编码器，请稍候片刻。
-     - `Ready`：已就绪，取景画面左侧会出现 **`◎LIVE`** 徽标，此时拍照才会生成实况短片。
-     - `Busy`：刚拍完正在后台封装保存短片，取景画面上的 `◎LIVE` 外圈会旋转扫光。
-     - `card error` / `Unavailable`：存储卡写入异常或编码通道正被其他模式占用。
-2. **设置实况快门声（`V62`）**：在 `Live Photo` 子菜单中可将 **`Shutter sound`** 设为 **`On`** 或 **`Off`**：
-   - 设为 `On`：按下快门时正常播放机身设定的快门音效，发声结束后自动恢复麦克风继续录音。
-   - 设为 `Off`：同时静默快门准备与释放两个发声阶段，让实况短片录下不间断的环境声。
-   - **原厂静音模式依然优先**：如果你在尼康机身菜单开启了“静音拍摄（Silent mode）”，即便此处设为 `On` 也不会强制出声。
-3. **正常按快门拍摄**：看到 LCD 或 EVF 取景器上显示 `◎LIVE` 后正常构图拍照即可（单张 JPEG、RAW，或双卡 RAW + JPEG 分存均支持），拍完等待 `◎LIVE` 扫光动画结束即保存完毕。
-
----
-
-### 3. 在相机内回放 Live Photo（按 `REC` 键播放）
-
-1. 按机身 **`▶`（回放键）** 查看单张照片。只要该照片（无论是 `.NEF` 还是 `.JPG`，含双卡分存场景）存在配对的实况数据，屏幕左上角就会亮起醒目的白色 **`◎LIVE`** 标志。
-   - 若刚拍完立即按回放、配对清单尚未落盘，`V61`/`V62` 会自动按限频重试识别。
-2. 在显示 `◎LIVE` 的照片回放页，直接按机身顶部的红色 **`REC`（录影键）**：
-   - `V54`–`V62` 会直接调起**尼康原厂视频播放器**播放配对的 `.MOV` 短片（带环境音轨、音量指示和底部进度条）。
-   - 短片播完（约 3 秒），或者播放中途再次按 `REC` / 返回键，界面会**自动退回刚才那张原照片**（包括精确退回原 RAW 照片）。
-3. 查看普通非实况照片时按 `REC` 键不会误触发，保持原厂按键逻辑不变。
-
----
-
-### 4. 竖屏视频界面、视频 Log 设定与 C64 优化校准槽位
-
-| 竖屏视频待机界面（旋转竖看效果） | `Slot card` 切换 `C32` / `C64` 容量（下次开机生效） |
-| :---: | :---: |
-| ![竖屏视频待机界面](docs/images/portrait-video-standby.png) | ![Slot card C64 设置菜单](docs/images/slot-card-c64.png) |
-
-- **竖屏视频界面与直方图对齐**：竖握机身进入视频模式时，顶部与底部的拍摄参数（`REC`、录制时长、`2160 30p`、`FX`、编码图标、快门/光圈/ISO）及实时直方图会自动按竖屏拍照布局排列，不再横向溢出画面。
-- **视频 `Log settings` 菜单（`V62`）**：切到 10-bit 或 RAW 视频格式后，在 `视频拍摄菜单 → Log settings` 中可正常查看和选择 `N-Log / BT.2020`、`S-Log3 / S-Gamut3.Cine`、`Log3G10 / REDWideGamutRGB`；`V62` 修复了打开 `Modules` 页面后再回到视频菜单时这几行文字变空白的问题。
-- **C32 / C64 优化校准槽位与标签字号补丁**：
-  - 在集成有 `Slot card` 的版本中，可在 `Fenestra → Slot card` 选择 `C32` 或 `C64`，重启相机后即可在“设定优化校准”中使用最多 64 个照片/视频自定义槽位。
-  - 若你在做离线固件定制、想把已有 C64 `MAIN` 的 `C10`–`C64` 标签统一调为 28 号字，可使用独立脚本：
-    ```bash
-    python research/z8-live/build-tools/livediag/feat-c64label/c64label_patch.py \
-      /path/to/input.main /path/to/output-c64label.main \
-      --reference /path/to/bg34.main \
-      --json /path/to/output-c64label.changed.json
-    ```
-    *（注意：该脚本只修改已扩容 `MAIN` 上的 275 个共享样式描述符，本身不会给原厂固件扩容出 C64 槽位。）*
-
----
-
-### 5. 开发自定义 `.wlm` 模块与主机 `INFO` 调试
-
-- **大内存栈与 SIMD 支持**：单个 `.wlm` 包最大支持 `1 MiB`（加载后最高 `4 MiB`）。如果模块需要更大的原生栈/用户栈或完整 NEON/SIMD 寄存器保护，可生成 `v3` 包：
-  ```bash
-  python host/build_sdk_module.py examples/hello/module.c \
-    --id hello --target z8-c311 \
-    --native-stack-bytes 131072 --user-stack-bytes 131072 --simd \
-    --output-dir build/hello-v3-z8
-  ```
-  完整状态机与服务接口请参考 [模块开发指南](docs/module-development.md) 与 [SDK API 参考](docs/api-reference.md)。
-- **主机 `INFO` 调试桥**：在 Z8 C3.11 配置（`FENESTRA_PTP_PROFILE=z8-c311`）下，`host/ptp_linux.py` 仅允许加载经 SHA-256 白名单校验的 `fenestra-agent-z8-info` 执行无参数 `info` 查询，主动拒绝任意命令行执行。详见 [调试说明](docs/debugging.md)。
-
----
-
-## 注意事项与常见坑
-
-1. **严禁把裸 `.main` 当升级包拷卡刷机**：`z8-core.main`、`v36.main` 等 `.main` 文件是未封装的内存镜像，只有完整校验封装后的容器（如 `Z_8_0406.bin`）才是升级包格式。
-2. **保存忙碌期间连拍不会补录短片**：上一张实况照片还在 `Busy` 扫光写卡时如果立刻再拍一张，新照片本身会正常保存，但**不会**生成对应的实况短片；想每张都带实况请等扫光结束后再按快门。
-3. **开启实况快门声会有约 0.25 秒短暂静音**：由于机身扬声器与麦克风共用音频硬件通道，`Shutter sound: On` 播放快门音交接期间，实况短片在快门瞬间会有约 0.25 秒静音；若追求全程无断音的环境声，把实况快门声设为 `Off` 即可。
-4. **导出实况素材时保留配对文件**：拷到电脑备份时请同时拷走 `DCIM/` 下的原图（`.NEF`/`.JPG`）和 `LIVE/` 下同名的 `.MOV` 短片。`LIVEDATA/` 里的 `.MAN`/`.LVP` 是机内专用配对索引，不能当普通视频播放；直接把机内 JPG+MOV 拖进苹果相册也不会自动合并为 iPhone 实况图（需借助桌面端 Live Photo 写入工具添加 ContentIdentifier 元数据）。
-5. **停用 `.wlm` 模块需重启生效**：不支持运行时热卸载已驻留回调的模块；在 `Modules` 里设为 `Off` 或改名 `.wlm.disabled` 后，请重启相机使其生效。切勿在卡上同时启用两个同 ID 的模块副本。
-6. **切勿提交固件与私人路径**：归档脚本中的 `/path/to/Nikon`、`/path/to/user` 为脱敏占位路径，复现时需改为你本机的实际路径。提交代码前请运行 `python -B verify_source.py` 校验发布清单，确保未混入原厂固件、密钥或私人照片。
+1. **严禁把裸 `.main` 当升级包刷机**：`z8-core.main`、`v36.main` 等为未封装镜像，仅完整封装校验后的 `Z_8_0406.bin` 才是相机升级格式。
+2. **停用 `.wlm` 插件需重启生效**：在 `Fenestra → 已加载插件` 设为关闭（重命名为 `.wlm.disabled`）后需重启机身生效；请勿在卡上同时启用两个同 ID 插件。
+3. **提交前清单自检**：运行 `python -B verify_source.py` 确保未混入原厂固件、密钥、`ZF_GRAIN.BIN` 或私人素材。
 
 ---
 
 ## 文档索引与许可协议
 
+- **V71.7-r7 完整用户与菜单手册**：**[V71.7-r7 详细功能与全菜单设置手册（中文）](docs/features-and-usage.zh-CN.md)** · [Detailed V71.7-r7 Feature & Menu Reference (EN)](docs/features-and-usage.md)
 - **核心与 SDK 文档**：[快速上手](docs/getting-started.md) · [系统架构](docs/architecture.md) · [SDK API 手册](docs/api-reference.md) · [模块开发](docs/module-development.md) · [模块包格式](docs/module-format.md) · [USB/PTP 调试](docs/debugging.md) · [平台移植说明](docs/porting.md)
 - **Z8 Live 专题归档**：[Live 源码目录导览](research/z8-live/README.md) · [从原厂固件重建 v36](research/z8-live/from-stock/README.md) · [V62 版本说明](research/z8-live/build-tools/livediag/feat-onemov/RELEASE-v62.md) · [核心移植记录](port-z8/PORT-STATUS.md)
-- **许可证**：采用 [CC BY-NC-SA 4.0](LICENSE)，并附带 [商业摄影例外许可](EXCEPTIONS.md) 与 [Z8 移植适用范围说明](LICENSE-Z8.md)——**允许使用本软件从事收费商业摄影、婚礼跟拍及影视制作**，但**禁止出售本软件/衍生模块或提供有偿代刷机服务**。仓库内引用的第三方公开组件（如 `from-stock` 随附的公开 [NikonFirmwarePatch](https://github.com/XinmiaoZhao/NikonFirmwarePatch) 工具包与 `minih264e.h`）保留其各自原有的开源许可。
+- **配套整机模拟器**：[`z8-qemu`](https://github.com/YCX81/z8-qemu)（含 [z8-qemu 中文使用指南](https://github.com/YCX81/z8-qemu/blob/main/docs/features-and-usage.zh-CN.md)）
+- **许可证**：采用 [CC BY-NC-SA 4.0](LICENSE)，附带 [商业摄影例外许可](EXCEPTIONS.md) 与 [Z8 移植适用范围说明](LICENSE-Z8.md)——**允许使用本软件从事收费商业摄影、婚礼跟拍及影视制作**，但**禁止出售本软件/衍生模块或提供有偿代刷机服务**。第三方公开组件保留其各自原有开源许可。

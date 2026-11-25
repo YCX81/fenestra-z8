@@ -1,0 +1,109 @@
+{
+  "schema": "v69.hangfix_hooks/v1",
+  "description": "V69 HangFix stock hook specification (Wave5 class-0x24 pool disposal across Photo->Movie->Playback for ProRes, N-RAW, H.265, H.264).",
+  "linker_symbols_added": [],
+  "optional_compile_defines": [
+    "-DLIVE_FILMSIM_POOL_HOOKS (when linked with FilmSim .o units: invokes filmsim_runtime_pool_suspend() in live_handoff_if_pool/live_w5_bringup_notify even when Live is OFF, and filmsim_runtime_pool_resume() in live_deferred_dispose upon Photo layout-0 return)"
+  ],
+  "hooks": [
+    {
+      "name": "layout_switch_primary",
+      "layer": "Layer 1 (pre-layout-switch, gated on cur_layout==0 && new_layout!=0 && BE_LV_0xa03b71788==0)",
+      "address": "0x40f7a4bc",
+      "original_hex": "ca2f0394",
+      "original_asm": "bl 0x410463e4",
+      "kind": "BL",
+      "target_symbol": "live_layout_switch_wrap",
+      "client_id": "0xfe",
+      "caller_function": "0x40f7a320"
+    },
+    {
+      "name": "layout_switch_aux",
+      "layer": "Layer 1 (pre-layout-switch, gated on cur_layout==0 && new_layout!=0 && BE_LV_0xa03b71788==0)",
+      "address": "0x40f7679c",
+      "original_hex": "123f0394",
+      "original_asm": "bl 0x410463e4",
+      "kind": "BL",
+      "target_symbol": "live_layout_switch_wrap",
+      "client_id": "0xfe",
+      "caller_function": "0x40f76728"
+    },
+    {
+      "name": "movs_playback_alloc",
+      "layer": "Layer 2A (MOVS playback buffer allocator in View 2 Playback, before 0x40711da8 0x41046f84->0x41047014 & 0x40711db8 0x410463e4)",
+      "address": "0x40711da4",
+      "original_hex": "30ed2494",
+      "original_asm": "bl 0x4104d264",
+      "kind": "BL",
+      "target_symbol": "live_movs_alloc_wrap",
+      "client_id": "0xfd",
+      "caller_function": "0x40711c24"
+    },
+    {
+      "name": "prores_hw_bringup",
+      "layer": "Layer 2B (ProRes HW bring-up entry; catches both ProRes REC 0x40d1ea9c and ProRes PB 0x40cfa890)",
+      "address": "0x40cb0f34",
+      "original_hex": "f553bea9",
+      "original_asm": "stp x21, x20, [sp, #-0x20]!",
+      "kind": "B",
+      "target_symbol": "live_prores_bringup_entry",
+      "client_id": "0xfc",
+      "caller_function": "0x40cb0f34"
+    },
+    {
+      "name": "pbprcmxm_subpool_enter",
+      "layer": "Layer 1B (PBPRCMXM Command 46: 0x410463e4(layout=0, subflag=1) carves 646.81 MiB subpools 0x5a,0x5c..0x5f from Class 0x24; gated on cur_layout==0 && cur_subflag==0 && BE_LV_0xa03b71788==0)",
+      "address": "0x407c5ed8",
+      "original_hex": "43012294",
+      "original_asm": "bl 0x410463e4",
+      "kind": "BL",
+      "target_symbol": "live_layout_switch_wrap",
+      "client_id": "0xfe",
+      "caller_function": "0x407c5e64"
+    },
+    {
+      "name": "pbprcmxm_layout_restore",
+      "layer": "Layer 1B (PBPRCMXM Command 47: 0x410463e4(saved_layout) restores layout 0->non-0 when exiting Playback image management back to Movie; gated on cur_layout==0 && new_layout!=0 && BE_LV_0xa03b71788==0)",
+      "address": "0x407c5f60",
+      "original_hex": "21012294",
+      "original_asm": "bl 0x410463e4",
+      "kind": "BL",
+      "target_symbol": "live_layout_switch_wrap",
+      "client_id": "0xfe",
+      "caller_function": "0x407c5f0c"
+    },
+    {
+      "name": "subpool_carve_direct",
+      "layer": "Layer 1C (0x40f81680: BL 0x41046ef8 -> 0x41045e08 directly carves 647.55 MiB subpools 0x5a..0x5f from Class 0x24 bypassing 0x410463e4; gated on cur_layout==0 && cur_subflag==0 && BE_LV_0xa03b71788==0)",
+      "address": "0x40f81680",
+      "original_hex": "1e160394",
+      "original_asm": "bl 0x41046ef8",
+      "kind": "BL",
+      "target_symbol": "live_subpool_carve_wrap",
+      "client_id": "0xfb",
+      "caller_function": "0x40f81610"
+    },
+    {
+      "name": "movs_layout_restore_tail",
+      "layer": "Layer 1D (0x40712808: tail-call B 0x410463e4(0xa045f0ea8) restores saved layout after MOVS playback; gated on cur_layout==0 && BE_LV_0xa03b71788==0)",
+      "address": "0x40712808",
+      "original_hex": "f7ce2414",
+      "original_asm": "b 0x410463e4",
+      "kind": "B",
+      "target_symbol": "live_layout_switch_wrap",
+      "client_id": "0xfe",
+      "caller_function": "0x40712764"
+    },
+    {
+      "name": "pb_arbiter_exit_guard",
+      "layer": "Layer 3 (0x42ac31b8: PTR64 arbiter slot 0x2b KEY_PLAYBACK exit predicate 0x403917e8; swallows KEY_PLAYBACK while view=2/1 pb_state0 has no mounted page yet so post-shot Playback never bounces back to LV)",
+      "address": "0x42ac31b8",
+      "original_hex": "e817394000000000",
+      "original_asm": ".quad 0x403917e8",
+      "kind": "PTR64",
+      "target_symbol": "live_pb_arbiter_exit_wrap",
+      "client_id": "0xfa",
+      "caller_function": "0x403936b8"
+    }
+  ]
+}

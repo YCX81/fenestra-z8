@@ -1,0 +1,130 @@
+#ifndef LIVE_RUNTIME_H
+#define LIVE_RUNTIME_H
+#include <stddef.h>
+#include <stdint.h>
+#include "capture/live_capture.h"
+#include "capture/live_stream.h"
+#include "audio/live_audio_z8.h"
+#include "audio/live_shutter_z8.h"
+#define LIVE_RUNTIME_MAGIC 0x4c415231u
+struct live_ticket {
+ uint64_t descriptor, generation, size, success_us;
+ uint32_t fd, file_id, card_epoch, open, success, closed;
+ char path[32];
+};
+/* Worker-owned observations, not a native DMA lease. Fits retired lv_geo. */
+struct live_picker_time {
+ struct la_source selected;
+ uint64_t current_y,current_uv;
+ uint32_t reset_generation,channel,flags;
+};
+_Static_assert(sizeof(struct live_picker_time)==88,"temporal picker reservation");
+_Static_assert(sizeof(struct la_source)==56 && offsetof(struct la_source,uv)==8 &&
+ offsetof(struct la_source,width)==16 && offsetof(struct la_source,height)==20 &&
+ offsetof(struct la_source,y_stride)==24 && offsetof(struct la_source,uv_stride)==28 &&
+ offsetof(struct la_source,generation)==32 && offsetof(struct la_source,timestamp_us)==40 &&
+ offsetof(struct la_source,lease)==48,"source comparison layout");
+/* Cached mirror of Wave5 pool ownership & close state inside struct live_runtime
+ * (reuses retired v16 lv_regs[228] = 912 B; preserves sizeof == 23904 and all
+ * existing offsets). V70 partitions lv_regs[228] into:
+ *   bytes   0..255 (256 B): struct live_w5_mirror (Wave5 pool & async state)
+ *   bytes 256..767 (512 B): struct live_flip_obs  (6-buffer flip ring state)
+ *   bytes 768..911 (144 B): spare reserved. */
+struct live_w5_mirror {
+ uint32_t magic,stream,busy,release_req,close_failed,handoffs;
+ uint64_t arena,native_instance;
+ void *arena_desc,*block_desc;
+};
+_Static_assert(sizeof(struct live_w5_mirror)<=256u,"w5_mirror fits lv_regs[0..255]");
+struct live_runtime {
+ uint32_t magic, size;
+ struct la_capture capture;
+ uint32_t requested, task_started, task_error, shutdown, card_epoch;
+ uint64_t poll_count, full_presses, writer_returns, jpeg_returns;
+ uint32_t writer_active, writer_file_id, writer_path_valid, writer_result;
+ char writer_path[32], last_native_path[32];
+ void *worker_stack_raw;
+ uint8_t task_scope[64];
+ uint32_t ticket_lock, ticket_generation, press_ticket_floor, ticket_drops;
+ uint32_t transaction_count, transaction_error;
+ uint64_t encode_started_us, encode_finished_us;
+ struct live_ticket tickets[8];
+ /* Guest-visible counters; duration includes per-frame MOV writes/yields. */
+ uint64_t frame_encode_started_us, frame_encode_finished_us;
+ uint32_t frame_encode_target, frame_encode_completed;
+ char debug_ticket_path[32];
+ char debug_dir_path[128];
+ uint32_t debug_path_result, debug_fs_error, debug_dir_stage;
+ struct live_stream stream;
+ /* Photo-mode audio (appended: earlier offsets unchanged). audio_phase:
+  * 0 none, 1 marked/awaiting freeze, 2 frozen for the mux, 3 clip without audio. */
+ struct live_audio audio;
+ struct live_audio_z8 audio_z8;
+ struct live_audio_info audio_info;
+ uint32_t audio_phase,audio_error,audio_starts,audio_tracks,audio_skipped;
+ uint32_t audio_warm; /* v53: occupies old alignment padding; 1 inhibits Ready/press */
+ uint64_t audio_retry_us;
+ /* v13 (appended): boot-flag park/restore and saved event log */
+ uint32_t flag_req,flag_n,flag_parks,flag_restores,flag_err,last_photo;
+ /* v36: former log_pad is a cached RMW word; boot zeroes it once.
+  * Do not reset on encoder close/reopen. Runtime size/other offsets unchanged. */
+ uint32_t log_saved_head,log_saves,log_err,w5_close_lock;
+ uint64_t flag_t,log_saved_t;
+ uint8_t flag_buf[256],log_io[512];
+ uint32_t crumb_head,crumb_pad;struct live_ev crumbs[32];
+ uint32_t lv_channel,lv_pad; /* v14: live-view scaler output Live copies (0..3), default 1 */
+ union {
+  uint32_t lv_geo[4][6]; /* Retired v14 diagnostic; preserves all old offsets and size 23744. */
+  struct live_picker_time picker_time;
+ };
+ uint64_t lv_snap[4],lv_geo_t; /* v14: last snapshot Y address per output, time of lv_geo */
+ union {
+  uint32_t lv_regs[228]; /* Retired v16 diagnostic; preserves all old offsets and size 23904. */
+  struct {
+   union {
+    struct live_w5_mirror w5_mirror; /* Bytes   0..255: Wave5 mirror & V70 async state */
+    uint8_t w5_mirror_slot[256];
+   };
+   union {
+    struct live_flip_obs flip_obs;   /* Bytes 256..767: V70 flip-observed 6-buf ring */
+    uint8_t flip_obs_slot[512];
+   };
+   uint32_t log_force_req;           /* Bytes 768..771: V71.7-r4 LP_OP_FLUSH_LOG atomic trigger */
+  };
+ };
+ uint32_t lv_regs_n;
+ uint32_t lv_regs_on,stock_handoff_lock; /* v52: former unused lv_regs_pad; cached caller exclusion */
+ uint32_t ch2_req,ch2_state,ch2_applies,ch2_restores,ch2_reapplies,ch2_pad /* v46: pre-roll progress 0..12 */,ch2_saved[12]; /* v17 */
+ uint64_t last_view,last_pb_b;uint32_t last_view_is,last_pb_a; /* v23 */
+ uint32_t vhead,vpad;struct live_ev vring[64]; /* v23: view/playback changes, RAM only (no card saves) */
+ struct live_shutter_z8 shutter; /* v53: persistent native queue ownership */
+ /* v68: auto picture-review admission + full-duplex lower TX queue ownership,
+  * appended without moving any earlier field (sizeof == 23904, matching v63 r8). */
+ uint32_t review_gate,review_deferrals;
+ struct live_shutter_tx shutter_tx;
+};
+_Static_assert(sizeof(struct live_runtime)==23904u,"v68/v70 runtime ABI size");
+_Static_assert(offsetof(struct live_runtime,w5_close_lock)==19284u,"v53/v70 w5_close_lock ABI");
+_Static_assert(offsetof(struct live_runtime,w5_mirror)==offsetof(struct live_runtime,lv_regs),"w5_mirror offset");
+_Static_assert(offsetof(struct live_runtime,flip_obs)==offsetof(struct live_runtime,lv_regs)+256u,"flip_obs offset");
+_Static_assert(offsetof(struct live_runtime,log_force_req)==offsetof(struct live_runtime,lv_regs)+768u,"log_force_req offset");
+/* card-slot: second-card Live copy state. struct live_runtime is size-pinned (Wave5 ABI),
+ * so this lives in the boot-cleared C64 reservation tail (RES+0xF0100, no other user).
+ * state 0 idle, 1 waiting for the other card's JPG, 2 copying. */
+struct live_twin {
+ uint32_t magic,state,epoch,floor,copies,errors,timeouts,result,cleanup,pad;
+ uint64_t deadline_us,mov_bytes;
+ char source[32],path[32],uuid[36];
+};
+#define LIVE_TWIN_MAGIC 0x4e575754u
+#define LIVE_TWIN ((struct live_twin *)(uintptr_t)UINT64_C(0xa1171b100))
+void live_irq_notify(uint32_t event,uint64_t status);
+void live_press_notify(void);
+uint32_t live_review_pop(uint32_t slot,void **payload);
+void live_shutter_diag(uint32_t point,uint32_t incoming);
+uint32_t live_writer_wrap(uint32_t mode,uint32_t format,const void *record);
+uint32_t live_open_wrap(void *file);
+uint32_t live_layout_switch_wrap(const void *req);
+void live_movs_alloc_wrap(void *out);
+void live_prores_bringup_notify(void);
+#endif

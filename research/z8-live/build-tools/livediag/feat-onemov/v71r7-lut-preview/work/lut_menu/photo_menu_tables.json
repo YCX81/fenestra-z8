@@ -1,0 +1,125 @@
+{
+  "schema": "v71r7.photo_menu_tables/v1",
+  "mode": "lut_only_count48_no_burst",
+  "bank2_window": {
+    "start": "0x40981000",
+    "end": "0x40990000",
+    "budget_bytes": 61440
+  },
+  "preimages": {
+    "stage0_sha256": "ffed106403d0e7367a045b3ad3b99512b17f8cb1bffd010398c4fa2df823f398",
+    "stage0_bytes": 81807709,
+    "parent_pointer_va": "0xa028f5670",
+    "parent_pointer_file": "0x4c00670",
+    "parent_pointer_preimage": "80c48c020a000000",
+    "parent_orig_sha256": "95b4499df9384a1ccaa34b3ef91a570450cd4400251d002d8acbc80ecda1cf65",
+    "lut_state_va": "0xa02917d00",
+    "lut_state_file": "0x4c22d00",
+    "lut_state_preimage_all_zero": true,
+    "burst_state_untouched_zero": true,
+    "bank2_cave_zero_verified": true,
+    "row45_nfp_pixel_shift_preserved": true,
+    "row45_item_id": "0x2c13",
+    "cloned_47_rows_sha256": "cece02bd1ac5353af64e1ef60919c16612eef87314705c3b7668c0ef2589271d",
+    "cloned_47_events_sha256": "fce5ea19bd8971ace1a9456ab2e7fa18539212662e60bee0ce40e3ea0c4df73c"
+  },
+  "table_sizes_bytes": {
+    "v71r7_photo_parent_desc": 80,
+    "v71r7_photo_parent_rows": 2112,
+    "v71r7_photo_parent_events": 384,
+    "v71r7_photo_parent_lut_event_prog": 2976,
+    "v71r7_lut_child_desc": 80,
+    "v71r7_lut_child_vector": 40,
+    "v71r7_lut_child_layout": 476,
+    "v71r7_lut_child_rows": 1012,
+    "v71r7_lut_child_events": 184,
+    "v71r7_lut_child_event_table": 480,
+    "total_ro_table_bytes": 7824
+  },
+  "generated_c": {
+    "path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/lut_menu/photo_menu_ro_tables.c",
+    "bytes": 31497,
+    "sha256": "f59cc953a7c820a1b575d9e64ed20765a6a0ed7b02393783a7e36e203854334a"
+  },
+  "ram_init_patch_spec": {
+    "count": 2,
+    "patch_1_parent_pointer": {
+      "va": "0xa028f5670",
+      "file_offset": "0x4c00670",
+      "bytes": 8,
+      "preimage_hex": "80c48c020a000000",
+      "value_symbol": "v71r7_photo_parent_desc"
+    },
+    "patch_2_lut_child_state": {
+      "va": "0xa02917d00",
+      "file_offset": "0x4c22d00",
+      "bytes": 96,
+      "page_id": "0x5d6",
+      "preimage_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "template_hex": "0200d60500000000204d8f020a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "patch_u64_offset_0x28_symbol": "v71r7_lut_child_vector",
+      "patch_u64_offset_0x50_symbol": "v71r7_lut_child_desc"
+    },
+    "example_bank2_patches": [
+      {
+        "name": "photo_shooting_menu_parent_desc_ptr",
+        "va": "0xa028f5670",
+        "file_offset": "0x4c00670",
+        "bytes": 8,
+        "symbol": "v71r7_photo_parent_desc",
+        "old_hex": "80c48c020a000000",
+        "new_hex": "00c0984000000000"
+      },
+      {
+        "name": "photo_lut_child_page_0x5d6_state",
+        "va": "0xa02917d00",
+        "file_offset": "0x4c22d00",
+        "bytes": 96,
+        "symbols": {
+          "offset_0x28": "v71r7_lut_child_vector",
+          "offset_0x50": "v71r7_lut_child_desc"
+        },
+        "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "new_hex": "0200d60500000000204d8f020a00000000000000000000000000000000000000000000000000000000dc984000000000000000000000000000000000000000000000000000000000000000000000000040dc9840000000000000000000000000"
+      }
+    ]
+  },
+  "cjk_glyph_audit": {
+    "label4_entries": 46,
+    "fonts": {
+      "font0_zh_tw_glyphs": 917,
+      "font2_zh_cn_glyphs": 927,
+      "font13_ja_glyphs": 829,
+      "font18_ascii_glyphs": 105,
+      "cjk_ext_1_glyphs": 1894,
+      "cjk_ext_1_sha256": "efca043d12ef6055a2d38308d71fa1d682b61efa1d7351d456bef89dfb9da36a",
+      "cjk_ext_2_glyphs": 1709,
+      "cjk_ext_2_sha256": "d3f624c68612ef1a8d2f20a20ec214ca0f1a511014fca73792461e6c9d7aa77a",
+      "zh_cn_union_glyphs": 4200,
+      "zh_tw_union_glyphs": 4392,
+      "ja_stock_union_glyphs": 846
+    },
+    "zh_cn": {
+      "used_chars": 128,
+      "distinct_non_ascii": 97,
+      "missing_count": 0,
+      "missing": [],
+      "coverage_percent": 100.0
+    },
+    "zh_tw": {
+      "used_chars": 130,
+      "distinct_non_ascii": 99,
+      "missing_count": 0,
+      "missing": [],
+      "coverage_percent": 100.0
+    },
+    "ja": {
+      "used_chars": 131,
+      "distinct_non_ascii": 79,
+      "stock_missing_count": 0,
+      "stage3_missing_count": 0,
+      "missing": [],
+      "coverage_percent": 100.0
+    }
+  }
+}

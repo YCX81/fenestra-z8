@@ -1,0 +1,315 @@
+{
+  "compiler": "Ubuntu clang version 21.1.8 (6ubuntu1)",
+  "audit": {
+    "objects": {
+      "z8_hdf.o": {
+        "text_bytes": 8164,
+        "rodata_bytes": 48,
+        "data_bytes": 0,
+        "bss_bytes": 0,
+        "insns": 2041,
+        "fp_insns": 0,
+        "simd_insns": 0
+      },
+      "z8_hdf_kernels.o": {
+        "text_bytes": 21520,
+        "rodata_bytes": 1840,
+        "data_bytes": 0,
+        "bss_bytes": 0,
+        "insns": 5380,
+        "fp_insns": 0,
+        "simd_insns": 2702
+      }
+    },
+    "q_spills": {},
+    "max_stack_bytes": {
+      "z8_hdf_apply_ex": 496,
+      "build_channel_pyramid": 272,
+      "z8_hdf_live_nv12_1024": 480,
+      "live_build_channel_pyramid": 208,
+      "hdf_blur_h_grid_u16": 112,
+      "hdf_composite_row": 1712,
+      "hdf_live_s1_rowpair_256": 368,
+      "live_s1_hi_chunks_512": 192,
+      "hdf_live_s3_comp_chroma_256": 128,
+      "hdf_live_s3_chroma_exact_masked": 208,
+      "live_s1_boost_color_deferred": 208
+    },
+    "compiler": "Ubuntu clang version 21.1.8 (6ubuntu1)"
+  },
+  "benchmarks": {
+    "DSC_9130_f03": {
+      "WEAK": {
+        "baseline_insns": 7223214,
+        "new_insns": 4814200,
+        "saved_insns": 2409014,
+        "reduction_pct": 33.35,
+        "breakdown_new": {
+          "hdf_live_s3_comp_y_rowpair": 1673507,
+          "hdf_live_s1_rowpair_256": 631828,
+          "hdf_live_blur_sym53_2d": 477624,
+          "hdf_live_s3_comp_chroma_256": 337086,
+          "hdf_live_s2_blend_k_row_256": 325755,
+          "hdf_live_blur_box16_1pass": 296568,
+          "hdf_live_s3_apply_chroma_256_2x2": 247742,
+          "hdf_live_vlerp_hlerp_y_512": 180048,
+          "live_s1_boost_color_deferred": 118574,
+          "live_s1_boost_8px_deferred": 89978,
+          "hdf_live_vlerp_q13_padded": 83106,
+          "hdf_live_s3_chroma_exact_masked": 77223,
+          "live_s1_hi_chunks_512": 71818,
+          "live_build_channel_pyramid": 49212,
+          "hdf_live_ds2x2_u16": 47907,
+          "hdf_live_build_grid_y": 43785,
+          "z8_hdf_live_nv12_1024": 36709,
+          "live_vcoord_next": 12235,
+          "hdf_live_s3_check_schroma_mask": 10960,
+          "hdf_live_s3_patch_exact_uv": 2535
+        }
+      },
+      "MEDIUM": {
+        "baseline_insns": 7243399,
+        "new_insns": 4856276,
+        "saved_insns": 2387123,
+        "reduction_pct": 32.96,
+        "breakdown_new": {
+          "hdf_live_s3_comp_y_rowpair": 1681163,
+          "hdf_live_s1_rowpair_256": 631828,
+          "hdf_live_blur_sym53_2d": 477624,
+          "hdf_live_s3_comp_chroma_256": 338472,
+          "hdf_live_s2_blend_k_row_256": 325755,
+          "hdf_live_blur_box16_1pass": 296568,
+          "hdf_live_s3_apply_chroma_256_2x2": 247742,
+          "hdf_live_vlerp_hlerp_y_512": 180048,
+          "live_s1_boost_color_deferred": 118574,
+          "hdf_live_s3_chroma_exact_masked": 108586,
+          "live_s1_boost_8px_deferred": 89978,
+          "hdf_live_vlerp_q13_padded": 83106,
+          "live_s1_hi_chunks_512": 71818,
+          "live_build_channel_pyramid": 49212,
+          "hdf_live_ds2x2_u16": 47907,
+          "hdf_live_build_grid_y": 43785,
+          "z8_hdf_live_nv12_1024": 37309,
+          "live_vcoord_next": 12235,
+          "hdf_live_s3_check_schroma_mask": 10960,
+          "hdf_live_s3_patch_exact_uv": 3606
+        }
+      },
+      "STRONG": {
+        "baseline_insns": 7275690,
+        "new_insns": 4941070,
+        "saved_insns": 2334620,
+        "reduction_pct": 32.09,
+        "breakdown_new": {
+          "hdf_live_s3_comp_y_rowpair": 1694363,
+          "hdf_live_s1_rowpair_256": 631828,
+          "hdf_live_blur_sym53_2d": 477624,
+          "hdf_live_s3_comp_chroma_256": 339594,
+          "hdf_live_s2_blend_k_row_256": 325755,
+          "hdf_live_blur_box16_1pass": 296568,
+          "hdf_live_s3_apply_chroma_256_2x2": 247742,
+          "hdf_live_vlerp_hlerp_y_512": 180048,
+          "hdf_live_s3_chroma_exact_masked": 175745,
+          "live_s1_boost_color_deferred": 118574,
+          "live_s1_boost_8px_deferred": 89978,
+          "hdf_live_vlerp_q13_padded": 83106,
+          "live_s1_hi_chunks_512": 71818,
+          "live_build_channel_pyramid": 49212,
+          "hdf_live_ds2x2_u16": 47907,
+          "hdf_live_build_grid_y": 43785,
+          "z8_hdf_live_nv12_1024": 38309,
+          "live_vcoord_next": 12235,
+          "hdf_live_s3_check_schroma_mask": 10960,
+          "hdf_live_s3_patch_exact_uv": 5919
+        }
+      },
+      "MONO_STRONG": {
+        "baseline_insns": 2773802,
+        "new_insns": 2658342,
+        "saved_insns": 115460
+      }
+    },
+    "DSC_9129_f10": {
+      "WEAK": {
+        "baseline_insns": 7002004,
+        "new_insns": 4597911,
+        "saved_insns": 2404093,
+        "reduction_pct": 34.33,
+        "breakdown_new": {
+          "hdf_live_s3_comp_y_rowpair": 1658393,
+          "hdf_live_s1_rowpair_256": 645940,
+          "hdf_live_blur_sym53_2d": 477624,
+          "hdf_live_s3_comp_chroma_256": 327714,
+          "hdf_live_s2_blend_k_row_256": 325755,
+          "hdf_live_blur_box16_1pass": 296568,
+          "hdf_live_s3_apply_chroma_256_2x2": 247742,
+          "hdf_live_vlerp_hlerp_y_512": 180048,
+          "hdf_live_vlerp_q13_padded": 83106,
+          "live_s1_boost_color_deferred": 54948,
+          "live_build_channel_pyramid": 49212,
+          "hdf_live_ds2x2_u16": 47907,
+          "hdf_live_build_grid_y": 43785,
+          "live_s1_hi_chunks_512": 42906,
+          "live_s1_boost_8px_deferred": 39270,
+          "z8_hdf_live_nv12_1024": 35609,
+          "hdf_live_s3_chroma_exact_masked": 22430,
+          "live_vcoord_next": 12235,
+          "hdf_live_s3_check_schroma_mask": 5978,
+          "hdf_live_s3_patch_exact_uv": 741
+        }
+      },
+      "MEDIUM": {
+        "baseline_insns": 7002028,
+        "new_insns": 4608697,
+        "saved_insns": 2393331,
+        "reduction_pct": 34.18,
+        "breakdown_new": {
+          "hdf_live_s3_comp_y_rowpair": 1658558,
+          "hdf_live_s1_rowpair_256": 645940,
+          "hdf_live_blur_sym53_2d": 477624,
+          "hdf_live_s3_comp_chroma_256": 327714,
+          "hdf_live_s2_blend_k_row_256": 325755,
+          "hdf_live_blur_box16_1pass": 296568,
+          "hdf_live_s3_apply_chroma_256_2x2": 247742,
+          "hdf_live_vlerp_hlerp_y_512": 180048,
+          "hdf_live_vlerp_q13_padded": 83106,
+          "live_s1_boost_color_deferred": 54948,
+          "live_build_channel_pyramid": 49212,
+          "hdf_live_ds2x2_u16": 47907,
+          "hdf_live_build_grid_y": 43785,
+          "live_s1_hi_chunks_512": 42906,
+          "live_s1_boost_8px_deferred": 39270,
+          "z8_hdf_live_nv12_1024": 35884,
+          "hdf_live_s3_chroma_exact_masked": 32437,
+          "live_vcoord_next": 12235,
+          "hdf_live_s3_check_schroma_mask": 5978,
+          "hdf_live_s3_patch_exact_uv": 1080
+        }
+      },
+      "STRONG": {
+        "baseline_insns": 7001364,
+        "new_insns": 4645051,
+        "saved_insns": 2356313,
+        "reduction_pct": 33.66,
+        "breakdown_new": {
+          "hdf_live_s3_comp_y_rowpair": 1658360,
+          "hdf_live_s1_rowpair_256": 645940,
+          "hdf_live_blur_sym53_2d": 477624,
+          "hdf_live_s3_comp_chroma_256": 327780,
+          "hdf_live_s2_blend_k_row_256": 325755,
+          "hdf_live_blur_box16_1pass": 296568,
+          "hdf_live_s3_apply_chroma_256_2x2": 247742,
+          "hdf_live_vlerp_hlerp_y_512": 180048,
+          "hdf_live_vlerp_q13_padded": 83106,
+          "hdf_live_s3_chroma_exact_masked": 66928,
+          "live_s1_boost_color_deferred": 54948,
+          "live_build_channel_pyramid": 49212,
+          "hdf_live_ds2x2_u16": 47907,
+          "hdf_live_build_grid_y": 43785,
+          "live_s1_hi_chunks_512": 42906,
+          "live_s1_boost_8px_deferred": 39270,
+          "z8_hdf_live_nv12_1024": 36709,
+          "live_vcoord_next": 12235,
+          "hdf_live_s3_check_schroma_mask": 5978,
+          "hdf_live_s3_patch_exact_uv": 2250
+        }
+      },
+      "MONO_STRONG": {
+        "baseline_insns": 2693442,
+        "new_insns": 2604680,
+        "saved_insns": 88762
+      }
+    },
+    "DSC_9126_f56": {
+      "WEAK": {
+        "baseline_insns": 7554721,
+        "new_insns": 5024100,
+        "saved_insns": 2530621,
+        "reduction_pct": 33.5,
+        "breakdown_new": {
+          "hdf_live_s3_comp_y_rowpair": 1800194,
+          "hdf_live_s1_rowpair_256": 636617,
+          "hdf_live_blur_sym53_2d": 477624,
+          "hdf_live_s3_comp_chroma_256": 362067,
+          "hdf_live_s2_blend_k_row_256": 325755,
+          "hdf_live_blur_box16_1pass": 296568,
+          "hdf_live_s3_apply_chroma_256_2x2": 247742,
+          "hdf_live_vlerp_hlerp_y_512": 180048,
+          "hdf_live_s3_chroma_exact_masked": 170817,
+          "live_s1_boost_color_deferred": 111418,
+          "hdf_live_vlerp_q13_padded": 83106,
+          "live_s1_boost_8px_deferred": 76398,
+          "live_s1_hi_chunks_512": 55818,
+          "live_build_channel_pyramid": 49212,
+          "hdf_live_ds2x2_u16": 47907,
+          "hdf_live_build_grid_y": 43785,
+          "z8_hdf_live_nv12_1024": 37564,
+          "live_vcoord_next": 12235,
+          "hdf_live_s3_patch_exact_uv": 4764,
+          "hdf_live_s3_check_schroma_mask": 4461
+        }
+      },
+      "MEDIUM": {
+        "baseline_insns": 7597583,
+        "new_insns": 5054906,
+        "saved_insns": 2542677,
+        "reduction_pct": 33.47,
+        "breakdown_new": {
+          "hdf_live_s3_comp_y_rowpair": 1811975,
+          "hdf_live_s1_rowpair_256": 636617,
+          "hdf_live_blur_sym53_2d": 477624,
+          "hdf_live_s3_comp_chroma_256": 367413,
+          "hdf_live_s2_blend_k_row_256": 325755,
+          "hdf_live_blur_box16_1pass": 296568,
+          "hdf_live_s3_apply_chroma_256_2x2": 247742,
+          "hdf_live_s3_chroma_exact_masked": 184000,
+          "hdf_live_vlerp_hlerp_y_512": 180048,
+          "live_s1_boost_color_deferred": 111418,
+          "hdf_live_vlerp_q13_padded": 83106,
+          "live_s1_boost_8px_deferred": 76398,
+          "live_s1_hi_chunks_512": 55818,
+          "live_build_channel_pyramid": 49212,
+          "hdf_live_ds2x2_u16": 47907,
+          "hdf_live_build_grid_y": 43785,
+          "z8_hdf_live_nv12_1024": 37764,
+          "live_vcoord_next": 12235,
+          "hdf_live_s3_patch_exact_uv": 5060,
+          "hdf_live_s3_check_schroma_mask": 4461
+        }
+      },
+      "STRONG": {
+        "baseline_insns": 7642416,
+        "new_insns": 5078914,
+        "saved_insns": 2563502,
+        "reduction_pct": 33.54,
+        "breakdown_new": {
+          "hdf_live_s3_comp_y_rowpair": 1828409,
+          "hdf_live_s1_rowpair_256": 636617,
+          "hdf_live_blur_sym53_2d": 477624,
+          "hdf_live_s3_comp_chroma_256": 369591,
+          "hdf_live_s2_blend_k_row_256": 325755,
+          "hdf_live_blur_box16_1pass": 296568,
+          "hdf_live_s3_apply_chroma_256_2x2": 247742,
+          "hdf_live_s3_chroma_exact_masked": 189182,
+          "hdf_live_vlerp_hlerp_y_512": 180048,
+          "live_s1_boost_color_deferred": 111418,
+          "hdf_live_vlerp_q13_padded": 83106,
+          "live_s1_boost_8px_deferred": 76398,
+          "live_s1_hi_chunks_512": 55818,
+          "live_build_channel_pyramid": 49212,
+          "hdf_live_ds2x2_u16": 47907,
+          "hdf_live_build_grid_y": 43785,
+          "z8_hdf_live_nv12_1024": 37864,
+          "live_vcoord_next": 12235,
+          "hdf_live_s3_patch_exact_uv": 5174,
+          "hdf_live_s3_check_schroma_mask": 4461
+        }
+      },
+      "MONO_STRONG": {
+        "baseline_insns": 3085008,
+        "new_insns": 2804433,
+        "saved_insns": 280575
+      }
+    }
+  }
+}

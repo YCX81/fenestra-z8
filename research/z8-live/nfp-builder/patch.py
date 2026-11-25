@@ -19,8 +19,8 @@ def main():
     ap.add_argument('--version', help='Output version NN.NN; choose a distinct identity for a different feature set')
     ap.add_argument('--tag', default='p0', help='Internal revision suffix: lowercase letter plus digit; default p0')
     group = ap.add_mutually_exclusive_group()
-    group.add_argument('--features', nargs='+', choices=FEATURES, help='Explicit nonempty selection of the four feature groups')
-    group.add_argument('--interactive', action='store_true', help='Choose one or more of the four features')
+    group.add_argument('--features', nargs='+', choices=FEATURES, help='Explicit nonempty selection of the supported feature groups')
+    group.add_argument('--interactive', action='store_true', help='Choose one or more of the supported features')
     ap.add_argument('--code-source', choices=['prebuilt', 'source'], default='prebuilt',
                     help='Native patch code: reviewed prebuilt Release bytes (default), or explicitly compile from source')
     ap.add_argument('--compiler', help='Clang executable; requires --code-source source; default clang')
@@ -33,11 +33,11 @@ def main():
     if a.check and (a.output or a.version or a.tag != 'p0' or a.interactive or a.compiler or a.code_source != 'prebuilt'):
         ap.error('--check cannot be combined with output options')
     if a.interactive:
-        print('1: Video recording / 视频录制\n2: Log colour / Log 色彩\n3: Still photo tools / SDR HEIF＋照片裁切＋像素位移\n4: RAW pre-capture / RAW 预拍摄\n5: All / 全选')
-        choice=input('Select numbers separated by commas / 用逗号分隔 [1,2,3,4 or 5]: ').strip()
+        print('1: Video recording / 视频录制\n2: Log colour / Log 色彩\n3: Still photo tools / SDR HEIF＋照片裁切＋像素位移\n4: RAW pre-capture / RAW 预拍摄\n5: Live Photo & FilmSim Suite (V71.7-r7) / 实况照片与胶片模拟套件\n6: All / 全选')
+        choice=input('Select numbers separated by commas / 用逗号分隔 [1,2,3,4,5 or 6]: ').strip()
         parts=[v.strip() for v in choice.split(',')]
-        require(parts and len(parts)==len(set(parts)) and (parts==['5'] or all(p in ('1','2','3','4') for p in parts)), 'Select 1,2,3,4 or 5 for all')
-        a.features=list(FEATURES) if parts==['5'] else [FEATURES[int(p)-1] for p in parts]
+        require(parts and len(parts)==len(set(parts)) and (parts==['6'] or all(p in ('1','2','3','4','5') for p in parts)), 'Select 1,2,3,4,5 or 6 for all')
+        a.features=list(FEATURES) if parts==['6'] else [FEATURES[int(p)-1] for p in parts]
     require(a.check or a.features, 'Choose --features or --interactive explicitly')
     selected = a.features or list(FEATURES)
     require(a.firmware.is_file(), 'Input must be a regular firmware file')
@@ -81,7 +81,7 @@ def main():
                   source_hashes={str(p.relative_to(Path(__file__).resolve().parent)): sha(p.read_bytes())
                                  for p in sorted(Path(__file__).resolve().parent.rglob('*'))
                                  if p.is_file() and p.suffix in ('.py','.c','.h','.inc','.S','.json','.png')
-                                 and not any(x in p.relative_to(Path(__file__).resolve().parent).parts for x in ('.git','build','local_data','.venv','venv','__pycache__'))},
+                                 and not any(x in p.relative_to(Path(__file__).resolve().parent).parts for x in ('.git','build','local_data','.venv','venv','__pycache__','.upstream_cache'))},
                   independent_verification=independent,
                   scope='Selected features plus their declared shared resources, identity and checksums only; this newly generated combination requires camera testing')
     if 'raw-precapture' in selected:
@@ -98,8 +98,16 @@ def main():
         os.fsync(f.fileno())
     require(sha((a.output / name).read_bytes()) == report['output_sha256'], 'Output readback mismatch')
     require(sha(a.firmware.read_bytes()) == package.sha256, 'Input changed during build')
+    fenestra_exported = []
+    if 'live-filmsim' in selected:
+        from z8livefilmsim.overlay import export_fenestra
+        fenestra_exported = export_fenestra(a.output)
+        report['fenestra_dir'] = 'FENESTRA'
+        report['fenestra_exported'] = fenestra_exported
     with (a.output / 'SHA256SUMS.txt').open('x') as f:
         f.write(report['output_sha256'] + '  ' + name + '\n')
+        for item in fenestra_exported:
+            f.write(item['sha256'] + '  FENESTRA/' + item['name'] + '\n')
     with (a.output / 'manifest.json').open('x') as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
         f.write('\n')

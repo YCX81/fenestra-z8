@@ -20,12 +20,11 @@ def sha(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
-def decode(raw):
-    need(len(raw) == 99051117 and raw[20:32].hex() == '5866cd124269c27e621da226', 'Wrong Z8 package context')
+def _decode_with_zero(raw, zero):
     # Independent recovery, with a different normalization than the packer:
     # A'[x]=cipher(zero+x), B'[y]=cipher(zero+256y)^cipher(zero), C'[g]=0.
     cipher = memoryview(raw)[32:]
-    zero, embedded = 0xB10000, 0x3FF1F84
+    embedded = 0x3FF1F84
     low = bytes(cipher[zero:zero+256])
     middle = bytes(cipher[zero+256*y] ^ cipher[zero] for y in range(256))
     temporary = bytes(cipher[embedded+i] ^ low[(embedded+i)%256] ^ middle[((embedded+i)//256)%256] for i in range(256))
@@ -56,6 +55,14 @@ def decode(raw):
     return b
 
 
+def decode(raw):
+    need(len(raw) == 99051117 and raw[20:32].hex() == '5866cd124269c27e621da226', 'Wrong Z8 package context')
+    try:
+        return _decode_with_zero(raw, 0xB10000)
+    except ValueError:
+        return _decode_with_zero(raw, 0x11E0000)
+
+
 def verify_pair(original, candidate, features=None, *, expected_version=None, expected_tag=None):
     # Trusted published data only: do not accept a candidate's own manifest as its specification.
     requested_features = features is not None
@@ -71,22 +78,20 @@ def verify_pair(original, candidate, features=None, *, expected_version=None, ex
     need(a[:112] == b[:112] and a[128:581844] == b[128:581844] and
          a[82389555:-16] == b[82389555:-16], 'Non-EG module or header changed')
     old, new = a[581844:82389555], b[581844:82389555]
-    order=('video-recording','log-colour','still-photo-tools','raw-precapture')
-    recipes=json.loads((HERE/'resources/combinations.json').read_text())
-    need(recipes['schema']==2,'Unsupported recipe schema')
-    profiles=recipes['profiles']
+    order=('video-recording','log-colour','still-photo-tools','raw-precapture','live-filmsim')
     if features is None:
         features=[]
-        for name,offset in [('video-recording',0x62E150),('log-colour',0xFBA508),('still-photo-tools',0x40EC8D24-0x40160000),('raw-precapture',0xE0FE90)]:
-            if old[offset:offset+4]!=new[offset:offset+4]:features.append(name)
+        if old[0x9E060:0x9E064] != new[0x9E060:0x9E064]:
+            features.append('live-filmsim')
+        else:
+            for name,offset in [('video-recording',0x62E150),('log-colour',0xFBA508),('still-photo-tools',0x40EC8D24-0x40160000),('raw-precapture',0xE0FE90)]:
+                if old[offset:offset+4]!=new[offset:offset+4]:features.append(name)
     need(features and len(features)==len(set(features)) and set(features)<=set(order),'Invalid feature selection')
     features=[f for f in order if f in features]
-    profile=profiles['+'.join(features)]
     identity=new[0x14EAA90:0x14EAA98]
     old_identity=old[0x14EAA90:0x14EAA98]
     if expected_version is not None:
         need(identity==f'{expected_version}.{expected_tag}'.encode(), 'Output identity differs from requested version/tag')
-    spans = []
     for buf, text in [(old, old_identity), (new, identity)]:
         need(re.fullmatch(rb'[0-9]{2}\.[0-9]{2}\.[a-z]\d', text) and buf[-11:-3] == text, 'Internal identity mismatch')
         w0,w1,w2 = struct.unpack_from('<3I',buf,0xEB29FC)
@@ -95,6 +100,35 @@ def verify_pair(original, candidate, features=None, *, expected_version=None, ex
         need(value == text[:5] + b'\0', 'Public identity mismatch')
     module = b'eg2070_' + identity[:5].replace(b'.',b'') + identity[6:] + b'.bi'
     need(b[112:128] == module.ljust(16,b'\0'), 'Output directory EG name mismatch')
+    if 'live-filmsim' in features:
+        from z8livefilmsim.overlay import DYNAMIC_SITES, load_meta, load_spans
+        from z8livefilmsim.contract import verify_contract as verify_v71_contract
+        meta = load_meta()
+        overlay_spans = load_spans(meta)
+        spans = []
+        for off, chunk in overlay_spans:
+            hi = off + len(chunk)
+            need(new[off:hi] == chunk, f'V71.7-r7 overlay bytes mismatch at {off:#x}')
+            spans.append((off, hi))
+        spans.extend(DYNAMIC_SITES)
+        end = 0
+        for lo, hi in sorted(spans):
+            need(end <= lo and old[end:lo] == new[end:lo], 'Overlapping edits or change outside declared V71.7-r7 windows')
+            end = hi
+        need(old[end:] == new[end:], 'Unlisted final change')
+        contract = verify_v71_contract(old, new)
+        return dict(status='PASS', composition_contract=contract, input_sha256=sha(original), output_sha256=sha(candidate),
+                    output_identity=identity.decode(), features=sorted(features), includes_relocated_nfp_v051=True,
+                    build_id=contract['build_id'], patch_matches_reviewed_profile=True,
+                    official_input_verified=True, requested_identity_checked=expected_version is not None,
+                    requested_features_checked=requested_features,
+                    all_non_patch_EG_bytes_preserved=True, other_modules_preserved=True,
+                    scope='Offline byte equivalence and integrity; not a camera test')
+    recipes=json.loads((HERE/'resources/combinations.json').read_text())
+    need(recipes['schema']==2,'Unsupported recipe schema')
+    profiles=recipes['profiles']
+    profile=profiles['+'.join(features)]
+    spans = []
     expected={}
     for index in profile['patches']:
         e=recipes['patches'][index]
@@ -126,7 +160,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('original',type=Path)
     ap.add_argument('candidate',type=Path)
-    ap.add_argument('--features', nargs='+', choices=('video-recording','log-colour','still-photo-tools','raw-precapture'), help='Expected new features; otherwise detect changed entry hooks')
+    ap.add_argument('--features', nargs='+', choices=('video-recording','log-colour','still-photo-tools','raw-precapture','live-filmsim'), help='Expected new features; otherwise detect changed entry hooks')
     ap.add_argument('--version', help='Expected output version NN.NN; otherwise check identity consistency only')
     ap.add_argument('--tag', help='Expected output tag; requires --version; default p0 when --version is set')
     a = ap.parse_args()

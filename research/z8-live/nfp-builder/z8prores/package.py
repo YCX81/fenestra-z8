@@ -39,7 +39,7 @@ def require_official_input(raw):
             'Input must match the official Nikon Z8 C 3.11 SHA-256; modified inputs are not supported')
 
 
-def recover_tables(encoded):
+def recover_tables(encoded, zero=0xB10000):
     """Recover an equivalent XOR factorization without shipping reference tables.
 
     A known zero 64 KiB window yields A[x]^A[0] and B[y]^B[0].
@@ -48,15 +48,31 @@ def recover_tables(encoded):
     These normalized factors produce the original stream for every index.
     CRC/SHA1 and fixed module hashes validate the reconstruction afterward.
     """
-    zero = 0xB10000                 # body-relative; EG offset A81F2Ch, outside the ProRes patch
     embedded_c = 0x3FF1F84          # body-relative; EG offset 3F63EB0h
-    require(len(encoded) > embedded_c + 256, 'Input too short for format recovery')
+    require(len(encoded) > max(zero + 65536, embedded_c + 256), 'Input too short for format recovery')
     a = bytes(encoded[zero + x] ^ encoded[zero] for x in range(256))
     b = bytes(encoded[zero + 256*y] ^ encoded[zero] for y in range(256))
     partial = bytes(encoded[embedded_c+x] ^ a[(embedded_c+x)&255] ^
                     b[((embedded_c+x)>>8)&255] for x in range(256))
     shift = partial[(zero>>16)&255] ^ encoded[zero]
     return a, b, bytes(value ^ shift for value in partial)
+
+
+def _decode_body(raw):
+    """Try stock zero window 0xB10000 first; fall back to 0x11E0000 if 0xB10000 is non-zero (e.g. V71.7-r7)."""
+    encoded = raw[32:]
+    for zero in (0xB10000, 0x11E0000):
+        tables = recover_tables(encoded, zero)
+        body = transform(encoded, tables)
+        if (body[:32] == b' ' * 32 and
+                struct.unpack_from('>4I', body, 32) == (5, 208, 0, 0) and
+                body[-14:] == bytes(14) and
+                binascii.crc_hqx(body[:-14], 0) == 0 and
+                hashlib.sha1(body + AUTH_APPEND).digest() == raw[:20]):
+            return tables, body
+    # Preserve original diagnostic error path using primary window 0xB10000.
+    tables = recover_tables(encoded, 0xB10000)
+    return tables, transform(encoded, tables)
 
 
 def transform(body, tables):
@@ -76,8 +92,7 @@ class Package:
     def __init__(self, raw):
         require(len(raw) == PACKAGE_BYTES, 'Unsupported package length; expected Z8 3.11 layout')
         require(raw[20:32] == OUTER_FIELD, 'Unsupported outer package context')
-        self.tables = recover_tables(raw[32:])
-        self.body = transform(raw[32:], self.tables)
+        self.tables, self.body = _decode_body(raw)
         body = self.body
         require(body[:32] == b' ' * 32, 'Invalid body header')
         require(struct.unpack_from('>4I', body, 32) == (5, 208, 0, 0), 'Unsupported module directory')

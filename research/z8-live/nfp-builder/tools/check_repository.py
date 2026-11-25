@@ -73,6 +73,17 @@ SCREENSHOTS.update({
 PUBLIC_LUT = "luts/RWG_Log3G10_F_v1_65.cube"
 PUBLIC_LUT_SHA = "2862a0c6ee17f73d9e83fcee04a706413742b00d53bc538d224a6a70bb3f93da"
 
+# Reviewed V71.7-r7 overlay and companion FENESTRA SD assets (exact SHA-256 pinned).
+REVIEWED_LIVEFILMSIM_ASSETS = {
+    'z8livefilmsim/overlay.zlib': '7cfe9387bdff5e9065f053e51399f48b49dac6ea7be8b413562b63ae02740764',
+    'z8livefilmsim/FENESTRA/STARTUP-Z8.0': '2ec2832aba51a344eda779c13c4bbab56dde6ac82e270df276de7990cd477636',
+    'z8livefilmsim/FENESTRA/filmsim.wlm': '259f58db7f859e808829214675a76a37320e43b0b91706202abfe0eb1dd3817e',
+    'z8livefilmsim/FENESTRA/livephoto.wlm': '65a92348b4a963641c21e6674f42347646595ee294007e05d2160f670ba855f8',
+    'z8livefilmsim/FENESTRA/lut.wlm': '596e37ccfd957b595500206dd3a22a278c50210bdfd5d6493ac6c4e65eaecee2',
+    'z8livefilmsim/FENESTRA/portrait.wlm': '857a234dcafeec087bdcd01d6020f52e8638121e7513ee2b2cc6b78ec52d26b0',
+    'z8livefilmsim/FENESTRA/slotcard.wlm': '299a90e8706495d2bb47ba2431de980e93cdc9fa84f7c51d992f3b9176bc5d9f',
+}
+
 def plain_png(data):
     """Accept small screenshots with valid chunks and no embedded metadata."""
     if not data.startswith(b'\x89PNG\r\n\x1a\n'):
@@ -159,23 +170,27 @@ def main():
         blocked |= item.name in {'.DS_Store', '.env', 'credentials.json', 'secrets.json'}
         blocked |= item.name.startswith('.env.') and item.name != '.env.example'
         public_lut = path == PUBLIC_LUT and hashlib.sha256(content).hexdigest() == PUBLIC_LUT_SHA
-        if public_lut:
+        reviewed_live = (
+            path in REVIEWED_LIVEFILMSIM_ASSETS
+            and hashlib.sha256(content).hexdigest() == REVIEWED_LIVEFILMSIM_ASSETS[path]
+        )
+        if public_lut or reviewed_live:
             blocked = False
         if blocked:
             issues.append((path, 'excluded input, private record, or runtime path'))
-        if size > (8 * 1024 * 1024 if public_lut else MAX_BYTES):
+        if size > (8 * 1024 * 1024 if (public_lut or reviewed_live) else MAX_BYTES):
             issues.append((path, 'file exceeds the 512 KiB source-resource limit'))
         screenshot = path in SCREENSHOTS and plain_png(content)
         if path in SCREENSHOTS and not screenshot:
             issues.append((path, 'invalid screenshot or embedded PNG metadata'))
-        if not screenshot:
+        if not screenshot and not reviewed_live:
             try:
                 content.decode('utf-8')
             except UnicodeDecodeError:
                 issues.append((path, 'only reviewed PNG figures, screenshots and UI assets may contain binary content'))
             if b'\0' in content:
                 issues.append((path, 'NUL bytes suggest binary content'))
-        if content.startswith(EXECUTABLE_MAGIC):
+        if content.startswith(EXECUTABLE_MAGIC) and not reviewed_live:
             issues.append((path, 'compiled executable magic'))
         for pattern in SECRET_PATTERNS:
             match = pattern.search(content)

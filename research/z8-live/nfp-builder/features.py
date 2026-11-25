@@ -9,7 +9,7 @@ from z8prores.menu import Image
 from z8patch.compiled import load
 from z8patch.shared import Strings, VideoMenu, loader
 
-FEATURES = ('video-recording','log-colour','still-photo-tools','raw-precapture')
+FEATURES = ('video-recording','log-colour','still-photo-tools','raw-precapture','live-filmsim')
 ROOT = Path(__file__).resolve().parent
 STOCK_SHA = 'f85e0138e2f5e660ece8560de62e0d12cb795e0e14983e50f20b61dce906c46c'
 
@@ -23,6 +23,13 @@ def selected_features(features):
 def compatibility(eg, features):
     chosen = selected_features(features)
     require(len(eg)==81807711 and sha(eg)==STOCK_SHA, 'Incompatible input: exact original C3.11 EG required')
+    if 'live-filmsim' in chosen:
+        from z8livefilmsim.overlay import PROFILE_ID, load_meta, verify_fenestra_assets
+        meta = load_meta()
+        fenestra = verify_fenestra_assets(meta)
+        profile = dict(id=PROFILE_ID, version=meta['version'], includes_relocated_nfp_v051=True,
+                       span_count=meta['span_count'], fenestra_files=sorted(fenestra))
+        return {'composition': profile}, eg[0x14EAA90:0x14EAA98].decode()
     recipes=json.loads((ROOT/'resources/combinations.json').read_text())
     profile=dict(recipes['profiles']['+'.join(chosen)])
     profile['patches']=[recipes['patches'][i] for i in profile['patches']]
@@ -166,6 +173,15 @@ def build(eg, version, tag, features, compiler='clang', code_source='prebuilt'):
     profiles, old_identity = compatibility(eg,chosen)
     public_words(version)
     require(re.fullmatch(r'[a-z][0-9]',tag), 'Tag must be a lowercase letter and digit')
+    if 'live-filmsim' in chosen:
+        from z8livefilmsim.overlay import apply_overlay
+        result, info = apply_overlay(eg, version, tag)
+        text = f'{version}.{tag}'
+        return result, dict(features=chosen, input_identity=old_identity, output_identity=text,
+                            profiles={k: v['id'] for k, v in profiles.items()},
+                            includes_relocated_nfp_v051=True, build_id=info['build_id'],
+                            fenestra_files=info['fenestra_files'],
+                            all_bytes_outside_edits_preserved=True, details={'live-filmsim': info})
     img, detail, _ = compose(eg,chosen,compiler,code_source)
     text = f'{version}.{tag}'.encode()
     for at, raw, why in [(0xEB29FC,public_words(version),'public version'),

@@ -72,6 +72,14 @@
 
 模式选择与各档码率预算见 [N-RAW 3:2 指南](opengate-nraw.md)。
 
+## 实况照片与胶片模拟套件（V71.7-r7）
+
+- **必须同时部署 FENESTRA/ 全部 7 个文件到存储卡根目录。** 固件本体依赖存储卡根目录的 `FENESTRA/` 插件与颗粒数据文件（`STARTUP-Z8.0`、`ZF_GRAIN.BIN` 及 5 个 `.wlm`）。
+- **自动包含重定位后的全部四组 NFP v0.5.1 功能。** 勾选本功能组时，输出固件已整合视频录制、Log 色彩、照片工具与 RAW 预拍摄，且 `Pool #6` 输出槽保持 `0x001C2000` 超集。
+- **V71.7-r7 离线仿真与全机 QEMU 均已通过，待真机复测。** 所有 ARM 静态检查、CEVA-XM6 51/51 仿真及 QEMU 14/14 + 13/13 套件均已通过，真机实拍帧率与回退率仍需实机验证。
+
+详情见 [实况照片与胶片模拟套件指南](live-filmsim.md)。
+
 ## English
 
 ### Windows toolkit revision
@@ -135,3 +143,11 @@ See the [still crop guide](photo-crop.md).
 - In N-RAW 3:2, auto-area AF and subject-tracking AF may not use the top and bottom rows of focus points: auto-area AF may light its in-focus boxes only as far as the second row from the top and bottom, and a subject-tracking AF frame placed on the outermost row may move one row inward when OK is pressed.
 - Compatibility metadata maps Fine to High and Basic to Normal for two-tier readers. Those labels cannot distinguish all four actual encoding grades.
 - Basic uses a 1.0-bit/pixel budget, with reduced fine texture observed in camera samples. 8.3K 3:2 High uses 2.5 bits/pixel versus 3.0 for ordinary 8.3K 30/25/24p High.
+
+### Live Photo & FilmSim Suite (V71.7-r7)
+
+- All 7 files in `FENESTRA/` must be copied to the root of the memory card alongside `Z_8_NNNN.bin`.
+- Selecting this group automatically includes all four relocated NFP v0.5.1 feature groups with `Pool #6` kept at the `0x001C2000` superset.
+- Offline static audits, CEVA-XM6 51/51 simulation, and whole-guest QEMU suites pass; final physical camera verification is pending.
+
+See the [Live Photo & FilmSim guide](live-filmsim.md#english).

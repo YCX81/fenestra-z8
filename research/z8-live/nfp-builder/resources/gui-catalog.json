@@ -855,6 +855,144 @@
           "zh-Hant": "全按時連同先前的畫面一起儲存：C30 預拍 1 秒最多 30 張。"
         }
       ]
+    },
+    {
+      "id": "live-filmsim",
+      "name": {
+        "en": "Live Photo & FilmSim",
+        "zh-Hans": "实况照片与胶片模拟",
+        "zh-Hant": "實況相片與底片模擬"
+      },
+      "summary": {
+        "en": "V71.7-r7 Live Photo, FilmSim, real-time 3D LUT preview, XM6 Grain/HDF and relocated NFP v0.5.1",
+        "zh-Hans": "V71.7-r7 实况照片、胶片模拟、实时 3D LUT 预览、XM6 颗粒／HDF 与重定位 NFP v0.5.1",
+        "zh-Hant": "V71.7-r7 實況相片、底片模擬、即時 3D LUT 預覽、XM6 顆粒／HDF 與重定位 NFP v0.5.1"
+      },
+      "intro": {
+        "en": "Adds the V71.7-r7 Live Photo, FilmSim and real-time 3D LUT preview suite with CEVA-XM6 hardware Film Grain and optical HDF, portrait toning, dual-slot routing and CJK extended fonts. Automatically includes all four relocated NFP v0.5.1 feature groups and exports the 7 required FENESTRA card files alongside the firmware.",
+        "zh-Hans": "集成 V71.7-r7 实况照片、胶片模拟与实时 3D LUT 预览套件，配备 CEVA-XM6 硬件胶片颗粒与光学柔焦 HDF、人像调色、双卡槽路由及中文扩展字库。自动包含重定位后的全部四组 NFP v0.5.1 功能，并在输出目录同步导出 7 个必需的 FENESTRA 存储卡文件。",
+        "zh-Hant": "整合 V71.7-r7 實況相片、底片模擬與即時 3D LUT 預覽套件，配備 CEVA-XM6 硬體底片顆粒與光學柔焦 HDF、人像調色、雙卡槽路由與中文擴充字庫。自動包含重定位後的全部四組 NFP v0.5.1 功能，並在輸出目錄同步匯出 7 個必需的 FENESTRA 記憶卡檔案。"
+      },
+      "includes": [
+        {
+          "en": "Live Photo with post-shutter 45 MP still deferral",
+          "zh-Hans": "实况照片（含快门后 45 MP 静图顺延防卡顿）",
+          "zh-Hant": "實況相片（含快門後 45 MP 靜照順延防卡頓）"
+        },
+        {
+          "en": "FilmSim and real-time 528 KiB L2 3D LUT preview",
+          "zh-Hans": "胶片模拟与 528 KiB L2 实时 3D LUT 预览",
+          "zh-Hant": "底片模擬與 528 KiB L2 即時 3D LUT 預覽"
+        },
+        {
+          "en": "CEVA-XM6 hardware Film Grain (Slots 39/40) and Ricoh HDF v2 (Slot 41)",
+          "zh-Hans": "CEVA-XM6 硬件胶片颗粒（Slot 39／40）与光学柔焦 HDF v2（Slot 41）",
+          "zh-Hant": "CEVA-XM6 硬體底片顆粒（Slot 39／40）與光學柔焦 HDF v2（Slot 41）"
+        },
+        {
+          "en": "All four relocated NFP v0.5.1 groups plus 7 FENESTRA card files",
+          "zh-Hans": "自动包含重定位后的全部四组 NFP v0.5.1 功能及 7 个 FENESTRA 文件",
+          "zh-Hant": "自動包含重定位後的全部四組 NFP v0.5.1 功能與 7 個 FENESTRA 檔案"
+        }
+      ],
+      "camera_entry": {
+        "en": "Fenestra menu › Live Photo · FilmSim · 3D LUT · Portrait · Slot Card",
+        "zh-Hans": "Fenestra 菜单 › 实况照片 · 胶片模拟 · 3D LUT · 人像 · 双卡管理",
+        "zh-Hant": "Fenestra 選單 › 實況相片 · 底片模擬 · 3D LUT · 人像 · 雙卡管理"
+      },
+      "limits": [
+        {
+          "level": "caution",
+          "title": {
+            "en": "Copy all 7 FENESTRA files to the card root",
+            "zh-Hans": "须将 FENESTRA 全部 7 个文件复制到存储卡根目录",
+            "zh-Hant": "須將 FENESTRA 全部 7 個檔案複製到記憶卡根目錄"
+          },
+          "detail": {
+            "en": "The firmware requires the FENESTRA/ directory (STARTUP-Z8.0 and 5 .wlm plugins; supply your own ZF_GRAIN.BIN if using grain) at the root of the memory card.",
+            "zh-Hans": "固件运行依赖存储卡根目录的 FENESTRA/ 目录（包含 STARTUP-Z8.0 及 5 个 .wlm 插件；如需颗粒请自备 ZF_GRAIN.BIN）。",
+            "zh-Hant": "韌體運作依賴記憶卡根目錄的 FENESTRA/ 目錄（包含 STARTUP-Z8.0 與 5 個 .wlm 外掛；如需顆粒請自備 ZF_GRAIN.BIN）。"
+          },
+          "source": {
+            "path": "docs/known-issues.md",
+            "quote": "必须同时部署 FENESTRA/ 全部 7 个文件到存储卡根目录"
+          }
+        },
+        {
+          "level": "note",
+          "title": {
+            "en": "Automatically includes all four relocated NFP v0.5.1 groups",
+            "zh-Hans": "自动包含重定位后的全部四组 NFP v0.5.1 功能",
+            "zh-Hant": "自動包含重定位後的全部四組 NFP v0.5.1 功能"
+          },
+          "detail": {
+            "en": "Selecting this group outputs the complete V71.7-r7 image with Video Recording, Log Colour, Photo Tools and RAW Pre-capture already integrated.",
+            "zh-Hans": "勾选本组即输出完整 V71.7-r7 固件，已整合视频录制、Log 色彩、照片工具与 RAW 预拍摄。",
+            "zh-Hant": "勾選本組即輸出完整 V71.7-r7 韌體，已整合短片錄製、Log 色彩、相片工具與 RAW 預拍攝。"
+          },
+          "source": {
+            "path": "docs/known-issues.md",
+            "quote": "自动包含重定位后的全部四组 NFP v0.5.1 功能"
+          }
+        },
+        {
+          "level": "caution",
+          "title": {
+            "en": "Offline checks pass; physical camera re-test pending",
+            "zh-Hans": "离线仿真与 QEMU 已通过，待真机复测",
+            "zh-Hant": "離線模擬與 QEMU 已通過，待實機複測"
+          },
+          "detail": {
+            "en": "All ARM audits, CEVA-XM6 51/51 simulations and whole-guest QEMU suites pass; final on-camera verification is still pending.",
+            "zh-Hans": "全部 ARM 静态审计、CEVA-XM6 51/51 仿真与全机 QEMU 套件均已通过，仍需真机实拍复测。",
+            "zh-Hant": "全部 ARM 靜態稽核、CEVA-XM6 51/51 模擬與全機 QEMU 套件皆已通過，仍需實機實拍複測。"
+          },
+          "source": {
+            "path": "docs/known-issues.md",
+            "quote": "V71.7-r7 离线仿真与全机 QEMU 均已通过，待真机复测"
+          }
+        }
+      ],
+      "docs": [
+        {
+          "title": {
+            "en": "Live Photo & FilmSim guide",
+            "zh-Hans": "实况照片与胶片模拟指南",
+            "zh-Hant": "實況相片與底片模擬指南"
+          },
+          "path": "docs/live-filmsim.md"
+        },
+        {
+          "title": {
+            "en": "Known issues",
+            "zh-Hans": "已知问题",
+            "zh-Hant": "已知問題"
+          },
+          "path": "docs/known-issues.md"
+        }
+      ],
+      "guide": [
+        {
+          "en": "Build with Live Photo & FilmSim selected; the output folder contains Z_8_NNNN.bin and the FENESTRA/ directory with all 7 files.",
+          "zh-Hans": "勾选“实况照片与胶片模拟”生成输出目录，内含 Z_8_NNNN.bin 与完整的 FENESTRA/ 目录（7 个文件）。",
+          "zh-Hant": "勾選「實況相片與底片模擬」產生輸出目錄，內含 Z_8_NNNN.bin 與完整的 FENESTRA/ 目錄（7 個檔案）。"
+        },
+        {
+          "en": "Copy both Z_8_NNNN.bin and the entire FENESTRA/ folder to the root of your memory card, then update firmware in the Setup menu.",
+          "zh-Hans": "将 Z_8_NNNN.bin 与整个 FENESTRA/ 文件夹复制到存储卡根目录，并在机身“设定菜单 › 固件版本”中完成升级。",
+          "zh-Hant": "將 Z_8_NNNN.bin 與整個 FENESTRA/ 資料夾複製到記憶卡根目錄，並在機身「設定選單 › 韌體版本」中完成更新。"
+        },
+        {
+          "en": "Open the Fenestra menu on camera to enable Live Photo, FilmSim, real-time 3D LUT preview, XM6 Grain/HDF or Portrait toning.",
+          "zh-Hans": "开机后在机身 Fenestra 菜单启用实况照片、胶片模拟、实时 3D LUT 预览、XM6 颗粒／柔焦或人像调色。",
+          "zh-Hant": "開機後在機身 Fenestra 選單啟用實況相片、底片模擬、即時 3D LUT 預覽、XM6 顆粒／柔焦或人像調色。"
+        },
+        {
+          "en": "All four relocated NFP v0.5.1 groups remain active simultaneously and can be configured in their standard Nikon camera menus.",
+          "zh-Hans": "重定位后的全部四组 NFP v0.5.1 功能同时生效，可直接在对应的尼康原厂菜单中进行设置。",
+          "zh-Hant": "重定位後的全部四組 NFP v0.5.1 功能同時生效，可直接在對應的 Nikon 原廠選單中進行設定。"
+        }
+      ]
     }
   ]
 }

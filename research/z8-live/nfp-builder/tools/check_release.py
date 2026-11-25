@@ -15,6 +15,7 @@ SOURCE_FILES=(
     'docs/feature-groups.md',
     'docs/h265.md',
     'docs/known-issues.md',
+    'docs/live-filmsim.md',
     'docs/macos-app.md',
     'docs/log-colour.md',
     'docs/opengate-nraw.md',
@@ -99,6 +100,17 @@ SOURCE_FILES=(
     'z8heif/format/hooks.S',
     'z8heif/patcher.py',
     'z8heif/srgb/hooks.S',
+    'z8livefilmsim/FENESTRA/STARTUP-Z8.0',
+    'z8livefilmsim/FENESTRA/filmsim.wlm',
+    'z8livefilmsim/FENESTRA/livephoto.wlm',
+    'z8livefilmsim/FENESTRA/lut.wlm',
+    'z8livefilmsim/FENESTRA/portrait.wlm',
+    'z8livefilmsim/FENESTRA/slotcard.wlm',
+    'z8livefilmsim/__init__.py',
+    'z8livefilmsim/contract.py',
+    'z8livefilmsim/overlay.json',
+    'z8livefilmsim/overlay.py',
+    'z8livefilmsim/overlay.zlib',
     'z8log/__init__.py',
     'z8log/data.json',
     'z8log/icons/log3g10_fill.png',
@@ -349,7 +361,7 @@ MANIFEST='release-manifest.json'
 LUT_FILES={'RWG_Log3G10_F_v1_65.cube':'luts/RWG_Log3G10_F_v1_65.cube','RWG_Log3G10_F_v1_65.json':'luts/RWG_Log3G10_F_v1_65.json',
            'verification.json':'luts/verification.json','README.md':'luts/README.md','LICENSE':'LICENSE','NOTICE.md':'NOTICE.md'}
 LUT_SUFFIX='-F-LUT'
-TAG=r'v[0-9]+\.[0-9]+\.[0-9]+(?:-(?:rc\.[1-9][0-9]*|r[1-9][0-9]*))?'
+TAG=r'v[0-9]+\.[0-9]+(?:\.[0-9]+)?(?:-(?:rc\.[1-9][0-9]*|r[1-9][0-9]*))?'
 def need(ok,message):
     if not ok:raise ValueError(message)
 def digest(data):return hashlib.sha256(data).hexdigest()

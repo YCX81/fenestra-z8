@@ -7,6 +7,9 @@ STRING_TABLES = 0x40A7C000   # shared language offset tables (E2: moved up from 
 
 
 def verify_contract(old,new,features):
+    if 'live-filmsim' in features:
+        from z8livefilmsim.contract import verify_contract as verify_v71_contract
+        return verify_v71_contract(old, new)
     def need(ok,message):
         if not ok:raise ValueError('Composition contract: '+message)
     base=0x40160000

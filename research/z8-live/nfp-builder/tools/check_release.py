@@ -1,0 +1,413 @@
+#!/usr/bin/env python3
+"""Independently validate a toolkit ZIP or the F LUT ZIP; never imports a firmware builder/compiler."""
+import argparse,hashlib,json,re,zipfile
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+# Reviewed explicit allowlists. Original firmware, media, runtimes and arbitrary files have no entry.
+# SOURCE_FILES ship in the toolkit ZIP: what builds and verifies firmware (runtime, patch source, recipes,
+# tests and checkers) plus the license and text guides.
+SOURCE_FILES=(
+    'CHANGELOG.md',
+    'LICENSE',
+    'NOTICE.md',
+    'README.md',
+    'docs/anamorphic.md',
+    'docs/feature-groups.md',
+    'docs/h265.md',
+    'docs/known-issues.md',
+    'docs/macos-app.md',
+    'docs/log-colour.md',
+    'docs/opengate-nraw.md',
+    'docs/photo-crop.md',
+    'docs/pixelshift.md',
+    'docs/prores.md',
+    'docs/raw-precapture.md',
+    'docs/releases.md',
+    'docs/sdr-heif.md',
+    'docs/stop-file.md',
+    'docs/validation.md',
+    'features.py',
+    'patch.py',
+    'requirements.txt',
+    'resources/combinations.json',
+    'resources/compiled.json',
+    'resources/gui-catalog.json',
+    'resources/input.json',
+    'resources/precapture.json',
+    'resources/profile.json',
+    'tests/test_compiled_paths.py',
+    'tests/validate.py',
+    'tests/validate_combinations.py',
+    'tests/validate_distribution.py',
+    'tests/validate_features.py',
+    'tests/validate_prebuilt_cli.py',
+    'tools/check_release.py',
+    'tools/compile_units.py',
+    'tools/review_recipes.py',
+    'verify.py',
+    'z8anamorphic/__init__.py',
+    'z8anamorphic/patcher.py',
+    'z8anamorphic/src/hooks.S',
+    'z8area/__init__.py',
+    'z8area/thumbnail/hooks.S',
+    'z8area/thumbnail.py',
+    'z8area/quick_picker.py',
+    'z8area/quick/hooks.S',
+    'z8area/grid.py',
+    'z8area/alloc.json',
+    'z8area/blocks.py',
+    'z8area/class_clamps.py',
+    'z8area/design-sizes.json',
+    'z8area/display.py',
+    'z8area/focus_bounds.py',
+    'z8area/focus_grid.py',
+    'z8area/focus_icons.py',
+    'z8area/formula/hooks.S',
+    'z8area/geometry.py',
+    'z8area/icons/0-7100_menu_36x36_2.39x1.png',
+    'z8area/icons/1-7101_menu_36x36_XPan.png',
+    'z8area/icons/2-7102_lv_36x32_2.39x1.png',
+    'z8area/icons/3-7103_lv_36x32_XPan.png',
+    'z8area/icons/4-7104_pb_28x28_2.39x1.png',
+    'z8area/icons/5-7105_pb_28x28_XPan.png',
+    'z8area/icons/icon-43.json',
+    'z8area/icons/new/059f_43.png',
+    'z8area/icons/new/05a0_43.png',
+    'z8area/icons/new/084a_43.png',
+    'z8area/icons/new/0d22_43.png',
+    'z8area/icons/new/13c8_43.png',
+    'z8area/icons/wide.json',
+    'z8area/icons_wide.py',
+    'z8area/layout.py',
+    'z8area/live_view.py',
+    'z8area/menu.py',
+    'z8area/patcher.py',
+    'z8area/playback.py',
+    'z8area/playback_wide.py',
+    'z8area/raw_size.py',
+    'z8area/sizes/hooks.S',
+    'z8area/wide.py',
+    'z8h265/__init__.py',
+    'z8h265/patcher.py',
+    'z8h265/src/hooks.S',
+    'z8h265/tiers.json',
+    'z8heif/__init__.py',
+    'z8heif/icc/hooks.S',
+    'z8heif/drive_policy.py',
+    'z8heif/drive/hooks.S',
+    'z8heif/capture/hooks.S',
+    'z8heif/format/hooks.S',
+    'z8heif/patcher.py',
+    'z8heif/srgb/hooks.S',
+    'z8log/__init__.py',
+    'z8log/data.json',
+    'z8log/icons/log3g10_fill.png',
+    'z8log/icons/log3g10_outline.png',
+    'z8log/icons/slog3_fill.png',
+    'z8log/icons/slog3_outline.png',
+    'z8log/patcher.py',
+    'z8log/src/hooks.S',
+    'z8opengate/__init__.py',
+    'z8opengate/a64x.py',
+    'z8opengate/e1.py',
+    'z8opengate/icons/og32-icons.json',
+    'z8opengate/icons/og32_blank.png',
+    'z8opengate/icons/og32_lv_outline.png',
+    'z8opengate/icons/og32_lv_solid.png',
+    'z8opengate/icons/og32_menu.png',
+    'z8opengate/imenu.py',
+    'z8opengate/linker.py',
+    'z8opengate/fix_sites.py',
+    'z8opengate/fixes/hooks.S',
+    'z8opengate/patcher.py',
+    'z8opengate/quality.py',
+    'z8opengate/sites.py',
+    'z8opengate/src/d10_hooks.S',
+    'z8opengate/src/d5_hooks.S',
+    'z8opengate/src/d6_hooks.S',
+    'z8opengate/src/d7_hooks.S',
+    'z8opengate/src/d8_hooks.S',
+    'z8opengate/src/d9_hooks.S',
+    'z8opengate/src/e1_hooks.S',
+    'z8opengate/src/e2_hooks.S',
+    'z8opengate/src/e3_hooks.S',
+    'z8opengate/src/e4_hooks.S',
+    'z8opengate/src/menu_repair_hooks.S',
+    'z8opengate/src/ui_hooks.S',
+    'z8patch/__init__.py',
+    'z8patch/asm.py',
+    'z8patch/compiled.py',
+    'z8patch/contract.py',
+    'z8patch/image.py',
+    'z8patch/linker.py',
+    'z8patch/photo_shared.py',
+    'z8patch/shared.py',
+    'z8patch/src/shared.S',
+    'z8pixelshift/__init__.py',
+    'z8pixelshift/patcher.py',
+    'z8pixelshift/src/af_unit.c',
+    'z8pixelshift/src/af_window.c',
+    'z8pixelshift/src/af_window.h',
+    'z8pixelshift/src/afrow.c',
+    'z8pixelshift/src/afrow.h',
+    'z8pixelshift/src/afrow_fma_a64.c',
+    'z8pixelshift/src/browser.c',
+    'z8pixelshift/src/browser.h',
+    'z8pixelshift/src/browser_fw.inc',
+    'z8pixelshift/src/crc32_slice8.inc',
+    'z8pixelshift/src/firmware.c',
+    'z8pixelshift/src/group.c',
+    'z8pixelshift/src/group.h',
+    'z8pixelshift/src/io_pipe.c',
+    'z8pixelshift/src/io_pipe.h',
+    'z8pixelshift/src/job.c',
+    'z8pixelshift/src/job.h',
+    'z8pixelshift/src/nef.c',
+    'z8pixelshift/src/nef.h',
+    'z8pixelshift/src/nefx.c',
+    'z8pixelshift/src/nefx.h',
+    'z8pixelshift/src/ps8.c',
+    'z8pixelshift/src/psm.c',
+    'z8pixelshift/src/psm.h',
+    'z8pixelshift/src/thumbnail.c',
+    'z8pixelshift/src/thumbnail.h',
+    'z8pixelshift/src/ui_strings.h',
+    'z8precapture/__init__.py',
+    'z8precapture/menu/sites.py',
+    'z8precapture/menu/hooks.S',
+    'z8precapture/crc32_table.inc',
+    'z8precapture/firmware.c',
+    'z8precapture/linker.py',
+    'z8precapture/patcher.py',
+    'z8prores/__init__.py',
+    'z8prores/help_text.py',
+    'z8prores/a64.py',
+    'z8prores/back_half.py',
+    'z8prores/layout.py',
+    'z8prores/menu.py',
+    'z8prores/package.py',
+    'z8prores/patcher.py',
+    'z8quality/__init__.py',
+    'z8quality/h265-icons.json',
+    'z8quality/icons/fill_0a5b.png',
+    'z8quality/icons/fill_0a5c.png',
+    'z8quality/icons/fill_0a5d.png',
+    'z8quality/icons/fill_0a5e.png',
+    'z8quality/icons/fill_0a5f.png',
+    'z8quality/icons/menu_10f0.png',
+    'z8quality/icons/menu_10f2.png',
+    'z8quality/icons/menu_10f4.png',
+    'z8quality/icons/menu_1285.png',
+    'z8quality/icons/menu_1286.png',
+    'z8quality/icons/menu_1287.png',
+    'z8quality/icons/menu_1288.png',
+    'z8quality/icons/menu_1289.png',
+    'z8quality/icons/outline_0761.png',
+    'z8quality/icons/outline_0765.png',
+    'z8quality/icons/outline_0769.png',
+    'z8quality/icons/outline_0a9d.png',
+    'z8quality/icons/outline_0a9e.png',
+    'z8quality/icons/outline_0a9f.png',
+    'z8quality/icons/outline_0aa0.png',
+    'z8quality/icons/outline_0aa1.png',
+    'z8quality/patcher.py',
+    'z8quality/prores-icons.json',
+    'z8quality/src/hooks.S',
+)
+# Tracked but kept out of the ZIP: repository configuration, figures and screenshots, colour-report data
+# and plotting, the F LUT, earlier validation pages, publisher-only tools and the macOS app source (the app
+# ships as its own disk image). They remain in the repository and GitHub's source archive of the tag.
+REPOSITORY_FILES=(
+    '.gitattributes',
+    '.githooks/pre-commit',
+    '.github/workflows/host-checks.yml',
+    '.gitignore',
+    'docs/data/README.md',
+    'docs/data/adobe-z8-matrix.json',
+    'docs/data/cie-1931.json',
+    'docs/data/log-camera.json',
+    'docs/data/log-colour-measured-20261105.json',
+    'docs/data/log-colour-measured-summary.json',
+    'docs/data/log-colour-samples.json',
+    'docs/data/log-colour-summary.json',
+    'docs/data/log-controls.json',
+    'docs/data/log-response-summary.json',
+    'docs/images/desqueeze-options.png',
+    'docs/images/h265-bitrate.png',
+    'docs/images/image-area-crops.png',
+    'docs/images/log-camera-de-cdf-zh.png',
+    'docs/images/log-camera-de-cdf.png',
+    'docs/images/log-camera-xy-log3g10-zh.png',
+    'docs/images/log-camera-xy-log3g10.png',
+    'docs/images/log-camera-xy-slog3-zh.png',
+    'docs/images/log-camera-xy-slog3.png',
+    'docs/images/log-camera-xy-zh.png',
+    'docs/images/log-camera-xy.png',
+    'docs/images/log-colour-spaces-zh.png',
+    'docs/images/log-colour-spaces.png',
+    'docs/images/log-control-errors-zh.png',
+    'docs/images/log-control-errors.png',
+    'docs/images/log-control-xy-log3g10-zh.png',
+    'docs/images/log-control-xy-log3g10.png',
+    'docs/images/log-control-xy-slog3-zh.png',
+    'docs/images/log-control-xy-slog3.png',
+    'docs/images/log-control-xy-zh.png',
+    'docs/images/log-control-xy.png',
+    'docs/images/log-measured-chromaticity-zh.png',
+    'docs/images/log-measured-chromaticity.png',
+    'docs/images/log-measured-conditions-zh.png',
+    'docs/images/log-measured-conditions.png',
+    'docs/images/log-measured-distribution-zh.png',
+    'docs/images/log-measured-distribution.png',
+    'docs/images/log-rwg-conditions-zh.png',
+    'docs/images/log-rwg-conditions.png',
+    'docs/images/log-rwg-prediction-zh.png',
+    'docs/images/log-rwg-prediction.png',
+    'docs/images/log-settings.png',
+    'docs/images/log-slog3-chromaticity-zh.png',
+    'docs/images/log-slog3-chromaticity.png',
+    'docs/images/log-slog3-errors-zh.png',
+    'docs/images/log-slog3-errors.png',
+    'docs/images/log-slog3-revised-codes-zh.png',
+    'docs/images/log-slog3-revised-codes.png',
+    'docs/images/macos-app-main-en.png',
+    'docs/images/macos-app-main-zh.png',
+    'docs/images/macos-app-result-en.png',
+    'docs/images/macos-app-result-zh.png',
+    'docs/images/macos-app-risk-en.png',
+    'docs/images/macos-app-risk-zh.png',
+    'docs/images/macos-app-settings-en.png',
+    'docs/images/macos-app-settings-zh.png',
+    'docs/images/nraw-quality-tiers.png',
+    'docs/images/opengate-frame-rates.png',
+    'docs/images/photo-menu-values.png',
+    'docs/images/pixelshift-groups.png',
+    'docs/images/prores-quality-options.png',
+    'docs/images/prores-quality-value.png',
+    'docs/images/sdr-heif-format.png',
+    'docs/images/tone-mode-heif.png',
+    'docs/images/video-file-type-nraw32.png',
+    'docs/images/video-menu-values.png',
+    'docs/log-colour-report.en.md',
+    'docs/log-colour-report.md',
+    'docs/validation-summary.json',
+    'docs/validation-v0.2.0.md',
+    'docs/validation-v0.3.1.json',
+    'docs/validation-v0.3.1.md',
+    'docs/validation-v0.4.0.json',
+    'docs/validation-v0.4.0.md',
+    'luts/README.md',
+    'luts/RWG_Log3G10_F_v1_65.cube',
+    'luts/RWG_Log3G10_F_v1_65.json',
+    'luts/verification.json',
+    'macos/Package.swift',
+    'macos/README.md',
+    'macos/Resources/Localizable.xcstrings',
+    'macos/Resources/Python.entitlements',
+    'macos/Resources/Z8PatchBuilder.entitlements',
+    'macos/Resources/en.lproj/InfoPlist.strings',
+    'macos/Resources/zh-Hans.lproj/InfoPlist.strings',
+    'macos/Resources/zh-Hant.lproj/InfoPlist.strings',
+    'macos/Sources/Z8PatchBuilder/About.swift',
+    'macos/Sources/Z8PatchBuilder/App.swift',
+    'macos/Sources/Z8PatchBuilder/Catalog.swift',
+    'macos/Sources/Z8PatchBuilder/GuidePlayer.swift',
+    'macos/Sources/Z8PatchBuilder/GuideScenes.swift',
+    'macos/Sources/Z8PatchBuilder/InspectorView.swift',
+    'macos/Sources/Z8PatchBuilder/Lang.swift',
+    'macos/Sources/Z8PatchBuilder/MainView.swift',
+    'macos/Sources/Z8PatchBuilder/Model.swift',
+    'macos/Sources/Z8PatchBuilder/Runner.swift',
+    'macos/Sources/Z8PatchBuilder/SelfTest.swift',
+    'macos/Sources/Z8PatchBuilder/SettingsView.swift',
+    'macos/Sources/Z8PatchBuilder/Sheets.swift',
+    'macos/Sources/Z8PatchBuilder/Snapshotter.swift',
+    'macos/Sources/Z8PatchBuilder/Toolkit.swift',
+    'macos/Tests/Z8PatchBuilderTests/BuildIntegrationTests.swift',
+    'macos/Tests/Z8PatchBuilderTests/UnitTests.swift',
+    'macos/runtime.json',
+    'macos/scripts/build_app.py',
+    'macos/scripts/make_dmg_background.swift',
+    'macos/scripts/make_icon.swift',
+    'macos/scripts/sync_strings.py',
+    'tests/validate_f_lut.py',
+    'tests/validate_gui_catalog.py',
+    'tools/build_f_lut.py',
+    'tools/build_release.py',
+    'tools/check_repository.py',
+    'tools/plot_colour_report.py',
+    'tools/plot_colour_revision.py',
+    'tools/plot_log_response.py',
+    'tools/replay_log_controls.py',
+)
+CODE_FILES=('resources/precapture.bin', 'resources/pixelshift.bin', 'resources/pixelshift-af.bin', 'resources/opengate.bin', 'resources/anamorphic.bin', 'resources/h265.bin', 'resources/log.bin', 'resources/quality.bin', 'resources/shared.bin', 'resources/heif-format.bin', 'resources/heif-capture.bin', 'resources/heif-srgb.bin', 'resources/area-sizes.bin', 'resources/area-formula.bin',
+            'resources/area-quick.bin', 'resources/area-thumbnail.bin', 'resources/heif-drive.bin',
+            'resources/heif-icc.bin', 'resources/precapture-menu.bin', 'resources/framing-fixes.bin')
+MANIFEST='release-manifest.json'
+# Separate post-production download: the F LUT with its identity, numerical checks, guide and license,
+# flattened into one folder (archive name -> checkout path). It carries no firmware code.
+LUT_FILES={'RWG_Log3G10_F_v1_65.cube':'luts/RWG_Log3G10_F_v1_65.cube','RWG_Log3G10_F_v1_65.json':'luts/RWG_Log3G10_F_v1_65.json',
+           'verification.json':'luts/verification.json','README.md':'luts/README.md','LICENSE':'LICENSE','NOTICE.md':'NOTICE.md'}
+LUT_SUFFIX='-F-LUT'
+TAG=r'v[0-9]+\.[0-9]+\.[0-9]+(?:-(?:rc\.[1-9][0-9]*|r[1-9][0-9]*))?'
+def need(ok,message):
+    if not ok:raise ValueError(message)
+def digest(data):return hashlib.sha256(data).hexdigest()
+
+def check_release(path,expected_commit=None):
+    need(path.stat().st_size<=8*1024*1024,'Toolkit archive exceeds size limit')
+    with zipfile.ZipFile(path) as archive:
+        entries=archive.infolist();names=[e.filename for e in entries]
+        need(names and len(names)==len(set(names)),'Duplicate or missing ZIP members')
+        prefix=names[0].split('/')[0]
+        need(re.fullmatch('NikonFirmwarePatch-'+TAG,prefix),'Unexpected toolkit folder')
+        need(set(names)=={prefix+'/'+n for n in (*SOURCE_FILES,*CODE_FILES,MANIFEST)},'Release member allowlist mismatch')
+        need(sum(e.file_size for e in entries)<=16*1024*1024,'Expanded toolkit exceeds size limit')
+        need(all((e.external_attr>>16)&0o170000==0o100000 for e in entries),'Non-regular ZIP member')
+        files={n:archive.read(prefix+'/'+n) for n in (*SOURCE_FILES,*CODE_FILES)}
+        record=json.loads(archive.read(prefix+'/'+MANIFEST))
+    need(record['schema']==2 and record['tag']==prefix.removeprefix('NikonFirmwarePatch-'),'Release identity mismatch')
+    need(re.fullmatch('[0-9a-f]{40}',record['source_commit']),'Invalid source commit')
+    need(expected_commit is None or record['source_commit']==expected_commit,'Unexpected source commit')
+    need(set(record['files'])==set(files),'Manifest member mismatch')
+    for name,raw in files.items():
+        need(record['files'][name]=={'bytes':len(raw),'sha256':digest(raw)},'Member digest mismatch: '+name)
+    for name in SOURCE_FILES:
+        need(files[name]==(ROOT/name).read_bytes(),'Source differs from this checkout: '+name)
+    units=json.loads((ROOT/'resources/compiled.json').read_text())['units']
+    need(set(CODE_FILES)=={u['resource'] for u in units.values()},'Code allowlist differs')
+    need(record['compiled_units']==units,'Compiler/source provenance mismatch')
+    for name,unit in units.items():
+        raw=files[unit['resource']]
+        need(len(raw)==unit['bytes'] and digest(raw)==unit['sha256'],'Unreviewed machine code: '+name)
+    return dict(status='PASS',tag=record['tag'],source_commit=record['source_commit'],source_files=len(SOURCE_FILES),binary_files=list(CODE_FILES),code_bytes=sum(len(files[n]) for n in CODE_FILES),archive_sha256=digest(path.read_bytes()),firmware_included=False,scope='Archive members, source identity and pinned patch bytes')
+
+def check_lut(path):
+    """The F LUT download: exact members, each byte-equal to this checkout, and the LUT matching its identity."""
+    need(path.stat().st_size<=4*1024*1024,'LUT archive exceeds size limit')
+    with zipfile.ZipFile(path) as archive:
+        entries=archive.infolist();names=[e.filename for e in entries]
+        need(names and len(names)==len(set(names)),'Duplicate or missing ZIP members')
+        prefix=names[0].split('/')[0]
+        need(re.fullmatch('NikonFirmwarePatch-'+TAG+LUT_SUFFIX,prefix),'Unexpected LUT folder')
+        need(set(names)=={prefix+'/'+n for n in LUT_FILES},'LUT member allowlist mismatch')
+        need(sum(e.file_size for e in entries)<=16*1024*1024,'Expanded LUT archive exceeds size limit')
+        need(all((e.external_attr>>16)&0o170000==0o100000 for e in entries),'Non-regular ZIP member')
+        files={n:archive.read(prefix+'/'+n) for n in LUT_FILES}
+    for name,source in LUT_FILES.items():
+        need(files[name]==(ROOT/source).read_bytes(),'LUT member differs from this checkout: '+name)
+    identity=json.loads(files['RWG_Log3G10_F_v1_65.json'])
+    cube=files[identity['file']]
+    need(len(cube)==identity['bytes'] and digest(cube)==identity['sha256'],'LUT differs from its identity record')
+    return dict(status='PASS',tag=prefix.removeprefix('NikonFirmwarePatch-').removesuffix(LUT_SUFFIX),files=len(LUT_FILES),lut=identity['file'],lut_sha256=identity['sha256'],archive_sha256=digest(path.read_bytes()),firmware_included=False,scope='Archive members and LUT identity against this checkout')
+
+def main():
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('archive',type=Path);ap.add_argument('--commit');a=ap.parse_args()
+    if a.archive.name.endswith(LUT_SUFFIX+'.zip'):
+        need(a.commit is None,'The LUT archive has no manifest; check the toolkit with --commit')
+        print(json.dumps(check_lut(a.archive),indent=2))
+    else:
+        print(json.dumps(check_release(a.archive,a.commit),indent=2))
+if __name__=='__main__':
+    try:main()
+    except (ValueError,OSError,KeyError,zipfile.BadZipFile) as e:raise SystemExit('ERROR: '+str(e))

@@ -1,0 +1,176 @@
+{
+ "schema": 3,
+ "release": "v0.5.1",
+ "platform": "macOS arm64",
+ "input_sha256": "d67413c2ede6b9ce8887175f20700bd9fbad2a973a4820968c45503d15d80d96",
+ "cases": [
+  {
+   "features": [
+    "video-recording"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "log-colour"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "video-recording",
+    "log-colour"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "still-photo-tools"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "video-recording",
+    "still-photo-tools"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "log-colour",
+    "still-photo-tools"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "video-recording",
+    "log-colour",
+    "still-photo-tools"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "raw-precapture"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "video-recording",
+    "raw-precapture"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "log-colour",
+    "raw-precapture"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "video-recording",
+    "log-colour",
+    "raw-precapture"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "still-photo-tools",
+    "raw-precapture"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "video-recording",
+    "still-photo-tools",
+    "raw-precapture"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "log-colour",
+    "still-photo-tools",
+    "raw-precapture"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "emulator"
+  },
+  {
+   "features": [
+    "video-recording",
+    "log-colour",
+    "still-photo-tools",
+    "raw-precapture"
+   ],
+   "independent_package_verification": "PASS",
+   "bounded_startup": "PASS",
+   "startup": "camera"
+  }
+ ],
+ "body": {
+  "current_full_selection": [
+   "2.39:1 RAW, RAW+HEIF, RAW+JPEG fine-star and HEIF L/M/S; 65:24 JPEG+NEF and SDR/HLG HEIF L/M/S",
+   "Fn image-area strip from FX and 65:24, i-menu selection and cancel",
+   "C15 FX pre-capture: 5 history and 15 burst frames, HE-star, lossless NEFs before and after",
+   "C30 DX RAW-only pre-capture with HE-star selected directly: 9 history and 30 burst frames, 5408x3608 RAW samples, about 29.9 fps; all 39 decoded",
+   "N-RAW 4.1K 3:2 30p for 3 min 05 s (5,556 frames) and 60p/100p/120p clips: frame counts match timecode, constant frame size, 1080p proxies decode in full with the same rate and count; in-camera playback and warm restart",
+   "Pixel-shift merge in the camera by the release candidate: four-shot NEFX byte-identical to the v0.4.0 merge of the same group; cropped and HE-star groups refused; MENU/OK touch bar",
+   "Checked on the camera: sRGB HIF playback colour after shooting and after restart, File format touch target, desqueeze edges/small viewfinder/subject boxes, ProRes star refresh and ProRes 422 help title, Log after bank switch and power cycle",
+   "C-mode JPEG fallback and HEIF restore",
+   "Adobe RGB JPEG with embedded Nikon ICC used by macOS ImageIO; 40 files from 32 exposures decoded",
+   "06.63.p0 retest after the fixes: 2.39:1 tracking, wide-area, subject and touch AF boxes; single-point AF at the four corners inside the 2.39:1 frame with the FX box size; C15/C30 RAW+JPEG pre-capture with 5 and 9 history frames, HE-star NEF and L fine JPEG, Fn size fixed at L with M/S grey also after power off/on and battery removal; lossless and L/M/S restored in single-frame shooting; C60/C120 JPEG-only bursts with 18 and 36 history frames as in stock"
+  ],
+  "earlier_same_component_tests": [
+   "4.1K 3:2 24/25/30p and 50p, 120/100/60p and 8.3K 3:2 30/25/24p on development builds",
+   "SDR HEIF BT.601 10-bit files in macOS Preview, Windows 11 Photos, iPhone Photos and Xiaomi gallery",
+   "HQ and LT ProRes recordings",
+   "DX and FX lossless selection produced HE-star NEFs; C30 at 29.9 fps",
+   "4- and 16-shot pixel-shift groups at non-default starting numbers merged"
+  ],
+  "v051_fixes": [
+   "All-group build byte-identical to the camera-tested 06.80.g1 (7e4cc7b1...) apart from version and checksums; 04.08.p0 (73a151f7...) differs from it in 15 decoded bytes",
+   "4.1K 3:2 standby live view normal for several minutes at each of the seven frame rates (120/100/60/50/30/25/24p), with AF-area mode and subject-detection changes at 60p and 100p (before: very slow refresh at 120p, pink screen after restart)",
+   "Touch tracking in auto-area AF during 4.1K 3:2 recording at 24p and 120p and a single-point touch at 120p: four clips, 5,973 frames; a 116 s 100p recording with AF-area mode changes and touch AF: 11,625 frames; main and proxy frame counts equal, proxies decoded in full",
+   "Viewfinder playback of a 3:2 clip full width, smooth, no blocks; 16:9 clips play normally on the monitor and in the viewfinder with screen switching; 8K H.265 and 4K ProRes 422 LT clips from the same package decode in full; monitor auto-area AF box as tall as 16:9 and rows on the stock photo grid"
+  ]
+ },
+ "windows_firmware_smoke": "See Host checks workflow_dispatch for this release commit; Python 3.12 and 3.13, digest-verified release archive",
+ "scope": [
+  "Emulator start-up uses synthetic peripherals and the decrypted MAIN; firmware installation is not emulated"
+ ]
+}

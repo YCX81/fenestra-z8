@@ -152,6 +152,7 @@ enum Snapshotter {
             .logColour: [0.9, 3.5, 4.8, 7.0, 9.0, 11.2],
             .stillPhotoTools: [1.0, 3.5, 4.6, 6.8, 8.8, 11.5, 13.0, 15.5, 16.8, 19.0, 21.0, 23.4],
             .rawPrecapture: [1.2, 3.6, 5.5, 7.6, 9.0, 11.5],
+            .liveFilmsim: [1.5, 5.5, 9.5, 13.5],
         ]
         for f in FeatureID.allCases {
             await shot("guide-\(f.rawValue)", width: 1300) { GuideStrip(id: f, times: times[f]!) }

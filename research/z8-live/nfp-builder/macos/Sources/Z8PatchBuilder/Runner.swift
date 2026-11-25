@@ -162,6 +162,12 @@ struct BuildRequest: Sendable {
 
     var fileName: String { "Z_8_" + version.replacingOccurrences(of: ".", with: "") + ".bin" }
     var featureArgs: [String] { features.map(\.rawValue) }
+    var expectsFenestra: Bool { features.contains(.liveFilmsim) }
+    var expectedOutputEntries: Set<String> {
+        var entries: Set<String> = [fileName, "manifest.json", "SHA256SUMS.txt"]
+        if expectsFenestra { entries.insert("FENESTRA") }
+        return entries
+    }
 }
 
 struct BuildOutcome: Sendable {
@@ -254,7 +260,7 @@ struct BuildPipeline {
             events(.started(4))
             log("$ readback " + r.outputFolder.lastPathComponent)
             let names = Set((try? fm.contentsOfDirectory(atPath: r.outputFolder.path)) ?? [])
-            guard names == [r.fileName, "manifest.json", "SHA256SUMS.txt"] else {
+            guard names == r.expectedOutputEntries else {
                 throw fail(4, "Unexpected output files: " + names.sorted().joined(separator: ", "))
             }
             guard let back = sha256File(bin), back.sha256 == sha, back.bytes == r.expected.bytes else {
@@ -267,10 +273,44 @@ struct BuildPipeline {
                 throw fail(4, "manifest.json does not match the written file")
             }
             let sums = (try? String(contentsOf: r.outputFolder.appendingPathComponent("SHA256SUMS.txt"), encoding: .utf8)) ?? ""
-            guard sums == sha + "  " + r.fileName + "\n" else {
-                throw fail(4, "SHA256SUMS.txt does not match the written file")
+            if r.expectsFenestra {
+                let lines = sums.split(separator: "\n", omittingEmptySubsequences: true).map(String.init)
+                guard lines.first == sha + "  " + r.fileName else {
+                    throw fail(4, "SHA256SUMS.txt does not match the written file")
+                }
+                var listedFenestra: Set<String> = []
+                for line in lines.dropFirst() {
+                    let parts = line.components(separatedBy: "  ")
+                    guard parts.count == 2 else {
+                        throw fail(4, "SHA256SUMS.txt has a malformed companion entry")
+                    }
+                    let expectedHash = parts[0]
+                    let relPath = parts[1]
+                    guard relPath.hasPrefix("FENESTRA/") else {
+                        throw fail(4, "SHA256SUMS.txt lists unexpected path: " + relPath)
+                    }
+                    let subName = String(relPath.dropFirst("FENESTRA/".count))
+                    guard !subName.isEmpty, !subName.contains("/"), !listedFenestra.contains(subName) else {
+                        throw fail(4, "SHA256SUMS.txt lists invalid or duplicate FENESTRA entry: " + relPath)
+                    }
+                    let fileURL = r.outputFolder.appendingPathComponent(relPath)
+                    guard let fileDigest = sha256File(fileURL), fileDigest.sha256 == expectedHash else {
+                        throw fail(4, "FENESTRA companion file failed SHA-256 read-back: " + relPath)
+                    }
+                    listedFenestra.insert(subName)
+                }
+                let fenestraDir = r.outputFolder.appendingPathComponent("FENESTRA", isDirectory: true)
+                let actualFenestra = Set((try? fm.contentsOfDirectory(atPath: fenestraDir.path)) ?? [])
+                guard !actualFenestra.isEmpty, actualFenestra == listedFenestra else {
+                    throw fail(4, "FENESTRA/ contents do not match SHA256SUMS.txt")
+                }
+                log("  sha256 \(sha) == manifest.json == SHA256SUMS.txt (+\(actualFenestra.count) FENESTRA files)")
+            } else {
+                guard sums == sha + "  " + r.fileName + "\n" else {
+                    throw fail(4, "SHA256SUMS.txt does not match the written file")
+                }
+                log("  sha256 \(sha) == manifest.json == SHA256SUMS.txt")
             }
-            log("  sha256 \(sha) == manifest.json == SHA256SUMS.txt")
             events(.finished(4))
             return BuildOutcome(folder: r.outputFolder, fileName: r.fileName, bytes: back.bytes, sha256: sha,
                                 identity: identity, features: r.features)
@@ -289,7 +329,7 @@ struct BuildPipeline {
         let fm = FileManager.default
         guard fm.fileExists(atPath: r.outputFolder.path) else { return nil }
         let names = Set((try? fm.contentsOfDirectory(atPath: r.outputFolder.path)) ?? [])
-        guard names.isSubset(of: [r.fileName, "manifest.json", "SHA256SUMS.txt"]),
+        guard names.isSubset(of: r.expectedOutputEntries),
               (try? fm.removeItem(at: r.outputFolder)) != nil else {
             return "kept:" + r.outputFolder.path
         }

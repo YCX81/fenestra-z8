@@ -10,6 +10,7 @@ enum FeatureID: String, CaseIterable, Identifiable, Codable {
     case logColour = "log-colour"
     case stillPhotoTools = "still-photo-tools"
     case rawPrecapture = "raw-precapture"
+    case liveFilmsim = "live-filmsim"
 
     var id: String { rawValue }
 
@@ -20,6 +21,7 @@ enum FeatureID: String, CaseIterable, Identifiable, Codable {
         case .logColour: return "log"
         case .stillPhotoTools: return "photo"
         case .rawPrecapture: return "precapture"
+        case .liveFilmsim: return "filmsim"
         }
     }
 
@@ -29,6 +31,7 @@ enum FeatureID: String, CaseIterable, Identifiable, Codable {
         case .logColour: return "camera.filters"
         case .stillPhotoTools: return "photo.stack"
         case .rawPrecapture: return "clock.arrow.circlepath"
+        case .liveFilmsim: return "sparkles.rectangle.stack"
         }
     }
 
@@ -38,6 +41,7 @@ enum FeatureID: String, CaseIterable, Identifiable, Codable {
         case .logColour: return .orange
         case .stillPhotoTools: return .teal
         case .rawPrecapture: return .purple
+        case .liveFilmsim: return .pink
         }
     }
 }

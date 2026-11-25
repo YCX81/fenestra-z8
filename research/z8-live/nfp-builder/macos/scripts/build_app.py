@@ -189,7 +189,9 @@ def make_icon(resources, scratch):
 
 
 def info_plist(tag, commit, build_number):
-    numeric = re.match(r'v(\d+\.\d+\.\d+)', tag).group(1)
+    numeric = re.match(r'v(\d+\.\d+(?:\.\d+)?)', tag).group(1)
+    if numeric.count('.') == 1:
+        numeric += '.0'
     return {
         'CFBundleDevelopmentRegion': 'en',
         'CFBundleDisplayName': APP_NAME,

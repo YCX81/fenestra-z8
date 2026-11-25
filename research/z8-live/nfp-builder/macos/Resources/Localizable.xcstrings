@@ -121,18 +121,24 @@
         }
       }
     },
-    "%lld of 4 selected" : {
+    "%lld of %lld selected" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld of %2$lld selected"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "已选 %lld／4 组"
+            "value" : "已选 %1$lld／%2$lld 组"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "已選 %lld／4 組"
+            "value" : "已選 %1$lld／%2$lld 組"
           }
         }
       }

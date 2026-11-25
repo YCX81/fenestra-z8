@@ -53,6 +53,10 @@ final class BuildIntegrationTests: XCTestCase {
     /// caller can report them in selection order; a failed build throws.
     func checkSelection(_ env: Env, _ dir: URL, mask: Int) async throws -> (row: String, problems: [String]) {
         let features = FeatureID.allCases.enumerated().filter { mask & (1 << $0.offset) != 0 }.map(\.element)
+        return try await checkFeatures(env, dir, features: features)
+    }
+
+    func checkFeatures(_ env: Env, _ dir: URL, features: [FeatureID]) async throws -> (row: String, problems: [String]) {
         let label = features.map(\.short).joined(separator: "+")
         let appFolder = dir.appendingPathComponent("app-" + label)
         let outcome = try await BuildPipeline(runner: ToolRunner(layout: env.layout)).run(request(env, features, folder: appFolder)) { _ in }
@@ -67,6 +71,22 @@ final class BuildIntegrationTests: XCTestCase {
             let b = try Data(contentsOf: cliFolder.appendingPathComponent(name))
             if sha256Hex(a) != sha256Hex(b) { problems.append("\(label) \(name)") }
         }
+        if features.contains(.liveFilmsim) {
+            let fm = FileManager.default
+            let appFen = appFolder.appendingPathComponent("FENESTRA", isDirectory: true)
+            let cliFen = cliFolder.appendingPathComponent("FENESTRA", isDirectory: true)
+            let appNames = Set((try? fm.contentsOfDirectory(atPath: appFen.path)) ?? [])
+            let cliNames = Set((try? fm.contentsOfDirectory(atPath: cliFen.path)) ?? [])
+            if appNames.isEmpty || appNames != cliNames {
+                problems.append("\(label) FENESTRA/ entries differ")
+            } else {
+                for name in appNames.sorted() {
+                    let a = try Data(contentsOf: appFen.appendingPathComponent(name))
+                    let b = try Data(contentsOf: cliFen.appendingPathComponent(name))
+                    if sha256Hex(a) != sha256Hex(b) { problems.append("\(label) FENESTRA/\(name)") }
+                }
+            }
+        }
         // manifest.json differs only in source_hashes, which lists the files present beside patch.py:
         // the app bundles the runtime subset, the ZIP has everything. Shared entries must agree.
         guard var am = try JSONSerialization.jsonObject(with: Data(contentsOf: appFolder.appendingPathComponent("manifest.json"))) as? [String: Any],
@@ -78,6 +98,13 @@ final class BuildIntegrationTests: XCTestCase {
         if !ah.allSatisfy({ ch[$0.key] == $0.value }) { problems.append("\(label) source_hashes") }
         if NSDictionary(dictionary: am) != NSDictionary(dictionary: cm) { problems.append("\(label) manifest.json") }
         return (row, problems)
+    }
+
+    func testLiveFilmsimMatchesCommandLine() async throws {
+        let env = try env()
+        let dir = try scratch("live-filmsim")
+        let (_, problems) = try await checkFeatures(env, dir, features: [.liveFilmsim])
+        for problem in problems { XCTFail(problem) }
     }
 
     func testAllFifteenSelectionsMatchCommandLine() async throws {

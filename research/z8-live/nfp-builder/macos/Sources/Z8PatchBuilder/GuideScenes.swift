@@ -51,6 +51,7 @@ struct FeatureGuide {
         .logColour: (12, [(0, 4), (4, 8), (8, 12)]),
         .stillPhotoTools: (24, [(0, 4), (4, 8), (8, 12), (12, 16), (16, 20), (20, 24)]),
         .rawPrecapture: (12, [(0, 4), (4, 8), (8, 12)]),
+        .liveFilmsim: (16, [(0, 4), (4, 8), (8, 12), (12, 16)]),
     ]
 
     static func of(_ id: FeatureID) -> FeatureGuide {
@@ -407,6 +408,15 @@ enum CamStr {
     static let psNew = CamText("new", "未合成", "未合成")
     static let psMerged = CamText("merged", "已合成", "已合成")
     static let psShots = CamText(" shots ", "张", "張")
+    // Live Photo + FilmSim + LUT + Fenestra strings.
+    static let livePhoto = CamText("Live Photo 30p", "实况照片 30p", "實況相片 30p")
+    static let filmSimLut = CamText("FilmSim & LUT", "胶片模拟与 LUT", "底片模擬與 LUT")
+    static let hdfGrain = CamText("XM6 HDF & ZF Grain", "XM6 柔光与 ZF 颗粒", "XM6 柔光與 ZF 顆粒")
+    static let portraitPB = CamText("PortraitPB", "人像回放增强", "人像重播增強")
+    static let slotCard = CamText("Dual-Card SlotCard", "双卡槽位切换", "雙卡槽位切換")
+    static let zhUI = CamText("Chinese UI", "中文界面", "中文介面")
+    static let allInOne = CamText("All-in-One · NFP v0.5.1", "全功能整合 · NFP v0.5.1", "全功能整合 · NFP v0.5.1")
+    static let fenestraReady = CamText("FENESTRA/ Ready", "FENESTRA/ 就绪", "FENESTRA/ 就緒")
 }
 
 /// Frame size labels: English "×" with three spaces before a two-digit rate, Chinese "x" with two.
@@ -485,6 +495,7 @@ struct GuideScene: View {
         case .logColour: log
         case .stillPhotoTools: photo
         case .rawPrecapture: precapture
+        case .liveFilmsim: liveFilmsim
         }
     }
 
@@ -823,5 +834,95 @@ struct GuideScene: View {
             .padding(.bottom, 26)
         }
         .frame(width: Cam.w, height: Cam.h)
+    }
+
+    // Live Photo + FilmSim + LUT Preview + XM6 HDF + ZF Grain + PortraitPB + Chinese UI + Dual-Card
+    // SlotCard + C64 + Fenestra (including relocated NFP v0.5.1).
+    @ViewBuilder private var liveFilmsim: some View {
+        if t < 4 {
+            CamMenu(title: CamStr.photoMenu(lang), centeredTitle: true,
+                    rows: [
+                        CamRow(text: CamStr.filmSimLut(lang), value: "LUT ON"),
+                        CamRow(text: CamStr.hdfGrain(lang), value: "HDF / ZF"),
+                        CamRow(text: CamStr.livePhoto(lang), value: "30p"),
+                        CamRow(text: CamStr.slotCard(lang), value: "CFe / SD"),
+                    ],
+                    cursor: stepped(t, [(0, 0), (1.1, 1), (2.2, 2), (3.1, 3)], glide: 0.35),
+                    press: max(flash(t, 0.8), flash(t, 2.8)),
+                    rail: 0, back: false)
+        } else if t < 8 {
+            let lut = prog(t, 4.7, 5.8)
+            ZStack(alignment: .topLeading) {
+                Landscape(trueAspect: 1.5, flat: 1 - lut)
+                VStack {
+                    HStack(spacing: 6) {
+                        Chip(text: "LIVE 30p", accent: true)
+                        Chip(text: "LUT", accent: lut > 0.5)
+                        Chip(text: "HDF", on: t >= 5.5)
+                        Chip(text: "GRAIN", on: t >= 6.2)
+                        Spacer()
+                    }
+                    Spacer()
+                    HStack {
+                        Text(CamStr.filmSimLut(lang))
+                            .font(Cam.font(18, .semibold))
+                            .foregroundStyle(Cam.yellow)
+                            .padding(.horizontal, 8).padding(.vertical, 3)
+                            .background(RoundedRectangle(cornerRadius: 4).fill(Color.black.opacity(0.65)))
+                        Spacer()
+                        Chip(text: "C64", on: t >= 6.8)
+                    }
+                }
+                .padding(10)
+            }
+            .frame(width: Cam.w, height: Cam.h)
+        } else if t < 12 {
+            let swap = prog(t, 9.6, 10.2)
+            ZStack(alignment: .topLeading) {
+                Landscape(trueAspect: 1.5)
+                VStack {
+                    HStack(spacing: 6) {
+                        Image(systemName: "play.fill").font(.system(size: 14)).foregroundStyle(Cam.text)
+                        Text(verbatim: swap < 0.5 ? "DSC_0001.JPG" : "DSC_0002.JPG")
+                            .font(.system(size: 14, design: .monospaced)).foregroundStyle(Cam.text)
+                        Spacer()
+                        Chip(text: CamStr.portraitPB(lang), accent: true)
+                        Chip(text: swap < 0.5 ? "CFe" : "SD", accent: swap > 0.5)
+                    }
+                    Spacer()
+                    HStack(spacing: 6) {
+                        Chip(text: CamStr.zhUI(lang))
+                        Chip(text: CamStr.slotCard(lang))
+                        Spacer()
+                    }
+                }
+                .padding(10)
+            }
+            .frame(width: Cam.w, height: Cam.h)
+        } else {
+            let appear = prog(t, 12.2, 13.0)
+            let badges = ["Live Photo", "FilmSim", "LUT", "HDF", "ZF Grain", "PortraitPB", "SlotCard", "C64"]
+            ZStack {
+                Color.black
+                VStack(spacing: 14) {
+                    Text(CamStr.allInOne(lang))
+                        .font(Cam.font(24, .bold))
+                        .foregroundStyle(Cam.text)
+                    Chip(text: CamStr.fenestraReady(lang), accent: true)
+                    HStack(spacing: 6) {
+                        ForEach(Array(badges.prefix(4).enumerated()), id: \.offset) { _, b in
+                            Chip(text: b)
+                        }
+                    }
+                    HStack(spacing: 6) {
+                        ForEach(Array(badges.suffix(4).enumerated()), id: \.offset) { _, b in
+                            Chip(text: b)
+                        }
+                    }
+                }
+                .opacity(appear)
+            }
+            .frame(width: Cam.w, height: Cam.h)
+        }
     }
 }

@@ -523,7 +523,7 @@ struct CombinationFooter: View {
                 Text(lang.t("No feature group selected")).foregroundStyle(.secondary)
             } else {
                 Image(systemName: "checkmark.seal.fill").foregroundStyle(.green)
-                Text(lang.t("\(model.selected.count) of 4 selected"))
+                Text(lang.t("\(model.selected.count) of \(FeatureID.allCases.count) selected"))
                     .foregroundStyle(.secondary)
             }
             Spacer(minLength: 0)
@@ -616,6 +616,9 @@ struct ExportSection: View {
                                 FileChip(name: model.outputFileName, symbol: "memorychip")
                                 FileChip(name: "manifest.json", symbol: "doc.text")
                                 FileChip(name: "SHA256SUMS.txt", symbol: "number")
+                                if model.selected.contains(.liveFilmsim) {
+                                    FileChip(name: "FENESTRA/", symbol: "folder")
+                                }
                             }
                         }
                     }

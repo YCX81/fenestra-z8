@@ -42,6 +42,8 @@ final class UnitTests: XCTestCase {
         XCTAssertTrue(Toolkit.isRuntimeMember("patch.py"))
         XCTAssertTrue(Toolkit.isRuntimeMember("resources/gui-catalog.json"))
         XCTAssertTrue(Toolkit.isRuntimeMember("z8pixelshift/src/nefx.c"))
+        XCTAssertTrue(Toolkit.isRuntimeMember("z8livefilmsim/FENESTRA/STARTUP-Z8.0"))
+        XCTAssertTrue(Toolkit.isRuntimeMember("z8livefilmsim/overlay.zlib"))
         XCTAssertFalse(Toolkit.isRuntimeMember("docs/known-issues.md"))
         XCTAssertFalse(Toolkit.isRuntimeMember("luts/RWG_Log3G10_F_v1_65.cube"))
         XCTAssertFalse(Toolkit.isRuntimeMember("macos/Package.swift"))

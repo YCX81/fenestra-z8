@@ -1,0 +1,580 @@
+{
+  "name": "v71r4_nfp_v050_final",
+  "passed": true,
+  "checks_passed": 12,
+  "checks_total": 12,
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "build_id": "0xd590d8cd",
+  "lang": 8,
+  "z8_unknown_count": 0,
+  "z9_unknown_count": 0,
+  "panic_count": 0,
+  "checks": {
+    "dram_all_relocated_nfp_caves_and_v71_banks_ok": true,
+    "q3_stash_0xa0ff52000_and_cjk_ext_1_tail_zero_overwrite": true,
+    "lang_zhcn_8_set": true,
+    "choose_image_area_0x2a_7rows_and_select_239_6524": true,
+    "tone_mode_0x2b_to_sdr_heif_0xab_and_setting_eq_1": true,
+    "video_menu_45rows_and_filetype_0x10a_11rows_incl_nraw32_0x35ca": true,
+    "nfp_v051_framing_fixes_and_41k_32_standby_no_freeze": true,
+    "menu_text_3154_3179_no_bleedthrough_video_h265_vs_setup_fenestra": true,
+    "imenu_0x5d8_coexists_wide_crop_heif_c64_portrait": true,
+    "filmsim_clean_boot_default_sharp_in_bus": true,
+    "phase_done_zero_errors": true,
+    "zero_z8_z9_unknown_and_zero_panic": true
+  },
+  "dram_checks": {
+    "cjk_ext_1": {
+      "va": "0x408c6000",
+      "bytes": 569095,
+      "ok": true,
+      "sha256": "efca043d12ef6055a2d38308d71fa1d682b61efa1d7351d456bef89dfb9da36a"
+    },
+    "cjk_ext_1_tail": {
+      "va": "0x40950000",
+      "bytes": 3847,
+      "ok": true,
+      "sha256": "e36fca0b3b65904e1162cac67de9883ff1f44183a41c1bbdf029f777ec3feead"
+    },
+    "nfp_framing_v051": {
+      "va": "0x40968000",
+      "bytes": 2096,
+      "ok": true,
+      "sha256": "4f7ad4576b5eaa6eb74c60943fabd218cb7cbe32db64f349e6a63ccc0381bbd2"
+    },
+    "filmsim": {
+      "va": "0x409b0000",
+      "bytes": 153456,
+      "ok": true,
+      "sha256": "9655e8eab3e44218bec82a4c987f0fbb958097343f7d704c1ecf65bfb2884a55"
+    },
+    "nfp_strings_tbls": {
+      "va": "0x40a7c000",
+      "bytes": 468144,
+      "ok": true,
+      "sha256": "fdd5e0f40f83d8209bad27e26bf9a33f7292a3d0d303a458935ac3d165b9c806"
+    },
+    "nfp_area_part2": {
+      "va": "0x40af0000",
+      "bytes": 28672,
+      "ok": true,
+      "sha256": "d8623a51d383bc131ac9d50ac3b1a5f814baec2bc085cb3af84dd74f6a706e1a"
+    },
+    "nfp_sdr_heif": {
+      "va": "0x40af8000",
+      "bytes": 8192,
+      "ok": true,
+      "sha256": "01e141c4d699481b98cbb6a308aeaf1b219b6dbc4f0f56ffb5ec402182f63ced"
+    },
+    "nfp_area_part1": {
+      "va": "0x40b12000",
+      "bytes": 36864,
+      "ok": true,
+      "sha256": "8cef33a29e0f3a08601b76571435758efdcd8a7e34a80ac6024263ade3e5a92e"
+    },
+    "c64_bank": {
+      "va": "0x40b50000",
+      "bytes": 237568,
+      "ok": true,
+      "sha256": "f1d147549bb2c2d2d36fa6e8bfaab0a5063597720222c93310d9aac44f89d975"
+    },
+    "cjk_ext_2": {
+      "va": "0x40b8a000",
+      "bytes": 483182,
+      "ok": true,
+      "sha256": "d3f624c68612ef1a8d2f20a20ec214ca0f1a511014fca73792461e6c9d7aa77a"
+    },
+    "font_zh_overlay": {
+      "va": "0x401fef00",
+      "bytes": 4210,
+      "ok": true,
+      "sha256": "5365d8e404cc9ea8ffe7d2d763b5070cf163a1137c946a826df71010dd6b26ad"
+    },
+    "portrait_pb_cave": {
+      "va": "0x401fcd00",
+      "bytes": 396,
+      "ok": true,
+      "sha256": "9d43ab1d4db0e7e2551a51ea02a8c6b450bf65fa9f85ccecfc40dcea40af543c"
+    },
+    "cardslot_v71r4": {
+      "va": "0x401fe300",
+      "bytes": 3000,
+      "ok": true,
+      "sha256": "71051800a48f031f4e8f3cfa3b83b8534d7de216e5a4b9ea0c199a92ab059a3e"
+    },
+    "meta": {
+      "build_id": "0xd590d8cd",
+      "q3_stash_literal": "0xa0ff52000",
+      "q3_stash_ram": 0,
+      "menu_ctx_0x401fcf44": "0x7101151f",
+      "hook_0x4032e130": "0x17fb4401",
+      "v051_geom1_0x41055ac0": "0x97e44950",
+      "v051_geom2_0x410567dc": "0x97e44609",
+      "v051_fwd_0x41055b38": "0x17e44984",
+      "v051_inv_0x4105693c": "0x17e44625",
+      "v051_anam_0x409704b0": "0x17ffe054",
+      "pool6_0x40cf4620": "0x5284000d",
+      "pool6_0x40cf4630": "0x72a0038d",
+      "portrait_gate": 1,
+      "c64_slots_limit": 64,
+      "slotcard_state": 4,
+      "filmsim_bus_cfg": {},
+      "native_string_count": 3250,
+      "native_string_raw_count": 65535,
+      "native_zhcn_tbl_va": "0x40a95660",
+      "native_zhcn_samples": {
+        "3153": "\u53d8\u5f62\u955c\u5934\u8fd8\u539f\u663e\u793a",
+        "3154": "1.25x",
+        "3155": "1.30x",
+        "3156": "1.33x",
+        "3157": "1.50x",
+        "3158": "1.60x",
+        "3159": "1.80x",
+        "3160": "2.00x",
+        "3161": "\u89c6\u9891\u54c1\u8d28(H.265)",
+        "3162": "100%",
+        "3163": "60%",
+        "3164": "45%",
+        "3165": "30%",
+        "3166": "20%",
+        "3167": "100%  367 Mbps",
+        "3168": "60%  220 Mbps",
+        "3169": "45%  165 Mbps",
+        "3170": "30%  110 Mbps",
+        "3171": "20%  73 Mbps",
+        "3172": "100%  300 Mbps",
+        "3173": "60%  180 Mbps",
+        "3174": "45%  135 Mbps",
+        "3175": "30%  90 Mbps",
+        "3176": "20%  60 Mbps",
+        "3177": "100%  150 Mbps",
+        "3178": "60%  90 Mbps",
+        "3179": "45%  68 Mbps",
+        "3225": "[FX] 4128x2752; 120p",
+        "3232": "N-RAW 12\u4f4d 3:2(NEV)",
+        "3234": "JPEG",
+        "3235": "HEIF",
+        "3236": "SDR\u6587\u4ef6\u683c\u5f0f",
+        "3238": "4:3  (32x24)",
+        "3239": "2.39:1 (36x15)",
+        "3240": "65:24 (36x13)"
+      },
+      "filmsim_direct_el1_ipc": true
+    }
+  },
+  "results": {
+    "photo_menu": {
+      "page_id": "0x19",
+      "count": 48
+    },
+    "photo_areas_menu": {
+      "page_id": "0x2a",
+      "count": 7,
+      "rows": [
+        [
+          0,
+          1331,
+          "0x2beb"
+        ],
+        [
+          1,
+          780,
+          "0x29b8"
+        ],
+        [
+          2,
+          3238,
+          "0x2be9"
+        ],
+        [
+          3,
+          1332,
+          "0x2bea"
+        ],
+        [
+          4,
+          1410,
+          "0x2c5f"
+        ],
+        [
+          5,
+          3239,
+          "0x2c35"
+        ],
+        [
+          6,
+          3240,
+          "0x2c37"
+        ]
+      ]
+    },
+    "selected_239_area_setting": 3,
+    "selected_6524_area_setting": 6,
+    "tone_mode_menu": {
+      "page_id": "0x2b",
+      "count": 2,
+      "rows": [
+        [
+          0,
+          1801,
+          "0x2d7a"
+        ],
+        [
+          1,
+          1803,
+          "0x2d7b"
+        ]
+      ]
+    },
+    "sdr_heif_subpage": {
+      "page_id": "0xab",
+      "count": 2,
+      "rows": [
+        [
+          0,
+          3234,
+          "0x2dde"
+        ],
+        [
+          1,
+          3235,
+          "0x2de1"
+        ]
+      ]
+    },
+    "selected_sdr_heif_setting": 1,
+    "video_menu": {
+      "page_id": "0xfe",
+      "count": 45,
+      "idx_h265_label_3161": 10,
+      "idx_anamorphic_label_3153": 13
+    },
+    "video_filetype_menu": {
+      "page_id": "0x10a",
+      "count": 11,
+      "rows": [
+        [
+          0,
+          2030,
+          "0x30e5"
+        ],
+        [
+          1,
+          3232,
+          "0x35ca"
+        ],
+        [
+          2,
+          2031,
+          "0x30e6"
+        ],
+        [
+          3,
+          3152,
+          "0x3058"
+        ],
+        [
+          4,
+          3152,
+          "0x311c"
+        ],
+        [
+          5,
+          1957,
+          "0x3059"
+        ],
+        [
+          6,
+          1957,
+          "0x311d"
+        ],
+        [
+          7,
+          1789,
+          "0x305a"
+        ],
+        [
+          8,
+          1789,
+          "0x311e"
+        ],
+        [
+          9,
+          1790,
+          "0x305b"
+        ],
+        [
+          10,
+          1790,
+          "0x311f"
+        ]
+      ]
+    },
+    "nraw32_selected": true,
+    "video_h265_submenu": {
+      "page_id": "0x17d",
+      "count": 5,
+      "rows": [
+        [
+          0,
+          3162,
+          "0x35b5"
+        ],
+        [
+          1,
+          3163,
+          "0x35b6"
+        ],
+        [
+          2,
+          3164,
+          "0x35b7"
+        ],
+        [
+          3,
+          3165,
+          "0x35b8"
+        ],
+        [
+          4,
+          3166,
+          "0x35b9"
+        ]
+      ]
+    },
+    "setup_menu": {
+      "page_id": "0x297",
+      "count": 46,
+      "has_3154_fenestra": true,
+      "has_3155_plugin_mgr": true
+    },
+    "fenestra_settings_menu": {
+      "page_id": "0x7000",
+      "count": 9,
+      "has_3165_modules": true,
+      "labels": [
+        3156,
+        3157,
+        3165,
+        3166,
+        3167,
+        3174,
+        3177,
+        3160,
+        3158
+      ]
+    },
+    "imenu_coexist": {
+      "page_id": 1496,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "c64_slots_limit": 64,
+      "slotcard_state": 4,
+      "portrait_gate": 1,
+      "cjk_ext_1_tail_intact": true,
+      "relocated_nfp_caves_intact_at_end": true
+    },
+    "video_nraw41k_32_standby": {
+      "photo_movie": 1,
+      "standby_page_id": 1495,
+      "entered_standby_ok": true,
+      "menu_responsive_after_standby": true,
+      "menu_page_id": "0x5d8",
+      "photo_movie_at_menu": 1
+    }
+  },
+  "shots": [
+    {
+      "tag": "00_photo_menu_zhcn",
+      "png": "00_photo_menu_zhcn.png",
+      "page_id": "0x19",
+      "selected": 0,
+      "count": 48,
+      "area_setting": 0,
+      "heif_setting": 0,
+      "lang": 8
+    },
+    {
+      "tag": "01_choose_image_area_7rows_zhcn",
+      "png": "01_choose_image_area_7rows_zhcn.png",
+      "page_id": "0x2a",
+      "selected": 0,
+      "count": 7,
+      "area_setting": 0,
+      "heif_setting": 0,
+      "lang": 8
+    },
+    {
+      "tag": "02_choose_image_area_239_selected_zhcn",
+      "png": "02_choose_image_area_239_selected_zhcn.png",
+      "page_id": "0x2a",
+      "selected": 5,
+      "count": 7,
+      "area_setting": 0,
+      "heif_setting": 0,
+      "lang": 8
+    },
+    {
+      "tag": "03_choose_image_area_6524_selected_zhcn",
+      "png": "03_choose_image_area_6524_selected_zhcn.png",
+      "page_id": "0x2a",
+      "selected": 6,
+      "count": 7,
+      "area_setting": 3,
+      "heif_setting": 0,
+      "lang": 8
+    },
+    {
+      "tag": "04_tone_mode_sdr_arrow_zhcn",
+      "png": "04_tone_mode_sdr_arrow_zhcn.png",
+      "page_id": "0x2b",
+      "selected": 0,
+      "count": 2,
+      "area_setting": 6,
+      "heif_setting": 0,
+      "lang": 8
+    },
+    {
+      "tag": "05_sdr_heif_subpage_zhcn",
+      "png": "05_sdr_heif_subpage_zhcn.png",
+      "page_id": "0xab",
+      "selected": 0,
+      "count": 2,
+      "area_setting": 6,
+      "heif_setting": 0,
+      "lang": 8
+    },
+    {
+      "tag": "06_after_heif_zhcn",
+      "png": "06_after_heif_zhcn.png",
+      "page_id": "0x19",
+      "selected": 8,
+      "count": 48,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    },
+    {
+      "tag": "07_video_menu_45rows_zhcn",
+      "png": "07_video_menu_45rows_zhcn.png",
+      "page_id": "0xfe",
+      "selected": 0,
+      "count": 45,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    },
+    {
+      "tag": "08_video_filetype_11rows_zhcn",
+      "png": "08_video_filetype_11rows_zhcn.png",
+      "page_id": "0x10a",
+      "selected": 7,
+      "count": 11,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    },
+    {
+      "tag": "08_nraw32_row_selected_zhcn",
+      "png": "08_nraw32_row_selected_zhcn.png",
+      "page_id": "0x10a",
+      "selected": 1,
+      "count": 11,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    },
+    {
+      "tag": "08_nraw32_row_selected_zhcn",
+      "png": "08_nraw32_row_selected_zhcn.png",
+      "page_id": "0x10a",
+      "selected": 1,
+      "count": 11,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    },
+    {
+      "tag": "08a_video_menu_row_3161_zhcn",
+      "png": "08a_video_menu_row_3161_zhcn.png",
+      "page_id": "0xfe",
+      "selected": 10,
+      "count": 45,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    },
+    {
+      "tag": "08b_video_h265_3161_3179_zhcn",
+      "png": "08b_video_h265_3161_3179_zhcn.png",
+      "page_id": "0x17d",
+      "selected": 0,
+      "count": 5,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    },
+    {
+      "tag": "09_setup_menu_zhcn",
+      "png": "09_setup_menu_zhcn.png",
+      "page_id": "0x297",
+      "selected": 0,
+      "count": 46,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    },
+    {
+      "tag": "09b_fenestra_settings_3154_3179_zhcn",
+      "png": "09b_fenestra_settings_3154_3179_zhcn.png",
+      "page_id": "0x7000",
+      "selected": 0,
+      "count": 9,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    },
+    {
+      "tag": "10_live_view_after_nfp050_zhcn",
+      "png": "10_live_view_after_nfp050_zhcn.png",
+      "page_id": "0x5d7",
+      "selected": 0,
+      "count": 1,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    },
+    {
+      "tag": "11_imenu_coexist_zhcn",
+      "png": "11_imenu_coexist_zhcn.png",
+      "page_id": "0x5d8",
+      "selected": 0,
+      "count": 12,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    },
+    {
+      "tag": "12_video_nraw41k_32_standby_zhcn",
+      "png": "12_video_nraw41k_32_standby_zhcn.png",
+      "page_id": "0x5d7",
+      "selected": 0,
+      "count": 1,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    },
+    {
+      "tag": "13_video_nraw41k_32_imenu_responsive_zhcn",
+      "png": "13_video_nraw41k_32_imenu_responsive_zhcn.png",
+      "page_id": "0x5d8",
+      "selected": 0,
+      "count": 12,
+      "area_setting": 6,
+      "heif_setting": 1,
+      "lang": 8
+    }
+  ],
+  "errors": [],
+  "probe_error": "InterruptedError('Owned probe stop requested')"
+}

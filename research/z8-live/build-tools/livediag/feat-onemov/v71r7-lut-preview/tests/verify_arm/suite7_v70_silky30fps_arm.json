@@ -1,0 +1,184 @@
+{
+  "suite": "7_v70r2_silky30fps_arm64_final_main",
+  "passed": true,
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "elf_sha256": "aa53bedd09e1ebdf327b7476cf45e578a495bbe0f2a420da0e7ec63d0fb335d3",
+  "executed_directly_from_final_main": true,
+  "abi_x19_x29_d8_d15_sp_verified_every_call": true,
+  "symbols_verified": {
+    "live_scale_1024_to_1280_nv12_neon": "0x409ca204",
+    "live_scale_1024_to_1280_nv12_neon_grain": "0x409c9bf8",
+    "live_scale_1024_to_1280_i420_neon": "0x409ca244",
+    "live_copy_nv12_neon": "0x409cb744",
+    "live_copy_nv12_neon_grain": "0x409cac48",
+    "live_preview_nv12_to_i420_1024x680": "0x409cb78c",
+    "live_encoder_nv12_begin": "0x409d168c",
+    "live_encoder_submit_slot": "0x409d199c",
+    "live_encoder_poll_au": "0x409d1dac",
+    "live_encoder_flush": "0x409d241c",
+    "live_encoder_last_valid_slot": "0x409d2434",
+    "live_encoder_slot_ptrs": "0x409d2490",
+    "live_encoder_diag_timings": "0x409d25d0",
+    "live_encoder_is_parked": "0x409d26e8",
+    "live_encoder_diag_close": "0x409d28ec",
+    "live_hevc_param": "0x401f7960",
+    "live_hevc_au": "0x401f7aac"
+  },
+  "part_7a_neon_scalers": {
+    "passed": true,
+    "checks": 14,
+    "cases": [
+      {
+        "name": "nv12_1024x682_coded864_cached_cvac",
+        "passed": true,
+        "detail": "0-diff NEON==V71Scalar + vs V69 Y=55.21dB(max 2)/UV=55.67dB(max 2) + ABI OK"
+      },
+      {
+        "name": "nv12_1024x680_coded864_padded_uncached_cvac",
+        "passed": true,
+        "detail": "0-diff NEON==V71Scalar + vs V69 Y=55.42dB(max 2)/UV=55.64dB(max 2) + ABI OK"
+      },
+      {
+        "name": "nv12_1024x682_coded864_unaligned_3_5",
+        "passed": true,
+        "detail": "0-diff NEON==V71Scalar + vs V69 Y=55.23dB(max 2)/UV=55.72dB(max 2) + ABI OK"
+      },
+      {
+        "name": "nv12_grain_1024x682_aligned",
+        "passed": true,
+        "detail": "0-diff NEON==V71Scalar fused 512x256 grain Y(1105984B)+UV(553024B) + ABI OK"
+      },
+      {
+        "name": "nv12_grain_1024x680_unaligned_3_5",
+        "passed": true,
+        "detail": "0-diff NEON==V71Scalar fused 512x256 grain Y(1112896B)+UV(557344B) + ABI OK"
+      },
+      {
+        "name": "copy_nv12_grain_1280x852_coded864",
+        "passed": true,
+        "detail": "0-diff NEON==V71Scalar fused 512x256 grain copy + ABI OK"
+      },
+      {
+        "name": "i420_1024x682_cached",
+        "passed": true,
+        "detail": "0-diff NEON==V71Scalar + vs V69 I420=55.33dB(max 2) + ABI OK"
+      },
+      {
+        "name": "i420_1024x680_uncached_unaligned_5",
+        "passed": true,
+        "detail": "0-diff NEON==V71Scalar + vs V69 I420=55.18dB(max 2) + ABI OK"
+      },
+      {
+        "name": "copy_nv12_1280x852_coded864_cvac",
+        "passed": true,
+        "detail": "0-diff Y(1105984B)+UV(553024B) + ABI OK"
+      },
+      {
+        "name": "copy_nv12_1262x120_coded128_unaligned_cvac",
+        "passed": true,
+        "detail": "0-diff Y(172096B)+UV(86080B) + ABI OK"
+      },
+      {
+        "name": "preview_1280x852_to_1024x682_aligned",
+        "passed": true,
+        "detail": "0-diff 1024x682 I420(1047616B) + ABI OK"
+      },
+      {
+        "name": "preview_1280x852_to_1024x682_padded_unaligned",
+        "passed": true,
+        "detail": "0-diff 1024x682 I420(1047616B) + ABI OK"
+      },
+      {
+        "name": "preview_960x640_to_1024x682_generic",
+        "passed": true,
+        "detail": "0-diff 1024x682 I420(1047616B) + ABI OK"
+      },
+      {
+        "name": "invalid_arg_guards",
+        "passed": true,
+        "detail": "4 invalid calls returned 0, 0 bytes mutated, ABI OK"
+      }
+    ]
+  },
+  "part_7b_wave5_async": {
+    "passed": true,
+    "checks": 10,
+    "cases": [
+      {
+        "name": "initial_no_valid_slot",
+        "passed": true,
+        "detail": "lvs=-1 sp=-1"
+      },
+      {
+        "name": "nv12_begin_slot0_cached_alias",
+        "passed": true,
+        "detail": "slot=0 y=0xc93000000 uv=0xc9310e000 cached=1"
+      },
+      {
+        "name": "submit_slot0_async_single_submit_zero_cvac",
+        "passed": true,
+        "detail": "submits=1 triggers=[(0, 0, 1)] cvac=0"
+      },
+      {
+        "name": "inflight_rejects_dup_picks_disjoint_slot_nonblocking_poll0",
+        "passed": true,
+        "detail": "dup=-28 next_slot=1 poll0=0"
+      },
+      {
+        "name": "poll_au_harvests_irap_direct_cached_bs_bit_exact",
+        "passed": true,
+        "detail": "au_len=4185 ivac_delta=1"
+      },
+      {
+        "name": "cfr_repeat_retrigger_0copy_0cvac_single_submit",
+        "passed": true,
+        "detail": "submits=1 cvac=0 retrig_cnt=1"
+      },
+      {
+        "name": "flush_yields_and_harvests_split_wrapped_bs_bit_exact",
+        "passed": true,
+        "detail": "yields=2 au_len=2052 ivac_delta=2"
+      },
+      {
+        "name": "submit_uncleaned_runs_dc_cvac_and_discard_flush_drains",
+        "passed": true,
+        "detail": "dc_cvac_lines=25920 rc_disc=1 rc_empty=0"
+      },
+      {
+        "name": "release_req_returns_live_encoder_busy",
+        "passed": true,
+        "detail": "begin=-30 submit=-30"
+      },
+      {
+        "name": "diag_timings_pool_gate_immune_accurate",
+        "passed": true,
+        "detail": "avg_us=(375,625,250,250) direct=2 retrig=1 (POOL_GATE=2, unmapped hw)"
+      }
+    ]
+  },
+  "part_7c_swar_live_hevc_au": {
+    "passed": true,
+    "differential_cases_vs_v69_oracle": 278,
+    "mod16_alignments": true,
+    "swar_8byte_boundary_crossings_0_to_31": true,
+    "late_ps_after_irap_reemit_verified": true,
+    "error_paths_verified": true
+  },
+  "part_7d_v70r2_fix2_fix3_arm64": {
+    "passed": true,
+    "checks": 2,
+    "cases": [
+      {
+        "name": "fix3_should_poll_1000us_throttle_arm64",
+        "passed": true,
+        "detail": "dt500=0 dt999=0 dt1000=1 new_irq=1"
+      },
+      {
+        "name": "fix2_120hz_10_5ms_gap_preserves_trans_and_interps_arm64",
+        "passed": true,
+        "detail": "flip_dt=8342us trans[4]=0x850600000==ys[3] interp=1"
+      }
+    ]
+  },
+  "total_checks": 304
+}

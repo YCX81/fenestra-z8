@@ -1,0 +1,1019 @@
+{
+  "passed": true,
+  "run": "v71r4-run1a-normal-duplex",
+  "filmsim_mode": "normal",
+  "sound": "on",
+  "image_review": "off",
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "build_id": "0xd590d8cd",
+  "qemu_sha256": "1615cf74e23f917d1760bfcbd87c8c1aa4ddffa99642c8c152cc28b4ae2d5e28",
+  "z8_unknown_count": 0,
+  "boot_flag": {
+    "present": true,
+    "bytes": 64,
+    "magic_ascii": "FXBOOT1",
+    "build_id_hex": "0xd590d8cd",
+    "build_id_match": true
+  },
+  "fenestra_card": {
+    "directory": "FENESTRA",
+    "files": {
+      "STARTUP-Z8.0": 64,
+      "ZF_GRAIN.BIN": 27588,
+      "filmsim.wlm": 34856,
+      "portrait.wlm": 4872,
+      "slotcard.wlm": 52548
+    },
+    "first_cluster": 5
+  },
+  "checks": {
+    "qemu_stopped_no_error": true,
+    "main_sha256_match": true,
+    "qemu_identity_match": true,
+    "v71_fenestra_modules_loaded_on_card": true,
+    "boot_flag_build_id_0xd590d8cd": true,
+    "zero_z8_unknown": true,
+    "unique_pcm_sha_match": true,
+    "input_blocks_contiguous": true,
+    "codec_zero_rejects": true,
+    "rx_never_dropped_ready_to_freeze": true,
+    "spi_adc_preserved_ready_to_freeze": true,
+    "video_1280x852_hevc_3k": true,
+    "audio_track_48k_stereo_zero_gap": true,
+    "saved_pcm_exact_unique_contiguous": true,
+    "runtime_stream_clean": true,
+    "v71_flip_obs_active_in_dram": true,
+    "v71_w5_mirror_direct_async_active_zero_park_err": true,
+    "filmsim_strict_dormant_bypass": true,
+    "filmsim_clean_boot_default_sharp_in_wlm_bus": true,
+    "shutter_tx_tone10_exact": true,
+    "shutter_duplex_completion_flags": true,
+    "shutter_window_100pct_in_saved_pcm": true,
+    "ev_diag1_diag2_present": true,
+    "v71_ev_diag3_present_and_valid": true,
+    "ev_audio_starts_eq_1": true,
+    "ev_shutter_errs_eq_0": true,
+    "ev_diag1_seq_changed_and_fr_dropped_zero": true,
+    "cfr_repeats_accounting_consistent": true,
+    "ev_diag3_direct_plus_retrig_eq_encoded": true,
+    "v71r4_ev_warm_fast_ready_logged": true,
+    "v71r4_mux_512kib_writes_active": true,
+    "v71r4_preview_writer_ncdt_and_0diff_valid": true,
+    "v71r4_live_dram_instructions_verified": true
+  },
+  "v71_flip_obs_peak": {
+    "flip_obs_count": 228,
+    "flip_seq_head": 140,
+    "last_kept_flip_seq": 140,
+    "ring_count": 6,
+    "direct_nv12_ok": 227,
+    "direct_nv12_retrig": 61,
+    "async_harvests": 288,
+    "interp_pushes": 0,
+    "fs_last_mode_max": 0,
+    "fs_last_encoded_gen_max": 0
+  },
+  "v71_w5_mirror_peak": {
+    "direct_nv12_cnt": 227,
+    "async_retrig_cnt": 61,
+    "submitted_frames": 288,
+    "batch_submitted": 1,
+    "n_timed_v70": 288,
+    "in_flight_seen_1": false,
+    "max_park_err": 0,
+    "final_close_failed": 0,
+    "final_in_flight": 0,
+    "final_park_err": 0,
+    "final_diag_close": "0x0"
+  },
+  "v71_w5_mirror_final": {
+    "magic": "0x57354c31",
+    "stream": 0,
+    "busy": 0,
+    "release_req": 0,
+    "close_failed": 0,
+    "handoffs": 0,
+    "arena": "0x8a4273000",
+    "native_instance": "0xa02d41848",
+    "arena_desc": "0xa118a6c00",
+    "block_desc": "0xa118a28f8",
+    "in_flight": 0,
+    "in_flight_slot": 2,
+    "in_flight_hw_idx": 287,
+    "in_flight_stamp": 861000,
+    "last_valid_slot": 2,
+    "slot_valid_mask": 15,
+    "next_slot_rr": 3,
+    "batch_submitted": 1,
+    "submitted_frames": 288,
+    "in_flight_retrig": 0,
+    "direct_nv12_cnt": 227,
+    "async_retrig_cnt": 61,
+    "sum_in_us": 7,
+    "sum_wait_us": 13,
+    "sum_out_us": 79,
+    "sum_parse_us": 1433,
+    "n_timed_v70": 288,
+    "last_poll_wait_us": 0,
+    "park_err": 0,
+    "diag_close": "0x0"
+  },
+  "v71_filmsim_final": {
+    "context": "0x0",
+    "ui_size": 38432,
+    "filmsim_context_offset": 38424,
+    "bus_cfg": null,
+    "module_loaded": 0,
+    "cfg_active": 0,
+    "dormant": 1,
+    "photo_worker_ready": 0,
+    "live_worker_ready": 0,
+    "live_ws_ready": 0,
+    "class24_alloc_count": 0,
+    "class24_release_count": 0,
+    "class24_active_bytes": 0,
+    "lv_submitted": 0,
+    "lv_busy_skips": 0,
+    "arena_blk_handle": "0x0",
+    "arena_blk_cpu": "0x0",
+    "arena_blk_dma": "0x0",
+    "arena_blk_actual": 0,
+    "arena_blk_used": 0,
+    "job2_grain_bypasses": 0,
+    "pool_suspended": 0,
+    "lv_tb_state": 0,
+    "lut17_ready": 0,
+    "gtile_ready": 0,
+    "gtile_readers": 0,
+    "lv_cpu0_gtile_held": 0,
+    "lut_epoch": 0,
+    "zf_epoch": 0,
+    "lv_work_gen": 0,
+    "portrait_gate": 1,
+    "portrait_latch": 0,
+    "slots_limit": 64,
+    "pool_gate": 0,
+    "be_lv_mask": 1118481,
+    "v71_silky30fps": {
+      "w5": {
+        "magic": "0x57354c31",
+        "stream": 0,
+        "busy": 0,
+        "release_req": 0,
+        "close_failed": 0,
+        "handoffs": 0,
+        "in_flight": 0,
+        "in_flight_slot": 2,
+        "last_valid_slot": 2,
+        "slot_valid_mask": 15,
+        "submitted_frames": 288,
+        "in_flight_retrig": 0,
+        "direct_nv12_cnt": 227,
+        "async_retrig_cnt": 61,
+        "n_timed_v70": 288,
+        "park_err": 0,
+        "diag_close": "0x0",
+        "avg_in_us": 0,
+        "avg_wait_us": 0,
+        "avg_out_us": 0,
+        "avg_parse_us": 4
+      },
+      "flip_obs": {
+        "ring_head": 2,
+        "ring_count": 6,
+        "obs_pending_flip": 0,
+        "flip_obs_count": 228,
+        "interp_pushes": 0,
+        "direct_nv12_ok": 227,
+        "direct_nv12_retrig": 61,
+        "async_harvests": 288,
+        "last_w": 1024,
+        "last_h": 682,
+        "fs_last_encoded_gen": 0,
+        "fs_last_mode": 0
+      },
+      "ev_diag3": {
+        "t": 122387122,
+        "avg_in_us": 0,
+        "avg_wait_us": 0,
+        "avg_out_us": 0,
+        "avg_parse_us": 5,
+        "direct_cnt": 87,
+        "retrig_cnt": 24
+      }
+    },
+    "guest_writes": false,
+    "dram_active_pc_sel": 0,
+    "xm6_raw_hw_state": 1,
+    "xm6_raw_fw_loaded": 1,
+    "xm6_raw_loader_fault": 0
+  },
+  "v71_pc_counts": {
+    "filmsim_runtime_live_mode": {
+      "pc": "0x409c1a7c",
+      "total": 10989,
+      "by_cpu": [
+        10989,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_live_begin_submit_nv12": {
+      "pc": "0x409c1c74",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_live_commit_submit_nv12": {
+      "pc": "0x409c1ee4",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_live_acquire_nv12": {
+      "pc": "0x409c2038",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_live_acquire_grain_tile": {
+      "pc": "0x409c239c",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_live_release": {
+      "pc": "0x409c254c",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_pool_suspend": {
+      "pc": "0x409c1500",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_pool_resume": {
+      "pc": "0x409c17e4",
+      "total": 9500,
+      "by_cpu": [
+        9500,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_live_worker_entry": {
+      "pc": "0x409c4078",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_live_cancelled": {
+      "pc": "0x409c2820",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_slots_svc_trampoline": {
+      "pc": "0x409c3d00",
+      "total": 239,
+      "by_cpu": [
+        0,
+        0,
+        239,
+        0
+      ]
+    },
+    "z8_filmsim_apply_live_nv12": {
+      "pc": "0x409bec54",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "z8_hdf_apply": {
+      "pc": "0x409b1320",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "z8_hdf_live_nv12_1024": {
+      "pc": "0x409b1330",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "z8_zf_grain_live_bake_tile": {
+      "pc": "0x409ba7f0",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "z8_zf_grain_live_apply_tile_y": {
+      "pc": "0x409bdd78",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_scale_1024_to_1280_nv12_neon": {
+      "pc": "0x409ca204",
+      "total": 227,
+      "by_cpu": [
+        227,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_scale_1024_to_1280_nv12_neon_grain": {
+      "pc": "0x409c9bf8",
+      "total": 227,
+      "by_cpu": [
+        227,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_downscale_1280_to_1024_nv12_neon": {
+      "pc": "0x409cbb74",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_copy_nv12_neon": {
+      "pc": "0x409cb744",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_copy_nv12_neon_grain": {
+      "pc": "0x409cac48",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_encoder_submit_slot": {
+      "pc": "0x409d199c",
+      "total": 288,
+      "by_cpu": [
+        288,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_encoder_is_parked": {
+      "pc": "0x409d26e8",
+      "total": 1,
+      "by_cpu": [
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "movie": {
+    "path": "/home/ycx/fxfix/onemov/v71r7-lut-preview/verify_qemu/runs/v71r4-run1a-normal-duplex/files/LIVE/100NCZ_8/DSC_0001.MOV",
+    "bytes": 1182332,
+    "sha256": "e0e9c7ad9b3b0d2425f657e22abd006e321e5fd901d90c187bc2dcfc96eb019e",
+    "video_frames": 96,
+    "pcm_stats": {
+      "frames": 153754,
+      "nonzero": true,
+      "max_zero_run_frames": 0,
+      "max_zero_run_ms": 0.0
+    },
+    "saved_pcm_match": {
+      "exact_contiguous_unique_match": true,
+      "output_frames": 153754,
+      "source_frames": 5760000,
+      "source_byte_offset": 98920,
+      "source_frame_offset": 24730
+    },
+    "decoded_video_stats": {
+      "n_frames": 96,
+      "exact_dup_pairs": 7,
+      "near_dup_pairs_mad_lt_0_5": 21,
+      "min_mad": 0.0,
+      "max_mad": 3.2773,
+      "mean_luma_avg": 80.687,
+      "std_luma_avg": 63.377,
+      "mean_u_avg": 128.095,
+      "mean_v_avg": 128.088,
+      "hf_grad_y_avg": 0.3264,
+      "min_frame_mean_luma": 78.95,
+      "max_frame_mean_luma": 81.62
+    }
+  },
+  "shutter_tx": {
+    "bytes": 28800,
+    "sha256": "1a0a4f9641500aba12c1ade65b80fd1ab0494e107f08baf267d2cbd0dfb3a123",
+    "tx_log_count": 2
+  },
+  "mux_ms": 0.0,
+  "mux_start_encoded": 111,
+  "livelog": {
+    "present": true,
+    "crumbs": [
+      {
+        "idx": 0,
+        "t_us": 55763,
+        "type": 25,
+        "a": 1,
+        "b": 0
+      },
+      {
+        "idx": 1,
+        "t_us": 388650,
+        "type": 23,
+        "a": 24,
+        "b": 0
+      },
+      {
+        "idx": 2,
+        "t_us": 1086136,
+        "type": 23,
+        "a": 34,
+        "b": 0
+      },
+      {
+        "idx": 3,
+        "t_us": 118639259,
+        "type": 26,
+        "a": 4,
+        "b": 0
+      },
+      {
+        "idx": 4,
+        "t_us": 120815107,
+        "type": 60,
+        "a": 1010565120,
+        "b": 72620543991349253
+      },
+      {
+        "idx": 5,
+        "t_us": 120815236,
+        "type": 60,
+        "a": 1010565377,
+        "b": 72902018968059909
+      },
+      {
+        "idx": 6,
+        "t_us": 120989114,
+        "type": 60,
+        "a": 168427522,
+        "b": 72903118479687685
+      },
+      {
+        "idx": 7,
+        "t_us": 122387116,
+        "type": 31,
+        "a": 16843008,
+        "b": 2220498092032,
+        "decoded": {
+          "name": "EV_SHUTTER",
+          "phase": 0,
+          "captured": 1,
+          "played": 1,
+          "completed": 1,
+          "cancelled": 0,
+          "errors": 0,
+          "mute": 0,
+          "sound_run": 0,
+          "driver": 5,
+          "az8_phase": 2
+        }
+      },
+      {
+        "idx": 8,
+        "t_us": 122387117,
+        "type": 30,
+        "a": 514,
+        "b": 1,
+        "decoded": {
+          "name": "EV_AUDIO",
+          "audio_ok": 2,
+          "audio_phase": 2,
+          "audio_error": 0,
+          "audio_starts": 1
+        }
+      },
+      {
+        "idx": 9,
+        "t_us": 122387122,
+        "type": 32,
+        "a": 1572951,
+        "b": 0,
+        "decoded": {
+          "name": "EV_DIAG1",
+          "t_us": 122387122,
+          "ok": 87,
+          "cfr_repeats": 24,
+          "seq_changed": 0,
+          "accepted_late": 0,
+          "fr_dropped": 0,
+          "dup_skipped": 0
+        }
+      },
+      {
+        "idx": 10,
+        "t_us": 122387122,
+        "type": 33,
+        "a": 6,
+        "b": 30374312936674,
+        "decoded": {
+          "name": "EV_DIAG2",
+          "t_us": 122387122,
+          "nbufs": 6,
+          "max_frames_during_copy": 0,
+          "valid_fail": 0,
+          "stale_lease": 0,
+          "avg_convert_us": 1250,
+          "max_convert_us": 4642,
+          "avg_encode_us": 7072,
+          "cached_lv_fail": 0,
+          "review_deferrals": 0
+        }
+      },
+      {
+        "idx": 11,
+        "t_us": 122387122,
+        "type": 34,
+        "a": 0,
+        "b": 6755773103538176,
+        "decoded": {
+          "name": "EV_DIAG3",
+          "t_us": 122387122,
+          "avg_in_us": 0,
+          "avg_wait_us": 0,
+          "avg_out_us": 0,
+          "avg_parse_us": 5,
+          "direct_cnt": 87,
+          "retrig_cnt": 24
+        }
+      }
+    ],
+    "events": [
+      {
+        "idx": 0,
+        "t_us": 55763,
+        "type": 25,
+        "name": "EV_25",
+        "a": 1,
+        "b": 0
+      },
+      {
+        "idx": 1,
+        "t_us": 388650,
+        "type": 23,
+        "name": "EV_23",
+        "a": 24,
+        "b": 0
+      },
+      {
+        "idx": 2,
+        "t_us": 1086136,
+        "type": 23,
+        "name": "EV_23",
+        "a": 34,
+        "b": 0
+      },
+      {
+        "idx": 3,
+        "t_us": 9059670,
+        "type": 7,
+        "name": "EV_7",
+        "a": 0,
+        "b": 0
+      },
+      {
+        "idx": 4,
+        "t_us": 23236111,
+        "type": 7,
+        "name": "EV_7",
+        "a": 0,
+        "b": 0
+      },
+      {
+        "idx": 5,
+        "t_us": 118560071,
+        "type": 7,
+        "name": "EV_7",
+        "a": 0,
+        "b": 0
+      },
+      {
+        "idx": 6,
+        "t_us": 118560087,
+        "type": 5,
+        "name": "EV_SOFT_CANCEL",
+        "a": 7,
+        "b": 0
+      },
+      {
+        "idx": 7,
+        "t_us": 118639259,
+        "type": 26,
+        "name": "EV_26",
+        "a": 4,
+        "b": 0
+      },
+      {
+        "idx": 8,
+        "t_us": 119134108,
+        "type": 41,
+        "name": "EV_WARM",
+        "a": 15,
+        "b": 0
+      },
+      {
+        "idx": 9,
+        "t_us": 120134109,
+        "type": 16,
+        "name": "EV_READY",
+        "a": 45,
+        "b": 0
+      },
+      {
+        "idx": 10,
+        "t_us": 120815107,
+        "type": 60,
+        "name": "EV_60",
+        "a": 1010565120,
+        "b": 72620543991349253
+      },
+      {
+        "idx": 11,
+        "t_us": 120815107,
+        "type": 1,
+        "name": "EV_PRESS",
+        "a": 2,
+        "b": 0
+      },
+      {
+        "idx": 12,
+        "t_us": 120815115,
+        "type": 2,
+        "name": "EV_ACCEPT",
+        "a": 15,
+        "b": 120815111
+      },
+      {
+        "idx": 13,
+        "t_us": 120815236,
+        "type": 60,
+        "name": "EV_60",
+        "a": 1010565377,
+        "b": 72902018968059909
+      },
+      {
+        "idx": 14,
+        "t_us": 120989114,
+        "type": 60,
+        "name": "EV_60",
+        "a": 168427522,
+        "b": 72903118479687685
+      },
+      {
+        "idx": 15,
+        "t_us": 122338110,
+        "type": 11,
+        "name": "EV_FREEZE",
+        "a": 96,
+        "b": 149930
+      },
+      {
+        "idx": 16,
+        "t_us": 122387116,
+        "type": 31,
+        "name": "EV_31",
+        "a": 16843008,
+        "b": 2220498092032
+      },
+      {
+        "idx": 17,
+        "t_us": 122387117,
+        "type": 30,
+        "name": "EV_30",
+        "a": 514,
+        "b": 1
+      },
+      {
+        "idx": 18,
+        "t_us": 122387122,
+        "type": 32,
+        "name": "EV_32",
+        "a": 1572951,
+        "b": 0
+      },
+      {
+        "idx": 19,
+        "t_us": 122387122,
+        "type": 33,
+        "name": "EV_33",
+        "a": 6,
+        "b": 30374312936674
+      },
+      {
+        "idx": 20,
+        "t_us": 122387122,
+        "type": 34,
+        "name": "EV_34",
+        "a": 0,
+        "b": 6755773103538176
+      },
+      {
+        "idx": 21,
+        "t_us": 122387122,
+        "type": 13,
+        "name": "EV_MUX_BEGIN",
+        "a": 96,
+        "b": 1
+      },
+      {
+        "idx": 22,
+        "t_us": 122446117,
+        "type": 21,
+        "name": "EV_21",
+        "a": 0,
+        "b": 58995
+      },
+      {
+        "idx": 23,
+        "t_us": 122690114,
+        "type": 21,
+        "name": "EV_21",
+        "a": 1,
+        "b": 302992
+      },
+      {
+        "idx": 24,
+        "t_us": 122700114,
+        "type": 21,
+        "name": "EV_21",
+        "a": 3,
+        "b": 312992
+      },
+      {
+        "idx": 25,
+        "t_us": 122700116,
+        "type": 14,
+        "name": "EV_MUX_END",
+        "a": 0,
+        "b": 12884901888
+      },
+      {
+        "idx": 26,
+        "t_us": 123601110,
+        "type": 41,
+        "name": "EV_WARM",
+        "a": 24,
+        "b": 0
+      }
+    ],
+    "header": {
+      "magic": "0x32474c4c",
+      "log_head": 27,
+      "now_us": 123672115,
+      "crumb_head": 12
+    },
+    "ev_shutter": {
+      "name": "EV_SHUTTER",
+      "phase": 0,
+      "captured": 1,
+      "played": 1,
+      "completed": 1,
+      "cancelled": 0,
+      "errors": 0,
+      "mute": 0,
+      "sound_run": 0,
+      "driver": 5,
+      "az8_phase": 2
+    },
+    "ev_audio": {
+      "name": "EV_AUDIO",
+      "audio_ok": 2,
+      "audio_phase": 2,
+      "audio_error": 0,
+      "audio_starts": 1
+    },
+    "ev_diag1": {
+      "name": "EV_DIAG1",
+      "t_us": 122387122,
+      "ok": 87,
+      "cfr_repeats": 24,
+      "seq_changed": 0,
+      "accepted_late": 0,
+      "fr_dropped": 0,
+      "dup_skipped": 0
+    },
+    "ev_diag2": {
+      "name": "EV_DIAG2",
+      "t_us": 122387122,
+      "nbufs": 6,
+      "max_frames_during_copy": 0,
+      "valid_fail": 0,
+      "stale_lease": 0,
+      "avg_convert_us": 1250,
+      "max_convert_us": 4642,
+      "avg_encode_us": 7072,
+      "cached_lv_fail": 0,
+      "review_deferrals": 0
+    },
+    "ev_diag3": {
+      "name": "EV_DIAG3",
+      "t_us": 122387122,
+      "avg_in_us": 0,
+      "avg_wait_us": 0,
+      "avg_out_us": 0,
+      "avg_parse_us": 5,
+      "direct_cnt": 87,
+      "retrig_cnt": 24
+    },
+    "ev_warm_count": 2,
+    "ev_ready_count": 1,
+    "first_ev_alloc_us": null,
+    "first_ev_warm_us": 119134108,
+    "first_ev_ready_us": 120134109,
+    "livelog_mux_span_ms": 312.99
+  },
+  "v71r4_mux_io": {
+    "total_writes": 25,
+    "total_write_bytes": 3667137,
+    "max_write_bytes": 524288,
+    "writes_ge_512k": 6,
+    "writes_eq_512k": 6,
+    "writes_eq_256k": 0,
+    "writes_eq_192k": 0,
+    "live_write_pair_aus_calls": 1,
+    "live_preview_jpeg_calls": 0
+  },
+  "v71r4_preview_atom": {
+    "present": true,
+    "valid": true,
+    "ncdt_boxes": {
+      "NCTH": {
+        "present": true,
+        "valid": true,
+        "jpeg_bytes": 2263,
+        "size": [
+          160,
+          120
+        ],
+        "expected_size": [
+          160,
+          120
+        ],
+        "sha256": "066dcea249c5ddedb10c2fbb6bbfa60149d563b38da6763da5dc304a35765a23"
+      },
+      "NCVW": {
+        "present": true,
+        "valid": true,
+        "jpeg_bytes": 31298,
+        "size": [
+          1280,
+          720
+        ],
+        "expected_size": [
+          1280,
+          720
+        ],
+        "sha256": "5ef4656e464d5b37cef72fb5f679aa961157726af289766f11af093d48b07ac0"
+      },
+      "NCM1": {
+        "present": true,
+        "valid": true,
+        "jpeg_bytes": 10935,
+        "size": [
+          640,
+          360
+        ],
+        "expected_size": [
+          640,
+          360
+        ],
+        "sha256": "20fb2a77464f74441cc1fcab1ce7e999e7ca33dc933badc44e773b5bf279bbe8"
+      },
+      "NCM2": {
+        "present": true,
+        "valid": true,
+        "jpeg_bytes": 62523,
+        "size": [
+          1920,
+          1080
+        ],
+        "expected_size": [
+          1920,
+          1080
+        ],
+        "sha256": "4f5f09f2d6bdc634127a2c9c74a2dba548c2fe9277be8fda0019a69f256dc5c1"
+      }
+    },
+    "preview_writer_0diff_vs_v71r3": {
+      "zero_diff": true,
+      "frames": 4,
+      "total_bytes": 101160,
+      "v71r3_sha256": "b0c6c57852d10e51a5bd313d038f209a5296165df5eb3cbea2a83d5b79206070",
+      "v71r4_sha256": "b0c6c57852d10e51a5bd313d038f209a5296165df5eb3cbea2a83d5b79206070"
+    }
+  },
+  "v71r4_dram_words": {
+    "build_id_0x401fe060": "0xd590d8cd",
+    "pool6_lo_0x40cf4620": "0x5284000d",
+    "pool6_hi_0x40cf4630": "0x72a0038d",
+    "nfsp_photo_worker_prio_0x409c1018": "0x528003c5",
+    "filmsim_live_worker_prio_0x409c1064": "0x528003c5",
+    "fs_live_slice_lsr_0x409c28a0": "0xd344fd08",
+    "fs_live_slice_cmp_0x409c28a4": "0xf11d4d1f",
+    "filmsim_bank_sha256": "9655e8eab3e44218bec82a4c987f0fbb958097343f7d704c1ecf65bfb2884a55"
+  },
+  "runtime_summary": {
+    "requested": 1,
+    "capture.phase": 2,
+    "stream.width": 1280,
+    "stream.height": 852,
+    "stream.bitrate": 16000000,
+    "stream.encoded": 288,
+    "stream.mux_start_encoded": 111,
+    "stream.error": 0,
+    "transaction_count": 1,
+    "transaction_error": 0,
+    "review_gate": 0,
+    "review_deferrals": 0,
+    "shutter.phase": 0,
+    "shutter.played": 1,
+    "shutter.completed": 1,
+    "shutter.errors": 0,
+    "shutter.wake_generation": 122879,
+    "flip_obs.fs_last_mode": 0,
+    "flip_obs.fs_last_encoded_gen": 0
+  }
+}

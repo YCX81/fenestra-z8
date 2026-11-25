@@ -1,0 +1,27 @@
+{
+  "suite": "1b_audio_recovery_final_main",
+  "passed": true,
+  "checks": 3,
+  "live_audio_z8_pause_absent": true,
+  "executed_directly_from_final_main": true,
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "elf_sha256": "aa53bedd09e1ebdf327b7476cf45e578a495bbe0f2a420da0e7ec63d0fb335d3",
+  "symbols": {
+    "live_audio_step": "0x401e5ae8",
+    "live_audio_ready_step": "0x401e5f48"
+  },
+  "cases": [
+    {
+      "case": "soft_cancel_preserves_mic_and_freezes_phase2",
+      "passed": true
+    },
+    {
+      "case": "image_review_want0_freezes_best_and_protects_job3",
+      "passed": true
+    },
+    {
+      "case": "transient_alloc_keeps_warm_and_recovers_200ms",
+      "passed": true
+    }
+  ]
+}

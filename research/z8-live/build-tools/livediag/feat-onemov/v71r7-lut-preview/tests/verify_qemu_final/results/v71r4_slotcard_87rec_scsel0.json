@@ -1,0 +1,157 @@
+{
+  "name": "v71r4-slotcard-87rec-scsel0",
+  "passed": true,
+  "checks_passed": 10,
+  "checks_total": 10,
+  "checks": {
+    "phase_done": true,
+    "zero_z8_unknown": true,
+    "zero_panic": true,
+    "zero_card_error": true,
+    "cardslot_csl1_latched_clean": true,
+    "bootguard_stale_cleared_to_0xd590d8cd": true,
+    "slotcard_ph2_err0_used102_lim64_zero_timeout": true,
+    "filter_switched_to_portra800": true,
+    "scsel0_written_after_10s_debounce": true,
+    "zero_new_sc_rec_created": true
+  },
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "slotcard_wlm_sha256": "b221d05ee0756b96cd2243a8b9507f0fa0d6879a6a0bebcfabb6e6a5ff4e4853",
+  "boot_diag": {
+    "sel_p": "0x102b",
+    "sel_v": "0x102b",
+    "cur_name": "Gold 200",
+    "sl_lim": 64,
+    "sc_magic": "0x53434431",
+    "sc_state": 4,
+    "sc_load_status": 0,
+    "sc_head": 87,
+    "sc_used": 102,
+    "sc_bad_slots": 0,
+    "sc_commits": 0,
+    "sc_limit": 64,
+    "cs_magic": "0x314c5343",
+    "cs_drive": 1,
+    "cs_reason": "0x1",
+    "cs_probes": 11,
+    "cs_rewrites": 0,
+    "cs_refused": 20,
+    "cs_class_a": 1,
+    "cs_class_b": 0,
+    "stock_error_history_all_zero": true
+  },
+  "final_diag": {
+    "sel_p": "0x102a",
+    "sel_v": "0x102a",
+    "cur_name": "Portra 800",
+    "sl_lim": 64,
+    "sc_magic": "0x53434431",
+    "sc_state": 4,
+    "sc_load_status": 0,
+    "sc_head": 87,
+    "sc_used": 102,
+    "sc_bad_slots": 0,
+    "sc_commits": 0,
+    "sc_limit": 64,
+    "cs_magic": "0x314c5343",
+    "cs_drive": 1,
+    "cs_reason": "0x1",
+    "cs_probes": 11,
+    "cs_rewrites": 0,
+    "cs_refused": 20,
+    "cs_class_a": 1,
+    "cs_class_b": 0,
+    "stock_error_history_all_zero": true
+  },
+  "card_audit": {
+    "sc_rec_count_after": 87,
+    "appledouble_count_after": 11,
+    "total_fenestra_files_after": 105,
+    "SCSEL0.CFG": {
+      "present": true,
+      "bytes": 64,
+      "magic": "0x314c535a",
+      "magic_ascii": "ZSL1",
+      "version": 1,
+      "seq": 1,
+      "crc_ok": true,
+      "base_gen": 87,
+      "flags": 0,
+      "store_id": "0x4aa7740a767ddf56",
+      "still_sel": "0x102a",
+      "video_sel": "0x0",
+      "still_proxy": "0x258",
+      "video_proxy": "0x0",
+      "valid": true
+    },
+    "SCSEL1.CFG": {
+      "present": false
+    },
+    "BOOT-Z8.FLAG": {
+      "present": true,
+      "bytes": 64,
+      "build_id": "0xd590d8cd",
+      "crc_ok": true,
+      "valid": true
+    }
+  },
+  "slotcard_obs": {
+    "bootguard": {
+      "cmp_hits": 1,
+      "clear_hits": 1,
+      "first_flag_build_id": "0xc1854ee8",
+      "first_fw_build_id": "0xd590d8cd",
+      "last_flag_build_id": "0xc1854ee8",
+      "last_fw_build_id": "0xd590d8cd",
+      "mismatch_detected": true,
+      "clear_guest_us": 0
+    },
+    "slotcard_boot": {
+      "reached_running_102": true,
+      "running_guest_us": 0
+    },
+    "modules": {
+      "portrait.wlm": {
+        "worker_ptr": "0xa10d88f90",
+        "last_phase": 2,
+        "last_error": 0,
+        "total_invokes": 1015,
+        "fx_ok": 1015,
+        "fx_interrupted_boot": 0,
+        "fx_interrupted_total": 0,
+        "fx_timeout": 0,
+        "other_rc": 0,
+        "first_guest_us": 0,
+        "last_guest_us": 0
+      },
+      "slotcard.wlm": {
+        "worker_ptr": "0xa10dc6aa0",
+        "last_phase": 2,
+        "last_error": 0,
+        "total_invokes": 1573,
+        "fx_ok": 1573,
+        "fx_interrupted_boot": 0,
+        "fx_interrupted_total": 0,
+        "fx_timeout": 0,
+        "other_rc": 0,
+        "first_guest_us": 0,
+        "last_guest_us": 0
+      },
+      "filmsim.wlm": {
+        "worker_ptr": "0xa10e69aa0",
+        "last_phase": 2,
+        "last_error": 0,
+        "total_invokes": 1104,
+        "fx_ok": 1104,
+        "fx_interrupted_boot": 0,
+        "fx_interrupted_total": 0,
+        "fx_timeout": 0,
+        "other_rc": 0,
+        "first_guest_us": 0,
+        "last_guest_us": 0
+      }
+    },
+    "nonzero_events": []
+  },
+  "probe_error": "InterruptedError('Owned probe stop requested')"
+}

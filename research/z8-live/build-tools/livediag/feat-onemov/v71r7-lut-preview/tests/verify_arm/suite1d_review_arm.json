@@ -1,0 +1,31 @@
+{
+  "suite": "1d_image_review_final_main",
+  "passed": true,
+  "checks": 86,
+  "groups": {
+    "accepted_press_publishes_active": 1,
+    "rejected_press_releases_gate": 1,
+    "existing_gate_rejects_new_owner": 1,
+    "on_and_monitor_hold_return": 14,
+    "pending_slot_and_output_untouched": 14,
+    "arming_mailbox_postroll_audio_wait_preserved": 12,
+    "freeze_or_failed_clip_releases_gate": 10,
+    "native_review_consumed_after_release": 10,
+    "native_flag_cleared_once": 10,
+    "second_pop_has_no_duplicate_review": 10,
+    "review_off_keeps_native_timing": 1,
+    "unrelated_pending_slot_unchanged": 1,
+    "absent_or_wrong_runtime_passes_native": 1
+  },
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "elf_sha256": "aa53bedd09e1ebdf327b7476cf45e578a495bbe0f2a420da0e7ec63d0fb335d3",
+  "hook_0x40407f84_verified": true,
+  "symbols": {
+    "live_press_notify": "0x401e2384",
+    "live_review_pop": "0x401e2560",
+    "live_review_step": "0x401e6044",
+    "la_full_press": "0x401e6a38"
+  },
+  "native_calls": 23,
+  "property_calls": 15
+}

@@ -1,0 +1,197 @@
+{
+  "schema": "v71.7r7.lut-preview-delivery-verification/v1",
+  "version": "v71.7r7-lut-preview",
+  "identity": "04.06.p0",
+  "main_sha256": "362ee2a5491859a762b35ed8459cf22c212ae5babb38915daa15e3b801533c8a",
+  "package_sha256": "eca451be7160945c098e2641f9daf11b9c6755aa4b8ab5c30bdcdd228a8ecfe4",
+  "build_id": "0x8394568f",
+  "release_checks_passed": true,
+  "physical_camera_verified": false,
+  "verified_receipts": {
+    "xm6_dcli_suite": "51/51",
+    "xm6_text_bytes": 156736,
+    "xm6_rodata_bytes": 2016,
+    "qspill_funcs": 1114,
+    "qspill_count": 0,
+    "suite5_font_cjk_arm": true,
+    "suite14_arm_checks": 63,
+    "xm6_arm_checks": 124,
+    "suite4_arm_checks": 70,
+    "suite2_arm_checks": null,
+    "qemu_suite19_r7": "14/14",
+    "qemu_suite20_r7": "13/13",
+    "wlm_glyphs_missing_sc": 0,
+    "wlm_glyphs_missing_tc": 0
+  },
+  "sd_card_fenestra": {
+    "filmsim.wlm": {
+      "bytes": 32540,
+      "sha256": "259f58db7f859e808829214675a76a37320e43b0b91706202abfe0eb1dd3817e"
+    },
+    "livephoto.wlm": {
+      "bytes": 15860,
+      "sha256": "65a92348b4a963641c21e6674f42347646595ee294007e05d2160f670ba855f8"
+    },
+    "lut.wlm": {
+      "bytes": 15624,
+      "sha256": "596e37ccfd957b595500206dd3a22a278c50210bdfd5d6493ac6c4e65eaecee2"
+    },
+    "slotcard.wlm": {
+      "bytes": 56552,
+      "sha256": "299a90e8706495d2bb47ba2431de980e93cdc9fa84f7c51d992f3b9176bc5d9f"
+    },
+    "portrait.wlm": {
+      "bytes": 7348,
+      "sha256": "857a234dcafeec087bdcd01d6020f52e8638121e7513ee2b2cc6b78ec52d26b0"
+    },
+    "ZF_GRAIN.BIN": {
+      "bytes": 27588,
+      "sha256": "99c70fa224b701d34621edd159be09b3536f00b45173ac07e57b12cdaa18433d"
+    },
+    "STARTUP-Z8.0": {
+      "bytes": 64,
+      "sha256": "2ec2832aba51a344eda779c13c4bbab56dde6ac82e270df276de7990cd477636"
+    }
+  },
+  "evidence": [
+    {
+      "name": "v71-manifest.json",
+      "path": "EVIDENCE/v71-manifest.json",
+      "sha256": "899e20918658b50162cb392dd9024315579f8e5582a4ce6716b12a6270901837",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/final/v71-manifest.json"
+    },
+    {
+      "name": "stage0-base.json",
+      "path": "EVIDENCE/stage0-base.json",
+      "sha256": "f1ac15dc71ac092179b84a7e514a193f388dbe0b9bfc0e1d1d1388987ece0621",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/final/stage0-base.json"
+    },
+    {
+      "name": "stage1-build.json",
+      "path": "EVIDENCE/stage1-build.json",
+      "sha256": "cb8ac70f7c79367b673273586cb38b4f29131027ea44bade93f00d43965846f5",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/final/stage1-build.json"
+    },
+    {
+      "name": "stage1-simd-audit.json",
+      "path": "EVIDENCE/stage1-simd-audit.json",
+      "sha256": "e515ce2fd2a0c2519d70c56c8c85e3a1ce769475a6e1d208f8beeaa93c3fbead",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/final/stage1-simd-audit.json"
+    },
+    {
+      "name": "stage2-portrait-audit.json",
+      "path": "EVIDENCE/stage2-portrait-audit.json",
+      "sha256": "be8c7b23308d8f0f93b69fa88e2a7422bb4e58d725c66253ce7f6686dc86f3a5",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/final/stage2-portrait-audit.json"
+    },
+    {
+      "name": "main.json",
+      "path": "EVIDENCE/main.json",
+      "sha256": "11924c4d57512af0924ed8e199776c8689a63ae94b11d2910512e2b3789e288b",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/final/main.json"
+    },
+    {
+      "name": "stage3-fontzh-audit.json",
+      "path": "EVIDENCE/stage3-fontzh-audit.json",
+      "sha256": "b06d9618c174db314a8853fa8f45863ba11008ada59e1df03b24bc3744800ec3",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/final/stage3-fontzh-audit.json"
+    },
+    {
+      "name": "xm6_coexist_manifest.json",
+      "path": "EVIDENCE/xm6_coexist_manifest.json",
+      "sha256": "4f73dac1e9932f47aa5e29e017ac3aaf2d9156473dad55e94c5eba5e8fa60ff9",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/xm6_elf0/coexist_nikondma/coexist_manifest.json"
+    },
+    {
+      "name": "xm6_dcli_suite_report_51.json",
+      "path": "EVIDENCE/xm6_dcli_suite_report_51.json",
+      "sha256": "b59cd63fa2bbe0b4ab2ec79fd018c34158e2874acba38bd4bd832baa5ef1909b",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/build/xm6_elf0/coexist_nikondma/dcli_suite_report.json"
+    },
+    {
+      "name": "qspill_audit_r7.json",
+      "path": "EVIDENCE/qspill_audit_r7.json",
+      "sha256": "6b51bd39575755304b54b0f84d9d0cc359c2fca0ce8ea1eaaab51434a0f8ffef",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/qspill_audit_r7.json"
+    },
+    {
+      "name": "suite5_font_cjk_final.json",
+      "path": "EVIDENCE/suite5_font_cjk_final.json",
+      "sha256": "47166997c4e60db452ca1daadf045ea9c7961bffb59fcc12b0219947df04c7a0",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite5_font_cjk_final.json"
+    },
+    {
+      "name": "v71r7_lut_preview_arm.json",
+      "path": "EVIDENCE/v71r7_lut_preview_arm.json",
+      "sha256": "0d28da480bf67babe05e0ac096e4a2ef9685bc8f49b501e3505d85ef1050a03b",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/v71r7_lut_preview_arm.json"
+    },
+    {
+      "name": "xm6_bridge_arm.json",
+      "path": "EVIDENCE/xm6_bridge_arm.json",
+      "sha256": "f4d5876591eeac745711d5c99183df8959a2cb06e3ccfae5bc3bdb551eb67073",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/xm6_bridge_arm.json"
+    },
+    {
+      "name": "suite4_filmsim_final.json",
+      "path": "EVIDENCE/suite4_filmsim_final.json",
+      "sha256": "e895aa02d41f51684012c92786ab9847aa111b7111895a0aa3f5d48741686f88",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite4_filmsim_final.json"
+    },
+    {
+      "name": "suite2_hangfix_arm.json",
+      "path": "EVIDENCE/suite2_hangfix_arm.json",
+      "sha256": "b2b3f3bb3750a7260ca7f2768f16f2507b0006fc80b4b59f04cedec2a831a8ae",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_arm/suite2_hangfix_arm.json"
+    },
+    {
+      "name": "qemu_suite19_r7_plugins_xm6_ui.json",
+      "path": "EVIDENCE/qemu_suite19_r7_plugins_xm6_ui.json",
+      "sha256": "3576c2531c3b7f0c5bf000290ca53f07b4c88e4600283244f4314a5eaed00bcf",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/suite19_r7_plugins_xm6_ui.json"
+    },
+    {
+      "name": "qemu_suite20_r7_lut_preview.json",
+      "path": "EVIDENCE/qemu_suite20_r7_lut_preview.json",
+      "sha256": "30f359df9fbbebe17c7f0943985251333059030701034b84100a3da1c4fdd33d",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/verify_qemu_final/results/suite20_r7_lut_preview.json"
+    },
+    {
+      "name": "wlm_5plugins_glyph_coverage.json",
+      "path": "EVIDENCE/wlm_5plugins_glyph_coverage.json",
+      "sha256": "8ae8336e84f3c74c8c32890b6a9e575189b5ec147971c86c3bdafc5dca682137",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/tests/wlm_zh/glyph_coverage_report.json"
+    },
+    {
+      "name": "wlm_filmsim_verify_report.json",
+      "path": "EVIDENCE/wlm_filmsim_verify_report.json",
+      "sha256": "441e2d41c4cf581f8adfbbf1d36b56b967c9473c150a962ab653b74c4b5d5c41",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/filmsim/build/verify-report.json"
+    },
+    {
+      "name": "wlm_livephoto_verify_report.json",
+      "path": "EVIDENCE/wlm_livephoto_verify_report.json",
+      "sha256": "3a166e4f0c9e15c1355193d671eca041beccfa2c0fa4a8fe92a0caf02d5a29ee",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/livephoto/build/verify-report.json"
+    },
+    {
+      "name": "wlm_lut_verify_report.json",
+      "path": "EVIDENCE/wlm_lut_verify_report.json",
+      "sha256": "088500db4b4a9434a6d431b50395df70c81d8ebace68887aaf52d27827b7c7bf",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/lut/build/verify-report.json"
+    },
+    {
+      "name": "wlm_slotcard_verify_report.json",
+      "path": "EVIDENCE/wlm_slotcard_verify_report.json",
+      "sha256": "5a516e008d5d04bca5d31ec49c06f8be8c906e568a8983839fba2869ef1a5157",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/slotcard/build/verify-report.json"
+    },
+    {
+      "name": "wlm_portrait_verify_report.json",
+      "path": "EVIDENCE/wlm_portrait_verify_report.json",
+      "sha256": "7a3cd0a39177dfa611eefb630d689a228727c347f2c6837bd04467720be7df50",
+      "source_path": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/work/wlm-zh/portrait/build/verify-report.json"
+    }
+  ],
+  "package_bytes": 99051117
+}

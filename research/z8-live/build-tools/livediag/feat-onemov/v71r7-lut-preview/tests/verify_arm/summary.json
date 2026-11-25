@@ -1,0 +1,817 @@
+{
+  "version": "v71r7-lut-preview",
+  "physical_camera_verified": false,
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "main_bytes": 81807709,
+  "z_8_0406_bin_sha256": "9976d012cac5c88e585a29a9798a7f691c74caad56098b60825959b6ae492b64",
+  "z_8_0406_bin_bytes": 99051117,
+  "stage0_base_sha256": "d40e16954c7059f8f981f0a3559313ad0d8feb937a0dd9de3a2f823cc6841900",
+  "stage1_sha256": "c83993cb4c43770b0064d4b05a91bde7f266002b84b0fa89f26291dfa372f629",
+  "stage2_sha256": "038a5a76e573683ecf304c036d57ec12756987809ebff74e0588a5b9761c4d6a",
+  "payload_elf_sha256": "aa53bedd09e1ebdf327b7476cf45e578a495bbe0f2a420da0e7ec63d0fb335d3",
+  "filmsim_wlm_sha256": "7943f163ffbe631d1620bb8a9162b59c108a9d853f2e122be197196cc08199cc",
+  "filmsim_wlm_bytes": 34856,
+  "slotcard_wlm_sha256": "b221d05ee0756b96cd2243a8b9507f0fa0d6879a6a0bebcfabb6e6a5ff4e4853",
+  "slotcard_wlm_bytes": 52548,
+  "portrait_wlm_sha256": "53965f8e5789e4da58c3ac6a70e6ba774d12c49433e0d511eaa4bcbbb4172aaa",
+  "portrait_wlm_bytes": 4872,
+  "zf_grain_bin_sha256": "99c70fa224b701d34621edd159be09b3536f00b45173ac07e57b12cdaa18433d",
+  "zf_grain_bin_bytes": 27588,
+  "startup_z8_0_sha256": "2ec2832aba51a344eda779c13c4bbab56dde6ac82e270df276de7990cd477636",
+  "startup_z8_0_bytes": 64,
+  "abi_header_sha256": "9ab81226127d3403f5b3ba4e64c878ee79e7d8e7abeb55a9920dfaa4e2636a89",
+  "build_id": "0xd590d8cd",
+  "orig_text_va": "0x401eadcc",
+  "v68_lang_svc_va": "0x401ff0f4",
+  "v68_menu_text_va": "0x401ff134",
+  "v68_nfp_overlap_text_va": "0x401ff294",
+  "filmsim_slots_svc_trampoline_va": "0x409c3d00",
+  "filmsim_slots_svc_dispatch_va": "0x409c3bb8",
+  "all_passed": true,
+  "suites_total": 14,
+  "suites_passed": 14,
+  "whole_image_and_capstone_audit": {
+    "passed": true,
+    "three_way_unpack_verified": true,
+    "stock_to_final_changed_bytes": 2335230,
+    "stock_to_final_unexplained_bytes": 0,
+    "manifest_hooks_verified": 101,
+    "stage1_hooks_verified": 62,
+    "hangfix_hooks_verified": 9,
+    "v71r7_layer0_power_hooks_verified": 6,
+    "v71r7_photo_menu_ram_init_patches_verified": 2,
+    "v71r7_unused_burst_0xa02917ca0_zero_verified": true,
+    "stage0_v71r5_sites_verified": 269,
+    "v68_lang_svc_to_filmsim_trampoline_verified": true,
+    "stage0_boot_panic03_cardslot_v2": {
+      "schema": "v71r5.patch_boot_panic03_cardslot/v2",
+      "sites_verified": 18,
+      "cpu2_pin": {
+        "processor": 3,
+        "affinity": 4,
+        "cave": "0x401d2e18"
+      },
+      "el0_budget_ms": 1500,
+      "fault_isolation_cave": "0x401d2e24",
+      "pb_system_trampoline": "0x401d6004 -> B 0x40d60ecc"
+    },
+    "stage0_c64_imenu_ui": {
+      "branch_hooks_count": 28,
+      "direct_edits_count": 8,
+      "pointer_relocs_count": 54,
+      "patched_sites_verified": 251,
+      "rx_cave_span": [
+        "0x40b66000",
+        "0x40b6a95c"
+      ],
+      "rx_cave_within_0x40b70000": true,
+      "fp_simd_insns": 0
+    },
+    "stage0_nfp_v051": {
+      "target_tag": "v0.5.1",
+      "contract_stage0": "PASS",
+      "contract_final_with_chained_0x40ea3638": "PASS",
+      "final_apply_windows_verified": 1319,
+      "relocated_windows_intact": [
+        "0x40af0000..0x40af7000",
+        "0x40af8000..0x40afa000",
+        "0x40b12000..0x40b1b000"
+      ],
+      "q3_stash_ram": "0xa0ff52000",
+      "q3_stash_zero_overlap_with_cjk_ext_1": true,
+      "menu_context_0x401fcf44_word": "0x7101151f",
+      "native_count": 3250
+    },
+    "stage0_xm6_elf0": {
+      "schema": "v71r6.patch_xm6_elf0_stage0/v1",
+      "variant": "coexist_nikondma",
+      "e_phnum": 16,
+      "e_phoff": "0x0a8f20",
+      "elf0_size_bytes": 692516,
+      "elf0_patched_sha256": "b65798d7a6cbd026cb97cb01df7278732cdcd6a7f1e27f8f23b1437ecb2c88db",
+      "stock_to_final_mutated_bytes": 148694,
+      "changed_span_total_bytes": 160350,
+      "stage0_equals_final_bit_for_bit": true,
+      "text_z8fx_expeed7_16b_reversed_verified": true,
+      "rodata_z8fx_little_endian_verified": true,
+      "verify_stage0_status": "PASS",
+      "verify_final_status": "PASS",
+      "loader_0x40c92194_sim": {
+        "loader_fault_flag": 0,
+        "phdrs_processed": 16,
+        "loaded_spans": 17,
+        "overlaps": 0,
+        "stock_oem_regions_preserved": true,
+        "verified_segments": [
+          ".text.z8fx: DSP 0x418c4580..0x418e5420 -> ARM 0x0a018c4580 (134816 B EXACT)",
+          ".rodata.z8fx: IDM 0x0003bc40..0x0003c3e0 -> HW 0x1c03bc40 (1952 B EXACT)"
+        ],
+        "hw_slot_39": "0x418c4580",
+        "hw_slot_40": "0x418c4580",
+        "hw_slot_41": "0x418c45e0"
+      }
+    },
+    "stage3_v68_overlay": {
+      "va": "0x401fef00",
+      "bytes": 4210,
+      "max_bytes": 4224,
+      "free_bytes": 14,
+      "v68_lang_svc": "0x401ff0f4",
+      "v68_lang_svc_to_filmsim_trampoline": "0x401ff130 -> B 0x409c3d00",
+      "filmsim_slots_svc_dispatch": "0x409c3bb8",
+      "v68_menu_text": "0x401ff134",
+      "v68_nfp_overlap_text": "0x401ff294"
+    },
+    "stage1_objects_audited": 54,
+    "stage1_live_objects": 21,
+    "stage1_filmsim_objects": 16,
+    "stage1_v71r7_b1_objects": 12,
+    "stage1_v71r7_b2_objects": 5,
+    "stage1_scalar_objects": 49,
+    "stage1_neon_objects": 5,
+    "stage1_xm6_bridge_obj": {
+      "name": "filmsim_20-z8_xm6_bridge.c.o",
+      "insns": 3665,
+      "fp_insns": 0,
+      "simd_insns": 0
+    },
+    "stage1_neon_kernel_objects": {
+      "filmsim_02-z8_hdf_kernels.c.o": 3132,
+      "filmsim_07-z8_zf_grain_kernels.c.o": 879,
+      "filmsim_19-live_scale_neon.c.o": 1428,
+      "v71r7_b1_cube_frame_neon.c.o": 99,
+      "v71r7_b1_layer0_color_neon.c.o": 95
+    },
+    "payload_elf_fuji_residual_symbols": 0,
+    "filmsim_bank_bytes": 153456,
+    "filmsim_bank_free_bytes": 10384,
+    "v71r7_bank1_lut_core_bytes": 63088,
+    "v71r7_bank1_lut_core_free_bytes": 6544,
+    "v71r7_bank2_lut_menu_bytes": 34432,
+    "v71r7_bank2_lut_menu_free_bytes": 27008,
+    "pb_bin_actual_bytes": 36264,
+    "pb_bin_free_bytes": 632,
+    "pb_elf_forbidden_rpc_refs": 0,
+    "total_fp_insns": 0,
+    "non_kernel_simd_insns": 0,
+    "all_banks_functions_q_spill_audited": 698,
+    "all_banks_q_spill_insns": 0,
+    "filmsim_q_spill_insns": 0,
+    "bank1_lut_core_q_spill_insns": 0,
+    "bank2_lut_menu_q_spill_insns": 0,
+    "writable_sections": 0,
+    "abi_header_verified": {
+      "el1_path": "work/filmsim/src/include/z8_filmsim_abi.h",
+      "el0_path": "work/wlm-zh/filmsim/filmsim_abi.h",
+      "byte_identical": true,
+      "sha256": "9ab81226127d3403f5b3ba4e64c878ee79e7d8e7abeb55a9920dfaa4e2636a89"
+    },
+    "wlm_elf_audits": {
+      "filmsim.wlm": {
+        "wlm_bytes": 34856,
+        "wlm_sha256": "7943f163ffbe631d1620bb8a9162b59c108a9d853f2e122be197196cc08199cc",
+        "module_elf_sha256": "8c6d55c19eed67bc9b43e16b12fd0a67593233c310b8cdf772ea7ff11aab9dda",
+        "text_bytes": 30384,
+        "text_insns": 7596,
+        "embedded_verbatim_in_wlm": true,
+        "relocations": 0,
+        "dynamic_reloc_tags": 0,
+        "undefined_symbols": 0,
+        "fp_insns": 0,
+        "simd_insns": 0
+      },
+      "slotcard.wlm": {
+        "wlm_bytes": 52548,
+        "wlm_sha256": "b221d05ee0756b96cd2243a8b9507f0fa0d6879a6a0bebcfabb6e6a5ff4e4853",
+        "module_elf_sha256": "87e0be02f0c0dc44ae77ca5e5a8de34f5b73fcde7090998f1c324e9b04a40b2a",
+        "text_bytes": 48212,
+        "text_insns": 12053,
+        "embedded_verbatim_in_wlm": true,
+        "relocations": 0,
+        "dynamic_reloc_tags": 0,
+        "undefined_symbols": 0,
+        "fp_insns": 0,
+        "simd_insns": 0
+      }
+    }
+  },
+  "suites": {
+    "v71r7_lut_preview_arm": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "checks": 63,
+      "checks_by_group": {
+        "A_layer0_hooks": 13,
+        "B_photo_menu_ram": 7,
+        "C_menu_text_chain": 31,
+        "D_flight_ring": 4,
+        "E_layer0_suspend_power": 7,
+        "F_q_spill_audit": 1
+      },
+      "cpacr_el1_zero_fp_enforced_all_calls": true,
+      "abi_x19_x29_sp_verified_every_call": true,
+      "menu_text_samples_0x1f42": {
+        "0x1f42_JA": "LUT \u9078\u629e",
+        "0x1f42_EN": "Select LUT",
+        "0x1f42_zh-CN": "\u9009\u62e9 LUT",
+        "0x1f42_zh-TW": "\u9078\u64c7 LUT",
+        "0x1f42_EN_fallback": "Select LUT"
+      },
+      "q_spill_audit": {
+        ".filmsim": {
+          "functions_audited": 304,
+          "insns_audited": 37528,
+          "q_spills": 0,
+          "hits": []
+        },
+        ".v71r7_lut_core": {
+          "functions_audited": 239,
+          "insns_audited": 15334,
+          "q_spills": 0,
+          "hits": []
+        },
+        ".v71r7_lut_menu": {
+          "functions_audited": 155,
+          "insns_audited": 5549,
+          "q_spills": 0,
+          "hits": []
+        }
+      }
+    },
+    "xm6_bridge_arm": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "checks": 124,
+      "checks_by_group": {
+        "A_hw_ready": 18,
+        "B_iommu": 18,
+        "C_happy": 15,
+        "D_timeout_breaker": 11,
+        "E_run_diag": 16,
+        "F_slots_tunnel": 26,
+        "G_rgblut_and_spacer": 19,
+        "global": 1
+      },
+      "cpacr_el1_zero_fp_enforced_groups_A_to_D_F_G": true,
+      "abi_x19_x29_sp_verified_every_call": true,
+      "forbidden_0x40c91c84_hits": 0,
+      "v71r7_xm6_hardening_1_verified": {
+        "bank1_v71r7_lut_core_va": "0x409db000",
+        "mailbox_idle_addr": "0xa02e7eed0",
+        "mailbox_idle_sentinels": [
+          "0xdeadbeef",
+          "0x10000000",
+          "0xdeadbeef",
+          "0x10000000"
+        ],
+        "mailbox_negative_cases_verified": 5,
+        "slot41_dedicated_ext_ws_dsp_va": "0xa0200000",
+        "slot41_dedicated_ext_ws_bytes": 524288,
+        "slot41_release_ext_ws_uaf_guard_verified": true,
+        "two_tier_live_soft_backoff_and_hung_dma_minus2_verified": true,
+        "diag_skip_codes_0xf1_to_0xf7_verified": true,
+        "rgblut_opcode12_sync_submit_va": "0x40c90aec",
+        "rgblut_arena_1024_bytes": 1145856,
+        "class24_512m_spacer_retry_verified": true,
+        "post_busy_mailbox_uaf_withhold_free_verified": true
+      },
+      "diag_unready_ran_mask": "0x0",
+      "diag_ready_ran_mask": "0xf",
+      "diag_ready_passed_mask": "0xf",
+      "diag_ready_diffs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "slots_state_tunnel_verified": {
+        "entry_va": "0x401fe200",
+        "v68_lang_svc_va": "0x401ff0f4",
+        "trampoline_va": "0x409c3d00",
+        "dispatch_va": "0x409c3bb8",
+        "service_call_va": "0x409c3ab0",
+        "svc_ret_va": "0x401a7898",
+        "calls_executed_with_x19_x29_sp_conservation": 27,
+        "op34_dormant_zero_allocs": true,
+        "op42_qemu_unready_diag": {
+          "magic": 1146632282,
+          "version": 1,
+          "bytes": 64,
+          "hw_state": 0,
+          "loader_fault": 0,
+          "fw_loaded": 0,
+          "breaker_tripped": 0,
+          "passed_mask": 0,
+          "ran_mask": 0,
+          "diff_grain_exact": 0,
+          "diff_grain_sharp": 0,
+          "diff_hdf_still": 0,
+          "diff_hdf_live": 0,
+          "us_grain_exact": 0,
+          "us_grain_sharp": 0,
+          "us_hdf_still": 0,
+          "us_hdf_live": 0,
+          "dsp_status_last": 0,
+          "reserved": [
+            0,
+            0,
+            0
+          ]
+        },
+        "op43_reset_breaker_status": {
+          "magic": 827541082,
+          "version": 1,
+          "bytes": 64,
+          "flags": 1,
+          "active_pc_sel": 4105,
+          "xm6_hw_state": 2,
+          "xm6_runtime_flags": 3,
+          "xm6_last_err": 0,
+          "xm6_last_still_ms": 0,
+          "xm6_still_ok": 0,
+          "xm6_live_ok": 0,
+          "xm6_fallback_cnt": 0,
+          "xm6_last_live_us": 0,
+          "xm6_reserved": 0
+        }
+      }
+    },
+    "boot_panic03_cardslot_arm": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "schema": "v71r5.patch_boot_panic03_cardslot/v2",
+      "checks": 286,
+      "identity_par_el1_hooks": 2,
+      "task_affinity_pin": {
+        "addr": "0x401d02ec",
+        "word": "0x14000acb",
+        "cave_addr": "0x401d2e18",
+        "cave_bytes": 12,
+        "processor": 3,
+        "affinity": 4
+      },
+      "el0_budget_ms": 1500,
+      "fault_isolation_cave": "0x401d2e24",
+      "pb_system_trampoline": "0x401d6004 -> B 0x40d60ecc",
+      "cardslot_hooks": 7
+    },
+    "evf_pool6_arm": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "slot_size": "0x001c2000",
+      "headroom_bytes": 215040,
+      "sizer_cases": 10,
+      "slicing_overlaps": 0
+    },
+    "suite1_live_arm": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "1a_picker_abi": 175,
+      "1b_audio_recovery": 3,
+      "1c_final_duplex": 85,
+      "1d_review_deferral": 86,
+      "checks": 349
+    },
+    "suite2_hangfix_arm": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "v69_base_checks": 18,
+      "v70_inflight_checks": 7,
+      "v71r4_pbprcmxm_checks": 9,
+      "v71r5_hangfix_pbbounce_ev7_checks": 13,
+      "checks": 47,
+      "hooks_verified": 10
+    },
+    "suite3_portrait_pb": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "final_checks": 833
+    },
+    "suite4_filmsim_final": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "core_checks": 42,
+      "job2_guard_checks": 14,
+      "v71r5_runtime_checks": 14,
+      "checks": 70,
+      "fuji_stripped_zero_symbols": true,
+      "default_zf_blur_mode": 1,
+      "filmsim_bank_bytes": 153456,
+      "ctx_size_bytes": 9416,
+      "v71r5_features_verified": [
+        "still_hdf_4x4_subsample_fused_stage3",
+        "still_hdf_stage2_cancel_zero_write",
+        "pure_grain_y_only_class24_halved",
+        "resident_zf_grain_across_pool_suspend_resume",
+        "quarantine_3_strike_and_clean_reset",
+        "photo_slot1_burst_queue_and_summed_status",
+        "np3_flmrec_loader_all_6_ipcs_sc_record_priority_unbound_dormant"
+      ]
+    },
+    "suite5_font_cjk_final": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "exhaustive_cjk_decodes": 3603,
+      "gb2312_l1_zh_cn": 3755,
+      "gb2312_l1_zh_tw": 3755,
+      "menu_text_cases": 17,
+      "nfp_3154_3179_and_3225_3249_routing_verified": true,
+      "orig_text_va": "0x401eadcc"
+    },
+    "suite6_pb_icon_final": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "checks": 70
+    },
+    "suite7_v70_silky30fps_arm": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "part_7a_neon": 14,
+      "part_7b_w5_async": 10,
+      "part_7c_hevc_swar": 278,
+      "part_7d_fix2_fix3": 2,
+      "checks": 304
+    },
+    "v71_e2e_bench_arm": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "filmsim_functions_q_spill_audited": 304,
+      "total_q_spills": 0,
+      "one_time_bakes_insns": {
+        "zf_512x256_grain_tile_bake": 3032128
+      },
+      "per_frame_insns": {
+        "HDF_WEAK": 4814200,
+        "HDF_MEDIUM": 4856276,
+        "HDF_STRONG": 4941070,
+        "Total_CPU2": 4945133,
+        "CPU2_dispatch_overhead": 4063,
+        "LCD_submit_copy_1024x682": 91167,
+        "Scaler_plain_1024_to_1280": 1111085,
+        "Scaler_plus_Grain_1024_to_1280": 1580224,
+        "Scaler_plus_Grain_1024_to_1280_natural_z8": 1676262,
+        "Scaler_plus_Grain_1024_to_1280_pure_midtone": 1433005,
+        "Total_CPU0_LCD_Mode2": 1671391,
+        "EVF_downscale_1280_to_1024": 878510,
+        "Total_CPU0_EVF_Mode2": 2458734,
+        "EVF_1280x852_copy_plus_Grain": 786876
+      },
+      "v71r5_still_45mp_bench": {
+        "strip_geometry": "8256x128 NV16 (b=24, s1_step=4, gw=344)",
+        "scale_to_45mp": 43,
+        "color_hdf_med_strip_insns": 23852194,
+        "color_hdf_med_45mp_extrap_insns": 1025644342,
+        "color_hdf_med_45mp_est_a53_ms": 1349.53,
+        "v71r4_45mp_baseline_ms": 5800.0,
+        "speedup_vs_v71r4": 4.3,
+        "dark_zero_halo_strip_insns": 23487394,
+        "dark_zero_halo_45mp_est_a53_ms": 1328.89,
+        "mono_hdf_med_strip_insns": 9122231,
+        "mono_hdf_med_45mp_est_a53_ms": 516.13,
+        "stage2_cancel_insns": 1878237,
+        "stage2_cancel_est_a53_ms": 2.47,
+        "stage2_cancel_calls": 35,
+        "zf_grain_copy_256k_insns": 32781,
+        "zf_grain_copy_256k_insns_per_kib": 128.05,
+        "zf_grain_copy_unaligned_4099_insns": 541
+      },
+      "estimated_a53_ms_at_760MIPS": {
+        "HDF_WEAK_ms": 6.33,
+        "HDF_MEDIUM_ms": 6.39,
+        "HDF_STRONG_ms": 6.5,
+        "Total_CPU2_ms": 6.51,
+        "LCD_submit_copy_ms": 0.12,
+        "Scaler_plus_Grain_ms": 2.08,
+        "EVF_downscale_ms": 1.16,
+        "Total_CPU0_LCD_Mode2_ms": 2.2,
+        "Total_CPU0_EVF_Mode2_ms": 3.24,
+        "Still_45MP_Color_HDF_Med_ms": 1349.53,
+        "frame_budget_30fps_ms": 33.33,
+        "cpu2_within_30fps_budget": true,
+        "cpu0_lcd_within_30fps_budget": true,
+        "cpu0_evf_within_30fps_budget": true
+      },
+      "correctness": {
+        "unified_cpu2_bit_identical_to_hdf_live_nv12_1024": true,
+        "fused_grain_uv_plane_bit_identical": true,
+        "fused_grain_y_pixels_modified": 1020150,
+        "evf_downscale_nonzero_output": true,
+        "zero_q_spills_in_all_filmsim_functions": true,
+        "still_45mp_hdf_4x4_fused_stage3_ok": true,
+        "still_dark_zero_halo_fast_path_verified": true,
+        "still_mono_uv_untouched": true,
+        "still_stage2_cancel_zero_mutation": true,
+        "zf_grain_copy_u8_fast_aligned_and_unaligned_ok": true,
+        "abi_x19_x29_d8_d15_sp_verified_every_call": true
+      }
+    },
+    "c64_bug9_png_arm": {
+      "passed": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "checks": 50,
+      "hooks_verified": {
+        "0x4032dc80": "0x40b69150",
+        "0x4032dd60": "0x40b691b0",
+        "stock_chained_entries": [
+          "0x4032dc64",
+          "0x4032dd34"
+        ],
+        "synthesizer_insns_audited": 479,
+        "fp_simd_insns": 0
+      },
+      "png_cache_dram": {
+        "va": "0xa11634000",
+        "bytes": 45056,
+        "slots": 16,
+        "slot_stride": "0xb00"
+      },
+      "all_icons_distinct_pixels": true,
+      "cold_bmp_ptr_matches_bmp_desc": true,
+      "stock_and_gap_passthrough_verified": true,
+      "abi_x19_x29_sp_verified_every_call": true,
+      "icons_verified_count": 8,
+      "icons_verified": {
+        "0x7e00": {
+          "icon_id": "0x7e00",
+          "label": "[\u6846]C-10",
+          "required_by_brief": true,
+          "desc_kind": "0x0100",
+          "cache_ptr": "0xa11634010",
+          "cache_slot_index": 0,
+          "direct_and_chained_match": true,
+          "png_bytes": 2148,
+          "png_sha256": "59f005cf452ca2206678c0bdd806e2c662b1e7adc98fce0f027c0ac21eec7817",
+          "ihdr": {
+            "width": 64,
+            "height": 32,
+            "bit_depth": 8,
+            "color_type": 0,
+            "compression": 0,
+            "filter": 0,
+            "interlace": 0
+          },
+          "chunk_sequence": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "chunks_crc32_all_ok": true,
+          "plte_entries": 0,
+          "trns_entries": 0,
+          "idat_compressed_bytes": 2091,
+          "zlib_decompressed_bytes": 2080,
+          "scanline_filters": [
+            0
+          ],
+          "nonzero_pixel_bytes": 833,
+          "pixels_sha256": "3d1fca28a3cb951e86fe64feb9713e700100c2e5eabccea008dbc958da9626d0"
+        },
+        "0x7e01": {
+          "icon_id": "0x7e01",
+          "label": "[FC\u6846]C-10",
+          "required_by_brief": true,
+          "desc_kind": "0x0100",
+          "cache_ptr": "0xa11634b10",
+          "cache_slot_index": 1,
+          "direct_and_chained_match": true,
+          "png_bytes": 2148,
+          "png_sha256": "b774036e8ad273bf021957b6c78f334dc0abe02583db38260bd384a5f1556aca",
+          "ihdr": {
+            "width": 64,
+            "height": 32,
+            "bit_depth": 8,
+            "color_type": 0,
+            "compression": 0,
+            "filter": 0,
+            "interlace": 0
+          },
+          "chunk_sequence": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "chunks_crc32_all_ok": true,
+          "plte_entries": 0,
+          "trns_entries": 0,
+          "idat_compressed_bytes": 2091,
+          "zlib_decompressed_bytes": 2080,
+          "scanline_filters": [
+            0
+          ],
+          "nonzero_pixel_bytes": 837,
+          "pixels_sha256": "1d64b57a5548f004c9007ded943d45047f670b39f38ab357ce693ca04e7d2383"
+        },
+        "0x7e02": {
+          "icon_id": "0x7e02",
+          "label": "[C\u6846]C-10",
+          "required_by_brief": true,
+          "desc_kind": "0x0100",
+          "cache_ptr": "0xa11635610",
+          "cache_slot_index": 2,
+          "direct_and_chained_match": true,
+          "png_bytes": 2148,
+          "png_sha256": "ab407949f37b7697b376aad828da3b5d0f45021285a0e754fe54718cd2df1040",
+          "ihdr": {
+            "width": 64,
+            "height": 32,
+            "bit_depth": 8,
+            "color_type": 0,
+            "compression": 0,
+            "filter": 0,
+            "interlace": 0
+          },
+          "chunk_sequence": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "chunks_crc32_all_ok": true,
+          "plte_entries": 0,
+          "trns_entries": 0,
+          "idat_compressed_bytes": 2091,
+          "zlib_decompressed_bytes": 2080,
+          "scanline_filters": [
+            0
+          ],
+          "nonzero_pixel_bytes": 837,
+          "pixels_sha256": "60cee00e3af56a1abd1a9f322227315cc0c22bc74366adf5e8f7f622fe37e794"
+        },
+        "0x7f12": {
+          "icon_id": "0x7f12",
+          "label": "[C\u6846]C-64*",
+          "required_by_brief": true,
+          "desc_kind": "0x0100",
+          "cache_ptr": "0xa11635610",
+          "cache_slot_index": 2,
+          "direct_and_chained_match": true,
+          "png_bytes": 2148,
+          "png_sha256": "a4fcbf9d3a91dcf39bde45720813f0c341d4b5f1e599746ec2787ca01c31ca0f",
+          "ihdr": {
+            "width": 64,
+            "height": 32,
+            "bit_depth": 8,
+            "color_type": 0,
+            "compression": 0,
+            "filter": 0,
+            "interlace": 0
+          },
+          "chunk_sequence": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "chunks_crc32_all_ok": true,
+          "plte_entries": 0,
+          "trns_entries": 0,
+          "idat_compressed_bytes": 2091,
+          "zlib_decompressed_bytes": 2080,
+          "scanline_filters": [
+            0
+          ],
+          "nonzero_pixel_bytes": 922,
+          "pixels_sha256": "c095aad4ae1476e70b47e9a698d390ddc2488319ab257a539c369e75515165f5"
+        },
+        "0x7f21": {
+          "icon_id": "0x7f21",
+          "label": "[FC\u6846]C-10 LV 68x36 \u63cf\u8fb9",
+          "required_by_brief": true,
+          "desc_kind": "0x0100",
+          "cache_ptr": "0xa1163a310",
+          "cache_slot_index": 9,
+          "direct_and_chained_match": true,
+          "png_bytes": 2552,
+          "png_sha256": "7fc1e85c64695a83e30a72bc284476e7f6b76732c6eea4514ea662d4fda0bbb6",
+          "ihdr": {
+            "width": 68,
+            "height": 36,
+            "bit_depth": 8,
+            "color_type": 0,
+            "compression": 0,
+            "filter": 0,
+            "interlace": 0
+          },
+          "chunk_sequence": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "chunks_crc32_all_ok": true,
+          "plte_entries": 0,
+          "trns_entries": 0,
+          "idat_compressed_bytes": 2495,
+          "zlib_decompressed_bytes": 2484,
+          "scanline_filters": [
+            0
+          ],
+          "nonzero_pixel_bytes": 1806,
+          "pixels_sha256": "69ef28a140d083b637f02e4b46ade77c30f9afba2ddfd8b39d6c679ac8704a66"
+        },
+        "0x7f20": {
+          "icon_id": "0x7f20",
+          "label": "[\u6846]C-10 LV 68x36 \u63cf\u8fb9",
+          "required_by_brief": false,
+          "desc_kind": "0x0100",
+          "cache_ptr": "0xa11639810",
+          "cache_slot_index": 8,
+          "direct_and_chained_match": true,
+          "png_bytes": 2552,
+          "png_sha256": "be459d4b7adf1c2a413edcd41301b6f8847636c15eb7d7a2600d4639ca55972d",
+          "ihdr": {
+            "width": 68,
+            "height": 36,
+            "bit_depth": 8,
+            "color_type": 0,
+            "compression": 0,
+            "filter": 0,
+            "interlace": 0
+          },
+          "chunk_sequence": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "chunks_crc32_all_ok": true,
+          "plte_entries": 0,
+          "trns_entries": 0,
+          "idat_compressed_bytes": 2495,
+          "zlib_decompressed_bytes": 2484,
+          "scanline_filters": [
+            0
+          ],
+          "nonzero_pixel_bytes": 1753,
+          "pixels_sha256": "228616e269d080fd1fec628c7830b3e49bf18f13c7f41dbcd19cf42f74d3500b"
+        },
+        "0x7f22": {
+          "icon_id": "0x7f22",
+          "label": "[C\u6846]C-10 LV 68x36 \u63cf\u8fb9",
+          "required_by_brief": false,
+          "desc_kind": "0x0100",
+          "cache_ptr": "0xa1163ae10",
+          "cache_slot_index": 10,
+          "direct_and_chained_match": true,
+          "png_bytes": 2552,
+          "png_sha256": "aab854a604f57b4bc7d90286e51e2a7cb18d1a3dd44c816db3b7bb781b943b32",
+          "ihdr": {
+            "width": 68,
+            "height": 36,
+            "bit_depth": 8,
+            "color_type": 0,
+            "compression": 0,
+            "filter": 0,
+            "interlace": 0
+          },
+          "chunk_sequence": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "chunks_crc32_all_ok": true,
+          "plte_entries": 0,
+          "trns_entries": 0,
+          "idat_compressed_bytes": 2495,
+          "zlib_decompressed_bytes": 2484,
+          "scanline_filters": [
+            0
+          ],
+          "nonzero_pixel_bytes": 1774,
+          "pixels_sha256": "efe8715aded7132e34133e5dfb963c06839ac75176e103232acea0394138285d"
+        },
+        "0x8032": {
+          "icon_id": "0x8032",
+          "label": "[C\u6846]C-64* LV 68x36 \u63cf\u8fb9",
+          "required_by_brief": false,
+          "desc_kind": "0x0100",
+          "cache_ptr": "0xa1163ae10",
+          "cache_slot_index": 10,
+          "direct_and_chained_match": true,
+          "png_bytes": 2552,
+          "png_sha256": "4393d8d3b79067c62329813847973c9af31a94af94980735ec3d48dffc4034b6",
+          "ihdr": {
+            "width": 68,
+            "height": 36,
+            "bit_depth": 8,
+            "color_type": 0,
+            "compression": 0,
+            "filter": 0,
+            "interlace": 0
+          },
+          "chunk_sequence": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "chunks_crc32_all_ok": true,
+          "plte_entries": 0,
+          "trns_entries": 0,
+          "idat_compressed_bytes": 2495,
+          "zlib_decompressed_bytes": 2484,
+          "scanline_filters": [
+            0
+          ],
+          "nonzero_pixel_bytes": 1870,
+          "pixels_sha256": "9f83dfb1f30a0962c06b7430175520bbbf8a30d7380dcd090b8efd627dbc8e54"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "suite": "v71r5_pb_bounce_final",
+  "passed": true,
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "z8_unknown_count": 0,
+  "z9_unknown_count": 1,
+  "panic_count": 0,
+  "scenarios": {
+    "s1_imgrev_on": {
+      "scenario": "s1-imgrev-on",
+      "image_review": "on",
+      "passed": true,
+      "run_err": "RuntimeError('Unmodeled hardware access; inspect the captured first fault')",
+      "known_qemu_imgrev_c1_rearm_boundary": true,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "z8_unknown_count": 0,
+      "z9_unknown_count": 1,
+      "panic_count": 0,
+      "dram_audit": {
+        "pb_arbiter_ptr64": "0x401e26dc",
+        "expected_pb_arbiter_wrap": "0x401e26dc",
+        "pb_system_entry_hook_word": "0x142e2bb2"
+      },
+      "still_last_duration_ms": 1963.0,
+      "seen_view2": true,
+      "bounce_to_view3_count": 0,
+      "final_pb_state": {
+        "view_id": 2,
+        "view_st": 1,
+        "page_id": 1362,
+        "filmsim": {
+          "cfg_active": 1,
+          "dormant": 0,
+          "photo_phase": 5,
+          "photos_completed": 1,
+          "photos_bypassed": 0,
+          "photos_failed": 0,
+          "last_stages_applied": 5,
+          "still_last_duration_ms": 1963.0,
+          "photo_stage_start_us": 62824182,
+          "photo_finish_us": 64787178
+        }
+      },
+      "final_exit_state": null,
+      "checks": {
+        "no_run_exception": true,
+        "zero_z8_unknown": true,
+        "zero_panic": true,
+        "zero_stock_error_history": true,
+        "dram_pb_arbiter_ptr64_installed": true,
+        "filmsim_still_applied_mode2": true,
+        "still_duration_under_4000ms": true,
+        "zero_bounce_to_shooting_lv": true,
+        "settled_on_playback_page_1362": true
+      },
+      "out_dir": "/home/ycx/fxfix/onemov/v71r7-lut-preview/verify_qemu/runs/v71r5-pb-bounce-final/s1_imgrev_on"
+    },
+    "s2_s3_imgrev_off_and_exit": {
+      "scenario": "s2-s3-imgrev-off",
+      "image_review": "off",
+      "passed": true,
+      "run_err": null,
+      "known_qemu_imgrev_c1_rearm_boundary": false,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "z8_unknown_count": 0,
+      "z9_unknown_count": 0,
+      "panic_count": 0,
+      "dram_audit": {
+        "pb_arbiter_ptr64": "0x401e26dc",
+        "expected_pb_arbiter_wrap": "0x401e26dc",
+        "pb_system_entry_hook_word": "0x142e2bb2"
+      },
+      "still_last_duration_ms": 1964.32,
+      "seen_view2": true,
+      "bounce_to_view3_count": 0,
+      "final_pb_state": {
+        "view_id": 2,
+        "view_st": 1,
+        "page_id": 1362,
+        "filmsim": {
+          "cfg_active": 1,
+          "dormant": 0,
+          "photo_phase": 0,
+          "photos_completed": 1,
+          "photos_bypassed": 0,
+          "photos_failed": 0,
+          "last_stages_applied": 5,
+          "still_last_duration_ms": 1964.32,
+          "photo_stage_start_us": 61335811,
+          "photo_finish_us": 63300130
+        }
+      },
+      "final_exit_state": {
+        "view_id": 3,
+        "view_st": 1,
+        "page_id": 1495
+      },
+      "checks": {
+        "no_run_exception": true,
+        "zero_z8_unknown": true,
+        "zero_panic": true,
+        "zero_stock_error_history": true,
+        "dram_pb_arbiter_ptr64_installed": true,
+        "filmsim_still_applied_mode2": true,
+        "still_duration_under_4000ms": true,
+        "zero_bounce_to_shooting_lv": true,
+        "settled_on_playback_page_1362": true,
+        "normal_pb_exit_returns_to_shooting_lv": true
+      },
+      "out_dir": "/home/ycx/fxfix/onemov/v71r7-lut-preview/verify_qemu/runs/v71r5-pb-bounce-final/s2_s3_imgrev_off_and_exit"
+    }
+  },
+  "checks": {
+    "s1_imgrev_on.no_run_exception": true,
+    "s1_imgrev_on.zero_z8_unknown": true,
+    "s1_imgrev_on.zero_panic": true,
+    "s1_imgrev_on.zero_stock_error_history": true,
+    "s1_imgrev_on.dram_pb_arbiter_ptr64_installed": true,
+    "s1_imgrev_on.filmsim_still_applied_mode2": true,
+    "s1_imgrev_on.still_duration_under_4000ms": true,
+    "s1_imgrev_on.zero_bounce_to_shooting_lv": true,
+    "s1_imgrev_on.settled_on_playback_page_1362": true,
+    "s2_s3_imgrev_off_and_exit.no_run_exception": true,
+    "s2_s3_imgrev_off_and_exit.zero_z8_unknown": true,
+    "s2_s3_imgrev_off_and_exit.zero_panic": true,
+    "s2_s3_imgrev_off_and_exit.zero_stock_error_history": true,
+    "s2_s3_imgrev_off_and_exit.dram_pb_arbiter_ptr64_installed": true,
+    "s2_s3_imgrev_off_and_exit.filmsim_still_applied_mode2": true,
+    "s2_s3_imgrev_off_and_exit.still_duration_under_4000ms": true,
+    "s2_s3_imgrev_off_and_exit.zero_bounce_to_shooting_lv": true,
+    "s2_s3_imgrev_off_and_exit.settled_on_playback_page_1362": true,
+    "s2_s3_imgrev_off_and_exit.normal_pb_exit_returns_to_shooting_lv": true
+  }
+}

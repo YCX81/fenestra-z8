@@ -1,0 +1,41 @@
+{
+  "suite": "6_pb_icon_arm64_final_main",
+  "passed": true,
+  "checks": 70,
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "pb_elf_sha256": "460bdc0e042d254f7b3586df0720250aaeefc0c2a6cd983006ad24fcbc77dd33",
+  "hooks_verified": {
+    "0x4063b958": [
+      "BL",
+      "0x40196658"
+    ],
+    "0x40618be0": [
+      "BL",
+      "0x401967b4"
+    ]
+  },
+  "valid_native_return_pages_verified": [
+    "0x552",
+    "0x553",
+    "0x554",
+    "0x555",
+    "0x556",
+    "0x557",
+    "0x558",
+    "0x559",
+    "0x55a",
+    "0x55b",
+    "0x55c",
+    "0x55d",
+    "0x55e",
+    "0x55f",
+    "0x560",
+    "0x561",
+    "0x562",
+    "0x563",
+    "0x573"
+  ],
+  "ui_poll_catch_pages_verified": "0x552..0x569 (24 pages)",
+  "movie_pause_0x56d_excluded_in_both_hooks": true,
+  "cases_count": 70
+}

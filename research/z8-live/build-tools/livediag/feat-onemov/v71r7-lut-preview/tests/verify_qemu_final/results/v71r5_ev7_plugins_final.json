@@ -1,0 +1,800 @@
+{
+  "suite": "v71r5_ev7_plugins_final",
+  "trigger": "power-switch+active-view",
+  "passed": true,
+  "run_err": null,
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "z8_unknown_count": 0,
+  "z9_unknown_count": 0,
+  "panic_count": 0,
+  "phases": {
+    "mcu_power_switch": {
+      "suite": "v71r5_ev7_plugins_final",
+      "trigger": "power-switch-only",
+      "passed": false,
+      "run_err": null,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "z8_unknown_count": 0,
+      "z9_unknown_count": 0,
+      "panic_count": 0,
+      "snapshots": {
+        "baseline": {
+          "err_nz": false,
+          "workers": {
+            "portrait.wlm": {
+              "ptr": "0xa10d88f90",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "slotcard.wlm": {
+              "ptr": "0xa10dc6aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "filmsim.wlm": {
+              "ptr": "0xa10e69aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            }
+          },
+          "view_id": 3,
+          "view_st": 1,
+          "core": {
+            "ptr": "0xa10cf58f0",
+            "magic": "0x465a394d",
+            "installed": 1,
+            "phase": 2,
+            "error": 0,
+            "shutdown": 0
+          },
+          "ui": {
+            "ptr": "0xa10d45b50",
+            "shutdown": 0,
+            "usb": 0,
+            "standby_kept": 0
+          },
+          "rt": {
+            "ptr": "0xa10d4f180",
+            "shutdown": 0,
+            "flag_req": 0,
+            "flag_n": 0,
+            "flag_parks": 0,
+            "flag_restores": 0,
+            "flag_err": 0
+          },
+          "filmsim": {
+            "cfg_active": 1,
+            "dormant": 0,
+            "zf_maps_loaded": 1,
+            "photos_completed": 0,
+            "photos_failed": 0,
+            "last_stages_applied": 0
+          },
+          "virtual_ns": 16184935812
+        },
+        "ev7_standby": {
+          "err_nz": false,
+          "workers": {
+            "portrait.wlm": {
+              "ptr": "0xa10d88f90",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "slotcard.wlm": {
+              "ptr": "0xa10dc6aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "filmsim.wlm": {
+              "ptr": "0xa10e69aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            }
+          },
+          "view_id": 0,
+          "view_st": 1,
+          "core": {
+            "ptr": "0xa10cf58f0",
+            "magic": "0x465a394d",
+            "installed": 1,
+            "phase": 2,
+            "error": 0,
+            "shutdown": 0
+          },
+          "ui": {
+            "ptr": "0xa10d45b50",
+            "shutdown": 0,
+            "usb": 0,
+            "standby_kept": 1
+          },
+          "rt": {
+            "ptr": "0xa10d4f180",
+            "shutdown": 0,
+            "flag_req": 2,
+            "flag_n": 64,
+            "flag_parks": 1,
+            "flag_restores": 0,
+            "flag_err": 0
+          },
+          "filmsim": {
+            "cfg_active": 1,
+            "dormant": 0,
+            "zf_maps_loaded": 1,
+            "photos_completed": 0,
+            "photos_failed": 0,
+            "last_stages_applied": 0
+          },
+          "virtual_ns": 19587607812
+        },
+        "ev8_wake": {
+          "err_nz": false,
+          "workers": {
+            "portrait.wlm": {
+              "ptr": "0xa10d88f90",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "slotcard.wlm": {
+              "ptr": "0xa10dc6aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "filmsim.wlm": {
+              "ptr": "0xa10e69aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            }
+          },
+          "view_id": 0,
+          "view_st": 1,
+          "core": {
+            "ptr": "0xa10cf58f0",
+            "magic": "0x465a394d",
+            "installed": 1,
+            "phase": 2,
+            "error": 0,
+            "shutdown": 0
+          },
+          "ui": {
+            "ptr": "0xa10d45b50",
+            "shutdown": 0,
+            "usb": 0,
+            "standby_kept": 1
+          },
+          "rt": {
+            "ptr": "0xa10d4f180",
+            "shutdown": 0,
+            "flag_req": 0,
+            "flag_n": 0,
+            "flag_parks": 1,
+            "flag_restores": 1,
+            "flag_err": 0
+          },
+          "filmsim": {
+            "cfg_active": 1,
+            "dormant": 0,
+            "zf_maps_loaded": 1,
+            "photos_completed": 0,
+            "photos_failed": 0,
+            "last_stages_applied": 0
+          },
+          "virtual_ns": 25054758261
+        }
+      },
+      "plugin_manager_menu": {
+        "jpeg_fine_done": false,
+        "plugin_mgr_seen": false,
+        "plugin_mgr_rows": 0
+      },
+      "card_audit": {
+        "boot_flag_present": true,
+        "boot_flag": {
+          "valid": true,
+          "bytes": 64,
+          "magic_ascii": "FXBOOT1",
+          "build_id_hex": "0xd590d8cd",
+          "crc_ok": true,
+          "sha256": "5e9adef9881f9a5be6f4c7381945b1471fe6599a3fa0bcbe8bb6f11a0cb733ea"
+        }
+      },
+      "checks": {
+        "no_run_exception": true,
+        "zero_z8_unknown": true,
+        "zero_panic": true,
+        "zero_stock_error_history": true,
+        "baseline_3_plugins_running_non_usb": true,
+        "ev7_non_usb_flag_parked_cleanly": true,
+        "ev7_zero_shutdown_latched": true,
+        "ev7_all_3_plugins_stay_running": true,
+        "ev8_flag_restored_cleanly": true,
+        "ev8_all_3_plugins_still_running": true,
+        "setup_menu_plugin_manager_lists_all_3_plugins": false,
+        "post_wake_filmsim_still_capture_applied": false,
+        "card_boot_flag_restored_valid_crc": true
+      },
+      "out_dir": "/home/ycx/fxfix/onemov/v71r7-lut-preview/verify_qemu/runs/v71r5-ev7-plugins-final/mcu_power_switch"
+    },
+    "active_view_ev7_ev8": {
+      "suite": "v71r5_ev7_plugins_final",
+      "trigger": "native-call",
+      "passed": true,
+      "run_err": null,
+      "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+      "z8_unknown_count": 0,
+      "z9_unknown_count": 0,
+      "panic_count": 0,
+      "snapshots": {
+        "baseline": {
+          "err_nz": false,
+          "workers": {
+            "portrait.wlm": {
+              "ptr": "0xa10d88f90",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "slotcard.wlm": {
+              "ptr": "0xa10dc6aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "filmsim.wlm": {
+              "ptr": "0xa10e69aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            }
+          },
+          "view_id": 3,
+          "view_st": 1,
+          "core": {
+            "ptr": "0xa10cf58f0",
+            "magic": "0x465a394d",
+            "installed": 1,
+            "phase": 2,
+            "error": 0,
+            "shutdown": 0
+          },
+          "ui": {
+            "ptr": "0xa10d45b50",
+            "shutdown": 0,
+            "usb": 0,
+            "standby_kept": 0
+          },
+          "rt": {
+            "ptr": "0xa10d4f180",
+            "shutdown": 0,
+            "flag_req": 0,
+            "flag_n": 0,
+            "flag_parks": 0,
+            "flag_restores": 0,
+            "flag_err": 0
+          },
+          "filmsim": {
+            "cfg_active": 1,
+            "dormant": 0,
+            "zf_maps_loaded": 1,
+            "photos_completed": 0,
+            "photos_failed": 0,
+            "last_stages_applied": 0
+          },
+          "virtual_ns": 18982447812
+        },
+        "ev7-native-inject": {
+          "err_nz": false,
+          "workers": {
+            "portrait.wlm": {
+              "ptr": "0xa10d88f90",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "slotcard.wlm": {
+              "ptr": "0xa10dc6aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "filmsim.wlm": {
+              "ptr": "0xa10e69aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            }
+          },
+          "view_id": 3,
+          "view_st": 1,
+          "core": {
+            "ptr": "0xa10cf58f0",
+            "magic": "0x465a394d",
+            "installed": 1,
+            "phase": 2,
+            "error": 0,
+            "shutdown": 0
+          },
+          "ui": {
+            "ptr": "0xa10d45b50",
+            "shutdown": 0,
+            "usb": 0,
+            "standby_kept": 1
+          },
+          "rt": {
+            "ptr": "0xa10d4f180",
+            "shutdown": 0,
+            "flag_req": 1,
+            "flag_n": 0,
+            "flag_parks": 0,
+            "flag_restores": 0,
+            "flag_err": 0
+          },
+          "filmsim": {
+            "cfg_active": 1,
+            "dormant": 0,
+            "zf_maps_loaded": 1,
+            "photos_completed": 0,
+            "photos_failed": 0,
+            "last_stages_applied": 0
+          }
+        },
+        "ev7_standby": {
+          "err_nz": false,
+          "workers": {
+            "portrait.wlm": {
+              "ptr": "0xa10d88f90",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "slotcard.wlm": {
+              "ptr": "0xa10dc6aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "filmsim.wlm": {
+              "ptr": "0xa10e69aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            }
+          },
+          "view_id": 3,
+          "view_st": 1,
+          "core": {
+            "ptr": "0xa10cf58f0",
+            "magic": "0x465a394d",
+            "installed": 1,
+            "phase": 2,
+            "error": 0,
+            "shutdown": 0
+          },
+          "ui": {
+            "ptr": "0xa10d45b50",
+            "shutdown": 0,
+            "usb": 0,
+            "standby_kept": 1
+          },
+          "rt": {
+            "ptr": "0xa10d4f180",
+            "shutdown": 0,
+            "flag_req": 2,
+            "flag_n": 64,
+            "flag_parks": 1,
+            "flag_restores": 0,
+            "flag_err": 0
+          },
+          "filmsim": {
+            "cfg_active": 1,
+            "dormant": 0,
+            "zf_maps_loaded": 1,
+            "photos_completed": 0,
+            "photos_failed": 0,
+            "last_stages_applied": 0
+          },
+          "virtual_ns": 20993780881
+        },
+        "ev8-native-inject": {
+          "err_nz": false,
+          "workers": {
+            "portrait.wlm": {
+              "ptr": "0xa10d88f90",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "slotcard.wlm": {
+              "ptr": "0xa10dc6aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "filmsim.wlm": {
+              "ptr": "0xa10e69aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            }
+          },
+          "view_id": 3,
+          "view_st": 1,
+          "core": {
+            "ptr": "0xa10cf58f0",
+            "magic": "0x465a394d",
+            "installed": 1,
+            "phase": 2,
+            "error": 0,
+            "shutdown": 0
+          },
+          "ui": {
+            "ptr": "0xa10d45b50",
+            "shutdown": 0,
+            "usb": 0,
+            "standby_kept": 1
+          },
+          "rt": {
+            "ptr": "0xa10d4f180",
+            "shutdown": 0,
+            "flag_req": 3,
+            "flag_n": 64,
+            "flag_parks": 1,
+            "flag_restores": 0,
+            "flag_err": 0
+          },
+          "filmsim": {
+            "cfg_active": 1,
+            "dormant": 0,
+            "zf_maps_loaded": 1,
+            "photos_completed": 0,
+            "photos_failed": 0,
+            "last_stages_applied": 0
+          }
+        },
+        "ev8_wake": {
+          "err_nz": false,
+          "workers": {
+            "portrait.wlm": {
+              "ptr": "0xa10d88f90",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "slotcard.wlm": {
+              "ptr": "0xa10dc6aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "filmsim.wlm": {
+              "ptr": "0xa10e69aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            }
+          },
+          "view_id": 3,
+          "view_st": 1,
+          "core": {
+            "ptr": "0xa10cf58f0",
+            "magic": "0x465a394d",
+            "installed": 1,
+            "phase": 2,
+            "error": 0,
+            "shutdown": 0
+          },
+          "ui": {
+            "ptr": "0xa10d45b50",
+            "shutdown": 0,
+            "usb": 0,
+            "standby_kept": 1
+          },
+          "rt": {
+            "ptr": "0xa10d4f180",
+            "shutdown": 0,
+            "flag_req": 0,
+            "flag_n": 0,
+            "flag_parks": 1,
+            "flag_restores": 1,
+            "flag_err": 0
+          },
+          "filmsim": {
+            "cfg_active": 1,
+            "dormant": 0,
+            "zf_maps_loaded": 1,
+            "photos_completed": 0,
+            "photos_failed": 0,
+            "last_stages_applied": 0
+          },
+          "virtual_ns": 23041447812
+        },
+        "plugin_manager_0x7001": {
+          "menu": {
+            "page": "0xa10d14e18",
+            "page_id": 28673,
+            "selected": 0,
+            "count": 4,
+            "rows": [
+              {
+                "index": 0,
+                "text_id": 3328,
+                "row_id": 31488
+              },
+              {
+                "index": 1,
+                "text_id": 3404,
+                "row_id": 31489
+              },
+              {
+                "index": 2,
+                "text_id": 3480,
+                "row_id": 31490
+              },
+              {
+                "index": 3,
+                "text_id": 3158,
+                "row_id": 31506
+              }
+            ],
+            "title_id": 3155
+          },
+          "state": {
+            "err_nz": false,
+            "workers": {
+              "portrait.wlm": {
+                "ptr": "0xa10d88f90",
+                "magic": "0x465a3957",
+                "phase": 2,
+                "error": 0
+              },
+              "slotcard.wlm": {
+                "ptr": "0xa10dc6aa0",
+                "magic": "0x465a3957",
+                "phase": 2,
+                "error": 0
+              },
+              "filmsim.wlm": {
+                "ptr": "0xa10e69aa0",
+                "magic": "0x465a3957",
+                "phase": 2,
+                "error": 0
+              }
+            },
+            "view_id": 1,
+            "view_st": 1,
+            "core": {
+              "ptr": "0xa10cf58f0",
+              "magic": "0x465a394d",
+              "installed": 1,
+              "phase": 2,
+              "error": 0,
+              "shutdown": 0
+            },
+            "ui": {
+              "ptr": "0xa10d45b50",
+              "shutdown": 0,
+              "usb": 0,
+              "standby_kept": 1
+            },
+            "rt": {
+              "ptr": "0xa10d4f180",
+              "shutdown": 0,
+              "flag_req": 0,
+              "flag_n": 0,
+              "flag_parks": 1,
+              "flag_restores": 1,
+              "flag_err": 0
+            },
+            "filmsim": {
+              "cfg_active": 1,
+              "dormant": 0,
+              "zf_maps_loaded": 1,
+              "photos_completed": 0,
+              "photos_failed": 0,
+              "last_stages_applied": 0
+            }
+          }
+        },
+        "post_wake_lv": {
+          "err_nz": false,
+          "workers": {
+            "portrait.wlm": {
+              "ptr": "0xa10d88f90",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "slotcard.wlm": {
+              "ptr": "0xa10dc6aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "filmsim.wlm": {
+              "ptr": "0xa10e69aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            }
+          },
+          "view_id": 3,
+          "view_st": 1,
+          "core": {
+            "ptr": "0xa10cf58f0",
+            "magic": "0x465a394d",
+            "installed": 1,
+            "phase": 2,
+            "error": 0,
+            "shutdown": 0
+          },
+          "ui": {
+            "ptr": "0xa10d45b50",
+            "shutdown": 0,
+            "usb": 0,
+            "standby_kept": 1
+          },
+          "rt": {
+            "ptr": "0xa10d4f180",
+            "shutdown": 0,
+            "flag_req": 0,
+            "flag_n": 0,
+            "flag_parks": 1,
+            "flag_restores": 1,
+            "flag_err": 0
+          },
+          "filmsim": {
+            "cfg_active": 1,
+            "dormant": 0,
+            "zf_maps_loaded": 1,
+            "photos_completed": 0,
+            "photos_failed": 0,
+            "last_stages_applied": 0
+          },
+          "virtual_ns": 44844919812
+        },
+        "post_wake_shot": {
+          "err_nz": false,
+          "workers": {
+            "portrait.wlm": {
+              "ptr": "0xa10d88f90",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "slotcard.wlm": {
+              "ptr": "0xa10dc6aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            },
+            "filmsim.wlm": {
+              "ptr": "0xa10e69aa0",
+              "magic": "0x465a3957",
+              "phase": 2,
+              "error": 0
+            }
+          },
+          "view_id": 3,
+          "view_st": 1,
+          "core": {
+            "ptr": "0xa10cf58f0",
+            "magic": "0x465a394d",
+            "installed": 1,
+            "phase": 2,
+            "error": 0,
+            "shutdown": 0
+          },
+          "ui": {
+            "ptr": "0xa10d45b50",
+            "shutdown": 0,
+            "usb": 0,
+            "standby_kept": 1
+          },
+          "rt": {
+            "ptr": "0xa10d4f180",
+            "shutdown": 0,
+            "flag_req": 0,
+            "flag_n": 0,
+            "flag_parks": 1,
+            "flag_restores": 1,
+            "flag_err": 0
+          },
+          "filmsim": {
+            "cfg_active": 1,
+            "dormant": 0,
+            "zf_maps_loaded": 1,
+            "photos_completed": 1,
+            "photos_failed": 0,
+            "last_stages_applied": 5
+          },
+          "virtual_ns": 47640463812
+        }
+      },
+      "plugin_manager_menu": {
+        "jpeg_fine_done": true,
+        "plugin_mgr_seen": true,
+        "plugin_mgr_rows": 3
+      },
+      "card_audit": {
+        "boot_flag_present": true,
+        "boot_flag": {
+          "valid": true,
+          "bytes": 64,
+          "magic_ascii": "FXBOOT1",
+          "build_id_hex": "0xd590d8cd",
+          "crc_ok": true,
+          "sha256": "cd50852a5fa19d632cf671e6008b984e085c50153f9e034ff121970397d51f50"
+        }
+      },
+      "checks": {
+        "no_run_exception": true,
+        "zero_z8_unknown": true,
+        "zero_panic": true,
+        "zero_stock_error_history": true,
+        "baseline_3_plugins_running_non_usb": true,
+        "ev7_non_usb_flag_parked_cleanly": true,
+        "ev7_zero_shutdown_latched": true,
+        "ev7_all_3_plugins_stay_running": true,
+        "ev8_flag_restored_cleanly": true,
+        "ev8_all_3_plugins_still_running": true,
+        "setup_menu_plugin_manager_lists_all_3_plugins": true,
+        "post_wake_filmsim_still_capture_applied": true,
+        "card_boot_flag_restored_valid_crc": true
+      },
+      "out_dir": "/home/ycx/fxfix/onemov/v71r7-lut-preview/verify_qemu/runs/v71r5-ev7-plugins-final/active_view_ev7_ev8"
+    }
+  },
+  "plugin_manager_menu": {
+    "jpeg_fine_done": true,
+    "plugin_mgr_seen": true,
+    "plugin_mgr_rows": 3
+  },
+  "card_audit": {
+    "mcu_power_switch": {
+      "boot_flag_present": true,
+      "boot_flag": {
+        "valid": true,
+        "bytes": 64,
+        "magic_ascii": "FXBOOT1",
+        "build_id_hex": "0xd590d8cd",
+        "crc_ok": true,
+        "sha256": "5e9adef9881f9a5be6f4c7381945b1471fe6599a3fa0bcbe8bb6f11a0cb733ea"
+      }
+    },
+    "active_view_ev7_ev8": {
+      "boot_flag_present": true,
+      "boot_flag": {
+        "valid": true,
+        "bytes": 64,
+        "magic_ascii": "FXBOOT1",
+        "build_id_hex": "0xd590d8cd",
+        "crc_ok": true,
+        "sha256": "cd50852a5fa19d632cf671e6008b984e085c50153f9e034ff121970397d51f50"
+      }
+    }
+  },
+  "checks": {
+    "no_run_exception": true,
+    "zero_z8_unknown": true,
+    "zero_panic": true,
+    "zero_stock_error_history": true,
+    "baseline_3_plugins_running_non_usb": true,
+    "ev7_non_usb_flag_parked_cleanly": true,
+    "ev7_zero_shutdown_latched": true,
+    "ev7_all_3_plugins_stay_running": true,
+    "ev8_flag_restored_cleanly": true,
+    "ev8_all_3_plugins_still_running": true,
+    "setup_menu_plugin_manager_lists_all_3_plugins": true,
+    "post_wake_filmsim_still_capture_applied": true,
+    "card_boot_flag_restored_valid_crc": true
+  },
+  "out_dir": "/home/ycx/fxfix/onemov/v71r7-lut-preview/verify_qemu/runs/v71r5-ev7-plugins-final"
+}

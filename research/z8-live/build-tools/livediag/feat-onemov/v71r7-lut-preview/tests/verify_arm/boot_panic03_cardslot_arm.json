@@ -1,0 +1,113 @@
+{
+  "suite": "boot_panic03_cardslot_v2_arm64_final_main_v71r5",
+  "version": "v71r5-smooth-dualcard",
+  "schema": "v71r5.patch_boot_panic03_cardslot/v2",
+  "passed": true,
+  "checks": 286,
+  "final_main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "unpatched_baseline_main_sha256": "e6e9e4021e537a6cb5317193ab293ef62dbb6a7ba2107dfe4e26c2e588205d89",
+  "test_script": "build/cardslot_v71r4/test_v71r4_unicorn.py",
+  "suites_executed": [
+    "Suite A: Hardened hook_read / hook_write basic checks (write cvac, read pre-civac + post-ivac, unaligned head/mid/tail split)",
+    "Suite B: Software L1D-cache vs DRAM coherence simulator (v42 negative proof + v71r4 positive proofs across 1B..0x2000B, EOF, errors, 4x SP mod-64 alignments)",
+    "Suite C: identity() PAR_EL1 + DAIF=#0xf preemption guard (negative PANIC 03 proof + positive proofs across DAIF={0x0,0x80,0x3c0}, s1e1r/s1e1w, CODE range, OOR)",
+    "Suite D: fx_z8_task_start() single-core CPU2 affinity pin (processor=3, affinity=4 at 0x401d2e18) validated against Nikon RTOS cre_tsk rule",
+    "Suite E: EL0 wall-clock budget relaxation (100 ms -> 1500 ms across 0x401c4de0, 0x401d22a8..ac, 0x401d1e10)",
+    "Suite F: Single-plugin fault isolation (loader 0x401cfa50 -> 0x401d2e24, startup_health 0x401cf89c..a4, startup_stop 0x401cf974..7c)",
+    "Suite G: Fenestra Core system trampoline reconnect (0x401d6004 -> B 0x40d60ecc pb_system_entry)"
+  ],
+  "static_final_main_verification": {
+    "identity_par_el1_cave": {
+      "addr": "0x401d2dc8",
+      "bytes": 80,
+      "sha256": "18414a2ede193abdd4a11dc88bdd8cc14e4475fb551d43f6a3f3e3c6baca38cd",
+      "hooks": {
+        "at_s1e1r": {
+          "address": "0x401d199c",
+          "target": "0x401d2dc8"
+        },
+        "at_s1e1w": {
+          "address": "0x401d19c8",
+          "target": "0x401d2df0"
+        }
+      }
+    },
+    "task_affinity_pin": {
+      "addr": "0x401d02ec",
+      "word": "0x14000acb",
+      "cave_addr": "0x401d2e18",
+      "cave_bytes": 12,
+      "processor": 3,
+      "affinity": 4
+    },
+    "el0_budget_1500ms": {
+      "budget_ms": 1500,
+      "sites": {
+        "0x401c4de0": "0x5280bb8a",
+        "0x401d22a8": "0x51177508",
+        "0x401d22ac": "0x3117711f",
+        "0x401d1e10": "0x71176d1f"
+      }
+    },
+    "fault_isolation": {
+      "cave_addr": "0x401d2e24",
+      "cave_bytes": 68,
+      "cave_sha256": "5df22f81f027037fcafc5307575cb3e63e55bafab362f340bda6ddb8ec62e721",
+      "supervisor_call": "0x401cfa50 -> BL 0x401d2e24",
+      "startup_health": "0x401cf89c -> mov w0, #2; b 0x401cf858",
+      "startup_stop": "0x401cf974 -> mov w0, #4; b 0x401cf93c"
+    },
+    "pb_system_trampoline": {
+      "addr": "0x401d6004",
+      "target": "0x40d60ecc"
+    },
+    "cardslot_v71r4": {
+      "cave_addr": "0x401fe300",
+      "cave_bytes": 3000,
+      "free_before_font_overlay": 72,
+      "trailing_zero_verified": true,
+      "cave_sha256": "71051800a48f031f4e8f3cfa3b83b8534d7de216e5a4b9ea0c199a92ab059a3e",
+      "hooks": {
+        "open": {
+          "entry": "0x402dd4f8",
+          "target": "0x401fe338"
+        },
+        "remove": {
+          "entry": "0x402dda4c",
+          "target": "0x401fe40c"
+        },
+        "rename": {
+          "entry": "0x402dd9fc",
+          "target": "0x401fe45c"
+        },
+        "opendir": {
+          "entry": "0x402ddc6c",
+          "target": "0x401fe508"
+        },
+        "mkdir": {
+          "entry": "0x402ddbdc",
+          "target": "0x401fe57c"
+        },
+        "read": {
+          "entry": "0x402dd6c8",
+          "target": "0x401fe5cc"
+        },
+        "write": {
+          "entry": "0x402dd78c",
+          "target": "0x401fe934"
+        }
+      }
+    }
+  },
+  "raw_output": [
+    "=== Suite A: Hardened hook_read / hook_write basic checks (66+ checks) ===",
+    "=== Suite B: L1D-Cache vs DRAM Coherence Simulation (Negative + Positive Proof!) ===",
+    "=== Suite C: identity() PAR_EL1 + DAIF Preemption Test ===",
+    "=== Suite D: fx_z8_task_start() Single-Core CPU2 Affinity Pin + cre_tsk Validation ===",
+    "=== Suite E: EL0 Wall-Clock Budget Relaxation (100 ms -> 1500 ms across all 3 sites) ===",
+    "=== Suite F: Single-Plugin Fault Isolation (loader + startup_health + startup_stop) ===",
+    "=== Suite G: Fenestra Core System Trampoline Reconnect (0x401d6004 -> 0x40d60ecc) ===",
+    "",
+    "test_v71r4_unicorn: 286 checks, ALL PASS"
+  ]
+}

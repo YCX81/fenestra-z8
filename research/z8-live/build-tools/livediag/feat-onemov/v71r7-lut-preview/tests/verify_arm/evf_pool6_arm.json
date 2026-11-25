@@ -1,0 +1,406 @@
+{
+  "test": "evf_pool6_arm_unicorn_v71r2",
+  "passed": true,
+  "target_main": "/Users/ycx/Nikon/build-tools/livediag/feat-onemov/v71r7-lut-preview/final/main.main",
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "target_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "target_build_id": "0xd590d8cd",
+  "static_disassembly": {
+    "0x40cf4620": {
+      "word": "0x5284000d",
+      "asm": "mov w13, #0x2000"
+    },
+    "0x40cf4630": {
+      "word": "0x72a0038d",
+      "asm": "movk w13, #0x1c, lsl #16"
+    },
+    "composed_w13": "0x001c2000",
+    "0x407138d0_branch_target": "0x4019ffc0"
+  },
+  "stock_bug_repro_math": {
+    "stock_pool6_slot_bytes": 1382400,
+    "evf_32_frame_bytes": 1628160,
+    "stock_overflow_per_slot_bytes": 245760,
+    "patched_pool6_slot_bytes": 1843200,
+    "patched_headroom_per_slot_bytes": 215040
+  },
+  "aspect_fix_emulation": {
+    "lcd_live_1280x852": {
+      "enabled": 1,
+      "buf_w": 1024,
+      "buf_h": 680,
+      "rect": [
+        0,
+        0,
+        1024,
+        680
+      ],
+      "par": [
+        1,
+        1
+      ],
+      "y_bytes": 696320,
+      "uv_bytes": 348160,
+      "nv12_bytes": 1044480,
+      "nv12_hex": "0x0ff000",
+      "src_wh": [
+        1280,
+        852
+      ],
+      "src_packed_u32": "0x03540500",
+      "mode_in": 0,
+      "aspect_fix_w2_out": 1
+    },
+    "evf_live_1280x852": {
+      "enabled": 1,
+      "buf_w": 1280,
+      "buf_h": 848,
+      "rect": [
+        0,
+        56,
+        1280,
+        904
+      ],
+      "par": [
+        1,
+        1
+      ],
+      "y_bytes": 1085440,
+      "uv_bytes": 542720,
+      "nv12_bytes": 1628160,
+      "nv12_hex": "0x18d800",
+      "src_wh": [
+        1280,
+        852
+      ],
+      "src_packed_u32": "0x03540500",
+      "mode_in": 0,
+      "aspect_fix_w2_out": 1
+    },
+    "evf_live_1024x682": {
+      "enabled": 1,
+      "buf_w": 1280,
+      "buf_h": 848,
+      "rect": [
+        0,
+        56,
+        1280,
+        904
+      ],
+      "par": [
+        1,
+        1
+      ],
+      "y_bytes": 1085440,
+      "uv_bytes": 542720,
+      "nv12_bytes": 1628160,
+      "nv12_hex": "0x18d800",
+      "src_wh": [
+        1024,
+        682
+      ],
+      "src_packed_u32": "0x02aa0400",
+      "mode_in": 0,
+      "aspect_fix_w2_out": 1
+    },
+    "evf_stock_16x9_1920x1080": {
+      "enabled": 1,
+      "buf_w": 1280,
+      "buf_h": 720,
+      "rect": [
+        0,
+        120,
+        1280,
+        840
+      ],
+      "par": [
+        1,
+        1
+      ],
+      "y_bytes": 921600,
+      "uv_bytes": 460800,
+      "nv12_bytes": 1382400,
+      "nv12_hex": "0x151800",
+      "src_wh": [
+        1920,
+        1080
+      ],
+      "src_packed_u32": "0x04380780",
+      "mode_in": 0,
+      "aspect_fix_w2_out": 0
+    }
+  },
+  "pool6_sizer_emulation": {
+    "codecs_0_to_4_all_passed": true,
+    "cases": [
+      {
+        "codec": 0,
+        "res_flag": 0,
+        "slot_count": 7,
+        "slot_sizes_hex": [
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000"
+        ],
+        "all_slots_eq_0x1c2000": true,
+        "all_ptrs_zeroed": true,
+        "headroom_vs_evf_32_bytes": 215040
+      },
+      {
+        "codec": 0,
+        "res_flag": 1,
+        "slot_count": 12,
+        "slot_sizes_hex": [
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000"
+        ],
+        "all_slots_eq_0x1c2000": true,
+        "all_ptrs_zeroed": true,
+        "headroom_vs_evf_32_bytes": 215040
+      },
+      {
+        "codec": 1,
+        "res_flag": 0,
+        "slot_count": 7,
+        "slot_sizes_hex": [
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000"
+        ],
+        "all_slots_eq_0x1c2000": true,
+        "all_ptrs_zeroed": true,
+        "headroom_vs_evf_32_bytes": 215040
+      },
+      {
+        "codec": 1,
+        "res_flag": 1,
+        "slot_count": 12,
+        "slot_sizes_hex": [
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000"
+        ],
+        "all_slots_eq_0x1c2000": true,
+        "all_ptrs_zeroed": true,
+        "headroom_vs_evf_32_bytes": 215040
+      },
+      {
+        "codec": 2,
+        "res_flag": 0,
+        "slot_count": 12,
+        "slot_sizes_hex": [
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000"
+        ],
+        "all_slots_eq_0x1c2000": true,
+        "all_ptrs_zeroed": true,
+        "headroom_vs_evf_32_bytes": 215040
+      },
+      {
+        "codec": 2,
+        "res_flag": 1,
+        "slot_count": 12,
+        "slot_sizes_hex": [
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000"
+        ],
+        "all_slots_eq_0x1c2000": true,
+        "all_ptrs_zeroed": true,
+        "headroom_vs_evf_32_bytes": 215040
+      },
+      {
+        "codec": 3,
+        "res_flag": 0,
+        "slot_count": 12,
+        "slot_sizes_hex": [
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000"
+        ],
+        "all_slots_eq_0x1c2000": true,
+        "all_ptrs_zeroed": true,
+        "headroom_vs_evf_32_bytes": 215040
+      },
+      {
+        "codec": 3,
+        "res_flag": 1,
+        "slot_count": 12,
+        "slot_sizes_hex": [
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000"
+        ],
+        "all_slots_eq_0x1c2000": true,
+        "all_ptrs_zeroed": true,
+        "headroom_vs_evf_32_bytes": 215040
+      },
+      {
+        "codec": 4,
+        "res_flag": 0,
+        "slot_count": 7,
+        "slot_sizes_hex": [
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000"
+        ],
+        "all_slots_eq_0x1c2000": true,
+        "all_ptrs_zeroed": true,
+        "headroom_vs_evf_32_bytes": 215040
+      },
+      {
+        "codec": 4,
+        "res_flag": 1,
+        "slot_count": 12,
+        "slot_sizes_hex": [
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000",
+          "0x001c2000"
+        ],
+        "all_slots_eq_0x1c2000": true,
+        "all_ptrs_zeroed": true,
+        "headroom_vs_evf_32_bytes": 215040
+      }
+    ],
+    "invalid_codec_5_zero_slots": {
+      "codec": 5,
+      "res_flag": 0,
+      "slot_count": 0,
+      "slot_sizes_hex": [],
+      "all_slots_eq_0x1c2000": false,
+      "all_ptrs_zeroed": true,
+      "headroom_vs_evf_32_bytes": null
+    }
+  },
+  "pool6_slicing_emulation": {
+    "slots_7_hdmi_off": {
+      "pool6_count": 7,
+      "pool7_count": 0,
+      "pool_0x73_total_bytes": 12902400,
+      "pool6_slot_stride_hex": "0x001c2000",
+      "evf_32_min_gap_bytes": 215040,
+      "evf_32_overlap_count": 0,
+      "evf_43_ceiling_overlap_count": 0,
+      "pool6_first_buf": "0x8dcbd7200",
+      "pool6_last_uv_end_32": "0x8dd7f0a00",
+      "pool7_first_buf": null,
+      "zero_spill_into_pool7": true
+    },
+    "slots_7_hdmi_on": {
+      "pool6_count": 7,
+      "pool7_count": 7,
+      "pool_0x73_total_bytes": 477388800,
+      "pool6_slot_stride_hex": "0x001c2000",
+      "evf_32_min_gap_bytes": 215040,
+      "evf_32_overlap_count": 0,
+      "evf_43_ceiling_overlap_count": 0,
+      "pool6_first_buf": "0x8dcbd7200",
+      "pool6_last_uv_end_32": "0x8dd7f0a00",
+      "pool7_first_buf": "0x8dd825200",
+      "zero_spill_into_pool7": true
+    },
+    "slots_12_hdmi_off": {
+      "pool6_count": 12,
+      "pool7_count": 0,
+      "pool_0x73_total_bytes": 22118400,
+      "pool6_slot_stride_hex": "0x001c2000",
+      "evf_32_min_gap_bytes": 215040,
+      "evf_32_overlap_count": 0,
+      "evf_43_ceiling_overlap_count": 0,
+      "pool6_first_buf": "0x8dcbd7200",
+      "pool6_last_uv_end_32": "0x8de0baa00",
+      "pool7_first_buf": null,
+      "zero_spill_into_pool7": true
+    },
+    "slots_12_hdmi_on": {
+      "pool6_count": 12,
+      "pool7_count": 12,
+      "pool_0x73_total_bytes": 287539200,
+      "pool6_slot_stride_hex": "0x001c2000",
+      "evf_32_min_gap_bytes": 215040,
+      "evf_32_overlap_count": 0,
+      "evf_43_ceiling_overlap_count": 0,
+      "pool6_first_buf": "0x8dcbd7200",
+      "pool6_last_uv_end_32": "0x8de0baa00",
+      "pool7_first_buf": "0x8de0ef200",
+      "zero_spill_into_pool7": true
+    }
+  }
+}

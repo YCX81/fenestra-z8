@@ -1,0 +1,118 @@
+{
+  "name": "v71r4_fn_pc_final",
+  "passed": true,
+  "checks_passed": 17,
+  "checks_total": 17,
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "slotcard_wlm_sha256": "b221d05ee0756b96cd2243a8b9507f0fa0d6879a6a0bebcfabb6e6a5ff4e4853",
+  "filmsim_wlm_sha256": "7943f163ffbe631d1620bb8a9162b59c108a9d853f2e122be197196cc08199cc",
+  "z8_unknown_count": 0,
+  "z9_unknown_count": 0,
+  "panic_count": 0,
+  "checks": {
+    "0_zero_unknown_zero_err": true,
+    "1_fn1_bound_mode9": true,
+    "2_sd_fn1_hold_ready": true,
+    "3_sd_dial_m1_to_auto_and_82_cands": true,
+    "4_sd_dial_m2_to_c60_cloud": true,
+    "5_sd_dial_m3_to_c59": true,
+    "6_sd_dial_p1_back_c60": true,
+    "7_release_lv_keeps_c60": true,
+    "8_imenu_after_fn1_c60": true,
+    "9_from_c60_fn1_hold": true,
+    "10_from_c60_dial_m1_c59": true,
+    "11_from_c59_dial_p1_c60": true,
+    "12_from_c60_dial_p1_wrap_auto": true,
+    "13_wrap_auto_to_sd": true,
+    "14_roundtrip_back_c60": true,
+    "15_final_lv_and_imenu_c60": true,
+    "16_info_panel_fn1_hud_p1643_c60_open_and_release": true
+  },
+  "assertions": [
+    {
+      "name": "0_zero_unknown_zero_err",
+      "ok": true,
+      "detail": "phase=done Z8_UNKNOWN=0 Z9_UNKNOWN=0 PANIC=0"
+    },
+    {
+      "name": "1_fn1_bound_mode9",
+      "ok": true,
+      "detail": "fn1_mode=9"
+    },
+    {
+      "name": "2_sd_fn1_hold_ready",
+      "ok": true,
+      "detail": "p=1495 pc=1 dis9=1 reg0=82 en95=82"
+    },
+    {
+      "name": "3_sd_dial_m1_to_auto_and_82_cands",
+      "ok": true,
+      "detail": "pc=0 sel=0x0 reg0=82 en95=82 c60_en=1"
+    },
+    {
+      "name": "4_sd_dial_m2_to_c60_cloud",
+      "ok": true,
+      "detail": "pc=90 sel=0x103b 19b=0xe0 cur='ZeroFC'(b=0x20) fidx=90"
+    },
+    {
+      "name": "5_sd_dial_m3_to_c59",
+      "ok": true,
+      "detail": "pc=89 sel=0x103a 19b=0xdf cur='T-Max 400' fidx=89"
+    },
+    {
+      "name": "6_sd_dial_p1_back_c60",
+      "ok": true,
+      "detail": "pc=90 sel=0x103b cur='ZeroFC'"
+    },
+    {
+      "name": "7_release_lv_keeps_c60",
+      "ok": true,
+      "detail": "p=1495 sel=0x103b 19b=0xe0"
+    },
+    {
+      "name": "8_imenu_after_fn1_c60",
+      "ok": true,
+      "detail": "p=1496 sel=0x103b 19b=0xe0"
+    },
+    {
+      "name": "9_from_c60_fn1_hold",
+      "ok": true,
+      "detail": "p=1495 pc=90 fidx=90"
+    },
+    {
+      "name": "10_from_c60_dial_m1_c59",
+      "ok": true,
+      "detail": "pc=89 sel=0x103a cur='T-Max 400'"
+    },
+    {
+      "name": "11_from_c59_dial_p1_c60",
+      "ok": true,
+      "detail": "pc=90 sel=0x103b cur='ZeroFC'"
+    },
+    {
+      "name": "12_from_c60_dial_p1_wrap_auto",
+      "ok": true,
+      "detail": "pc=0 sel=0x0 cur='AUTO'"
+    },
+    {
+      "name": "13_wrap_auto_to_sd",
+      "ok": true,
+      "detail": "pc=1 sel=0x1 cur='STANDARD'"
+    },
+    {
+      "name": "14_roundtrip_back_c60",
+      "ok": true,
+      "detail": "pc=90 sel=0x103b cur='ZeroFC'"
+    },
+    {
+      "name": "15_final_lv_and_imenu_c60",
+      "ok": true,
+      "detail": "lv p=1495 19b=0xe0; imenu p=1496 19b=0xe0"
+    },
+    {
+      "name": "16_info_panel_fn1_hud_p1643_c60_open_and_release",
+      "ok": true,
+      "detail": "p33=1637 p34=1643(hud=81/82 ptr=0xa11632c00 pc=90) p35=1637(sel=0x103b)"
+    }
+  ]
+}

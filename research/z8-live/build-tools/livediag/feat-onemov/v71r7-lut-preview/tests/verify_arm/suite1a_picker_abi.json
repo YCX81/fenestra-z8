@@ -1,0 +1,16 @@
+{
+  "suite": "1a_picker_abi_final_main",
+  "passed": true,
+  "checks": 175,
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "elf_sha256": "aa53bedd09e1ebdf327b7476cf45e578a495bbe0f2a420da0e7ec63d0fb335d3",
+  "runtime_size": 23904,
+  "abi_parity_with_v62": true,
+  "w5_mirror_aliases_lv_regs": true,
+  "executed_directly_from_final_main": true,
+  "symbols": {
+    "la_best_begin": "0x401e77ec",
+    "la_best_valid": "0x401e7cc8"
+  },
+  "dsc1304_hi_accepted": 46
+}

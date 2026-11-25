@@ -1,0 +1,632 @@
+{
+  "audit": "independent_whole_image_and_disassembly_audit_v71r7",
+  "version": "v71r7-lut-preview",
+  "passed": true,
+  "package_verification": {
+    "Z_8_0406_bin_sha256": "9976d012cac5c88e585a29a9798a7f691c74caad56098b60825959b6ae492b64",
+    "Z_8_0406_bin_bytes": 99051117,
+    "way1_self_recovered_0x11e0000_ok": true,
+    "way2_outer_sha1_body_crc16_modules_ok": true,
+    "way3_99mb_keystream_identity_vs_stock_c311_ok": true,
+    "outer_sha1_ok": true,
+    "body_crc16_ok": true,
+    "identity": "eg2070_0406p0.bi",
+    "roundtrip_unpack_equals_final_main": true,
+    "final_main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+    "bootguard_0x401fe060": "0xd590d8cd",
+    "bootguard_sha256_formula_matches": true,
+    "orig_text_va": "0x401eadcc",
+    "v68_lang_svc_va": "0x401ff0f4",
+    "v68_menu_text_va": "0x401ff134",
+    "v68_nfp_overlap_text_va": "0x401ff294",
+    "filmsim_slots_svc_trampoline_va": "0x409c3d00",
+    "filmsim_slots_svc_dispatch_va": "0x409c3bb8",
+    "v68_lang_svc_to_filmsim_trampoline_verified": true,
+    "modules": [
+      {
+        "name": "ex2070_030000.bi",
+        "start": 208,
+        "size": 524290,
+        "sha256": "4b7ea2ea40360717ceffd3d8db6fe48f5fae9d5c13b69632dc750bdc41b571c2",
+        "crc_ok": true
+      },
+      {
+        "name": "_tpj01_0210.bin",
+        "start": 524498,
+        "size": 57346,
+        "sha256": "689f80feb0d271d73ac719e0c5872cfc0dac643097e528b6a1b156d4c55efe1a",
+        "crc_ok": true
+      },
+      {
+        "name": "eg2070_0406p0.bi",
+        "start": 581844,
+        "size": 81807711,
+        "sha256": "4e18e8a32040448046fabd6a322e4d64b237d7389a25bb1f74d6c72ff92a1029",
+        "crc_ok": true
+      },
+      {
+        "name": "vr2070_010100.bi",
+        "start": 82389555,
+        "size": 838664,
+        "sha256": "30e363077655f9936894fdc00104263eac4a33892e621199f84bf8f4cecea3bb",
+        "crc_ok": true
+      },
+      {
+        "name": "li2070_0311b0.bi",
+        "start": 83228219,
+        "size": 15822850,
+        "sha256": "804a55508cd6b323336fbba14034810e4b22fcc5fd1030d3a7dc08d62767cc55",
+        "crc_ok": true
+      }
+    ],
+    "sd_card_fenestra_verified": {
+      "STARTUP-Z8.0": {
+        "bytes": 64,
+        "sha256": "2ec2832aba51a344eda779c13c4bbab56dde6ac82e270df276de7990cd477636",
+        "matches_staged": true
+      },
+      "ZF_GRAIN.BIN": {
+        "bytes": 27588,
+        "sha256": "99c70fa224b701d34621edd159be09b3536f00b45173ac07e57b12cdaa18433d",
+        "matches_staged": true
+      },
+      "filmsim.wlm": {
+        "bytes": 34856,
+        "sha256": "7943f163ffbe631d1620bb8a9162b59c108a9d853f2e122be197196cc08199cc",
+        "matches_staged": true
+      },
+      "portrait.wlm": {
+        "bytes": 4872,
+        "sha256": "53965f8e5789e4da58c3ac6a70e6ba774d12c49433e0d511eaa4bcbbb4172aaa",
+        "matches_staged": true
+      },
+      "slotcard.wlm": {
+        "bytes": 52548,
+        "sha256": "b221d05ee0756b96cd2243a8b9507f0fa0d6879a6a0bebcfabb6e6a5ff4e4853",
+        "matches_staged": true
+      }
+    },
+    "abi_header_verified": {
+      "el1_path": "work/filmsim/src/include/z8_filmsim_abi.h",
+      "el0_path": "work/wlm-zh/filmsim/filmsim_abi.h",
+      "byte_identical": true,
+      "sha256": "9ab81226127d3403f5b3ba4e64c878ee79e7d8e7abeb55a9920dfaa4e2636a89"
+    }
+  },
+  "whole_image_byte_accounting": {
+    "image_bytes": 81807709,
+    "stock_c311_main_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+    "stock_to_final_total_changed_bytes": 2335230,
+    "stock_to_stage0": {
+      "stock_sha256": "2b43a31c9de838f84b12416de4348a7004e65be07f853ec56ec2b10f3a8e3853",
+      "nfp_rc2_sha256": "71c1475f2dd2f87a9d3f10f90408f9aa0487d62fbfa3dfb2ceb8a0b05140e382",
+      "seed_core_sha256": "50f2a5b22217710c6f35faf1e4639ef675f2738184525be0190f36bcc42cb36b",
+      "stage0_sha256": "d40e16954c7059f8f981f0a3559313ad0d8feb937a0dd9de3a2f823cc6841900",
+      "pb_payload_bytes": 36264,
+      "pb_payload_sha256": "f9f32cb1300b3d2413d32fd84c43a1ddc5e631fde16214a8652e0420a2797071",
+      "stock_to_stage0_changed_bytes": 1166288,
+      "sublayers": {
+        "nfp_v050_windows": 1320,
+        "nfp_v050_bytes": 1130478,
+        "fenestra_core_bytes": 282894,
+        "pb_fix37_usb_pool_bootguard_bytes": 31596,
+        "cardslot_v42_bytes": 188370,
+        "evf_reloc_bytes": 40,
+        "portrait52_bytes": 3518,
+        "portrait53_bytes": 284,
+        "crop_aspect_bytes": 204,
+        "evf_pool6_bytes": 8,
+        "boot_panic03_cardslot_v2_span_bytes": 3312,
+        "c64_imenu_ui_span_bytes": 19784,
+        "xm6_elf0_mutated_bytes": 148694,
+        "xm6_elf0_changed_span_bytes": 160350
+      },
+      "evf_pool6_patches": [
+        {
+          "address": "0x40cf4620",
+          "size": 4,
+          "old": "0d008352",
+          "new": "0d008452",
+          "old_word": "0x5283000d",
+          "new_word": "0x5284000d",
+          "old_asm": "mov w13, #0x1800",
+          "new_asm": "mov w13, #0x2000",
+          "slot_size_before": "0x00151800",
+          "slot_size_after": "0x001c2000"
+        },
+        {
+          "address": "0x40cf4630",
+          "size": 4,
+          "old": "ad02a072",
+          "new": "8d03a072",
+          "old_word": "0x72a002ad",
+          "new_word": "0x72a0038d",
+          "old_asm": "movk w13, #0x15, lsl #16",
+          "new_asm": "movk w13, #0x1c, lsl #16",
+          "slot_size_before": "0x00151800",
+          "slot_size_after": "0x001c2000"
+        }
+      ],
+      "stock_to_stage0_unexplained_bytes": 0,
+      "stock_to_stage0_unexplained_ranges": []
+    },
+    "stage0_to_stage1_changed_bytes": 320871,
+    "stage0_to_stage1_unexplained_bytes": 0,
+    "stage1_to_stage2_changed_bytes": 379,
+    "stage1_to_stage2_unexplained_bytes": 0,
+    "stage2_to_final_changed_bytes": 847743,
+    "stage2_to_final_unexplained_bytes": 0,
+    "stage0_to_final_union_changed_bytes": 1168983,
+    "stage0_to_final_union_unexplained_bytes": 0,
+    "stock_to_final_total_unexplained_bytes": 0,
+    "hooks_verified_count": 101,
+    "stage1_hooks_verified_count": 62,
+    "hangfix_hooks_verified_count": 9,
+    "v71r7_layer0_power_hooks_verified_count": 6,
+    "v71r7_photo_menu_ram_init_patches_verified_count": 2,
+    "v71r7_unused_burst_0xa02917ca0_zero_verified": true,
+    "stage0_v71r5_hooks_and_sites_verified_count": 269,
+    "stage0_boot_panic03_cardslot_v2": {
+      "schema": "v71r5.patch_boot_panic03_cardslot/v2",
+      "sites_verified": 18,
+      "cpu2_pin": {
+        "processor": 3,
+        "affinity": 4,
+        "cave": "0x401d2e18"
+      },
+      "el0_budget_ms": 1500,
+      "fault_isolation_cave": "0x401d2e24",
+      "pb_system_trampoline": "0x401d6004 -> B 0x40d60ecc"
+    },
+    "stage0_c64_imenu_ui": {
+      "branch_hooks_count": 28,
+      "direct_edits_count": 8,
+      "pointer_relocs_count": 54,
+      "patched_sites_verified": 251,
+      "rx_cave_spans": {
+        "ext_tile_table": [
+          "0x40b66000",
+          "0x40b683e8"
+        ],
+        "code": [
+          "0x40b68400",
+          "0x40b6a95c"
+        ]
+      },
+      "rx_cave_bounds": [
+        "0x40b66000",
+        "0x40b6a95c"
+      ],
+      "rx_cave_within_0x40b70000": true,
+      "fp_simd_insns": 0
+    },
+    "stage0_nfp_v050": {
+      "stage0_contract": {
+        "status": "PASS",
+        "target_tag": "v0.5.1",
+        "video_menu_rows": 45,
+        "video_file_type_rows": 11,
+        "crop_menu_rows": 7,
+        "language_tables": 36,
+        "offsets_per_language": 3251,
+        "string_id_range": [
+          3137,
+          3249
+        ],
+        "relocated_clow_desc": "0x40af1040",
+        "relocated_heif_dispatch": "0x40af9a00",
+        "relocated_area_menu": "0x40b16000",
+        "relocated_area_icons": "0x40b1a000",
+        "relocated_q3_stash_ram": "0xa0ff52000",
+        "loader_end": "0x40b8a000",
+        "framing_fixes_code_va": "0x40968000",
+        "framing_fixes_code_bytes": 2096,
+        "framing_fixes_code_sha256": "4f7ad4576b5eaa6eb74c60943fabd218cb7cbe32db64f349e6a63ccc0381bbd2",
+        "af_geometry_calls": {
+          "0x41055ac0": "0x40968000",
+          "0x410567dc": "0x40968000"
+        },
+        "af_forward_target": "0x40968148",
+        "af_inverse_target": "0x409681d0",
+        "ap_points_scale_target": "0x40968600",
+        "playback_fit_target": "0x4019ffc0",
+        "pool6_slot_size": "0x001c2000",
+        "pool6_slot_superset_0x1c2000": true
+      },
+      "final_contract_with_chained_0x40ea3638": {
+        "status": "PASS",
+        "target_tag": "v0.5.1",
+        "video_menu_rows": 45,
+        "video_file_type_rows": 11,
+        "crop_menu_rows": 7,
+        "language_tables": 36,
+        "offsets_per_language": 3251,
+        "string_id_range": [
+          3137,
+          3249
+        ],
+        "relocated_clow_desc": "0x40af1040",
+        "relocated_heif_dispatch": "0x40af9a00",
+        "relocated_area_menu": "0x40b16000",
+        "relocated_area_icons": "0x40b1a000",
+        "relocated_q3_stash_ram": "0xa0ff52000",
+        "loader_end": "0x40c00000",
+        "framing_fixes_code_va": "0x40968000",
+        "framing_fixes_code_bytes": 2096,
+        "framing_fixes_code_sha256": "4f7ad4576b5eaa6eb74c60943fabd218cb7cbe32db64f349e6a63ccc0381bbd2",
+        "af_geometry_calls": {
+          "0x41055ac0": "0x40968000",
+          "0x410567dc": "0x40968000"
+        },
+        "af_forward_target": "0x40968148",
+        "af_inverse_target": "0x409681d0",
+        "ap_points_scale_target": "0x40968600",
+        "playback_fit_target": "0x4019ffc0",
+        "pool6_slot_size": "0x001c2000",
+        "pool6_slot_superset_0x1c2000": true
+      },
+      "final_apply_windows_verified": 1319,
+      "relocated_windows_intact": [
+        "0x40af0000..0x40af7000",
+        "0x40af8000..0x40afa000",
+        "0x40b12000..0x40b1b000"
+      ],
+      "q3_stash_ram": "0xa0ff52000",
+      "q3_stash_zero_overlap_with_cjk_ext_1": true,
+      "cjk_ext_1_end_exclusive": "0x40950f07",
+      "menu_context_0x401fcf44_word": "0x7101151f",
+      "native_count": 3250
+    },
+    "stage0_xm6_elf0": {
+      "schema": "v71r6.patch_xm6_elf0_stage0/v1",
+      "variant": "coexist_nikondma",
+      "e_phnum": 16,
+      "e_phoff": "0x0a8f20",
+      "elf0_size_bytes": 692516,
+      "elf0_patched_sha256": "b65798d7a6cbd026cb97cb01df7278732cdcd6a7f1e27f8f23b1437ecb2c88db",
+      "stock_to_final_mutated_bytes": 148694,
+      "changed_span_total_bytes": 160350,
+      "stage0_equals_final_bit_for_bit": true,
+      "text_z8fx_expeed7_16b_reversed_verified": true,
+      "rodata_z8fx_little_endian_verified": true,
+      "verify_stage0": {
+        "status": "PASS",
+        "elf0_size_bytes": 692516,
+        "elf0_patched_sha256": "b65798d7a6cbd026cb97cb01df7278732cdcd6a7f1e27f8f23b1437ecb2c88db",
+        "gap_12b_zero": true,
+        "elf1_unchanged": true,
+        "elf1_sha256": "de961025902457d6dab9cbb17eb832f9e441c1d685867b109bf354a8b81af2f4",
+        "elf2_unchanged": true,
+        "elf2_sha256": "c7787ceda602a291dea500b778aefa682a20a7c6345363d33a3b24fa3bfd041f",
+        "changed_ranges_count": 10,
+        "loader_0x40c92194_sim": {
+          "loader_fault_flag": 0,
+          "phdrs_processed": 16,
+          "loaded_spans": 17,
+          "overlaps": 0,
+          "stock_oem_regions_preserved": true,
+          "verified_segments": [
+            ".text.z8fx: DSP 0x418c4580..0x418e5420 -> ARM 0x0a018c4580 (134816 B EXACT)",
+            ".rodata.z8fx: IDM 0x0003bc40..0x0003c3e0 -> HW 0x1c03bc40 (1952 B EXACT)"
+          ],
+          "hw_slot_39": "0x418c4580",
+          "hw_slot_40": "0x418c4580",
+          "hw_slot_41": "0x418c45e0"
+        }
+      },
+      "verify_final": {
+        "status": "PASS",
+        "elf0_size_bytes": 692516,
+        "elf0_patched_sha256": "b65798d7a6cbd026cb97cb01df7278732cdcd6a7f1e27f8f23b1437ecb2c88db",
+        "gap_12b_zero": true,
+        "elf1_unchanged": true,
+        "elf1_sha256": "de961025902457d6dab9cbb17eb832f9e441c1d685867b109bf354a8b81af2f4",
+        "elf2_unchanged": true,
+        "elf2_sha256": "c7787ceda602a291dea500b778aefa682a20a7c6345363d33a3b24fa3bfd041f",
+        "changed_ranges_count": 10,
+        "loader_0x40c92194_sim": {
+          "loader_fault_flag": 0,
+          "phdrs_processed": 16,
+          "loaded_spans": 17,
+          "overlaps": 0,
+          "stock_oem_regions_preserved": true,
+          "verified_segments": [
+            ".text.z8fx: DSP 0x418c4580..0x418e5420 -> ARM 0x0a018c4580 (134816 B EXACT)",
+            ".rodata.z8fx: IDM 0x0003bc40..0x0003c3e0 -> HW 0x1c03bc40 (1952 B EXACT)"
+          ],
+          "hw_slot_39": "0x418c4580",
+          "hw_slot_40": "0x418c4580",
+          "hw_slot_41": "0x418c45e0"
+        }
+      }
+    },
+    "stage3_v68_overlay": {
+      "va": "0x401fef00",
+      "bytes": 4210,
+      "max_bytes": 4224,
+      "free_bytes": 14,
+      "v68_lang_svc": "0x401ff0f4",
+      "v68_lang_svc_to_filmsim_trampoline": "0x401ff130 -> B 0x409c3d00",
+      "filmsim_slots_svc_dispatch": "0x409c3bb8",
+      "v68_menu_text": "0x401ff134",
+      "v68_nfp_overlap_text": "0x401ff294"
+    },
+    "pb_bin_actual_bytes": 36264,
+    "pb_bin_sha256": "f9f32cb1300b3d2413d32fd84c43a1ddc5e631fde16214a8652e0420a2797071",
+    "pb_bin_free_bytes": 632,
+    "pb_elf_forbidden_rpc_audit": {
+      "insns_scanned": 8046,
+      "forbidden_addrs_checked": {
+        "0x403fb59c": "stock_pb_sync_rpc_wrapper_0x403fb59c",
+        "0x403fa1b8": "stock_pb_sync_rpc_cmd54_0x403fa1b8",
+        "0xa032b5120": "stock_ui_flg_0xa032b5120",
+        "0xa032cd320": "stock_pb_rpc_mutex_0xa032cd320"
+      },
+      "forbidden_refs_found": 0
+    },
+    "filmsim_bank_bytes": 153456,
+    "filmsim_bank_capacity_bytes": 163840,
+    "filmsim_bank_free_bytes": 10384,
+    "v71r7_bank1_lut_core_bytes": 63088,
+    "v71r7_bank1_lut_core_capacity_bytes": 69632,
+    "v71r7_bank1_lut_core_free_bytes": 6544,
+    "v71r7_bank2_lut_menu_bytes": 34432,
+    "v71r7_bank2_lut_menu_capacity_bytes": 61440,
+    "v71r7_bank2_lut_menu_free_bytes": 27008,
+    "manifest_pb_metadata_note": null
+  },
+  "disassembly_and_simd_audit": {
+    "elf_sections_match_final_main_bit_for_bit": true,
+    "writable_sections_in_payload_pb_and_cardslot_elf": 0,
+    "writable_sections_in_wsl_54_objs": 0,
+    "payload_elf_fuji_residual_symbols": 0,
+    "total_fp_instructions_anywhere": 0,
+    "non_kernel_neon_simd_instructions": 0,
+    "filmsim_q_spill_instructions": 0,
+    "bank1_lut_core_q_spill_instructions": 0,
+    "bank2_lut_menu_q_spill_instructions": 0,
+    "all_banks_functions_q_spill_audited": 698,
+    "all_banks_q_spill_instructions": 0,
+    "xm6_bridge_obj_audit": {
+      "name": "filmsim_20-z8_xm6_bridge.c.o",
+      "insns": 3665,
+      "fp_insns": 0,
+      "simd_insns": 0
+    },
+    "capstone_final_main_banks": [
+      {
+        "bank": "pb_fix37_text",
+        "start": "0x40196000",
+        "end": "0x4019ddb8",
+        "bytes": 32184,
+        "insns_decoded": 8046,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {},
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      },
+      {
+        "bank": "live_shutter",
+        "start": "0x4019f020",
+        "end": "0x4019ff38",
+        "bytes": 3864,
+        "insns_decoded": 966,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {},
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      },
+      {
+        "bank": "fenestra_core_v2_caves",
+        "start": "0x401d2dc8",
+        "end": "0x401d2e68",
+        "bytes": 160,
+        "insns_decoded": 40,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {},
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      },
+      {
+        "bank": "live_primary_text",
+        "start": "0x401e2000",
+        "end": "0x401fa424",
+        "bytes": 99364,
+        "insns_decoded": 24841,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {},
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      },
+      {
+        "bank": "portrait_pb_cave",
+        "start": "0x401fcd00",
+        "end": "0x401fce8c",
+        "bytes": 396,
+        "insns_decoded": 99,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {},
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      },
+      {
+        "bank": "menu_context_helper",
+        "start": "0x401fcf40",
+        "end": "0x401fcf90",
+        "bytes": 80,
+        "insns_decoded": 20,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {},
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      },
+      {
+        "bank": "live_extra",
+        "start": "0x401fd218",
+        "end": "0x401fdc44",
+        "bytes": 2604,
+        "insns_decoded": 651,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {},
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      },
+      {
+        "bank": "cardslot_v71r4_code",
+        "start": "0x401fe300",
+        "end": "0x401fee98",
+        "bytes": 2968,
+        "insns_decoded": 742,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {},
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      },
+      {
+        "bank": "font_zh_overlay_code",
+        "start": "0x401fef00",
+        "end": "0x401ff3cc",
+        "bytes": 1228,
+        "insns_decoded": 307,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {},
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      },
+      {
+        "bank": "c64_imenu_ui_code",
+        "start": "0x40b68400",
+        "end": "0x40b698cc",
+        "bytes": 5324,
+        "insns_decoded": 1331,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {},
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      },
+      {
+        "bank": "filmsim_all_functions",
+        "start": "0x409b0000",
+        "end": "0x409d5770",
+        "functions_audited": 304,
+        "xm6_bridge_functions_audited": 0,
+        "xm6_bridge_insns_audited": 0,
+        "insns_decoded": 37528,
+        "q_spill_insns": 0,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {
+          "filmsim_02-z8_hdf_kernels.c.o": 3132,
+          "filmsim_07-z8_zf_grain_kernels.c.o": 879,
+          "filmsim_19-live_scale_neon.c.o": 1428
+        },
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      },
+      {
+        "bank": "v71r7_bank1_lut_core_functions",
+        "start": "0x409db000",
+        "end": "0x409ea670",
+        "functions_audited": 239,
+        "xm6_bridge_functions_audited": 35,
+        "xm6_bridge_insns_audited": 3665,
+        "insns_decoded": 15334,
+        "q_spill_insns": 0,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {
+          "v71r7_b1_cube_frame_neon.c.o": 99,
+          "v71r7_b1_layer0_color_neon.c.o": 95
+        },
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      },
+      {
+        "bank": "v71r7_bank2_lut_menu_functions",
+        "start": "0x40981000",
+        "end": "0x40989680",
+        "functions_audited": 155,
+        "xm6_bridge_functions_audited": 0,
+        "xm6_bridge_insns_audited": 0,
+        "insns_decoded": 5549,
+        "q_spill_insns": 0,
+        "fp_insns": 0,
+        "fp_samples": [],
+        "simd_allowed_by_file": {},
+        "simd_forbidden_insns": 0,
+        "simd_forbidden_samples": []
+      }
+    ],
+    "wsl_54_object_files_llvm_objdump": {
+      "objs_audited": 54,
+      "live_objs_audited": 21,
+      "filmsim_objs_audited": 16,
+      "v71r7_b1_objs_audited": 12,
+      "v71r7_b2_objs_audited": 5,
+      "scalar_objs_audited": 49,
+      "kernel_objs_audited": 5,
+      "neon_objs_audited": 5,
+      "writable_obj_sections": [],
+      "xm6_bridge_obj": {
+        "name": "filmsim_20-z8_xm6_bridge.c.o",
+        "insns": 3665,
+        "fp_insns": 0,
+        "simd_insns": 0
+      },
+      "total_fp_insns": 0,
+      "non_kernel_simd_insns": 0,
+      "kernel_neon_insns": {
+        "filmsim_02-z8_hdf_kernels.c.o": 3132,
+        "filmsim_07-z8_zf_grain_kernels.c.o": 879,
+        "filmsim_19-live_scale_neon.c.o": 1428,
+        "v71r7_b1_cube_frame_neon.c.o": 99,
+        "v71r7_b1_layer0_color_neon.c.o": 95
+      },
+      "kernel_gpr_vector_fmov_bitmoves": {
+        "filmsim_02-z8_hdf_kernels.c.o": 61,
+        "filmsim_07-z8_zf_grain_kernels.c.o": 6,
+        "filmsim_19-live_scale_neon.c.o": 2,
+        "v71r7_b1_cube_frame_neon.c.o": 5,
+        "v71r7_b1_layer0_color_neon.c.o": 9
+      }
+    },
+    "wlm_elf_audits": {
+      "filmsim.wlm": {
+        "wlm_bytes": 34856,
+        "wlm_sha256": "7943f163ffbe631d1620bb8a9162b59c108a9d853f2e122be197196cc08199cc",
+        "module_elf_sha256": "8c6d55c19eed67bc9b43e16b12fd0a67593233c310b8cdf772ea7ff11aab9dda",
+        "text_bytes": 30384,
+        "text_insns": 7596,
+        "embedded_verbatim_in_wlm": true,
+        "relocations": 0,
+        "dynamic_reloc_tags": 0,
+        "undefined_symbols": 0,
+        "fp_insns": 0,
+        "simd_insns": 0
+      },
+      "slotcard.wlm": {
+        "wlm_bytes": 52548,
+        "wlm_sha256": "b221d05ee0756b96cd2243a8b9507f0fa0d6879a6a0bebcfabb6e6a5ff4e4853",
+        "module_elf_sha256": "87e0be02f0c0dc44ae77ca5e5a8de34f5b73fcde7090998f1c324e9b04a40b2a",
+        "text_bytes": 48212,
+        "text_insns": 12053,
+        "embedded_verbatim_in_wlm": true,
+        "relocations": 0,
+        "dynamic_reloc_tags": 0,
+        "undefined_symbols": 0,
+        "fp_insns": 0,
+        "simd_insns": 0
+      }
+    }
+  }
+}

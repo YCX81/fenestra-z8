@@ -1,0 +1,384 @@
+{
+  "suite": "4_filmsim_v71r5_still4x4_resident_grain_quarantine_slot1_np3_final_main",
+  "passed": true,
+  "core_filmsim_checks": 42,
+  "job2_guard_checks": 14,
+  "v71r5_runtime_checks": 14,
+  "total_checks": 70,
+  "main_sha256": "362ee2a5491859a762b35ed8459cf22c212ae5babb38915daa15e3b801533c8a",
+  "filmsim_bank_base": "0x409b0000",
+  "filmsim_bank_bytes": 161712,
+  "filmsim_bank_free_bytes": 2128,
+  "ctx_size_bytes": 9544,
+  "fuji_stripped_zero_symbols": true,
+  "default_zf_blur_mode": 1,
+  "legacy_migration_verified": [
+    "style=2->0",
+    "style=3->1"
+  ],
+  "still_crop_239_plan_group_4xWH_verified": true,
+  "v71r5_features_verified": [
+    "still_hdf_4x4_subsample_fused_stage3",
+    "still_hdf_stage2_cancel_zero_write",
+    "pure_grain_y_only_class24_halved",
+    "resident_zf_grain_across_pool_suspend_resume",
+    "quarantine_3_strike_and_clean_reset",
+    "photo_slot1_burst_queue_and_summed_status",
+    "np3_flmrec_loader_all_6_ipcs_sc_record_priority_unbound_dormant"
+  ],
+  "job1_hook_0x40eaeb8c": "0x409cd7ec",
+  "job2_hook_0x40eaf554": "0x409cd7f8",
+  "zf_grain_bin_sha256": "99c70fa224b701d34621edd159be09b3536f00b45173ac07e57b12cdaa18433d",
+  "checks": [
+    {
+      "name": "fuji_stripped_zero_symbols",
+      "ok": true,
+      "detail": "fuji_syms=[]"
+    },
+    {
+      "name": "meta_live_ui",
+      "ok": true,
+      "detail": "['0x4c50554b', 3, 38432]"
+    },
+    {
+      "name": "meta_filmsim_runtime",
+      "ok": true,
+      "detail": "addr=0x409d7448 ctx_size=9544"
+    },
+    {
+      "name": "meta_filmsim_22_fields_in_bounds",
+      "ok": true,
+      "detail": "22 fields within 9544B"
+    },
+    {
+      "name": "abi_default_zf_blur_mode_is_sharp_1",
+      "ok": true,
+      "detail": "zf_blur_mode=1 zf_size=2 valid=1"
+    },
+    {
+      "name": "abi_status_null_ctx_dormant",
+      "ok": true,
+      "detail": "0x9"
+    },
+    {
+      "name": "abi_set_valid_zf_sharp",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "abi_get_matches_set",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "abi_status_active_not_dormant",
+      "ok": true,
+      "detail": "0x1"
+    },
+    {
+      "name": "abi_set_corrupt_crc_rejected",
+      "ok": true,
+      "detail": "rc=-2"
+    },
+    {
+      "name": "legacy_flmsim0_style2_fuji_to_0_lossless",
+      "ok": true,
+      "detail": "style=0 hdf=2 blur=0 live=1 flags=0x1"
+    },
+    {
+      "name": "legacy_flmsim0_style2_no_hdf_becomes_dormant",
+      "ok": true,
+      "detail": "0x9"
+    },
+    {
+      "name": "legacy_flmsim0_style3_fuji_zf_to_1_nikon_zf_lossless",
+      "ok": true,
+      "detail": "style=1 zf=5/3/blur=0 hdf=2 live=1"
+    },
+    {
+      "name": "abi_set_dormant_restores_flag",
+      "ok": true,
+      "detail": "0x9"
+    },
+    {
+      "name": "asset_load_zf_grain_bin_ok",
+      "ok": true,
+      "detail": "rc=0"
+    },
+    {
+      "name": "asset_load_zf_grain_corrupt_rejected",
+      "ok": true,
+      "detail": "rc=-5"
+    },
+    {
+      "name": "pipeline_still_hdf_off_dormant_bypass",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pipeline_still_hdf_weak",
+      "ok": true,
+      "detail": "rc=0 stages=0x1"
+    },
+    {
+      "name": "pipeline_still_hdf_medium",
+      "ok": true,
+      "detail": "rc=0 stages=0x1"
+    },
+    {
+      "name": "pipeline_still_hdf_strong",
+      "ok": true,
+      "detail": "rc=0 stages=0x1"
+    },
+    {
+      "name": "pipeline_still_zf_grain_sharp_cbcr_untouched",
+      "ok": true,
+      "detail": "rc=0 stages=0x4"
+    },
+    {
+      "name": "pipeline_still_zf_grain_exact_cbcr_untouched_and_distinct",
+      "ok": true,
+      "detail": "rc=0 stages=0x4 sharp_vs_exact_diff=2855"
+    },
+    {
+      "name": "pipeline_still_zf_plus_hdf_stacked",
+      "ok": true,
+      "detail": "rc=0 stages=0x5"
+    },
+    {
+      "name": "pipeline_legacy_style2_no_hdf_bypasses",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pipeline_legacy_style3_runs_zf_plus_hdf_identical",
+      "ok": true,
+      "detail": "rc=0 stages=0x5"
+    },
+    {
+      "name": "live_nv12_hdf_off_bypass",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "live_nv12_hdf_weak",
+      "ok": true,
+      "detail": "rc=0 stages=0x1"
+    },
+    {
+      "name": "live_nv12_hdf_medium",
+      "ok": true,
+      "detail": "rc=0 stages=0x1"
+    },
+    {
+      "name": "live_nv12_hdf_strong_matches_z8_hdf_live_nv12_1024",
+      "ok": true,
+      "detail": "rc=0 dir_rc=0 diff_vs_orig=666932"
+    },
+    {
+      "name": "live_i420_dormant_bypass",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "live_i420_zf_plus_hdf_stacked",
+      "ok": true,
+      "detail": "rc=0 stages=0x5"
+    },
+    {
+      "name": "pipeline_cancel_immediate_zero_write",
+      "ok": true,
+      "detail": "rc=2 calls=1"
+    },
+    {
+      "name": "pipeline_cancel_midrun_clean",
+      "ok": true,
+      "detail": "rc=2 calls=5"
+    },
+    {
+      "name": "v71r5_still_hdf_4x4_fused_stage3_ok",
+      "ok": true,
+      "detail": "4128x64 rc=0 stages=0x1 s1_sub_hits=16 s3_fast_hits=64 halo_spread=40"
+    },
+    {
+      "name": "v71r5_still_hdf_stage2_cancel_zero_pixel_writes",
+      "ok": true,
+      "detail": "in_stage2=True rc=2 cancel_calls=20 s3_fast_hits=0"
+    },
+    {
+      "name": "plan_group_239_still_crop_8256x3456_accepted",
+      "ok": true,
+      "detail": "reason=8(POOL=8,SPAN=6) count=4 main=8256x3456 alloc_req=[91938880, 63406144]"
+    },
+    {
+      "name": "plan_group_239_4xWH_tolerance_edge_37632_accepted",
+      "ok": true,
+      "detail": "delta=37632 tol4=46848 reason=8 alloc_req=[69976064, 41443328]"
+    },
+    {
+      "name": "plan_group_43_still_crop_7344x5504_accepted",
+      "ok": true,
+      "detail": "delta=44032 tol4=51392 reason=8 main=7344x5504"
+    },
+    {
+      "name": "plan_group_mismatched_aspect_rejected_source_span",
+      "ok": true,
+      "detail": "reason=6(Z8_NFSP_SOURCE_SPAN=6) alloc_calls=0"
+    },
+    {
+      "name": "pipeline_239_wide_aspect_nv16_e2e_ok",
+      "ok": true,
+      "detail": "320x134 rc=0 stages=0x5"
+    },
+    {
+      "name": "v71r5_pure_grain_y_only_class24_alloc_halved",
+      "ok": true,
+      "detail": "hdf_plus_grain=91938880 grain_only=45809696 saved=46129184 expected=46129184"
+    },
+    {
+      "name": "v66_raw_jpeg_fd0_ticket_reuse_preserved",
+      "ok": true,
+      "detail": "t0={'fd': 0, 'file_id': 100, 'size': 1207798, 'open': 1, 'success': 1, 'closed': 1} t1={'fd': 0, 'file_id': 101, 'size': 35118829, 'open': 1, 'success': 0, 'closed': 0}"
+    },
+    {
+      "name": "job2_0x40eaf554_zf_size1_int6_sharp_heavy_grain_bypasses",
+      "ok": true,
+      "detail": "byp=1 params=0xa01261000"
+    },
+    {
+      "name": "job1_0x40eaeb8c_zf_size1_int6_sharp_heavy_grain_swaps",
+      "ok": true,
+      "detail": "swapped_params=0xa017fbf50"
+    },
+    {
+      "name": "job2_0x40eaf554_zf_size3_int6_exact_heavy_grain_bypasses",
+      "ok": true,
+      "detail": "byp=1 params=0xa01261000"
+    },
+    {
+      "name": "job1_0x40eaeb8c_zf_size3_int6_exact_heavy_grain_swaps",
+      "ok": true,
+      "detail": "swapped_params=0xa017fbf50"
+    },
+    {
+      "name": "job2_0x40eaf554_zf_hdf_strong_stacked_bypasses",
+      "ok": true,
+      "detail": "byp=1 params=0xa01261000"
+    },
+    {
+      "name": "job1_0x40eaeb8c_zf_hdf_strong_stacked_swaps",
+      "ok": true,
+      "detail": "swapped_params=0xa017fbf50"
+    },
+    {
+      "name": "job2_0x40eaf554_zf_light_grain_also_guarded_bypasses",
+      "ok": true,
+      "detail": "byp=1 params=0xa01261000"
+    },
+    {
+      "name": "job1_0x40eaeb8c_zf_light_grain_also_guarded_swaps",
+      "ok": true,
+      "detail": "swapped_params=0xa017fbf50"
+    },
+    {
+      "name": "job2_0x40eaf554_legacy_style3_fuji_zf_guarded_bypasses",
+      "ok": true,
+      "detail": "byp=1 params=0xa01261000"
+    },
+    {
+      "name": "job1_0x40eaeb8c_legacy_style3_fuji_zf_guarded_swaps",
+      "ok": true,
+      "detail": "swapped_params=0xa017fbf50"
+    },
+    {
+      "name": "job2_0x40eaf554_pure_hdf_strong_no_grain_swaps",
+      "ok": true,
+      "detail": "byp=0 swapped_params=0xa017fbf50"
+    },
+    {
+      "name": "job1_0x40eaeb8c_pure_hdf_strong_no_grain_swaps",
+      "ok": true,
+      "detail": "swapped_params=0xa017fbf50"
+    },
+    {
+      "name": "job2_0x40eaf554_pure_hdf_weak_no_grain_swaps",
+      "ok": true,
+      "detail": "byp=0 swapped_params=0xa017fbf50"
+    },
+    {
+      "name": "job1_0x40eaeb8c_pure_hdf_weak_no_grain_swaps",
+      "ok": true,
+      "detail": "swapped_params=0xa017fbf50"
+    },
+    {
+      "name": "v71r5_resident_zf_grain_preserved_across_pool_suspend",
+      "ok": true,
+      "detail": "released=['0xa05000000'] zf_loaded=1 zf_buf=0xa01030000"
+    },
+    {
+      "name": "v71r5_pool_resume_restores_flags_keeps_resident_zf_grain",
+      "ok": true,
+      "detail": "pool_suspended=0 lv_cancel=0 zf_loaded=1"
+    },
+    {
+      "name": "v71r5_quarantine_strikes_1_2_recover_to_idle",
+      "ok": true,
+      "detail": "strike1=(ph=0,po=1) strike2=(ph=0,po=2)"
+    },
+    {
+      "name": "v71r5_quarantine_clean_committed_resets_counter",
+      "ok": true,
+      "detail": "after_clean=(ph=0,po=0)"
+    },
+    {
+      "name": "v71r5_quarantine_3_consecutive_strikes_enters_quarantine",
+      "ok": true,
+      "detail": "states=[(0, 1), (0, 2), (7, 3)]"
+    },
+    {
+      "name": "v71r5_photo_slot_lookup_0_1_2",
+      "ok": true,
+      "detail": "s0=0xa010201e0 s1=0xa010210a8 s2=0x0"
+    },
+    {
+      "name": "v71r5_photo_slot1_burst_queue_zero_class24_and_summed_status",
+      "ok": true,
+      "detail": "b0=1 b1=1 busy0=1 busy1=0 applied=5 skipped=5"
+    },
+    {
+      "name": "v71r5_np3_load_recipe_table_dual_slot_highest_seq",
+      "ok": true,
+      "detail": "rc=0 seq=12 ent90=0101030201020100"
+    },
+    {
+      "name": "v71r5_np3_load_recipe_table_corrupt_rejected",
+      "ok": true,
+      "detail": "rc=-5"
+    },
+    {
+      "name": "v71r5_np3_unbound_sd_auto_dormant",
+      "ok": true,
+      "detail": "flags=0x29 sel=0x1 src=0 pcfg=0"
+    },
+    {
+      "name": "v71r5_np3_ipc_sync_and_flmrec_resolution_c60",
+      "ok": true,
+      "detail": "src=2 flags=0x69 msg={'selector': 4155, 'slot_index': 90, 'magic': 1480996954, 'version': 1, 'flags': 1, 'film_style': 1, 'zf_intensity': 2, 'zf_size': 2, 'zf_blur_mode': 1, 'hdf_level': 1, 'live_link': 0, 'crc32': 210719424}"
+    },
+    {
+      "name": "v71r5_np3_sc_record_z8fx_overrides_flmrec",
+      "ok": true,
+      "detail": "src=1 zf=6/3/blur=0 hdf=2"
+    },
+    {
+      "name": "v71r5_np3_corrupt_sc_record_falls_back_to_flmrec",
+      "ok": true,
+      "detail": "src=2 hdf=1 zf=2"
+    },
+    {
+      "name": "v71r5_np3_switch_to_sd_dormant_and_unbind_c10",
+      "ok": true,
+      "detail": "sd_pcfg=0 c10_before=1 unbind_rc=0 c10_after=0"
+    }
+  ]
+}

@@ -1,0 +1,718 @@
+{
+  "suite": "v71r7r4_lut_preview_final",
+  "passed": true,
+  "checks_passed": 13,
+  "checks_total": 13,
+  "checks": {
+    "dram_v71r7r4_banks_and_build_id_verified": true,
+    "p1_boot_anchor_v12_metrics_and_zero_class24_dormant": true,
+    "p1_photo_menu_48_rows_row45_pixelshift_and_row47_select_lut": true,
+    "p1_submenu_0x5d6_select_warmfilm_activates_3d_lut": true,
+    "p1_fxphoto_cfg_written_crc32_warmfilm": true,
+    "p1_liveview_layer0_14_55mib_workspace_and_frames_processed": true,
+    "p1_still_jpeg_unified_stage0_lut_completed": true,
+    "p3_hangfix_movie_pool_suspend_releases_workspace_to_0b": true,
+    "p2_cold_reboot_auto_restores_warmfilm_and_layer0": true,
+    "p2_clear_no_lut_deactivates_frees_workspace_and_updates_cfg": true,
+    "proof_pngs_all_8_captured": true,
+    "zero_fxcrash_log_and_zero_watchdog_stalls": true,
+    "zero_z8_unknown_zero_z9_unknown_zero_panic_zero_stock_err": true
+  },
+  "main_sha256": "b02ef08b131aea7c2cd089cfcd327d2526c777c5c4067e85b13ed740f83538a6",
+  "build_id": "0xb7c50b4f",
+  "fenestra_shas": {
+    "portrait.wlm": "857a234dcafeec087bdcd01d6020f52e8638121e7513ee2b2cc6b78ec52d26b0",
+    "slotcard.wlm": "299a90e8706495d2bb47ba2431de980e93cdc9fa84f7c51d992f3b9176bc5d9f",
+    "filmsim.wlm": "259f58db7f859e808829214675a76a37320e43b0b91706202abfe0eb1dd3817e",
+    "livephoto.wlm": "6a59b8daf12f0dd3a847837df67853d6557c11c3869561f719772c91d271577c",
+    "lut.wlm": "596e37ccfd957b595500206dd3a22a278c50210bdfd5d6493ac6c4e65eaecee2",
+    "ZF_GRAIN.BIN": "99c70fa224b701d34621edd159be09b3536f00b45173ac07e57b12cdaa18433d",
+    "STARTUP-Z8.0": "2ec2832aba51a344eda779c13c4bbab56dde6ac82e270df276de7990cd477636"
+  },
+  "qemu_sha256": "1871edb13b11d518e443e50740680fcdc1d881342572cf2f0d855bffce70f8ce",
+  "z8_unknown_count": 0,
+  "z9_unknown_count": 0,
+  "panic_count": 0,
+  "proof_png_dir": "/home/ycx/fxfix/onemov/v71r7-lut-preview/verify_r4/qemu/runs/suite20_r4/proof_pngs",
+  "proof_pngs": [
+    "lut_01_photo_menu_row47_zh.png",
+    "lut_02_lut_categories_zh.png",
+    "lut_03_root_luts_list_zh.png",
+    "lut_04_lut_loaded_status_zh.png",
+    "lut_05_liveview_active.png",
+    "lut_06_movie_pool_suspended.png",
+    "lut_07_reboot_restored_status_zh.png",
+    "lut_08_cleared_no_lut_zh.png"
+  ],
+  "phase1_summary": {
+    "final_phase": "done",
+    "photo_menu_count": 48,
+    "seen_lv_workspace_bytes": 15253504,
+    "seen_lv_grades": 18,
+    "seen_lv_disp_sub": 18,
+    "fxphoto_newest": {
+      "valid": true,
+      "version": 2,
+      "bytes": 96,
+      "generation": 1,
+      "enabled": 1,
+      "path_len": 13,
+      "path": "WarmFilm.cube",
+      "crc32": "0x8b3e8e56",
+      "crc_ok": true
+    },
+    "jpegs": [
+      {
+        "path": "DCIM/100NCZ_8/DSC_0001.JPG",
+        "bytes": 1192819,
+        "soi_eoi_ok": true,
+        "width": 8256,
+        "height": 5504,
+        "mean_rgb": [
+          108.24,
+          85.36,
+          55.18
+        ],
+        "r_minus_b": 53.06
+      }
+    ],
+    "pc_counts": {
+      "v71r7_photo_menu_boot_once": {
+        "pc": "0x40985018",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_photo_menu_lookup_text": {
+        "pc": "0x40982674",
+        "total": 8,
+        "by_cpu": [
+          8,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_entry": {
+        "pc": "0x40982a90",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_refresh": {
+        "pc": "0x40982ccc",
+        "total": 138,
+        "by_cpu": [
+          138,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_activate": {
+        "pc": "0x409839a8",
+        "total": 2,
+        "by_cpu": [
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_exit": {
+        "pc": "0x40983874",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_prepare_from_buffer": {
+        "pc": "0x409dddc8",
+        "total": 1,
+        "by_cpu": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "v71r7_lut_apply_still_nv16": {
+        "pc": "0x409dee28",
+        "total": 4,
+        "by_cpu": [
+          0,
+          0,
+          4,
+          0
+        ]
+      },
+      "v71r7_lut_apply_nv12": {
+        "pc": "0x409dee88",
+        "total": 18,
+        "by_cpu": [
+          0,
+          0,
+          18,
+          0
+        ]
+      },
+      "v71r7_lut_clear_active": {
+        "pc": "0x409de2e4",
+        "total": 3,
+        "by_cpu": [
+          0,
+          0,
+          3,
+          0
+        ]
+      },
+      "v71r7_lut_ipc_service_call": {
+        "pc": "0x409854d8",
+        "total": 126,
+        "by_cpu": [
+          0,
+          0,
+          126,
+          0
+        ]
+      },
+      "v71r7_layer0_init": {
+        "pc": "0x409e17c4",
+        "total": 2,
+        "by_cpu": [
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_worker_step": {
+        "pc": "0x409e2924",
+        "total": 2221,
+        "by_cpu": [
+          0,
+          0,
+          2221,
+          0
+        ]
+      },
+      "v71r7_layer0_enqueue_hook_c": {
+        "pc": "0x409e00d4",
+        "total": 28,
+        "by_cpu": [
+          0,
+          28,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_display_hook_c": {
+        "pc": "0x409e03f0",
+        "total": 28,
+        "by_cpu": [
+          0,
+          28,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_vsync_hook_c": {
+        "pc": "0x409e1498",
+        "total": 427,
+        "by_cpu": [
+          427,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_suspend": {
+        "pc": "0x409e1c88",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_resume": {
+        "pc": "0x409e233c",
+        "total": 3115,
+        "by_cpu": [
+          3115,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_neon_sentinel_probe_once": {
+        "pc": "0x409dc454",
+        "total": 4,
+        "by_cpu": [
+          0,
+          0,
+          4,
+          0
+        ]
+      },
+      "v71r7_watchdog_poll": {
+        "pc": "0x40988814",
+        "total": 630,
+        "by_cpu": [
+          0,
+          0,
+          630,
+          0
+        ]
+      }
+    }
+  },
+  "phase3_summary": {
+    "final_phase": "done",
+    "seen_pool_suspended": true,
+    "seen_pool_suspended_ws_bytes": 0,
+    "pc_counts": {
+      "v71r7_photo_menu_boot_once": {
+        "pc": "0x40985018",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_photo_menu_lookup_text": {
+        "pc": "0x40982674",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_entry": {
+        "pc": "0x40982a90",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_refresh": {
+        "pc": "0x40982ccc",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_activate": {
+        "pc": "0x409839a8",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_exit": {
+        "pc": "0x40983874",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_prepare_from_buffer": {
+        "pc": "0x409dddc8",
+        "total": 1,
+        "by_cpu": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "v71r7_lut_apply_still_nv16": {
+        "pc": "0x409dee28",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_apply_nv12": {
+        "pc": "0x409dee88",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_clear_active": {
+        "pc": "0x409de2e4",
+        "total": 2,
+        "by_cpu": [
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "v71r7_lut_ipc_service_call": {
+        "pc": "0x409854d8",
+        "total": 44,
+        "by_cpu": [
+          0,
+          0,
+          44,
+          0
+        ]
+      },
+      "v71r7_layer0_init": {
+        "pc": "0x409e17c4",
+        "total": 2,
+        "by_cpu": [
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_worker_step": {
+        "pc": "0x409e2924",
+        "total": 6776,
+        "by_cpu": [
+          0,
+          0,
+          6776,
+          0
+        ]
+      },
+      "v71r7_layer0_enqueue_hook_c": {
+        "pc": "0x409e00d4",
+        "total": 2,
+        "by_cpu": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_display_hook_c": {
+        "pc": "0x409e03f0",
+        "total": 2,
+        "by_cpu": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_vsync_hook_c": {
+        "pc": "0x409e1498",
+        "total": 272,
+        "by_cpu": [
+          272,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_suspend": {
+        "pc": "0x409e1c88",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_resume": {
+        "pc": "0x409e233c",
+        "total": 938,
+        "by_cpu": [
+          938,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_neon_sentinel_probe_once": {
+        "pc": "0x409dc454",
+        "total": 2,
+        "by_cpu": [
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "v71r7_watchdog_poll": {
+        "pc": "0x40988814",
+        "total": 223,
+        "by_cpu": [
+          0,
+          0,
+          223,
+          0
+        ]
+      }
+    }
+  },
+  "phase2_summary": {
+    "final_phase": "done",
+    "seen_lut_active": true,
+    "seen_lv_workspace_bytes": 15253504,
+    "fxphoto_oldest": {
+      "valid": true,
+      "version": 2,
+      "bytes": 96,
+      "generation": 1,
+      "enabled": 1,
+      "path_len": 13,
+      "path": "WarmFilm.cube",
+      "crc32": "0x8b3e8e56",
+      "crc_ok": true
+    },
+    "fxphoto_newest": {
+      "valid": true,
+      "version": 2,
+      "bytes": 96,
+      "generation": 2,
+      "enabled": 0,
+      "path_len": 0,
+      "path": "",
+      "crc32": "0xd22803bb",
+      "crc_ok": true
+    },
+    "pc_counts": {
+      "v71r7_photo_menu_boot_once": {
+        "pc": "0x40985018",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_photo_menu_lookup_text": {
+        "pc": "0x40982674",
+        "total": 6,
+        "by_cpu": [
+          6,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_entry": {
+        "pc": "0x40982a90",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_refresh": {
+        "pc": "0x40982ccc",
+        "total": 68,
+        "by_cpu": [
+          68,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_activate": {
+        "pc": "0x409839a8",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_exit": {
+        "pc": "0x40983874",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_prepare_from_buffer": {
+        "pc": "0x409dddc8",
+        "total": 1,
+        "by_cpu": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "v71r7_lut_apply_still_nv16": {
+        "pc": "0x409dee28",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_apply_nv12": {
+        "pc": "0x409dee88",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_clear_active": {
+        "pc": "0x409de2e4",
+        "total": 3,
+        "by_cpu": [
+          0,
+          0,
+          3,
+          0
+        ]
+      },
+      "v71r7_lut_ipc_service_call": {
+        "pc": "0x409854d8",
+        "total": 56,
+        "by_cpu": [
+          0,
+          0,
+          56,
+          0
+        ]
+      },
+      "v71r7_layer0_init": {
+        "pc": "0x409e17c4",
+        "total": 2,
+        "by_cpu": [
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_worker_step": {
+        "pc": "0x409e2924",
+        "total": 6999,
+        "by_cpu": [
+          0,
+          0,
+          6999,
+          0
+        ]
+      },
+      "v71r7_layer0_enqueue_hook_c": {
+        "pc": "0x409e00d4",
+        "total": 2,
+        "by_cpu": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_display_hook_c": {
+        "pc": "0x409e03f0",
+        "total": 2,
+        "by_cpu": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_vsync_hook_c": {
+        "pc": "0x409e1498",
+        "total": 109,
+        "by_cpu": [
+          109,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_suspend": {
+        "pc": "0x409e1c88",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_resume": {
+        "pc": "0x409e233c",
+        "total": 1340,
+        "by_cpu": [
+          1340,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_neon_sentinel_probe_once": {
+        "pc": "0x409dc454",
+        "total": 2,
+        "by_cpu": [
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "v71r7_watchdog_poll": {
+        "pc": "0x40988814",
+        "total": 281,
+        "by_cpu": [
+          0,
+          0,
+          281,
+          0
+        ]
+      }
+    }
+  }
+}

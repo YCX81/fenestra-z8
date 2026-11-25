@@ -1,0 +1,300 @@
+{
+  "suite": "2_hangfix_arm64_final_main_v71r5",
+  "passed": true,
+  "v69_base_checks": 18,
+  "v70_inflight_checks": 7,
+  "v71r4_pbprcmxm_checks": 9,
+  "v71r5_hangfix_pbbounce_ev7_checks": 13,
+  "checks": 47,
+  "main_sha256": "362ee2a5491859a762b35ed8459cf22c212ae5babb38915daa15e3b801533c8a",
+  "hooks_verified": {
+    "0x40f7a4bc": [
+      "BL",
+      "0x401fd694"
+    ],
+    "0x40f7679c": [
+      "BL",
+      "0x401fd694"
+    ],
+    "0x40711da4": [
+      "BL",
+      "0x401fd7f4"
+    ],
+    "0x40cb0f34": [
+      "B",
+      "0x401e6c38"
+    ],
+    "0x407c5ed8": [
+      "BL",
+      "0x401fd694"
+    ],
+    "0x407c5f60": [
+      "BL",
+      "0x401fd694"
+    ],
+    "0x40f81680": [
+      "BL",
+      "0x401e2694"
+    ],
+    "0x40712808": [
+      "B",
+      "0x401fd694"
+    ],
+    "0x42ac31b8": [
+      "PTR64",
+      "0x401e26e4"
+    ],
+    "0x40d60ec8": [
+      "B",
+      "0x401eb0f8"
+    ]
+  },
+  "v70_symbols_verified": {
+    "live_encoder_preempt": "0x401eec48",
+    "live_encoder_dispose": "0x401edda0",
+    "live_encoder_retained": "0x401edb68",
+    "w5_drain_inflight_locked": "0x409d51c8"
+  },
+  "v71r5_symbols_verified": {
+    "live_subpool_carve_wrap": "0x401e2694",
+    "live_pb_arbiter_exit_wrap": "0x401e26e4",
+    "live_ui_system_dispatch": "0x401eb0f8"
+  },
+  "cases": [
+    {
+      "name": "layer1_primary_0x40f7a4bc_skip_when_BE_LV_nonzero",
+      "passed": true,
+      "detail": "rc=0x55aa1234"
+    },
+    {
+      "name": "layer1_primary_0x40f7a4bc_skip_when_cur_layout_nonzero",
+      "passed": true,
+      "detail": "rc=0x55aa1234"
+    },
+    {
+      "name": "layer1_primary_0x40f7a4bc_skip_when_req_val_zero",
+      "passed": true,
+      "detail": "rc=0x55aa1234"
+    },
+    {
+      "name": "layer1_primary_0x40f7a4bc_skip_when_req_null",
+      "passed": true,
+      "detail": "rc=0x55aa1234"
+    },
+    {
+      "name": "layer1_primary_0x40f7a4bc_fire_live_on_disposes_w5_and_filmsim",
+      "passed": true,
+      "detail": "freed=['0xa07700090', '0xa07700010', '0xa07700020'] tags=['0xfe']"
+    },
+    {
+      "name": "layer1_primary_0x40f7a4bc_fire_live_off_still_suspends_filmsim",
+      "passed": true,
+      "detail": "freed=['0xa07700090']"
+    },
+    {
+      "name": "layer1_aux_0x40f7679c_skip_when_BE_LV_nonzero",
+      "passed": true,
+      "detail": "rc=0x55aa1234"
+    },
+    {
+      "name": "layer1_aux_0x40f7679c_skip_when_cur_layout_nonzero",
+      "passed": true,
+      "detail": "rc=0x55aa1234"
+    },
+    {
+      "name": "layer1_aux_0x40f7679c_skip_when_req_val_zero",
+      "passed": true,
+      "detail": "rc=0x55aa1234"
+    },
+    {
+      "name": "layer1_aux_0x40f7679c_skip_when_req_null",
+      "passed": true,
+      "detail": "rc=0x55aa1234"
+    },
+    {
+      "name": "layer1_aux_0x40f7679c_fire_live_on_disposes_w5_and_filmsim",
+      "passed": true,
+      "detail": "freed=['0xa07700090', '0xa07700010', '0xa07700020'] tags=['0xfe']"
+    },
+    {
+      "name": "layer1_aux_0x40f7679c_fire_live_off_still_suspends_filmsim",
+      "passed": true,
+      "detail": "freed=['0xa07700090']"
+    },
+    {
+      "name": "layer2a_movs_live_on_disposes_w5_and_filmsim",
+      "passed": true,
+      "detail": "freed=['0xa07700090', '0xa07700010', '0xa07700020']"
+    },
+    {
+      "name": "layer2a_movs_live_off_still_suspends_filmsim",
+      "passed": true,
+      "detail": "freed=['0xa07700090']"
+    },
+    {
+      "name": "layer2a_layout2_dram_corruption_immunity_unmapped_hw",
+      "passed": true,
+      "detail": "0 dereferences of unmapped 0x89f5ff000 during POOL_GATE!=0 dispose!"
+    },
+    {
+      "name": "layer1_corrupted_block_desc_safe_abort_st12",
+      "passed": true,
+      "detail": "corrupted w->magic safely aborts w5_close with close_failed=1"
+    },
+    {
+      "name": "layer2b_prores_live_on_disposes_and_resumes_0x40cb0f38",
+      "passed": true,
+      "detail": "stp x21,x20,[sp,#-0x20]! + ABI preserved into 0x40cb0f38"
+    },
+    {
+      "name": "layer2b_prores_live_off_still_suspends_filmsim_and_resumes",
+      "passed": true,
+      "detail": "FilmSim suspended when Live OFF + ABI preserved into 0x40cb0f38"
+    },
+    {
+      "name": "v70_inflight_retained_returns_0",
+      "passed": true,
+      "detail": "idle=1 in_flight=0"
+    },
+    {
+      "name": "v70_inflight_dispose_returns_minus3_zero_frees",
+      "passed": true,
+      "detail": "rc=-3 freed=[]"
+    },
+    {
+      "name": "v70_inflight_preempt_drains_then_dispose_succeeds",
+      "passed": true,
+      "detail": "drain_calls=1 disp_after=0"
+    },
+    {
+      "name": "v70_layer1_inflight_handoff_drains_and_disposes",
+      "passed": true,
+      "detail": "freed=['0xa07700090', '0xa07700010', '0xa07700020']"
+    },
+    {
+      "name": "v70_layer2a_and_layer2b_inflight_handoff_drains_and_disposes",
+      "passed": true,
+      "detail": "layer2a=True layer2b=True"
+    },
+    {
+      "name": "v70r2_inflight_drain_timeout_full_recovery_stops_exits_disposes",
+      "passed": true,
+      "detail": "init_rc=-24"
+    },
+    {
+      "name": "v70r2_exit_stuck_vdi_sets_close_failed_and_refuses_dispose",
+      "passed": true,
+      "detail": "fin_st=9 disp_rc=-2"
+    },
+    {
+      "name": "v71r4_pbprcmxm_cmd46_0x407c5ed8_fire_live_on_disposes_w5_and_filmsim",
+      "passed": true,
+      "detail": "freed=['0xa07700090', '0xa07700010', '0xa07700020']"
+    },
+    {
+      "name": "v71r4_pbprcmxm_cmd46_0x407c5ed8_fire_live_off_suspends_filmsim",
+      "passed": true,
+      "detail": "freed=['0xa07700090']"
+    },
+    {
+      "name": "v71r4_pbprcmxm_cmd46_0x407c5ed8_inflight_drains_and_disposes",
+      "passed": true,
+      "detail": "freed=['0xa07700090', '0xa07700010', '0xa07700020']"
+    },
+    {
+      "name": "v71r4_pbprcmxm_cmd46_0x407c5ed8_skip_when_cur_sub_nonzero",
+      "passed": true,
+      "detail": "cur_sub=1 skips"
+    },
+    {
+      "name": "v71r4_pbprcmxm_cmd46_0x407c5ed8_skip_when_BE_LV_nonzero",
+      "passed": true,
+      "detail": "BE_LV=2 skips"
+    },
+    {
+      "name": "v71r4_pbprcmxm_cmd46_0x407c5ed8_skip_when_req_sub_zero",
+      "passed": true,
+      "detail": "req=(0,0) skips"
+    },
+    {
+      "name": "v71r4_pbprcmxm_cmd47_0x407c5f60_fire_live_on_disposes_w5_and_filmsim",
+      "passed": true,
+      "detail": "freed=['0xa07700090', '0xa07700010', '0xa07700020']"
+    },
+    {
+      "name": "v71r4_pbprcmxm_cmd47_0x407c5f60_fire_live_off_suspends_filmsim",
+      "passed": true,
+      "detail": "freed=['0xa07700090']"
+    },
+    {
+      "name": "v71r4_pbprcmxm_cmd47_0x407c5f60_skip_guards",
+      "passed": true,
+      "detail": "be_lv_skip=True cur_layout_skip=True"
+    },
+    {
+      "name": "v71r5_layer1c_0x40f81680_subpool_carve_live_on_disposes_w5_and_filmsim",
+      "passed": true,
+      "detail": "rc=0x11223344 tags=['0xfb'] freed=['0xa07700090', '0xa07700010', '0xa07700020']"
+    },
+    {
+      "name": "v71r5_layer1c_0x40f81680_subpool_carve_live_off_suspends_filmsim",
+      "passed": true,
+      "detail": "rc=0x11223344"
+    },
+    {
+      "name": "v71r5_layer1c_0x40f81680_skip_guards_all3",
+      "passed": true,
+      "detail": "[('cur_layout_nz', True), ('cur_sub_nz', True), ('be_lv_nz', True)]"
+    },
+    {
+      "name": "v71r5_layer1d_0x40712808_tail_layout_restore_on_off_skip",
+      "passed": true,
+      "detail": "on=True off=True skip=True"
+    },
+    {
+      "name": "v71r5_pb_arbiter_0x42ac31b8_view3_passthrough",
+      "passed": true,
+      "detail": "rc=1 calls=['0xa05061000'] page_queries=0"
+    },
+    {
+      "name": "v71r5_pb_arbiter_0x42ac31b8_view2_1_page_nonzero_passthrough",
+      "passed": true,
+      "detail": "rc=1 calls=['0xa05061000'] page_queries=1"
+    },
+    {
+      "name": "v71r5_pb_arbiter_0x42ac31b8_view2_1_page_zero_swallowed_returns_0",
+      "passed": true,
+      "detail": "rc=0 calls=[] page_queries=1"
+    },
+    {
+      "name": "v71r5_pb_arbiter_0x42ac31b8_invalid_or_nonowner_safe_passthrough",
+      "passed": true,
+      "detail": "owner0=1 null=1 unaligned=1"
+    },
+    {
+      "name": "v71r5_a1_ev7_non_usb_parks_flag_and_bypasses_core_stop_all",
+      "passed": true,
+      "detail": "rc=0x770007 flag_req=2 standby_kept=1"
+    },
+    {
+      "name": "v71r5_a1_ev8_cancel_restores_flag_keeps_plugins_live",
+      "passed": true,
+      "detail": "rc=0x880008 flag_restores=1"
+    },
+    {
+      "name": "v71r5_a1_ev15_late_cancel_restores_flag_keeps_live",
+      "passed": true,
+      "detail": "rc=0x88000f flag_restore_acked=2"
+    },
+    {
+      "name": "v71r5_a1_ev14_restores_c64_proxy_without_latching_shutdown",
+      "passed": true,
+      "detail": "rc=0x88000e c64_restore_calls=1"
+    },
+    {
+      "name": "v71r7_a1_ev16_suspend_enable_keeps_live_filmsim_and_iogate_open",
+      "passed": true,
+      "detail": "rc=0x880010 u_sd=0 r_sd=0 fs_stop=0 gate=0x100000001"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "suite": "3_portrait_pb_final_main",
+  "passed": true,
+  "checks": 833,
+  "groups": {
+    "suite_a_negative_guards_rejected": 11,
+    "suite_b_gate0_tkhd_identical": 4,
+    "suite_b_gate0_nctg_identical": 4,
+    "suite_b_gate0_dcf_and_item_orient_stock": 20,
+    "suite_b_gate0_backend_rot_identical": 192,
+    "suite_b_gate0_backend_rot_2_identical": 192,
+    "suite_b_gate0_ui_orient_identical": 64,
+    "suite_b_gate0_thumb_orient_stock": 12,
+    "suite_c_gate1_tkhd_latch_and_tilt_immunity": 3,
+    "suite_c_gate1_unlatched_pose_fallback": 3,
+    "suite_d_boot_race_and_runtime_toggle_verified": 4,
+    "suite_e_gate1_movie_equals_photo_backend_rot": 144,
+    "suite_e_gate1_movie_equals_photo_backend_rot_2": 144,
+    "suite_e_panel_display_orientation_verified": 6,
+    "suite_f_gate1_ui_orient_552": 16,
+    "suite_f_gate1_thumb_orient": 12,
+    "suite_g_end_to_end_lifecycle": 2
+  },
+  "final_main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "stage2_main_sha256": "038a5a76e573683ecf304c036d57ec12756987809ebff74e0588a5b9761c4d6a",
+  "all_8_hooks_identical_to_stage2": true,
+  "cave_396B_identical_to_stage2": true,
+  "cave_sha256": "9d43ab1d4db0e7e2551a51ea02a8c6b450bf65fa9f85ccecfc40dcea40af543c",
+  "trailing_180B_gap_zero": true,
+  "hooks": {
+    "tkhd_latch": {
+      "address": "0x401fe280",
+      "word_hex": "a0faff17",
+      "identical_to_stage2": true
+    },
+    "nctg_0018": {
+      "address": "0x406d2a60",
+      "word_hex": "b2a8ec17",
+      "identical_to_stage2": true
+    },
+    "dcf_mov": {
+      "address": "0x406bff7c",
+      "word_hex": "84f3ec97",
+      "identical_to_stage2": true
+    },
+    "item_orient": {
+      "address": "0x407b5ae8",
+      "word_hex": "b51ce917",
+      "identical_to_stage2": true
+    },
+    "backend_rot": {
+      "address": "0x4079f738",
+      "word_hex": "b075e917",
+      "identical_to_stage2": true
+    },
+    "backend_rot_2": {
+      "address": "0x4079f798",
+      "word_hex": "a075e917",
+      "identical_to_stage2": true
+    },
+    "thumb_orient": {
+      "address": "0x407cadf4",
+      "word_hex": "11c8e817",
+      "identical_to_stage2": true
+    },
+    "ui_orient": {
+      "address": "0x4068d658",
+      "word_hex": "05beed17",
+      "identical_to_stage2": true
+    }
+  }
+}

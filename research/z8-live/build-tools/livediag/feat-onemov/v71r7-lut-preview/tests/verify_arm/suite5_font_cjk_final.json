@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "base_main_sha256": "7080518f4caff023cd1a60026d321c8ff2205ebb23e49cfb865f367de9bfd150",
+  "candidate_main_sha256": "362ee2a5491859a762b35ed8459cf22c212ae5babb38915daa15e3b801533c8a",
+  "orig_text_va": "0x401eb080",
+  "font_engine": {
+    "gb2312_l1_zh_cn": 3755,
+    "gb2312_l1_zh_tw": 3755,
+    "ascii_all_cjk": 95,
+    "metrics_zh_cn": [
+      65536,
+      56320,
+      9216,
+      65536
+    ],
+    "decoded_sample_slots": [
+      85,
+      12,
+      28,
+      3
+    ]
+  },
+  "slots_lang_svc": true,
+  "menu_text": true,
+  "menu_text_cases": 13,
+  "filmsim_menu_keys_verified": [
+    "filmsim",
+    "Film Simulation"
+  ],
+  "exhaustive_decode_cjk1": 1894,
+  "exhaustive_decode_cjk2": 1709,
+  "exhaustive_decode_total": 3603
+}

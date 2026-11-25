@@ -1,0 +1,5286 @@
+{
+  "suite": "v71r7_lut_preview_final",
+  "passed": true,
+  "checks_passed": 13,
+  "checks_total": 13,
+  "checks": {
+    "dram_v71r7_banks_and_build_id_verified": true,
+    "p1_boot_anchor_flight_and_zero_class24_dormant": true,
+    "p1_photo_menu_48_rows_row45_pixelshift_and_row47_select_lut": true,
+    "p1_submenu_0x5d6_select_warmfilm_activates_3d_lut": true,
+    "p1_fxphoto_cfg_written_crc32_warmfilm": true,
+    "p1_liveview_layer0_14_55mib_workspace_and_frames_processed": true,
+    "p1_still_jpeg_unified_stage0_lut_completed": true,
+    "p1_hangfix_movie_pool_suspend_releases_workspace_to_0b": true,
+    "p2_cold_reboot_auto_restores_warmfilm_and_layer0": true,
+    "p2_clear_no_lut_deactivates_frees_workspace_and_updates_cfg": true,
+    "proof_pngs_all_8_captured": true,
+    "zero_fxcrash_log_and_zero_watchdog_stalls": true,
+    "zero_z8_unknown_zero_z9_unknown_zero_panic_zero_stock_err": true
+  },
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "build_id": "0xd590d8cd",
+  "filmsim_wlm_sha256": "7943f163ffbe631d1620bb8a9162b59c108a9d853f2e122be197196cc08199cc",
+  "slotcard_wlm_sha256": "b221d05ee0756b96cd2243a8b9507f0fa0d6879a6a0bebcfabb6e6a5ff4e4853",
+  "qemu_sha256": "1871edb13b11d518e443e50740680fcdc1d881342572cf2f0d855bffce70f8ce",
+  "z8_unknown_count": 0,
+  "z9_unknown_count": 0,
+  "panic_count": 0,
+  "seeded_cubes": {
+    "WarmFilm.cube": {
+      "bytes": 19768,
+      "sha256": "c02a1c2eb139f896484e74b8433b278113771edffbb4bc4fb2013b3728a1f6a1",
+      "kind": "3D_9x9x9_cross_channel"
+    },
+    "LUTS/Cinema/TealOrg.cube": {
+      "bytes": 19777,
+      "sha256": "12dfdeaccfb0c627432114a57230d7fe7dc501fdf1a60689e0a8b5cbe6b55930",
+      "kind": "1D_separable_9x9x9"
+    }
+  },
+  "proof_pngs": [
+    "lut_01_photo_menu_row47_zh.png",
+    "lut_02_lut_categories_zh.png",
+    "lut_03_root_luts_list_zh.png",
+    "lut_04_lut_loaded_status_zh.png",
+    "lut_05_liveview_active.png",
+    "lut_06_movie_pool_suspended.png",
+    "lut_07_reboot_restored_status_zh.png",
+    "lut_08_cleared_no_lut_zh.png"
+  ],
+  "phase1_summary": {
+    "final_phase": "done",
+    "photo_menu_count": 48,
+    "photo_menu_row45_id": "0x2c13",
+    "photo_menu_row47_id": "0x2de7",
+    "seen_lv_workspace_bytes": 15253504,
+    "seen_lv_grades": 18,
+    "seen_lv_disp_sub": 17,
+    "seen_pool_suspended": true,
+    "seen_pool_suspended_ws_bytes": 0,
+    "fxphoto_newest": {
+      "valid": true,
+      "version": 2,
+      "bytes": 96,
+      "generation": 1,
+      "enabled": 1,
+      "path_len": 13,
+      "path": "WarmFilm.cube",
+      "crc32": "0x8b3e8e56",
+      "crc_ok": true
+    },
+    "jpegs": [
+      {
+        "path": "DCIM/100NCZ_8/DSC_0001.JPG",
+        "bytes": 1192819,
+        "soi_eoi_ok": true,
+        "width": 8256,
+        "height": 5504,
+        "mean_rgb": [
+          108.24,
+          85.36,
+          55.18
+        ],
+        "r_minus_b": 53.06
+      }
+    ],
+    "flight_event_counts": {
+      "BOOT": 1,
+      "PREVIEW_ROUTE_SWITCH": 3,
+      "L0_WYSIWYG": 1,
+      "JPEG_MAIN_ENTER": 1,
+      "JPEG_GRADE_START": 1,
+      "JPEG_GRADE_DONE": 1
+    },
+    "flight_tail": [
+      {
+        "seq": 1,
+        "tick": 1342216,
+        "event": 24,
+        "name": "BOOT",
+        "core_flags": 0,
+        "a": 305,
+        "b": 2,
+        "c": 3
+      },
+      {
+        "seq": 2,
+        "tick": 398887043,
+        "event": 9,
+        "name": "PREVIEW_ROUTE_SWITCH",
+        "core_flags": 2,
+        "a": 2,
+        "b": 0,
+        "c": 4
+      },
+      {
+        "seq": 3,
+        "tick": 1277690738,
+        "event": 9,
+        "name": "PREVIEW_ROUTE_SWITCH",
+        "core_flags": 3,
+        "a": 0,
+        "b": 2,
+        "c": 10
+      },
+      {
+        "seq": 4,
+        "tick": 1424144697,
+        "event": 9,
+        "name": "PREVIEW_ROUTE_SWITCH",
+        "core_flags": 3,
+        "a": 2,
+        "b": 0,
+        "c": 12
+      },
+      {
+        "seq": 5,
+        "tick": 1427800206,
+        "event": 23,
+        "name": "L0_WYSIWYG",
+        "core_flags": 3,
+        "a": 0,
+        "b": 1,
+        "c": 0
+      },
+      {
+        "seq": 6,
+        "tick": 1513562963,
+        "event": 1,
+        "name": "JPEG_MAIN_ENTER",
+        "core_flags": 0,
+        "a": 1,
+        "b": 4,
+        "c": 8256
+      },
+      {
+        "seq": 7,
+        "tick": 1514010801,
+        "event": 3,
+        "name": "JPEG_GRADE_START",
+        "core_flags": 0,
+        "a": 1,
+        "b": 1,
+        "c": 0
+      },
+      {
+        "seq": 8,
+        "tick": 1524363180,
+        "event": 4,
+        "name": "JPEG_GRADE_DONE",
+        "core_flags": 0,
+        "a": 1,
+        "b": 2,
+        "c": 0
+      }
+    ],
+    "pc_counts": {
+      "v71r7_photo_menu_boot_once": {
+        "pc": "0x40985070",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_photo_menu_lookup_text": {
+        "pc": "0x40982674",
+        "total": 8,
+        "by_cpu": [
+          8,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_entry": {
+        "pc": "0x40982980",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_refresh": {
+        "pc": "0x40982bb8",
+        "total": 138,
+        "by_cpu": [
+          138,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_activate": {
+        "pc": "0x40983610",
+        "total": 2,
+        "by_cpu": [
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_exit": {
+        "pc": "0x409834dc",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_prepare_from_buffer": {
+        "pc": "0x409df218",
+        "total": 1,
+        "by_cpu": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "v71r7_lut_apply_still_nv16": {
+        "pc": "0x409dfe98",
+        "total": 4,
+        "by_cpu": [
+          0,
+          0,
+          4,
+          0
+        ]
+      },
+      "v71r7_lut_apply_nv12": {
+        "pc": "0x409dfef8",
+        "total": 18,
+        "by_cpu": [
+          0,
+          0,
+          18,
+          0
+        ]
+      },
+      "v71r7_lut_clear_active": {
+        "pc": "0x409df668",
+        "total": 5,
+        "by_cpu": [
+          0,
+          0,
+          5,
+          0
+        ]
+      },
+      "v71r7_layer0_init": {
+        "pc": "0x409e2b7c",
+        "total": 2,
+        "by_cpu": [
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_worker_step": {
+        "pc": "0x409e3b04",
+        "total": 2184,
+        "by_cpu": [
+          0,
+          0,
+          2184,
+          0
+        ]
+      },
+      "v71r7_layer0_enqueue_hook_c": {
+        "pc": "0x409e1764",
+        "total": 27,
+        "by_cpu": [
+          0,
+          27,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_display_hook_c": {
+        "pc": "0x409e1a04",
+        "total": 27,
+        "by_cpu": [
+          0,
+          27,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_vsync_hook_c": {
+        "pc": "0x409e28b0",
+        "total": 391,
+        "by_cpu": [
+          391,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_suspend": {
+        "pc": "0x409e2fe0",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_resume": {
+        "pc": "0x409e3528",
+        "total": 2919,
+        "by_cpu": [
+          2919,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_neon_sentinel_probe_once": {
+        "pc": "0x409dd094",
+        "total": 2,
+        "by_cpu": [
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "v71r7_watchdog_poll": {
+        "pc": "0x409ddff4",
+        "total": 616,
+        "by_cpu": [
+          0,
+          0,
+          616,
+          0
+        ]
+      }
+    }
+  },
+  "phase3_movie_suspend_summary": {
+    "final_phase": "done",
+    "seen_lv_workspace_bytes": 15253504,
+    "seen_pool_suspended": true,
+    "seen_pool_suspended_ws_bytes": 0,
+    "flight_event_counts": {
+      "BOOT": 1,
+      "PREVIEW_ROUTE_SWITCH": 1,
+      "POOL_SUSPEND": 1
+    },
+    "flight_tail": [
+      {
+        "seq": 1,
+        "tick": 1337740,
+        "event": 24,
+        "name": "BOOT",
+        "core_flags": 0,
+        "a": 305,
+        "b": 2,
+        "c": 3
+      },
+      {
+        "seq": 2,
+        "tick": 362790013,
+        "event": 9,
+        "name": "PREVIEW_ROUTE_SWITCH",
+        "core_flags": 3,
+        "a": 2,
+        "b": 0,
+        "c": 4
+      },
+      {
+        "seq": 3,
+        "tick": 495129451,
+        "event": 16,
+        "name": "POOL_SUSPEND",
+        "core_flags": 1,
+        "a": 0,
+        "b": 15253504,
+        "c": 0
+      }
+    ],
+    "pc_counts": {
+      "v71r7_photo_menu_boot_once": {
+        "pc": "0x40985070",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_photo_menu_lookup_text": {
+        "pc": "0x40982674",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_entry": {
+        "pc": "0x40982980",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_refresh": {
+        "pc": "0x40982bb8",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_activate": {
+        "pc": "0x40983610",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_exit": {
+        "pc": "0x409834dc",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_prepare_from_buffer": {
+        "pc": "0x409df218",
+        "total": 1,
+        "by_cpu": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "v71r7_lut_apply_still_nv16": {
+        "pc": "0x409dfe98",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_apply_nv12": {
+        "pc": "0x409dfef8",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_clear_active": {
+        "pc": "0x409df668",
+        "total": 3,
+        "by_cpu": [
+          0,
+          0,
+          3,
+          0
+        ]
+      },
+      "v71r7_layer0_init": {
+        "pc": "0x409e2b7c",
+        "total": 2,
+        "by_cpu": [
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_worker_step": {
+        "pc": "0x409e3b04",
+        "total": 6795,
+        "by_cpu": [
+          0,
+          0,
+          6795,
+          0
+        ]
+      },
+      "v71r7_layer0_enqueue_hook_c": {
+        "pc": "0x409e1764",
+        "total": 2,
+        "by_cpu": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_display_hook_c": {
+        "pc": "0x409e1a04",
+        "total": 2,
+        "by_cpu": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_vsync_hook_c": {
+        "pc": "0x409e28b0",
+        "total": 272,
+        "by_cpu": [
+          272,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_suspend": {
+        "pc": "0x409e2fe0",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_resume": {
+        "pc": "0x409e3528",
+        "total": 959,
+        "by_cpu": [
+          959,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_neon_sentinel_probe_once": {
+        "pc": "0x409dd094",
+        "total": 2,
+        "by_cpu": [
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "v71r7_watchdog_poll": {
+        "pc": "0x409ddff4",
+        "total": 223,
+        "by_cpu": [
+          0,
+          0,
+          223,
+          0
+        ]
+      }
+    }
+  },
+  "phase2_summary": {
+    "final_phase": "done",
+    "seen_lut_active": true,
+    "seen_lv_workspace_bytes": 15253504,
+    "fxphoto_oldest": {
+      "valid": true,
+      "version": 2,
+      "bytes": 96,
+      "generation": 1,
+      "enabled": 1,
+      "path_len": 13,
+      "path": "WarmFilm.cube",
+      "crc32": "0x8b3e8e56",
+      "crc_ok": true
+    },
+    "fxphoto_newest": {
+      "valid": true,
+      "version": 2,
+      "bytes": 96,
+      "generation": 2,
+      "enabled": 0,
+      "path_len": 0,
+      "path": "",
+      "crc32": "0xd22803bb",
+      "crc_ok": true
+    },
+    "flight_event_counts": {
+      "BOOT": 1,
+      "PREVIEW_ROUTE_SWITCH": 2
+    },
+    "flight_tail": [
+      {
+        "seq": 1,
+        "tick": 1337740,
+        "event": 24,
+        "name": "BOOT",
+        "core_flags": 0,
+        "a": 305,
+        "b": 2,
+        "c": 3
+      },
+      {
+        "seq": 2,
+        "tick": 362166184,
+        "event": 9,
+        "name": "PREVIEW_ROUTE_SWITCH",
+        "core_flags": 3,
+        "a": 2,
+        "b": 0,
+        "c": 4
+      },
+      {
+        "seq": 3,
+        "tick": 490466795,
+        "event": 9,
+        "name": "PREVIEW_ROUTE_SWITCH",
+        "core_flags": 3,
+        "a": 0,
+        "b": 2,
+        "c": 10
+      }
+    ],
+    "pc_counts": {
+      "v71r7_photo_menu_boot_once": {
+        "pc": "0x40985070",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_photo_menu_lookup_text": {
+        "pc": "0x40982674",
+        "total": 4,
+        "by_cpu": [
+          4,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_entry": {
+        "pc": "0x40982980",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_refresh": {
+        "pc": "0x40982bb8",
+        "total": 68,
+        "by_cpu": [
+          68,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_activate": {
+        "pc": "0x40983610",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_exit": {
+        "pc": "0x409834dc",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_prepare_from_buffer": {
+        "pc": "0x409df218",
+        "total": 1,
+        "by_cpu": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "v71r7_lut_apply_still_nv16": {
+        "pc": "0x409dfe98",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_apply_nv12": {
+        "pc": "0x409dfef8",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_clear_active": {
+        "pc": "0x409df668",
+        "total": 5,
+        "by_cpu": [
+          0,
+          0,
+          5,
+          0
+        ]
+      },
+      "v71r7_layer0_init": {
+        "pc": "0x409e2b7c",
+        "total": 2,
+        "by_cpu": [
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_worker_step": {
+        "pc": "0x409e3b04",
+        "total": 6503,
+        "by_cpu": [
+          0,
+          0,
+          6503,
+          0
+        ]
+      },
+      "v71r7_layer0_enqueue_hook_c": {
+        "pc": "0x409e1764",
+        "total": 2,
+        "by_cpu": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_display_hook_c": {
+        "pc": "0x409e1a04",
+        "total": 2,
+        "by_cpu": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_vsync_hook_c": {
+        "pc": "0x409e28b0",
+        "total": 109,
+        "by_cpu": [
+          109,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_suspend": {
+        "pc": "0x409e2fe0",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_resume": {
+        "pc": "0x409e3528",
+        "total": 1385,
+        "by_cpu": [
+          1385,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_neon_sentinel_probe_once": {
+        "pc": "0x409dd094",
+        "total": 2,
+        "by_cpu": [
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "v71r7_watchdog_poll": {
+        "pc": "0x409ddff4",
+        "total": 267,
+        "by_cpu": [
+          0,
+          0,
+          267,
+          0
+        ]
+      }
+    }
+  },
+  "phase1": {
+    "phase_num": 1,
+    "final_phase": "done",
+    "run_err": null,
+    "dram_checks": {
+      "build_id": "0xd590d8cd",
+      "build_id_ok": true,
+      "filmsim_bank": {
+        "va": "0x409b0000",
+        "bytes": 153456,
+        "dram_sha256": "9655e8eab3e44218bec82a4c987f0fbb958097343f7d704c1ecf65bfb2884a55",
+        "ok": true
+      },
+      "lut_menu_bank": {
+        "va": "0x40981000",
+        "bytes": 34432,
+        "dram_sha256": "22c3a64d53558399635e87ecc1e45726c42d56d3bf9426667db82b0e3bd4c836",
+        "ok": true
+      },
+      "lut_core_bank": {
+        "va": "0x409db000",
+        "bytes": 63088,
+        "dram_sha256": "62f9353ce836c502257e35839e76d201628678593b8ed5bebf575a70da93169b",
+        "ok": true
+      },
+      "xm6_elf0": {
+        "va": "0x4167caa0",
+        "bytes": 692516,
+        "dram_sha256": "b65798d7a6cbd026cb97cb01df7278732cdcd6a7f1e27f8f23b1437ecb2c88db",
+        "ok": true
+      }
+    },
+    "photo_menu_count": 48,
+    "photo_menu_row45_id": "0x2c13",
+    "photo_menu_row47_id": "0x2de7",
+    "photo_menu_row47_text": "0x1f42",
+    "seen_lut_active": true,
+    "seen_lv_workspace_bytes": 15253504,
+    "seen_lv_grades": 18,
+    "seen_lv_disp_sub": 17,
+    "seen_pool_suspended": false,
+    "seen_pool_suspended_ws_bytes": null,
+    "shots": [
+      "lut_01_photo_menu_row47_zh.png",
+      "lut_02_lut_categories_zh.png",
+      "lut_03_root_luts_list_zh.png",
+      "lut_04_lut_loaded_status_zh.png",
+      "lut_05_liveview_active.png"
+    ],
+    "snapshots": {
+      "p1_boot_dormant": {
+        "lang": 8,
+        "err_nz": false,
+        "v71r7": {
+          "anchor": {
+            "magic": "0x56373137",
+            "magic_ok": true,
+            "flags": "0x0",
+            "neon_disabled": false,
+            "pool_suspended": false,
+            "lut_active": false,
+            "wysiwyg_active": false,
+            "lut_core_ctx": "0x0",
+            "layer0_ctx": "0xa10d7ea40",
+            "menu_ctx": "0xa10d74fc0",
+            "output_permit": 6,
+            "active_generation": 8
+          },
+          "io_gate": {
+            "raw": "0x100000001",
+            "open": true,
+            "epoch": 1,
+            "frame_count": 0,
+            "stopped": false,
+            "early_off": false
+          },
+          "flight": {
+            "head": 2,
+            "record_count": 2,
+            "event_counts": {
+              "BOOT": 1,
+              "PREVIEW_ROUTE_SWITCH": 1
+            },
+            "tail_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              }
+            ],
+            "all_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              }
+            ],
+            "watchdog": {
+              "magic": "0x56373137",
+              "stalled_slots": 0,
+              "dumps_written": 0,
+              "last_err": 0
+            }
+          },
+          "layer0": {
+            "magic_ok": true,
+            "size": 11312,
+            "hw_current": -1,
+            "active_banks_mask": 0,
+            "disp_calls": 4,
+            "disp_substituted": 0,
+            "disp_stock_pass": 4,
+            "vsync_ticks": 172,
+            "banks_retired": 0,
+            "enqueue_seen": 0,
+            "enqueue_copied": 0,
+            "grades": 0,
+            "grade_us": 0,
+            "errors": 0,
+            "last_result": 0,
+            "pool_result": 0,
+            "online": 1,
+            "enabled": 0,
+            "display_ready": 0,
+            "mode_ok": 0,
+            "quarantined": 0,
+            "lut_bytes": 0,
+            "grid": 0,
+            "surface_bytes": 0,
+            "sentinel_status": 0,
+            "neon_active": 0,
+            "active_route": 4294967295,
+            "lcd_substituted": 0,
+            "evf_substituted": 0,
+            "worker_cores": 0
+          },
+          "menu_ctx": {
+            "magic": "0x504d4e55",
+            "magic_ok": true,
+            "size": 6720
+          }
+        },
+        "filmsim": {
+          "context": "0x0",
+          "ui_size": 38432,
+          "filmsim_context_offset": 38424,
+          "bus_cfg": null,
+          "module_loaded": 0,
+          "cfg_active": 0,
+          "dormant": 1,
+          "photo_worker_ready": 0,
+          "live_worker_ready": 0,
+          "live_ws_ready": 0,
+          "class24_alloc_count": 0,
+          "class24_release_count": 0,
+          "class24_active_bytes": 0,
+          "lv_submitted": 0,
+          "lv_busy_skips": 0,
+          "arena_blk_handle": "0x0",
+          "arena_blk_cpu": "0x0",
+          "arena_blk_dma": "0x0",
+          "arena_blk_actual": 0,
+          "arena_blk_used": 0,
+          "job2_grain_bypasses": 0,
+          "pool_suspended": 0,
+          "lv_tb_state": 0,
+          "lut17_ready": 0,
+          "gtile_ready": 0,
+          "gtile_readers": 0,
+          "lv_cpu0_gtile_held": 0,
+          "lut_epoch": 0,
+          "zf_epoch": 0,
+          "lv_work_gen": 0,
+          "portrait_gate": 1,
+          "portrait_latch": 0,
+          "slots_limit": 64,
+          "pool_gate": 0,
+          "be_lv_mask": 1118481,
+          "v71_silky30fps": {
+            "w5": {
+              "magic": "0x0",
+              "stream": 0,
+              "busy": 0,
+              "release_req": 0,
+              "close_failed": 0,
+              "handoffs": 0,
+              "in_flight": 0,
+              "in_flight_slot": 0,
+              "last_valid_slot": 0,
+              "slot_valid_mask": 0,
+              "submitted_frames": 0,
+              "in_flight_retrig": 0,
+              "direct_nv12_cnt": 0,
+              "async_retrig_cnt": 0,
+              "n_timed_v70": 0,
+              "park_err": 0,
+              "diag_close": "0x0",
+              "avg_in_us": 0,
+              "avg_wait_us": 0,
+              "avg_out_us": 0,
+              "avg_parse_us": 0
+            },
+            "flip_obs": {
+              "ring_head": 0,
+              "ring_count": 0,
+              "obs_pending_flip": 0,
+              "flip_obs_count": 0,
+              "interp_pushes": 0,
+              "direct_nv12_ok": 0,
+              "direct_nv12_retrig": 0,
+              "async_harvests": 0,
+              "last_w": 0,
+              "last_h": 0,
+              "fs_last_encoded_gen": 0,
+              "fs_last_mode": 0
+            },
+            "ev_diag3": null
+          },
+          "guest_writes": false,
+          "dram_active_pc_sel": 0,
+          "xm6_raw_hw_state": 1,
+          "xm6_raw_fw_loaded": 1,
+          "xm6_raw_loader_fault": 0
+        }
+      },
+      "lut_01_photo_menu_row47_zh": {
+        "lang": 8,
+        "err_nz": false,
+        "v71r7": {
+          "anchor": {
+            "magic": "0x56373137",
+            "magic_ok": true,
+            "flags": "0x0",
+            "neon_disabled": false,
+            "pool_suspended": false,
+            "lut_active": false,
+            "wysiwyg_active": false,
+            "lut_core_ctx": "0x0",
+            "layer0_ctx": "0xa10d7ea40",
+            "menu_ctx": "0xa10d74fc0",
+            "output_permit": 6,
+            "active_generation": 8
+          },
+          "io_gate": {
+            "raw": "0x100000001",
+            "open": true,
+            "epoch": 1,
+            "frame_count": 0,
+            "stopped": false,
+            "early_off": false
+          },
+          "flight": {
+            "head": 2,
+            "record_count": 2,
+            "event_counts": {
+              "BOOT": 1,
+              "PREVIEW_ROUTE_SWITCH": 1
+            },
+            "tail_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              }
+            ],
+            "all_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              }
+            ],
+            "watchdog": {
+              "magic": "0x56373137",
+              "stalled_slots": 0,
+              "dumps_written": 0,
+              "last_err": 0
+            }
+          },
+          "layer0": {
+            "magic_ok": true,
+            "size": 11312,
+            "hw_current": -1,
+            "active_banks_mask": 0,
+            "disp_calls": 4,
+            "disp_substituted": 0,
+            "disp_stock_pass": 4,
+            "vsync_ticks": 193,
+            "banks_retired": 0,
+            "enqueue_seen": 0,
+            "enqueue_copied": 0,
+            "grades": 0,
+            "grade_us": 0,
+            "errors": 0,
+            "last_result": 0,
+            "pool_result": 0,
+            "online": 1,
+            "enabled": 0,
+            "display_ready": 0,
+            "mode_ok": 0,
+            "quarantined": 0,
+            "lut_bytes": 0,
+            "grid": 0,
+            "surface_bytes": 0,
+            "sentinel_status": 0,
+            "neon_active": 0,
+            "active_route": 4294967295,
+            "lcd_substituted": 0,
+            "evf_substituted": 0,
+            "worker_cores": 0
+          },
+          "menu_ctx": {
+            "magic": "0x504d4e55",
+            "magic_ok": true,
+            "size": 6720
+          }
+        },
+        "filmsim": {
+          "context": "0x0",
+          "ui_size": 38432,
+          "filmsim_context_offset": 38424,
+          "bus_cfg": null,
+          "module_loaded": 0,
+          "cfg_active": 0,
+          "dormant": 1,
+          "photo_worker_ready": 0,
+          "live_worker_ready": 0,
+          "live_ws_ready": 0,
+          "class24_alloc_count": 0,
+          "class24_release_count": 0,
+          "class24_active_bytes": 0,
+          "lv_submitted": 0,
+          "lv_busy_skips": 0,
+          "arena_blk_handle": "0x0",
+          "arena_blk_cpu": "0x0",
+          "arena_blk_dma": "0x0",
+          "arena_blk_actual": 0,
+          "arena_blk_used": 0,
+          "job2_grain_bypasses": 0,
+          "pool_suspended": 0,
+          "lv_tb_state": 0,
+          "lut17_ready": 0,
+          "gtile_ready": 0,
+          "gtile_readers": 0,
+          "lv_cpu0_gtile_held": 0,
+          "lut_epoch": 0,
+          "zf_epoch": 0,
+          "lv_work_gen": 0,
+          "portrait_gate": 1,
+          "portrait_latch": 0,
+          "slots_limit": 64,
+          "pool_gate": 0,
+          "be_lv_mask": 0,
+          "v71_silky30fps": {
+            "w5": {
+              "magic": "0x0",
+              "stream": 0,
+              "busy": 0,
+              "release_req": 0,
+              "close_failed": 0,
+              "handoffs": 0,
+              "in_flight": 0,
+              "in_flight_slot": 0,
+              "last_valid_slot": 0,
+              "slot_valid_mask": 0,
+              "submitted_frames": 0,
+              "in_flight_retrig": 0,
+              "direct_nv12_cnt": 0,
+              "async_retrig_cnt": 0,
+              "n_timed_v70": 0,
+              "park_err": 0,
+              "diag_close": "0x0",
+              "avg_in_us": 0,
+              "avg_wait_us": 0,
+              "avg_out_us": 0,
+              "avg_parse_us": 0
+            },
+            "flip_obs": {
+              "ring_head": 0,
+              "ring_count": 0,
+              "obs_pending_flip": 0,
+              "flip_obs_count": 0,
+              "interp_pushes": 0,
+              "direct_nv12_ok": 0,
+              "direct_nv12_retrig": 0,
+              "async_harvests": 0,
+              "last_w": 0,
+              "last_h": 0,
+              "fs_last_encoded_gen": 0,
+              "fs_last_mode": 0
+            },
+            "ev_diag3": null
+          },
+          "guest_writes": false,
+          "dram_active_pc_sel": 0,
+          "xm6_raw_hw_state": 1,
+          "xm6_raw_fw_loaded": 1,
+          "xm6_raw_loader_fault": 0
+        }
+      },
+      "lut_02_lut_categories_zh": {
+        "lang": 8,
+        "err_nz": false,
+        "v71r7": {
+          "anchor": {
+            "magic": "0x56373137",
+            "magic_ok": true,
+            "flags": "0x0",
+            "neon_disabled": false,
+            "pool_suspended": false,
+            "lut_active": false,
+            "wysiwyg_active": false,
+            "lut_core_ctx": "0x0",
+            "layer0_ctx": "0xa10d7ea40",
+            "menu_ctx": "0xa10d74fc0",
+            "output_permit": 6,
+            "active_generation": 8
+          },
+          "io_gate": {
+            "raw": "0x100000001",
+            "open": true,
+            "epoch": 1,
+            "frame_count": 0,
+            "stopped": false,
+            "early_off": false
+          },
+          "flight": {
+            "head": 2,
+            "record_count": 2,
+            "event_counts": {
+              "BOOT": 1,
+              "PREVIEW_ROUTE_SWITCH": 1
+            },
+            "tail_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              }
+            ],
+            "all_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              }
+            ],
+            "watchdog": {
+              "magic": "0x56373137",
+              "stalled_slots": 0,
+              "dumps_written": 0,
+              "last_err": 0
+            }
+          },
+          "layer0": {
+            "magic_ok": true,
+            "size": 11312,
+            "hw_current": -1,
+            "active_banks_mask": 0,
+            "disp_calls": 4,
+            "disp_substituted": 0,
+            "disp_stock_pass": 4,
+            "vsync_ticks": 193,
+            "banks_retired": 0,
+            "enqueue_seen": 0,
+            "enqueue_copied": 0,
+            "grades": 0,
+            "grade_us": 0,
+            "errors": 0,
+            "last_result": 0,
+            "pool_result": 0,
+            "online": 1,
+            "enabled": 0,
+            "display_ready": 0,
+            "mode_ok": 0,
+            "quarantined": 0,
+            "lut_bytes": 0,
+            "grid": 0,
+            "surface_bytes": 0,
+            "sentinel_status": 0,
+            "neon_active": 0,
+            "active_route": 4294967295,
+            "lcd_substituted": 0,
+            "evf_substituted": 0,
+            "worker_cores": 0
+          },
+          "menu_ctx": {
+            "magic": "0x504d4e55",
+            "magic_ok": true,
+            "size": 6720
+          }
+        },
+        "filmsim": {
+          "context": "0x0",
+          "ui_size": 38432,
+          "filmsim_context_offset": 38424,
+          "bus_cfg": null,
+          "module_loaded": 0,
+          "cfg_active": 0,
+          "dormant": 1,
+          "photo_worker_ready": 0,
+          "live_worker_ready": 0,
+          "live_ws_ready": 0,
+          "class24_alloc_count": 0,
+          "class24_release_count": 0,
+          "class24_active_bytes": 0,
+          "lv_submitted": 0,
+          "lv_busy_skips": 0,
+          "arena_blk_handle": "0x0",
+          "arena_blk_cpu": "0x0",
+          "arena_blk_dma": "0x0",
+          "arena_blk_actual": 0,
+          "arena_blk_used": 0,
+          "job2_grain_bypasses": 0,
+          "pool_suspended": 0,
+          "lv_tb_state": 0,
+          "lut17_ready": 0,
+          "gtile_ready": 0,
+          "gtile_readers": 0,
+          "lv_cpu0_gtile_held": 0,
+          "lut_epoch": 0,
+          "zf_epoch": 0,
+          "lv_work_gen": 0,
+          "portrait_gate": 1,
+          "portrait_latch": 0,
+          "slots_limit": 64,
+          "pool_gate": 0,
+          "be_lv_mask": 0,
+          "v71_silky30fps": {
+            "w5": {
+              "magic": "0x0",
+              "stream": 0,
+              "busy": 0,
+              "release_req": 0,
+              "close_failed": 0,
+              "handoffs": 0,
+              "in_flight": 0,
+              "in_flight_slot": 0,
+              "last_valid_slot": 0,
+              "slot_valid_mask": 0,
+              "submitted_frames": 0,
+              "in_flight_retrig": 0,
+              "direct_nv12_cnt": 0,
+              "async_retrig_cnt": 0,
+              "n_timed_v70": 0,
+              "park_err": 0,
+              "diag_close": "0x0",
+              "avg_in_us": 0,
+              "avg_wait_us": 0,
+              "avg_out_us": 0,
+              "avg_parse_us": 0
+            },
+            "flip_obs": {
+              "ring_head": 0,
+              "ring_count": 0,
+              "obs_pending_flip": 0,
+              "flip_obs_count": 0,
+              "interp_pushes": 0,
+              "direct_nv12_ok": 0,
+              "direct_nv12_retrig": 0,
+              "async_harvests": 0,
+              "last_w": 0,
+              "last_h": 0,
+              "fs_last_encoded_gen": 0,
+              "fs_last_mode": 0
+            },
+            "ev_diag3": null
+          },
+          "guest_writes": false,
+          "dram_active_pc_sel": 0,
+          "xm6_raw_hw_state": 1,
+          "xm6_raw_fw_loaded": 1,
+          "xm6_raw_loader_fault": 0
+        }
+      },
+      "lut_03_root_luts_list_zh": {
+        "lang": 8,
+        "err_nz": false,
+        "v71r7": {
+          "anchor": {
+            "magic": "0x56373137",
+            "magic_ok": true,
+            "flags": "0x0",
+            "neon_disabled": false,
+            "pool_suspended": false,
+            "lut_active": false,
+            "wysiwyg_active": false,
+            "lut_core_ctx": "0x0",
+            "layer0_ctx": "0xa10d7ea40",
+            "menu_ctx": "0xa10d74fc0",
+            "output_permit": 6,
+            "active_generation": 8
+          },
+          "io_gate": {
+            "raw": "0x100000001",
+            "open": true,
+            "epoch": 1,
+            "frame_count": 0,
+            "stopped": false,
+            "early_off": false
+          },
+          "flight": {
+            "head": 2,
+            "record_count": 2,
+            "event_counts": {
+              "BOOT": 1,
+              "PREVIEW_ROUTE_SWITCH": 1
+            },
+            "tail_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              }
+            ],
+            "all_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              }
+            ],
+            "watchdog": {
+              "magic": "0x56373137",
+              "stalled_slots": 0,
+              "dumps_written": 0,
+              "last_err": 0
+            }
+          },
+          "layer0": {
+            "magic_ok": true,
+            "size": 11312,
+            "hw_current": -1,
+            "active_banks_mask": 0,
+            "disp_calls": 4,
+            "disp_substituted": 0,
+            "disp_stock_pass": 4,
+            "vsync_ticks": 193,
+            "banks_retired": 0,
+            "enqueue_seen": 0,
+            "enqueue_copied": 0,
+            "grades": 0,
+            "grade_us": 0,
+            "errors": 0,
+            "last_result": 0,
+            "pool_result": 0,
+            "online": 1,
+            "enabled": 0,
+            "display_ready": 0,
+            "mode_ok": 0,
+            "quarantined": 0,
+            "lut_bytes": 0,
+            "grid": 0,
+            "surface_bytes": 0,
+            "sentinel_status": 0,
+            "neon_active": 0,
+            "active_route": 4294967295,
+            "lcd_substituted": 0,
+            "evf_substituted": 0,
+            "worker_cores": 0
+          },
+          "menu_ctx": {
+            "magic": "0x504d4e55",
+            "magic_ok": true,
+            "size": 6720
+          }
+        },
+        "filmsim": {
+          "context": "0x0",
+          "ui_size": 38432,
+          "filmsim_context_offset": 38424,
+          "bus_cfg": null,
+          "module_loaded": 0,
+          "cfg_active": 0,
+          "dormant": 1,
+          "photo_worker_ready": 0,
+          "live_worker_ready": 0,
+          "live_ws_ready": 0,
+          "class24_alloc_count": 0,
+          "class24_release_count": 0,
+          "class24_active_bytes": 0,
+          "lv_submitted": 0,
+          "lv_busy_skips": 0,
+          "arena_blk_handle": "0x0",
+          "arena_blk_cpu": "0x0",
+          "arena_blk_dma": "0x0",
+          "arena_blk_actual": 0,
+          "arena_blk_used": 0,
+          "job2_grain_bypasses": 0,
+          "pool_suspended": 0,
+          "lv_tb_state": 0,
+          "lut17_ready": 0,
+          "gtile_ready": 0,
+          "gtile_readers": 0,
+          "lv_cpu0_gtile_held": 0,
+          "lut_epoch": 0,
+          "zf_epoch": 0,
+          "lv_work_gen": 0,
+          "portrait_gate": 1,
+          "portrait_latch": 0,
+          "slots_limit": 64,
+          "pool_gate": 0,
+          "be_lv_mask": 0,
+          "v71_silky30fps": {
+            "w5": {
+              "magic": "0x0",
+              "stream": 0,
+              "busy": 0,
+              "release_req": 0,
+              "close_failed": 0,
+              "handoffs": 0,
+              "in_flight": 0,
+              "in_flight_slot": 0,
+              "last_valid_slot": 0,
+              "slot_valid_mask": 0,
+              "submitted_frames": 0,
+              "in_flight_retrig": 0,
+              "direct_nv12_cnt": 0,
+              "async_retrig_cnt": 0,
+              "n_timed_v70": 0,
+              "park_err": 0,
+              "diag_close": "0x0",
+              "avg_in_us": 0,
+              "avg_wait_us": 0,
+              "avg_out_us": 0,
+              "avg_parse_us": 0
+            },
+            "flip_obs": {
+              "ring_head": 0,
+              "ring_count": 0,
+              "obs_pending_flip": 0,
+              "flip_obs_count": 0,
+              "interp_pushes": 0,
+              "direct_nv12_ok": 0,
+              "direct_nv12_retrig": 0,
+              "async_harvests": 0,
+              "last_w": 0,
+              "last_h": 0,
+              "fs_last_encoded_gen": 0,
+              "fs_last_mode": 0
+            },
+            "ev_diag3": null
+          },
+          "guest_writes": false,
+          "dram_active_pc_sel": 0,
+          "xm6_raw_hw_state": 1,
+          "xm6_raw_fw_loaded": 1,
+          "xm6_raw_loader_fault": 0
+        }
+      },
+      "lut_04_lut_loaded_status_zh": {
+        "lang": 8,
+        "err_nz": false,
+        "v71r7": {
+          "anchor": {
+            "magic": "0x56373137",
+            "magic_ok": true,
+            "flags": "0x4",
+            "neon_disabled": false,
+            "pool_suspended": false,
+            "lut_active": true,
+            "wysiwyg_active": false,
+            "lut_core_ctx": "0xa112a2140",
+            "layer0_ctx": "0xa10d7ea40",
+            "menu_ctx": "0xa10d74fc0",
+            "output_permit": 9,
+            "active_generation": 11
+          },
+          "io_gate": {
+            "raw": "0x100000001",
+            "open": true,
+            "epoch": 1,
+            "frame_count": 0,
+            "stopped": false,
+            "early_off": false
+          },
+          "flight": {
+            "head": 3,
+            "record_count": 3,
+            "event_counts": {
+              "BOOT": 1,
+              "PREVIEW_ROUTE_SWITCH": 2
+            },
+            "tail_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              },
+              {
+                "seq": 3,
+                "tick": 1277690738,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 0,
+                "b": 2,
+                "c": 10
+              }
+            ],
+            "all_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              },
+              {
+                "seq": 3,
+                "tick": 1277690738,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 0,
+                "b": 2,
+                "c": 10
+              }
+            ],
+            "watchdog": {
+              "magic": "0x56373137",
+              "stalled_slots": 0,
+              "dumps_written": 0,
+              "last_err": 0
+            }
+          },
+          "layer0": {
+            "magic_ok": true,
+            "size": 11312,
+            "hw_current": -1,
+            "active_banks_mask": 0,
+            "disp_calls": 4,
+            "disp_substituted": 0,
+            "disp_stock_pass": 4,
+            "vsync_ticks": 193,
+            "banks_retired": 0,
+            "enqueue_seen": 0,
+            "enqueue_copied": 0,
+            "grades": 0,
+            "grade_us": 0,
+            "errors": 0,
+            "last_result": 4,
+            "pool_result": 0,
+            "online": 1,
+            "enabled": 0,
+            "display_ready": 0,
+            "mode_ok": 0,
+            "quarantined": 0,
+            "lut_bytes": 0,
+            "grid": 0,
+            "surface_bytes": 0,
+            "sentinel_status": 0,
+            "neon_active": 0,
+            "active_route": 4294967295,
+            "lcd_substituted": 0,
+            "evf_substituted": 0,
+            "worker_cores": 0
+          },
+          "lut_core": {
+            "magic_ok": true,
+            "active": 1,
+            "generation": 11,
+            "is_1d_separable": 0,
+            "xm6_mode": 0,
+            "active_cube_non_null": true
+          },
+          "menu_ctx": {
+            "magic": "0x504d4e55",
+            "magic_ok": true,
+            "size": 6720
+          }
+        },
+        "filmsim": {
+          "context": "0xa112afb40",
+          "ui_size": 38432,
+          "filmsim_context_offset": 38424,
+          "bus_cfg": null,
+          "module_loaded": 1,
+          "cfg_active": 0,
+          "dormant": 1,
+          "photo_worker_ready": 1,
+          "live_worker_ready": 1,
+          "live_ws_ready": 0,
+          "class24_alloc_count": 0,
+          "class24_release_count": 0,
+          "class24_active_bytes": 0,
+          "lv_submitted": 0,
+          "lv_busy_skips": 0,
+          "arena_blk_handle": "0x0",
+          "arena_blk_cpu": "0x0",
+          "arena_blk_dma": "0x0",
+          "arena_blk_actual": 0,
+          "arena_blk_used": 0,
+          "job2_grain_bypasses": 0,
+          "pool_suspended": 0,
+          "lv_tb_state": 0,
+          "lut17_ready": 0,
+          "gtile_ready": 0,
+          "gtile_readers": 0,
+          "lv_cpu0_gtile_held": 0,
+          "lut_epoch": 0,
+          "zf_epoch": 0,
+          "lv_work_gen": 0,
+          "portrait_gate": 1,
+          "portrait_latch": 0,
+          "slots_limit": 64,
+          "pool_gate": 0,
+          "be_lv_mask": 0,
+          "v71_silky30fps": {
+            "w5": {
+              "magic": "0x0",
+              "stream": 0,
+              "busy": 0,
+              "release_req": 0,
+              "close_failed": 0,
+              "handoffs": 0,
+              "in_flight": 0,
+              "in_flight_slot": 0,
+              "last_valid_slot": 0,
+              "slot_valid_mask": 0,
+              "submitted_frames": 0,
+              "in_flight_retrig": 0,
+              "direct_nv12_cnt": 0,
+              "async_retrig_cnt": 0,
+              "n_timed_v70": 0,
+              "park_err": 0,
+              "diag_close": "0x0",
+              "avg_in_us": 0,
+              "avg_wait_us": 0,
+              "avg_out_us": 0,
+              "avg_parse_us": 0
+            },
+            "flip_obs": {
+              "ring_head": 0,
+              "ring_count": 0,
+              "obs_pending_flip": 0,
+              "flip_obs_count": 0,
+              "interp_pushes": 0,
+              "direct_nv12_ok": 0,
+              "direct_nv12_retrig": 0,
+              "async_harvests": 0,
+              "last_w": 0,
+              "last_h": 0,
+              "fs_last_encoded_gen": 0,
+              "fs_last_mode": 0
+            },
+            "ev_diag3": null
+          },
+          "guest_writes": false,
+          "dram_active_pc_sel": 0,
+          "xm6_raw_hw_state": 1,
+          "xm6_raw_fw_loaded": 1,
+          "xm6_raw_loader_fault": 0,
+          "ctx_struct_bytes": 9416,
+          "cfg_updates": 0,
+          "bus_hits": 0,
+          "zf_maps_loaded": 0,
+          "lut_loaded": 0,
+          "active_lut_slot": 0,
+          "last_error": 0,
+          "live_applied": 0,
+          "live_skipped": 0,
+          "last_live_stages": 0,
+          "photos_completed": 0,
+          "photos_bypassed": 0,
+          "photos_failed": 0,
+          "last_stages_applied": 0,
+          "last_main_w": 0,
+          "last_main_h": 0,
+          "photo_reason": 0,
+          "cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "photo_phase": 0,
+          "photo_poisoned": 0,
+          "photo_stage_start_us": 0,
+          "photo_copy_done_us": 0,
+          "photo_finish_us": 0,
+          "zf_grain_buf": "0x0",
+          "zf_maps_retry_after_us": 0,
+          "photo_slot1_phase": 0,
+          "photo_slot1_poisoned": 0,
+          "photo_slot1_completed": 0,
+          "photo_slot1_bypassed": 0,
+          "photo_slot1_failed": 0,
+          "base_cfg_valid": 0,
+          "recipe_table_loaded": 0,
+          "recipe_table_synced_by_ipc": 0,
+          "active_pc_sel": 0,
+          "active_recipe_src": 0,
+          "active_recipe_bound": 0,
+          "xm6_busy": 0,
+          "xm6_breaker_tripped": 0,
+          "xm6_done_flag": 0,
+          "xm6_req_in_flight": 0,
+          "xm6_cb_code": 0,
+          "xm6_diag_ran": 0,
+          "xm6_diag_passed": 0,
+          "xm6_last_err": 0,
+          "xm6_last_dsp_status": 0,
+          "xm6_last_still_ms": 0,
+          "xm6_last_live_us": 0,
+          "xm6_still_ok": 0,
+          "xm6_live_ok": 0,
+          "xm6_fallback_cnt": 0,
+          "base_cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "v71r5_status_flags": 9
+        }
+      },
+      "lut_05_liveview_active": {
+        "lang": 8,
+        "err_nz": false,
+        "v71r7": {
+          "anchor": {
+            "magic": "0x56373137",
+            "magic_ok": true,
+            "flags": "0x4",
+            "neon_disabled": false,
+            "pool_suspended": false,
+            "lut_active": true,
+            "wysiwyg_active": false,
+            "lut_core_ctx": "0xa112a2140",
+            "layer0_ctx": "0xa10d7ea40",
+            "menu_ctx": "0xa10d74fc0",
+            "output_permit": 9,
+            "active_generation": 11
+          },
+          "io_gate": {
+            "raw": "0x100000001",
+            "open": true,
+            "epoch": 1,
+            "frame_count": 0,
+            "stopped": false,
+            "early_off": false
+          },
+          "flight": {
+            "head": 5,
+            "record_count": 5,
+            "event_counts": {
+              "BOOT": 1,
+              "PREVIEW_ROUTE_SWITCH": 3,
+              "L0_WYSIWYG": 1
+            },
+            "tail_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              },
+              {
+                "seq": 3,
+                "tick": 1277690738,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 0,
+                "b": 2,
+                "c": 10
+              },
+              {
+                "seq": 4,
+                "tick": 1424144697,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 12
+              },
+              {
+                "seq": 5,
+                "tick": 1427800206,
+                "event": 23,
+                "name": "L0_WYSIWYG",
+                "core_flags": 3,
+                "a": 0,
+                "b": 1,
+                "c": 0
+              }
+            ],
+            "all_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              },
+              {
+                "seq": 3,
+                "tick": 1277690738,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 0,
+                "b": 2,
+                "c": 10
+              },
+              {
+                "seq": 4,
+                "tick": 1424144697,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 12
+              },
+              {
+                "seq": 5,
+                "tick": 1427800206,
+                "event": 23,
+                "name": "L0_WYSIWYG",
+                "core_flags": 3,
+                "a": 0,
+                "b": 1,
+                "c": 0
+              }
+            ],
+            "watchdog": {
+              "magic": "0x56373137",
+              "stalled_slots": 0,
+              "dumps_written": 0,
+              "last_err": 0
+            }
+          },
+          "layer0": {
+            "magic_ok": true,
+            "size": 11312,
+            "hw_current": 3,
+            "active_banks_mask": 8,
+            "disp_calls": 23,
+            "disp_substituted": 17,
+            "disp_stock_pass": 6,
+            "vsync_ticks": 228,
+            "banks_retired": 16,
+            "enqueue_seen": 19,
+            "enqueue_copied": 18,
+            "grades": 18,
+            "grade_us": 5201,
+            "errors": 0,
+            "last_result": 0,
+            "pool_result": 1,
+            "online": 1,
+            "enabled": 1,
+            "display_ready": 1,
+            "mode_ok": 1,
+            "quarantined": 0,
+            "lut_bytes": 0,
+            "grid": 0,
+            "surface_bytes": 15253504,
+            "sentinel_status": 1,
+            "neon_active": 1,
+            "active_route": 0,
+            "lcd_substituted": 17,
+            "evf_substituted": 0,
+            "worker_cores": 2
+          },
+          "lut_core": {
+            "magic_ok": true,
+            "active": 1,
+            "generation": 11,
+            "is_1d_separable": 0,
+            "xm6_mode": 0,
+            "active_cube_non_null": true
+          },
+          "menu_ctx": {
+            "magic": "0x504d4e55",
+            "magic_ok": true,
+            "size": 6720
+          }
+        },
+        "filmsim": {
+          "context": "0xa112afb40",
+          "ui_size": 38432,
+          "filmsim_context_offset": 38424,
+          "bus_cfg": null,
+          "module_loaded": 1,
+          "cfg_active": 0,
+          "dormant": 1,
+          "photo_worker_ready": 1,
+          "live_worker_ready": 1,
+          "live_ws_ready": 0,
+          "class24_alloc_count": 0,
+          "class24_release_count": 0,
+          "class24_active_bytes": 0,
+          "lv_submitted": 0,
+          "lv_busy_skips": 0,
+          "arena_blk_handle": "0x0",
+          "arena_blk_cpu": "0x0",
+          "arena_blk_dma": "0x0",
+          "arena_blk_actual": 0,
+          "arena_blk_used": 0,
+          "job2_grain_bypasses": 0,
+          "pool_suspended": 0,
+          "lv_tb_state": 0,
+          "lut17_ready": 0,
+          "gtile_ready": 0,
+          "gtile_readers": 0,
+          "lv_cpu0_gtile_held": 0,
+          "lut_epoch": 0,
+          "zf_epoch": 0,
+          "lv_work_gen": 0,
+          "portrait_gate": 1,
+          "portrait_latch": 0,
+          "slots_limit": 64,
+          "pool_gate": 0,
+          "be_lv_mask": 1118481,
+          "v71_silky30fps": {
+            "w5": {
+              "magic": "0x0",
+              "stream": 0,
+              "busy": 0,
+              "release_req": 0,
+              "close_failed": 0,
+              "handoffs": 0,
+              "in_flight": 0,
+              "in_flight_slot": 0,
+              "last_valid_slot": 0,
+              "slot_valid_mask": 0,
+              "submitted_frames": 0,
+              "in_flight_retrig": 0,
+              "direct_nv12_cnt": 0,
+              "async_retrig_cnt": 0,
+              "n_timed_v70": 0,
+              "park_err": 0,
+              "diag_close": "0x0",
+              "avg_in_us": 0,
+              "avg_wait_us": 0,
+              "avg_out_us": 0,
+              "avg_parse_us": 0
+            },
+            "flip_obs": {
+              "ring_head": 0,
+              "ring_count": 0,
+              "obs_pending_flip": 0,
+              "flip_obs_count": 0,
+              "interp_pushes": 0,
+              "direct_nv12_ok": 0,
+              "direct_nv12_retrig": 0,
+              "async_harvests": 0,
+              "last_w": 0,
+              "last_h": 0,
+              "fs_last_encoded_gen": 0,
+              "fs_last_mode": 0
+            },
+            "ev_diag3": null
+          },
+          "guest_writes": false,
+          "dram_active_pc_sel": 0,
+          "xm6_raw_hw_state": 1,
+          "xm6_raw_fw_loaded": 1,
+          "xm6_raw_loader_fault": 0,
+          "ctx_struct_bytes": 9416,
+          "cfg_updates": 0,
+          "bus_hits": 0,
+          "zf_maps_loaded": 0,
+          "lut_loaded": 0,
+          "active_lut_slot": 0,
+          "last_error": 0,
+          "live_applied": 0,
+          "live_skipped": 0,
+          "last_live_stages": 0,
+          "photos_completed": 0,
+          "photos_bypassed": 0,
+          "photos_failed": 0,
+          "last_stages_applied": 0,
+          "last_main_w": 0,
+          "last_main_h": 0,
+          "photo_reason": 0,
+          "cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "photo_phase": 0,
+          "photo_poisoned": 0,
+          "photo_stage_start_us": 0,
+          "photo_copy_done_us": 0,
+          "photo_finish_us": 0,
+          "zf_grain_buf": "0x0",
+          "zf_maps_retry_after_us": 0,
+          "photo_slot1_phase": 0,
+          "photo_slot1_poisoned": 0,
+          "photo_slot1_completed": 0,
+          "photo_slot1_bypassed": 0,
+          "photo_slot1_failed": 0,
+          "base_cfg_valid": 0,
+          "recipe_table_loaded": 0,
+          "recipe_table_synced_by_ipc": 0,
+          "active_pc_sel": 0,
+          "active_recipe_src": 0,
+          "active_recipe_bound": 0,
+          "xm6_busy": 0,
+          "xm6_breaker_tripped": 0,
+          "xm6_done_flag": 0,
+          "xm6_req_in_flight": 0,
+          "xm6_cb_code": 0,
+          "xm6_diag_ran": 0,
+          "xm6_diag_passed": 0,
+          "xm6_last_err": 0,
+          "xm6_last_dsp_status": 0,
+          "xm6_last_still_ms": 0,
+          "xm6_last_live_us": 0,
+          "xm6_still_ok": 0,
+          "xm6_live_ok": 0,
+          "xm6_fallback_cnt": 0,
+          "base_cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "v71r5_status_flags": 9
+        }
+      },
+      "p1_after_still": {
+        "lang": 8,
+        "err_nz": false,
+        "v71r7": {
+          "anchor": {
+            "magic": "0x56373137",
+            "magic_ok": true,
+            "flags": "0x4",
+            "neon_disabled": false,
+            "pool_suspended": false,
+            "lut_active": true,
+            "wysiwyg_active": false,
+            "lut_core_ctx": "0xa112a2140",
+            "layer0_ctx": "0xa10d7ea40",
+            "menu_ctx": "0xa10d74fc0",
+            "output_permit": 9,
+            "active_generation": 11
+          },
+          "io_gate": {
+            "raw": "0x100000001",
+            "open": true,
+            "epoch": 1,
+            "frame_count": 0,
+            "stopped": false,
+            "early_off": false
+          },
+          "flight": {
+            "head": 8,
+            "record_count": 8,
+            "event_counts": {
+              "BOOT": 1,
+              "PREVIEW_ROUTE_SWITCH": 3,
+              "L0_WYSIWYG": 1,
+              "JPEG_MAIN_ENTER": 1,
+              "JPEG_GRADE_START": 1,
+              "JPEG_GRADE_DONE": 1
+            },
+            "tail_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              },
+              {
+                "seq": 3,
+                "tick": 1277690738,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 0,
+                "b": 2,
+                "c": 10
+              },
+              {
+                "seq": 4,
+                "tick": 1424144697,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 12
+              },
+              {
+                "seq": 5,
+                "tick": 1427800206,
+                "event": 23,
+                "name": "L0_WYSIWYG",
+                "core_flags": 3,
+                "a": 0,
+                "b": 1,
+                "c": 0
+              },
+              {
+                "seq": 6,
+                "tick": 1513562963,
+                "event": 1,
+                "name": "JPEG_MAIN_ENTER",
+                "core_flags": 0,
+                "a": 1,
+                "b": 4,
+                "c": 8256
+              },
+              {
+                "seq": 7,
+                "tick": 1514010801,
+                "event": 3,
+                "name": "JPEG_GRADE_START",
+                "core_flags": 0,
+                "a": 1,
+                "b": 1,
+                "c": 0
+              },
+              {
+                "seq": 8,
+                "tick": 1524363180,
+                "event": 4,
+                "name": "JPEG_GRADE_DONE",
+                "core_flags": 0,
+                "a": 1,
+                "b": 2,
+                "c": 0
+              }
+            ],
+            "all_records": [
+              {
+                "seq": 1,
+                "tick": 1342216,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 398887043,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 2,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              },
+              {
+                "seq": 3,
+                "tick": 1277690738,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 0,
+                "b": 2,
+                "c": 10
+              },
+              {
+                "seq": 4,
+                "tick": 1424144697,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 12
+              },
+              {
+                "seq": 5,
+                "tick": 1427800206,
+                "event": 23,
+                "name": "L0_WYSIWYG",
+                "core_flags": 3,
+                "a": 0,
+                "b": 1,
+                "c": 0
+              },
+              {
+                "seq": 6,
+                "tick": 1513562963,
+                "event": 1,
+                "name": "JPEG_MAIN_ENTER",
+                "core_flags": 0,
+                "a": 1,
+                "b": 4,
+                "c": 8256
+              },
+              {
+                "seq": 7,
+                "tick": 1514010801,
+                "event": 3,
+                "name": "JPEG_GRADE_START",
+                "core_flags": 0,
+                "a": 1,
+                "b": 1,
+                "c": 0
+              },
+              {
+                "seq": 8,
+                "tick": 1524363180,
+                "event": 4,
+                "name": "JPEG_GRADE_DONE",
+                "core_flags": 0,
+                "a": 1,
+                "b": 2,
+                "c": 0
+              }
+            ],
+            "watchdog": {
+              "magic": "0x56373137",
+              "stalled_slots": 0,
+              "dumps_written": 0,
+              "last_err": 0
+            }
+          },
+          "layer0": {
+            "magic_ok": true,
+            "size": 11312,
+            "hw_current": -1,
+            "active_banks_mask": 0,
+            "disp_calls": 27,
+            "disp_substituted": 18,
+            "disp_stock_pass": 9,
+            "vsync_ticks": 391,
+            "banks_retired": 18,
+            "enqueue_seen": 23,
+            "enqueue_copied": 18,
+            "grades": 18,
+            "grade_us": 5201,
+            "errors": 0,
+            "last_result": 0,
+            "pool_result": 1,
+            "online": 1,
+            "enabled": 1,
+            "display_ready": 1,
+            "mode_ok": 1,
+            "quarantined": 0,
+            "lut_bytes": 0,
+            "grid": 0,
+            "surface_bytes": 15253504,
+            "sentinel_status": 1,
+            "neon_active": 1,
+            "active_route": 0,
+            "lcd_substituted": 18,
+            "evf_substituted": 0,
+            "worker_cores": 2
+          },
+          "lut_core": {
+            "magic_ok": true,
+            "active": 1,
+            "generation": 11,
+            "is_1d_separable": 0,
+            "xm6_mode": 0,
+            "active_cube_non_null": true
+          },
+          "menu_ctx": {
+            "magic": "0x504d4e55",
+            "magic_ok": true,
+            "size": 6720
+          }
+        },
+        "filmsim": {
+          "context": "0xa112afb40",
+          "ui_size": 38432,
+          "filmsim_context_offset": 38424,
+          "bus_cfg": null,
+          "module_loaded": 1,
+          "cfg_active": 0,
+          "dormant": 1,
+          "photo_worker_ready": 1,
+          "live_worker_ready": 1,
+          "live_ws_ready": 0,
+          "class24_alloc_count": 0,
+          "class24_release_count": 0,
+          "class24_active_bytes": 0,
+          "lv_submitted": 0,
+          "lv_busy_skips": 0,
+          "arena_blk_handle": "0x0",
+          "arena_blk_cpu": "0x0",
+          "arena_blk_dma": "0x0",
+          "arena_blk_actual": 0,
+          "arena_blk_used": 0,
+          "job2_grain_bypasses": 0,
+          "pool_suspended": 0,
+          "lv_tb_state": 0,
+          "lut17_ready": 0,
+          "gtile_ready": 0,
+          "gtile_readers": 0,
+          "lv_cpu0_gtile_held": 0,
+          "lut_epoch": 0,
+          "zf_epoch": 0,
+          "lv_work_gen": 0,
+          "portrait_gate": 1,
+          "portrait_latch": 0,
+          "slots_limit": 64,
+          "pool_gate": 0,
+          "be_lv_mask": 1118481,
+          "v71_silky30fps": {
+            "w5": {
+              "magic": "0x0",
+              "stream": 0,
+              "busy": 0,
+              "release_req": 0,
+              "close_failed": 0,
+              "handoffs": 0,
+              "in_flight": 0,
+              "in_flight_slot": 0,
+              "last_valid_slot": 0,
+              "slot_valid_mask": 0,
+              "submitted_frames": 0,
+              "in_flight_retrig": 0,
+              "direct_nv12_cnt": 0,
+              "async_retrig_cnt": 0,
+              "n_timed_v70": 0,
+              "park_err": 0,
+              "diag_close": "0x0",
+              "avg_in_us": 0,
+              "avg_wait_us": 0,
+              "avg_out_us": 0,
+              "avg_parse_us": 0
+            },
+            "flip_obs": {
+              "ring_head": 0,
+              "ring_count": 0,
+              "obs_pending_flip": 0,
+              "flip_obs_count": 0,
+              "interp_pushes": 0,
+              "direct_nv12_ok": 0,
+              "direct_nv12_retrig": 0,
+              "async_harvests": 0,
+              "last_w": 0,
+              "last_h": 0,
+              "fs_last_encoded_gen": 0,
+              "fs_last_mode": 0
+            },
+            "ev_diag3": null
+          },
+          "guest_writes": false,
+          "dram_active_pc_sel": 0,
+          "xm6_raw_hw_state": 1,
+          "xm6_raw_fw_loaded": 1,
+          "xm6_raw_loader_fault": 0,
+          "ctx_struct_bytes": 9416,
+          "cfg_updates": 0,
+          "bus_hits": 0,
+          "zf_maps_loaded": 0,
+          "lut_loaded": 0,
+          "active_lut_slot": 0,
+          "last_error": 0,
+          "live_applied": 0,
+          "live_skipped": 0,
+          "last_live_stages": 0,
+          "photos_completed": 1,
+          "photos_bypassed": 0,
+          "photos_failed": 0,
+          "last_stages_applied": 2,
+          "last_main_w": 8256,
+          "last_main_h": 5504,
+          "photo_reason": 9,
+          "cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "photo_phase": 0,
+          "photo_poisoned": 0,
+          "photo_stage_start_us": 63062753,
+          "photo_copy_done_us": 63083783,
+          "photo_finish_us": 63515132,
+          "zf_grain_buf": "0x0",
+          "zf_maps_retry_after_us": 0,
+          "photo_slot1_phase": 0,
+          "photo_slot1_poisoned": 0,
+          "photo_slot1_completed": 0,
+          "photo_slot1_bypassed": 0,
+          "photo_slot1_failed": 0,
+          "base_cfg_valid": 0,
+          "recipe_table_loaded": 0,
+          "recipe_table_synced_by_ipc": 0,
+          "active_pc_sel": 0,
+          "active_recipe_src": 0,
+          "active_recipe_bound": 0,
+          "xm6_busy": 0,
+          "xm6_breaker_tripped": 0,
+          "xm6_done_flag": 0,
+          "xm6_req_in_flight": 0,
+          "xm6_cb_code": 0,
+          "xm6_diag_ran": 0,
+          "xm6_diag_passed": 0,
+          "xm6_last_err": 0,
+          "xm6_last_dsp_status": 0,
+          "xm6_last_still_ms": 0,
+          "xm6_last_live_us": 0,
+          "xm6_still_ok": 0,
+          "xm6_live_ok": 0,
+          "xm6_fallback_cnt": 0,
+          "still_last_duration_ms": 452.38,
+          "base_cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "v71r5_status_flags": 9
+        }
+      }
+    },
+    "pc_counts": {
+      "v71r7_photo_menu_boot_once": {
+        "pc": "0x40985070",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_photo_menu_lookup_text": {
+        "pc": "0x40982674",
+        "total": 8,
+        "by_cpu": [
+          8,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_entry": {
+        "pc": "0x40982980",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_refresh": {
+        "pc": "0x40982bb8",
+        "total": 138,
+        "by_cpu": [
+          138,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_activate": {
+        "pc": "0x40983610",
+        "total": 2,
+        "by_cpu": [
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_exit": {
+        "pc": "0x409834dc",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_prepare_from_buffer": {
+        "pc": "0x409df218",
+        "total": 1,
+        "by_cpu": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "v71r7_lut_apply_still_nv16": {
+        "pc": "0x409dfe98",
+        "total": 4,
+        "by_cpu": [
+          0,
+          0,
+          4,
+          0
+        ]
+      },
+      "v71r7_lut_apply_nv12": {
+        "pc": "0x409dfef8",
+        "total": 18,
+        "by_cpu": [
+          0,
+          0,
+          18,
+          0
+        ]
+      },
+      "v71r7_lut_clear_active": {
+        "pc": "0x409df668",
+        "total": 5,
+        "by_cpu": [
+          0,
+          0,
+          5,
+          0
+        ]
+      },
+      "v71r7_layer0_init": {
+        "pc": "0x409e2b7c",
+        "total": 2,
+        "by_cpu": [
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_worker_step": {
+        "pc": "0x409e3b04",
+        "total": 2184,
+        "by_cpu": [
+          0,
+          0,
+          2184,
+          0
+        ]
+      },
+      "v71r7_layer0_enqueue_hook_c": {
+        "pc": "0x409e1764",
+        "total": 27,
+        "by_cpu": [
+          0,
+          27,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_display_hook_c": {
+        "pc": "0x409e1a04",
+        "total": 27,
+        "by_cpu": [
+          0,
+          27,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_vsync_hook_c": {
+        "pc": "0x409e28b0",
+        "total": 391,
+        "by_cpu": [
+          391,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_suspend": {
+        "pc": "0x409e2fe0",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_resume": {
+        "pc": "0x409e3528",
+        "total": 2919,
+        "by_cpu": [
+          2919,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_neon_sentinel_probe_once": {
+        "pc": "0x409dd094",
+        "total": 2,
+        "by_cpu": [
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "v71r7_watchdog_poll": {
+        "pc": "0x409ddff4",
+        "total": 616,
+        "by_cpu": [
+          0,
+          0,
+          616,
+          0
+        ]
+      }
+    },
+    "card_audit": {
+      "file_count": 13,
+      "fenestra_files": [
+        "FENESTRA/BOOT-Z8.FLAG",
+        "FENESTRA/FXPHOTO0.CFG",
+        "FENESTRA/LUTS/Cinema/TealOrg.cube",
+        "FENESTRA/STARTUP-Z8.0",
+        "FENESTRA/WarmFilm.cube",
+        "FENESTRA/ZF_GRAIN.BIN",
+        "FENESTRA/filmsim.wlm",
+        "FENESTRA/portrait.wlm",
+        "FENESTRA/slotcard.wlm"
+      ],
+      "dcim_jpegs": [
+        "DCIM/100NCZ_8/DSC_0001.JPG"
+      ],
+      "FXPHOTO0.CFG": {
+        "valid": true,
+        "version": 2,
+        "bytes": 96,
+        "generation": 1,
+        "enabled": 1,
+        "path_len": 13,
+        "path": "WarmFilm.cube",
+        "crc32": "0x8b3e8e56",
+        "crc_ok": true
+      },
+      "FXCRASH.LOG": {
+        "present": false
+      },
+      "jpegs": [
+        {
+          "path": "DCIM/100NCZ_8/DSC_0001.JPG",
+          "bytes": 1192819,
+          "soi_eoi_ok": true,
+          "width": 8256,
+          "height": 5504,
+          "mean_rgb": [
+            108.24,
+            85.36,
+            55.18
+          ],
+          "r_minus_b": 53.06
+        }
+      ]
+    },
+    "stderr": {
+      "z8_unknown_count": 0,
+      "z9_unknown_count": 0,
+      "panic_count": 0,
+      "stderr_file": "stderr.log",
+      "stderr_bytes": 3812282
+    },
+    "card_path": "/home/ycx/fxfix/onemov/v71r7-lut-preview/verify_qemu/runs/v71r7-lut-preview-final/phase1/capture-card.raw"
+  },
+  "phase3": {
+    "phase_num": 3,
+    "final_phase": "done",
+    "run_err": null,
+    "dram_checks": {
+      "build_id": "0xd590d8cd",
+      "build_id_ok": true,
+      "filmsim_bank": {
+        "va": "0x409b0000",
+        "bytes": 153456,
+        "dram_sha256": "9655e8eab3e44218bec82a4c987f0fbb958097343f7d704c1ecf65bfb2884a55",
+        "ok": true
+      },
+      "lut_menu_bank": {
+        "va": "0x40981000",
+        "bytes": 34432,
+        "dram_sha256": "22c3a64d53558399635e87ecc1e45726c42d56d3bf9426667db82b0e3bd4c836",
+        "ok": true
+      },
+      "lut_core_bank": {
+        "va": "0x409db000",
+        "bytes": 63088,
+        "dram_sha256": "62f9353ce836c502257e35839e76d201628678593b8ed5bebf575a70da93169b",
+        "ok": true
+      },
+      "xm6_elf0": {
+        "va": "0x4167caa0",
+        "bytes": 692516,
+        "dram_sha256": "b65798d7a6cbd026cb97cb01df7278732cdcd6a7f1e27f8f23b1437ecb2c88db",
+        "ok": true
+      }
+    },
+    "photo_menu_count": 0,
+    "photo_menu_row45_id": null,
+    "photo_menu_row47_id": null,
+    "photo_menu_row47_text": null,
+    "seen_lut_active": true,
+    "seen_lv_workspace_bytes": 15253504,
+    "seen_lv_grades": 0,
+    "seen_lv_disp_sub": 0,
+    "seen_pool_suspended": true,
+    "seen_pool_suspended_ws_bytes": 0,
+    "shots": [
+      "lut_06_movie_pool_suspended.png"
+    ],
+    "snapshots": {
+      "p3_before_movie": {
+        "lang": 8,
+        "err_nz": false,
+        "v71r7": {
+          "anchor": {
+            "magic": "0x56373137",
+            "magic_ok": true,
+            "flags": "0x4",
+            "neon_disabled": false,
+            "pool_suspended": false,
+            "lut_active": true,
+            "wysiwyg_active": false,
+            "lut_core_ctx": "0xa10eb11d0",
+            "layer0_ctx": "0xa10d7ea40",
+            "menu_ctx": "0xa10d74fc0",
+            "output_permit": 7,
+            "active_generation": 7
+          },
+          "io_gate": {
+            "raw": "0x100000001",
+            "open": true,
+            "epoch": 1,
+            "frame_count": 0,
+            "stopped": false,
+            "early_off": false
+          },
+          "flight": {
+            "head": 2,
+            "record_count": 2,
+            "event_counts": {
+              "BOOT": 1,
+              "PREVIEW_ROUTE_SWITCH": 1
+            },
+            "tail_records": [
+              {
+                "seq": 1,
+                "tick": 1337740,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 362790013,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              }
+            ],
+            "all_records": [
+              {
+                "seq": 1,
+                "tick": 1337740,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 362790013,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              }
+            ],
+            "watchdog": {
+              "magic": "0x56373137",
+              "stalled_slots": 0,
+              "dumps_written": 0,
+              "last_err": 0
+            }
+          },
+          "layer0": {
+            "magic_ok": true,
+            "size": 11312,
+            "hw_current": -1,
+            "active_banks_mask": 0,
+            "disp_calls": 2,
+            "disp_substituted": 0,
+            "disp_stock_pass": 2,
+            "vsync_ticks": 81,
+            "banks_retired": 0,
+            "enqueue_seen": 1,
+            "enqueue_copied": 0,
+            "grades": 0,
+            "grade_us": 0,
+            "errors": 0,
+            "last_result": 0,
+            "pool_result": 1,
+            "online": 1,
+            "enabled": 1,
+            "display_ready": 1,
+            "mode_ok": 1,
+            "quarantined": 0,
+            "lut_bytes": 0,
+            "grid": 0,
+            "surface_bytes": 15253504,
+            "sentinel_status": 1,
+            "neon_active": 0,
+            "active_route": 0,
+            "lcd_substituted": 0,
+            "evf_substituted": 0,
+            "worker_cores": 0
+          },
+          "lut_core": {
+            "magic_ok": true,
+            "active": 1,
+            "generation": 7,
+            "is_1d_separable": 0,
+            "xm6_mode": 0,
+            "active_cube_non_null": true
+          },
+          "menu_ctx": {
+            "magic": "0x504d4e55",
+            "magic_ok": true,
+            "size": 6720
+          }
+        },
+        "filmsim": {
+          "context": "0xa10eb1a60",
+          "ui_size": 38432,
+          "filmsim_context_offset": 38424,
+          "bus_cfg": null,
+          "module_loaded": 1,
+          "cfg_active": 0,
+          "dormant": 1,
+          "photo_worker_ready": 1,
+          "live_worker_ready": 1,
+          "live_ws_ready": 0,
+          "class24_alloc_count": 0,
+          "class24_release_count": 0,
+          "class24_active_bytes": 0,
+          "lv_submitted": 0,
+          "lv_busy_skips": 0,
+          "arena_blk_handle": "0x0",
+          "arena_blk_cpu": "0x0",
+          "arena_blk_dma": "0x0",
+          "arena_blk_actual": 0,
+          "arena_blk_used": 0,
+          "job2_grain_bypasses": 0,
+          "pool_suspended": 0,
+          "lv_tb_state": 0,
+          "lut17_ready": 0,
+          "gtile_ready": 0,
+          "gtile_readers": 0,
+          "lv_cpu0_gtile_held": 0,
+          "lut_epoch": 0,
+          "zf_epoch": 0,
+          "lv_work_gen": 0,
+          "portrait_gate": 1,
+          "portrait_latch": 0,
+          "slots_limit": 64,
+          "pool_gate": 0,
+          "be_lv_mask": 1118481,
+          "v71_silky30fps": {
+            "w5": {
+              "magic": "0x0",
+              "stream": 0,
+              "busy": 0,
+              "release_req": 0,
+              "close_failed": 0,
+              "handoffs": 0,
+              "in_flight": 0,
+              "in_flight_slot": 0,
+              "last_valid_slot": 0,
+              "slot_valid_mask": 0,
+              "submitted_frames": 0,
+              "in_flight_retrig": 0,
+              "direct_nv12_cnt": 0,
+              "async_retrig_cnt": 0,
+              "n_timed_v70": 0,
+              "park_err": 0,
+              "diag_close": "0x0",
+              "avg_in_us": 0,
+              "avg_wait_us": 0,
+              "avg_out_us": 0,
+              "avg_parse_us": 0
+            },
+            "flip_obs": {
+              "ring_head": 0,
+              "ring_count": 0,
+              "obs_pending_flip": 0,
+              "flip_obs_count": 0,
+              "interp_pushes": 0,
+              "direct_nv12_ok": 0,
+              "direct_nv12_retrig": 0,
+              "async_harvests": 0,
+              "last_w": 0,
+              "last_h": 0,
+              "fs_last_encoded_gen": 0,
+              "fs_last_mode": 0
+            },
+            "ev_diag3": null
+          },
+          "guest_writes": false,
+          "dram_active_pc_sel": 0,
+          "xm6_raw_hw_state": 1,
+          "xm6_raw_fw_loaded": 1,
+          "xm6_raw_loader_fault": 0,
+          "ctx_struct_bytes": 9416,
+          "cfg_updates": 1,
+          "bus_hits": 0,
+          "zf_maps_loaded": 0,
+          "lut_loaded": 0,
+          "active_lut_slot": 0,
+          "last_error": 0,
+          "live_applied": 0,
+          "live_skipped": 0,
+          "last_live_stages": 0,
+          "photos_completed": 0,
+          "photos_bypassed": 0,
+          "photos_failed": 0,
+          "last_stages_applied": 0,
+          "last_main_w": 0,
+          "last_main_h": 0,
+          "photo_reason": 0,
+          "cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "photo_phase": 0,
+          "photo_poisoned": 0,
+          "photo_stage_start_us": 0,
+          "photo_copy_done_us": 0,
+          "photo_finish_us": 0,
+          "zf_grain_buf": "0x0",
+          "zf_maps_retry_after_us": 0,
+          "photo_slot1_phase": 0,
+          "photo_slot1_poisoned": 0,
+          "photo_slot1_completed": 0,
+          "photo_slot1_bypassed": 0,
+          "photo_slot1_failed": 0,
+          "base_cfg_valid": 1,
+          "recipe_table_loaded": 0,
+          "recipe_table_synced_by_ipc": 0,
+          "active_pc_sel": 0,
+          "active_recipe_src": 0,
+          "active_recipe_bound": 0,
+          "xm6_busy": 0,
+          "xm6_breaker_tripped": 0,
+          "xm6_done_flag": 0,
+          "xm6_req_in_flight": 0,
+          "xm6_cb_code": 0,
+          "xm6_diag_ran": 0,
+          "xm6_diag_passed": 0,
+          "xm6_last_err": 0,
+          "xm6_last_dsp_status": 0,
+          "xm6_last_still_ms": 0,
+          "xm6_last_live_us": 0,
+          "xm6_still_ok": 0,
+          "xm6_live_ok": 0,
+          "xm6_fallback_cnt": 0,
+          "base_cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "v71r5_status_flags": 9
+        }
+      },
+      "lut_06_movie_pool_suspended": {
+        "lang": 8,
+        "err_nz": false,
+        "v71r7": {
+          "anchor": {
+            "magic": "0x56373137",
+            "magic_ok": true,
+            "flags": "0x6",
+            "neon_disabled": false,
+            "pool_suspended": true,
+            "lut_active": true,
+            "wysiwyg_active": false,
+            "lut_core_ctx": "0xa10eb11d0",
+            "layer0_ctx": "0xa10d7ea40",
+            "menu_ctx": "0xa10d74fc0",
+            "output_permit": 7,
+            "active_generation": 7
+          },
+          "io_gate": {
+            "raw": "0x100000001",
+            "open": true,
+            "epoch": 1,
+            "frame_count": 0,
+            "stopped": false,
+            "early_off": false
+          },
+          "flight": {
+            "head": 3,
+            "record_count": 3,
+            "event_counts": {
+              "BOOT": 1,
+              "PREVIEW_ROUTE_SWITCH": 1,
+              "POOL_SUSPEND": 1
+            },
+            "tail_records": [
+              {
+                "seq": 1,
+                "tick": 1337740,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 362790013,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              },
+              {
+                "seq": 3,
+                "tick": 495129451,
+                "event": 16,
+                "name": "POOL_SUSPEND",
+                "core_flags": 1,
+                "a": 0,
+                "b": 15253504,
+                "c": 0
+              }
+            ],
+            "all_records": [
+              {
+                "seq": 1,
+                "tick": 1337740,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 362790013,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              },
+              {
+                "seq": 3,
+                "tick": 495129451,
+                "event": 16,
+                "name": "POOL_SUSPEND",
+                "core_flags": 1,
+                "a": 0,
+                "b": 15253504,
+                "c": 0
+              }
+            ],
+            "watchdog": {
+              "magic": "0x56373137",
+              "stalled_slots": 0,
+              "dumps_written": 0,
+              "last_err": 0
+            }
+          },
+          "layer0": {
+            "magic_ok": true,
+            "size": 11312,
+            "hw_current": -1,
+            "active_banks_mask": 0,
+            "disp_calls": 2,
+            "disp_substituted": 0,
+            "disp_stock_pass": 2,
+            "vsync_ticks": 272,
+            "banks_retired": 0,
+            "enqueue_seen": 1,
+            "enqueue_copied": 0,
+            "grades": 0,
+            "grade_us": 0,
+            "errors": 0,
+            "last_result": 4,
+            "pool_result": 1,
+            "online": 1,
+            "enabled": 0,
+            "display_ready": 0,
+            "mode_ok": 0,
+            "quarantined": 0,
+            "lut_bytes": 0,
+            "grid": 0,
+            "surface_bytes": 0,
+            "sentinel_status": 1,
+            "neon_active": 0,
+            "active_route": 4294967295,
+            "lcd_substituted": 0,
+            "evf_substituted": 0,
+            "worker_cores": 0
+          },
+          "lut_core": {
+            "magic_ok": true,
+            "active": 1,
+            "generation": 7,
+            "is_1d_separable": 0,
+            "xm6_mode": 0,
+            "active_cube_non_null": true
+          },
+          "menu_ctx": {
+            "magic": "0x504d4e55",
+            "magic_ok": true,
+            "size": 6720
+          }
+        },
+        "filmsim": {
+          "context": "0xa10eb1a60",
+          "ui_size": 38432,
+          "filmsim_context_offset": 38424,
+          "bus_cfg": null,
+          "module_loaded": 1,
+          "cfg_active": 0,
+          "dormant": 1,
+          "photo_worker_ready": 1,
+          "live_worker_ready": 1,
+          "live_ws_ready": 0,
+          "class24_alloc_count": 0,
+          "class24_release_count": 0,
+          "class24_active_bytes": 0,
+          "lv_submitted": 0,
+          "lv_busy_skips": 0,
+          "arena_blk_handle": "0x0",
+          "arena_blk_cpu": "0x0",
+          "arena_blk_dma": "0x0",
+          "arena_blk_actual": 0,
+          "arena_blk_used": 0,
+          "job2_grain_bypasses": 0,
+          "pool_suspended": 1,
+          "lv_tb_state": 0,
+          "lut17_ready": 0,
+          "gtile_ready": 0,
+          "gtile_readers": 0,
+          "lv_cpu0_gtile_held": 0,
+          "lut_epoch": 0,
+          "zf_epoch": 0,
+          "lv_work_gen": 0,
+          "portrait_gate": 1,
+          "portrait_latch": 0,
+          "slots_limit": 64,
+          "pool_gate": 2,
+          "be_lv_mask": 0,
+          "v71_silky30fps": {
+            "w5": {
+              "magic": "0x0",
+              "stream": 0,
+              "busy": 0,
+              "release_req": 0,
+              "close_failed": 0,
+              "handoffs": 0,
+              "in_flight": 0,
+              "in_flight_slot": 0,
+              "last_valid_slot": 0,
+              "slot_valid_mask": 0,
+              "submitted_frames": 0,
+              "in_flight_retrig": 0,
+              "direct_nv12_cnt": 0,
+              "async_retrig_cnt": 0,
+              "n_timed_v70": 0,
+              "park_err": 0,
+              "diag_close": "0x0",
+              "avg_in_us": 0,
+              "avg_wait_us": 0,
+              "avg_out_us": 0,
+              "avg_parse_us": 0
+            },
+            "flip_obs": {
+              "ring_head": 0,
+              "ring_count": 0,
+              "obs_pending_flip": 0,
+              "flip_obs_count": 0,
+              "interp_pushes": 0,
+              "direct_nv12_ok": 0,
+              "direct_nv12_retrig": 0,
+              "async_harvests": 0,
+              "last_w": 0,
+              "last_h": 0,
+              "fs_last_encoded_gen": 0,
+              "fs_last_mode": 0
+            },
+            "ev_diag3": null
+          },
+          "guest_writes": false,
+          "dram_active_pc_sel": 0,
+          "xm6_raw_hw_state": 1,
+          "xm6_raw_fw_loaded": 1,
+          "xm6_raw_loader_fault": 0,
+          "ctx_struct_bytes": 9416,
+          "cfg_updates": 1,
+          "bus_hits": 0,
+          "zf_maps_loaded": 0,
+          "lut_loaded": 0,
+          "active_lut_slot": 0,
+          "last_error": 0,
+          "live_applied": 0,
+          "live_skipped": 0,
+          "last_live_stages": 0,
+          "photos_completed": 0,
+          "photos_bypassed": 0,
+          "photos_failed": 0,
+          "last_stages_applied": 0,
+          "last_main_w": 0,
+          "last_main_h": 0,
+          "photo_reason": 9,
+          "cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "photo_phase": 0,
+          "photo_poisoned": 0,
+          "photo_stage_start_us": 0,
+          "photo_copy_done_us": 0,
+          "photo_finish_us": 0,
+          "zf_grain_buf": "0x0",
+          "zf_maps_retry_after_us": 0,
+          "photo_slot1_phase": 0,
+          "photo_slot1_poisoned": 0,
+          "photo_slot1_completed": 0,
+          "photo_slot1_bypassed": 0,
+          "photo_slot1_failed": 0,
+          "base_cfg_valid": 1,
+          "recipe_table_loaded": 0,
+          "recipe_table_synced_by_ipc": 0,
+          "active_pc_sel": 0,
+          "active_recipe_src": 0,
+          "active_recipe_bound": 0,
+          "xm6_busy": 0,
+          "xm6_breaker_tripped": 0,
+          "xm6_done_flag": 0,
+          "xm6_req_in_flight": 0,
+          "xm6_cb_code": 0,
+          "xm6_diag_ran": 0,
+          "xm6_diag_passed": 0,
+          "xm6_last_err": 0,
+          "xm6_last_dsp_status": 0,
+          "xm6_last_still_ms": 0,
+          "xm6_last_live_us": 0,
+          "xm6_still_ok": 0,
+          "xm6_live_ok": 0,
+          "xm6_fallback_cnt": 0,
+          "base_cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "v71r5_status_flags": 9
+        }
+      }
+    },
+    "pc_counts": {
+      "v71r7_photo_menu_boot_once": {
+        "pc": "0x40985070",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_photo_menu_lookup_text": {
+        "pc": "0x40982674",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_entry": {
+        "pc": "0x40982980",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_refresh": {
+        "pc": "0x40982bb8",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_activate": {
+        "pc": "0x40983610",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_exit": {
+        "pc": "0x409834dc",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_prepare_from_buffer": {
+        "pc": "0x409df218",
+        "total": 1,
+        "by_cpu": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "v71r7_lut_apply_still_nv16": {
+        "pc": "0x409dfe98",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_apply_nv12": {
+        "pc": "0x409dfef8",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_clear_active": {
+        "pc": "0x409df668",
+        "total": 3,
+        "by_cpu": [
+          0,
+          0,
+          3,
+          0
+        ]
+      },
+      "v71r7_layer0_init": {
+        "pc": "0x409e2b7c",
+        "total": 2,
+        "by_cpu": [
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_worker_step": {
+        "pc": "0x409e3b04",
+        "total": 6795,
+        "by_cpu": [
+          0,
+          0,
+          6795,
+          0
+        ]
+      },
+      "v71r7_layer0_enqueue_hook_c": {
+        "pc": "0x409e1764",
+        "total": 2,
+        "by_cpu": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_display_hook_c": {
+        "pc": "0x409e1a04",
+        "total": 2,
+        "by_cpu": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_vsync_hook_c": {
+        "pc": "0x409e28b0",
+        "total": 272,
+        "by_cpu": [
+          272,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_suspend": {
+        "pc": "0x409e2fe0",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_resume": {
+        "pc": "0x409e3528",
+        "total": 959,
+        "by_cpu": [
+          959,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_neon_sentinel_probe_once": {
+        "pc": "0x409dd094",
+        "total": 2,
+        "by_cpu": [
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "v71r7_watchdog_poll": {
+        "pc": "0x409ddff4",
+        "total": 223,
+        "by_cpu": [
+          0,
+          0,
+          223,
+          0
+        ]
+      }
+    },
+    "card_audit": {
+      "file_count": 13,
+      "fenestra_files": [
+        "FENESTRA/BOOT-Z8.FLAG",
+        "FENESTRA/FXPHOTO0.CFG",
+        "FENESTRA/LUTS/Cinema/TealOrg.cube",
+        "FENESTRA/STARTUP-Z8.0",
+        "FENESTRA/WarmFilm.cube",
+        "FENESTRA/ZF_GRAIN.BIN",
+        "FENESTRA/filmsim.wlm",
+        "FENESTRA/portrait.wlm",
+        "FENESTRA/slotcard.wlm"
+      ],
+      "dcim_jpegs": [
+        "DCIM/100NCZ_8/DSC_0001.JPG"
+      ],
+      "FXPHOTO0.CFG": {
+        "valid": true,
+        "version": 2,
+        "bytes": 96,
+        "generation": 1,
+        "enabled": 1,
+        "path_len": 13,
+        "path": "WarmFilm.cube",
+        "crc32": "0x8b3e8e56",
+        "crc_ok": true
+      },
+      "FXCRASH.LOG": {
+        "present": false
+      },
+      "jpegs": [
+        {
+          "path": "DCIM/100NCZ_8/DSC_0001.JPG",
+          "bytes": 1192819,
+          "soi_eoi_ok": true,
+          "width": 8256,
+          "height": 5504,
+          "mean_rgb": [
+            108.24,
+            85.36,
+            55.18
+          ],
+          "r_minus_b": 53.06
+        }
+      ]
+    },
+    "stderr": {
+      "z8_unknown_count": 0,
+      "z9_unknown_count": 0,
+      "panic_count": 0,
+      "stderr_file": "stderr.log",
+      "stderr_bytes": 940705
+    },
+    "card_path": null
+  },
+  "phase2": {
+    "phase_num": 2,
+    "final_phase": "done",
+    "run_err": null,
+    "dram_checks": {
+      "build_id": "0xd590d8cd",
+      "build_id_ok": true,
+      "filmsim_bank": {
+        "va": "0x409b0000",
+        "bytes": 153456,
+        "dram_sha256": "9655e8eab3e44218bec82a4c987f0fbb958097343f7d704c1ecf65bfb2884a55",
+        "ok": true
+      },
+      "lut_menu_bank": {
+        "va": "0x40981000",
+        "bytes": 34432,
+        "dram_sha256": "22c3a64d53558399635e87ecc1e45726c42d56d3bf9426667db82b0e3bd4c836",
+        "ok": true
+      },
+      "lut_core_bank": {
+        "va": "0x409db000",
+        "bytes": 63088,
+        "dram_sha256": "62f9353ce836c502257e35839e76d201628678593b8ed5bebf575a70da93169b",
+        "ok": true
+      },
+      "xm6_elf0": {
+        "va": "0x4167caa0",
+        "bytes": 692516,
+        "dram_sha256": "b65798d7a6cbd026cb97cb01df7278732cdcd6a7f1e27f8f23b1437ecb2c88db",
+        "ok": true
+      }
+    },
+    "photo_menu_count": 0,
+    "photo_menu_row45_id": null,
+    "photo_menu_row47_id": null,
+    "photo_menu_row47_text": null,
+    "seen_lut_active": true,
+    "seen_lv_workspace_bytes": 15253504,
+    "seen_lv_grades": 0,
+    "seen_lv_disp_sub": 0,
+    "seen_pool_suspended": false,
+    "seen_pool_suspended_ws_bytes": null,
+    "shots": [
+      "lut_07_reboot_restored_status_zh.png",
+      "lut_08_cleared_no_lut_zh.png"
+    ],
+    "snapshots": {
+      "p2_cold_reboot_restored": {
+        "lang": 8,
+        "err_nz": false,
+        "v71r7": {
+          "anchor": {
+            "magic": "0x56373137",
+            "magic_ok": true,
+            "flags": "0x4",
+            "neon_disabled": false,
+            "pool_suspended": false,
+            "lut_active": true,
+            "wysiwyg_active": false,
+            "lut_core_ctx": "0xa10d95d80",
+            "layer0_ctx": "0xa10d7ea40",
+            "menu_ctx": "0xa10d74fc0",
+            "output_permit": 7,
+            "active_generation": 9
+          },
+          "io_gate": {
+            "raw": "0x100000001",
+            "open": true,
+            "epoch": 1,
+            "frame_count": 0,
+            "stopped": false,
+            "early_off": false
+          },
+          "flight": {
+            "head": 2,
+            "record_count": 2,
+            "event_counts": {
+              "BOOT": 1,
+              "PREVIEW_ROUTE_SWITCH": 1
+            },
+            "tail_records": [
+              {
+                "seq": 1,
+                "tick": 1337740,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 362166184,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              }
+            ],
+            "all_records": [
+              {
+                "seq": 1,
+                "tick": 1337740,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 362166184,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              }
+            ],
+            "watchdog": {
+              "magic": "0x56373137",
+              "stalled_slots": 0,
+              "dumps_written": 0,
+              "last_err": 0
+            }
+          },
+          "layer0": {
+            "magic_ok": true,
+            "size": 11312,
+            "hw_current": -1,
+            "active_banks_mask": 0,
+            "disp_calls": 2,
+            "disp_substituted": 0,
+            "disp_stock_pass": 2,
+            "vsync_ticks": 82,
+            "banks_retired": 0,
+            "enqueue_seen": 1,
+            "enqueue_copied": 0,
+            "grades": 0,
+            "grade_us": 0,
+            "errors": 0,
+            "last_result": 0,
+            "pool_result": 1,
+            "online": 1,
+            "enabled": 1,
+            "display_ready": 1,
+            "mode_ok": 1,
+            "quarantined": 0,
+            "lut_bytes": 0,
+            "grid": 0,
+            "surface_bytes": 15253504,
+            "sentinel_status": 1,
+            "neon_active": 0,
+            "active_route": 0,
+            "lcd_substituted": 0,
+            "evf_substituted": 0,
+            "worker_cores": 0
+          },
+          "lut_core": {
+            "magic_ok": true,
+            "active": 1,
+            "generation": 9,
+            "is_1d_separable": 0,
+            "xm6_mode": 0,
+            "active_cube_non_null": true
+          },
+          "menu_ctx": {
+            "magic": "0x504d4e55",
+            "magic_ok": true,
+            "size": 6720
+          }
+        },
+        "filmsim": {
+          "context": "0xa10d96610",
+          "ui_size": 38432,
+          "filmsim_context_offset": 38424,
+          "bus_cfg": null,
+          "module_loaded": 1,
+          "cfg_active": 0,
+          "dormant": 1,
+          "photo_worker_ready": 1,
+          "live_worker_ready": 1,
+          "live_ws_ready": 0,
+          "class24_alloc_count": 0,
+          "class24_release_count": 0,
+          "class24_active_bytes": 0,
+          "lv_submitted": 0,
+          "lv_busy_skips": 0,
+          "arena_blk_handle": "0x0",
+          "arena_blk_cpu": "0x0",
+          "arena_blk_dma": "0x0",
+          "arena_blk_actual": 0,
+          "arena_blk_used": 0,
+          "job2_grain_bypasses": 0,
+          "pool_suspended": 0,
+          "lv_tb_state": 0,
+          "lut17_ready": 0,
+          "gtile_ready": 0,
+          "gtile_readers": 0,
+          "lv_cpu0_gtile_held": 0,
+          "lut_epoch": 0,
+          "zf_epoch": 0,
+          "lv_work_gen": 0,
+          "portrait_gate": 1,
+          "portrait_latch": 0,
+          "slots_limit": 64,
+          "pool_gate": 0,
+          "be_lv_mask": 1118481,
+          "v71_silky30fps": {
+            "w5": {
+              "magic": "0x0",
+              "stream": 0,
+              "busy": 0,
+              "release_req": 0,
+              "close_failed": 0,
+              "handoffs": 0,
+              "in_flight": 0,
+              "in_flight_slot": 0,
+              "last_valid_slot": 0,
+              "slot_valid_mask": 0,
+              "submitted_frames": 0,
+              "in_flight_retrig": 0,
+              "direct_nv12_cnt": 0,
+              "async_retrig_cnt": 0,
+              "n_timed_v70": 0,
+              "park_err": 0,
+              "diag_close": "0x0",
+              "avg_in_us": 0,
+              "avg_wait_us": 0,
+              "avg_out_us": 0,
+              "avg_parse_us": 0
+            },
+            "flip_obs": {
+              "ring_head": 0,
+              "ring_count": 0,
+              "obs_pending_flip": 0,
+              "flip_obs_count": 0,
+              "interp_pushes": 0,
+              "direct_nv12_ok": 0,
+              "direct_nv12_retrig": 0,
+              "async_harvests": 0,
+              "last_w": 0,
+              "last_h": 0,
+              "fs_last_encoded_gen": 0,
+              "fs_last_mode": 0
+            },
+            "ev_diag3": null
+          },
+          "guest_writes": false,
+          "dram_active_pc_sel": 0,
+          "xm6_raw_hw_state": 1,
+          "xm6_raw_fw_loaded": 1,
+          "xm6_raw_loader_fault": 0,
+          "ctx_struct_bytes": 9416,
+          "cfg_updates": 1,
+          "bus_hits": 0,
+          "zf_maps_loaded": 0,
+          "lut_loaded": 0,
+          "active_lut_slot": 0,
+          "last_error": 0,
+          "live_applied": 0,
+          "live_skipped": 0,
+          "last_live_stages": 0,
+          "photos_completed": 0,
+          "photos_bypassed": 0,
+          "photos_failed": 0,
+          "last_stages_applied": 0,
+          "last_main_w": 0,
+          "last_main_h": 0,
+          "photo_reason": 0,
+          "cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "photo_phase": 0,
+          "photo_poisoned": 0,
+          "photo_stage_start_us": 0,
+          "photo_copy_done_us": 0,
+          "photo_finish_us": 0,
+          "zf_grain_buf": "0x0",
+          "zf_maps_retry_after_us": 0,
+          "photo_slot1_phase": 0,
+          "photo_slot1_poisoned": 0,
+          "photo_slot1_completed": 0,
+          "photo_slot1_bypassed": 0,
+          "photo_slot1_failed": 0,
+          "base_cfg_valid": 1,
+          "recipe_table_loaded": 0,
+          "recipe_table_synced_by_ipc": 0,
+          "active_pc_sel": 0,
+          "active_recipe_src": 0,
+          "active_recipe_bound": 0,
+          "xm6_busy": 0,
+          "xm6_breaker_tripped": 0,
+          "xm6_done_flag": 0,
+          "xm6_req_in_flight": 0,
+          "xm6_cb_code": 0,
+          "xm6_diag_ran": 0,
+          "xm6_diag_passed": 0,
+          "xm6_last_err": 0,
+          "xm6_last_dsp_status": 0,
+          "xm6_last_still_ms": 0,
+          "xm6_last_live_us": 0,
+          "xm6_still_ok": 0,
+          "xm6_live_ok": 0,
+          "xm6_fallback_cnt": 0,
+          "base_cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "v71r5_status_flags": 9
+        }
+      },
+      "lut_07_reboot_restored_status_zh": {
+        "lang": 8,
+        "err_nz": false,
+        "v71r7": {
+          "anchor": {
+            "magic": "0x56373137",
+            "magic_ok": true,
+            "flags": "0x4",
+            "neon_disabled": false,
+            "pool_suspended": false,
+            "lut_active": true,
+            "wysiwyg_active": false,
+            "lut_core_ctx": "0xa10d95d80",
+            "layer0_ctx": "0xa10d7ea40",
+            "menu_ctx": "0xa10d74fc0",
+            "output_permit": 7,
+            "active_generation": 9
+          },
+          "io_gate": {
+            "raw": "0x100000001",
+            "open": true,
+            "epoch": 1,
+            "frame_count": 0,
+            "stopped": false,
+            "early_off": false
+          },
+          "flight": {
+            "head": 3,
+            "record_count": 3,
+            "event_counts": {
+              "BOOT": 1,
+              "PREVIEW_ROUTE_SWITCH": 2
+            },
+            "tail_records": [
+              {
+                "seq": 1,
+                "tick": 1337740,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 362166184,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              },
+              {
+                "seq": 3,
+                "tick": 490466795,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 0,
+                "b": 2,
+                "c": 10
+              }
+            ],
+            "all_records": [
+              {
+                "seq": 1,
+                "tick": 1337740,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 362166184,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              },
+              {
+                "seq": 3,
+                "tick": 490466795,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 0,
+                "b": 2,
+                "c": 10
+              }
+            ],
+            "watchdog": {
+              "magic": "0x56373137",
+              "stalled_slots": 0,
+              "dumps_written": 0,
+              "last_err": 0
+            }
+          },
+          "layer0": {
+            "magic_ok": true,
+            "size": 11312,
+            "hw_current": -1,
+            "active_banks_mask": 0,
+            "disp_calls": 2,
+            "disp_substituted": 0,
+            "disp_stock_pass": 2,
+            "vsync_ticks": 109,
+            "banks_retired": 0,
+            "enqueue_seen": 1,
+            "enqueue_copied": 0,
+            "grades": 0,
+            "grade_us": 0,
+            "errors": 0,
+            "last_result": 4,
+            "pool_result": 1,
+            "online": 1,
+            "enabled": 1,
+            "display_ready": 1,
+            "mode_ok": 0,
+            "quarantined": 0,
+            "lut_bytes": 0,
+            "grid": 0,
+            "surface_bytes": 15253504,
+            "sentinel_status": 1,
+            "neon_active": 0,
+            "active_route": 4294967295,
+            "lcd_substituted": 0,
+            "evf_substituted": 0,
+            "worker_cores": 0
+          },
+          "lut_core": {
+            "magic_ok": true,
+            "active": 1,
+            "generation": 9,
+            "is_1d_separable": 0,
+            "xm6_mode": 0,
+            "active_cube_non_null": true
+          },
+          "menu_ctx": {
+            "magic": "0x504d4e55",
+            "magic_ok": true,
+            "size": 6720
+          }
+        },
+        "filmsim": {
+          "context": "0xa10d96610",
+          "ui_size": 38432,
+          "filmsim_context_offset": 38424,
+          "bus_cfg": null,
+          "module_loaded": 1,
+          "cfg_active": 0,
+          "dormant": 1,
+          "photo_worker_ready": 1,
+          "live_worker_ready": 1,
+          "live_ws_ready": 0,
+          "class24_alloc_count": 0,
+          "class24_release_count": 0,
+          "class24_active_bytes": 0,
+          "lv_submitted": 0,
+          "lv_busy_skips": 0,
+          "arena_blk_handle": "0x0",
+          "arena_blk_cpu": "0x0",
+          "arena_blk_dma": "0x0",
+          "arena_blk_actual": 0,
+          "arena_blk_used": 0,
+          "job2_grain_bypasses": 0,
+          "pool_suspended": 0,
+          "lv_tb_state": 0,
+          "lut17_ready": 0,
+          "gtile_ready": 0,
+          "gtile_readers": 0,
+          "lv_cpu0_gtile_held": 0,
+          "lut_epoch": 0,
+          "zf_epoch": 0,
+          "lv_work_gen": 0,
+          "portrait_gate": 1,
+          "portrait_latch": 0,
+          "slots_limit": 64,
+          "pool_gate": 0,
+          "be_lv_mask": 0,
+          "v71_silky30fps": {
+            "w5": {
+              "magic": "0x0",
+              "stream": 0,
+              "busy": 0,
+              "release_req": 0,
+              "close_failed": 0,
+              "handoffs": 0,
+              "in_flight": 0,
+              "in_flight_slot": 0,
+              "last_valid_slot": 0,
+              "slot_valid_mask": 0,
+              "submitted_frames": 0,
+              "in_flight_retrig": 0,
+              "direct_nv12_cnt": 0,
+              "async_retrig_cnt": 0,
+              "n_timed_v70": 0,
+              "park_err": 0,
+              "diag_close": "0x0",
+              "avg_in_us": 0,
+              "avg_wait_us": 0,
+              "avg_out_us": 0,
+              "avg_parse_us": 0
+            },
+            "flip_obs": {
+              "ring_head": 0,
+              "ring_count": 0,
+              "obs_pending_flip": 0,
+              "flip_obs_count": 0,
+              "interp_pushes": 0,
+              "direct_nv12_ok": 0,
+              "direct_nv12_retrig": 0,
+              "async_harvests": 0,
+              "last_w": 0,
+              "last_h": 0,
+              "fs_last_encoded_gen": 0,
+              "fs_last_mode": 0
+            },
+            "ev_diag3": null
+          },
+          "guest_writes": false,
+          "dram_active_pc_sel": 0,
+          "xm6_raw_hw_state": 1,
+          "xm6_raw_fw_loaded": 1,
+          "xm6_raw_loader_fault": 0,
+          "ctx_struct_bytes": 9416,
+          "cfg_updates": 1,
+          "bus_hits": 0,
+          "zf_maps_loaded": 0,
+          "lut_loaded": 0,
+          "active_lut_slot": 0,
+          "last_error": 0,
+          "live_applied": 0,
+          "live_skipped": 0,
+          "last_live_stages": 0,
+          "photos_completed": 0,
+          "photos_bypassed": 0,
+          "photos_failed": 0,
+          "last_stages_applied": 0,
+          "last_main_w": 0,
+          "last_main_h": 0,
+          "photo_reason": 0,
+          "cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "photo_phase": 0,
+          "photo_poisoned": 0,
+          "photo_stage_start_us": 0,
+          "photo_copy_done_us": 0,
+          "photo_finish_us": 0,
+          "zf_grain_buf": "0x0",
+          "zf_maps_retry_after_us": 0,
+          "photo_slot1_phase": 0,
+          "photo_slot1_poisoned": 0,
+          "photo_slot1_completed": 0,
+          "photo_slot1_bypassed": 0,
+          "photo_slot1_failed": 0,
+          "base_cfg_valid": 1,
+          "recipe_table_loaded": 0,
+          "recipe_table_synced_by_ipc": 0,
+          "active_pc_sel": 0,
+          "active_recipe_src": 0,
+          "active_recipe_bound": 0,
+          "xm6_busy": 0,
+          "xm6_breaker_tripped": 0,
+          "xm6_done_flag": 0,
+          "xm6_req_in_flight": 0,
+          "xm6_cb_code": 0,
+          "xm6_diag_ran": 0,
+          "xm6_diag_passed": 0,
+          "xm6_last_err": 0,
+          "xm6_last_dsp_status": 0,
+          "xm6_last_still_ms": 0,
+          "xm6_last_live_us": 0,
+          "xm6_still_ok": 0,
+          "xm6_live_ok": 0,
+          "xm6_fallback_cnt": 0,
+          "base_cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "v71r5_status_flags": 9
+        }
+      },
+      "lut_08_cleared_no_lut_zh": {
+        "lang": 8,
+        "err_nz": false,
+        "v71r7": {
+          "anchor": {
+            "magic": "0x56373137",
+            "magic_ok": true,
+            "flags": "0x0",
+            "neon_disabled": false,
+            "pool_suspended": false,
+            "lut_active": false,
+            "wysiwyg_active": false,
+            "lut_core_ctx": "0xa10d95d80",
+            "layer0_ctx": "0xa10d7ea40",
+            "menu_ctx": "0xa10d74fc0",
+            "output_permit": 8,
+            "active_generation": 11
+          },
+          "io_gate": {
+            "raw": "0x100000001",
+            "open": true,
+            "epoch": 1,
+            "frame_count": 0,
+            "stopped": false,
+            "early_off": false
+          },
+          "flight": {
+            "head": 3,
+            "record_count": 3,
+            "event_counts": {
+              "BOOT": 1,
+              "PREVIEW_ROUTE_SWITCH": 2
+            },
+            "tail_records": [
+              {
+                "seq": 1,
+                "tick": 1337740,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 362166184,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              },
+              {
+                "seq": 3,
+                "tick": 490466795,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 0,
+                "b": 2,
+                "c": 10
+              }
+            ],
+            "all_records": [
+              {
+                "seq": 1,
+                "tick": 1337740,
+                "event": 24,
+                "name": "BOOT",
+                "core_flags": 0,
+                "a": 305,
+                "b": 2,
+                "c": 3
+              },
+              {
+                "seq": 2,
+                "tick": 362166184,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 2,
+                "b": 0,
+                "c": 4
+              },
+              {
+                "seq": 3,
+                "tick": 490466795,
+                "event": 9,
+                "name": "PREVIEW_ROUTE_SWITCH",
+                "core_flags": 3,
+                "a": 0,
+                "b": 2,
+                "c": 10
+              }
+            ],
+            "watchdog": {
+              "magic": "0x56373137",
+              "stalled_slots": 0,
+              "dumps_written": 0,
+              "last_err": 0
+            }
+          },
+          "layer0": {
+            "magic_ok": true,
+            "size": 11312,
+            "hw_current": -1,
+            "active_banks_mask": 0,
+            "disp_calls": 2,
+            "disp_substituted": 0,
+            "disp_stock_pass": 2,
+            "vsync_ticks": 109,
+            "banks_retired": 0,
+            "enqueue_seen": 1,
+            "enqueue_copied": 0,
+            "grades": 0,
+            "grade_us": 0,
+            "errors": 0,
+            "last_result": 0,
+            "pool_result": 1,
+            "online": 1,
+            "enabled": 0,
+            "display_ready": 0,
+            "mode_ok": 0,
+            "quarantined": 0,
+            "lut_bytes": 0,
+            "grid": 0,
+            "surface_bytes": 0,
+            "sentinel_status": 1,
+            "neon_active": 0,
+            "active_route": 4294967295,
+            "lcd_substituted": 0,
+            "evf_substituted": 0,
+            "worker_cores": 0
+          },
+          "lut_core": {
+            "magic_ok": true,
+            "active": 0,
+            "generation": 9,
+            "is_1d_separable": 0,
+            "xm6_mode": 0,
+            "active_cube_non_null": false
+          },
+          "menu_ctx": {
+            "magic": "0x504d4e55",
+            "magic_ok": true,
+            "size": 6720
+          }
+        },
+        "filmsim": {
+          "context": "0xa10d96610",
+          "ui_size": 38432,
+          "filmsim_context_offset": 38424,
+          "bus_cfg": null,
+          "module_loaded": 1,
+          "cfg_active": 0,
+          "dormant": 1,
+          "photo_worker_ready": 1,
+          "live_worker_ready": 1,
+          "live_ws_ready": 0,
+          "class24_alloc_count": 0,
+          "class24_release_count": 0,
+          "class24_active_bytes": 0,
+          "lv_submitted": 0,
+          "lv_busy_skips": 0,
+          "arena_blk_handle": "0x0",
+          "arena_blk_cpu": "0x0",
+          "arena_blk_dma": "0x0",
+          "arena_blk_actual": 0,
+          "arena_blk_used": 0,
+          "job2_grain_bypasses": 0,
+          "pool_suspended": 0,
+          "lv_tb_state": 0,
+          "lut17_ready": 0,
+          "gtile_ready": 0,
+          "gtile_readers": 0,
+          "lv_cpu0_gtile_held": 0,
+          "lut_epoch": 0,
+          "zf_epoch": 0,
+          "lv_work_gen": 0,
+          "portrait_gate": 1,
+          "portrait_latch": 0,
+          "slots_limit": 64,
+          "pool_gate": 0,
+          "be_lv_mask": 0,
+          "v71_silky30fps": {
+            "w5": {
+              "magic": "0x0",
+              "stream": 0,
+              "busy": 0,
+              "release_req": 0,
+              "close_failed": 0,
+              "handoffs": 0,
+              "in_flight": 0,
+              "in_flight_slot": 0,
+              "last_valid_slot": 0,
+              "slot_valid_mask": 0,
+              "submitted_frames": 0,
+              "in_flight_retrig": 0,
+              "direct_nv12_cnt": 0,
+              "async_retrig_cnt": 0,
+              "n_timed_v70": 0,
+              "park_err": 0,
+              "diag_close": "0x0",
+              "avg_in_us": 0,
+              "avg_wait_us": 0,
+              "avg_out_us": 0,
+              "avg_parse_us": 0
+            },
+            "flip_obs": {
+              "ring_head": 0,
+              "ring_count": 0,
+              "obs_pending_flip": 0,
+              "flip_obs_count": 0,
+              "interp_pushes": 0,
+              "direct_nv12_ok": 0,
+              "direct_nv12_retrig": 0,
+              "async_harvests": 0,
+              "last_w": 0,
+              "last_h": 0,
+              "fs_last_encoded_gen": 0,
+              "fs_last_mode": 0
+            },
+            "ev_diag3": null
+          },
+          "guest_writes": false,
+          "dram_active_pc_sel": 0,
+          "xm6_raw_hw_state": 1,
+          "xm6_raw_fw_loaded": 1,
+          "xm6_raw_loader_fault": 0,
+          "ctx_struct_bytes": 9416,
+          "cfg_updates": 1,
+          "bus_hits": 0,
+          "zf_maps_loaded": 0,
+          "lut_loaded": 0,
+          "active_lut_slot": 0,
+          "last_error": 0,
+          "live_applied": 0,
+          "live_skipped": 0,
+          "last_live_stages": 0,
+          "photos_completed": 0,
+          "photos_bypassed": 0,
+          "photos_failed": 0,
+          "last_stages_applied": 0,
+          "last_main_w": 0,
+          "last_main_h": 0,
+          "photo_reason": 0,
+          "cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "photo_phase": 0,
+          "photo_poisoned": 0,
+          "photo_stage_start_us": 0,
+          "photo_copy_done_us": 0,
+          "photo_finish_us": 0,
+          "zf_grain_buf": "0x0",
+          "zf_maps_retry_after_us": 0,
+          "photo_slot1_phase": 0,
+          "photo_slot1_poisoned": 0,
+          "photo_slot1_completed": 0,
+          "photo_slot1_bypassed": 0,
+          "photo_slot1_failed": 0,
+          "base_cfg_valid": 1,
+          "recipe_table_loaded": 0,
+          "recipe_table_synced_by_ipc": 0,
+          "active_pc_sel": 0,
+          "active_recipe_src": 0,
+          "active_recipe_bound": 0,
+          "xm6_busy": 0,
+          "xm6_breaker_tripped": 0,
+          "xm6_done_flag": 0,
+          "xm6_req_in_flight": 0,
+          "xm6_cb_code": 0,
+          "xm6_diag_ran": 0,
+          "xm6_diag_passed": 0,
+          "xm6_last_err": 0,
+          "xm6_last_dsp_status": 0,
+          "xm6_last_still_ms": 0,
+          "xm6_last_live_us": 0,
+          "xm6_still_ok": 0,
+          "xm6_live_ok": 0,
+          "xm6_fallback_cnt": 0,
+          "base_cfg": {
+            "magic": "0x3153465a",
+            "version": 1,
+            "bytes": 64,
+            "seq": 0,
+            "crc32": "0x44b791a4",
+            "crc_ok": true,
+            "film_style": 0,
+            "zf_intensity": 0,
+            "zf_size": 2,
+            "zf_blur_mode": 1,
+            "fuji_chrome": 0,
+            "fuji_fx_blue": 0,
+            "fuji_lut_slot": 0,
+            "fuji_lut_strength": 100,
+            "fuji_grain": 0,
+            "hdf_level": 0,
+            "live_link": 0,
+            "apply_mode": 0,
+            "xm6_mode": 0
+          },
+          "v71r5_status_flags": 9
+        }
+      }
+    },
+    "pc_counts": {
+      "v71r7_photo_menu_boot_once": {
+        "pc": "0x40985070",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_photo_menu_lookup_text": {
+        "pc": "0x40982674",
+        "total": 4,
+        "by_cpu": [
+          4,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_entry": {
+        "pc": "0x40982980",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_refresh": {
+        "pc": "0x40982bb8",
+        "total": 68,
+        "by_cpu": [
+          68,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_activate": {
+        "pc": "0x40983610",
+        "total": 1,
+        "by_cpu": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "photo_lut_exit": {
+        "pc": "0x409834dc",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_prepare_from_buffer": {
+        "pc": "0x409df218",
+        "total": 1,
+        "by_cpu": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "v71r7_lut_apply_still_nv16": {
+        "pc": "0x409dfe98",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_apply_nv12": {
+        "pc": "0x409dfef8",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_lut_clear_active": {
+        "pc": "0x409df668",
+        "total": 5,
+        "by_cpu": [
+          0,
+          0,
+          5,
+          0
+        ]
+      },
+      "v71r7_layer0_init": {
+        "pc": "0x409e2b7c",
+        "total": 2,
+        "by_cpu": [
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_worker_step": {
+        "pc": "0x409e3b04",
+        "total": 6503,
+        "by_cpu": [
+          0,
+          0,
+          6503,
+          0
+        ]
+      },
+      "v71r7_layer0_enqueue_hook_c": {
+        "pc": "0x409e1764",
+        "total": 2,
+        "by_cpu": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_display_hook_c": {
+        "pc": "0x409e1a04",
+        "total": 2,
+        "by_cpu": [
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_vsync_hook_c": {
+        "pc": "0x409e28b0",
+        "total": 109,
+        "by_cpu": [
+          109,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_suspend": {
+        "pc": "0x409e2fe0",
+        "total": 0,
+        "by_cpu": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_layer0_pool_resume": {
+        "pc": "0x409e3528",
+        "total": 1385,
+        "by_cpu": [
+          1385,
+          0,
+          0,
+          0
+        ]
+      },
+      "v71r7_neon_sentinel_probe_once": {
+        "pc": "0x409dd094",
+        "total": 2,
+        "by_cpu": [
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "v71r7_watchdog_poll": {
+        "pc": "0x409ddff4",
+        "total": 267,
+        "by_cpu": [
+          0,
+          0,
+          267,
+          0
+        ]
+      }
+    },
+    "card_audit": {
+      "file_count": 15,
+      "fenestra_files": [
+        "FENESTRA/BOOT-Z8.FLAG",
+        "FENESTRA/FXPHOTO0.CFG",
+        "FENESTRA/FXPHOTO1.CFG",
+        "FENESTRA/LUTS/Cinema/TealOrg.cube",
+        "FENESTRA/STARTUP-Z8.0",
+        "FENESTRA/WarmFilm.cube",
+        "FENESTRA/ZF_GRAIN.BIN",
+        "FENESTRA/filmsim.wlm",
+        "FENESTRA/portrait.wlm",
+        "FENESTRA/slotcard.wlm"
+      ],
+      "dcim_jpegs": [
+        "DCIM/100NCZ_8/DSC_0001.JPG"
+      ],
+      "FXPHOTO0.CFG": {
+        "valid": true,
+        "version": 2,
+        "bytes": 96,
+        "generation": 1,
+        "enabled": 1,
+        "path_len": 13,
+        "path": "WarmFilm.cube",
+        "crc32": "0x8b3e8e56",
+        "crc_ok": true
+      },
+      "FXPHOTO1.CFG": {
+        "valid": true,
+        "version": 2,
+        "bytes": 96,
+        "generation": 2,
+        "enabled": 0,
+        "path_len": 0,
+        "path": "",
+        "crc32": "0xd22803bb",
+        "crc_ok": true
+      },
+      "FXCRASH.LOG": {
+        "present": false
+      },
+      "jpegs": [
+        {
+          "path": "DCIM/100NCZ_8/DSC_0001.JPG",
+          "bytes": 1192819,
+          "soi_eoi_ok": true,
+          "width": 8256,
+          "height": 5504,
+          "mean_rgb": [
+            108.24,
+            85.36,
+            55.18
+          ],
+          "r_minus_b": 53.06
+        }
+      ]
+    },
+    "stderr": {
+      "z8_unknown_count": 0,
+      "z9_unknown_count": 0,
+      "panic_count": 0,
+      "stderr_file": "stderr.log",
+      "stderr_bytes": 1056492
+    },
+    "card_path": null
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "suite": "c64_bug9_native_png_synthesizer_arm64",
+  "passed": true,
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "checks": 50,
+  "hooks_verified": {
+    "0x4032dc80": "0x40b69150",
+    "0x4032dd60": "0x40b691b0",
+    "stock_chained_entries": [
+      "0x4032dc64",
+      "0x4032dd34"
+    ],
+    "synthesizer_insns_audited": 479,
+    "fp_simd_insns": 0
+  },
+  "png_cache_dram": {
+    "va": "0xa11634000",
+    "bytes": 45056,
+    "slots": 16,
+    "slot_stride": "0xb00"
+  },
+  "all_icons_distinct_pixels": true,
+  "cold_bmp_ptr_matches_bmp_desc": true,
+  "stock_and_gap_passthrough_verified": true,
+  "abi_x19_x29_sp_verified_every_call": true,
+  "icons": {
+    "0x7e00": {
+      "icon_id": "0x7e00",
+      "label": "[框]C-10",
+      "required_by_brief": true,
+      "desc_kind": "0x0100",
+      "cache_ptr": "0xa11634010",
+      "cache_slot_index": 0,
+      "direct_and_chained_match": true,
+      "png_bytes": 2148,
+      "png_sha256": "59f005cf452ca2206678c0bdd806e2c662b1e7adc98fce0f027c0ac21eec7817",
+      "ihdr": {
+        "width": 64,
+        "height": 32,
+        "bit_depth": 8,
+        "color_type": 0,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      },
+      "chunk_sequence": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "chunks_crc32_all_ok": true,
+      "plte_entries": 0,
+      "trns_entries": 0,
+      "idat_compressed_bytes": 2091,
+      "zlib_decompressed_bytes": 2080,
+      "scanline_filters": [
+        0
+      ],
+      "nonzero_pixel_bytes": 833,
+      "pixels_sha256": "3d1fca28a3cb951e86fe64feb9713e700100c2e5eabccea008dbc958da9626d0"
+    },
+    "0x7e01": {
+      "icon_id": "0x7e01",
+      "label": "[FC框]C-10",
+      "required_by_brief": true,
+      "desc_kind": "0x0100",
+      "cache_ptr": "0xa11634b10",
+      "cache_slot_index": 1,
+      "direct_and_chained_match": true,
+      "png_bytes": 2148,
+      "png_sha256": "b774036e8ad273bf021957b6c78f334dc0abe02583db38260bd384a5f1556aca",
+      "ihdr": {
+        "width": 64,
+        "height": 32,
+        "bit_depth": 8,
+        "color_type": 0,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      },
+      "chunk_sequence": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "chunks_crc32_all_ok": true,
+      "plte_entries": 0,
+      "trns_entries": 0,
+      "idat_compressed_bytes": 2091,
+      "zlib_decompressed_bytes": 2080,
+      "scanline_filters": [
+        0
+      ],
+      "nonzero_pixel_bytes": 837,
+      "pixels_sha256": "1d64b57a5548f004c9007ded943d45047f670b39f38ab357ce693ca04e7d2383"
+    },
+    "0x7e02": {
+      "icon_id": "0x7e02",
+      "label": "[C框]C-10",
+      "required_by_brief": true,
+      "desc_kind": "0x0100",
+      "cache_ptr": "0xa11635610",
+      "cache_slot_index": 2,
+      "direct_and_chained_match": true,
+      "png_bytes": 2148,
+      "png_sha256": "ab407949f37b7697b376aad828da3b5d0f45021285a0e754fe54718cd2df1040",
+      "ihdr": {
+        "width": 64,
+        "height": 32,
+        "bit_depth": 8,
+        "color_type": 0,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      },
+      "chunk_sequence": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "chunks_crc32_all_ok": true,
+      "plte_entries": 0,
+      "trns_entries": 0,
+      "idat_compressed_bytes": 2091,
+      "zlib_decompressed_bytes": 2080,
+      "scanline_filters": [
+        0
+      ],
+      "nonzero_pixel_bytes": 837,
+      "pixels_sha256": "60cee00e3af56a1abd1a9f322227315cc0c22bc74366adf5e8f7f622fe37e794"
+    },
+    "0x7f12": {
+      "icon_id": "0x7f12",
+      "label": "[C框]C-64*",
+      "required_by_brief": true,
+      "desc_kind": "0x0100",
+      "cache_ptr": "0xa11635610",
+      "cache_slot_index": 2,
+      "direct_and_chained_match": true,
+      "png_bytes": 2148,
+      "png_sha256": "a4fcbf9d3a91dcf39bde45720813f0c341d4b5f1e599746ec2787ca01c31ca0f",
+      "ihdr": {
+        "width": 64,
+        "height": 32,
+        "bit_depth": 8,
+        "color_type": 0,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      },
+      "chunk_sequence": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "chunks_crc32_all_ok": true,
+      "plte_entries": 0,
+      "trns_entries": 0,
+      "idat_compressed_bytes": 2091,
+      "zlib_decompressed_bytes": 2080,
+      "scanline_filters": [
+        0
+      ],
+      "nonzero_pixel_bytes": 922,
+      "pixels_sha256": "c095aad4ae1476e70b47e9a698d390ddc2488319ab257a539c369e75515165f5"
+    },
+    "0x7f21": {
+      "icon_id": "0x7f21",
+      "label": "[FC框]C-10 LV 68x36 描边",
+      "required_by_brief": true,
+      "desc_kind": "0x0100",
+      "cache_ptr": "0xa1163a310",
+      "cache_slot_index": 9,
+      "direct_and_chained_match": true,
+      "png_bytes": 2552,
+      "png_sha256": "7fc1e85c64695a83e30a72bc284476e7f6b76732c6eea4514ea662d4fda0bbb6",
+      "ihdr": {
+        "width": 68,
+        "height": 36,
+        "bit_depth": 8,
+        "color_type": 0,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      },
+      "chunk_sequence": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "chunks_crc32_all_ok": true,
+      "plte_entries": 0,
+      "trns_entries": 0,
+      "idat_compressed_bytes": 2495,
+      "zlib_decompressed_bytes": 2484,
+      "scanline_filters": [
+        0
+      ],
+      "nonzero_pixel_bytes": 1806,
+      "pixels_sha256": "69ef28a140d083b637f02e4b46ade77c30f9afba2ddfd8b39d6c679ac8704a66"
+    },
+    "0x7f20": {
+      "icon_id": "0x7f20",
+      "label": "[框]C-10 LV 68x36 描边",
+      "required_by_brief": false,
+      "desc_kind": "0x0100",
+      "cache_ptr": "0xa11639810",
+      "cache_slot_index": 8,
+      "direct_and_chained_match": true,
+      "png_bytes": 2552,
+      "png_sha256": "be459d4b7adf1c2a413edcd41301b6f8847636c15eb7d7a2600d4639ca55972d",
+      "ihdr": {
+        "width": 68,
+        "height": 36,
+        "bit_depth": 8,
+        "color_type": 0,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      },
+      "chunk_sequence": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "chunks_crc32_all_ok": true,
+      "plte_entries": 0,
+      "trns_entries": 0,
+      "idat_compressed_bytes": 2495,
+      "zlib_decompressed_bytes": 2484,
+      "scanline_filters": [
+        0
+      ],
+      "nonzero_pixel_bytes": 1753,
+      "pixels_sha256": "228616e269d080fd1fec628c7830b3e49bf18f13c7f41dbcd19cf42f74d3500b"
+    },
+    "0x7f22": {
+      "icon_id": "0x7f22",
+      "label": "[C框]C-10 LV 68x36 描边",
+      "required_by_brief": false,
+      "desc_kind": "0x0100",
+      "cache_ptr": "0xa1163ae10",
+      "cache_slot_index": 10,
+      "direct_and_chained_match": true,
+      "png_bytes": 2552,
+      "png_sha256": "aab854a604f57b4bc7d90286e51e2a7cb18d1a3dd44c816db3b7bb781b943b32",
+      "ihdr": {
+        "width": 68,
+        "height": 36,
+        "bit_depth": 8,
+        "color_type": 0,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      },
+      "chunk_sequence": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "chunks_crc32_all_ok": true,
+      "plte_entries": 0,
+      "trns_entries": 0,
+      "idat_compressed_bytes": 2495,
+      "zlib_decompressed_bytes": 2484,
+      "scanline_filters": [
+        0
+      ],
+      "nonzero_pixel_bytes": 1774,
+      "pixels_sha256": "efe8715aded7132e34133e5dfb963c06839ac75176e103232acea0394138285d"
+    },
+    "0x8032": {
+      "icon_id": "0x8032",
+      "label": "[C框]C-64* LV 68x36 描边",
+      "required_by_brief": false,
+      "desc_kind": "0x0100",
+      "cache_ptr": "0xa1163ae10",
+      "cache_slot_index": 10,
+      "direct_and_chained_match": true,
+      "png_bytes": 2552,
+      "png_sha256": "4393d8d3b79067c62329813847973c9af31a94af94980735ec3d48dffc4034b6",
+      "ihdr": {
+        "width": 68,
+        "height": 36,
+        "bit_depth": 8,
+        "color_type": 0,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      },
+      "chunk_sequence": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "chunks_crc32_all_ok": true,
+      "plte_entries": 0,
+      "trns_entries": 0,
+      "idat_compressed_bytes": 2495,
+      "zlib_decompressed_bytes": 2484,
+      "scanline_filters": [
+        0
+      ],
+      "nonzero_pixel_bytes": 1870,
+      "pixels_sha256": "9f83dfb1f30a0962c06b7430175520bbbf8a30d7380dcd090b8efd627dbc8e54"
+    }
+  }
+}

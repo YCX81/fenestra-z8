@@ -1,0 +1,948 @@
+{
+  "suite": "xm6_bridge_arm64_unicorn_final_main_v71r7",
+  "version": "v71r7-lut-preview",
+  "passed": true,
+  "main_sha256": "362ee2a5491859a762b35ed8459cf22c212ae5babb38915daa15e3b801533c8a",
+  "payload_elf_sha256": "65e0dba7f520a915228d0df2b0735420997f96e2e47bc65c7f06c28747d91816",
+  "checks_passed": 124,
+  "checks_total": 124,
+  "checks_by_group": {
+    "A_hw_ready": 18,
+    "B_iommu": 18,
+    "C_happy": 15,
+    "D_timeout_breaker": 11,
+    "E_run_diag": 16,
+    "F_slots_tunnel": 26,
+    "G_rgblut_and_spacer": 19,
+    "global": 1
+  },
+  "cpacr_el1_zero_fp_enforced_groups_A_to_D_F_G": true,
+  "cpacr_el1_zero_fp_enforced_groups_A_to_D_and_F": true,
+  "cpacr_el1_zero_fp_enforced_groups_A_to_D": true,
+  "abi_x19_x29_sp_verified_every_call": true,
+  "forbidden_0x40c91c84_hits": 0,
+  "v71r7_xm6_hardening_1_verified": {
+    "bank1_v71r7_lut_core_va": "0x409db000",
+    "mailbox_idle_addr": "0xa02e7eed0",
+    "mailbox_idle_sentinels": [
+      "0xdeadbeef",
+      "0x10000000",
+      "0xdeadbeef",
+      "0x10000000"
+    ],
+    "mailbox_negative_cases_verified": 5,
+    "slot41_dedicated_ext_ws_dsp_va": "0xa0200000",
+    "slot41_dedicated_ext_ws_bytes": 524288,
+    "slot41_release_ext_ws_uaf_guard_verified": true,
+    "two_tier_live_soft_backoff_and_hung_dma_minus2_verified": true,
+    "diag_skip_codes_0xf1_to_0xf7_verified": true,
+    "rgblut_opcode12_sync_submit_va": "0x40c90aec",
+    "rgblut_arena_1024_bytes": 1145856,
+    "class24_512m_spacer_retry_verified": true,
+    "post_busy_mailbox_uaf_withhold_free_verified": true
+  },
+  "slots_state_tunnel_verified": {
+    "entry_va": "0x401fe200",
+    "v68_lang_svc_va": "0x401ff0f4",
+    "trampoline_va": "0x409c715c",
+    "dispatch_va": "0x409c6fac",
+    "service_call_va": "0x409c6e94",
+    "svc_ret_va": "0x401a7898",
+    "calls_executed_with_x19_x29_sp_conservation": 27,
+    "op34_dormant_zero_allocs": true,
+    "op42_qemu_unready_diag": {
+      "magic": 1146632282,
+      "version": 1,
+      "bytes": 64,
+      "hw_state": 0,
+      "loader_fault": 0,
+      "fw_loaded": 0,
+      "breaker_tripped": 0,
+      "passed_mask": 0,
+      "ran_mask": 0,
+      "diff_grain_exact": 0,
+      "diff_grain_sharp": 0,
+      "diff_hdf_still": 0,
+      "diff_hdf_live": 0,
+      "us_grain_exact": 0,
+      "us_grain_sharp": 0,
+      "us_hdf_still": 0,
+      "us_hdf_live": 0,
+      "dsp_status_last": 0,
+      "reserved": [
+        0,
+        0,
+        0
+      ]
+    },
+    "op43_reset_breaker_status": {
+      "magic": 827541082,
+      "version": 1,
+      "bytes": 64,
+      "flags": 1,
+      "active_pc_sel": 4105,
+      "xm6_hw_state": 2,
+      "xm6_runtime_flags": 3,
+      "xm6_last_err": 0,
+      "xm6_last_still_ms": 0,
+      "xm6_still_ok": 0,
+      "xm6_live_ok": 0,
+      "xm6_fallback_cnt": 0,
+      "xm6_last_live_us": 0,
+      "xm6_reserved": 65
+    }
+  },
+  "symbols_executed": {
+    "z8_xm6_bridge_init": "0x409eb01c",
+    "z8_xm6_core0_mailbox_idle": "0x409e74d0",
+    "z8_xm6_core0_hw_only_ready": "0x409e767c",
+    "z8_xm6_core0_hw_ready": "0x409e7798",
+    "z8_xm6_core0_arm_to_dsp32": "0x409e77ec",
+    "z8_xm6_dcache_civac": "0x409e798c",
+    "z8_xm6_fold_grain_seed": "0x409e7a40",
+    "z8_xm6_still_hdf": "0x409e7d98",
+    "z8_xm6_still_grain": "0x409e8744",
+    "z8_xm6_live_hdf_nv12": "0x409e8cc0",
+    "z8_xm6_preview_hdf_nv12": "0x409e92b0",
+    "z8_xm6_rgblut_arena_bytes": "0x409e92ec",
+    "z8_xm6_rgblut_nv16": "0x409e9318",
+    "z8_xm6_record_still_ok": "0x409e9ff0",
+    "z8_xm6_fill_status": "0x409ea034",
+    "z8_xm6_reset_breaker": "0x409ea1b0",
+    "z8_xm6_clear_live_soft_backoff": "0x409ea160",
+    "z8_xm6_release_ext_ws": "0x409e7b84",
+    "z8_xm6_run_diag": "0x409eb010",
+    "z8_xm6_run_diag_ex": "0x409ea240",
+    "xm6_bridge_done_cb": "0x409eb538",
+    "k_z8_xm6_ops": "0x409ebdd0",
+    "z8_fs_plat_alloc_class24_xm6": "0x409cd1cc",
+    "z8_fs_plat_alloc_class24_xm6_ops": "0x409ccfc0",
+    "filmsim_slots_svc_trampoline": "0x409c715c",
+    "filmsim_slots_svc_dispatch": "0x409c6fac",
+    "filmsim_runtime_service_call": "0x409c6e94",
+    "filmsim_ctx_get": "0x409c2cb8"
+  },
+  "rom_hooks_verified": {
+    "0x40cb6d50": "IOMMU_GetArmBase",
+    "0x40cb6d0c": "IOMMU_GetWindowSize",
+    "0x40cb6b50": "IOMMU_ArmToDsp32",
+    "0x40d2b9c8": "DCache_CleanInvalidate (<=512KiB chunks)",
+    "0x40c909a8": "DspFramework_SubmitAsync",
+    "0x40c90aec": "DspFramework_SubmitSync (Opcode 12 RGBLUT)",
+    "0x40c90bec": "DspFramework_CancelAsync",
+    "0x40187b00": "dly_tsk",
+    "0x40c91c84": "FORBIDDEN_IOMMU_ALLOC (0 hits)"
+  },
+  "diag_unready_result": {
+    "magic": 1146632282,
+    "version": 1,
+    "bytes": 64,
+    "hw_state": 0,
+    "loader_fault": 0,
+    "fw_loaded": 0,
+    "breaker_tripped": 0,
+    "passed_mask": 0,
+    "ran_mask": 0,
+    "diff_grain_exact": 0,
+    "diff_grain_sharp": 0,
+    "diff_hdf_still": 0,
+    "diff_hdf_live": 0,
+    "us_grain_exact": 0,
+    "us_grain_sharp": 0,
+    "us_hdf_still": 0,
+    "us_hdf_live": 0,
+    "dsp_status_last": 0,
+    "reserved": [
+      0,
+      0,
+      0
+    ]
+  },
+  "diag_ready_pass2_result": {
+    "magic": 1146632282,
+    "version": 1,
+    "bytes": 64,
+    "hw_state": 2,
+    "loader_fault": 0,
+    "fw_loaded": 1,
+    "breaker_tripped": 0,
+    "passed_mask": 15,
+    "ran_mask": 15,
+    "diff_grain_exact": 0,
+    "diff_grain_sharp": 0,
+    "diff_hdf_still": 0,
+    "diff_hdf_live": 0,
+    "us_grain_exact": 29,
+    "us_grain_sharp": 44,
+    "us_hdf_still": 77,
+    "us_hdf_live": 105,
+    "dsp_status_last": 0,
+    "reserved": [
+      0,
+      0,
+      0
+    ]
+  },
+  "final_status_snapshot": {
+    "magic": 0,
+    "version": 0,
+    "bytes": 0,
+    "flags": 0,
+    "active_pc_sel": 0,
+    "xm6_hw_state": 2,
+    "xm6_runtime_flags": 27,
+    "xm6_last_err": 0,
+    "xm6_last_still_ms": 42,
+    "xm6_still_ok": 1,
+    "xm6_live_ok": 2,
+    "xm6_fallback_cnt": 12,
+    "xm6_last_live_us": 32,
+    "xm6_reserved": 0
+  },
+  "checks": [
+    {
+      "group": "A_hw_ready",
+      "name": "init_ops_vtable_and_null_hw",
+      "passed": true,
+      "detail": "ops=0x409ebdd0 hw=0x0"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "rodata_vtable_8_pointers_match",
+      "passed": true,
+      "detail": "['0x409e7798', '0x409eb6ec', '0x409e7d98', '0x409e8744', '0x409e9ff0', '0x409e8244', '0x409e7a40', '0x409e9318']"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "qemu_zero_state",
+      "passed": true,
+      "detail": "state=0 fw=0 flt=0 mode=0 brk=0 -> 0 (want 0)"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "core0_state_1_init",
+      "passed": true,
+      "detail": "state=1 fw=1 flt=0 mode=0 brk=0 -> 0 (want 0)"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "core0_state_3_err",
+      "passed": true,
+      "detail": "state=3 fw=1 flt=0 mode=0 brk=0 -> 0 (want 0)"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "fw_loaded_0",
+      "passed": true,
+      "detail": "state=2 fw=0 flt=0 mode=0 brk=0 -> 0 (want 0)"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "loader_fault_1",
+      "passed": true,
+      "detail": "state=2 fw=1 flt=1 mode=0 brk=0 -> 0 (want 0)"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "xm6_mode_arm_only",
+      "passed": true,
+      "detail": "state=2 fw=1 flt=0 mode=1 brk=0 -> 0 (want 0)"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "breaker_tripped_1",
+      "passed": true,
+      "detail": "state=2 fw=1 flt=0 mode=0 brk=1 -> 0 (want 0)"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "all_gates_pass_ready",
+      "passed": true,
+      "detail": "state=2 fw=1 flt=0 mode=0 brk=0 -> 1 (want 1)"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "mailbox_idle_sentinels_returns_1",
+      "passed": true,
+      "detail": "words=['0xdeadbeef', '0x10000000', '0xdeadbeef', '0x10000000']"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "mailbox_all_zero_not_ready",
+      "passed": true,
+      "detail": "words=['0x0', '0x0', '0x0', '0x0'] mb=0 rdy=0 hwo=0 rf=0x1"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "mailbox_w0_corrupted_not_ready",
+      "passed": true,
+      "detail": "words=['0xdeadbee0', '0x10000000', '0xdeadbeef', '0x10000000'] mb=0 rdy=0 hwo=0 rf=0x1"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "mailbox_w1_busy_not_ready",
+      "passed": true,
+      "detail": "words=['0xdeadbeef', '0x0', '0xdeadbeef', '0x10000000'] mb=0 rdy=0 hwo=0 rf=0x1"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "mailbox_w2_corrupted_not_ready",
+      "passed": true,
+      "detail": "words=['0xdeadbeef', '0x10000000', '0xcafebabe', '0x10000000'] mb=0 rdy=0 hwo=0 rf=0x1"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "mailbox_w3_busy_not_ready",
+      "passed": true,
+      "detail": "words=['0xdeadbeef', '0x10000000', '0xdeadbeef', '0x10000001'] mb=0 rdy=0 hwo=0 rf=0x1"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "null_bridge_returns_0",
+      "passed": true,
+      "detail": "got=0"
+    },
+    {
+      "group": "A_hw_ready",
+      "name": "hw_only_ready_independent_of_breaker",
+      "passed": true,
+      "detail": "got=1"
+    },
+    {
+      "group": "B_iommu",
+      "name": "alias_0c4_win2c_start",
+      "passed": true,
+      "detail": "va=0xc42000000 span=0x100000 -> rc=1 dsp=0x82000000 win=[(44, 35467034624, 2181038080, 0)]"
+    },
+    {
+      "group": "B_iommu",
+      "name": "alias_0cb_win2f_end",
+      "passed": true,
+      "detail": "va=0xcbff00000 span=0x100000 -> rc=1 dsp=0xfff00000 win=[(47, 37579915264, 4293918720, 0)]"
+    },
+    {
+      "group": "B_iommu",
+      "name": "direct_086_win2d",
+      "passed": true,
+      "detail": "va=0x861000000 span=0x1000 -> rc=1 dsp=0xa1000000 win=[(45, 35987128320, 2701131776, 0)]"
+    },
+    {
+      "group": "B_iommu",
+      "name": "heap_0a0_win28",
+      "passed": true,
+      "detail": "va=0xa03000000 span=0x200 -> rc=1 dsp=0x43000000 win=[(40, 43000004608, 1124073472, 0)]"
+    },
+    {
+      "group": "B_iommu",
+      "name": "heap_0a3_win2b_exact",
+      "passed": true,
+      "detail": "va=0xa3fffff00 span=0x100 -> rc=1 dsp=0x7fffff00 win=[(43, 44023414528, 2147483392, 0)]"
+    },
+    {
+      "group": "B_iommu",
+      "name": "reject_cross_win2c_2d",
+      "passed": true,
+      "detail": "va=0xc5fffff00 span=0x200 -> rc=0 xlat_calls=0"
+    },
+    {
+      "group": "B_iommu",
+      "name": "reject_cross_win2f_end",
+      "passed": true,
+      "detail": "va=0xcbfffff00 span=0x200 -> rc=0 xlat_calls=0"
+    },
+    {
+      "group": "B_iommu",
+      "name": "reject_cross_win28_29",
+      "passed": true,
+      "detail": "va=0xa0fffff00 span=0x200 -> rc=0 xlat_calls=0"
+    },
+    {
+      "group": "B_iommu",
+      "name": "reject_ge_0x08c0000000",
+      "passed": true,
+      "detail": "va=0x8c0000000 span=0x1000 -> rc=0 xlat_calls=0"
+    },
+    {
+      "group": "B_iommu",
+      "name": "reject_ge_0x0cc0000000",
+      "passed": true,
+      "detail": "va=0xcc0000000 span=0x1000 -> rc=0 xlat_calls=0"
+    },
+    {
+      "group": "B_iommu",
+      "name": "reject_below_0x0840000000",
+      "passed": true,
+      "detail": "va=0x83ffff000 span=0x1000 -> rc=0 xlat_calls=0"
+    },
+    {
+      "group": "B_iommu",
+      "name": "reject_rom_va_0x40160000",
+      "passed": true,
+      "detail": "va=0x40160000 span=0x1000 -> rc=0 xlat_calls=0"
+    },
+    {
+      "group": "B_iommu",
+      "name": "reject_null_va",
+      "passed": true,
+      "detail": "va=0x0 span=0x1000 -> rc=0 xlat_calls=0"
+    },
+    {
+      "group": "B_iommu",
+      "name": "reject_zero_span",
+      "passed": true,
+      "detail": "va=0xc42000000 span=0x0 -> rc=0 xlat_calls=0"
+    },
+    {
+      "group": "B_iommu",
+      "name": "reject_u64_wrap",
+      "passed": true,
+      "detail": "va=0xfffffffffffff800 span=0x1000 -> rc=0 xlat_calls=0"
+    },
+    {
+      "group": "B_iommu",
+      "name": "reject_xlat_rc_nonzero",
+      "passed": true,
+      "detail": "rc=0"
+    },
+    {
+      "group": "B_iommu",
+      "name": "reject_dsp_below_0x40000000",
+      "passed": true,
+      "detail": "rc=0"
+    },
+    {
+      "group": "B_iommu",
+      "name": "zero_calls_to_forbidden_0x40c91c84",
+      "passed": true,
+      "detail": "hits=0"
+    },
+    {
+      "group": "C_happy",
+      "name": "dcache_chunked_le_512kib",
+      "passed": true,
+      "detail": "chunks=[('0xc42000000', '0x80000'), ('0xc42080000', '0x80000'), ('0xc42100000', '0x6e380')]"
+    },
+    {
+      "group": "C_happy",
+      "name": "fold_grain_seed_0x0",
+      "passed": true,
+      "detail": "got=0x993d6596 want=0x993d6596"
+    },
+    {
+      "group": "C_happy",
+      "name": "fold_grain_seed_0x1",
+      "passed": true,
+      "detail": "got=0xffbc5d57 want=0xffbc5d57"
+    },
+    {
+      "group": "C_happy",
+      "name": "fold_grain_seed_0x2a",
+      "passed": true,
+      "detail": "got=0x923c5cb3 want=0x923c5cb3"
+    },
+    {
+      "group": "C_happy",
+      "name": "fold_grain_seed_0x123456789abcdef0",
+      "passed": true,
+      "detail": "got=0xdc1116a0 want=0xdc1116a0"
+    },
+    {
+      "group": "C_happy",
+      "name": "still_hdf_slot41_sync_ok",
+      "passed": true,
+      "detail": "rc=1 slot=41 ext=0xa0200000 ext_b=524288 allocs=1 sleeps=0"
+    },
+    {
+      "group": "C_happy",
+      "name": "still_hdf_slot41_async_ok",
+      "passed": true,
+      "detail": "rc=1 slot=41 ext=0xa0200000 ext_b=524288 allocs=0 sleeps=3"
+    },
+    {
+      "group": "C_happy",
+      "name": "still_grain_slot39_i3_s2_exact_map0",
+      "passed": true,
+      "detail": "rc=1 slot=39 wgt=7 blur=5 mapA=0x43010020"
+    },
+    {
+      "group": "C_happy",
+      "name": "still_grain_slot39_i6_s3_sharp_map1",
+      "passed": true,
+      "detail": "rc=1 slot=39 wgt=16 blur=9 mapA=0x430135f2"
+    },
+    {
+      "group": "C_happy",
+      "name": "still_grain_slot39_i6_s3_reduced_map0",
+      "passed": true,
+      "detail": "rc=1 slot=39 wgt=9 blur=3 mapA=0x43010020"
+    },
+    {
+      "group": "C_happy",
+      "name": "live_hdf_nv12_slot41_and_chunked_dcache",
+      "passed": true,
+      "detail": "rc=1 ext=0xa0200000 ext_b=524288 dcache_calls=8 max_chunk=0x80000"
+    },
+    {
+      "group": "C_happy",
+      "name": "release_ext_ws_uaf_guard_and_clean_free",
+      "passed": true,
+      "detail": "busy_dsp=0xa0200000 busy_rels=0 idle_dsp=0x0 rels=1"
+    },
+    {
+      "group": "C_happy",
+      "name": "release_ext_ws_core0_off_frees_cleanly_no_leak",
+      "passed": true,
+      "detail": "dsp=0x0 rels=1"
+    },
+    {
+      "group": "C_happy",
+      "name": "fill_status_counters_and_flags",
+      "passed": true,
+      "detail": "status={'magic': 0, 'version': 0, 'bytes': 0, 'flags': 0, 'active_pc_sel': 0, 'xm6_hw_state': 2, 'xm6_runtime_flags': 3, 'xm6_last_err': 0, 'xm6_last_still_ms': 42, 'xm6_still_ok': 1, 'xm6_live_ok': 1, 'xm6_fallback_cnt': 0, 'xm6_last_live_us': 14, 'xm6_reserved': 0}"
+    },
+    {
+      "group": "C_happy",
+      "name": "still_hdf_oob_clean_fallback_no_breaker",
+      "passed": true,
+      "detail": "rc=0 brk=0 err=3"
+    },
+    {
+      "group": "D_timeout_breaker",
+      "name": "still_hdf_timeout_calls_dly_and_cancel_and_trips_breaker",
+      "passed": true,
+      "detail": "rc=-1 cancels=1 sleeps=2502 brk=1 fb=1->2"
+    },
+    {
+      "group": "D_timeout_breaker",
+      "name": "fill_status_shows_breaker_tripped",
+      "passed": true,
+      "detail": "flags=0x7 err=1 fb=2"
+    },
+    {
+      "group": "D_timeout_breaker",
+      "name": "subsequent_calls_fast_fallback_zero_submit_preserve_err",
+      "passed": true,
+      "detail": "rc_st=0 rc_lv=0 submits=0 err=1"
+    },
+    {
+      "group": "D_timeout_breaker",
+      "name": "reset_breaker_clears_state",
+      "passed": true,
+      "detail": "breaker=0 last_err=0 hw_ready=1"
+    },
+    {
+      "group": "D_timeout_breaker",
+      "name": "post_reset_still_hdf_recovers",
+      "passed": true,
+      "detail": "rc=1"
+    },
+    {
+      "group": "D_timeout_breaker",
+      "name": "live_nv12_drained_timeout_soft_backoff_keeps_global_breaker_0",
+      "passed": true,
+      "detail": "rc=-1 sleeps=37 dcache=8 brk=0 streak=1 backoff=117063703"
+    },
+    {
+      "group": "D_timeout_breaker",
+      "name": "live_soft_backoff_keeps_still_grain_op12_alive",
+      "passed": true,
+      "detail": "lv_bo=0 still=1 grain=1 op12=1"
+    },
+    {
+      "group": "D_timeout_breaker",
+      "name": "live_3strike_soft_disable_and_clear_recovery",
+      "passed": true,
+      "detail": "soft_dis=1 streak=3 brk=0 dis_rc=0 recov_rc=1"
+    },
+    {
+      "group": "D_timeout_breaker",
+      "name": "live_hung_dma_minus2_trips_hard_breaker_and_reset_guard",
+      "passed": true,
+      "detail": "rc=-2 sleeps=155 dcache=5 brk=1->1->0"
+    },
+    {
+      "group": "D_timeout_breaker",
+      "name": "dsp_enqueue_abort_clean_fallback_no_breaker",
+      "passed": true,
+      "detail": "rc=0 brk=0 err=4"
+    },
+    {
+      "group": "D_timeout_breaker",
+      "name": "dsp_bad_param_clean_fallback_trips_breaker",
+      "passed": true,
+      "detail": "rc=0 brk=1 err=2"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "unready_qemu_fast_return",
+      "passed": true,
+      "detail": "diag={'magic': 1146632282, 'version': 1, 'bytes': 64, 'hw_state': 0, 'loader_fault': 0, 'fw_loaded': 0, 'breaker_tripped': 0, 'passed_mask': 0, 'ran_mask': 0, 'diff_grain_exact': 0, 'diff_grain_sharp': 0, 'diff_hdf_still': 0, 'diff_hdf_live': 0, 'us_grain_exact': 0, 'us_grain_sharp': 0, 'us_hdf_still': 0, 'us_hdf_live': 0, 'dsp_status_last': 0, 'reserved': [0, 0, 0]}"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "ready_pass1_dispatches_4_vectors_and_detects_mismatch",
+      "passed": true,
+      "detail": "ran=0xf pass=0x0 diffs=(16320,16337,32442,1037890)"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "vector0_slot39_grain_exact_128x128",
+      "passed": true,
+      "detail": "slot=39 seed=0x5a380001"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "vector1_slot39_grain_sharp_128x128",
+      "passed": true,
+      "detail": "slot=39 seed=0x5a380002"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "vector2_slot41_hdf_still_128x128_nv16",
+      "passed": true,
+      "detail": "slot=41 mode=2 fmt=0x30 ext=0x82385000 ext_b=524288"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "vector3_slot41_hdf_live_1024x680_nv12",
+      "passed": true,
+      "detail": "slot=41 mode=1 fmt=0x40 ext=0x82385000 ext_b=524288"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "ready_pass2_4of4_zero_diff_pass",
+      "passed": true,
+      "detail": "ran=0xf pass=0xf diffs=(0,0,0,0)"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "fill_status_reflects_diag_ran_and_passed",
+      "passed": true,
+      "detail": "flags=0x1b want=0x1b"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "diag_skip_0xf1_stopped",
+      "passed": true,
+      "detail": "code=0xf1 want=0xf1"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "diag_skip_0xf2_suspended",
+      "passed": true,
+      "detail": "code=0xf2 want=0xf2"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "diag_skip_0xf3_mailbox_busy",
+      "passed": true,
+      "detail": "code=0xf3"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "diag_skip_0xf4_alloc_fail",
+      "passed": true,
+      "detail": "code=0xf4"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "diag_skip_0xf5_core0_busy",
+      "passed": true,
+      "detail": "code=0xf5 allocs=1 rels=1"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "diag_skip_0xf6_no_ctx",
+      "passed": true,
+      "detail": "code=0xf6"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "diag_skip_0xf7_req_in_flight",
+      "passed": true,
+      "detail": "code=0xf7"
+    },
+    {
+      "group": "E_run_diag",
+      "name": "diag_skip_hw_unready_keeps_dsp_status_zero",
+      "passed": true,
+      "detail": "hw=0 code=0x0"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op13_portrait_set_and_bounds",
+      "passed": true,
+      "detail": "rc_on=0 flag=1 rc_bad=9"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op14_portrait_get_prt1",
+      "passed": true,
+      "detail": "rc=0 v0=1 v1=0x50525431"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op13_portrait_clear_0",
+      "passed": true,
+      "detail": "rc=0 flag=0"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op15_slots_lang_get",
+      "passed": true,
+      "detail": "rc=0 lang=8 tag=0x4c414e47"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op16_unknown_returns_fx_argument",
+      "passed": true,
+      "detail": "op=16 rc=1 hits=['0x401fe200', '0x401fe20c', '0x401ff0f4']"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op31_unknown_returns_fx_argument",
+      "passed": true,
+      "detail": "op=31 rc=1 hits=['0x401fe200', '0x401fe20c', '0x401ff0f4']"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op80_unknown_returns_fx_argument",
+      "passed": true,
+      "detail": "op=80 rc=1 hits=['0x401fe200', '0x401fe20c', '0x401ff0f4']"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op35_status_full_chain_ctx_null_qemu_state0",
+      "passed": true,
+      "detail": "rc=0 bytes=64 flags=0x9 hw=0 rf=0x1"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op35_status_live_xm6_hw_state2_ready",
+      "passed": true,
+      "detail": "rc=0 hw=2 rf=0x3"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op35_status_live_xm6_loader_fault_bit7",
+      "passed": true,
+      "detail": "hw=0x82 rf=0x1"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op34_set_dormant_global_xm6_auto_zero_alloc_ctx_null",
+      "passed": true,
+      "detail": "rc=0 a_bytes=0 ensure_ctx_calls=0 ctx=0x0"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op34_set_bad_crc_returns_fx_argument",
+      "passed": true,
+      "detail": "rc=1 ensure_ctx_calls=0"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op42_xm6_diag_qemu_unready_ctx_null",
+      "passed": true,
+      "detail": "rc=0 magic=0x4458385a hw=0 ran=0x0"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op35_status_sees_tripped_breaker_before_reset",
+      "passed": true,
+      "detail": "rf=0x7 err=1"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op43_xm6_reset_breaker_clears_breaker_and_returns_64b_status",
+      "passed": true,
+      "detail": "rc=0 bytes=64 rf=0x3 brk=0"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op42_xm6_diag_qemu_unready_ctx_attached",
+      "passed": true,
+      "detail": "rc=0 hw=0 ran=0x0 dsp_last=0x0"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op42_xm6_diag_slots_tunnel_0xf1_stopped_and_0xf2_suspended",
+      "passed": true,
+      "detail": "f1=0xf1 f2=0xf2"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "reject_bad_magic_deadbeef_returns_fx_argument",
+      "passed": true,
+      "detail": "case=bad_magic_deadbeef rc=1"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "reject_truncated_q_bytes_15_returns_fx_argument",
+      "passed": true,
+      "detail": "case=truncated_q_bytes_15 rc=1"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "reject_truncated_q_bytes_0_returns_fx_argument",
+      "passed": true,
+      "detail": "case=truncated_q_bytes_0 rc=1"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "reject_oversized_q_bytes_769_returns_fx_argument",
+      "passed": true,
+      "detail": "case=oversized_q_bytes_769 rc=1"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "reject_payload_exceeds_q_minus_16_returns_fx_argument",
+      "passed": true,
+      "detail": "case=payload_exceeds_q_minus_16 rc=1"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "reject_nonzero_hdr_rsv2_returns_fx_argument",
+      "passed": true,
+      "detail": "case=nonzero_hdr_rsv2 rc=1"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "reject_nonzero_hdr_rsv3_returns_fx_argument",
+      "passed": true,
+      "detail": "case=nonzero_hdr_rsv3 rc=1"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "op47_unsupported_subop_returns_fx_capability",
+      "passed": true,
+      "detail": "rc=3"
+    },
+    {
+      "group": "F_slots_tunnel",
+      "name": "callee_saved_x19_x29_sp_and_cpacr0_verified_all_calls",
+      "passed": true,
+      "detail": "slots_state_calls_verified=27 arrival_pc=0x401a7898 cpacr_el1=0"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_arena_bytes_pitch_0",
+      "passed": true,
+      "detail": "pitch=0 -> 0x0 (want 0x0)"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_arena_bytes_pitch_8257",
+      "passed": true,
+      "detail": "pitch=8257 -> 0x0 (want 0x0)"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_arena_bytes_pitch_1024",
+      "passed": true,
+      "detail": "pitch=1024 -> 0x117c00 (want 0x117c00)"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_arena_bytes_pitch_8256",
+      "passed": true,
+      "detail": "pitch=8256 -> 0x6b8800 (want 0x6b8800)"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "class24_xm6_fast_path_single_alloc",
+      "passed": true,
+      "detail": "rc=1 allocs=1 rels=0 dma=0x860000000"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "class24_xm6_spacer_retry_success_order_and_flight",
+      "passed": true,
+      "detail": "rc=1 timeline=[{'op': 'alloc', 'req': 2097152, 'handle': 1571553281, 'cpu': 53149171712, 'dma': 35969302528, 'actual': 2097152}, {'op': 'alloc', 'req': 2097152, 'handle': 1571553282, 'cpu': 53151268864, 'dma': 35971399680, 'actual': 2097152}, {'op': 'release', 'handle': 1571553281, 'cpu': 53149171712, 'dma': 35969302528, 'actual': 2097152, 'used': 2147483648}] flight=[{'tick': 7204197275, 'event': 20, 'core_flags': 1, 'seq': 1, 'a': 8781568, 'b': 2097152, 'c': 8782080, 'reserved': 0}]"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "class24_xm6_double_straddle_releases_both_and_fails_clean",
+      "passed": true,
+      "detail": "rc=0 timeline=[{'op': 'alloc', 'req': 2097152, 'handle': 1571553297, 'cpu': 53149171712, 'dma': 35969302528, 'actual': 2097152}, {'op': 'alloc', 'req': 2097152, 'handle': 1571553298, 'cpu': 53686042624, 'dma': 36506173440, 'actual': 2097152}, {'op': 'release', 'handle': 1571553297, 'cpu': 53149171712, 'dma': 35969302528, 'actual': 2097152, 'used': 2147483648}, {'op': 'release', 'handle': 1571553298, 'cpu': 53686042624, 'dma': 36506173440, 'actual': 2097152, 'used': 2147483648}] flight=[{'tick': 7204211997, 'event': 20, 'core_flags': 0, 'seq': 1, 'a': 8781568, 'b': 2097152, 'c': 0, 'reserved': 0}]"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "class24_xm6_reject_zero_and_gt_512m",
+      "passed": true,
+      "detail": "rc0=0 rc_big=0 allocs=0"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_nv16_happy_with_512m_spacer_retry_and_permuted_front",
+      "passed": true,
+      "detail": "rc=1 job_dma=0x860100000 dcache=8 flight=[20, 18]"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_nv16_pre_busy_mailbox_rejects_clean",
+      "passed": true,
+      "detail": "rc=0 allocs=0 err=5"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_nv16_reject_odd_width",
+      "passed": true,
+      "detail": "case=reject_odd_width rc=0 submits=0"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_nv16_reject_height_not_mul8",
+      "passed": true,
+      "detail": "case=reject_height_not_mul8 rc=0 submits=0"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_nv16_reject_pitch_unaligned",
+      "passed": true,
+      "detail": "case=reject_pitch_unaligned rc=0 submits=0"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_nv16_reject_overlap_planes",
+      "passed": true,
+      "detail": "case=reject_overlap_planes rc=0 submits=0"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_nv16_reject_straddle_plane",
+      "passed": true,
+      "detail": "case=reject_straddle_plane rc=0 submits=0"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_nv16_post_busy_mailbox_trips_breaker_and_withholds_free",
+      "passed": true,
+      "detail": "rc=-1 brk=1 allocs=1 rels=0 flight=[18, 19]"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_reset_breaker_refuses_while_mailbox_busy_then_clears",
+      "passed": true,
+      "detail": "brk_busy=1 brk_idle=0"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_nv16_unchanged_status_idle_mailbox_frees_and_trips",
+      "passed": true,
+      "detail": "rc=-1 allocs=1 rels=1"
+    },
+    {
+      "group": "G_rgblut_and_spacer",
+      "name": "rgblut_nv16_dsp_abort_clean_fallback_no_breaker",
+      "passed": true,
+      "detail": "rc=0 brk=0 err=4"
+    },
+    {
+      "group": "global",
+      "name": "forbidden_0x40c91c84_zero_hits_entire_suite",
+      "passed": true,
+      "detail": "hits=0"
+    }
+  ]
+}

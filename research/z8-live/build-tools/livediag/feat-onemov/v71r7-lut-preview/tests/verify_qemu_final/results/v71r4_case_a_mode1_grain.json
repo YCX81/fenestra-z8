@@ -1,0 +1,575 @@
+{
+  "verdict": "MODEL_BOUNDARY_EXPECTED",
+  "model_boundary_expected": true,
+  "passed": true,
+  "run": "v71r4-case-a-mode1-grain",
+  "filmsim_mode": "mode1-grain",
+  "sound": "on",
+  "image_review": "off",
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "build_id": "0xd590d8cd",
+  "qemu_sha256": "1871edb13b11d518e443e50740680fcdc1d881342572cf2f0d855bffce70f8ce",
+  "z8_unknown_count": 0,
+  "z9_unknown_count": 0,
+  "known_qemu_y_only_15e2_z9_count": 1,
+  "panic_count": 0,
+  "model_boundary_detail": {
+    "reason": "cpu_ram_known_producer_overlap",
+    "qemu_source": "filmsim-qemu-r1/source/nikon-z8-jpeg-cpu-ram.h:59",
+    "firmware_source": "work/filmsim/src/photo/z8_native_filmsim_photo.c:638-696",
+    "explanation": "V71.5 Grain-Only Mode 1 (hdf_level=0) intentionally uses Y-only private Class 0x24 shadow allocation (descriptor+24 = shadow Y, descriptor+32 = untouched stock source.uv_address) to save ~45 MiB RAM and ~250 ms copy/flush on EXPEED 7 hardware. Unmodified filmsim-qemu-r1 conservatively rejects mixed {CPU-RAM Y, HW-Capture UV} at engine 0x15e2 entry; not a firmware bug; included in physical camera acceptance checklist.",
+    "stock_capture_main_y": "0x8b5c76600",
+    "stock_capture_main_uv": "0x8b87cc600",
+    "submitted_15e2_y": "0x89b477000",
+    "submitted_15e2_uv": "0x8b87cc600",
+    "submitted_15e2_out": "0x8fe158600",
+    "still_last_duration_ms": 860.46,
+    "live_applied_pre_boundary": 81,
+    "photos_completed_pre_boundary": 1,
+    "last_stages_applied": 4,
+    "photos_failed": 0
+  },
+  "boot_flag": {
+    "present": true,
+    "bytes": 64,
+    "magic_ascii": "FXBOOT1",
+    "build_id_hex": "0xd590d8cd",
+    "build_id_match": true
+  },
+  "fenestra_card": {
+    "directory": "FENESTRA",
+    "first_cluster": 5,
+    "cluster_bytes": 131072,
+    "entries": {
+      "FENESTRA/STARTUP-Z8.0": {
+        "cluster": 6,
+        "bytes": 64
+      },
+      "FENESTRA/ZF_GRAIN.BIN": {
+        "cluster": 7,
+        "bytes": 27588
+      },
+      "FENESTRA/filmsim.wlm": {
+        "cluster": 8,
+        "bytes": 34856
+      },
+      "FENESTRA/portrait.wlm": {
+        "cluster": 9,
+        "bytes": 4872
+      },
+      "FENESTRA/slotcard.wlm": {
+        "cluster": 10,
+        "bytes": 52548
+      },
+      "FENESTRA/FLMSIM0.CFG": {
+        "cluster": 11,
+        "bytes": 64
+      }
+    }
+  },
+  "checks": {
+    "main_sha256_match": true,
+    "qemu_identity_match_unmodified_filmsim_r1": true,
+    "v71_fenestra_modules_loaded_on_card": true,
+    "boot_flag_build_id_0xd590d8cd": true,
+    "zero_z8_unknown": true,
+    "zero_panic": true,
+    "zero_unexpected_z9_unknown": true,
+    "codec_zero_rejects": true,
+    "unique_pcm_sha_match": true,
+    "v71_flip_obs_active_in_dram": true,
+    "v71_w5_mirror_direct_async_active_zero_park_err": true,
+    "filmsim_mode1_el1_active": true,
+    "filmsim_mode1_pc_path_verified": true,
+    "filmsim_mode1_still_y_only_completed_cleanly": true,
+    "y_only_descriptor_shadow_y_and_untouched_stock_uv_verified": true,
+    "v71r4_live_dram_instructions_verified": true
+  },
+  "v71_flip_obs_peak": {
+    "flip_obs_count": 81,
+    "flip_seq_head": 81,
+    "last_kept_flip_seq": 81,
+    "ring_count": 6,
+    "direct_nv12_ok": 81,
+    "direct_nv12_retrig": 21,
+    "async_harvests": 102,
+    "interp_pushes": 0,
+    "fs_last_mode_max": 1,
+    "fs_last_encoded_gen_max": 0
+  },
+  "v71_w5_mirror_peak": {
+    "direct_nv12_cnt": 81,
+    "async_retrig_cnt": 21,
+    "submitted_frames": 102,
+    "batch_submitted": 1,
+    "n_timed_v70": 102,
+    "in_flight_seen_1": true,
+    "max_park_err": 0,
+    "final_close_failed": 0,
+    "final_in_flight": 0,
+    "final_park_err": 0,
+    "final_diag_close": "0x0"
+  },
+  "v71_w5_mirror_final": {
+    "magic": "0x57354c31",
+    "stream": 0,
+    "busy": 0,
+    "release_req": 0,
+    "close_failed": 0,
+    "handoffs": 0,
+    "arena": "0x8a21af000",
+    "native_instance": "0xa02d41848",
+    "arena_desc": "0xa118a43c8",
+    "block_desc": "0xa118a00c0",
+    "in_flight": 0,
+    "in_flight_slot": 0,
+    "in_flight_hw_idx": 101,
+    "in_flight_stamp": 303000,
+    "last_valid_slot": 0,
+    "slot_valid_mask": 15,
+    "next_slot_rr": 1,
+    "batch_submitted": 1,
+    "submitted_frames": 102,
+    "in_flight_retrig": 0,
+    "direct_nv12_cnt": 81,
+    "async_retrig_cnt": 21,
+    "sum_in_us": 2,
+    "sum_wait_us": 4,
+    "sum_out_us": 294,
+    "sum_parse_us": 7309,
+    "n_timed_v70": 102,
+    "last_poll_wait_us": 0,
+    "park_err": 0,
+    "diag_close": "0x0"
+  },
+  "v71_filmsim_final": {
+    "context": "0xa10eb0b00",
+    "ui_size": 38432,
+    "filmsim_context_offset": 38424,
+    "bus_cfg": null,
+    "module_loaded": 1,
+    "cfg_active": 1,
+    "dormant": 0,
+    "photo_worker_ready": 1,
+    "live_worker_ready": 1,
+    "live_ws_ready": 1,
+    "class24_alloc_count": 1,
+    "class24_release_count": 0,
+    "class24_active_bytes": 11452416,
+    "lv_submitted": 0,
+    "lv_busy_skips": 0,
+    "arena_blk_handle": "0xa118abc70",
+    "arena_blk_cpu": "0xca83fb000",
+    "arena_blk_dma": "0x8a83fb000",
+    "arena_blk_actual": 11452416,
+    "arena_blk_used": 655360,
+    "job2_grain_bypasses": 0,
+    "pool_suspended": 0,
+    "lv_tb_state": 0,
+    "lut17_ready": 0,
+    "gtile_ready": 1,
+    "gtile_readers": 0,
+    "lv_cpu0_gtile_held": 0,
+    "lut_epoch": 0,
+    "zf_epoch": 1,
+    "lv_work_gen": 0,
+    "portrait_gate": 1,
+    "portrait_latch": 0,
+    "slots_limit": 64,
+    "pool_gate": 0,
+    "be_lv_mask": 1118481,
+    "v71_silky30fps": {
+      "w5": {
+        "magic": "0x57354c31",
+        "stream": 0,
+        "busy": 0,
+        "release_req": 0,
+        "close_failed": 0,
+        "handoffs": 0,
+        "in_flight": 0,
+        "in_flight_slot": 0,
+        "last_valid_slot": 0,
+        "slot_valid_mask": 15,
+        "submitted_frames": 102,
+        "in_flight_retrig": 0,
+        "direct_nv12_cnt": 81,
+        "async_retrig_cnt": 21,
+        "n_timed_v70": 102,
+        "park_err": 0,
+        "diag_close": "0x0",
+        "avg_in_us": 0,
+        "avg_wait_us": 0,
+        "avg_out_us": 2,
+        "avg_parse_us": 71
+      },
+      "flip_obs": {
+        "ring_head": 3,
+        "ring_count": 6,
+        "obs_pending_flip": 0,
+        "flip_obs_count": 81,
+        "interp_pushes": 0,
+        "direct_nv12_ok": 81,
+        "direct_nv12_retrig": 21,
+        "async_harvests": 102,
+        "last_w": 1024,
+        "last_h": 682,
+        "fs_last_encoded_gen": 0,
+        "fs_last_mode": 1
+      },
+      "ev_diag3": null
+    },
+    "guest_writes": false,
+    "dram_active_pc_sel": 0,
+    "xm6_raw_hw_state": 1,
+    "xm6_raw_fw_loaded": 1,
+    "xm6_raw_loader_fault": 0,
+    "ctx_struct_bytes": 9416,
+    "cfg_updates": 1,
+    "bus_hits": 0,
+    "zf_maps_loaded": 1,
+    "lut_loaded": 0,
+    "active_lut_slot": 0,
+    "last_error": 0,
+    "live_applied": 81,
+    "live_skipped": 0,
+    "last_live_stages": 4,
+    "photos_completed": 1,
+    "photos_bypassed": 0,
+    "photos_failed": 0,
+    "last_stages_applied": 4,
+    "last_main_w": 8256,
+    "last_main_h": 5504,
+    "photo_reason": 0,
+    "cfg": {
+      "magic": "0x3153465a",
+      "version": 1,
+      "bytes": 64,
+      "seq": 1,
+      "crc32": "0x978eb898",
+      "crc_ok": true,
+      "film_style": 1,
+      "zf_intensity": 4,
+      "zf_size": 2,
+      "zf_blur_mode": 1,
+      "fuji_chrome": 0,
+      "fuji_fx_blue": 0,
+      "fuji_lut_slot": 0,
+      "fuji_lut_strength": 100,
+      "fuji_grain": 0,
+      "hdf_level": 0,
+      "live_link": 1,
+      "apply_mode": 0,
+      "xm6_mode": 0
+    },
+    "photo_phase": 5,
+    "photo_poisoned": 0,
+    "photo_stage_start_us": 121861223,
+    "photo_copy_done_us": 121872485,
+    "photo_finish_us": 122721682,
+    "zf_grain_buf": "0xa10ec38a0",
+    "zf_maps_retry_after_us": 0,
+    "photo_slot1_phase": 0,
+    "photo_slot1_poisoned": 0,
+    "photo_slot1_completed": 0,
+    "photo_slot1_bypassed": 0,
+    "photo_slot1_failed": 0,
+    "base_cfg_valid": 1,
+    "recipe_table_loaded": 0,
+    "recipe_table_synced_by_ipc": 0,
+    "active_pc_sel": 0,
+    "active_recipe_src": 0,
+    "active_recipe_bound": 0,
+    "xm6_busy": 0,
+    "xm6_breaker_tripped": 0,
+    "xm6_done_flag": 0,
+    "xm6_req_in_flight": 0,
+    "xm6_cb_code": 0,
+    "xm6_diag_ran": 0,
+    "xm6_diag_passed": 0,
+    "xm6_last_err": 5,
+    "xm6_last_dsp_status": 0,
+    "xm6_last_still_ms": 0,
+    "xm6_last_live_us": 0,
+    "xm6_still_ok": 0,
+    "xm6_live_ok": 0,
+    "xm6_fallback_cnt": 1,
+    "still_last_duration_ms": 860.46,
+    "base_cfg": {
+      "magic": "0x3153465a",
+      "version": 1,
+      "bytes": 64,
+      "seq": 1,
+      "crc32": "0x978eb898",
+      "crc_ok": true,
+      "film_style": 1,
+      "zf_intensity": 4,
+      "zf_size": 2,
+      "zf_blur_mode": 1,
+      "fuji_chrome": 0,
+      "fuji_fx_blue": 0,
+      "fuji_lut_slot": 0,
+      "fuji_lut_strength": 100,
+      "fuji_grain": 0,
+      "hdf_level": 0,
+      "live_link": 1,
+      "apply_mode": 0,
+      "xm6_mode": 0
+    },
+    "v71r5_status_flags": 19
+  },
+  "v71_pc_counts": {
+    "filmsim_runtime_live_mode": {
+      "pc": "0x409c1a7c",
+      "total": 6089,
+      "by_cpu": [
+        6089,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_live_begin_submit_nv12": {
+      "pc": "0x409c1c74",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_live_commit_submit_nv12": {
+      "pc": "0x409c1ee4",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_live_acquire_nv12": {
+      "pc": "0x409c2038",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_live_acquire_grain_tile": {
+      "pc": "0x409c239c",
+      "total": 81,
+      "by_cpu": [
+        81,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_live_release": {
+      "pc": "0x409c254c",
+      "total": 81,
+      "by_cpu": [
+        81,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_pool_suspend": {
+      "pc": "0x409c1500",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_runtime_pool_resume": {
+      "pc": "0x409c17e4",
+      "total": 4517,
+      "by_cpu": [
+        4517,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_live_worker_entry": {
+      "pc": "0x409c4078",
+      "total": 1,
+      "by_cpu": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "filmsim_live_cancelled": {
+      "pc": "0x409c2820",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "filmsim_slots_svc_trampoline": {
+      "pc": "0x409c3d00",
+      "total": 227,
+      "by_cpu": [
+        0,
+        0,
+        227,
+        0
+      ]
+    },
+    "z8_filmsim_apply_live_nv12": {
+      "pc": "0x409bec54",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "z8_hdf_apply": {
+      "pc": "0x409b1320",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "z8_hdf_live_nv12_1024": {
+      "pc": "0x409b1330",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "z8_zf_grain_live_bake_tile": {
+      "pc": "0x409ba7f0",
+      "total": 1,
+      "by_cpu": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "z8_zf_grain_live_apply_tile_y": {
+      "pc": "0x409bdd78",
+      "total": 20,
+      "by_cpu": [
+        0,
+        0,
+        20,
+        0
+      ]
+    },
+    "live_scale_1024_to_1280_nv12_neon": {
+      "pc": "0x409ca204",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_scale_1024_to_1280_nv12_neon_grain": {
+      "pc": "0x409c9bf8",
+      "total": 81,
+      "by_cpu": [
+        81,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_downscale_1280_to_1024_nv12_neon": {
+      "pc": "0x409cbb74",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_copy_nv12_neon": {
+      "pc": "0x409cb744",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_copy_nv12_neon_grain": {
+      "pc": "0x409cac48",
+      "total": 0,
+      "by_cpu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_encoder_submit_slot": {
+      "pc": "0x409d199c",
+      "total": 102,
+      "by_cpu": [
+        102,
+        0,
+        0,
+        0
+      ]
+    },
+    "live_encoder_is_parked": {
+      "pc": "0x409d26e8",
+      "total": 1,
+      "by_cpu": [
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "movie": {},
+  "livelog": {},
+  "v71r4_dram_words": {
+    "build_id_0x401fe060": "0xd590d8cd",
+    "pool6_lo_0x40cf4620": "0x5284000d",
+    "pool6_hi_0x40cf4630": "0x72a0038d",
+    "nfsp_photo_worker_prio_0x409c1018": "0x528003c5",
+    "filmsim_live_worker_prio_0x409c1064": "0x528003c5",
+    "fs_live_slice_lsr_0x409c28a0": "0xd344fd08",
+    "fs_live_slice_cmp_0x409c28a4": "0xf11d4d1f",
+    "filmsim_bank_sha256": "9655e8eab3e44218bec82a4c987f0fbb958097343f7d704c1ecf65bfb2884a55"
+  },
+  "runtime_summary": {
+    "requested": 1,
+    "capture.phase": 3,
+    "stream.width": 1280,
+    "stream.height": 852,
+    "stream.bitrate": 16000000,
+    "stream.encoded": 102,
+    "stream.error": 0,
+    "flip_obs.fs_last_mode": 1,
+    "flip_obs.fs_last_encoded_gen": 0
+  }
+}

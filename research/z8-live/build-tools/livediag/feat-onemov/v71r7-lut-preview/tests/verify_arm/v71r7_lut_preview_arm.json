@@ -1,0 +1,426 @@
+{
+  "suite": "v71r7_lut_preview_arm64_unicorn_final_main",
+  "version": "v71r7-lut-preview",
+  "passed": true,
+  "main_sha256": "362ee2a5491859a762b35ed8459cf22c212ae5babb38915daa15e3b801533c8a",
+  "payload_elf_sha256": "65e0dba7f520a915228d0df2b0735420997f96e2e47bc65c7f06c28747d91816",
+  "cpacr_el1_zero_fp_enforced_all_calls": true,
+  "abi_x19_x29_sp_verified_every_call": true,
+  "checks_passed": 63,
+  "checks_total": 63,
+  "checks_by_group": {
+    "A_layer0_hooks": 13,
+    "B_photo_menu_ram": 7,
+    "C_menu_text_chain": 31,
+    "D_flight_ring": 4,
+    "E_layer0_suspend_power": 7,
+    "F_q_spill_audit": 1
+  },
+  "menu_text_samples_0x1f42": {
+    "0x1f42_JA": "LUT 選択",
+    "0x1f42_EN": "Select LUT",
+    "0x1f42_zh-CN": "选择 LUT",
+    "0x1f42_zh-TW": "選擇 LUT",
+    "0x1f42_EN_fallback": "Select LUT"
+  },
+  "q_spill_audit": {
+    ".filmsim": {
+      "functions_audited": 320,
+      "insns_audited": 39521,
+      "q_spills": 0,
+      "hits": []
+    },
+    ".v71r7_lut_core": {
+      "functions_audited": 260,
+      "insns_audited": 16812,
+      "q_spills": 0,
+      "hits": []
+    },
+    ".v71r7_lut_menu": {
+      "functions_audited": 195,
+      "insns_audited": 10183,
+      "q_spills": 0,
+      "hits": []
+    }
+  },
+  "checks": [
+    {
+      "group": "A_layer0_hooks",
+      "name": "stage1_ranges_has_all_6_hooks",
+      "passed": true,
+      "detail": "count=6"
+    },
+    {
+      "group": "A_layer0_hooks",
+      "name": "decode_layer0_enqueue_bl_into_bank1",
+      "passed": true,
+      "detail": "site=0x40e9a540 -> BL 0x409e7490 (v71r7_layer0_enqueue_hook) -> B 0x409e172c (v71r7_layer0_enqueue_hook_c)"
+    },
+    {
+      "group": "A_layer0_hooks",
+      "name": "exec_layer0_enqueue_bl_reaches_c_handler_and_stock",
+      "passed": true,
+      "detail": "trace=['0x40e9a540', '0x409e7490', '0x409e172c'] stock=[{'fn': 'enqueue', 'x0': 0}]"
+    },
+    {
+      "group": "A_layer0_hooks",
+      "name": "decode_layer0_display_bl_into_bank1",
+      "passed": true,
+      "detail": "site=0x40cd862c -> BL 0x409e7494 (v71r7_layer0_display_hook) -> B 0x409e1a48 (v71r7_layer0_display_hook_c)"
+    },
+    {
+      "group": "A_layer0_hooks",
+      "name": "exec_layer0_display_bl_reaches_c_handler_and_stock",
+      "passed": true,
+      "detail": "trace=['0x40cd862c', '0x409e7494', '0x409e1a48'] stock=[{'fn': 'display', 'x0': 0}]"
+    },
+    {
+      "group": "A_layer0_hooks",
+      "name": "decode_layer0_vsync_lcd_bl_into_bank1",
+      "passed": true,
+      "detail": "site=0x40cd72a4 -> BL 0x409e7498 (v71r7_layer0_vsync_hook) -> B 0x409e2af0 (v71r7_layer0_vsync_hook_c)"
+    },
+    {
+      "group": "A_layer0_hooks",
+      "name": "exec_layer0_vsync_lcd_bl_reaches_c_handler_and_stock",
+      "passed": true,
+      "detail": "trace=['0x40cd72a4', '0x409e7498', '0x409e2af0'] stock=[{'fn': 'vsync', 'x0': 0}]"
+    },
+    {
+      "group": "A_layer0_hooks",
+      "name": "decode_layer0_vsync_evf_bl_into_bank1",
+      "passed": true,
+      "detail": "site=0x40cd72d4 -> BL 0x409e7498 (v71r7_layer0_vsync_hook) -> B 0x409e2af0 (v71r7_layer0_vsync_hook_c)"
+    },
+    {
+      "group": "A_layer0_hooks",
+      "name": "exec_layer0_vsync_evf_bl_reaches_c_handler_and_stock",
+      "passed": true,
+      "detail": "trace=['0x40cd72d4', '0x409e7498', '0x409e2af0'] stock=[{'fn': 'vsync', 'x0': 3}]"
+    },
+    {
+      "group": "A_layer0_hooks",
+      "name": "decode_power_cancel_11_bl_into_bank1",
+      "passed": true,
+      "detail": "site=0x40d67328 -> BL 0x409e749c (v71r7_power_sync_hook) -> B 0x409e3ed0 (v71r7_power_sync_hook_c)"
+    },
+    {
+      "group": "A_layer0_hooks",
+      "name": "exec_power_cancel_11_bl_reaches_c_handler_and_stock",
+      "passed": true,
+      "detail": "trace=['0x40d67328', '0x409e749c', '0x409e3ed0'] stock=[{'fn': 'power_sync', 'cmd': 11, 'payload': 4369, 'gate_state_at_stock_call': 0}]"
+    },
+    {
+      "group": "A_layer0_hooks",
+      "name": "decode_power_off_10_bl_into_bank1",
+      "passed": true,
+      "detail": "site=0x40d67340 -> BL 0x409e749c (v71r7_power_sync_hook) -> B 0x409e3ed0 (v71r7_power_sync_hook_c)"
+    },
+    {
+      "group": "A_layer0_hooks",
+      "name": "exec_power_off_10_bl_reaches_c_handler_and_stock",
+      "passed": true,
+      "detail": "trace=['0x40d67340', '0x409e749c', '0x409e3ed0'] stock=[{'fn': 'power_sync', 'cmd': 10, 'payload': 8738, 'gate_state_at_stock_call': 67108864}]"
+    },
+    {
+      "group": "B_photo_menu_ram",
+      "name": "parent_desc_ptr_0xa028f5670_exact",
+      "passed": true,
+      "detail": "ptr=0x4098db78 exp=0x4098db78"
+    },
+    {
+      "group": "B_photo_menu_ram",
+      "name": "parent_desc_count_48_and_tables",
+      "passed": true,
+      "detail": "flags=0x80001003 count=48 vp=(76, 58, 708, 480) rows=0x4098c614 events=0x4098d9f8"
+    },
+    {
+      "group": "B_photo_menu_ram",
+      "name": "row45_pixel_shift_0x2c13_intact",
+      "passed": true,
+      "detail": "row45_text=(0xc46,0xc47) item=0x2c13"
+    },
+    {
+      "group": "B_photo_menu_ram",
+      "name": "row47_select_lut_0x2de7_targets_page_0x5d6",
+      "passed": true,
+      "detail": "row47_text=(0x1f42,0x1f43) item=0x2de7 ev_targets={646: 1494, 651: 1494, 671: 1494, 686: 1494}"
+    },
+    {
+      "group": "B_photo_menu_ram",
+      "name": "child_state_0xa02917d00_0x5d6_links",
+      "passed": true,
+      "detail": "page=0x5d6 vec=0x4098e430 desc=0x4098e458"
+    },
+    {
+      "group": "B_photo_menu_ram",
+      "name": "child_desc_23_rows_and_lifecycle_vector",
+      "passed": true,
+      "detail": "count=23 rows_0_21_22=(0x4800,0x4815,0x4816)"
+    },
+    {
+      "group": "B_photo_menu_ram",
+      "name": "unused_burst_slot_0xa02917ca0_all_zero",
+      "passed": true,
+      "detail": "nonzero_count=0"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "symbol_addresses_exact",
+      "passed": true,
+      "detail": "0x4032E130->0x401ff134 live=0x401eb080 lookup=0x40982674"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f42_lang0_JA",
+      "passed": true,
+      "detail": "got='LUT 選択' ptr=0x4098bd64 bytes=12 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f42_lang1_EN",
+      "passed": true,
+      "detail": "got='Select LUT' ptr=0x4098bec4 bytes=20 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f42_lang8_zh-CN",
+      "passed": true,
+      "detail": "got='选择 LUT' ptr=0x4098b9c6 bytes=12 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f42_lang9_zh-TW",
+      "passed": true,
+      "detail": "got='選擇 LUT' ptr=0x4098bf24 bytes=12 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f42_lang13_EN_fallback",
+      "passed": true,
+      "detail": "got='Select LUT' ptr=0x4098bec4 bytes=20 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f43_lang0_JA",
+      "passed": true,
+      "detail": "got='モニター表示と JPEG 画像に適用する LUT を選びます。' ptr=0x4098bc14 bytes=62 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f43_lang1_EN",
+      "passed": true,
+      "detail": "got='Choose a LUT for the rear display and JPEG photos.' ptr=0x4098b5e0 bytes=100 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f43_lang8_zh-CN",
+      "passed": true,
+      "detail": "got='选择用于显示屏和 JPEG 照片的 LUT。' ptr=0x4098c0bc bytes=44 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f43_lang9_zh-TW",
+      "passed": true,
+      "detail": "got='選擇用於顯示螢幕與 JPEG 照片的 LUT。' ptr=0x4098b408 bytes=46 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f43_lang13_EN_fallback",
+      "passed": true,
+      "detail": "got='Choose a LUT for the rear display and JPEG photos.' ptr=0x4098b5e0 bytes=100 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f47_lang0_JA",
+      "passed": true,
+      "detail": "got='OFF' ptr=0x4098beda bytes=6 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f47_lang1_EN",
+      "passed": true,
+      "detail": "got='Off' ptr=0x4098b7b2 bytes=6 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f47_lang8_zh-CN",
+      "passed": true,
+      "detail": "got='无LUT' ptr=0x4098c034 bytes=8 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f47_lang9_zh-TW",
+      "passed": true,
+      "detail": "got='無LUT' ptr=0x4098bb00 bytes=8 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f47_lang13_EN_fallback",
+      "passed": true,
+      "detail": "got='Off' ptr=0x4098b7b2 bytes=6 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f48_lang0_JA",
+      "passed": true,
+      "detail": "got='前へ' ptr=0x4098bb0a bytes=4 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f48_lang1_EN",
+      "passed": true,
+      "detail": "got='Prev' ptr=0x4098bf32 bytes=8 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f48_lang8_zh-CN",
+      "passed": true,
+      "detail": "got='上一页' ptr=0x4098bc54 bytes=6 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f48_lang9_zh-TW",
+      "passed": true,
+      "detail": "got='上一頁' ptr=0x4098c28a bytes=6 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f48_lang13_EN_fallback",
+      "passed": true,
+      "detail": "got='Prev' ptr=0x4098bf32 bytes=8 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f49_lang0_JA",
+      "passed": true,
+      "detail": "got='次へ' ptr=0x4098bb10 bytes=4 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f49_lang1_EN",
+      "passed": true,
+      "detail": "got='Next' ptr=0x4098b486 bytes=8 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f49_lang8_zh-CN",
+      "passed": true,
+      "detail": "got='下一页' ptr=0x4098b7ba bytes=6 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f49_lang9_zh-TW",
+      "passed": true,
+      "detail": "got='下一頁' ptr=0x4098c154 bytes=6 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f49_lang13_EN_fallback",
+      "passed": true,
+      "detail": "got='Next' ptr=0x4098b486 bytes=8 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f4a_lang0_JA",
+      "passed": true,
+      "detail": "got='' ptr=0x4098b726 bytes=0 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f4a_lang1_EN",
+      "passed": true,
+      "detail": "got='' ptr=0x4098b726 bytes=0 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f4a_lang8_zh-CN",
+      "passed": true,
+      "detail": "got='' ptr=0x4098b726 bytes=0 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f4a_lang9_zh-TW",
+      "passed": true,
+      "detail": "got='' ptr=0x4098b726 bytes=0 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "C_menu_text_chain",
+      "name": "text_0x1f4a_lang13_EN_fallback",
+      "passed": true,
+      "detail": "got='' ptr=0x4098b726 bytes=0 trace=['0x4032e130', '0x401ff134', '0x401eb080', '0x40982674']"
+    },
+    {
+      "group": "D_flight_ring",
+      "name": "flight_init_clears_ring_hbs_and_sets_magic",
+      "passed": true,
+      "detail": "anc_magic=0x56373137 wd_magic=0x56373137 head=0"
+    },
+    {
+      "group": "D_flight_ring",
+      "name": "flight_record_70_wraparound_exact_dram_layout",
+      "passed": true,
+      "detail": "head=70 s0.seq=65 s5.seq=70 s6.seq=7"
+    },
+    {
+      "group": "D_flight_ring",
+      "name": "flight_snapshot_chronological_64_records",
+      "passed": true,
+      "detail": "count=64 first_seq=7 rows=(7..70)"
+    },
+    {
+      "group": "D_flight_ring",
+      "name": "heartbeat_enter_progress_idle_and_oob_guard",
+      "passed": true,
+      "detail": "ent={'stage': 10, 'cap_num': 42, 'core': 1, 'aux': 48879, 'enter_tick': 6984847663, 'progress_tick': 6984847663} prog={'stage': 10, 'cap_num': 42, 'core': 1, 'aux': 48879, 'enter_tick': 6984847663, 'progress_tick': 6984850901} idle={'stage': 0, 'cap_num': 42, 'core': 1, 'aux': 0, 'enter_tick': 6984853373, 'progress_tick': 6984853373}"
+    },
+    {
+      "group": "E_layer0_suspend_power",
+      "name": "layer0_init_anchor_gate_open_epoch1_zero_ws",
+      "passed": true,
+      "detail": "rc=0 ctx=0xa03010000 gate=0x100000001 ws_alloc=0"
+    },
+    {
+      "group": "E_layer0_suspend_power",
+      "name": "pool_suspend_sets_anchor_flag_and_logs_flight16",
+      "passed": true,
+      "detail": "flags=0x2 flight={'tick': 6984901931, 'event': 16, 'core_flags': 1, 'seq': 1, 'a': 0, 'b': 0, 'c': 0, 'reserved': 0}"
+    },
+    {
+      "group": "E_layer0_suspend_power",
+      "name": "pool_resume_clears_anchor_flag_and_logs_flight17",
+      "passed": true,
+      "detail": "flags=0x0 flight={'tick': 6984913387, 'event': 17, 'core_flags': 1, 'seq': 2, 'a': 0, 'b': 0, 'c': 0, 'reserved': 0}"
+    },
+    {
+      "group": "E_layer0_suspend_power",
+      "name": "pool_resume_redundant_emits_zero_flight_entries",
+      "passed": true,
+      "detail": "head=2->2 flags=0x0"
+    },
+    {
+      "group": "E_layer0_suspend_power",
+      "name": "power_sync_hook_10_closes_io_gate_before_stock",
+      "passed": true,
+      "detail": "stock={'fn': 'power_sync', 'cmd': 10, 'payload': 43981, 'gate_state_at_stock_call': 4362076160} gate=0x104000000 flight={'tick': 6984929974, 'event': 11, 'core_flags': 1, 'seq': 1, 'a': 10, 'b': 0, 'c': 0, 'reserved': 0}"
+    },
+    {
+      "group": "E_layer0_suspend_power",
+      "name": "power_sync_hook_11_reopens_io_gate_epoch2_after_stock",
+      "passed": true,
+      "detail": "stock={'fn': 'power_sync', 'cmd': 11, 'payload': 56506, 'gate_state_at_stock_call': 4362076160} gate=0x200000001 flight={'tick': 6984940634, 'event': 22, 'core_flags': 1, 'seq': 2, 'a': 11, 'b': 2, 'c': 0, 'reserved': 0}"
+    },
+    {
+      "group": "E_layer0_suspend_power",
+      "name": "lifecycle_stop_permanently_blocks_cancel_reopen",
+      "passed": true,
+      "detail": "stopped=0x280000000 after_cancel=0x280000000"
+    },
+    {
+      "group": "F_q_spill_audit",
+      "name": "zero_q_spills_filmsim_bank1_bank2",
+      "passed": true,
+      "detail": "total_q_spills=0 hits=[]"
+    }
+  ]
+}

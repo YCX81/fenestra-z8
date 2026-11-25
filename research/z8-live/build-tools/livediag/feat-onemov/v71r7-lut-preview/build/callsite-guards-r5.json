@@ -1,0 +1,115 @@
+{
+  "baseline_sha256": "36c564c9e785822ccf784816882d5055ee8e5ca0b796e1c4fb8e459dfc1ae4b5",
+  "hooks": [
+    {
+      "site": "0x40e34eb0",
+      "old_word": "0x97f92eff",
+      "original_target": "0x40c80aac",
+      "symbol": "live_shutter_status",
+      "scope_and_failure_contract": "Only the current precisely admitted START sees virtual idle; Off sees native-rejected state4. Other envelopes use original state getter.",
+      "window_address": "0x40e34ea4",
+      "window_hex": "c0035fd6f5031f2ae0b30091ff2ef997e82f40b91f15007148010054",
+      "branch": "BL"
+    },
+    {
+      "site": "0x40e34ff4",
+      "old_word": "0x97fff8ed",
+      "original_target": "0x40e333a8",
+      "symbol": "live_shutter_open",
+      "scope_and_failure_contract": "Only admitted private START checks original port2/rate5/S16/count1 shape; other callers execute original open.",
+      "window_address": "0x40e34fe8",
+      "window_hex": "e8031f2ae0030091882200b9edf8ff97a0010036880e40b91f690071",
+      "branch": "BL"
+    },
+    {
+      "site": "0x40e35060",
+      "old_word": "0x97fffb69",
+      "original_target": "0x40e33e04",
+      "symbol": "live_shutter_volume",
+      "scope_and_failure_contract": "Exact SFX volume BL40e35060 only; unowned passthrough. Validate mode0/1, volume37..41. Under native codec mutex, every START reads real R9 successfully and requires300, then executes original D(3,mode), C(2,...L,L), plus C(3,...L,L) for mode1. Software cache equality never skips establishing R63 output route. R9 mismatch/read error refuses before D; D/C failure latches codec fault and prevents later START. Never runs prepare9 or ADC/format reset.",
+      "window_address": "0x40e35054",
+      "window_hex": "e3031f2ae4031f2ae5031f2a69fbff972002003785000014880640b9",
+      "branch": "BL"
+    },
+    {
+      "site": "0x40e35138",
+      "old_word": "0x97fff9c0",
+      "original_target": "0x40e33838",
+      "symbol": "live_shutter_buffer",
+      "scope_and_failure_contract": "Only admitted private START; true PCM pointer/length from original getter; stable708 payload with ACK. Queue failure never changes ownership to sent.",
+      "window_address": "0x40e3512c",
+      "window_hex": "e9530039f8fe60d3f7e30129c0f9ff97000a00368842403928040034",
+      "branch": "BL"
+    },
+    {
+      "site": "0x40e351fc",
+      "old_word": "0x97fff891",
+      "original_target": "0x40e33440",
+      "symbol": "live_shutter_go",
+      "scope_and_failure_contract": "Only admitted private START; exact selector2/no-ping S16 tuple; stable702. Outer2004/free delayed until true708/702 ACK. Post failure mutes DAC and never claims TX existed.",
+      "window_address": "0x40e351f0",
+      "window_hex": "e0030091e80300b9ea0700f991f8ff97e003003608799dd289424039",
+      "branch": "BL"
+    },
+    {
+      "site": "0x40e3535c",
+      "old_word": "0x97fff85e",
+      "original_target": "0x40e334d4",
+      "symbol": "live_shutter_stop",
+      "scope_and_failure_contract": "Private TX returns busy until true703 ACK and70e barrier+all prior ACKs. Duplicate private STOP after cleanup cannot call shared RX driver. Other owners use original stop.",
+      "window_address": "0x40e35350",
+      "window_hex": "1400e0f2e8031f32880200b95ef8ff97e0050036156f9dd29f0200b9",
+      "branch": "BL"
+    },
+    {
+      "site": "0x40e3527c",
+      "old_word": "0x97fffe64",
+      "original_target": "0x40e34c0c",
+      "symbol": "live_shutter_failure",
+      "scope_and_failure_contract": "Original failed START exceptional cleanup enters private asynchronous STOP; original2004/2005/outer heap ordering stays intact; other owners use original cleanup.",
+      "window_address": "0x40e35270",
+      "window_hex": "f7031f2ad50200b917ffff1764feff97f5031f2af7031f2af8030032",
+      "branch": "BL"
+    },
+    {
+      "site": "0x40e3539c",
+      "old_word": "0x940000ec",
+      "original_target": "0x40e3574c",
+      "symbol": "live_shutter_cleanup",
+      "scope_and_failure_contract": "Private marker callback bypasses original high-level output restore (which this path never changed). Nonprivate callback uses original cleanup.",
+      "window_address": "0x40e35390",
+      "window_hex": "60040036bf0200b97f0200b9ec00009409709dd2e971a0f24901c0f2",
+      "branch": "BL"
+    },
+    {
+      "site": "0x40e35540",
+      "old_word": "0x94000083",
+      "original_target": "0x40e3574c",
+      "symbol": "live_shutter_cleanup",
+      "scope_and_failure_contract": "Private marker callback bypasses original high-level output restore (which this path never changed). Nonprivate callback uses original cleanup.",
+      "window_address": "0x40e35534",
+      "window_hex": "4801c0f20800e0f21f0100b98300009409709dd2e971a0f24901c0f2",
+      "branch": "BL"
+    },
+    {
+      "site": "0x40e355e4",
+      "old_word": "0x17fff036",
+      "original_target": "0x40e316bc",
+      "symbol": "live_shutter_request_stop",
+      "scope_and_failure_contract": "Native block callback common tail only; private owner builds same native24+56 heap envelope and checks queue result, freeing only unqueued allocations. Nonprivate uses original40e316bc.",
+      "window_address": "0x40e355d8",
+      "window_hex": "81000054f37b41a9f553c2a836f0ff1715709dd2f571a0f25501c0f2",
+      "branch": "B"
+    },
+    {
+      "site": "0x40c7e090",
+      "old_word": "0x9402b71d",
+      "original_target": "0x40d2bd04",
+      "symbol": "live_shutter_event_wait",
+      "scope_and_failure_contract": "Exact AudioBuffer event-thread BL40c7e090. Preserve native wait args/result, add unused80 mask, retain native clear and0..6 handling. Consume previous batch before clearing output for next native wait: native return1 is not proof of success, and errors can leave output unchanged. At next wait enqueue ACK-backed708 behind the complete prior80 batch. EVENT_ARMED/FENCE_SENT CAS prevents residual80 across owners, including worker paused between claiming ARMED and setFlag. Failed marker post retries without release.",
+      "window_address": "0x40c7e084",
+      "window_hex": "e11b0032e2330091e00313aa1db70294e10f40b9e00313aa0bb70294",
+      "branch": "BL"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "main_sha256": "fe3e7f2232c338c87fc23d388d439379451293bfc972d45a4a6a710cd9fa7530",
+  "slotcard_wlm_sha256": "b221d05ee0756b96cd2243a8b9507f0fa0d6879a6a0bebcfabb6e6a5ff4e4853",
+  "card_audit": {
+    "fenestra_count": 61,
+    "sc_rec_count": 53,
+    "SCSEL0.CFG": {
+      "present": true,
+      "bytes": 64,
+      "magic": "0x314c535a",
+      "version": 1,
+      "seq": 1,
+      "crc_ok": true,
+      "base_gen": 53,
+      "store_id": "0x4aa7740a767ddf56",
+      "still_sel": "0x103b",
+      "video_sel": "0x0",
+      "still_proxy": "0x1",
+      "video_proxy": "0x0",
+      "valid": true
+    },
+    "SCSEL1.CFG": {
+      "present": true,
+      "bytes": 64,
+      "magic": "0x314c535a",
+      "version": 1,
+      "seq": 2,
+      "crc_ok": true,
+      "base_gen": 53,
+      "store_id": "0x4aa7740a767ddf56",
+      "still_sel": "0x103b",
+      "video_sel": "0x0",
+      "still_proxy": "0x0",
+      "video_proxy": "0x0",
+      "valid": true
+    },
+    "BOOT-Z8.FLAG": {
+      "present": true,
+      "bytes": 64,
+      "build_id": "0xd590d8cd",
+      "crc_ok": true,
+      "valid": true
+    }
+  },
+  "passed": 20,
+  "total": 20,
+  "assertions": [
+    {
+      "name": "0_phase1_zero_unknown_zero_err",
+      "ok": true,
+      "detail": "phase=done err=InterruptedError('Owned probe stop requested') z9_unknown=False"
+    },
+    {
+      "name": "1a_grid_sd",
+      "ok": true,
+      "detail": "p=1496 sel=1 snap_19b=1"
+    },
+    {
+      "name": "1b_lv_sd",
+      "ok": true,
+      "detail": "p=1495 sel=1 snap_19b=1"
+    },
+    {
+      "name": "2a_grid_c60_251d_flex",
+      "ok": true,
+      "detail": "sel=0x103b cur='ZeroFC' base=0x20 snap=0x5a/0xe0"
+    },
+    {
+      "name": "2b_lv_c60_after_commit_and_v71r4_scsel0",
+      "ok": true,
+      "detail": "sel=0x103b snap_19b=0xe0 commits=0 scsel0_still_sel=0x103b scsel0_valid=True sc_rec_count=53"
+    },
+    {
+      "name": "3a_dial_state_c59",
+      "ok": true,
+      "detail": "sel=0x103a cur='T-Max 400' im=80/82 lbl81=0x7efb cell81=0x100000000"
+    },
+    {
+      "name": "3b_dial_carousel_blitted_512x36",
+      "ok": true,
+      "detail": "found_512x36_blit=True"
+    },
+    {
+      "name": "3c_dial_carousel_pixels_not_blank",
+      "ok": true,
+      "detail": "ui_bar_bright=2865 ui_bar_yellow=765 car_c64_bright=4418 car_yellow=765"
+    },
+    {
+      "name": "3d_phase2_only_known_qemu_dma_bug",
+      "ok": true,
+      "detail": "confirmed Frame #2 hit pre-existing QEMU nikon-z9-lab.c:18691 r[0x20]/r[0x24] swap (identical to stock AUTO->SD)"
+    },
+    {
+      "name": "4a_s2_i_direct_keeps_c60",
+      "ok": true,
+      "detail": "p14=1562->p15=1496 sel=0x103b snap_19b=0xe0"
+    },
+    {
+      "name": "4b_s2_i_cancel_restores_c60",
+      "ok": true,
+      "detail": "preview=0x103a->after_i=0x103b snap_19b=0xe0"
+    },
+    {
+      "name": "4c_s2_half_restores_c60",
+      "ok": true,
+      "detail": "preview=0x103a->after_half=0x103b snap_19b=0xe0"
+    },
+    {
+      "name": "5a_disp4_info_panel_c60",
+      "ok": true,
+      "detail": "p=1637 sel=0x103b snap_19b=0xe0"
+    },
+    {
+      "name": "5b_disp5_returns_lv_c60",
+      "ok": true,
+      "detail": "p=1495 sel=0x103b"
+    },
+    {
+      "name": "5c_c60_to_sd_and_disp5",
+      "ok": true,
+      "detail": "sd_lv=1 info_p=1637 back_p=1495"
+    },
+    {
+      "name": "5d_sd_back_to_c60_final",
+      "ok": true,
+      "detail": "grid_snap=0xe0 lv_snap=0xe0"
+    },
+    {
+      "name": "6a_lv_osd_c60_visible_and_differs_from_sd",
+      "ok": true,
+      "detail": "bright(c60)=1267/1267/1267 bright(sd)=1123/1123 diff(sd,c60)=1821"
+    },
+    {
+      "name": "6b_lv_osd_c60_stable_across_disp_and_sd_roundtrip",
+      "ok": true,
+      "detail": "glyph_diff=0/0 raw_rgb_diff=0/0"
+    },
+    {
+      "name": "6c_grid_tile0_c60_differs_from_sd_and_stable",
+      "ok": true,
+      "detail": "diff(sd,c60)=1834 diff(c60,final_c60)=0"
+    },
+    {
+      "name": "6d_info_panel_p1637_c60_differs_from_sd",
+      "ok": true,
+      "detail": "diff(p1637_c60,p1637_sd)=1802"
+    }
+  ]
+}

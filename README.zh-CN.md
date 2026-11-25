@@ -180,6 +180,36 @@ python -B research/z8-live/from-stock/build.py \
   --output-dir /path/to/v36-rebuilt
 ```
 
+### 3. NFP `v0.5.1` 兼容离线构建器（CLI 工具包 + macOS App `Z8 Patch Builder`）
+
+`research/z8-live/nfp-builder/`（基于上游 [XinmiaoZhao/NikonFirmwarePatch](https://github.com/XinmiaoZhao/NikonFirmwarePatch) `v0.5.1` `25fefa1`，保留 `GPL-3.0-only` 许可）同时兼容上游的 **CLI 命令行工具包** 与 **Apple 芯片 macOS 图形界面 App（`Z8 Patch Builder`，macOS 14+）**，可直接基于用户自备的原厂 `Z_8_0311.bin`（`99,051,117 B`，SHA-256 `d67413c2...`）离线构建并独立核验固件（无需 WSL 或 QEMU）：
+
+- **上游四组功能 100% 逐字节兼容**：`video-recording`、`log-colour`、`still-photo-tools`、`raw-precapture` 全部 15 种组合均保留上游 20 份源码匹配的预编译单元，不勾选 `live-filmsim` 时输出与官方 `NikonFirmwarePatch v0.5.1` **逐字节一致**。
+- **新增第 5 功能组 `live-filmsim`（`V71.7-r7` 全家桶）**：完整包含重定位至 `< 0x40B50000` 的全套 4 组 NFP `v0.5.1` + `V71.7-r7` 实况照片 / 胶片模拟 / 实时 3D LUT 预览 / XM6 硬件 HDF / 竖屏录像 / 中文字库 / 双卡 C64 / Fenestra Core；支持任意 `--version NN.NN --tag tD`（自动重签 4 处原厂版本位、`0x401FB136` 与 Bootguard `0x401FE060`），并自动导出 6 个开源 `FENESTRA/` 运行时文件（`STARTUP-Z8.0` + 5 个 `.wlm` 插件；如需 Zf 银盐颗粒请自备 `ZF_GRAIN.BIN` 放入存储卡 `FENESTRA/`）。
+- **macOS App（`NikonFirmwarePatch-v71.7-r7-macOS.dmg`）**：内置同版工具包、精简 CPython 3.12.16 与 `capstone 5.0.7`，提供第 5 张功能卡片 `live-filmsim`（含 4 步交互演示动画、简/繁/英三语切换），并按顺序执行「输入核对 → 构建固件 → 独立 `verify.py` 核验 → 读回 `.bin` 与 `FENESTRA/` 逐文件 SHA-256 校验」。
+
+```bash
+# 方式 A：直接从 GitHub Release（v71.7-r7）下载 NikonFirmwarePatch-v71.7-r7-macOS.dmg（macOS 14+ Apple 芯片）
+#        或解压 NikonFirmwarePatch-v71.7-r7-toolkit.zip 后运行 CLI：
+python3 -m venv .venv && source .venv/bin/activate
+python -m pip install -r requirements.txt
+python patch.py Z_8_0311.bin --check
+
+# 仅构建上游 NFP v0.5.1 组合（与官方逐字节一致）
+python patch.py Z_8_0311.bin --features video-recording log-colour still-photo-tools raw-precapture \
+  --version 04.08 --tag p0 --output build/nfp-all
+
+# 构建完整 V71.7-r7（含重定位 NFP v0.5.1 + 实况/胶片模拟/LUT/XM6 + 导出 FENESTRA/）
+python patch.py Z_8_0311.bin --features live-filmsim --version 04.06 --tag p0 --output build/v71r7
+
+# 方式 B：从本仓库源码自建 v71.7-r7 工具包 ZIP 与 macOS DMG（需 Apple clang 21.0.0 与 Swift 6.3+）
+cd research/z8-live/nfp-builder
+python3 -B tools/build_release.py --tag v71.7-r7 --output /tmp/z8-toolkit
+python3 -B macos/scripts/build_app.py \
+  --toolkit-zip /tmp/z8-toolkit/NikonFirmwarePatch-v71.7-r7-toolkit.zip \
+  --output /tmp/z8-app
+```
+
 ---
 
 ## `V71.7-r7` 验证回执与常见注意事项
@@ -192,6 +222,7 @@ python -B research/z8-live/from-stock/build.py \
 | **ARM64 / Unicorn 套件（6 套）** | **全通过** | Suite #5 FontCJK（3,755/3,755 简繁 + ops 13..16）、Suite #14 Layer0（63 项）、XM6 Bridge（124 项，0 违规调用）、Suite #4 FilmSim（70 项）、Suite #2 HangFix、5-WLM 0 缺字审计。 |
 | **Whole-Guest QEMU `#19-r7`** | **14/14 PASS** | 纯净 Fenestra 7 行 + 5 插件 + XM6 自检/持久化/回退（`z8_unk = 0`、`panic = 0`）。 |
 | **Whole-Guest QEMU `#20-r7`** | **13/13 PASS** | Row 47 流式 `.cube` LUT + Layer 0 528 KiB 预烘焙 LUT + Still + Movie 挂起 `0 B` + 重启恢复/清除（`z8_unk = 0`、`panic = 0`）。 |
+| **NFP `v0.5.1` 兼容 CLI + macOS App（`v71.7-r7`）** | **17/17 PASS** | `validate_gui_catalog` + `sync_strings` + `Z8 Patch Builder.app --self-test` 全过；上游 15 组合 App↔CLI 逐字节一致、`live-filmsim`（含 `FENESTRA/`）逐字节一致、源码编译一致与 4 项负控全过。 |
 | **实体 Nikon Z8 真机验收** | **`physical_camera_verified = false`** | `V71.1–V71.6` 真机实测与 USB 取证驱动了 `r7` 四项根修；**`V71.7-r7`（`362ee2a5`）待真机刷入后复测 EVF/背屏帧率、XM6 回退率与实拍 Live `.MOV` 后半段帧率**。 |
 
 1. **严禁把裸 `.main` 当升级包刷机**：`z8-core.main`、`v36.main` 等为未封装镜像，仅完整封装校验后的 `Z_8_0406.bin` 才是相机升级格式。

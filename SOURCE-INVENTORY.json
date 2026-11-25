@@ -33,23 +33,23 @@
     },
     {
       "path": "NOTICE",
-      "bytes": 1789,
-      "sha256": "acd9aceafbc35657ea292cf39d3281a572086da49e470ae85d5cdceba07b19f2"
+      "bytes": 2000,
+      "sha256": "69f0e5737d457c42e87012d886436be4ac332cfdd27ca4a680781ef32c876bee"
     },
     {
       "path": "PUBLICATION.json",
-      "bytes": 1274,
-      "sha256": "231f841eb01f986d49fcdda5c3f833d298afacd0467ba3124e53fdbad795416d"
+      "bytes": 1799,
+      "sha256": "f31c56393f244ef3ea789f200ea1503d7d9ab244c1ab3763eb75764aeada90b7"
     },
     {
       "path": "README.md",
-      "bytes": 25084,
-      "sha256": "3da101bb26681363e5618d8b3106e76893245c2b978ec2df1fcef016eb144efa"
+      "bytes": 28434,
+      "sha256": "84e66ff63a650abb6161fe7889599c7bb05851493866a0aac7adf49b34e92231"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 22124,
-      "sha256": "b03e1686e148e5445de4f3ece47caf37ff9762320608c75cae32f2686655b034"
+      "bytes": 25379,
+      "sha256": "9579dc50d6096e259cc85a25b3c540ee030d734aaf2f1dca301db608344e6e9a"
     },
     {
       "path": "docs/api-reference.md",
@@ -52580,6 +52580,1691 @@
       "path": "research/z8-live/from-stock/third-party/README.md",
       "bytes": 1505,
       "sha256": "44daf471918252cd3fbcb1a14fa64c26dc6cfd62a6d2c69cf57e2ed3d13f6684"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/.githooks/pre-commit",
+      "bytes": 66,
+      "sha256": "a8c7702b9e824358f0923a6842fcec7d02da7422d4ea43cc82cc251f7970e767"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/.github/workflows/host-checks.yml",
+      "bytes": 7017,
+      "sha256": "4f500bdd625ce3ca787d8825a91732ab05291ff845b771255add94ec1f35b09f"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/CHANGELOG.md",
+      "bytes": 17927,
+      "sha256": "7e562342c7644dd0d46825d85387303dc3bd662e8ce86a7efb1b66da671d96a6"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/NOTICE.md",
+      "bytes": 6362,
+      "sha256": "70bb659f267acf367d97e7fdeb2a1b44c62e603f085f0af42644da8e65f8d0d0"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/README.md",
+      "bytes": 24422,
+      "sha256": "33717bf11eb596e0534b04fc033b51349ff688dc94888bbef5789f2dd5c217d0"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/anamorphic.md",
+      "bytes": 1675,
+      "sha256": "bae80a75d4a1297681ae4fb11e7f05e248b76ae5b6e3a53e1df294ec8e19c6a8"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/data/README.md",
+      "bytes": 3225,
+      "sha256": "e115266dfdbc99f1a09787c9c3a2604fa4561ca3fe497b7a9814418a510bd5a5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/data/adobe-z8-matrix.json",
+      "bytes": 1871,
+      "sha256": "be3234b54716760ff7c30b11a8d934f50b2e07fb9ca1e1c83c15ec02dd496822"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/data/cie-1931.json",
+      "bytes": 17766,
+      "sha256": "893d7a577b0a9fd08094c594feb93c46be015dce168766c72ac36cd65786ffdf"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/data/log-camera.json",
+      "bytes": 147859,
+      "sha256": "e9a8827168172e15b4e3cd47aa4d89730a8a6207ac563969e1a12df39c091a1d"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/data/log-colour-measured-20261105.json",
+      "bytes": 200810,
+      "sha256": "e017e12ead5962069fc2ef97b81a5d39becec26138b89cbc9fa75662657cb60a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/data/log-colour-measured-summary.json",
+      "bytes": 72379,
+      "sha256": "6756d8e16b8fd411de4da00b3220994ca96d2b0cf94f674f369dd2369235d533"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/data/log-colour-samples.json",
+      "bytes": 75005,
+      "sha256": "14ae962d4236fdf61ecd3a5e34dd621ebe17f875873e356484c0b12348800ac5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/data/log-colour-summary.json",
+      "bytes": 1125,
+      "sha256": "3fe4ad87dc20b6437c52daa5c201c9e9b1ced1c1eacdae15bf8d9b2e2fad2bc0"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/data/log-controls.json",
+      "bytes": 93479,
+      "sha256": "dc46e47beb3785af0b856c30bb216b5751458df08f077f2648062fa531182504"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/data/log-response-summary.json",
+      "bytes": 11491,
+      "sha256": "fdf0aa3a1eec39497516dd52ae53ef1bab4e3d94c78da4130a7776a1f7b799e7"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/feature-groups.md",
+      "bytes": 4474,
+      "sha256": "97b52e5dbb448849df85ddd566842f4e9e229a23feca1b0242c999366972c04a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/h265.md",
+      "bytes": 2032,
+      "sha256": "af2e302982e2ca7a63ddbed348e7e3e28acb0c369dc40d9d96562fd46ee1dae1"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/desqueeze-options.png",
+      "bytes": 70796,
+      "sha256": "8abfb0992fa8a0022db0cd6d14100964bd61b9ba270e706f3e4e44a5acfe72a7"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/h265-bitrate.png",
+      "bytes": 96255,
+      "sha256": "4f8660f2ec65afa4c21c2e0774c8d1a4841777698f0593a052a6232c13fbd8a1"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/image-area-crops.png",
+      "bytes": 112330,
+      "sha256": "019d11a0479ae9089b893e712440802a6a61a264adced3fd4e14b9864aebb852"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-camera-de-cdf-zh.png",
+      "bytes": 97889,
+      "sha256": "b2e7178d40b202a665658e52840d5bd1576c8a922f3b55dd3281ecc8c2a5c5a9"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-camera-de-cdf.png",
+      "bytes": 87970,
+      "sha256": "087b28a79abcb75191a0fa7a56fe2570454e3d92095344efc461eef35fdbd46b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-camera-xy-log3g10-zh.png",
+      "bytes": 54739,
+      "sha256": "b2c339f567dc287755010c10aa6658dda333bf8b1f67ba83372f3e62681d5a97"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-camera-xy-log3g10.png",
+      "bytes": 50834,
+      "sha256": "22e6d81a15bfd6bd26d7b8813813d68c694e88cff1626ba31fa49a798f93011a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-camera-xy-slog3-zh.png",
+      "bytes": 56663,
+      "sha256": "a3890824e360950194272c684ac5adcce1bae52e7834433cdb4410aa46d804be"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-camera-xy-slog3.png",
+      "bytes": 52665,
+      "sha256": "4445d70ce999907f81216557933d6fa9356ed818bc8d7063bb76bfaf6b33365b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-camera-xy-zh.png",
+      "bytes": 87609,
+      "sha256": "077a5941a143cd8de438c9489cfa208f98596d461f6f38d37619518e647fdca7"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-camera-xy.png",
+      "bytes": 85705,
+      "sha256": "80fc266cba533d987ad27d0ec46d634ed8b5c5c3bf6bcd8f97603d0737545802"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-colour-spaces-zh.png",
+      "bytes": 209282,
+      "sha256": "111be6a7c94d893d02924f4b58955f4f0649dde09501d92660ab30b408afb280"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-colour-spaces.png",
+      "bytes": 191216,
+      "sha256": "bbec4047de61a5f5e94f6e07bb18f3a02bd1a00ae546b0384edb13da29bc951b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-control-errors-zh.png",
+      "bytes": 72326,
+      "sha256": "7adddce504f45e086950c42d04d22d48bf3f39e813c4274be690b261aa463676"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-control-errors.png",
+      "bytes": 59101,
+      "sha256": "3f3d36771201b1ed21cfb2a868fa0e8fa5298e5fbace5caa0790be8932a7728c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-control-xy-log3g10-zh.png",
+      "bytes": 189270,
+      "sha256": "0d9f263c4c016f4e383e9a7c1b457ab6a31adeafdc9b4b84acb543160eab8761"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-control-xy-log3g10.png",
+      "bytes": 178024,
+      "sha256": "b8dce058c54d7341c5b1fcf27f4e43d1b6fcb848b878a90e49323cccbe9b341f"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-control-xy-slog3-zh.png",
+      "bytes": 190586,
+      "sha256": "df2c56a79b73a7bffa35917d93b67ff6242feee47d9653b6cfcb078021517756"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-control-xy-slog3.png",
+      "bytes": 179260,
+      "sha256": "97357345ce64d0528b25501b0996eecbe294e6684e58b21373e7b139072ae4fc"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-control-xy-zh.png",
+      "bytes": 198514,
+      "sha256": "ea41b4d5ea933058345fedded5e2bdc710e531abf1cb630c470517ccfd5bc5cf"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-control-xy.png",
+      "bytes": 186061,
+      "sha256": "dd671525a4ac663451806b50d288d2729a7d7a13bdde20ec410198d0647e35b7"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-measured-chromaticity-zh.png",
+      "bytes": 295916,
+      "sha256": "6191afc34eb78073191dbb93733948b4ca9862c4db0d0f353f3a4e2b8aa87eff"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-measured-chromaticity.png",
+      "bytes": 284166,
+      "sha256": "2336e063ff66c5f47e59e0431e389b2aa86100edc60c0e1f5d790cc4775e1729"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-measured-conditions-zh.png",
+      "bytes": 180231,
+      "sha256": "98bf6700898ec3ea5156399b313ceec6c35b54c8860a598ab41cdc16ca06d19c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-measured-conditions.png",
+      "bytes": 166772,
+      "sha256": "94340ed427ffe737d7deaa646b1fdb76803e8bfe1ed78264672d83f1014b09eb"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-measured-distribution-zh.png",
+      "bytes": 166213,
+      "sha256": "7026b57bf29028efee9af23742efc3420369f83e52a6998d25fd2c1febc41325"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-measured-distribution.png",
+      "bytes": 146300,
+      "sha256": "8eb618e90786fe669e645efac8da262c44021b516262df5fcf4bb8e6708c16f5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-rwg-conditions-zh.png",
+      "bytes": 103784,
+      "sha256": "e23228d8f9c086f3fce940db227c8f7995ffec71fb37c425d04e3ce2eeaecb0b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-rwg-conditions.png",
+      "bytes": 97320,
+      "sha256": "aac9f02e8acb4d902851a1ebe2ddbc9496ab8b59b31a22d5c388d0bd744bdec2"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-rwg-prediction-zh.png",
+      "bytes": 188971,
+      "sha256": "28dee826f7003bd3b4f629dd3e002eec2abc052bf22f738abb75c09b262f1bd0"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-rwg-prediction.png",
+      "bytes": 172590,
+      "sha256": "1c525e499a1fdb7a1a4db5a1b0d5e6a61022ecdef61cec888eccab3e3267c70f"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-settings.png",
+      "bytes": 81277,
+      "sha256": "e7a8ce621bbe7bc277319fa9e62687bb456171b2cc5f54ec109b25f5886ef872"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-slog3-chromaticity-zh.png",
+      "bytes": 174865,
+      "sha256": "fc0cf46d46fc0ff0c462e9beaab122e089fd5c2f66420f6ceb5a23ed6ce94fe8"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-slog3-chromaticity.png",
+      "bytes": 165082,
+      "sha256": "319f4c35d0888155a96112f15757e930bad0abbc5258fd1cd8bc99eab44f42d9"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-slog3-errors-zh.png",
+      "bytes": 126444,
+      "sha256": "b333f246e96d5141383a95ac050a4a5a240418d3b01e1fd010a84a068ec62d89"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-slog3-errors.png",
+      "bytes": 124747,
+      "sha256": "2be0ecd37db7c7b92ccdd484c7383103a1337f254724e871e833d6dc8efd6673"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-slog3-revised-codes-zh.png",
+      "bytes": 160353,
+      "sha256": "680238cc2fbef33566643eb6629f2189df511d81feccfe016a3ce70d3670480c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/log-slog3-revised-codes.png",
+      "bytes": 145447,
+      "sha256": "03af95e790a4df1d481e220df01e67f650ee10341cea5217dbdfbca2acdff3e9"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/macos-app-main-en.png",
+      "bytes": 447746,
+      "sha256": "56df9bf38ae39c2d78742d4f2b868d8656dd6f433765b4f617676af06f13df15"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/macos-app-main-zh.png",
+      "bytes": 434074,
+      "sha256": "36d42009eb9ac2a8d27ede89a20829fb0f8b0ce186d8a8e7df2683c70d84f504"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/macos-app-result-en.png",
+      "bytes": 148140,
+      "sha256": "6d1d821b5d0bafc8662f55ac70b022e8537dda0973e21f3523cfa05227dbe8fd"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/macos-app-result-zh.png",
+      "bytes": 152630,
+      "sha256": "211bea147292142a4a29dd0d2cb47f43f44df90951b2600384b00ad2902a1596"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/macos-app-risk-en.png",
+      "bytes": 244592,
+      "sha256": "b8ffd92748d602147d1c2b3c2341c850724fe0b64914c263052e4ed2129f3e17"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/macos-app-risk-zh.png",
+      "bytes": 222814,
+      "sha256": "caebe9b54b5deae9cbc1302384358a56f3cb1969725d70377143f89a7218313a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/macos-app-settings-en.png",
+      "bytes": 181647,
+      "sha256": "57e9f96b86fbbefbf594de6ba91237ac9ca1a54585b675781a08d16bbf8b0ebb"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/macos-app-settings-zh.png",
+      "bytes": 181627,
+      "sha256": "102ea74188749363ab1d1683a2857d91fbcf6d5596d1472de4643df46df4bba7"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/nraw-quality-tiers.png",
+      "bytes": 63414,
+      "sha256": "b1b910b49ec735dc0bf31f8c0e3219652b15258c57bea89be031cf22ef9d5952"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/opengate-frame-rates.png",
+      "bytes": 159412,
+      "sha256": "2caca19a8ca17ad9818caa33d9e9d95c5688c5251a21d468937e6fb7b764bfad"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/photo-menu-values.png",
+      "bytes": 123436,
+      "sha256": "379eee71e7356b67fbcd175b504697539003670e58be96d683a8dcfe1112ce70"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/pixelshift-groups.png",
+      "bytes": 132704,
+      "sha256": "94bcc1ca4f615eff9d4a145a2b7c3c9560f7c278e2016c77b5d527840a53eea4"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/prores-quality-options.png",
+      "bytes": 81077,
+      "sha256": "e4fdd6f975eecfde03f2730cc55f7071cb1b03a48644fc492f06edf127af8367"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/prores-quality-value.png",
+      "bytes": 144525,
+      "sha256": "f51d83239f3fdb4b32faf899111d54492d8307363ffcb91d8bf9134a0c12b9e6"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/sdr-heif-format.png",
+      "bytes": 42196,
+      "sha256": "65917cdcdd8f640cf930f2c33e4e781aab8da64cd3448a956daac9bd399b8429"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/tone-mode-heif.png",
+      "bytes": 65644,
+      "sha256": "3198e3c4fd9f9670c22dcf32b0e3e6947222e7dfb2f7a2fcac298f84b539edba"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/video-file-type-nraw32.png",
+      "bytes": 160578,
+      "sha256": "cdfedd960ec0985c6d705661b9c33a3aa70a4d669d4e56c909c0d59c1b768be5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/images/video-menu-values.png",
+      "bytes": 145361,
+      "sha256": "00da524f1e9b45b134a030bab5f6e12598a224e0e9c9d1660c69283309c5d1b7"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/known-issues.md",
+      "bytes": 17152,
+      "sha256": "25c94f0bc3a42ca52edbfa9162dd7d2fa1e182bcdf1b19c48f285c7341e9e9f4"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/live-filmsim.md",
+      "bytes": 3915,
+      "sha256": "16d9eb87705571705e27da2f87c7c8008b1d8633bec223104087b9afe74280bb"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/log-colour-report.en.md",
+      "bytes": 19908,
+      "sha256": "199a193b02e76ac9c28971bc6e7edec935b4330dbd9f44b4d41a87d28e100cfa"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/log-colour-report.md",
+      "bytes": 17810,
+      "sha256": "b961f200b7accb457fa5fb332d0967db0983eb92200d712544556ef851d0772d"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/log-colour.md",
+      "bytes": 15994,
+      "sha256": "0a3465bc293655f9f005b50acbe5e19346b4820dde9e1d22c3632fd8606c4ea2"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/macos-app.md",
+      "bytes": 11896,
+      "sha256": "67bba828d0f1c04cbbd2f6df1bc2c842a6303be357e35a0c887b83f27fecbaab"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/opengate-nraw.md",
+      "bytes": 8821,
+      "sha256": "af05b953bdf426761c06a4ceb7b457512f8d210c530ee9ec50bdde438f6b9b27"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/photo-crop.md",
+      "bytes": 5197,
+      "sha256": "5f6c22726d3d82f2747f8cf3bda0819cd1861d038e58df9497581c30aa887a65"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/pixelshift.md",
+      "bytes": 5160,
+      "sha256": "6f3ea57d1acb8014d13f17f5acee68fdf74896858f9b3db03ca7837830bfedd5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/prores.md",
+      "bytes": 2355,
+      "sha256": "3902f5af379057490af30b1d1215b4c60571a2222a53076b8b1d5f496f6ac0e1"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/raw-precapture.md",
+      "bytes": 7798,
+      "sha256": "7b778f57e558c0f64aba309e43cda0722f7ad93edfa6ef7c3c137d438a94510f"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/releases.md",
+      "bytes": 7206,
+      "sha256": "d11c8a96253e0d7b7be4b8aebfa256a1033ef2c705af89572516db332046f5f4"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/sdr-heif.md",
+      "bytes": 9338,
+      "sha256": "e2a31d698c869ccd6162d1eb82651a92375e0b12fa2e69ee734e8ee477711770"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/stop-file.md",
+      "bytes": 12697,
+      "sha256": "a0a6aec1bbe5c48cb0db3bf0a05ad0f19769158b08cdd414f0f59e7ef3f9b568"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/validation-summary.json",
+      "bytes": 6320,
+      "sha256": "d99ab8319acd30873f1db48b5f6bf709159103b8fd22e364d57666dc5fec83a6"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/validation-v0.2.0.md",
+      "bytes": 2189,
+      "sha256": "3c9defbdfd2730ea4e17af82175a6a590559caf3f00efbe6b76ef179afd8bfa1"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/validation-v0.3.1.json",
+      "bytes": 4482,
+      "sha256": "f97b97c5b1382107908327ad2d9c271bfc66d24757a5af4254e01d746d9b0ed1"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/validation-v0.3.1.md",
+      "bytes": 8361,
+      "sha256": "0348dbc33d0e3abfe42152423ab954cdc04791cb45c75311108fca8bc10be1db"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/validation-v0.4.0.json",
+      "bytes": 3531,
+      "sha256": "73e9adc790b449a8a8938ba5a6d4bffe4e184ad53a51f35842f52ba06cab2409"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/validation-v0.4.0.md",
+      "bytes": 4003,
+      "sha256": "3b2f11494706c02b0b7331b2095e4853640e51184dcf83f2d98edfb8975c8c94"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/docs/validation.md",
+      "bytes": 16060,
+      "sha256": "4f2eb82859c6cad20639148b4bad48c5cb20625fc89795d8623d6861e5c364fa"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/features.py",
+      "bytes": 11334,
+      "sha256": "bdbbd115f4027d008beeff81b06492f37694ec993cae8cde5268716e0a394e56"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/luts/README.md",
+      "bytes": 6564,
+      "sha256": "6fc5669541397b8c7ab854374222e3969fc5905e9db92ead3a47817baec00f0d"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/luts/RWG_Log3G10_F_v1_65.cube",
+      "bytes": 7415148,
+      "sha256": "2862a0c6ee17f73d9e83fcee04a706413742b00d53bc538d224a6a70bb3f93da"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/luts/RWG_Log3G10_F_v1_65.json",
+      "bytes": 872,
+      "sha256": "b654ae52148fd25c5c1dd2ff6248296cf9881df94f5974f48121deff5fb867a2"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/luts/verification.json",
+      "bytes": 1391,
+      "sha256": "6d7934d6bbc817728df23d08b8484182fdd88557f0a369a18ae9aa6550434fb2"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Package.swift",
+      "bytes": 543,
+      "sha256": "ffa124d757ade93d4b4914b65cf89bdd5b24ffa8cf8057ad97c3dd3b85eb732d"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/README.md",
+      "bytes": 9486,
+      "sha256": "5b15f5d5f894b48975fd58e62b018fd2580796376b596abc3418aaac092d7fbe"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Resources/Localizable.xcstrings",
+      "bytes": 83410,
+      "sha256": "bf79b8b643e4d9e15030efa72c0c6159d8a016e474f3e69717d88d39182df033"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Resources/Python.entitlements",
+      "bytes": 322,
+      "sha256": "9212763e46dad0105b9e13c58c45cddb9103629d20db6ca98f784453d87b86df"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Resources/Z8PatchBuilder.entitlements",
+      "bytes": 377,
+      "sha256": "65eeaebc3a4a7150fafdb5ac8a558719762451ad0c7ff9ff74ca8ff943906cd1"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Resources/en.lproj/InfoPlist.strings",
+      "bytes": 151,
+      "sha256": "77d44a9d68501721fd3daf7e3d7d68eadd3c0c618e65026a107cd4996d6543ea"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Resources/zh-Hans.lproj/InfoPlist.strings",
+      "bytes": 151,
+      "sha256": "f30ece37153a31f0cd77fbdfeb4fd52f86bdd0741b3b604c138f2fe87d4fd6f5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Resources/zh-Hant.lproj/InfoPlist.strings",
+      "bytes": 157,
+      "sha256": "203c4b598dbcc48af17a714a75c0658ffbfcca1d32c1666d291bee6dfecbf213"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/About.swift",
+      "bytes": 3682,
+      "sha256": "ab9582b26e2ef7367b8827a0ab5817a3265c967a8e9998a4180367223d67c757"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/App.swift",
+      "bytes": 5796,
+      "sha256": "13e3befa5bc558a4969dc39ec95575373a88c97d68216b855c3a5f80ce0de5ba"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/Catalog.swift",
+      "bytes": 5873,
+      "sha256": "7327a2efdd39d0a99b7a19708829f4c103615bae18da69b9372ed7e02487c65c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/GuidePlayer.swift",
+      "bytes": 7781,
+      "sha256": "ef55bbf84a6b55bd1a5de1c1d08e41e1a652a8ad6f3a5ce575ddf965fefb5f52"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/GuideScenes.swift",
+      "bytes": 47855,
+      "sha256": "fd1baa3c80563afb9c18ffb51862ff9d98cd0ec16aa145b28eff92b6b92a1889"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/InspectorView.swift",
+      "bytes": 6548,
+      "sha256": "5c98530c77f2322f2ac11a6485b21404a71981a4f3c9f5c193cbd73b95fbb3d5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/Lang.swift",
+      "bytes": 8012,
+      "sha256": "ba9c42edbcc11db53f5b3ead6ed8aa3d4a58ad152cc91c86e9506380d089e108"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/MainView.swift",
+      "bytes": 33636,
+      "sha256": "7c807166897b2db89873f966173607be85bc1e070467b48c1301218b63eb0e16"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/Model.swift",
+      "bytes": 16968,
+      "sha256": "9ad2d2bdf4a810d70aa76210aa8688f985cd3d50e30c5d4265b7d525636baa9a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/Runner.swift",
+      "bytes": 17318,
+      "sha256": "cf6d96929c89ded5c556b8325673028cc9c333c6a0cef6ca1ae119878524a5e5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/SelfTest.swift",
+      "bytes": 4005,
+      "sha256": "0ad6ab895ca84eadfe217db70d26eddc2857f9148fa41580bb7eb334c59cd2e6"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/SettingsView.swift",
+      "bytes": 4855,
+      "sha256": "6f0fee01bceb077ef0002c2cf11adc17885000a053bcd5c784c47a47f8eb2f6e"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/Sheets.swift",
+      "bytes": 19240,
+      "sha256": "763409102ac2c0354aaad6320690f1278776e69e3ae46edec6bd4d1b5d7c29bb"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/Snapshotter.swift",
+      "bytes": 27422,
+      "sha256": "bfe96099fa670b473625173b31ddc62635a9d7276ae1e22e2ddc32f3d073f3d6"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Sources/Z8PatchBuilder/Toolkit.swift",
+      "bytes": 6715,
+      "sha256": "2763915104439d9f67764c04f17283b6f1491709018a1897f39e25be97e2ed31"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Tests/Z8PatchBuilderTests/BuildIntegrationTests.swift",
+      "bytes": 13978,
+      "sha256": "f72159bb9d6b306bc9a579ec83ecd4319b992221025d12692463fd433ef22224"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/Tests/Z8PatchBuilderTests/UnitTests.swift",
+      "bytes": 12364,
+      "sha256": "069d0ea79b9a82f3a51cf6866c6aa8b8583c5e3c04e26f73bed8dd4c4f9dbe84"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/runtime.json",
+      "bytes": 4623,
+      "sha256": "bf6ecc9dc1977ff94ff27cfc0a8128f027370efa08e19f9e8294bdc3e5f4333a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/scripts/build_app.py",
+      "bytes": 20823,
+      "sha256": "d97a51614854905c6dbf1914bc1d49c0b50fac87120a9117196d652d375c73cb"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/scripts/make_dmg_background.swift",
+      "bytes": 10494,
+      "sha256": "ad95c2666ee80644f8ed9f1b9e25f1e8ca11ea335e73ec6096ebf0c1af7fef6f"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/scripts/make_icon.swift",
+      "bytes": 4504,
+      "sha256": "2973ba0d984b090122699d00f6fe04600b0272643bcee6deebb72d887ed4ef1e"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/macos/scripts/sync_strings.py",
+      "bytes": 2538,
+      "sha256": "b5694146f81aa3cbb346592039044dfad1421d984fa998abc7f0549bb77c0ca9"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/patch.py",
+      "bytes": 8365,
+      "sha256": "47d077e9f0d099d909a4958d36ead21862720614b512f999f01185753ac8b3f1"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/requirements.txt",
+      "bytes": 16,
+      "sha256": "6b8a703c0a562d2b528575457d1b76ae5decc8d4d53093ba6515a32137098d1b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/resources/combinations.json",
+      "bytes": 524049,
+      "sha256": "43afb8ec95b202faa0ec0b7f44f235a762cd4bf7ed482e7040c6b32cf592aeaf"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/resources/compiled.json",
+      "bytes": 82590,
+      "sha256": "b25fb25e0486215966ca7229e66e40d0d1af3e9b9eb37328c8b9bc9271d9c775"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/resources/gui-catalog.json",
+      "bytes": 53458,
+      "sha256": "0b9a6098e3951a7f9a0e0380eb381767f06bc010ae30d915ecf5df04d6b9e134"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/resources/input.json",
+      "bytes": 138,
+      "sha256": "d100e8f0f8d2ceddc3ea38f2298aac30143d19514a4c571b63eedbb887cb00be"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/resources/precapture.json",
+      "bytes": 32642,
+      "sha256": "c110c43cdf76eb12449b9586e06f6ebb574bc436c289883a7648d6f594ad74e8"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/resources/profile.json",
+      "bytes": 53865,
+      "sha256": "5c82bd900476b7b65f829a72bdf4475d690f9aba991135de423f39cab540b27a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tests/test_compiled_paths.py",
+      "bytes": 9771,
+      "sha256": "3caafcf0a241a590e2be8935d03fcee69966d93c3668c654f7325e569dfd07e5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tests/validate.py",
+      "bytes": 179,
+      "sha256": "0997620f62c058846bc24a3bd0bf4f723672551f5a9daa79ee3f5fe5f953f042"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tests/validate_combinations.py",
+      "bytes": 6986,
+      "sha256": "3b65f72e030dcc10701a992421929f7a3a237d8a38816af34699d96377d03e09"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tests/validate_distribution.py",
+      "bytes": 6382,
+      "sha256": "515fde6bda5d7d585d2b9d0a8e54d56558dbb80402bd69de7c48bd15a7e3f6e7"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tests/validate_f_lut.py",
+      "bytes": 5217,
+      "sha256": "1bb8fc910876360dad395f2755d70eee10d46c2630499a1b472777e4b9241cf2"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tests/validate_features.py",
+      "bytes": 179,
+      "sha256": "0997620f62c058846bc24a3bd0bf4f723672551f5a9daa79ee3f5fe5f953f042"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tests/validate_gui_catalog.py",
+      "bytes": 7065,
+      "sha256": "b2a8fc07c9b822f4002b4dcba084623b96398c2970da7641a0452e1599887d35"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tests/validate_prebuilt_cli.py",
+      "bytes": 4719,
+      "sha256": "de18157e4812d5b78cb4d052e8663d649ef6d54cdcb549dc629c2ad8b4d76e92"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tools/build_f_lut.py",
+      "bytes": 3741,
+      "sha256": "cc855da11d43babb7da09ab66acc13f9633d954f10dd29d6abc800f18ce60421"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tools/build_release.py",
+      "bytes": 3492,
+      "sha256": "c2d617508e592ca486425b6aa4a70a5d6f1396712649775854968e24ee64a7f8"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tools/check_release.py",
+      "bytes": 18508,
+      "sha256": "d3aa347f2e326e2334e269f9eabf6eee73ae56650b69c38d89fcb98db2d30048"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tools/check_repository.py",
+      "bytes": 11395,
+      "sha256": "e6e09dfc28d1a37b735ef0eb15c6cb5f76ce91672cdf8d2f8352848a9f698036"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tools/compile_units.py",
+      "bytes": 1151,
+      "sha256": "73c06d41fa615776dceb6bac4bb7f89935761a38dd145ac49da823795c9b4be1"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tools/plot_colour_report.py",
+      "bytes": 24047,
+      "sha256": "477cf6a398aeb8d852f04e7afb6757b62c45b4f384244a5a93b77d894c758cad"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tools/plot_colour_revision.py",
+      "bytes": 18718,
+      "sha256": "0615b10aa6f018d77489f53b1f5add6247bae970d0c3c4e026951823fbb4f1d7"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tools/plot_log_response.py",
+      "bytes": 9994,
+      "sha256": "4b1a1852592d85de3c85eab714aa571ed2ec4eef920cc27467d4f0f9d8e28654"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tools/replay_log_controls.py",
+      "bytes": 3122,
+      "sha256": "fc3ed37831d41df88fa2ea5c8a1b65be2db2b3a0f7c6673984cce893431b1fac"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/tools/review_recipes.py",
+      "bytes": 2094,
+      "sha256": "fe9ac59f069dbb6b568595e55997652348a2c15f0b1c7a3f922e6fa7c51dfbda"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/verify.py",
+      "bytes": 9542,
+      "sha256": "2fb9d5a740be78deab26222463a1797c565628068d606117cfd9d45203191bc3"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8anamorphic/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8anamorphic/patcher.py",
+      "bytes": 11701,
+      "sha256": "685b6d0c848f3cc147f7f302ca2147daf4f7972de2f135588681aa9ace3aaa3b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8anamorphic/src/hooks.S",
+      "bytes": 33948,
+      "sha256": "1ae64b5cd6a4789682219a5d2c7168ee90c0a8ee7d712c1c3e075b3e6d9609b3"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/__init__.py",
+      "bytes": 51,
+      "sha256": "e47074ecfb839d1c53c43e1882e50e9c651d64fc4531fa44374b405f13af000e"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/alloc.json",
+      "bytes": 178,
+      "sha256": "7840e667e53d359145608844ec96162c14c2a4a02efed14b4b6a30d86f9d4009"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/blocks.py",
+      "bytes": 3199,
+      "sha256": "6465c888f30fccc1d44674756efa9cf2c689070bd3e981c0d5fbbd9d3e82b2e1"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/class_clamps.py",
+      "bytes": 1237,
+      "sha256": "0f408e704226e0a16b27e802bf0c2cb78704904b958c8d56fd677a35b2803772"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/design-sizes.json",
+      "bytes": 5254,
+      "sha256": "c9c9e400405f71dbceb3ebd1db4ab434a6886328e36f973d7f1435c0c0de7b8b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/display.py",
+      "bytes": 2865,
+      "sha256": "26d11d2f5875270e2912165e664c90f1c10b84e16747b76c37d22acfc4cdc6b6"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/focus_bounds.py",
+      "bytes": 13817,
+      "sha256": "1b99084f49327b472e9a2d6a37f69a3c851c3118f1983a55b1dc9efc96236028"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/focus_grid.py",
+      "bytes": 2466,
+      "sha256": "fd12ac0ddb10135a4e4978b1a20f32a19c481368d3c7b5f5b0f8021ccb9ae5ab"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/focus_icons.py",
+      "bytes": 16215,
+      "sha256": "ada34bbff9ed0428a1d4acc0b39561188bd95b7a170bd4457b2783587739979c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/formula/hooks.S",
+      "bytes": 1400,
+      "sha256": "3d1598f6f9bd5ee5a05c87fbe55b9cd101772d930a79426385ed8d756faf6e5c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/geometry.py",
+      "bytes": 10651,
+      "sha256": "675506896effde8b40b60b088d0d34ae40606938adcb5c6021f4e9f56f0d1afd"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/grid.py",
+      "bytes": 3374,
+      "sha256": "c30b07296229e0ee607719b5a499542fba9ae1fb57ec2c5ab3266d738b509b44"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/0-7100_menu_36x36_2.39x1.png",
+      "bytes": 357,
+      "sha256": "33296590a5157da86376c39409657d72a2f74144c32b3ca6903617645dd4880b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/1-7101_menu_36x36_XPan.png",
+      "bytes": 325,
+      "sha256": "9e36e67defa046980fbfc248c792fe459f2924cf8bd0ae85b4902f657ac2ee39"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/2-7102_lv_36x32_2.39x1.png",
+      "bytes": 356,
+      "sha256": "3baf201fb5b17a2564eedcf1272f8baccd6197e42a0536db0c7a5d92ef9bc66f"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/3-7103_lv_36x32_XPan.png",
+      "bytes": 319,
+      "sha256": "562b38fcc18a0648beaa60f2caf8966867a863eb8f4bf2203724c5a720a98b1d"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/4-7104_pb_28x28_2.39x1.png",
+      "bytes": 238,
+      "sha256": "e4e47c156303d810bb6159e117a1b24e3e02eddbbcfb0fc5a97c0380ee735349"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/5-7105_pb_28x28_XPan.png",
+      "bytes": 243,
+      "sha256": "a18f0fcf64bec7db3388088d0d3aff75c681983d6539305b12012a39097b1197"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/icon-43.json",
+      "bytes": 838,
+      "sha256": "29817b2c16162a402252ec0964d98e807d4bacc1e8d7ab6e7d9badbe30029445"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/new/059f_43.png",
+      "bytes": 183,
+      "sha256": "4288d65a1b9db86f12c7d677119cba3e55da403d13eed985a6bcc46d69970fa0"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/new/05a0_43.png",
+      "bytes": 180,
+      "sha256": "73939f1f76968ba3f9670b8987979ae62ae469738ea70a5db2fb70f85d37f0d7"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/new/084a_43.png",
+      "bytes": 287,
+      "sha256": "a9748f629167f00afb379b5582564e720ed12649a45dab6fb16bbd00dfa227b5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/new/0d22_43.png",
+      "bytes": 295,
+      "sha256": "6dae2ae6fcf93cd44b75cd23e499d1f3b7d1076a424cc023c64c10319d7aa97e"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/new/13c8_43.png",
+      "bytes": 229,
+      "sha256": "fd23ddc862236d7f37209e8cca57947a6692e7c8677e3de32644b8b14890a5bf"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons/wide.json",
+      "bytes": 1702,
+      "sha256": "76b2b1f0a1d170f4e82bf61ac360ca196fe00643be910a7f1a85e8c9f90441fd"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/icons_wide.py",
+      "bytes": 15055,
+      "sha256": "28549090e1f9fed428c37c46b23f1e186468661d618c4816c760ed5793e169f5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/layout.py",
+      "bytes": 220,
+      "sha256": "ab3e49ca71c360e2e52f7ba0b81fe77ecee76f14ea9ee2f0dc793778ae557bf6"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/live_view.py",
+      "bytes": 4210,
+      "sha256": "441c85939c12d5885531f3d5c0fa40750c93a75bdb2980f285f532aa77ef597f"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/menu.py",
+      "bytes": 13584,
+      "sha256": "a7702f62ee6b37610c15f66653d3adc005a3854b750e213ea0d6380006cbd414"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/patcher.py",
+      "bytes": 5855,
+      "sha256": "1b540846a090f958365329d3cfc17e561c6b6f07b38cd4fe30fde28fe353c5c2"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/playback.py",
+      "bytes": 8019,
+      "sha256": "54855dbdc9ccf3970b46a87f406393cd9c325c410da0e0bdabea5635a9f986b0"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/playback_wide.py",
+      "bytes": 12219,
+      "sha256": "4660b2b7a1572c92829ce5bfb7c47db97ce987bcc869ce4b512ded3d7328158b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/quick/hooks.S",
+      "bytes": 8634,
+      "sha256": "bb794e3c9f9e4085acb02178cd4ae920ea85fd4e144b00dc8acc60c6787aeff2"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/quick_picker.py",
+      "bytes": 8370,
+      "sha256": "ce9c9607776e64c6a35134e9122846eaf7cabe65cee259680a716b3441df0a4c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/raw_size.py",
+      "bytes": 1547,
+      "sha256": "b48607159d357095889589fb5c0e29a630bc1cf297fbfd9c79ef1a50391026c6"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/sizes/hooks.S",
+      "bytes": 2144,
+      "sha256": "74feddf1821f51f673005de51a4e438564b04a16905137d3f16f8700137c466c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/thumbnail.py",
+      "bytes": 1164,
+      "sha256": "48eba5df8b76ca2b5306e00cc272a1a0edf7615d5bbc87a3940f35c44b61b230"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/thumbnail/hooks.S",
+      "bytes": 511,
+      "sha256": "7ca31dcf99ac53268ca9c6e44e3f164221de302157b7cfc3f1df9caa10d4411d"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8area/wide.py",
+      "bytes": 42168,
+      "sha256": "8bf0a7e51de0de3dec4f0afc38df5e7d7ebce8191ffa09e13b21403fb9cdf0a5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8h265/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8h265/patcher.py",
+      "bytes": 9877,
+      "sha256": "15a0d4e7832b3249386617687ce4854911e2d388840e035935d1567c55929086"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8h265/src/hooks.S",
+      "bytes": 7802,
+      "sha256": "f663b0d340b2e0ccdfb565e82e94e2a21c4efccb3c5dec3feff7376929a9c3e8"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8h265/tiers.json",
+      "bytes": 31909,
+      "sha256": "7fb680af0966f89cf52bf416bc42ce5a0407fa0c6fd7a903c5e79bd48cff6c8a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8heif/__init__.py",
+      "bytes": 31,
+      "sha256": "6824eea14ad93a6c09813f1e1ff804d4f2795a5cf702fb571614e1e44db336df"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8heif/capture/hooks.S",
+      "bytes": 1329,
+      "sha256": "83cc69a53d569661f932a09f5aa6f61b0edc2d4004da82b9bc508a8af3166068"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8heif/drive/hooks.S",
+      "bytes": 1813,
+      "sha256": "5890ef33b339886ede74f8d48980c4a1581aae2312c0b4ea5440d2e71609c61a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8heif/drive_policy.py",
+      "bytes": 938,
+      "sha256": "5501142070b16a61e157e69ebaa9a7be6740c8f073bcbab41c9cc8116d764666"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8heif/format/hooks.S",
+      "bytes": 41025,
+      "sha256": "33ee2ad9d9ac69dc0867d6f4ea0fc19f381c1df4e20ca17a07da5ffaa3c66b44"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8heif/icc/hooks.S",
+      "bytes": 2149,
+      "sha256": "571204e53e8c7f825a16e44631417278cd544413346aa2c62170b0bfa05bede1"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8heif/patcher.py",
+      "bytes": 25494,
+      "sha256": "99bd802b9c4ba261ae493279dc902c542a6764e9f45c40eff99ec656735ddd99"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8heif/srgb/hooks.S",
+      "bytes": 1143,
+      "sha256": "c71335f25cb8b5a66f85273475d04596601d09356ac219d26b4be8fae60d5203"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8livefilmsim/FENESTRA/STARTUP-Z8.0",
+      "bytes": 64,
+      "sha256": "2ec2832aba51a344eda779c13c4bbab56dde6ac82e270df276de7990cd477636"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8livefilmsim/FENESTRA/filmsim.wlm",
+      "bytes": 32540,
+      "sha256": "259f58db7f859e808829214675a76a37320e43b0b91706202abfe0eb1dd3817e"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8livefilmsim/FENESTRA/livephoto.wlm",
+      "bytes": 15860,
+      "sha256": "65a92348b4a963641c21e6674f42347646595ee294007e05d2160f670ba855f8"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8livefilmsim/FENESTRA/lut.wlm",
+      "bytes": 15624,
+      "sha256": "596e37ccfd957b595500206dd3a22a278c50210bdfd5d6493ac6c4e65eaecee2"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8livefilmsim/FENESTRA/portrait.wlm",
+      "bytes": 7348,
+      "sha256": "857a234dcafeec087bdcd01d6020f52e8638121e7513ee2b2cc6b78ec52d26b0"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8livefilmsim/FENESTRA/slotcard.wlm",
+      "bytes": 56552,
+      "sha256": "299a90e8706495d2bb47ba2431de980e93cdc9fa84f7c51d992f3b9176bc5d9f"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8livefilmsim/__init__.py",
+      "bytes": 553,
+      "sha256": "03b67450f8890196d582fa977865a7e9c0dc30c1e48ec7a79ecdc283bc143c13"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8livefilmsim/contract.py",
+      "bytes": 5235,
+      "sha256": "80574260e027aafdb43eadcd6610b32f0eada088b63295628e3a02ea8c7fd762"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8livefilmsim/overlay.json",
+      "bytes": 1972,
+      "sha256": "ce3fc8af654b4fb91d38ad1245cf1a9fd035c09cbf824e80bd34745e41683544"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8livefilmsim/overlay.py",
+      "bytes": 7273,
+      "sha256": "a5810ea0ea5d0f22acf27b1686d06f07205e761009e15be2a7bbe2774953be88"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8livefilmsim/overlay.zlib",
+      "bytes": 1753435,
+      "sha256": "7cfe9387bdff5e9065f053e51399f48b49dac6ea7be8b413562b63ae02740764"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8log/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8log/data.json",
+      "bytes": 18585,
+      "sha256": "e4d82ff80513d99a1e5926e62f7323807158224d400f3f4797b52bfc940dd2c5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8log/icons/log3g10_fill.png",
+      "bytes": 483,
+      "sha256": "4d1be1c5d89e1076ad703de4084ed688fbd14975cdcad05a672ff9d82ebf89e3"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8log/icons/log3g10_outline.png",
+      "bytes": 656,
+      "sha256": "3807023191ad9537375c4e29deda0b1035d98010fbd7a8094d7df418a7e9e1dc"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8log/icons/slog3_fill.png",
+      "bytes": 460,
+      "sha256": "34266622d2ecbee118002dd1da56b3f05986ac97a25c0f5369a1707c5f982e44"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8log/icons/slog3_outline.png",
+      "bytes": 638,
+      "sha256": "fb99de6066385019279faf29d855faf81b7c3ce9292dfbc40343985c1153b626"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8log/patcher.py",
+      "bytes": 21504,
+      "sha256": "2f50e57551b3d23e4b3bf55115d1a86d6f2521444118a59fe0d16a5fb3977583"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8log/src/hooks.S",
+      "bytes": 20762,
+      "sha256": "6662610ddc3b1fcacec8804d6a21bd833868d8ad16f52cefba59c3a98f0dc968"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/a64x.py",
+      "bytes": 2909,
+      "sha256": "3b139b9ceeebcdaed19df202517f8d324e3ee90e2be7ca791c70f997a0327fd5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/e1.py",
+      "bytes": 23135,
+      "sha256": "fb2b61c3d7bd63c470989a8ae4ff8109515aed321146ed920a902327e6ab9e59"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/fix_sites.py",
+      "bytes": 4024,
+      "sha256": "c178a6631a8382a251d8ebdeb736455d421e2f800a163e1dc41d25fe3a283db2"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/fixes/hooks.S",
+      "bytes": 16265,
+      "sha256": "fac7c3d8a77bdf7425cf030917992b093547f8459c1a95b99741abe2118b820f"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/icons/og32-icons.json",
+      "bytes": 1482,
+      "sha256": "3c8d53842dcbcd19af5ab63844fcd09471eb7b82a6eaf10db51d63385e921c26"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/icons/og32_blank.png",
+      "bytes": 81,
+      "sha256": "6bc3b9acc258a9bfeb41b1c1dc842ae797ab2688e4890323b56b85ffd231d0f5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/icons/og32_lv_outline.png",
+      "bytes": 858,
+      "sha256": "615bfcc296a9106ab31bb6bac4b9efc1322aadfadd25f912ee8e483ebaf216c3"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/icons/og32_lv_solid.png",
+      "bytes": 749,
+      "sha256": "60fbe348b3098c6542ea735ebd95969c903b98d4ca8d810e05e57d7481c6db12"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/icons/og32_menu.png",
+      "bytes": 769,
+      "sha256": "349e0a0d258debecc938c519fba054e655a7ec6d35e54040062cd01e2e5f493e"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/imenu.py",
+      "bytes": 6048,
+      "sha256": "8176a60acf3b4559a46c1a16d3090507ed8111bc2168793451b02d4216c32030"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/linker.py",
+      "bytes": 2633,
+      "sha256": "6de52db8be291cebf39f09fec06f46396f170150d24b924efb94ec167ab91386"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/patcher.py",
+      "bytes": 12756,
+      "sha256": "d6b6ba7dcaa091b8943d4443914385f67142c3b78eb3ca6d37a4ac6786035655"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/quality.py",
+      "bytes": 22468,
+      "sha256": "e7dcf4fd5148394483200488e89524a2bc34e1f9e04f1f497a4f4ee40f3f9412"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/sites.py",
+      "bytes": 3589,
+      "sha256": "8f675808b17bb76b2b491591e0717b98c1777809a7bdf4c73d3a35f4c0981528"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/src/d10_hooks.S",
+      "bytes": 4811,
+      "sha256": "cdefa30c5d804c95f966410952653dc9ea3d96889de1a1f669d084ab03ae611b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/src/d5_hooks.S",
+      "bytes": 2092,
+      "sha256": "03c0ec540d6549666b257ee2dfb5a5b1fa1e19b9636e5432d0f9c1f5a917ac17"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/src/d6_hooks.S",
+      "bytes": 6142,
+      "sha256": "08cea97abe8f0ab1a5eb799450d4e7be3afbdbb6f0ff4c04d75cf07934be9a1f"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/src/d7_hooks.S",
+      "bytes": 5019,
+      "sha256": "857c5bd4a94caa61d00f604a17506f3e4d7f6cc85eb61f60a72bef35a68332c6"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/src/d8_hooks.S",
+      "bytes": 8312,
+      "sha256": "1e749d5fd31140a13b6a3923ab1e3f90efea90c72df0a69e697b62b5bf5e029b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/src/d9_hooks.S",
+      "bytes": 5630,
+      "sha256": "7c4024f20b8a7058918a8043237733fa79c8c5b479a3c87c4f88778a55366079"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/src/e1_hooks.S",
+      "bytes": 30331,
+      "sha256": "c47997f355c57a57f94875a98b5a1b01ab39e1f5018fa69857969e6514f6b230"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/src/e2_hooks.S",
+      "bytes": 15581,
+      "sha256": "842ec611be9253a8a1c48592085d2e595c80c08c5a0a82faea70832e9347ee8b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/src/e3_hooks.S",
+      "bytes": 12019,
+      "sha256": "acd329e348886f427958eafcea1c6ae9a0f428245088a12085fc1a70145c2613"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/src/e4_hooks.S",
+      "bytes": 13249,
+      "sha256": "86a0e07c0a15bab5cb0ca3eec7e67e31f6c0a5f86bfe441e1ac37a7c525fe58a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/src/menu_repair_hooks.S",
+      "bytes": 38705,
+      "sha256": "6beac4e8ff0b349c85cb4a5345b049e4d663f0092942f08f870853f3486ec4c4"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8opengate/src/ui_hooks.S",
+      "bytes": 10506,
+      "sha256": "a6cdecf231ed5c3ec1f72ac8e946b9bccdecebb78fffafcbfac93e5befd4d3b5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8patch/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8patch/asm.py",
+      "bytes": 2829,
+      "sha256": "32b806361edaf7b14793fda06d1317cdb0b3cde146b4be38e19d9a34f30b4b80"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8patch/compiled.py",
+      "bytes": 6911,
+      "sha256": "5c86d1f23589b679907a32a16455ff960cda6194c5d58115cd0491376781687b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8patch/contract.py",
+      "bytes": 7067,
+      "sha256": "83b4b9c7aabadb33027e5e20aeced03d1aa902093a423ccca8572caf37bf3c54"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8patch/image.py",
+      "bytes": 1769,
+      "sha256": "e2147c7d1eab4f8a57c69f88a528e54116a5670d52d6565c7976d2523a5c25e4"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8patch/linker.py",
+      "bytes": 4856,
+      "sha256": "8dd50332b294adb9d8359cfce1cc63f003783ad6cb0269ace86a3b5bb7628c28"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8patch/photo_shared.py",
+      "bytes": 1229,
+      "sha256": "5ac8caaf128c44e6039e12d431863e99466e325e205cc5c3d1de531bbf07b062"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8patch/shared.py",
+      "bytes": 7902,
+      "sha256": "4bba0e490816023bbae08b71538bba6ffceca702033345286c318538f277b6eb"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8patch/src/shared.S",
+      "bytes": 1647,
+      "sha256": "d775ae2b4f40b9b6a21d342d0548d78b13227d9268047755dce63bf9abe9deec"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/patcher.py",
+      "bytes": 17770,
+      "sha256": "e221454ecf325cd13b91bdc55c869eff7c5becf3d057bc07d363bd35f64b8309"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/af_unit.c",
+      "bytes": 72,
+      "sha256": "849d3b4a1fc6f640b5a054b8310960ccfb28e8a52af05131d6c98a1909909ddf"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/af_window.c",
+      "bytes": 4154,
+      "sha256": "feea881f3536922175b910343d0797fbaff61675845398a83dd5e1f53f1a90e9"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/af_window.h",
+      "bytes": 442,
+      "sha256": "25b0f5a1dbb87415ef1849dcb4f72043afa0cd70a6d16268a3783e5ed0e7def8"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/afrow.c",
+      "bytes": 1815,
+      "sha256": "7a4496fbfa25cd78348e7d1aad73d65ee5fee99ae30464fe54085fb54735e23b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/afrow.h",
+      "bytes": 645,
+      "sha256": "5fe02834f79a14f9a1fe6af2a974052a82956ce1c33a514940ce9ce7e053e5f5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/afrow_fma_a64.c",
+      "bytes": 303,
+      "sha256": "d445299e0afd00bc7333ae83c6a17444ba00428dfa2b52092f79848cb054c6f3"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/browser.c",
+      "bytes": 3500,
+      "sha256": "2799bcd0bee4734ebe434da3ff9aa626aa5325f1867299b3e6d78567e2e918b4"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/browser.h",
+      "bytes": 1064,
+      "sha256": "b471e2b518c54c77b5aa1b524a72739f5c6e8feca5d9e49eee6b7f21cdb9c1eb"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/browser_fw.inc",
+      "bytes": 26497,
+      "sha256": "6b39ca1fd868b30227a55f51819c15faae82227bbb12bb05a59185d1db3f1613"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/crc32_slice8.inc",
+      "bytes": 27750,
+      "sha256": "1db3afca85d3037f54687f807bce63d52e65046873811ed4a8082c62e400f047"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/firmware.c",
+      "bytes": 47990,
+      "sha256": "091726c7034954283a6c5d0c330f474577f7e1688cf6aff0632aa9bdad12158c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/group.c",
+      "bytes": 19844,
+      "sha256": "74e4ca4d56be1102b8acc9752eac5e746a05cdc6f1eef103dd7b01a826a57238"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/group.h",
+      "bytes": 4011,
+      "sha256": "3203a35a4ffc8e28552d9f586690a3cffc334bd074a98155162ba0225810d545"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/io_pipe.c",
+      "bytes": 12947,
+      "sha256": "69970e18aeea1ca057c73dd48267896057cdfe7fe3dd555070a75f7d3577b2e7"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/io_pipe.h",
+      "bytes": 690,
+      "sha256": "ca0186d181f3b1420de9780ea9aad729c1ed6c6f32c512817bba88ae2495a0aa"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/job.c",
+      "bytes": 36855,
+      "sha256": "a2abff5dab0aac0f88b36b81e698f5bf3fc9f5a2c30a4a3b580212a15f968ced"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/job.h",
+      "bytes": 3821,
+      "sha256": "2337bf56e453d2fbfa64d5f6d00aa1d9d653a5c60b9904cb936937e4a20eac5d"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/nef.c",
+      "bytes": 19479,
+      "sha256": "4f77bbf14fe8e9fc47e6fc2511d6bfc2a84c9a40ca7c9115456055488d1b4ccf"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/nef.h",
+      "bytes": 1313,
+      "sha256": "aa19ab0e2c69dd90f7ad0f125ca01bd05ea4f05121e5344905517b28fb534f7c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/nefx.c",
+      "bytes": 29457,
+      "sha256": "5833ac5f1983962f4144a461e9156ccfd7f80bf25bdb12cc112f1b7ee5a6a675"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/nefx.h",
+      "bytes": 2667,
+      "sha256": "62ced5d77b387890b09cc933f8c7f6e8a84698aa60f0a086c077aef988e7aaab"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/ps8.c",
+      "bytes": 1023,
+      "sha256": "dbd262cd46e99847ba91261dcf0461e27302725cff52d53b7b855d0f15720cff"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/psm.c",
+      "bytes": 10382,
+      "sha256": "a82467072a66c278251630bf1e1c9784f6deee37274a8efdcc61bbc416fcd8bd"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/psm.h",
+      "bytes": 2270,
+      "sha256": "8900fe10fea91f8874b5733199f5bf31fc68d26604b10733633383fbc07316c4"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/thumbnail.c",
+      "bytes": 9321,
+      "sha256": "56939f4a30cc83b462d0e575adcca73526e232015915be48d5bbc677f9ee16ae"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/thumbnail.h",
+      "bytes": 615,
+      "sha256": "c382ba1cd37887b6eae221259781d70ace3ead474a3d35af39f7f58b8fd74941"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8pixelshift/src/ui_strings.h",
+      "bytes": 2932,
+      "sha256": "789da50ec0dd1ff5ff0de50784d3f1e3badf1320f22362d4767d13e29c1f558b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8precapture/__init__.py",
+      "bytes": 53,
+      "sha256": "2553af81f7abaa8443643c2a451a47d1547fa650b75b50d29bd215ea2c20bed6"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8precapture/crc32_table.inc",
+      "bytes": 3104,
+      "sha256": "fe021e684d78717732adddb6c9dde91f6fc6918f18cb0aeccfb349db5511a515"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8precapture/firmware.c",
+      "bytes": 91279,
+      "sha256": "b2320bc917fad7b53030813a4909a5add2aa06d97a2ba293a85e9105ba3fad9c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8precapture/linker.py",
+      "bytes": 4775,
+      "sha256": "a65a9ec04410fbc39c3c81b0b2ae7e6199901af387a74e8eefce0d15d4a1fa2b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8precapture/menu/hooks.S",
+      "bytes": 2301,
+      "sha256": "5cd2a678f41edb452b1f1744c0b43e08dd78f2690b20df45ceb4e3e0716b4889"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8precapture/menu/sites.py",
+      "bytes": 1880,
+      "sha256": "30fae14e8cd7275ee75733957ed33a38674c1987c97b0cc052e3a8b65f1b893a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8precapture/patcher.py",
+      "bytes": 3731,
+      "sha256": "a7f88a20c1ae72b53b4b6e68f39d76ae13aa461e78eeaf895d94ca96c364eeba"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8prores/__init__.py",
+      "bytes": 65,
+      "sha256": "c4962da695a83c541133ad1a6565bb8d60601992b2e2514f8dfb361fba99dbe5"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8prores/a64.py",
+      "bytes": 7705,
+      "sha256": "64879c989f85c88bc550b5ac57270c881737c4f53bb246450d8d8c3ba61ba6ae"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8prores/back_half.py",
+      "bytes": 11926,
+      "sha256": "5ebece2e98464d0bb50c9c82453b264b8889f1ff526d2e408165180877c39e7d"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8prores/help_text.py",
+      "bytes": 1339,
+      "sha256": "58b3993f5c795aaf4ab4b96b5d7bf3a842419946cf4573265ddcb8d8e2559222"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8prores/layout.py",
+      "bytes": 218,
+      "sha256": "ba514703d98cbbf8ac71c10d4743a3b34f1e1d7cc9a00e9805b31d2982c3b3e0"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8prores/menu.py",
+      "bytes": 17170,
+      "sha256": "ddec6fc6925a07e274260654c26c617691320180b8d3096e1a01c43f0926d37b"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8prores/package.py",
+      "bytes": 6349,
+      "sha256": "67a563c247cdad419e8e27561e9a0a8425e39615b37acb70ca3a15c77bdb8f5e"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8prores/patcher.py",
+      "bytes": 4763,
+      "sha256": "2968e7b382463fda3ef79c7b93c2dbab4315717cf2c76172ef483a60c387b85c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/h265-icons.json",
+      "bytes": 25515,
+      "sha256": "f1179e28cc685ee3a3603b60d9c990aed224fa24333f4b0bbbce16357cb86d0a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/fill_0a5b.png",
+      "bytes": 551,
+      "sha256": "ea3bc3fe597250302556c5fcd134860a699c2e6cd9bbad862a505ce63f89ce60"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/fill_0a5c.png",
+      "bytes": 626,
+      "sha256": "ee6ca073cef196cce7165f9b3590cf97a1339c1510d9b7a657e8599a435391c3"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/fill_0a5d.png",
+      "bytes": 635,
+      "sha256": "e87a65ca4c43b47283fbf8a50503bb4ab7102153c7932a8c8e69b4048b730c95"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/fill_0a5e.png",
+      "bytes": 657,
+      "sha256": "cf9aecb492895adccb6bd6fc62c6830e47491247f3d143138454a01a6bb2591c"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/fill_0a5f.png",
+      "bytes": 679,
+      "sha256": "57f4dd58a4d3b57efeb1bbb86a6535029c4ef76403e38102c6691ffee4f976a6"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/menu_10f0.png",
+      "bytes": 670,
+      "sha256": "20bd6c6ebf1fe9581115ae82e1008472ffb3b94b925b68060b9a1cbce0f208e0"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/menu_10f2.png",
+      "bytes": 710,
+      "sha256": "fc37bde73df3b3e6806a6a2b6239e35b85767b50fb545477c62b1482d2c7ddc0"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/menu_10f4.png",
+      "bytes": 722,
+      "sha256": "250a70754ae144c3edee4ee4738c583533340cf62eb8cd3c93d38ed99e9806e7"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/menu_1285.png",
+      "bytes": 611,
+      "sha256": "5fbff1e91f52767c856d96fb8da0e0550dbcd370403e19d6bf432653b0d99703"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/menu_1286.png",
+      "bytes": 686,
+      "sha256": "3d7877fa10da871064250f0c6f806e16863b4ad497964aa3775137c5e9fcfa8f"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/menu_1287.png",
+      "bytes": 679,
+      "sha256": "124a803fa11897661deec4e80671bfe4657a306c21b0e4e0d124d319b89e60d1"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/menu_1288.png",
+      "bytes": 717,
+      "sha256": "695c9be13bd8f5db3bfcc3784dd7b8009436f55c5d65533ca29440916f2724a4"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/menu_1289.png",
+      "bytes": 734,
+      "sha256": "ab330c23898accea72dac42182233da3f85f6df459967d6522fba3219649c2fc"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/outline_0761.png",
+      "bytes": 746,
+      "sha256": "b4cdc55d2c64c917431ebe3c6d1cb221f52a9dbf4c7894a8bb328a981a4e72b9"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/outline_0765.png",
+      "bytes": 758,
+      "sha256": "0f37bf8cb7fa1efc0bb780c481b10d3eadd659551f1177859c1911376cddbcee"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/outline_0769.png",
+      "bytes": 769,
+      "sha256": "8b9a71c3f63740dfcf46d70026cac73be24c400ed48e3bdecdf26437f7c734c4"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/outline_0a9d.png",
+      "bytes": 697,
+      "sha256": "73996089d61e4c4f6c85a5a704155ac46d49b2eafa5dbae06eb9398bdc5115fe"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/outline_0a9e.png",
+      "bytes": 763,
+      "sha256": "0891eb3063fcbace5cc10569ca47a4a5af4274ad8c14f9d3d022c1ce04001542"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/outline_0a9f.png",
+      "bytes": 736,
+      "sha256": "e70777f2858887f40a427105831b317e563e0e712d34ccaa3b72f72b6e70a775"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/outline_0aa0.png",
+      "bytes": 754,
+      "sha256": "2b60c1f63c064c5c2c0cd9207e7855fe271d8dbcc2937f52fc28889fc4d133d0"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/icons/outline_0aa1.png",
+      "bytes": 774,
+      "sha256": "e07a66a554d648124ad8fb79f013b943545ed6692cc3c61cf1014e8ccad5f2ca"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/patcher.py",
+      "bytes": 3638,
+      "sha256": "9054884efad3172f06db2d06f74555eed267620ddf14b79a081004420cf1533a"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/prores-icons.json",
+      "bytes": 9119,
+      "sha256": "b24202f2f68d6477e431ce943fc832c17fc07702f7738f24555ef72c999c2290"
+    },
+    {
+      "path": "research/z8-live/nfp-builder/z8quality/src/hooks.S",
+      "bytes": 5989,
+      "sha256": "f04357230d1e4c919aaffae959c63d941f7fa8e35aabe85d6a8259b97d9bca71"
     },
     {
       "path": "src/accounting.c",

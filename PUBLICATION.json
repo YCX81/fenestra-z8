@@ -10,7 +10,7 @@
   "adaptation_target": "z8-c311",
   "upstream_repository": "https://github.com/WonderLantern/Fenestra",
   "upstream_commit": "67774849c9dd97cc7127066190528e245ee25650",
-  "qualification": "root core: experimental port; V71.7-r7 (MAIN 362ee2a5, build 0x8394568f): Host ASan+UBSan, 6 ARM64/Unicorn/0-Q-Spill suites, and whole-guest QEMU #19-r7/#20-r7 PASS; physical_camera_verified=false pending real Z8 flashing",
+  "qualification": "root core: experimental port; V71.7-r7 (MAIN 362ee2a5, build 0x8394568f): Host ASan+UBSan, 6 ARM64/Unicorn/0-Q-Spill suites, whole-guest QEMU #19-r7/#20-r7, and NFP v0.5.1-compatible CLI/macOS Z8 Patch Builder (17/17 Swift+CLI tests, --self-test) PASS; physical_camera_verified=false pending real Z8 flashing",
   "bundled_third_party": [
     {
       "name": "NikonFirmwarePatch",
@@ -21,6 +21,15 @@
       "license": "GPL-3.0-only",
       "location": "research/z8-live/from-stock/third-party/",
       "contents": "unchanged public toolkit archives with corresponding source and compiled patch units; no Nikon firmware"
+    },
+    {
+      "name": "NikonFirmwarePatch (V71.7-r7 CLI & macOS App compatibility)",
+      "versions": [
+        "v0.5.1"
+      ],
+      "license": "GPL-3.0-only",
+      "location": "research/z8-live/nfp-builder/",
+      "contents": "adapted upstream v0.5.1 (25fefa1) CLI toolkit and macOS Z8 Patch Builder SwiftUI app adding V71.7-r7 live-filmsim overlay and 6 open-source FENESTRA runtime files; no Nikon firmware or ZF_GRAIN.BIN"
     }
   ],
   "development_checkpoint": "v71.7-r7",

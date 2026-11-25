@@ -213,6 +213,36 @@ python -B research/z8-live/from-stock/build.py \
 - See [research/z8-live/from-stock/README.md](research/z8-live/from-stock/README.md) and [RELEASE-v62.md](research/z8-live/build-tools/livediag/feat-onemov/RELEASE-v62.md).
 - **Host `INFO` Bridge**: `FENESTRA_PTP_PROFILE=z8-c311` permits only the parameterless `info` query against SHA-256-pinned `fenestra-agent-z8-info` (arbitrary shell execution disabled). See [docs/debugging.md](docs/debugging.md).
 
+### 4. Route C: NFP `v0.5.1`-Compatible Offline Builder (CLI Toolkit + macOS App `Z8 Patch Builder`)
+
+`research/z8-live/nfp-builder/` (adapted from upstream [XinmiaoZhao/NikonFirmwarePatch](https://github.com/XinmiaoZhao/NikonFirmwarePatch) `v0.5.1` `25fefa1`, retaining `GPL-3.0-only`) provides full compatibility with both the upstream **CLI toolkit** and the **Apple Silicon macOS SwiftUI app (`Z8 Patch Builder`, macOS 14+)**, building and independently verifying firmware offline directly from your own official `Z_8_0311.bin` (`99,051,117 B`, SHA-256 `d67413c2...`) with no WSL or QEMU required:
+
+- **100% Byte-Identical Upstream Compatibility**: All 4 upstream NFP `v0.5.1` groups (`video-recording`, `log-colour`, `still-photo-tools`, `raw-precapture`) and their 20 reviewed source-matched compilation units remain intact—all 15 upstream selections produce **byte-identical** output to official `NikonFirmwarePatch v0.5.1`.
+- **5th Feature Group `live-filmsim` (`V71.7-r7` All-in-One)**: Applies the verified `V71.7-r7` overlay (including relocated 4-group NFP `v0.5.1` strictly below `0x40B50000`, Live Photo 30fps, Real-Time 3D LUT Layer 0 Preview, CEVA-XM6 HDF, PortraitPB, FontCJK-ZhUI, Dual-Card SlotCard, C64 i-Menu, and Fenestra Core), supports arbitrary `--version NN.NN --tag tD` (restamping all 4 Nikon identity sites, `0x401FB136`, and Bootguard `0x401FE060`), and exports the 6 open-source `FENESTRA/` runtime files (`STARTUP-Z8.0` + 5 `.wlm` plugins; supply your own `ZF_GRAIN.BIN` on the card if using Zf grain).
+- **macOS App (`NikonFirmwarePatch-v71.7-r7-macOS.dmg`)**: Bundles the same toolkit, trimmed CPython 3.12.16, and `capstone 5.0.7`, adds the `live-filmsim` card (with a 4-step interactive guide animation and EN / 简体中文 / 繁體中文 UI), and runs the full 4-step pipeline (`patch.py --check` → `patch.py` → independent `verify.py` → read-back `.bin` + `FENESTRA/` SHA-256 verification).
+
+```bash
+# Option A: Download NikonFirmwarePatch-v71.7-r7-macOS.dmg (macOS 14+ Apple silicon)
+#           or extract NikonFirmwarePatch-v71.7-r7-toolkit.zip from GitHub Release v71.7-r7:
+python3 -m venv .venv && source .venv/bin/activate
+python -m pip install -r requirements.txt
+python patch.py Z_8_0311.bin --check
+
+# Upstream NFP v0.5.1 only (byte-identical to official v0.5.1)
+python patch.py Z_8_0311.bin --features video-recording log-colour still-photo-tools raw-precapture \
+  --version 04.08 --tag p0 --output build/nfp-all
+
+# Full V71.7-r7 (includes relocated NFP v0.5.1 + Live/FilmSim/LUT/XM6 + FENESTRA/ export)
+python patch.py Z_8_0311.bin --features live-filmsim --version 04.06 --tag p0 --output build/v71r7
+
+# Option B: Build the v71.7-r7 toolkit ZIP and macOS DMG from source (Apple clang 21.0.0 + Swift 6.3+)
+cd research/z8-live/nfp-builder
+python3 -B tools/build_release.py --tag v71.7-r7 --output /tmp/z8-toolkit
+python3 -B macos/scripts/build_app.py \
+  --toolkit-zip /tmp/z8-toolkit/NikonFirmwarePatch-v71.7-r7-toolkit.zip \
+  --output /tmp/z8-app
+```
+
 ---
 
 ## Verification Matrix, Precautions & Limitations
@@ -227,6 +257,7 @@ python -B research/z8-live/from-stock/build.py \
 | **ARM64 / Unicorn Suites (6 Suites)** | **ALL PASS** | Suite #5 FontCJK (`3,755/3,755` SC + TC + ops 13..16), Suite #14 Layer0 (`63` checks), XM6 Bridge (`124` checks, `0` forbidden hits), Suite #4 FilmSim (`70` checks), Suite #2 HangFix, and 5-WLM CJK glyph audit (`0` missing SC/TC). |
 | **Whole-Guest QEMU `#19-r7`** | **14/14 PASS** | Clean 7-row Fenestra + 5 `.wlm` plugins + XM6 self-test/persistence/fallback (`z8_unk = 0`, `panic = 0`). |
 | **Whole-Guest QEMU `#20-r7`** | **13/13 PASS** | Photo Menu Row 47 streaming `.cube` LUT + Layer 0 528 KiB baked LUT + Still + Movie `pool_suspend` (`0 B`) + reboot restore/clear (`z8_unk = 0`, `panic = 0`). |
+| **NFP `v0.5.1` Compat CLI + macOS App (`v71.7-r7`)** | **17/17 PASS** | `validate_gui_catalog`, `sync_strings`, and `Z8 Patch Builder.app --self-test` PASS; all 15 upstream selections App↔CLI byte-identical, `live-filmsim` (+ `FENESTRA/`) App↔CLI byte-identical, source-vs-prebuilt exact match, and all 4 negative controls PASS. |
 | **Physical Nikon Z8 Hardware** | **`physical_camera_verified = false`** | Prior `V71.1–V71.6` physical Z8 profiling drove the four `r7` fluency fixes; **`V71.7-r7` (`362ee2a5`) awaits physical Z8 flash & field verification** (EVF/LCD fps, XM6 fallback rate, and post-shutter Live `.MOV` cadence). |
 
 ### Key Precautions

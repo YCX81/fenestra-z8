@@ -261,12 +261,21 @@ python3 -B macos/scripts/build_app.py \
 | **NFP `v0.5.1` Compat CLI + macOS App (`v71.7-r7`)** | **17/17 PASS** | `validate_gui_catalog`, `sync_strings`, and `Z8 Patch Builder.app --self-test` PASS; all 15 upstream selections App↔CLI byte-identical, `live-filmsim` (+ `FENESTRA/`) App↔CLI byte-identical, source-vs-prebuilt exact match, and all 4 negative controls PASS. |
 | **Physical Nikon Z8 Hardware** | **`physical_camera_verified = false`** | Prior `V71.1–V71.6` physical Z8 profiling drove the four `r7` fluency fixes; **`V71.7-r7` (`362ee2a5`) awaits physical Z8 flash & field verification** (EVF/LCD fps, XM6 fallback rate, and post-shutter Live `.MOV` cadence). |
 
-### Key Precautions
+### Known Limits & Usage Precautions (Triggers & Consequences)
+
+| Area / Feature | Trigger Condition | Observed Consequence & Mitigation |
+| :--- | :--- | :--- |
+| **Interrupting `◎LIVE` Post-Roll / Save (High Risk)** | Switching to Movie mode, repeatedly pressing Playback, powering off, pulling the battery, or ejecting a card while `◎LIVE` is in post-roll (~1.5 s) or flashing / `Busy` | Interrupts Wave5 hardware handoff (up to 3 s drain), **aborting the `.MOV` (and secondary-card twin copy)** and risking a **black screen, unresponsive playback, or camera freeze** requiring a battery pull (triggering boot-guard safe bypass). **Always wait for `◎LIVE` to return to steady ready** before playback, mode switch, or power-off; also wait ~1.5 s after entering Live View for pre-roll to fill. |
+| **Live Photo Image Quality Requirement** | Shooting RAW-only (`.NEF`) or `SDR / HLG HEIF` (`.HIF`) without `.JPG` | Live pairing requires a `.JPG` write ticket: `.HIF`-only aborts immediately and `.NEF`-only discards the clip after timeout. Always select **`JPEG` or `RAW + JPEG`** for Live Photo. |
+| **EVF Live-View Stutter / Frame Drops** | Using EVF (`1280×852`, +56% pixels over `1024×682` LCD) with **all 4 effects on** (Real-Time 3D LUT Preview + HDF + Grain + Live Photo) | Frame time exceeds the `16.7 ms` (60 Hz) budget, causing **noticeable EVF stutter and dropped frames** while the rear LCD remains mostly usable. **Mitigation**: turn off Live View Preview or disable HDF/Grain when using the EVF. |
+| **Live Photo `.MOV` Frame Drops / Repeats** | Recording Live Photo with 3D LUT / HDF / Grain active (especially via EVF, panning, or rapid shots), or firing again while `◎LIVE` shows `Busy` | Asynchronous Layer 0 push cadence mismatch or shared-feed fallback causes **dropped/repeated frames in `.MOV`**; firing during `Busy` saves the still normally without a paired Live clip. |
+| **3D LUT Enabled Before HDF (XM6 Fallback)** | Enabling 3D LUT preview first, then turning on HDF in `filmsim.wlm` | If the preview workspace straddles a 512 MiB boundary, CEVA-XM6 falls back to ARM NEON and lowers frame rate. Reset the preview pool in `lut.wlm → Debug Settings` or reboot to restore hardware acceleration. |
+| **`FENESTRA/` 6 Open-Source Files & `ZF_GRAIN.BIN`** | Flashing `Z_8_NNNN.bin` without copying `FENESTRA/` (`STARTUP-Z8.0` + 5 `.wlm`), or omitting user-supplied `ZF_GRAIN.BIN` | Missing `STARTUP-Z8.0`/`.wlm` prevents plugins from loading; missing `ZF_GRAIN.BIN` disables grain only (LUT, HDF and Live Photo still work). |
+| **3D LUT Limits & Movie Mode** | Loading `.cube` files `> 2 MiB`, shooting `NEF+JPEG`, or entering Movie mode | `.cube` files over `2 MiB` are rejected; 14-bit `.NEF` is untouched (`0-diff`); Movie mode suspends the LUT workspace to `0 B` (video does not apply photo LUTs) and restores it in Photo mode. |
+| **Upgrade, Dual-Card, Plugins & Rollback** | Reverting to stock without resetting Image Area to `FX`, duplicate `.wlm` IDs, keeping `.bin` on card, or pulling battery mid-run | Always return Image Area to `FX` before flashing stock firmware (avoids black live view); delete `Z_8_NNNN.bin` after updating while keeping `FENESTRA/`, `.CFG` and `SC*.REC`; disabling `.wlm` takes effect after reboot; a clean power cycle clears boot-guard safe bypass. |
 
 1. **Never confuse `.main` with `.bin`**: Raw `.main` files (`z8-core.main`, `v36.main`) are unwrapped images for QEMU or linking—never copy a `.main` onto a memory card expecting a firmware update.
-2. **Wait for Live saving between rapid shots**: Firing another still while `◎LIVE` is in its `Busy` sweep saves the new still normally, without a paired Live clip.
-3. **Unloading `.wlm` plugins requires a reboot**: Disabling a `.wlm` in `Setup → Fenestra → Modules` (`已加载插件`) renames it to `.wlm.disabled` for the **next** boot; never enable two copies of the same module ID simultaneously.
-4. **Source hygiene**: Never commit Nikon firmware, keys, `ZF_GRAIN.BIN`, or personal media; run `python -B verify_source.py` to verify the tracked source inventory.
+2. **Source hygiene**: Never commit Nikon firmware, keys, `ZF_GRAIN.BIN`, or personal media; run `python -B verify_source.py` to verify the tracked source inventory.
 
 ---
 

@@ -869,15 +869,15 @@
         "zh-Hant": "V71.7-r7 實況相片、底片模擬、即時 3D LUT 預覽、XM6 顆粒／HDF 與重定位 NFP v0.5.1"
       },
       "intro": {
-        "en": "Adds the V71.7-r7 Live Photo, FilmSim and real-time 3D LUT preview suite with CEVA-XM6 hardware Film Grain and optical HDF, portrait toning, dual-slot routing and CJK extended fonts. Automatically includes all four relocated NFP v0.5.1 feature groups and exports the 7 required FENESTRA card files alongside the firmware.",
-        "zh-Hans": "集成 V71.7-r7 实况照片、胶片模拟与实时 3D LUT 预览套件，配备 CEVA-XM6 硬件胶片颗粒与光学柔焦 HDF、人像调色、双卡槽路由及中文扩展字库。自动包含重定位后的全部四组 NFP v0.5.1 功能，并在输出目录同步导出 7 个必需的 FENESTRA 存储卡文件。",
-        "zh-Hant": "整合 V71.7-r7 實況相片、底片模擬與即時 3D LUT 預覽套件，配備 CEVA-XM6 硬體底片顆粒與光學柔焦 HDF、人像調色、雙卡槽路由與中文擴充字庫。自動包含重定位後的全部四組 NFP v0.5.1 功能，並在輸出目錄同步匯出 7 個必需的 FENESTRA 記憶卡檔案。"
+        "en": "Adds the V71.7-r7 Live Photo, FilmSim and real-time 3D LUT preview suite with CEVA-XM6 hardware Film Grain and optical HDF, portrait toning, dual-slot routing and CJK extended fonts. Automatically includes all four relocated NFP v0.5.1 feature groups and exports the 6 open-source FENESTRA runtime files alongside the firmware.",
+        "zh-Hans": "集成 V71.7-r7 实况照片、胶片模拟与实时 3D LUT 预览套件，配备 CEVA-XM6 硬件胶片颗粒与光学柔焦 HDF、人像调色、双卡槽路由及中文扩展字库。自动包含重定位后的全部四组 NFP v0.5.1 功能，并在输出目录同步导出 6 个开源 FENESTRA 运行时文件。",
+        "zh-Hant": "整合 V71.7-r7 實況相片、底片模擬與即時 3D LUT 預覽套件，配備 CEVA-XM6 硬體底片顆粒與光學柔焦 HDF、人像調色、雙卡槽路由與中文擴充字庫。自動包含重定位後的全部四組 NFP v0.5.1 功能，並在輸出目錄同步匯出 6 個開源 FENESTRA 執行期檔案。"
       },
       "includes": [
         {
           "en": "Live Photo with post-shutter 45 MP still deferral",
-          "zh-Hans": "实况照片（含快门后 45 MP 静图顺延防卡顿）",
-          "zh-Hant": "實況相片（含快門後 45 MP 靜照順延防卡頓）"
+          "zh-Hans": "实况照片（含快门后 45 MP 静图顺延）",
+          "zh-Hant": "實況相片（含快門後 45 MP 靜照順延）"
         },
         {
           "en": "FilmSim and real-time 528 KiB L2 3D LUT preview",
@@ -890,9 +890,9 @@
           "zh-Hant": "CEVA-XM6 硬體底片顆粒（Slot 39／40）與光學柔焦 HDF v2（Slot 41）"
         },
         {
-          "en": "All four relocated NFP v0.5.1 groups plus 7 FENESTRA card files",
-          "zh-Hans": "自动包含重定位后的全部四组 NFP v0.5.1 功能及 7 个 FENESTRA 文件",
-          "zh-Hant": "自動包含重定位後的全部四組 NFP v0.5.1 功能與 7 個 FENESTRA 檔案"
+          "en": "All four relocated NFP v0.5.1 groups plus 6 open-source FENESTRA files",
+          "zh-Hans": "自动包含重定位后的全部四组 NFP v0.5.1 功能及 6 个开源 FENESTRA 文件",
+          "zh-Hant": "自動包含重定位後的全部四組 NFP v0.5.1 功能與 6 個開源 FENESTRA 檔案"
         }
       ],
       "camera_entry": {
@@ -904,18 +904,120 @@
         {
           "level": "caution",
           "title": {
-            "en": "Copy all 7 FENESTRA files to the card root",
-            "zh-Hans": "须将 FENESTRA 全部 7 个文件复制到存储卡根目录",
-            "zh-Hant": "須將 FENESTRA 全部 7 個檔案複製到記憶卡根目錄"
+            "en": "Wait for ◎LIVE to finish saving before playback, video or power-off",
+            "zh-Hans": "拍完实况必须等 ◎LIVE 保存结束再回放、切视频或关机",
+            "zh-Hant": "拍完實況必須等 ◎LIVE 儲存結束再播放、切短片或關機"
           },
           "detail": {
-            "en": "The firmware requires the FENESTRA/ directory (STARTUP-Z8.0 and 5 .wlm plugins; supply your own ZF_GRAIN.BIN if using grain) at the root of the memory card.",
-            "zh-Hans": "固件运行依赖存储卡根目录的 FENESTRA/ 目录（包含 STARTUP-Z8.0 及 5 个 .wlm 插件；如需颗粒请自备 ZF_GRAIN.BIN）。",
-            "zh-Hant": "韌體運作依賴記憶卡根目錄的 FENESTRA/ 目錄（包含 STARTUP-Z8.0 與 5 個 .wlm 外掛；如需顆粒請自備 ZF_GRAIN.BIN）。"
+            "en": "Trigger: switching to Movie, pressing Playback repeatedly, powering off or removing a card while ◎LIVE is in post-roll (~1.5 s) or Busy. Consequence: aborts the .MOV (and second-card copy) and risks a black screen or camera freeze during Wave5 handoff. Also use JPEG or RAW+JPEG (RAW-only or HEIF cannot pair).",
+            "zh-Hans": "触发条件：快门后 ◎LIVE 仍在后录（约 1.5 秒）或 Busy 保存期间切视频、反复按回放、关机或拔卡。后果：打断 Wave5 硬件交接会丢弃本次实况短片（及副卡副本），极端情况下有黑屏或死机风险（需拔电池重启）。实况画质须含 JPEG（纯 NEF 或 HEIF 无法配对）。",
+            "zh-Hant": "觸發條件：快門後 ◎LIVE 仍在後錄（約 1.5 秒）或 Busy 儲存期間切短片、反覆按播放、關機或拔卡。後果：打斷 Wave5 硬體交接會丟棄本次實況短片（及副卡副本），極端情況下有黑畫面或當機風險（須拔電池重開機）。實況畫質須含 JPEG（純 NEF 或 HEIF 無法配對）。"
           },
           "source": {
             "path": "docs/known-issues.md",
-            "quote": "必须同时部署 FENESTRA/ 全部 7 个文件到存储卡根目录"
+            "quote": "拍摄实况照片时必须等待 `◎LIVE` 保存结束再操作，否则有黑屏或死机风险"
+          }
+        },
+        {
+          "level": "caution",
+          "title": {
+            "en": "EVF live view stutters and drops frames when all effects are on",
+            "zh-Hans": "EVF 取景全开时会出现明显掉帧与卡顿",
+            "zh-Hant": "EVF 取景全開時會出現明顯掉格與卡頓"
+          },
+          "detail": {
+            "en": "Trigger: using EVF (1280×852) with real-time 3D LUT preview, HDF, grain and Live Photo all enabled. Consequence: frame time exceeds 16.7 ms (60 Hz) and causes noticeable EVF stutter (rear LCD remains mostly usable). Turn off Live View Preview or 1–2 effects when using EVF.",
+            "zh-Hans": "触发条件：使用 EVF（1280×852）并同时开启实时 3D LUT 预览、HDF、颗粒与实况照片。后果：单帧耗时超过 16.7 ms（60 Hz）导致 EVF 明显掉帧卡顿（背屏基本可用）。使用 EVF 时建议关闭取景实时预览或关闭 1–2 项效果。",
+            "zh-Hant": "觸發條件：使用 EVF（1280×852）並同時開啟即時 3D LUT 預覽、HDF、顆粒與實況相片。後果：單格耗時超過 16.7 ms（60 Hz）導致 EVF 明顯掉格卡頓（螢幕基本可用）。使用 EVF 時建議關閉取景即時預覽或關閉 1–2 項效果。"
+          },
+          "source": {
+            "path": "docs/known-issues.md",
+            "quote": "EVF 取景全开时会出现明显掉帧与卡顿"
+          }
+        },
+        {
+          "level": "caution",
+          "title": {
+            "en": "Live Photo .MOV clips drop or repeat frames under heavy load",
+            "zh-Hans": "实况照片 .MOV 在重负载下会出现明显掉帧或重复帧",
+            "zh-Hant": "實況相片 .MOV 在重負載下會出現明顯掉格或重複格"
+          },
+          "detail": {
+            "en": "Trigger: shooting Live Photo with 3D LUT, HDF or grain active (especially via EVF or rapid shots). Consequence: cadence mismatch or fallback causes dropped/repeated frames in the .MOV clip; shooting while ◎LIVE is Busy saves the still without a paired clip.",
+            "zh-Hans": "触发条件：开启实况照片同时叠加 3D LUT、HDF 或颗粒（尤其是 EVF 拍摄或连拍）。后果：推帧节拍失配或回退会导致 .MOV 明显掉帧与重复帧；◎LIVE 处于 Busy 保存期间连拍仅保存静图，不生成实况短片。",
+            "zh-Hant": "觸發條件：開啟實況相片同時疊加 3D LUT、HDF 或顆粒（尤其是 EVF 拍攝或連拍）。後果：推格節拍失配或回退會導致 .MOV 明顯掉格與重複格；◎LIVE 處於 Busy 儲存期間連拍僅儲存靜照，不產生實況短片。"
+          },
+          "source": {
+            "path": "docs/known-issues.md",
+            "quote": "实况照片（Live Photo）在重负载下会出现明显掉帧或重复帧"
+          }
+        },
+        {
+          "level": "caution",
+          "title": {
+            "en": "Enabling 3D LUT before HDF can trigger XM6 fallback",
+            "zh-Hans": "先开 3D LUT 后开 HDF 可能触发 XM6 回退降速",
+            "zh-Hant": "先開 3D LUT 後開 HDF 可能觸發 XM6 回退降速"
+          },
+          "detail": {
+            "en": "Trigger: enabling 3D LUT preview first and turning on HDF afterwards. Consequence: if the preview workspace crosses a 512 MiB boundary, XM6 falls back to ARM NEON and lowers frame rate. Reset the preview pool in lut.wlm Debug Settings or reboot.",
+            "zh-Hans": "触发条件：先启用 3D LUT 预览后再新开启 HDF。后果：若预览工作区跨 512 MiB 边界，XM6 会回退至 ARM NEON 导致帧率进一步下降。在 lut.wlm 调试设置中重置预览工作区或重启机身即可恢复。",
+            "zh-Hant": "觸發條件：先啟用 3D LUT 預覽後再新開啟 HDF。後果：若預覽工作區跨 512 MiB 邊界，XM6 會回退至 ARM NEON 導致影格率進一步下降。在 lut.wlm 除錯設定中重設預覽工作區或重開機即可恢復。"
+          },
+          "source": {
+            "path": "docs/known-issues.md",
+            "quote": "先开 3D LUT 后开 HDF 可能触发 XM6 回退降速"
+          }
+        },
+        {
+          "level": "caution",
+          "title": {
+            "en": "Copy all 6 FENESTRA files to the card root (supply ZF_GRAIN.BIN)",
+            "zh-Hans": "须将 FENESTRA 全部 6 个开源文件复制到存储卡根目录",
+            "zh-Hant": "須將 FENESTRA 全部 6 個開源檔案複製到記憶卡根目錄"
+          },
+          "detail": {
+            "en": "Trigger: flashing without copying STARTUP-Z8.0 and the 5 .wlm plugins, or omitting user-supplied ZF_GRAIN.BIN. Consequence: plugins fail to load without STARTUP-Z8.0/.wlm; grain has no effect without ZF_GRAIN.BIN. Disabling a plugin takes effect after reboot.",
+            "zh-Hans": "触发条件：仅刷固件而漏拷 STARTUP-Z8.0 与 5 个 .wlm 插件，或未自备 ZF_GRAIN.BIN。后果：缺少核心文件会导致插件无法加载；缺少 ZF_GRAIN.BIN 仅颗粒不生效（不影响 LUT／HDF／实况）。停用插件需重启生效。",
+            "zh-Hant": "觸發條件：僅更新韌體而漏拷 STARTUP-Z8.0 與 5 個 .wlm 外掛，或未自備 ZF_GRAIN.BIN。後果：缺少核心檔案會導致外掛無法載入；缺少 ZF_GRAIN.BIN 僅顆粒不生效（不影響 LUT／HDF／實況）。停用外掛須重開機生效。"
+          },
+          "source": {
+            "path": "docs/known-issues.md",
+            "quote": "必须同时部署 FENESTRA/ 全部 6 个开源文件到存储卡根目录（颗粒需自备 ZF_GRAIN.BIN）"
+          }
+        },
+        {
+          "level": "note",
+          "title": {
+            "en": "3D LUT leaves .NEF untouched and suspends in Movie mode",
+            "zh-Hans": "3D LUT 不改动 NEF，且录像模式自动挂起",
+            "zh-Hant": "3D LUT 不改動 NEF，且錄影模式自動暫停"
+          },
+          "detail": {
+            "en": "Trigger: shooting RAW+JPEG with a .cube LUT active or switching to Movie mode. Consequence: 14-bit .NEF stays bit-identical to stock; Movie mode releases the LUT pool to 0 B (video does not apply photo LUTs) and restores it in Photo mode.",
+            "zh-Hans": "触发条件：加载 .cube LUT 后拍摄 RAW+JPEG 或切换至视频模式。后果：14-bit .NEF 严格 0 改动；进入视频模式自动释放预览池为 0 B（视频不套用照片 LUT），切回拍照模式自动恢复。",
+            "zh-Hant": "觸發條件：載入 .cube LUT 後拍攝 RAW+JPEG 或切換至短片模式。後果：14-bit .NEF 嚴格 0 改動；進入短片模式自動釋放預覽池為 0 B（短片不套用相片 LUT），切回相片模式自動恢復。"
+          },
+          "source": {
+            "path": "docs/known-issues.md",
+            "quote": "3D LUT 仅作用于预览、JPEG 与实况，不改动 NEF 且录像模式自动挂起"
+          }
+        },
+        {
+          "level": "caution",
+          "title": {
+            "en": "Upgrade, dual-card, .cube size and rollback precautions",
+            "zh-Hans": "升级、双卡、.cube 上限与回退原厂前必做事项",
+            "zh-Hant": "更新、雙卡、.cube 上限與退回原廠前必做事項"
+          },
+          "detail": {
+            "en": "Return Image Area to FX before flashing stock firmware; delete Z_8_NNNN.bin after updating while keeping FENESTRA/, .CFG and SC*.REC; keep .cube files <= 2 MiB; never enable duplicate .wlm IDs; clean reboot clears boot-guard bypass after battery pull.",
+            "zh-Hans": "刷回原厂固件前须先将图像区域改回 FX；升级后删除根目录 Z_8_NNNN.bin 但保留 FENESTRA/、.CFG 与 SC*.REC；单个 .cube 不超过 2 MiB；切勿启用同 ID 插件；异常断电触发防变砖旁路后正常开关机即可恢复。",
+            "zh-Hant": "退回原廠韌體前須先將影像區域改回 FX；更新後刪除根目錄 Z_8_NNNN.bin 但保留 FENESTRA/、.CFG 與 SC*.REC；單一 .cube 不超過 2 MiB；切勿啟用同 ID 外掛；異常斷電觸發防變磚旁路後正常開關機即可恢復。"
+          },
+          "source": {
+            "path": "docs/known-issues.md",
+            "quote": "升级、双卡与回退原厂固件前的使用注意事项"
           }
         },
         {
@@ -926,30 +1028,13 @@
             "zh-Hant": "自動包含重定位後的全部四組 NFP v0.5.1 功能"
           },
           "detail": {
-            "en": "Selecting this group outputs the complete V71.7-r7 image with Video Recording, Log Colour, Photo Tools and RAW Pre-capture already integrated.",
-            "zh-Hans": "勾选本组即输出完整 V71.7-r7 固件，已整合视频录制、Log 色彩、照片工具与 RAW 预拍摄。",
-            "zh-Hant": "勾選本組即輸出完整 V71.7-r7 韌體，已整合短片錄製、Log 色彩、相片工具與 RAW 預拍攝。"
+            "en": "Trigger: selecting this group alone or with other groups. Consequence: outputs the complete V71.7-r7 image with Video Recording, Log Colour, Photo Tools and RAW Pre-capture already integrated; still under on-camera tuning, do not use for irreplaceable work.",
+            "zh-Hans": "触发条件：勾选本组（无论是否同时勾选其余四组）。后果：输出固件自动整合视频录制、Log 色彩、照片工具与 RAW 预拍摄；当前仍处于真机性能优化阶段，请勿用于不可替代的工作。",
+            "zh-Hant": "觸發條件：勾選本組（無論是否同時勾選其餘四組）。後果：輸出韌體自動整合短片錄製、Log 色彩、相片工具與 RAW 預拍攝；目前仍處於實機效能最佳化階段，請勿用於不可取代的工作。"
           },
           "source": {
             "path": "docs/known-issues.md",
             "quote": "自动包含重定位后的全部四组 NFP v0.5.1 功能"
-          }
-        },
-        {
-          "level": "caution",
-          "title": {
-            "en": "Offline checks pass; physical camera re-test pending",
-            "zh-Hans": "离线仿真与 QEMU 已通过，待真机复测",
-            "zh-Hant": "離線模擬與 QEMU 已通過，待實機複測"
-          },
-          "detail": {
-            "en": "All ARM audits, CEVA-XM6 51/51 simulations and whole-guest QEMU suites pass; final on-camera verification is still pending.",
-            "zh-Hans": "全部 ARM 静态审计、CEVA-XM6 51/51 仿真与全机 QEMU 套件均已通过，仍需真机实拍复测。",
-            "zh-Hant": "全部 ARM 靜態稽核、CEVA-XM6 51/51 模擬與全機 QEMU 套件皆已通過，仍需實機實拍複測。"
-          },
-          "source": {
-            "path": "docs/known-issues.md",
-            "quote": "V71.7-r7 离线仿真与全机 QEMU 均已通过，待真机复测"
           }
         }
       ],
@@ -973,9 +1058,9 @@
       ],
       "guide": [
         {
-          "en": "Build with Live Photo & FilmSim selected; the output folder contains Z_8_NNNN.bin and the FENESTRA/ directory with all 7 files.",
-          "zh-Hans": "勾选“实况照片与胶片模拟”生成输出目录，内含 Z_8_NNNN.bin 与完整的 FENESTRA/ 目录（7 个文件）。",
-          "zh-Hant": "勾選「實況相片與底片模擬」產生輸出目錄，內含 Z_8_NNNN.bin 與完整的 FENESTRA/ 目錄（7 個檔案）。"
+          "en": "Build with Live Photo & FilmSim selected; the output folder contains Z_8_NNNN.bin and the FENESTRA/ directory with all 6 open-source files.",
+          "zh-Hans": "勾选“实况照片与胶片模拟”生成输出目录，内含 Z_8_NNNN.bin 与完整的 FENESTRA/ 目录（6 个开源文件）。",
+          "zh-Hant": "勾選「實況相片與底片模擬」產生輸出目錄，內含 Z_8_NNNN.bin 與完整的 FENESTRA/ 目錄（6 個開源檔案）。"
         },
         {
           "en": "Copy both Z_8_NNNN.bin and the entire FENESTRA/ folder to the root of your memory card, then update firmware in the Setup menu.",

@@ -43,13 +43,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 28863,
-      "sha256": "6e8cf37236c09e98c55221b8bb530b1c6e16e9c14fc5c6a57ff4c0b7faf6d832"
+      "bytes": 31755,
+      "sha256": "fe65f8db55f797d617487a50e0237cee835b86cf4abb830aeb9772b75858e8dc"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 25738,
-      "sha256": "be0da185e77ac525a1f96018f28c3135bbaca4774984fdb3bba69f79a5668ded"
+      "bytes": 28669,
+      "sha256": "66b51b06fd3ba04361e57f0c5c60e2b87ddf02a038510c7eb77d12b1da1b17c1"
     },
     {
       "path": "docs/api-reference.md",
@@ -53048,13 +53048,13 @@
     },
     {
       "path": "research/z8-live/nfp-builder/docs/known-issues.md",
-      "bytes": 17152,
-      "sha256": "25c94f0bc3a42ca52edbfa9162dd7d2fa1e182bcdf1b19c48f285c7341e9e9f4"
+      "bytes": 25356,
+      "sha256": "36716e75cbf742d56bcd4f816488a72e4389a4fd0312ffde304c736cf166df4c"
     },
     {
       "path": "research/z8-live/nfp-builder/docs/live-filmsim.md",
-      "bytes": 3915,
-      "sha256": "16d9eb87705571705e27da2f87c7c8008b1d8633bec223104087b9afe74280bb"
+      "bytes": 5721,
+      "sha256": "1b665ddd4d9150caa18fbb5ed190bf3255a653c57b084c85e0bcab36d14d353c"
     },
     {
       "path": "research/z8-live/nfp-builder/docs/log-colour-report.en.md",
@@ -53348,8 +53348,8 @@
     },
     {
       "path": "research/z8-live/nfp-builder/resources/gui-catalog.json",
-      "bytes": 53458,
-      "sha256": "0b9a6098e3951a7f9a0e0380eb381767f06bc010ae30d915ecf5df04d6b9e134"
+      "bytes": 61885,
+      "sha256": "a134f3a6bbbe38445e5ff3411181adeaf1933a93c7a879de9511e17acbe2534e"
     },
     {
       "path": "research/z8-live/nfp-builder/resources/input.json",

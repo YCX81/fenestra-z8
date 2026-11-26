@@ -102,12 +102,12 @@ def compute_build_id(main_bytes):
 
 
 def verify_fenestra_assets(meta=None):
-    """Verify all 7 packaged FENESTRA files match overlay.json sizes and SHA-256 digests."""
+    """Verify all 6 packaged open-source FENESTRA files match overlay.json sizes and SHA-256 digests."""
     meta = load_meta() if meta is None else meta
     src_dir = HERE / 'FENESTRA'
     _need(src_dir.is_dir(), 'Missing z8livefilmsim/FENESTRA asset directory')
     expected = meta['fenestra']
-    _need(len(expected) == 7, 'Expected 7 FENESTRA assets in overlay.json')
+    _need(len(expected) == 6, 'Expected 6 FENESTRA assets in overlay.json')
     verified = {}
     for name in sorted(expected):
         spec = expected[name]
@@ -121,7 +121,7 @@ def verify_fenestra_assets(meta=None):
 
 
 def export_fenestra(output_dir):
-    """Copy all 7 verified FENESTRA files into <output_dir>/FENESTRA and verify readback."""
+    """Copy all 6 verified open-source FENESTRA files into <output_dir>/FENESTRA and verify readback."""
     meta = load_meta()
     verified = verify_fenestra_assets(meta)
     src_dir = HERE / 'FENESTRA'
